@@ -1,0 +1,5626 @@
+[
+  {
+    "item_key": "adidas-adizero-adios-pro-3",
+    "name": "Adidas Adizero Adios Pro 3",
+    "brand": "Adidas",
+    "price": 250,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 39,
+    "drop": 6.5,
+    "weight_mens": 7.4,
+    "weight_womens": 6.3,
+    "description": "Adidas' elite racing shoe with Lightstrike Pro foam and EnergyRods for world-record-setting performance.",
+    "pros": [
+      "Elite-level energy return",
+      "EnergyRod technology",
+      "World record pedigree",
+      "Snappy responsive ride"
+    ],
+    "cons": [
+      "Very expensive",
+      "Not for everyday training"
+    ],
+    "popularity": 91,
+    "release_date": "2023-04-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "adidas-adizero-adios-pro-4",
+    "name": "Adidas Adizero Adios Pro 4",
+    "brand": "Adidas",
+    "price": 260,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 39,
+    "drop": 6.5,
+    "weight_mens": 7.2,
+    "weight_womens": 6.2,
+    "description": "Adidas' top-tier marathon racer featuring Lightstrike Pro foam and EnergyRods for maximum speed.",
+    "pros": [
+      "Excellent energy return",
+      "EnergyRod system for propulsion",
+      "Lightweight race-day shoe",
+      "Proven at elite level"
+    ],
+    "cons": [
+      "Premium price tag",
+      "Narrow fit for some runners"
+    ],
+    "popularity": 90,
+    "release_date": "2024-04-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "adidas-agravic-speed-2",
+    "name": "Adidas Agravic Speed 2",
+    "brand": "Adidas",
+    "price": 150,
+    "usage_types": [
+      "trail_running",
+      "race_day"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "narrow",
+    "cushion": "minimal",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "lightweight",
+    "stack": 24,
+    "drop": 4,
+    "weight_mens": 8.2,
+    "weight_womens": 7.1,
+    "description": "Lightweight trail racing shoe designed for speed on technical terrain with aggressive lug patterns.",
+    "pros": [
+      "Extremely lightweight for trail racing",
+      "Aggressive traction pattern",
+      "Nimble and responsive ground feel",
+      "Fast lacing system"
+    ],
+    "cons": [
+      "Minimal cushion limits comfort on long efforts",
+      "Less protection than heavier trail shoes"
+    ],
+    "popularity": 68,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "adidas-evo-sl",
+    "name": "Adidas Evo SL",
+    "brand": "Adidas",
+    "price": 170,
+    "usage_types": [
+      "speed_work",
+      "race_day"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 36,
+    "drop": 6,
+    "weight_mens": 7.9,
+    "weight_womens": 6.8,
+    "description": "A lightweight speed trainer from Adidas with Lightstrike Pro foam for fast tempo runs and racing.",
+    "pros": [
+      "Lightweight and fast",
+      "Great energy return",
+      "Affordable for a speed shoe",
+      "Snappy responsive ride"
+    ],
+    "cons": [
+      "Limited cushion for long runs",
+      "Narrow fit"
+    ],
+    "popularity": 86,
+    "release_date": "2025-02-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "adidas-evo-sl-atr",
+    "name": "Adidas EVO SL ATR",
+    "brand": "Adidas",
+    "price": 150,
+    "usage_types": [
+      "daily_trainer",
+      "trail_running"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "trail_groomed",
+      "mixed"
+    ],
+    "weight_range": "all",
+    "stack": 32,
+    "drop": 8,
+    "weight_mens": 9.8,
+    "weight_womens": 8.5,
+    "description": "All-terrain version of the Evo SL speed shoe with a rugged Continental rubber outsole for road and light trail use.",
+    "pros": [
+      "Continental rubber outsole excels on mixed terrain",
+      "Versatile for road-to-trail transitions",
+      "Lightstrike foam is responsive and durable",
+      "Protective overlays shield against trail debris"
+    ],
+    "cons": [
+      "Jack-of-all-trades design is master of none",
+      "Heavier than the road-only Evo SL variant"
+    ],
+    "popularity": 64,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "adidas-prime-x-evo",
+    "name": "Adidas Prime X EVO",
+    "brand": "Adidas",
+    "price": 250,
+    "usage_types": [
+      "long_run",
+      "race_day"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "lightweight",
+    "stack": 50,
+    "drop": 6,
+    "weight_mens": 8.5,
+    "weight_womens": 7.3,
+    "description": "Experimental max-stack super shoe with dual Lightstrike Pro foam layers and carbon Energy Rods for extreme energy return.",
+    "pros": [
+      "Massive energy return from dual Lightstrike Pro layers",
+      "Ultra-high stack provides exceptional cushioning",
+      "Carbon Energy Rods enhance forward propulsion",
+      "Impressively light for its towering stack height"
+    ],
+    "cons": [
+      "Extremely high stack may feel unstable for some",
+      "Not legal for World Athletics competition due to stack height"
+    ],
+    "popularity": 66,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "adidas-supernova-rise-3",
+    "name": "Adidas Supernova Rise 3",
+    "brand": "Adidas",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 39,
+    "drop": 10,
+    "weight_mens": 10.8,
+    "weight_womens": 9.4,
+    "description": "Plush daily trainer wrapped in Dreamstrike+ foam for a soft, cushioned experience on easy and long-run days.",
+    "pros": [
+      "Dreamstrike+ foam provides excellent cushioned comfort",
+      "High stack height absorbs impact on long runs",
+      "Smooth heel-to-toe transition",
+      "Continental rubber outsole offers reliable grip"
+    ],
+    "cons": [
+      "Heavier than many competitors in the category",
+      "Can feel sluggish at faster paces"
+    ],
+    "popularity": 75,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "adidas-terrex-agravic-4",
+    "name": "Adidas Terrex Agravic 4",
+    "brand": "Adidas",
+    "price": 140,
+    "usage_types": [
+      "trail_running"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "heel"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical",
+      "mixed"
+    ],
+    "weight_range": "all",
+    "stack": 30,
+    "drop": 6,
+    "weight_mens": 10.3,
+    "weight_womens": 8.9,
+    "description": "Versatile all-around trail shoe with Continental rubber outsole for reliable grip across varied terrain.",
+    "pros": [
+      "Continental outsole grips well on varied terrain",
+      "Versatile for different trail conditions",
+      "Balanced cushioning and protection",
+      "Durable construction"
+    ],
+    "cons": [
+      "Jack-of-all-trades but master of none",
+      "Can feel slightly heavy on fast trail runs"
+    ],
+    "popularity": 71,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "adidas-terrex-agravic-tt",
+    "name": "Adidas Terrex Agravic TT",
+    "brand": "Adidas",
+    "price": 160,
+    "usage_types": [
+      "trail_running"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_technical",
+      "trail_groomed"
+    ],
+    "weight_range": "all",
+    "stack": 28,
+    "drop": 6,
+    "weight_mens": 10.5,
+    "weight_womens": 9,
+    "description": "Technical trail shoe with Continental rubber outsole for superior grip on rugged mountain terrain.",
+    "pros": [
+      "Continental outsole provides elite-level grip",
+      "Excellent protection on rocky terrain",
+      "Secure and supportive fit",
+      "Durable construction for harsh conditions"
+    ],
+    "cons": [
+      "Firm ride may feel stiff on easier trails",
+      "Heavier than minimalist trail options"
+    ],
+    "popularity": 73,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "altra-escalante-3",
+    "name": "Altra Escalante 3",
+    "brand": "Altra",
+    "price": 130,
+    "usage_types": [
+      "daily_trainer"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "wide",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 26,
+    "drop": 0,
+    "weight_mens": 8.5,
+    "weight_womens": 7.2,
+    "description": "Altra's zero-drop road shoe with a wide FootShape toe box and Ego foam for natural daily running.",
+    "pros": [
+      "Zero-drop natural feel",
+      "Wide FootShape toe box",
+      "Comfortable for wide feet",
+      "Smooth ride"
+    ],
+    "cons": [
+      "Zero drop requires adaptation",
+      "Less cushion than higher-stack shoes"
+    ],
+    "popularity": 78,
+    "release_date": "2023-04-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "altra-escalante-4",
+    "name": "Altra Escalante 4",
+    "brand": "Altra",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "wide",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 26,
+    "drop": 0,
+    "weight_mens": 8.4,
+    "weight_womens": 7.1,
+    "description": "The Escalante 4 refines Altra's zero-drop road formula with updated Ego foam and an improved knit upper.",
+    "pros": [
+      "Zero-drop balanced cushioning",
+      "Wide toe box comfort",
+      "Slightly lighter than v3",
+      "Improved upper breathability"
+    ],
+    "cons": [
+      "Zero drop not for everyone",
+      "Low stack for long runs"
+    ],
+    "popularity": 79,
+    "release_date": "2024-04-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "altra-experience-flow-3",
+    "name": "Altra Experience Flow 3",
+    "brand": "Altra",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "wide",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "lightweight",
+    "stack": 28,
+    "drop": 0,
+    "weight_mens": 8,
+    "weight_womens": 6.9,
+    "description": "Lightweight zero-drop road shoe with Altra's FootShape toe box and responsive EGO midsole foam for natural-gait runners.",
+    "pros": [
+      "Zero-drop promotes natural running mechanics",
+      "Wide toe box allows natural toe splay",
+      "Lightweight and responsive for tempo efforts",
+      "Smooth transitions despite zero drop"
+    ],
+    "cons": [
+      "Zero-drop requires gradual adaptation for heel strikers",
+      "Moderate cushion may feel thin on very long runs"
+    ],
+    "popularity": 70,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "altra-experience-wild-3",
+    "name": "Altra Experience Wild 3",
+    "brand": "Altra",
+    "price": 150,
+    "usage_types": [
+      "trail_running",
+      "long_run"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "wide",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_groomed",
+      "mixed"
+    ],
+    "weight_range": "all",
+    "stack": 30,
+    "drop": 0,
+    "weight_mens": 9.6,
+    "weight_womens": 8.2,
+    "description": "Zero-drop trail shoe with Altra's FootShape toe box for natural foot splay on groomed trails.",
+    "pros": [
+      "Zero-drop promotes natural foot mechanics",
+      "Roomy FootShape toe box",
+      "Good traction on groomed trails",
+      "Comfortable for long trail outings"
+    ],
+    "cons": [
+      "Zero-drop requires adaptation period",
+      "Less aggressive tread for highly technical terrain"
+    ],
+    "popularity": 74,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "altra-lone-peak-8",
+    "name": "Altra Lone Peak 8",
+    "brand": "Altra",
+    "price": 150,
+    "usage_types": [
+      "trail_running"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "wide",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": 25,
+    "drop": 0,
+    "weight_mens": 10.1,
+    "weight_womens": 8.8,
+    "description": "Altra's iconic zero-drop trail shoe with a wide FootShape toe box for natural foot positioning on trails.",
+    "pros": [
+      "Zero-drop natural ride",
+      "Wide FootShape toe box",
+      "Versatile trail shoe",
+      "MaxTrac outsole grip"
+    ],
+    "cons": [
+      "Zero drop requires adaptation",
+      "Less cushion than some trail shoes"
+    ],
+    "popularity": 80,
+    "release_date": "2024-05-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "altra-olympus-6",
+    "name": "Altra Olympus 6",
+    "brand": "Altra",
+    "price": 170,
+    "usage_types": [
+      "trail_running",
+      "long_run"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "wide",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": 33,
+    "drop": 0,
+    "weight_mens": 11.5,
+    "weight_womens": 9.8,
+    "description": "Max-cushion zero-drop trail shoe for ultra distances with Vibram Megagrip outsole and generous stack height.",
+    "pros": [
+      "Max cushion for ultra distances",
+      "Vibram Megagrip outsole traction",
+      "Roomy FootShape toe box",
+      "Zero-drop natural platform"
+    ],
+    "cons": [
+      "Heavy for a trail shoe",
+      "Bulky feel on technical terrain"
+    ],
+    "popularity": 79,
+    "release_date": "2024-06-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "altra-timp-6",
+    "name": "Altra Timp 6",
+    "brand": "Altra",
+    "price": 150,
+    "usage_types": [
+      "trail_running",
+      "long_run"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "wide",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": 33,
+    "drop": 0,
+    "weight_mens": 10.6,
+    "weight_womens": 8.9,
+    "description": "Zero-drop trail shoe with a roomy FootShape toe box and generous cushioning for long days on the trail.",
+    "pros": [
+      "Zero-drop platform promotes natural foot strike",
+      "Wide FootShape toe box allows full toe splay",
+      "Maximum cushion for long trail distances",
+      "Versatile traction on groomed and technical trails"
+    ],
+    "cons": [
+      "Zero-drop design requires adaptation period",
+      "Bulkier profile reduces ground feel on technical terrain"
+    ],
+    "popularity": 74,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "altra-torin-8",
+    "name": "Altra Torin 8",
+    "brand": "Altra",
+    "price": 150,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "wide",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 30,
+    "drop": 0,
+    "weight_mens": 10.2,
+    "weight_womens": 8.6,
+    "description": "Zero-drop max-cushion road shoe with FootShape toe box for natural foot positioning and plush cushioning.",
+    "pros": [
+      "Zero-drop platform for natural stride",
+      "Roomy FootShape toe box",
+      "Max cushion for comfort",
+      "Great for toe splay and foot health"
+    ],
+    "cons": [
+      "Zero-drop requires adaptation period",
+      "Heavier than many daily trainers"
+    ],
+    "popularity": 77,
+    "release_date": "2025-02-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "altra-via-olympus-2",
+    "name": "Altra Via Olympus 2",
+    "brand": "Altra",
+    "price": 170,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "wide",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 33,
+    "drop": 0,
+    "weight_mens": 11,
+    "weight_womens": 9.5,
+    "description": "Altra's max-cushion zero-drop road shoe with Ego Max foam for plush comfort on long runs and recovery days.",
+    "pros": [
+      "Max cushion with zero drop",
+      "Wide FootShape toe box",
+      "Plush ride for recovery",
+      "Great for long slow runs"
+    ],
+    "cons": [
+      "Very heavy",
+      "Bulky feel for some runners"
+    ],
+    "popularity": 77,
+    "release_date": "2024-07-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-cumulus-28",
+    "name": "ASICS Cumulus 28",
+    "brand": "ASICS",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 34,
+    "drop": 8,
+    "weight_mens": 10.1,
+    "weight_womens": 8.7,
+    "description": "Versatile neutral daily trainer combining GEL technology with FF Blast cushioning for a smooth, well-cushioned ride.",
+    "pros": [
+      "Excellent all-around daily trainer",
+      "GEL and FF Blast combo provides balanced cushioning",
+      "Durable outsole for high mileage",
+      "Comfortable fit for a wide range of foot shapes"
+    ],
+    "cons": [
+      "Not the most exciting ride for speed work",
+      "Slightly heavier than newer competitors"
+    ],
+    "popularity": 86,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-dynablast-6",
+    "name": "ASICS Dynablast 6",
+    "brand": "ASICS",
+    "price": 120,
+    "usage_types": [
+      "daily_trainer",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "lightweight",
+    "stack": 32,
+    "drop": 8,
+    "weight_mens": 8.9,
+    "weight_womens": 7.7,
+    "description": "Bouncy and energetic daily trainer powered by FF Blast cushioning for a lively, springy ride.",
+    "pros": [
+      "Bouncy and energetic FF Blast foam",
+      "Lightweight for a daily trainer",
+      "Versatile across training paces",
+      "Attractive price point"
+    ],
+    "cons": [
+      "Less cushion than premium options",
+      "Outsole durability is average"
+    ],
+    "popularity": 76,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-gel-kayano-30",
+    "name": "ASICS Gel-Kayano 30",
+    "brand": "ASICS",
+    "price": 160,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 38,
+    "drop": 10,
+    "weight_mens": 10.5,
+    "weight_womens": 9,
+    "description": "ASICS' flagship stability shoe with 4D Guidance System and FF Blast Plus Eco foam for reliable pronation support.",
+    "pros": [
+      "Proven stability technology",
+      "Comfortable for long runs",
+      "Durable construction",
+      "Wide width available"
+    ],
+    "cons": [
+      "Heavy for faster running",
+      "Firm ride compared to neutral shoes"
+    ],
+    "popularity": 86,
+    "release_date": "2023-06-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-gel-kayano-31",
+    "name": "ASICS Gel-Kayano 31",
+    "brand": "ASICS",
+    "price": 160,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 38,
+    "drop": 10,
+    "weight_mens": 10.3,
+    "weight_womens": 8.9,
+    "description": "The Kayano 31 evolves ASICS' stability flagship with improved FF Blast Plus cushioning and refined support.",
+    "pros": [
+      "Refined stability support",
+      "Lighter than Kayano 30",
+      "Comfortable cushioning",
+      "Excellent for overpronators"
+    ],
+    "cons": [
+      "Still heavier than neutral alternatives",
+      "Premium price for stability shoe"
+    ],
+    "popularity": 87,
+    "release_date": "2024-06-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-gel-kayano-32",
+    "name": "ASICS Gel-Kayano 32",
+    "brand": "ASICS",
+    "price": 160,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "moderate",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 40,
+    "drop": 10,
+    "weight_mens": 10.9,
+    "weight_womens": 9.4,
+    "description": "Flagship stability shoe with 4D Guidance System and FF Blast Plus Eco foam for secure, cushioned support for overpronators.",
+    "pros": [
+      "4D Guidance System provides smooth and effective stability",
+      "FF Blast Plus Eco foam delivers plush cushioning",
+      "PureGEL technology enhances impact absorption",
+      "Durable construction built for high-mileage training"
+    ],
+    "cons": [
+      "One of the heavier stability shoes on the market",
+      "Premium price point in the stability category"
+    ],
+    "popularity": 88,
+    "release_date": "2025-06-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-gel-nimbus-26",
+    "name": "ASICS Gel-Nimbus 26",
+    "brand": "ASICS",
+    "price": 160,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 41,
+    "drop": 8,
+    "weight_mens": 10.9,
+    "weight_womens": 9.4,
+    "description": "ASICS' premium max-cushion neutral trainer with PureGEL technology for ultra-soft landings on long runs.",
+    "pros": [
+      "Plush comfortable cushioning",
+      "PureGEL heel absorption",
+      "Breathable knit upper",
+      "Great for long distances"
+    ],
+    "cons": [
+      "Heavy for faster workouts",
+      "Expensive for a daily trainer"
+    ],
+    "popularity": 90,
+    "release_date": "2024-01-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-gel-nimbus-27",
+    "name": "ASICS Gel-Nimbus 27",
+    "brand": "ASICS",
+    "price": 165,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 40,
+    "drop": 8,
+    "weight_mens": 10.5,
+    "weight_womens": 9.1,
+    "description": "Premium max-cushion neutral trainer with PureGEL technology and FF Blast Plus Eco foam for an ultra-smooth, plush ride.",
+    "pros": [
+      "Exceptionally plush cushioning from PureGEL and FF Blast Plus",
+      "Smooth and balanced ride quality over long distances",
+      "Breathable knit upper with adaptive fit",
+      "Excellent for recovery and easy-pace runs"
+    ],
+    "cons": [
+      "Heavier than average in its category",
+      "Soft platform lacks energy return at faster paces"
+    ],
+    "popularity": 89,
+    "release_date": "2025-01-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-gel-nimbus-28",
+    "name": "ASICS Gel-Nimbus 28",
+    "brand": "ASICS",
+    "price": 170,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 41,
+    "drop": 8,
+    "weight_mens": 10.6,
+    "weight_womens": 9.2,
+    "description": "Premium max-cushion neutral trainer featuring PureGEL impact absorption and FF Blast Plus Eco foam for an ultra-plush ride.",
+    "pros": [
+      "Exceptionally plush and comfortable cushioning",
+      "PureGEL technology absorbs impact smoothly",
+      "Knit upper provides breathable adaptive fit",
+      "Excellent for recovery and easy-pace runs"
+    ],
+    "cons": [
+      "Heavy for its category at over 10 oz mens",
+      "Soft ride lacks responsiveness for faster efforts"
+    ],
+    "popularity": 90,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-gt-2000-12",
+    "name": "ASICS GT-2000 12",
+    "brand": "ASICS",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "mild",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 8,
+    "weight_mens": 9.9,
+    "weight_womens": 8.6,
+    "description": "A dependable mild stability trainer from ASICS with LITETRUSS support for runners who need light guidance.",
+    "pros": [
+      "Light stability support",
+      "Affordable price",
+      "Durable construction",
+      "Good for beginners"
+    ],
+    "cons": [
+      "Not very cushioned",
+      "Dated design aesthetic"
+    ],
+    "popularity": 81,
+    "release_date": "2023-07-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-gt-2000-13",
+    "name": "ASICS GT-2000 13",
+    "brand": "ASICS",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "mild",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 33,
+    "drop": 8,
+    "weight_mens": 9.8,
+    "weight_womens": 8.5,
+    "description": "Mild stability daily trainer with 3D Guidance System and FF Blast cushioning for a smooth, guided ride.",
+    "pros": [
+      "3D Guidance System provides effective mild stability",
+      "FF Blast foam offers balanced cushion and responsiveness",
+      "Versatile for daily training and moderate long runs",
+      "Durable AHARPLUS outsole extends shoe lifespan"
+    ],
+    "cons": [
+      "Heavier than comparable neutral trainers",
+      "Ride feel can be firm on slower recovery efforts"
+    ],
+    "popularity": 83,
+    "release_date": "2024-07-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-magic-speed-5",
+    "name": "ASICS Magic Speed 5",
+    "brand": "ASICS",
+    "price": 180,
+    "usage_types": [
+      "speed_work",
+      "race_day"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 39,
+    "drop": 5,
+    "weight_mens": 7.6,
+    "weight_womens": 6.5,
+    "description": "Carbon-plated speed trainer and race-day option powered by FF Blast Turbo foam, bridging the gap between training and racing.",
+    "pros": [
+      "Carbon plate delivers noticeable propulsion",
+      "FF Blast Turbo foam is lightweight and responsive",
+      "Works as both speed trainer and race shoe",
+      "Excellent energy return at faster paces"
+    ],
+    "cons": [
+      "Narrow fit may not suit all foot shapes",
+      "Less cushion for longer ultra distances"
+    ],
+    "popularity": 82,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-metaspeed-sky-paris",
+    "name": "ASICS Metaspeed Sky Paris",
+    "brand": "ASICS",
+    "price": 250,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "lightweight",
+    "stack": 42,
+    "drop": 5,
+    "weight_mens": 6.6,
+    "weight_womens": 5.6,
+    "description": "ASICS' elite marathon racer designed for stride-type runners with FF Turbo Plus foam and carbon plate.",
+    "pros": [
+      "Ultra-lightweight",
+      "Excellent energy return",
+      "Carbon plate propulsion",
+      "Designed for Paris Olympics"
+    ],
+    "cons": [
+      "Very expensive",
+      "Limited training durability"
+    ],
+    "popularity": 89,
+    "release_date": "2024-04-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-novablast-4",
+    "name": "ASICS Novablast 4",
+    "brand": "ASICS",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "all",
+    "stack": 41,
+    "drop": 8,
+    "weight_mens": 9.7,
+    "weight_womens": 8.3,
+    "description": "A bouncy, energetic daily trainer from ASICS with FF Blast Plus Eco cushioning for a lively ride.",
+    "pros": [
+      "Bouncy energetic ride",
+      "Good for uptempo runs",
+      "Lightweight for its cushion",
+      "Fun to run in"
+    ],
+    "cons": [
+      "Can feel unstable on turns",
+      "Less suited for easy pace"
+    ],
+    "popularity": 87,
+    "release_date": "2023-07-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-novablast-5",
+    "name": "ASICS Novablast 5",
+    "brand": "ASICS",
+    "price": 150,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 41,
+    "drop": 8,
+    "weight_mens": 9.1,
+    "weight_womens": 7.7,
+    "description": "The fifth generation of ASICS' bouncy daily trainer with FF Blast Plus cushioning for versatile performance.",
+    "pros": [
+      "Bouncy and fun ride",
+      "Versatile for multiple run types",
+      "Affordable price",
+      "Responsive cushioning"
+    ],
+    "cons": [
+      "Less stable at high speeds",
+      "Outsole durability could improve"
+    ],
+    "popularity": 89,
+    "release_date": "2025-01-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-superblast-2",
+    "name": "ASICS Superblast 2",
+    "brand": "ASICS",
+    "price": 200,
+    "usage_types": [
+      "long_run",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "all",
+    "stack": 45,
+    "drop": 8,
+    "weight_mens": 9.2,
+    "weight_womens": 8.1,
+    "description": "A versatile max-cushion speed shoe from ASICS that blends plush FF Blast Turbo foam with a responsive ride.",
+    "pros": [
+      "Bouncy and responsive cushioning",
+      "Versatile for speed and long runs",
+      "Comfortable upper",
+      "Great energy return"
+    ],
+    "cons": [
+      "Bulky appearance",
+      "High stack may feel unstable"
+    ],
+    "popularity": 88,
+    "release_date": "2024-06-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-trabuco-14",
+    "name": "ASICS Trabuco 14",
+    "brand": "ASICS",
+    "price": 140,
+    "usage_types": [
+      "trail_running"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_technical",
+      "trail_groomed"
+    ],
+    "weight_range": "all",
+    "stack": 30,
+    "drop": 6,
+    "weight_mens": 10.8,
+    "weight_womens": 9.3,
+    "description": "Rugged trail running shoe with ASICSGRIP outsole for confident traction on technical terrain.",
+    "pros": [
+      "Outstanding grip on technical surfaces",
+      "Excellent rock and debris protection",
+      "Supportive and durable upper",
+      "Reliable traction in wet conditions"
+    ],
+    "cons": [
+      "On the heavier side for trail shoes",
+      "Stiff ride may not suit all preferences"
+    ],
+    "popularity": 75,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "asics-trabuco-max-5",
+    "name": "ASICS Trabuco Max 5",
+    "brand": "ASICS",
+    "price": 160,
+    "usage_types": [
+      "trail_running",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": 37,
+    "drop": 5,
+    "weight_mens": 11.2,
+    "weight_womens": 9.6,
+    "description": "Max-cushion trail shoe for ultra-distance runners with generous FF Blast cushioning and ASICSGRIP outsole.",
+    "pros": [
+      "Maximum cushioning for ultra distances",
+      "Excellent protection on rocky terrain",
+      "ASICSGRIP outsole provides reliable traction",
+      "Comfortable for all-day trail adventures"
+    ],
+    "cons": [
+      "Heavier than most trail shoes",
+      "Bulky feel may reduce agility on technical sections"
+    ],
+    "popularity": 74,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "brooks-adrenaline-gts-24",
+    "name": "Brooks Adrenaline GTS 24",
+    "brand": "Brooks",
+    "price": 150,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 12,
+    "weight_mens": 10.4,
+    "weight_womens": 9.3,
+    "description": "Brooks' popular stability trainer with GuideRails support system for overpronation control during daily runs.",
+    "pros": [
+      "Effective GuideRails support",
+      "Comfortable for daily miles",
+      "Reliable stability shoe",
+      "Wide sizes available"
+    ],
+    "cons": [
+      "Heavier than neutral options",
+      "Not for speed work"
+    ],
+    "popularity": 88,
+    "release_date": "2024-01-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "brooks-adrenaline-gts-25",
+    "name": "Brooks Adrenaline GTS 25",
+    "brand": "Brooks",
+    "price": 150,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 12,
+    "weight_mens": 10.2,
+    "weight_womens": 9.1,
+    "description": "Brooks' best-selling stability trainer with GuideRails holistic support system for smooth, reliable daily miles.",
+    "pros": [
+      "Effective GuideRails support system",
+      "Comfortable for all-day wear",
+      "Wide sizes available",
+      "Proven reliability over many versions"
+    ],
+    "cons": [
+      "Heavier than neutral alternatives",
+      "Not suitable for speed work"
+    ],
+    "popularity": 89,
+    "release_date": "2025-01-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "brooks-ariel-gts-24",
+    "name": "Brooks Ariel GTS 24",
+    "brand": "Brooks",
+    "price": 150,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "wide",
+    "cushion": "moderate",
+    "stability": "motion_control",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 36,
+    "drop": 12,
+    "weight_mens": 11.5,
+    "weight_womens": 10.2,
+    "description": "Brooks' maximum-support motion control shoe with GuideRails and extended Progressive Diagonal Rollbar for severe overpronation.",
+    "pros": [
+      "Maximum motion control support",
+      "Wide toe box option",
+      "Durable construction",
+      "Great for severe overpronation"
+    ],
+    "cons": [
+      "Very heavy",
+      "Stiff ride feel"
+    ],
+    "popularity": 72,
+    "release_date": "2024-05-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "brooks-caldera-7",
+    "name": "Brooks Caldera 7",
+    "brand": "Brooks",
+    "price": 150,
+    "usage_types": [
+      "trail_running",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": 33,
+    "drop": 4,
+    "weight_mens": 10.5,
+    "weight_womens": 9,
+    "description": "Brooks' cushioned trail shoe with DNA LOFT v2 foam and TrailTack outsole for long trail runs and ultras.",
+    "pros": [
+      "Good cushioning for trail ultras",
+      "TrailTack outsole grip",
+      "Comfortable upper",
+      "Low drop for trails"
+    ],
+    "cons": [
+      "Heavier than competitors",
+      "Less aggressive tread pattern"
+    ],
+    "popularity": 74,
+    "release_date": "2024-03-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "brooks-catamount-5",
+    "name": "Brooks Catamount 5",
+    "brand": "Brooks",
+    "price": 170,
+    "usage_types": [
+      "trail_running",
+      "race_day"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "minimal",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "lightweight",
+    "stack": 26,
+    "drop": 6,
+    "weight_mens": 8.4,
+    "weight_womens": 7.3,
+    "description": "Lightweight trail racing shoe with TrailTack sticky rubber outsole for confident grip on technical terrain.",
+    "pros": [
+      "Lightweight and fast on trails",
+      "TrailTack outsole offers excellent grip",
+      "Agile and responsive underfoot feel",
+      "Well-suited for trail races"
+    ],
+    "cons": [
+      "Minimal cushion on longer ultra distances",
+      "Less protection than heavier trail shoes"
+    ],
+    "popularity": 77,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "brooks-ghost-16",
+    "name": "Brooks Ghost 16",
+    "brand": "Brooks",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 12,
+    "weight_mens": 10.1,
+    "weight_womens": 9,
+    "description": "A smooth, reliable daily trainer from Brooks with DNA LOFT v2 cushioning for comfortable everyday runs.",
+    "pros": [
+      "Smooth comfortable ride",
+      "Great for beginners",
+      "Durable outsole",
+      "Consistent performance"
+    ],
+    "cons": [
+      "Not very exciting feel",
+      "Heavier than competitors"
+    ],
+    "popularity": 92,
+    "release_date": "2024-02-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "brooks-ghost-17",
+    "name": "Brooks Ghost 17",
+    "brand": "Brooks",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 37,
+    "drop": 12,
+    "weight_mens": 10,
+    "weight_womens": 8.9,
+    "description": "Brooks' staple neutral daily trainer with DNA LOFT v2 cushioning, refined for smoother transitions and comfort.",
+    "pros": [
+      "Smooth reliable ride",
+      "Great for beginners and veterans",
+      "Durable outsole",
+      "Comfortable fit"
+    ],
+    "cons": [
+      "Not the lightest option",
+      "Higher drop may not suit all"
+    ],
+    "popularity": 91,
+    "release_date": "2025-02-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "brooks-glycerin-23",
+    "name": "Brooks Glycerin 23",
+    "brand": "Brooks",
+    "price": 160,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 38,
+    "drop": 10,
+    "weight_mens": 10.6,
+    "weight_womens": 9.1,
+    "description": "Premium max-cushion neutral trainer featuring DNA LOFT v3 foam for an incredibly soft and smooth ride.",
+    "pros": [
+      "Exceptionally soft and plush cushioning",
+      "Smooth heel-to-toe transitions",
+      "Durable rubber outsole",
+      "Comfortable engineered mesh upper"
+    ],
+    "cons": [
+      "Heavier than most daily trainers",
+      "Less responsive for faster-paced runs"
+    ],
+    "popularity": 92,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "brooks-glycerin-23-gts",
+    "name": "Brooks Glycerin 23 GTS",
+    "brand": "Brooks",
+    "price": 165,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "mild",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 38,
+    "drop": 10,
+    "weight_mens": 11,
+    "weight_womens": 9.5,
+    "description": "Stability version of the Glycerin 23 with GuideRails support system for overpronators, delivering the same plush DNA LOFT v3 cushioning.",
+    "pros": [
+      "Plush max cushioning with stability support",
+      "GuideRails support feels unobtrusive",
+      "Smooth ride for long distances",
+      "Wide range of sizes available"
+    ],
+    "cons": [
+      "Heavier than neutral version",
+      "Not suited for speed work"
+    ],
+    "popularity": 88,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "brooks-glycerin-flex",
+    "name": "Brooks Glycerin Flex",
+    "brand": "Brooks",
+    "price": 160,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 38,
+    "drop": 10,
+    "weight_mens": 10.3,
+    "weight_womens": 9,
+    "description": "Cushioned daily trainer with flexible DNA LOFT cushioning that adapts to your stride for a soft, fluid ride.",
+    "pros": [
+      "DNA LOFT delivers exceptionally soft cushioning",
+      "Enhanced flexibility improves natural foot movement",
+      "Plush fit and feel for easy and recovery runs",
+      "Smooth transitions via integrated rocker geometry"
+    ],
+    "cons": [
+      "Soft cushioning sacrifices ground feel and responsiveness",
+      "Not suitable for speed work or tempo runs"
+    ],
+    "popularity": 76,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "brooks-glycerin-max",
+    "name": "Brooks Glycerin Max",
+    "brand": "Brooks",
+    "price": 200,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill",
+      "mixed"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 45,
+    "drop": 6,
+    "weight_mens": 11.3,
+    "weight_womens": 9.9,
+    "description": "A max-cushion daily trainer from Brooks offering plush comfort for long miles and recovery runs.",
+    "pros": [
+      "Extremely plush cushioning",
+      "Smooth heel-to-toe transitions",
+      "Comfortable for high mileage",
+      "Great for recovery days"
+    ],
+    "cons": [
+      "Heavy for speed work",
+      "High price point"
+    ],
+    "popularity": 86,
+    "release_date": "2024-03-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "brooks-glycerin-max-2",
+    "name": "Brooks Glycerin Max 2",
+    "brand": "Brooks",
+    "price": 200,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 40,
+    "drop": 10,
+    "weight_mens": 11.3,
+    "weight_womens": 9.8,
+    "description": "Ultra-plush ride with nitrogen-infused DNA LOFT v3 foam and a high stack height for maximum impact absorption on daily and long runs.",
+    "pros": [
+      "Nitrogen-infused DNA LOFT v3 provides cloud-like cushioning",
+      "High stack absorbs impact over long distances",
+      "Smooth rocker geometry for effortless transitions",
+      "Plush upper with excellent heel lockdown"
+    ],
+    "cons": [
+      "Noticeably heavy at over 11 oz mens",
+      "Soft ride lacks responsiveness at faster paces"
+    ],
+    "popularity": 83,
+    "release_date": "2025-03-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "brooks-hyperion-max-3",
+    "name": "Brooks Hyperion Max 3",
+    "brand": "Brooks",
+    "price": 200,
+    "usage_types": [
+      "speed_work",
+      "race_day"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 34,
+    "drop": 8,
+    "weight_mens": 7.6,
+    "weight_womens": 6.7,
+    "description": "Lightweight carbon-plated speed shoe with DNA FLASH nitrogen-infused cushioning for tempo runs and race day.",
+    "pros": [
+      "Lightweight carbon-plated design",
+      "Responsive DNA FLASH foam",
+      "Versatile for tempo and racing",
+      "Snappy propulsive toe-off"
+    ],
+    "cons": [
+      "Premium price for a Brooks shoe",
+      "Narrow fit may not suit wider feet"
+    ],
+    "popularity": 81,
+    "release_date": "2024-09-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "brooks-launch-12",
+    "name": "Brooks Launch 12",
+    "brand": "Brooks",
+    "price": 110,
+    "usage_types": [
+      "daily_trainer",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track",
+      "treadmill"
+    ],
+    "weight_range": "lightweight",
+    "stack": 30,
+    "drop": 10,
+    "weight_mens": 8.4,
+    "weight_womens": 7.3,
+    "description": "Lightweight, snappy daily trainer with BioMoGo DNA cushioning that transitions smoothly from easy runs to uptempo workouts.",
+    "pros": [
+      "Lightweight and responsive for a daily trainer",
+      "Excellent value at its price point",
+      "Versatile enough for tempo runs and speed sessions",
+      "Quick heel-to-toe transitions"
+    ],
+    "cons": [
+      "Cushioning may feel thin on longer runs",
+      "Less plush than premium daily trainers"
+    ],
+    "popularity": 80,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "hoka-arahi-7",
+    "name": "Hoka Arahi 7",
+    "brand": "Hoka",
+    "price": 145,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 33,
+    "drop": 5,
+    "weight_mens": 9.7,
+    "weight_womens": 8.3,
+    "description": "Lightweight stability shoe with J-Frame support and meta-rocker for a smooth, guided ride without the heavy feel.",
+    "pros": [
+      "Lightweight for a stability shoe",
+      "Effective J-Frame support system",
+      "Smooth meta-rocker transition",
+      "Comfortable for daily miles"
+    ],
+    "cons": [
+      "Less cushion than max-cushion Hoka models",
+      "Support may not be enough for severe overpronators"
+    ],
+    "popularity": 80,
+    "release_date": "2024-02-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "hoka-bondi-8",
+    "name": "Hoka Bondi 8",
+    "brand": "Hoka",
+    "price": 165,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 30,
+    "drop": 4,
+    "weight_mens": 10.8,
+    "weight_womens": 9,
+    "description": "Hoka's ultra-cushioned road shoe providing maximum comfort and shock absorption for daily runs and recovery.",
+    "pros": [
+      "Ultra-plush cushioning",
+      "Smooth meta-rocker transition",
+      "Great for recovery runs",
+      "Comfortable for all-day wear"
+    ],
+    "cons": [
+      "Heavy for faster running",
+      "Cushion dulls ground feel"
+    ],
+    "popularity": 91,
+    "release_date": "2023-01-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "hoka-bondi-9",
+    "name": "Hoka Bondi 9",
+    "brand": "Hoka",
+    "price": 175,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 32,
+    "drop": 4,
+    "weight_mens": 10.5,
+    "weight_womens": 8.7,
+    "description": "The updated Bondi 9 brings improved cushioning and a refined upper for Hoka's signature max-comfort experience.",
+    "pros": [
+      "Improved cushioning over Bondi 8",
+      "Comfortable plush ride",
+      "Great shock absorption",
+      "Smooth heel-to-toe transition"
+    ],
+    "cons": [
+      "Still heavy for speed work",
+      "Price increase over predecessor"
+    ],
+    "popularity": 90,
+    "release_date": "2024-06-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "hoka-cielo-x1-3-0",
+    "name": "Hoka Cielo X1 3.0",
+    "brand": "Hoka",
+    "price": 250,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "narrow",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 39,
+    "drop": 5,
+    "weight_mens": 6,
+    "weight_womens": 5.2,
+    "description": "Elite carbon-plated racer designed for track and road competition with PEBA foam and full-length carbon plate.",
+    "pros": [
+      "Incredibly lightweight at just 6 oz mens",
+      "PEBA foam delivers elite-tier energy return",
+      "Carbon plate geometry optimized for racing speeds",
+      "Versatile across track and road distances"
+    ],
+    "cons": [
+      "Extremely high price for a limited-use race shoe",
+      "Narrow fit and thin upper sacrifice comfort for speed"
+    ],
+    "popularity": 72,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "hoka-cielo-x2",
+    "name": "Hoka Cielo X2",
+    "brand": "Hoka",
+    "price": 275,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "lightweight",
+    "stack": 40,
+    "drop": 5,
+    "weight_mens": 6.8,
+    "weight_womens": 5.8,
+    "description": "Hoka's next-generation carbon-plated super shoe with PEBA foam for elite marathon and half-marathon racing.",
+    "pros": [
+      "Ultra-lightweight construction",
+      "Advanced PEBA foam",
+      "Carbon plate propulsion",
+      "Race-day performance"
+    ],
+    "cons": [
+      "Very expensive",
+      "Extremely limited durability"
+    ],
+    "popularity": 85,
+    "release_date": "2025-01-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "hoka-clifton-10",
+    "name": "Hoka Clifton 10",
+    "brand": "Hoka",
+    "price": 150,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 32,
+    "drop": 5,
+    "weight_mens": 8.9,
+    "weight_womens": 7.4,
+    "description": "The Clifton 10 continues Hoka's lightweight max-cushion formula with a refined fit and improved foam.",
+    "pros": [
+      "Lightweight max cushioning",
+      "Smooth ride quality",
+      "Comfortable for daily training",
+      "Breathable engineered mesh"
+    ],
+    "cons": [
+      "Slight weight increase",
+      "Outsole wears quickly on rough surfaces"
+    ],
+    "popularity": 92,
+    "release_date": "2024-06-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "hoka-clifton-9",
+    "name": "Hoka Clifton 9",
+    "brand": "Hoka",
+    "price": 145,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 32,
+    "drop": 5,
+    "weight_mens": 8.7,
+    "weight_womens": 7.2,
+    "description": "A lightweight max-cushion daily trainer from Hoka that delivers a smooth, cushioned ride without excess weight.",
+    "pros": [
+      "Light for a max-cushion shoe",
+      "Smooth meta-rocker ride",
+      "Comfortable all-day wear",
+      "Low drop feels natural"
+    ],
+    "cons": [
+      "Less durable outsole",
+      "Cushion compresses over time"
+    ],
+    "popularity": 93,
+    "release_date": "2023-03-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "hoka-gaviota-6",
+    "name": "Hoka Gaviota 6",
+    "brand": "Hoka",
+    "price": 170,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "wide",
+    "cushion": "maximum",
+    "stability": "moderate",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 39,
+    "drop": 5,
+    "weight_mens": 11.2,
+    "weight_womens": 9.6,
+    "description": "Max-cushion stability shoe with J-Frame support that gently guides overpronators without harsh correction.",
+    "pros": [
+      "J-Frame provides gentle yet effective stability",
+      "Maximum cushioning absorbs impact over long miles",
+      "Wide toe box accommodates broader feet",
+      "Smooth meta-rocker promotes easy transitions"
+    ],
+    "cons": [
+      "Noticeably heavy at over 11 oz mens",
+      "Bulky profile feels cumbersome for faster paces"
+    ],
+    "popularity": 69,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "hoka-mach-5",
+    "name": "Hoka Mach 5",
+    "brand": "Hoka",
+    "price": 140,
+    "usage_types": [
+      "speed_work",
+      "daily_trainer"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 35,
+    "drop": 5,
+    "weight_mens": 7.7,
+    "weight_womens": 6.4,
+    "description": "A lightweight speed trainer from Hoka with PROFLY+ foam for fast tempo runs and daily training.",
+    "pros": [
+      "Very lightweight",
+      "Snappy responsive feel",
+      "Great for tempo runs",
+      "Versatile daily-to-speed shoe"
+    ],
+    "cons": [
+      "Less durable outsole",
+      "Minimal cushion for long runs"
+    ],
+    "popularity": 84,
+    "release_date": "2023-02-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "hoka-mach-6",
+    "name": "Hoka Mach 6",
+    "brand": "Hoka",
+    "price": 140,
+    "usage_types": [
+      "speed_work",
+      "daily_trainer"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 36,
+    "drop": 5,
+    "weight_mens": 7.9,
+    "weight_womens": 6.6,
+    "description": "The updated Hoka Mach 6 delivers improved PEBA foam cushioning while maintaining its signature lightweight speed.",
+    "pros": [
+      "Lightweight and fast",
+      "Improved PEBA cushioning",
+      "Versatile speed trainer",
+      "Comfortable upper"
+    ],
+    "cons": [
+      "Outsole durability concerns",
+      "Slightly heavier than Mach 5"
+    ],
+    "popularity": 86,
+    "release_date": "2024-03-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "hoka-rincon-4",
+    "name": "Hoka Rincon 4",
+    "brand": "Hoka",
+    "price": 125,
+    "usage_types": [
+      "daily_trainer",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "lightweight",
+    "stack": 29,
+    "drop": 5,
+    "weight_mens": 7.9,
+    "weight_womens": 6.6,
+    "description": "Hoka's lightweight and affordable daily trainer with a fast, responsive feel for uptempo training.",
+    "pros": [
+      "Lightweight for a daily trainer",
+      "Great value at the price",
+      "Responsive and fast feeling",
+      "Comfortable meta-rocker geometry"
+    ],
+    "cons": [
+      "Less durable than heavier trainers",
+      "Minimal cushion for longer runs"
+    ],
+    "popularity": 83,
+    "release_date": "2024-03-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "hoka-rocket-x-2",
+    "name": "Hoka Rocket X 2",
+    "brand": "Hoka",
+    "price": 250,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 39,
+    "drop": 5,
+    "weight_mens": 7.8,
+    "weight_womens": 6.5,
+    "description": "Hoka's carbon-plated racing shoe built for marathon and half-marathon competition with a propulsive ride.",
+    "pros": [
+      "Carbon plate performance",
+      "Lightweight design",
+      "Smooth meta-rocker transition",
+      "Good energy return"
+    ],
+    "cons": [
+      "Expensive race shoe",
+      "Narrow toe box"
+    ],
+    "popularity": 84,
+    "release_date": "2023-09-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "hoka-skyward-x",
+    "name": "Hoka Skyward X",
+    "brand": "Hoka",
+    "price": 225,
+    "usage_types": [
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 48,
+    "drop": 5,
+    "weight_mens": 11,
+    "weight_womens": 9.5,
+    "description": "Hoka's highest-stacked road shoe with carbon fiber plate technology for a smooth, cushioned long-run experience.",
+    "pros": [
+      "Maximum cushioning underfoot",
+      "Carbon plate for smooth ride",
+      "Great for recovery runs",
+      "Excellent shock absorption"
+    ],
+    "cons": [
+      "Very heavy",
+      "High stack feels tippy on turns"
+    ],
+    "popularity": 84,
+    "release_date": "2024-05-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "hoka-speedgoat-6",
+    "name": "Hoka Speedgoat 6",
+    "brand": "Hoka",
+    "price": 155,
+    "usage_types": [
+      "trail_running",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "mild",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": 35,
+    "drop": 4,
+    "weight_mens": 9.8,
+    "weight_womens": 8.3,
+    "description": "Hoka's versatile max-cushion trail shoe with Vibram Megagrip for confident traction on all trail surfaces.",
+    "pros": [
+      "Excellent Vibram traction",
+      "Max cushion on trails",
+      "Versatile on varied terrain",
+      "Comfortable for long trail runs"
+    ],
+    "cons": [
+      "Heavier than minimal trail shoes",
+      "Cushion can mask ground feel"
+    ],
+    "popularity": 83,
+    "release_date": "2024-04-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "hoka-speedgoat-7",
+    "name": "Hoka Speedgoat 7",
+    "brand": "Hoka",
+    "price": 155,
+    "usage_types": [
+      "trail_running",
+      "long_run"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 4,
+    "weight_mens": 10.2,
+    "weight_womens": 8.8,
+    "description": "Max-cushion trail shoe with Vibram Megagrip outsole for outstanding traction on technical terrain.",
+    "pros": [
+      "Excellent Vibram Megagrip traction",
+      "Generous cushioning for long trail runs",
+      "Protective yet agile feel",
+      "Versatile on varied terrain"
+    ],
+    "cons": [
+      "Can feel bulky on flat groomed trails",
+      "Upper durability could be improved"
+    ],
+    "popularity": 90,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "hoka-tecton-x-2",
+    "name": "Hoka Tecton X 2",
+    "brand": "Hoka",
+    "price": 200,
+    "usage_types": [
+      "trail_running",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": 30,
+    "drop": 5,
+    "weight_mens": 8.5,
+    "weight_womens": 7.3,
+    "description": "Hoka's carbon-plated trail racing shoe with Vibram Megagrip for fast trail races and FKT attempts.",
+    "pros": [
+      "Carbon plate for trail racing",
+      "Excellent Vibram traction",
+      "Lightweight for trail shoe",
+      "Great energy return on trails"
+    ],
+    "cons": [
+      "Expensive trail shoe",
+      "Less protection than burlier options"
+    ],
+    "popularity": 80,
+    "release_date": "2023-08-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "mizuno-hyperwarp-elite",
+    "name": "Mizuno Hyperwarp Elite",
+    "brand": "Mizuno",
+    "price": 250,
+    "usage_types": [
+      "race_day"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "narrow",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "lightweight",
+    "stack": 40,
+    "drop": 5,
+    "weight_mens": 6.3,
+    "weight_womens": 5.4,
+    "description": "Mizuno's top-tier carbon-plated marathon racer with dual-density Enerzy Lite+ midsole for maximum propulsion over 26.2 miles.",
+    "pros": [
+      "Elite-level energy return for marathon racing",
+      "Featherlight weight under 6.5 oz mens",
+      "Carbon plate geometry optimized for sustained speed",
+      "Premium race-day construction"
+    ],
+    "cons": [
+      "Very high price point for a race-only shoe",
+      "Narrow last limits accessibility for wider feet"
+    ],
+    "popularity": 65,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "mizuno-hyperwarp-pro",
+    "name": "Mizuno Hyperwarp Pro",
+    "brand": "Mizuno",
+    "price": 200,
+    "usage_types": [
+      "speed_work",
+      "race_day"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "narrow",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 38,
+    "drop": 5,
+    "weight_mens": 6.9,
+    "weight_womens": 5.8,
+    "description": "Carbon-plated race shoe with Enerzy Lite+ foam built for competitive runners chasing PRs from the 5K to the half marathon.",
+    "pros": [
+      "Aggressive carbon plate propulsion at speed",
+      "Ultra-lightweight construction",
+      "Snappy and responsive energy return",
+      "Excellent grip on road and track"
+    ],
+    "cons": [
+      "Narrow fit requires precise sizing",
+      "Not durable enough for regular training use"
+    ],
+    "popularity": 68,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "mizuno-neo-zen-2",
+    "name": "Mizuno Neo Zen 2",
+    "brand": "Mizuno",
+    "price": 145,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 35,
+    "drop": 8,
+    "weight_mens": 9.8,
+    "weight_womens": 8.4,
+    "description": "Cushioned daily trainer with Mizuno's ENERZY foam for a soft yet responsive ride on everyday training runs.",
+    "pros": [
+      "Smooth and balanced ride quality",
+      "ENERZY foam provides good energy return",
+      "Durable construction for high mileage",
+      "Comfortable fit out of the box"
+    ],
+    "cons": [
+      "Styling is conservative compared to competitors",
+      "Slightly firm compared to max-cushion shoes"
+    ],
+    "popularity": 72,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "mizuno-wave-inspire-22",
+    "name": "Mizuno Wave Inspire 22",
+    "brand": "Mizuno",
+    "price": 145,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 33,
+    "drop": 12,
+    "weight_mens": 10.5,
+    "weight_womens": 9,
+    "description": "Stability trainer combining Mizuno's Wave Plate technology with Enerzy foam for a stable, cushioned ride that guides overpronators.",
+    "pros": [
+      "Wave Plate delivers smooth stability and structure",
+      "Enerzy foam provides soft yet responsive cushioning",
+      "Excellent durability for high-mileage training",
+      "Trusted lineage with refined fit"
+    ],
+    "cons": [
+      "Heavier than modern stability competitors",
+      "Higher drop may not suit midfoot strikers"
+    ],
+    "popularity": 73,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "mizuno-wave-rebellion-pro-2",
+    "name": "Mizuno Wave Rebellion Pro 2",
+    "brand": "Mizuno",
+    "price": 225,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "lightweight",
+    "stack": 42,
+    "drop": 8,
+    "weight_mens": 7,
+    "weight_womens": 6,
+    "description": "Mizuno's elite carbon-plated racer with ENERZY Lite Plus foam for aggressive race-day performance.",
+    "pros": [
+      "Aggressive forward propulsion",
+      "Lightweight carbon plate shoe",
+      "Good energy return",
+      "Unique Mizuno ride"
+    ],
+    "cons": [
+      "Less mainstream brand",
+      "Very aggressive rocker may not suit all"
+    ],
+    "popularity": 78,
+    "release_date": "2024-03-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "mizuno-wave-rider-27",
+    "name": "Mizuno Wave Rider 27",
+    "brand": "Mizuno",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 34,
+    "drop": 12,
+    "weight_mens": 9.5,
+    "weight_womens": 8.3,
+    "description": "Mizuno's flagship daily trainer with Wave Plate technology for a smooth, stable ride on everyday runs.",
+    "pros": [
+      "Smooth Wave Plate transition",
+      "Durable construction",
+      "Reliable daily performer",
+      "Good ground feel"
+    ],
+    "cons": [
+      "Firmer than foam-based competitors",
+      "Less trendy brand appeal"
+    ],
+    "popularity": 82,
+    "release_date": "2023-06-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "mizuno-wave-rider-28",
+    "name": "Mizuno Wave Rider 28",
+    "brand": "Mizuno",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 34,
+    "drop": 12,
+    "weight_mens": 9.4,
+    "weight_womens": 8.2,
+    "description": "The Wave Rider 28 continues Mizuno's tradition of smooth, reliable daily trainers with updated ENERZY foam.",
+    "pros": [
+      "Improved ENERZY foam",
+      "Smooth transitions",
+      "Durable outsole",
+      "Slightly lighter"
+    ],
+    "cons": [
+      "Still firmer than max-cushion shoes",
+      "Conservative styling"
+    ],
+    "popularity": 83,
+    "release_date": "2024-06-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "new-balance-1080-v14",
+    "name": "New Balance 1080 v14",
+    "brand": "New Balance",
+    "price": 165,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "wide",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 38,
+    "drop": 6,
+    "weight_mens": 10.3,
+    "weight_womens": 8.4,
+    "description": "New Balance's premium max-cushion trainer with FuelCell midsole foam and a roomy toe box for all-day comfort.",
+    "pros": [
+      "Plush FuelCell cushioning",
+      "Wide toe box",
+      "Comfortable for long runs",
+      "Smooth transitions"
+    ],
+    "cons": [
+      "Heavier than some competitors",
+      "Premium price"
+    ],
+    "popularity": 88,
+    "release_date": "2024-06-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "new-balance-1080-v15",
+    "name": "New Balance 1080 v15",
+    "brand": "New Balance",
+    "price": 165,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 40,
+    "drop": 6,
+    "weight_mens": 10.1,
+    "weight_womens": 8.7,
+    "description": "Premium max-cushion trainer with a full-length FuelCell midsole delivering plush comfort with a touch of bounce.",
+    "pros": [
+      "FuelCell foam is plush yet maintains energy return",
+      "Hypoknit upper provides supportive adaptive fit",
+      "Excellent for long runs and easy days",
+      "Smooth ride from heel to toe"
+    ],
+    "cons": [
+      "Soft ride can feel unstable for overpronators",
+      "Premium price in a competitive category"
+    ],
+    "popularity": 88,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "new-balance-860-v14",
+    "name": "New Balance 860 v14",
+    "brand": "New Balance",
+    "price": 150,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 10,
+    "weight_mens": 10.5,
+    "weight_womens": 9.4,
+    "description": "New Balance's stability workhorse with medial post support and FuelCell cushioning for overpronators.",
+    "pros": [
+      "Solid stability support",
+      "Comfortable cushioning",
+      "Wide sizes available",
+      "Durable construction"
+    ],
+    "cons": [
+      "Heavy for its class",
+      "Not exciting ride feel"
+    ],
+    "popularity": 78,
+    "release_date": "2024-02-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "new-balance-fuelcell-rebel-v3",
+    "name": "New Balance FuelCell Rebel v3",
+    "brand": "New Balance",
+    "price": 130,
+    "usage_types": [
+      "speed_work",
+      "daily_trainer"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 34,
+    "drop": 6,
+    "weight_mens": 7.6,
+    "weight_womens": 6.5,
+    "description": "A lightweight speed-focused daily trainer from New Balance with bouncy FuelCell foam for fast everyday runs.",
+    "pros": [
+      "Very lightweight",
+      "Bouncy energetic ride",
+      "Great for uptempo runs",
+      "Good value"
+    ],
+    "cons": [
+      "Less cushion for long runs",
+      "Outsole durability could improve"
+    ],
+    "popularity": 84,
+    "release_date": "2023-03-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "new-balance-fuelcell-rebel-v4",
+    "name": "New Balance FuelCell Rebel v4",
+    "brand": "New Balance",
+    "price": 140,
+    "usage_types": [
+      "speed_work",
+      "daily_trainer"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 35,
+    "drop": 6,
+    "weight_mens": 7.8,
+    "weight_womens": 6.7,
+    "description": "The Rebel v4 builds on New Balance's speed-daily hybrid formula with improved FuelCell foam and a refined fit.",
+    "pros": [
+      "Lightweight and responsive",
+      "Versatile speed trainer",
+      "Improved cushioning",
+      "Fun ride feel"
+    ],
+    "cons": [
+      "Slightly heavier than v3",
+      "Less suited for recovery runs"
+    ],
+    "popularity": 85,
+    "release_date": "2024-04-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "new-balance-fuelcell-rebel-v5",
+    "name": "New Balance FuelCell Rebel v5",
+    "brand": "New Balance",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track",
+      "treadmill"
+    ],
+    "weight_range": "lightweight",
+    "stack": 33,
+    "drop": 6,
+    "weight_mens": 7.8,
+    "weight_womens": 6.7,
+    "description": "Lightweight, bouncy speed trainer with FuelCell foam excelling at uptempo daily runs and speed workouts.",
+    "pros": [
+      "Extremely lightweight and nimble at under 8 oz mens",
+      "FuelCell foam delivers a bouncy and responsive ride",
+      "Versatile for daily training and speed sessions",
+      "Excellent breathability from engineered mesh upper"
+    ],
+    "cons": [
+      "Softer foam can feel less stable at slower paces",
+      "Outsole durability is modest under heavy mileage"
+    ],
+    "popularity": 85,
+    "release_date": "2025-04-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "new-balance-fuelcell-sc-elite-v4",
+    "name": "New Balance FuelCell SC Elite v4",
+    "brand": "New Balance",
+    "price": 250,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "lightweight",
+    "stack": 40,
+    "drop": 4,
+    "weight_mens": 7.5,
+    "weight_womens": 6.3,
+    "description": "New Balance's top-tier marathon racing shoe with FuelCell foam and carbon fiber plate for elite performance.",
+    "pros": [
+      "Excellent energy return",
+      "Carbon plate propulsion",
+      "Low drop for natural feel",
+      "Lightweight construction"
+    ],
+    "cons": [
+      "Very expensive",
+      "Limited training durability"
+    ],
+    "popularity": 86,
+    "release_date": "2024-03-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "nike-alphafly-3",
+    "name": "Nike Alphafly 3",
+    "brand": "Nike",
+    "price": 285,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 40,
+    "drop": 8,
+    "weight_mens": 7.3,
+    "weight_womens": 6.3,
+    "description": "Nike's flagship marathon racing super shoe with ZoomX foam and carbon fiber plate for elite-level performance.",
+    "pros": [
+      "Outstanding energy return",
+      "Carbon fiber plate propulsion",
+      "Proven in marathon racing",
+      "Lightweight construction"
+    ],
+    "cons": [
+      "Very expensive",
+      "Not durable for training"
+    ],
+    "popularity": 98,
+    "release_date": "2024-01-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "nike-downshifter-14",
+    "name": "Nike Downshifter 14",
+    "brand": "Nike",
+    "price": 70,
+    "usage_types": [
+      "daily_trainer"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 28,
+    "drop": 10,
+    "weight_mens": 9.8,
+    "weight_womens": 8.4,
+    "description": "Budget-friendly entry-level running shoe that provides basic cushioning and support for new runners and casual joggers.",
+    "pros": [
+      "Extremely affordable entry point for new runners",
+      "Simple and comfortable for casual use",
+      "Durable rubber outsole for everyday wear"
+    ],
+    "cons": [
+      "Foam cushioning lacks responsiveness of premium options",
+      "Minimal arch support for longer distances"
+    ],
+    "popularity": 70,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "nike-invincible-3",
+    "name": "Nike Invincible 3",
+    "brand": "Nike",
+    "price": 180,
+    "usage_types": [
+      "daily_trainer",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 35,
+    "drop": 9,
+    "weight_mens": 11.2,
+    "weight_womens": 9.4,
+    "description": "Nike's plushest daily trainer with wall-to-wall ZoomX foam for ultra-soft cushioning on recovery and easy runs.",
+    "pros": [
+      "Ultra-plush ZoomX foam",
+      "Excellent shock absorption",
+      "Great for recovery days",
+      "Fun bouncy ride"
+    ],
+    "cons": [
+      "Very heavy",
+      "Wobbly on uneven surfaces"
+    ],
+    "popularity": 85,
+    "release_date": "2023-03-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "nike-invincible-4",
+    "name": "Nike Invincible 4",
+    "brand": "Nike",
+    "price": 180,
+    "usage_types": [
+      "daily_trainer",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 35,
+    "drop": 9,
+    "weight_mens": 11,
+    "weight_womens": 9.2,
+    "description": "Nike's plushest running shoe with wall-to-wall ZoomX foam for ultra-soft recovery runs and easy days.",
+    "pros": [
+      "Ultra-plush ZoomX foam throughout",
+      "Excellent shock absorption",
+      "Great for recovery and easy days",
+      "Fun bouncy ride feel"
+    ],
+    "cons": [
+      "Very heavy for a running shoe",
+      "Can feel unstable at faster paces"
+    ],
+    "popularity": 84,
+    "release_date": "2025-01-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "nike-pegasus-41",
+    "name": "Nike Pegasus 41",
+    "brand": "Nike",
+    "price": 139,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track",
+      "treadmill",
+      "mixed"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 10,
+    "weight_mens": 10,
+    "weight_womens": 8.6,
+    "description": "Nike's iconic daily trainer with React X foam and Zoom Air unit for reliable everyday performance.",
+    "pros": [
+      "Reliable all-around performer",
+      "Widely available",
+      "Good durability",
+      "Versatile for many run types"
+    ],
+    "cons": [
+      "Can feel firm initially",
+      "Not the most exciting ride"
+    ],
+    "popularity": 96,
+    "release_date": "2024-06-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "nike-pegasus-42",
+    "name": "Nike Pegasus 42",
+    "brand": "Nike",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track",
+      "treadmill",
+      "mixed"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 10,
+    "weight_mens": 9.8,
+    "weight_womens": 8.4,
+    "description": "The latest iteration of Nike's iconic daily trainer with refined React X cushioning for reliable everyday running.",
+    "pros": [
+      "Trusted daily trainer lineage",
+      "Slightly lighter than Peg 41",
+      "Versatile for all run types",
+      "Durable construction"
+    ],
+    "cons": [
+      "Incremental update",
+      "Still firm compared to max-cushion shoes"
+    ],
+    "popularity": 94,
+    "release_date": "2025-06-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "nike-pegasus-premium",
+    "name": "Nike Pegasus Premium",
+    "brand": "Nike",
+    "price": 180,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track",
+      "treadmill",
+      "mixed"
+    ],
+    "weight_range": "all",
+    "stack": 37,
+    "drop": 10,
+    "weight_mens": 9.9,
+    "weight_womens": 8.5,
+    "description": "Nike's elevated daily trainer combining React X foam with visible Air Zoom unit, bridging the gap between Pegasus and Vomero.",
+    "pros": [
+      "Premium materials and build quality",
+      "Versatile for multiple run types",
+      "Responsive Air Zoom cushioning",
+      "Smooth ride at varied paces"
+    ],
+    "cons": [
+      "Significant price increase over standard Pegasus",
+      "Fit may run narrow for some"
+    ],
+    "popularity": 82,
+    "release_date": "2025-04-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "nike-structure-plus",
+    "name": "Nike Structure Plus",
+    "brand": "Nike",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 34,
+    "drop": 10,
+    "weight_mens": 10.2,
+    "weight_womens": 8.8,
+    "description": "Stability-focused daily trainer combining supportive medial posting with React foam for a smooth, secure ride.",
+    "pros": [
+      "Effective stability without feeling overly stiff",
+      "Comfortable for all-day wear and daily runs",
+      "Secure midfoot lockdown",
+      "Durable outsole rubber"
+    ],
+    "cons": [
+      "Heavier than neutral alternatives",
+      "Styling is more function-focused than fashion-forward"
+    ],
+    "popularity": 72,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "nike-ultrafly-trail-2",
+    "name": "Nike Ultrafly Trail 2",
+    "brand": "Nike",
+    "price": 220,
+    "usage_types": [
+      "trail_running",
+      "race_day"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "lightweight",
+    "stack": 39,
+    "drop": 4,
+    "weight_mens": 8.8,
+    "weight_womens": 7.5,
+    "description": "Carbon-plated trail racing shoe built on a ZoomX foam midsole for explosive energy return on rugged terrain.",
+    "pros": [
+      "ZoomX foam provides exceptional energy return on trails",
+      "Carbon plate drives forward propulsion on climbs",
+      "Aggressive lug pattern grips technical terrain",
+      "Lightweight for a trail racing shoe"
+    ],
+    "cons": [
+      "Premium price for a niche trail racing shoe",
+      "ZoomX foam durability is limited over rocky terrain"
+    ],
+    "popularity": 73,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "nike-vaporfly-3",
+    "name": "Nike Vaporfly 3",
+    "brand": "Nike",
+    "price": 250,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 40,
+    "drop": 8,
+    "weight_mens": 6.6,
+    "weight_womens": 5.6,
+    "description": "Nike's legendary carbon-plated race shoe with ZoomX foam, the gold standard for road racing performance.",
+    "pros": [
+      "Exceptional energy return",
+      "Ultra-lightweight",
+      "Carbon plate propulsion",
+      "Proven race results"
+    ],
+    "cons": [
+      "Very expensive",
+      "Limited durability"
+    ],
+    "popularity": 94,
+    "release_date": "2023-03-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "nike-vomero-18",
+    "name": "Nike Vomero 18",
+    "brand": "Nike",
+    "price": 160,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 10,
+    "weight_mens": 10.6,
+    "weight_womens": 9,
+    "description": "Nike's premium max-cushion daily trainer with ZoomX foam and full-length Zoom Air unit for a plush, responsive ride.",
+    "pros": [
+      "Plush ZoomX cushioning",
+      "Smooth heel-to-toe transition",
+      "Comfortable for high mileage",
+      "Breathable engineered mesh upper"
+    ],
+    "cons": [
+      "Heavier than some competitors",
+      "Premium price point"
+    ],
+    "popularity": 88,
+    "release_date": "2024-06-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "nike-wildhorse-8",
+    "name": "Nike Wildhorse 8",
+    "brand": "Nike",
+    "price": 130,
+    "usage_types": [
+      "trail_running"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "mild",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": 28,
+    "drop": 8,
+    "weight_mens": 10.1,
+    "weight_womens": 8.7,
+    "description": "Nike's rugged trail runner with aggressive lugs and rock plate protection for technical off-road terrain.",
+    "pros": [
+      "Good traction on varied terrain",
+      "Protective rock plate",
+      "Affordable trail shoe"
+    ],
+    "cons": [
+      "Heavier than competitors",
+      "Break-in period needed"
+    ],
+    "popularity": 75,
+    "release_date": "2024-03-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "nike-zoomfly-5",
+    "name": "Nike ZoomFly 5",
+    "brand": "Nike",
+    "price": 160,
+    "usage_types": [
+      "speed_work",
+      "race_day"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "all",
+    "stack": 37,
+    "drop": 8,
+    "weight_mens": 9,
+    "weight_womens": 7.8,
+    "description": "Nike's accessible plated speed shoe with ZoomX foam and carbon fiber plate for tempo runs and race day.",
+    "pros": [
+      "Carbon plate at accessible price",
+      "Good for tempo training",
+      "Can double as race shoe",
+      "Responsive cushioning"
+    ],
+    "cons": [
+      "Heavier than elite racers",
+      "Stiff ride for easy runs"
+    ],
+    "popularity": 82,
+    "release_date": "2023-01-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "on-cloudflow-4",
+    "name": "On Cloudflow 4",
+    "brand": "On",
+    "price": 160,
+    "usage_types": [
+      "daily_trainer",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 30,
+    "drop": 6,
+    "weight_mens": 8.5,
+    "weight_womens": 7.4,
+    "description": "On's lightweight performance trainer with CloudTec cushioning and a snappy feel for fast training sessions.",
+    "pros": [
+      "Lightweight and responsive",
+      "Great for uptempo training",
+      "Snappy toe-off feel",
+      "Clean minimalist design"
+    ],
+    "cons": [
+      "Less cushion for longer easy runs",
+      "CloudTec pods can trap small stones"
+    ],
+    "popularity": 79,
+    "release_date": "2024-06-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "on-cloudmonster-2",
+    "name": "On Cloudmonster 2",
+    "brand": "On",
+    "price": 180,
+    "usage_types": [
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 6,
+    "weight_mens": 10.3,
+    "weight_womens": 8.7,
+    "description": "On's max-cushion long-run shoe with CloudTec Phase technology for a smooth, cushioned ride over big mileage.",
+    "pros": [
+      "Unique cushioning feel",
+      "Great for long slow runs",
+      "Eye-catching design",
+      "Improved energy return"
+    ],
+    "cons": [
+      "Expensive for a training shoe",
+      "Polarizing ride feel"
+    ],
+    "popularity": 82,
+    "release_date": "2024-03-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "on-cloudmonster-3",
+    "name": "On CloudMonster 3",
+    "brand": "On",
+    "price": 180,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 6,
+    "weight_mens": 10.1,
+    "weight_womens": 8.5,
+    "description": "On's max-cushion daily trainer with CloudTec Phase technology for a smooth, cushioned ride with a distinctive bouncy feel.",
+    "pros": [
+      "Unique CloudTec Phase cushioning",
+      "Eye-catching bold design",
+      "Great energy return",
+      "Smooth heel-to-toe transition"
+    ],
+    "cons": [
+      "Expensive for a daily trainer",
+      "Polarizing ride feel may not suit everyone"
+    ],
+    "popularity": 86,
+    "release_date": "2025-03-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "on-cloudrunner-2",
+    "name": "On Cloudrunner 2",
+    "brand": "On",
+    "price": 150,
+    "usage_types": [
+      "daily_trainer"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "mild",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 34,
+    "drop": 7,
+    "weight_mens": 10.2,
+    "weight_womens": 8.8,
+    "description": "On's supportive daily trainer with CloudTec cushioning and mild stability for runners needing light guidance.",
+    "pros": [
+      "Light stability support",
+      "CloudTec cushioning comfort",
+      "Clean modern design",
+      "Good for daily miles"
+    ],
+    "cons": [
+      "Heavier than neutral On shoes",
+      "CloudTec takes getting used to"
+    ],
+    "popularity": 81,
+    "release_date": "2024-01-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "on-cloudsurfer-7",
+    "name": "On Cloudsurfer 7",
+    "brand": "On",
+    "price": 150,
+    "usage_types": [
+      "daily_trainer",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 35,
+    "drop": 8,
+    "weight_mens": 9.5,
+    "weight_womens": 8.2,
+    "description": "On's versatile daily trainer with CloudTec Phase technology for a smooth, responsive ride from easy to tempo pace.",
+    "pros": [
+      "Smooth ride quality",
+      "Versatile pacing range",
+      "Modern design aesthetic",
+      "Good energy return"
+    ],
+    "cons": [
+      "Higher price for daily trainer",
+      "Unique ride may not suit everyone"
+    ],
+    "popularity": 80,
+    "release_date": "2023-09-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "on-runner-max",
+    "name": "On Runner Max",
+    "brand": "On",
+    "price": 180,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 37,
+    "drop": 6,
+    "weight_mens": 10.4,
+    "weight_womens": 8.9,
+    "description": "Max-cushion daily trainer from On with CloudTec Phase technology for a smooth, connected ride.",
+    "pros": [
+      "CloudTec Phase provides smooth transitions",
+      "Plush max cushioning for long runs",
+      "Premium build quality and materials",
+      "Distinctive soft landing feel"
+    ],
+    "cons": [
+      "Premium price compared to similar shoes",
+      "CloudTec pods can trap small debris"
+    ],
+    "popularity": 82,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "puma-deviate-nitro-3",
+    "name": "Puma Deviate Nitro 3",
+    "brand": "Puma",
+    "price": 160,
+    "usage_types": [
+      "speed_work",
+      "long_run"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "all",
+    "stack": 34,
+    "drop": 8,
+    "weight_mens": 8.8,
+    "weight_womens": 7.6,
+    "description": "Puma's carbon-plated speed trainer with NITRO Elite foam for versatile fast training sessions.",
+    "pros": [
+      "Great value for plated shoe",
+      "Versatile speed trainer",
+      "Responsive NITRO foam",
+      "Good for tempo runs"
+    ],
+    "cons": [
+      "Less brand recognition",
+      "Fit can be inconsistent"
+    ],
+    "popularity": 80,
+    "release_date": "2024-02-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "puma-deviate-nitro-4",
+    "name": "Puma Deviate Nitro 4",
+    "brand": "Puma",
+    "price": 175,
+    "usage_types": [
+      "speed_work",
+      "race_day"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 37,
+    "drop": 6,
+    "weight_mens": 7.8,
+    "weight_womens": 6.7,
+    "description": "Carbon-plated speed trainer with NITRO Elite foam for a responsive, propulsive ride during workouts and races.",
+    "pros": [
+      "Carbon plate provides noticeable snap at speed",
+      "NITRO Elite foam is lightweight and bouncy",
+      "Versatile for tempo runs and race day",
+      "Competitive pricing for a plated shoe"
+    ],
+    "cons": [
+      "Upper durability may not withstand heavy training volume",
+      "Slightly firm ride on recovery-pace runs"
+    ],
+    "popularity": 71,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "puma-deviate-nitro-elite-4",
+    "name": "Puma Deviate Nitro Elite 4",
+    "brand": "Puma",
+    "price": 230,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "narrow",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 39,
+    "drop": 6,
+    "weight_mens": 7.2,
+    "weight_womens": 6.2,
+    "description": "Elite carbon-plated marathon racing shoe from Puma with NITRO Elite foam for maximum energy return on race day.",
+    "pros": [
+      "Extremely lightweight construction",
+      "Powerful carbon plate propulsion",
+      "High energy return from NITRO Elite foam",
+      "Aggressive rocker geometry for speed"
+    ],
+    "cons": [
+      "Very narrow fit limits accessibility",
+      "Durability is limited to race-day use"
+    ],
+    "popularity": 80,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "salomon-aero-glide-4",
+    "name": "Salomon Aero Glide 4",
+    "brand": "Salomon",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "heel"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "lightweight",
+    "stack": 33,
+    "drop": 8,
+    "weight_mens": 8.8,
+    "weight_womens": 7.6,
+    "description": "Lightweight road running shoe from Salomon bringing trail expertise to everyday training with a responsive midsole.",
+    "pros": [
+      "Lightweight and nimble feel",
+      "Smooth transitions at various paces",
+      "Well-ventilated upper",
+      "Quality build from Salomon's expertise"
+    ],
+    "cons": [
+      "Limited cushion for very long runs",
+      "Narrower fit than some competitors"
+    ],
+    "popularity": 70,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "salomon-speedcross-6",
+    "name": "Salomon Speedcross 6",
+    "brand": "Salomon",
+    "price": 140,
+    "usage_types": [
+      "trail_running"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "narrow",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": 32,
+    "drop": 10,
+    "weight_mens": 11,
+    "weight_womens": 9.9,
+    "description": "Salomon's aggressive trail shoe with deep lugs and a protective chassis for technical terrain and mud.",
+    "pros": [
+      "Excellent traction on mud and loose terrain",
+      "Protective rock plate",
+      "Secure Quicklace system"
+    ],
+    "cons": [
+      "Narrow fit",
+      "Stiff on hard surfaces"
+    ],
+    "popularity": 77,
+    "release_date": "2023-02-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "salomon-ultra-glide-2",
+    "name": "Salomon Ultra Glide 2",
+    "brand": "Salomon",
+    "price": 140,
+    "usage_types": [
+      "trail_running",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "mild",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": 32,
+    "drop": 6,
+    "weight_mens": 10.5,
+    "weight_womens": 9,
+    "description": "Salomon's cushioned trail shoe for ultra-distance running with Energy Foam and Contagrip MA traction.",
+    "pros": [
+      "Good cushioning for ultra distances",
+      "Reliable Contagrip traction",
+      "Comfortable upper",
+      "Versatile trail shoe"
+    ],
+    "cons": [
+      "Heavier than minimal trail shoes",
+      "Less aggressive lugs for mud"
+    ],
+    "popularity": 76,
+    "release_date": "2023-05-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-endorphin-azura",
+    "name": "Saucony Endorphin Azura",
+    "brand": "Saucony",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 34,
+    "drop": 8,
+    "weight_mens": 9.2,
+    "weight_womens": 7.9,
+    "description": "Versatile daily trainer from Saucony's Endorphin line blending comfort with a touch of speed for multiple training paces.",
+    "pros": [
+      "Versatile for multiple training paces",
+      "Responsive yet comfortable midsole",
+      "Well-balanced weight and cushion",
+      "Excellent value in the Endorphin lineup"
+    ],
+    "cons": [
+      "Less plush than max-cushion options",
+      "Outsole could be more durable on rough surfaces"
+    ],
+    "popularity": 78,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-endorphin-pro-3",
+    "name": "Saucony Endorphin Pro 3",
+    "brand": "Saucony",
+    "price": 225,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "lightweight",
+    "stack": 40,
+    "drop": 8,
+    "weight_mens": 7.5,
+    "weight_womens": 6.5,
+    "description": "Saucony's carbon-plated marathon racer with PWRRUN PB foam for elite-level race-day performance.",
+    "pros": [
+      "Carbon plate propulsion",
+      "Lightweight race shoe",
+      "Excellent energy return",
+      "Proven at elite level"
+    ],
+    "cons": [
+      "Expensive",
+      "Not durable for training"
+    ],
+    "popularity": 88,
+    "release_date": "2023-03-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-endorphin-pro-4",
+    "name": "Saucony Endorphin Pro 4",
+    "brand": "Saucony",
+    "price": 225,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "narrow",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 40,
+    "drop": 8,
+    "weight_mens": 7.5,
+    "weight_womens": 6.4,
+    "description": "Carbon-plated marathon racer with redesigned PWRRUN PB midsole for improved energy return, targeting half and full marathon distances.",
+    "pros": [
+      "PWRRUN PB foam delivers elite-level energy return",
+      "Full-length carbon plate provides strong propulsion",
+      "Lightweight and fast at under 7.5 oz mens",
+      "Improved upper fit over previous version"
+    ],
+    "cons": [
+      "Narrow fit may not accommodate wider feet",
+      "Durability limited to race-day and key workout use"
+    ],
+    "popularity": 86,
+    "release_date": "2024-09-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-endorphin-pro-5",
+    "name": "Saucony Endorphin Pro 5",
+    "brand": "Saucony",
+    "price": 225,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "narrow",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 40,
+    "drop": 8,
+    "weight_mens": 7.5,
+    "weight_womens": 6.5,
+    "description": "Elite carbon-plated marathon racing shoe featuring PWRRUN HG foam for explosive energy return on race day.",
+    "pros": [
+      "Exceptional energy return from PWRRUN HG",
+      "Carbon fiber plate enhances propulsion",
+      "Extremely lightweight for a plated shoe",
+      "Fast and responsive ride"
+    ],
+    "cons": [
+      "Narrow fit may not suit all foot shapes",
+      "High price point for race-day-only use"
+    ],
+    "popularity": 87,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-endorphin-speed-4",
+    "name": "Saucony Endorphin Speed 4",
+    "brand": "Saucony",
+    "price": 170,
+    "usage_types": [
+      "speed_work",
+      "long_run"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 8,
+    "weight_mens": 8.2,
+    "weight_womens": 7.2,
+    "description": "Saucony's versatile nylon-plated speed shoe with PWRRUN PB foam for tempo runs and fast long runs.",
+    "pros": [
+      "Versatile speed trainer",
+      "Nylon plate for propulsion",
+      "Great value for plated shoe",
+      "Works for racing too"
+    ],
+    "cons": [
+      "Upper fit can be narrow",
+      "Less cushion than previous version"
+    ],
+    "popularity": 89,
+    "release_date": "2024-05-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-endorphin-speed-5",
+    "name": "Saucony Endorphin Speed 5",
+    "brand": "Saucony",
+    "price": 175,
+    "usage_types": [
+      "speed_work",
+      "long_run"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "all",
+    "stack": 37,
+    "drop": 8,
+    "weight_mens": 8,
+    "weight_womens": 7,
+    "description": "The fifth generation of Saucony's popular nylon-plated speed trainer with refined PWRRUN PB foam and fit.",
+    "pros": [
+      "Versatile plated speed shoe",
+      "Great for tempo and long runs",
+      "Improved foam",
+      "Good value for plated shoe"
+    ],
+    "cons": [
+      "Incremental update",
+      "Fit may vary from Speed 4"
+    ],
+    "popularity": 87,
+    "release_date": "2025-03-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-guide-17",
+    "name": "Saucony Guide 17",
+    "brand": "Saucony",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "mild",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 35,
+    "drop": 8,
+    "weight_mens": 9.7,
+    "weight_womens": 8.6,
+    "description": "Saucony's mild stability daily trainer with centered PWRRUN cushioning for guided support without rigidity.",
+    "pros": [
+      "Subtle stability support",
+      "Comfortable daily trainer",
+      "Good cushioning",
+      "Works for mild overpronation"
+    ],
+    "cons": [
+      "Not enough support for severe overpronation",
+      "Average energy return"
+    ],
+    "popularity": 79,
+    "release_date": "2024-04-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-guide-18",
+    "name": "Saucony Guide 18",
+    "brand": "Saucony",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "mild",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 33,
+    "drop": 8,
+    "weight_mens": 9.9,
+    "weight_womens": 8.6,
+    "description": "Mild stability daily trainer with medial TPU guidance frame and PWRRUN+ cushioning for a supportive yet smooth ride.",
+    "pros": [
+      "Effective stability support without feeling intrusive",
+      "PWRRUN+ foam provides comfortable cushioning",
+      "Smooth transitions for daily training miles",
+      "Reliable durability for high-mileage runners"
+    ],
+    "cons": [
+      "Slightly heavier than neutral counterparts",
+      "Less exciting ride than more modern stability shoes"
+    ],
+    "popularity": 79,
+    "release_date": "2025-03-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-kinvara-14",
+    "name": "Saucony Kinvara 14",
+    "brand": "Saucony",
+    "price": 120,
+    "usage_types": [
+      "speed_work",
+      "daily_trainer"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 32,
+    "drop": 4,
+    "weight_mens": 7.5,
+    "weight_womens": 6.4,
+    "description": "Saucony's lightweight low-drop speed trainer with PWRRUN cushioning for fast-feel daily runs and tempo work.",
+    "pros": [
+      "Very lightweight",
+      "Low drop for natural stride",
+      "Great for uptempo runs",
+      "Affordable price"
+    ],
+    "cons": [
+      "Less cushion for long runs",
+      "Outsole wears quickly"
+    ],
+    "popularity": 82,
+    "release_date": "2023-06-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-kinvara-15",
+    "name": "Saucony Kinvara 15",
+    "brand": "Saucony",
+    "price": 120,
+    "usage_types": [
+      "speed_work",
+      "daily_trainer"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 32,
+    "drop": 4,
+    "weight_mens": 7.6,
+    "weight_womens": 6.5,
+    "description": "The updated Kinvara 15 maintains its lightweight speed-focused character with improved upper comfort and fit.",
+    "pros": [
+      "Lightweight speed trainer",
+      "Low drop natural feel",
+      "Improved upper fit",
+      "Great value"
+    ],
+    "cons": [
+      "Minimal cushion for recovery runs",
+      "Outsole durability concerns"
+    ],
+    "popularity": 83,
+    "release_date": "2024-06-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-kinvara-16",
+    "name": "Saucony Kinvara 16",
+    "brand": "Saucony",
+    "price": 120,
+    "usage_types": [
+      "daily_trainer",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track",
+      "treadmill"
+    ],
+    "weight_range": "lightweight",
+    "stack": 27,
+    "drop": 4,
+    "weight_mens": 7.6,
+    "weight_womens": 6.6,
+    "description": "Lightweight, low-drop speed trainer with PWRRUN foam for a fast, natural ride on tempo runs and speed sessions.",
+    "pros": [
+      "Ultra-lightweight at under 8 oz mens",
+      "Low 4mm drop promotes natural foot strike",
+      "Snappy and responsive for tempo efforts",
+      "Excellent breathability from lightweight mesh upper"
+    ],
+    "cons": [
+      "Minimal cushion may not suit long-distance comfort seekers",
+      "Less durable than heavier daily trainers"
+    ],
+    "popularity": 81,
+    "release_date": "2025-02-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-omni-23",
+    "name": "Saucony Omni 23",
+    "brand": "Saucony",
+    "price": 145,
+    "usage_types": [
+      "daily_trainer",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "wide",
+    "cushion": "moderate",
+    "stability": "motion_control",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 35,
+    "drop": 8,
+    "weight_mens": 11.5,
+    "weight_womens": 9.9,
+    "description": "Motion control stability shoe for runners with severe overpronation, featuring a structured medial post and firm support.",
+    "pros": [
+      "Strong motion control for severe overpronators",
+      "Supportive and structured fit",
+      "Reliable for high-mileage training",
+      "Wide toe box accommodates broader feet"
+    ],
+    "cons": [
+      "Heavier than most daily trainers",
+      "Stiff feel may not appeal to all runners"
+    ],
+    "popularity": 65,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-peregrine-14",
+    "name": "Saucony Peregrine 14",
+    "brand": "Saucony",
+    "price": 140,
+    "usage_types": [
+      "trail_running"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": 28,
+    "drop": 4,
+    "weight_mens": 9.5,
+    "weight_womens": 8.3,
+    "description": "Saucony's versatile trail shoe with PWRRUN cushioning and aggressive PWRTRAC outsole for technical terrain.",
+    "pros": [
+      "Aggressive PWRTRAC outsole",
+      "Versatile trail performer",
+      "Good rock protection",
+      "Responsive cushioning"
+    ],
+    "cons": [
+      "Less cushion for ultra distances",
+      "Can feel firm on roads"
+    ],
+    "popularity": 76,
+    "release_date": "2024-02-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-peregrine-15",
+    "name": "Saucony Peregrine 15",
+    "brand": "Saucony",
+    "price": 140,
+    "usage_types": [
+      "trail_running"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": 28,
+    "drop": 4,
+    "weight_mens": 9.4,
+    "weight_womens": 8.2,
+    "description": "Versatile trail runner with aggressive PWRTRAC outsole lugs and rock plate for confident protection on rugged terrain.",
+    "pros": [
+      "PWRTRAC outsole grips confidently on rocks and dirt",
+      "Rock plate shields against sharp trail debris",
+      "Nimble and responsive on climbs and descents",
+      "Updated upper improves breathability and drainage"
+    ],
+    "cons": [
+      "Firmer ride than cushioned trail alternatives",
+      "Not ideal for road-to-trail mixed runs"
+    ],
+    "popularity": 77,
+    "release_date": "2025-03-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-peregrine-16",
+    "name": "Saucony Peregrine 16",
+    "brand": "Saucony",
+    "price": 140,
+    "usage_types": [
+      "trail_running"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": 28,
+    "drop": 4,
+    "weight_mens": 9.5,
+    "weight_womens": 8.3,
+    "description": "Rugged trail runner with aggressive PWRTRAC outsole lugs that grip confidently on dirt, rock, and mud.",
+    "pros": [
+      "Excellent traction on technical terrain",
+      "Rock plate provides underfoot protection",
+      "Nimble and responsive on climbs and descents",
+      "Durable construction handles rough trails"
+    ],
+    "cons": [
+      "Firmer ride than some cushioned trail options",
+      "Not ideal for road-to-trail transitions"
+    ],
+    "popularity": 78,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-ride-17",
+    "name": "Saucony Ride 17",
+    "brand": "Saucony",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 35,
+    "drop": 8,
+    "weight_mens": 9.9,
+    "weight_womens": 8.5,
+    "description": "A well-balanced daily trainer from Saucony with PWRRUN+ cushioning for a smooth, responsive everyday ride.",
+    "pros": [
+      "Balanced cushioning and response",
+      "Good durability",
+      "Versatile performer",
+      "Comfortable fit"
+    ],
+    "cons": [
+      "Not standout in any category",
+      "Upper can feel warm"
+    ],
+    "popularity": 85,
+    "release_date": "2023-09-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-ride-18",
+    "name": "Saucony Ride 18",
+    "brand": "Saucony",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 35,
+    "drop": 8,
+    "weight_mens": 9.3,
+    "weight_womens": 8.1,
+    "description": "Dependable daily trainer with updated PWRRUN+ midsole that balances cushion and responsiveness for everyday miles.",
+    "pros": [
+      "Smooth and well-balanced ride quality",
+      "PWRRUN+ foam is durable over high mileage",
+      "Comfortable fit with improved upper breathability",
+      "Versatile for easy days and moderate tempos"
+    ],
+    "cons": [
+      "Ride feel is predictable rather than exciting",
+      "Outsole traction can be slippery on wet surfaces"
+    ],
+    "popularity": 85,
+    "release_date": "2024-09-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-ride-19",
+    "name": "Saucony Ride 19",
+    "brand": "Saucony",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 35,
+    "drop": 8,
+    "weight_mens": 9.2,
+    "weight_womens": 8,
+    "description": "The Saucony Ride 19 delivers a smooth, balanced ride with PWRRUN+ cushioning that handles daily miles and long runs with ease.",
+    "pros": [
+      "Smooth and balanced ride quality",
+      "Durable PWRRUN+ foam holds up over high mileage",
+      "Versatile for easy days and uptempo efforts",
+      "Comfortable fit right out of the box"
+    ],
+    "cons": [
+      "Not particularly exciting or fast-feeling",
+      "Outsole traction limited in wet conditions"
+    ],
+    "popularity": 87,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-triumph-21",
+    "name": "Saucony Triumph 21",
+    "brand": "Saucony",
+    "price": 160,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 10,
+    "weight_mens": 10.5,
+    "weight_womens": 9,
+    "description": "Saucony's premium max-cushion neutral trainer with PWRRUN+ foam for plush comfort on long runs and recovery.",
+    "pros": [
+      "Plush PWRRUN+ cushioning",
+      "Comfortable for long distances",
+      "Smooth ride",
+      "Premium upper materials"
+    ],
+    "cons": [
+      "Heavier than some alternatives",
+      "Expensive for a training shoe"
+    ],
+    "popularity": 85,
+    "release_date": "2023-08-01",
+    "release_year": 2023,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-triumph-22",
+    "name": "Saucony Triumph 22",
+    "brand": "Saucony",
+    "price": 165,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 10,
+    "weight_mens": 10.3,
+    "weight_womens": 8.8,
+    "description": "The Triumph 22 refines Saucony's max-cushion formula with lighter weight and improved energy return.",
+    "pros": [
+      "Lighter than predecessor",
+      "Excellent cushioning",
+      "Great for recovery and long runs",
+      "Refined upper fit"
+    ],
+    "cons": [
+      "Still not lightweight",
+      "Incremental update"
+    ],
+    "popularity": 86,
+    "release_date": "2024-08-01",
+    "release_year": 2024,
+    "is_active": true
+  },
+  {
+    "item_key": "saucony-triumph-23",
+    "name": "Saucony Triumph 23",
+    "brand": "Saucony",
+    "price": 165,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "treadmill"
+    ],
+    "weight_range": "all",
+    "stack": 38,
+    "drop": 8,
+    "weight_mens": 10.4,
+    "weight_womens": 9,
+    "description": "Premium max-cushion neutral trainer with full-length PWRRUN+ midsole for plush comfort on daily and long runs.",
+    "pros": [
+      "Plush PWRRUN+ foam provides outstanding comfort",
+      "High stack height absorbs impact on long runs",
+      "Smooth heel-to-toe transitions via rocker geometry",
+      "Premium knit upper delivers a secure adaptive fit"
+    ],
+    "cons": [
+      "Heavier than many daily trainers at over 10 oz",
+      "Soft ride sacrifices responsiveness for speed work"
+    ],
+    "popularity": 84,
+    "release_date": "2025-02-01",
+    "release_year": 2025,
+    "is_active": true
+  },
+  {
+    "item_key": "skechers-aero-razor",
+    "name": "Skechers Aero Razor",
+    "brand": "Skechers",
+    "price": 135,
+    "usage_types": [
+      "speed_work",
+      "daily_trainer"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road",
+      "track"
+    ],
+    "weight_range": "lightweight",
+    "stack": 31,
+    "drop": 6,
+    "weight_mens": 7.8,
+    "weight_womens": 6.7,
+    "description": "Lightweight speed trainer with HYPER BURST foam for a responsive, bouncy ride at faster paces.",
+    "pros": [
+      "Very lightweight for speed sessions",
+      "HYPER BURST foam is snappy and responsive",
+      "Great value for a performance shoe",
+      "Smooth transitions at fast paces"
+    ],
+    "cons": [
+      "Less cushion for easy recovery days",
+      "Brand perception may deter some runners"
+    ],
+    "popularity": 69,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "is_active": true
+  }
+]

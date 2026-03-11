@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Asics Nimbus 28",
+    "brand": "ASICS",
+    "item_key": "asics-nimbus-28",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "name": "Asics Noosa Tri 17",
+    "brand": "ASICS",
+    "item_key": "asics-noosa-tri-17",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "name": "Nike Winflo 12",
+    "brand": "Nike",
+    "item_key": "nike-winflo-12",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "name": "Nike Pegasus Trail 6",
+    "brand": "Nike",
+    "item_key": "nike-pegasus-trail-6",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "name": "Nike Quest 7",
+    "brand": "Nike",
+    "item_key": "nike-quest-7",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "name": "Nike Rival Fly 5",
+    "brand": "Nike",
+    "item_key": "nike-rival-fly-5",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "name": "Nike Pegasus Plus 2",
+    "brand": "Nike",
+    "item_key": "nike-pegasus-plus-2",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "name": "Brooks Cascadia Elite",
+    "brand": "Brooks",
+    "item_key": "brooks-cascadia-elite",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "name": "Hoka Tecton X4",
+    "brand": "Hoka",
+    "item_key": "hoka-tecton-x4",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "name": "Hoka Mach 7",
+    "brand": "Hoka",
+    "item_key": "hoka-mach-7",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "name": "Hoka Skyflow 2",
+    "brand": "Hoka",
+    "item_key": "hoka-skyflow-2",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "name": "Hoka Rincon 5",
+    "brand": "Hoka",
+    "item_key": "hoka-rincon-5",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "name": "adidas Pureboost 6",
+    "brand": "Adidas",
+    "item_key": "adidas-pureboost-6",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "name": "Saucony Guide 19",
+    "brand": "Saucony",
+    "item_key": "saucony-guide-19",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "name": "ON Cloudmonster 3 Hyper Lightspray",
+    "brand": "On",
+    "item_key": "on-cloudmonster-3-hyper-lightspray",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "name": "ON Cloudboom Strike 2",
+    "brand": "On",
+    "item_key": "on-cloudboom-strike-2",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "name": "New Balance Hierro V10",
+    "brand": "New Balance",
+    "item_key": "new-balance-hierro-v10",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "name": "New Balance Supercomp Trail 2",
+    "brand": "New Balance",
+    "item_key": "new-balance-supercomp-trail-2",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  }
+]

@@ -1,0 +1,169 @@
+[
+  {
+    "name": "Asics Nimbus 28",
+    "brand": "ASICS",
+    "release_year": 2026,
+    "release_date": "2026-01-01",
+    "query": "asics asics nimbus 28",
+    "selected_url": null,
+    "candidates": []
+  },
+  {
+    "name": "Asics Noosa Tri 17",
+    "brand": "ASICS",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "asics asics noosa tri 17",
+    "selected_url": null,
+    "candidates": []
+  },
+  {
+    "name": "Nike Winflo 12",
+    "brand": "Nike",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "nike nike winflo 12",
+    "selected_url": null,
+    "candidates": []
+  },
+  {
+    "name": "Nike Pegasus Trail 6",
+    "brand": "Nike",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "nike nike pegasus trail 6",
+    "selected_url": null,
+    "candidates": []
+  },
+  {
+    "name": "Nike Quest 7",
+    "brand": "Nike",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "nike nike quest 7",
+    "selected_url": null,
+    "candidates": []
+  },
+  {
+    "name": "Nike Rival Fly 5",
+    "brand": "Nike",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "nike nike rival fly 5",
+    "selected_url": null,
+    "candidates": []
+  },
+  {
+    "name": "Nike Pegasus Plus 2",
+    "brand": "Nike",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "nike nike pegasus plus 2",
+    "selected_url": null,
+    "candidates": []
+  },
+  {
+    "name": "Brooks Cascadia Elite",
+    "brand": "Brooks",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "brooks brooks cascadia elite",
+    "selected_url": "https://www.brooksrunning.com/en_us/featured/unisex-running-shoes/cascadia-elite/100055.html",
+    "candidates": [
+      {
+        "link": "https://www.brooksrunning.com/en_us/featured/unisex-running-shoes/cascadia-elite/100055.html",
+        "source": "brooksrunning.com"
+      }
+    ]
+  },
+  {
+    "name": "Hoka Tecton X4",
+    "brand": "Hoka",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "hoka hoka tecton x4",
+    "selected_url": null,
+    "candidates": []
+  },
+  {
+    "name": "Hoka Mach 7",
+    "brand": "Hoka",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "hoka hoka mach 7",
+    "selected_url": null,
+    "candidates": []
+  },
+  {
+    "name": "Hoka Skyflow 2",
+    "brand": "Hoka",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "hoka hoka skyflow 2",
+    "selected_url": null,
+    "candidates": []
+  },
+  {
+    "name": "Hoka Rincon 5",
+    "brand": "Hoka",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "hoka hoka rincon 5",
+    "selected_url": null,
+    "candidates": []
+  },
+  {
+    "name": "adidas Pureboost 6",
+    "brand": "Adidas",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "adidas adidas pureboost 6",
+    "selected_url": null,
+    "candidates": []
+  },
+  {
+    "name": "Saucony Guide 19",
+    "brand": "Saucony",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "saucony saucony guide 19",
+    "selected_url": null,
+    "candidates": []
+  },
+  {
+    "name": "ON Cloudmonster 3 Hyper Lightspray",
+    "brand": "On",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "on on cloudmonster 3 hyper lightspray",
+    "selected_url": null,
+    "candidates": []
+  },
+  {
+    "name": "ON Cloudboom Strike 2",
+    "brand": "On",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "on on cloudboom strike 2",
+    "selected_url": null,
+    "candidates": []
+  },
+  {
+    "name": "New Balance Hierro V10",
+    "brand": "New Balance",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "new balance new balance hierro v10",
+    "selected_url": null,
+    "candidates": []
+  },
+  {
+    "name": "New Balance Supercomp Trail 2",
+    "brand": "New Balance",
+    "release_year": 2026,
+    "release_date": "2026-03-01",
+    "query": "new balance new balance supercomp trail 2",
+    "selected_url": null,
+    "candidates": []
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "crons": [
+    {
+      "path": "/api/ingest?secret=${INGEST_SECRET}",
+      "schedule": "0 6 * * 1"
+    },
+    {
+      "path": "/api/catalog/seed?secret=${INGEST_SECRET}",
+      "schedule": "0 7 * * 3"
+    },
+    {
+      "path": "/api/catalog/import?secret=${INGEST_SECRET}",
+      "schedule": "0 8 * * 3"
+    }
+  ]
+}

@@ -1,0 +1,2513 @@
+[
+  {
+    "item_key": "saucony-saucony-ride-19",
+    "name": "Saucony Ride 19",
+    "brand": "Saucony",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-magic-speed-5",
+    "name": "Asics Magic Speed 5",
+    "brand": "ASICS",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "saucony-saucony-peregrine-16",
+    "name": "Saucony Peregrine 16",
+    "brand": "Saucony",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "adidas-adidas-supernova-rise-3",
+    "name": "adidas Supernova Rise 3",
+    "brand": "Adidas",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "altra-altra-timp-6",
+    "name": "Altra Timp 6",
+    "brand": "Altra",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-launch-12",
+    "name": "Brooks Launch 12",
+    "brand": "Brooks",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-structure-plus",
+    "name": "Nike Structure Plus",
+    "brand": "Nike",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "mizuno-mizuno-wave-inspire-22",
+    "name": "Mizuno Wave Inspire 22",
+    "brand": "Mizuno",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-nimbus-28",
+    "name": "Asics Nimbus 28",
+    "brand": "ASICS",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "mizuno-mizuno-hyperwarp-pro",
+    "name": "Mizuno Hyperwarp Pro",
+    "brand": "Mizuno",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "mizuno-mizuno-hyperwarp-elite",
+    "name": "Mizuno Hyperwarp Elite",
+    "brand": "Mizuno",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-downshifter-14",
+    "name": "Nike Downshifter 14",
+    "brand": "Nike",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "new-balance-new-balance-1080-v15",
+    "name": "New Balance 1080 V15",
+    "brand": "New Balance",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "puma-puma-deviate-nitro-4",
+    "name": "Puma Deviate Nitro 4",
+    "brand": "Puma",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "adidas-adidas-prime-x-evo",
+    "name": "adidas Prime X EVO",
+    "brand": "Adidas",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "hoka-hoka-gaviota-6",
+    "name": "Hoka Gaviota 6",
+    "brand": "Hoka",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "altra-altra-experience-flow-3",
+    "name": "Altra Experience Flow 3",
+    "brand": "Altra",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-ultrafly-trail-2",
+    "name": "Nike Ultrafly Trail 2",
+    "brand": "Nike",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "hoka-hoka-cielo-x1-3-0",
+    "name": "Hoka Cielo X1 3.0",
+    "brand": "Hoka",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "adidas-adidas-evo-sl-atr",
+    "name": "adidas EVO SL ATR",
+    "brand": "Adidas",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-glycerin-flex",
+    "name": "Brooks Glycerin Flex",
+    "brand": "Brooks",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-trabuco-max-5",
+    "name": "Asics Trabuco Max 5",
+    "brand": "ASICS",
+    "release_date": "2026-01-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-glycerin-23",
+    "name": "Brooks Glycerin 23",
+    "brand": "Brooks",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-glycerin-23-gts",
+    "name": "Brooks Glycerin 23 GTS",
+    "brand": "Brooks",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "hoka-hoka-speedgoat-7",
+    "name": "Hoka Speedgoat 7",
+    "brand": "Hoka",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "saucony-saucony-endorphin-pro-5",
+    "name": "Saucony Endorphin Pro 5",
+    "brand": "Saucony",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "saucony-saucony-endorphin-azura",
+    "name": "Saucony Endorphin Azura",
+    "brand": "Saucony",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "mizuno-mizuno-neo-zen-2",
+    "name": "Mizuno Neo Zen 2",
+    "brand": "Mizuno",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-trabuco-14",
+    "name": "Asics Trabuco 14",
+    "brand": "ASICS",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "salomon-salomon-aero-glide-4",
+    "name": "Salomon Aero Glide 4",
+    "brand": "Salomon",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "altra-altra-experience-wild-3",
+    "name": "Altra Experience Wild 3",
+    "brand": "Altra",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-dynablast-6",
+    "name": "Asics Dynablast 6",
+    "brand": "ASICS",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "puma-puma-deviate-nitro-elite-4",
+    "name": "Puma Deviate Nitro Elite 4",
+    "brand": "Puma",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "adidas-adidas-terrex-agravic-tt",
+    "name": "adidas Terrex Agravic TT",
+    "brand": "Adidas",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "adidas-adidas-agravic-speed-2",
+    "name": "adidas Agravic Speed 2",
+    "brand": "Adidas",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-cumulus-28",
+    "name": "Asics Cumulus 28",
+    "brand": "ASICS",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "on-on-runner-max",
+    "name": "On Runner Max",
+    "brand": "On",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "adidas-adidas-terrex-agravic-4",
+    "name": "adidas Terrex Agravic 4",
+    "brand": "Adidas",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "saucony-saucony-omni-23",
+    "name": "Saucony Omni 23",
+    "brand": "Saucony",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "skechers-skechers-aero-razor",
+    "name": "Skechers Aero Razor",
+    "brand": "Skechers",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-catamount-5",
+    "name": "Brooks Catamount 5",
+    "brand": "Brooks",
+    "release_date": "2026-02-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "hoka-hoka-tecton-x4",
+    "name": "Hoka Tecton X4",
+    "brand": "Hoka",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-noosa-tri-17",
+    "name": "Asics Noosa Tri 17",
+    "brand": "ASICS",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "hoka-hoka-mach-7",
+    "name": "Hoka Mach 7",
+    "brand": "Hoka",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "adidas-adidas-pureboost-6",
+    "name": "adidas Pureboost 6",
+    "brand": "Adidas",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-winflo-12",
+    "name": "Nike Winflo 12",
+    "brand": "Nike",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "on-on-cloudmonster-3-hyper-lightspray",
+    "name": "ON Cloudmonster 3 Hyper Lightspray",
+    "brand": "On",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "new-balance-new-balance-hierro-v10",
+    "name": "New Balance Hierro V10",
+    "brand": "New Balance",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "on-on-cloudmonster-3",
+    "name": "ON CloudMonster 3",
+    "brand": "On",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-pegasus-trail-6",
+    "name": "Nike Pegasus Trail 6",
+    "brand": "Nike",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-quest-7",
+    "name": "Nike Quest 7",
+    "brand": "Nike",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "saucony-saucony-guide-19",
+    "name": "Saucony Guide 19",
+    "brand": "Saucony",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-rival-fly-5",
+    "name": "Nike Rival Fly 5",
+    "brand": "Nike",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "new-balance-new-balance-supercomp-trail-2",
+    "name": "New Balance Supercomp Trail 2",
+    "brand": "New Balance",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-pegasus-plus-2",
+    "name": "Nike Pegasus Plus 2",
+    "brand": "Nike",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "hoka-hoka-skyflow-2",
+    "name": "Hoka Skyflow 2",
+    "brand": "Hoka",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "hoka-hoka-rincon-5",
+    "name": "Hoka Rincon 5",
+    "brand": "Hoka",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "on-on-cloudboom-strike-2",
+    "name": "ON Cloudboom Strike 2",
+    "brand": "On",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-cascadia-elite",
+    "name": "Brooks Cascadia Elite",
+    "brand": "Brooks",
+    "release_date": "2026-03-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "new-balance-new-balance-sc-trainer-4",
+    "name": "New Balance SC Trainer 4",
+    "brand": "New Balance",
+    "release_date": "2026-04-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "new-balance-new-balance-860-v15",
+    "name": "New Balance 860 V15",
+    "brand": "New Balance",
+    "release_date": "2026-04-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "altra-altra-lone-peak-10",
+    "name": "Altra Lone Peak 10",
+    "brand": "Altra",
+    "release_date": "2026-04-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-flex-experience-13",
+    "name": "Nike Flex Experience 13",
+    "brand": "Nike",
+    "release_date": "2026-04-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-novablast-6",
+    "name": "Asics Novablast 6",
+    "brand": "ASICS",
+    "release_date": "2026-04-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-metafuji-trail-v2",
+    "name": "Asics Metafuji Trail V2",
+    "brand": "ASICS",
+    "release_date": "2026-04-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-wildhorse-11",
+    "name": "Nike Wildhorse 11",
+    "brand": "Nike",
+    "release_date": "2026-04-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-superblast-3",
+    "name": "Asics Superblast 3",
+    "brand": "ASICS",
+    "release_date": "2026-04-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "new-balance-new-balance-ellipse",
+    "name": "New Balance Ellipse",
+    "brand": "New Balance",
+    "release_date": "2026-05-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-ghost-18",
+    "name": "Brooks Ghost 18",
+    "brand": "Brooks",
+    "release_date": "2026-05-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "mizuno-mizuno-wave-rebellion-pro-4",
+    "name": "Mizuno Wave Rebellion Pro 4",
+    "brand": "Mizuno",
+    "release_date": "2026-05-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "new-balance-new-balance-supercomp-pacer-3",
+    "name": "New Balance Supercomp Pacer 3",
+    "brand": "New Balance",
+    "release_date": "2026-05-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-pegasus-42",
+    "name": "Nike Pegasus 42",
+    "brand": "Nike",
+    "release_date": "2026-05-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "new-balance-new-balance-880-v16",
+    "name": "New Balance 880 V16",
+    "brand": "New Balance",
+    "release_date": "2026-05-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-revolution-9",
+    "name": "Nike Revolution 9",
+    "brand": "Nike",
+    "release_date": "2026-05-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "adidas-adidas-adios-pro-5",
+    "name": "adidas adios Pro 5",
+    "brand": "Adidas",
+    "release_date": "2026-05-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-zoom-fly-7",
+    "name": "Nike Zoom Fly 7",
+    "brand": "Nike",
+    "release_date": "2026-05-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "on-on-cloudsoma",
+    "name": "ON Cloudsoma",
+    "brand": "On",
+    "release_date": "2026-05-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "hoka-hoka-skyward-x2",
+    "name": "Hoka Skyward X2",
+    "brand": "Hoka",
+    "release_date": "2026-05-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-alphafly-4",
+    "name": "Nike Alphafly 4",
+    "brand": "Nike",
+    "release_date": "2026-05-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "adidas-adidas-adios-10",
+    "name": "adidas adios 10",
+    "brand": "Adidas",
+    "release_date": "2026-06-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "hoka-hoka-bondi-10",
+    "name": "Hoka Bondi 10",
+    "brand": "Hoka",
+    "release_date": "2026-06-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-kayano-33",
+    "name": "Asics Kayano 33",
+    "brand": "ASICS",
+    "release_date": "2026-06-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-excite-12",
+    "name": "Asics Excite 12",
+    "brand": "ASICS",
+    "release_date": "2026-06-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-acg-zegama-3",
+    "name": "Nike ACG Zegama 3",
+    "brand": "Nike",
+    "release_date": "2026-06-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-gt-1000-15",
+    "name": "Asics GT 1000 15",
+    "brand": "ASICS",
+    "release_date": "2026-06-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "mizuno-mizuno-wave-rider-30",
+    "name": "Mizuno Wave Rider 30",
+    "brand": "Mizuno",
+    "release_date": "2026-06-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "saucony-saucony-cohesion-19",
+    "name": "Saucony Cohesion 19",
+    "brand": "Saucony",
+    "release_date": "2026-06-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-vomero-19",
+    "name": "Nike Vomero 19",
+    "brand": "Nike",
+    "release_date": "2026-06-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "new-balance-new-balance-fuelcell-rebel-6",
+    "name": "New Balance Fuelcell Rebel 6",
+    "brand": "New Balance",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "saucony-saucony-kinvara-17",
+    "name": "Saucony Kinvara 17",
+    "brand": "Saucony",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-hyper-speed-6",
+    "name": "Asics Hyper Speed 6",
+    "brand": "ASICS",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "saucony-saucony-triumph-24",
+    "name": "Saucony Triumph 24",
+    "brand": "Saucony",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "adidas-adidas-adizero-evo-sl-2",
+    "name": "adidas adizero EVO SL 2",
+    "brand": "Adidas",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-hyperion-4",
+    "name": "Brooks Hyperion 4",
+    "brand": "Brooks",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "altra-altra-escalante-5",
+    "name": "Altra Escalante 5",
+    "brand": "Altra",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-metaspeed-sky-4",
+    "name": "Asics Metaspeed Sky 4",
+    "brand": "ASICS",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "altra-altra-torin-9",
+    "name": "Altra Torin 9",
+    "brand": "Altra",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-metaspeed-edge-4",
+    "name": "Asics Metaspeed Edge 4",
+    "brand": "ASICS",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "saucony-saucony-hurricane-26",
+    "name": "Saucony Hurricane 26",
+    "brand": "Saucony",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "altra-altra-olympus-275-hilo",
+    "name": "Altra Olympus 275 Hilo",
+    "brand": "Altra",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "new-balance-new-balance-fresh-foam-more-v6",
+    "name": "New Balance Fresh Foam More V6",
+    "brand": "New Balance",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "hoka-hoka-arahi-9",
+    "name": "Hoka Arahi 9",
+    "brand": "Hoka",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-ghost-max-4",
+    "name": "Brooks Ghost Max 4",
+    "brand": "Brooks",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-revel-9",
+    "name": "Brooks Revel 9",
+    "brand": "Brooks",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "hoka-hoka-clifton-11",
+    "name": "Hoka Clifton 11",
+    "brand": "Hoka",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "saucony-saucony-paramount-max",
+    "name": "Saucony Paramount Max",
+    "brand": "Saucony",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-hyperion-max-4",
+    "name": "Brooks Hyperion Max 4",
+    "brand": "Brooks",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-ghost-amp",
+    "name": "Brooks Ghost AMP",
+    "brand": "Brooks",
+    "release_date": "2026-07-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "hoka-hoka-stinson-8",
+    "name": "Hoka Stinson 8",
+    "brand": "Hoka",
+    "release_date": "2026-08-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-hyperion-elite-6",
+    "name": "Brooks Hyperion Elite 6",
+    "brand": "Brooks",
+    "release_date": "2026-08-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-cascadia-20",
+    "name": "Brooks Cascadia 20",
+    "brand": "Brooks",
+    "release_date": "2026-08-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "altra-altra-olympus-7",
+    "name": "Altra Olympus 7",
+    "brand": "Altra",
+    "release_date": "2026-08-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "saucony-saucony-endorphin-speed-6",
+    "name": "Saucony Endorphin Speed 6",
+    "brand": "Saucony",
+    "release_date": "2026-08-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "mizuno-mizuno-wave-sky-10",
+    "name": "Mizuno Wave Sky 10",
+    "brand": "Mizuno",
+    "release_date": "2026-08-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "saucony-saucony-endorphin-elite-3",
+    "name": "Saucony Endorphin Elite 3",
+    "brand": "Saucony",
+    "release_date": "2026-08-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-metaspeed-ray-2",
+    "name": "Asics Metaspeed Ray 2",
+    "brand": "ASICS",
+    "release_date": "2026-08-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "new-balance-new-balance-sc-elite-6",
+    "name": "New Balance SC Elite 6",
+    "brand": "New Balance",
+    "release_date": "2026-08-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-gt-2000-15",
+    "name": "Asics GT 2000 15",
+    "brand": "ASICS",
+    "release_date": "2026-08-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "salomon-salomon-genesis-2",
+    "name": "Salomon Genesis 2",
+    "brand": "Salomon",
+    "release_date": "2026-08-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "mizuno-mizuno-neo-vista-3",
+    "name": "Mizuno Neo Vista 3",
+    "brand": "Mizuno",
+    "release_date": "2026-08-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "adidas-adidas-boston-14",
+    "name": "adidas Boston 14",
+    "brand": "Adidas",
+    "release_date": "2026-09-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "on-on-cloudsurfer-3",
+    "name": "ON Cloudsurfer 3",
+    "brand": "On",
+    "release_date": "2026-09-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "skechers-skechers-aero-tempo-2",
+    "name": "Skechers Aero Tempo 2",
+    "brand": "Skechers",
+    "release_date": "2026-09-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "skechers-skechers-aero-burst-2",
+    "name": "Skechers Aero Burst 2",
+    "brand": "Skechers",
+    "release_date": "2026-09-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-sonicblast-2",
+    "name": "Asics Sonicblast 2",
+    "brand": "ASICS",
+    "release_date": "2026-09-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "skechers-skechers-aero-spark-2",
+    "name": "Skechers Aero Spark 2",
+    "brand": "Skechers",
+    "release_date": "2026-09-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "hoka-hoka-mafate-x2",
+    "name": "Hoka Mafate X2",
+    "brand": "Hoka",
+    "release_date": "2026-10-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-ghost-trail-2",
+    "name": "Brooks Ghost Trail 2",
+    "brand": "Brooks",
+    "release_date": "2026-11-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-megablast-2",
+    "name": "Asics Megablast 2",
+    "brand": "ASICS",
+    "release_date": "2026-11-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "adidas-adidas-prime-x-4",
+    "name": "Adidas Prime X 4",
+    "brand": "Adidas",
+    "release_date": "2026-11-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "adidas-adidas-takumi-sen-12",
+    "name": "adidas Takumi Sen 12",
+    "brand": "Adidas",
+    "release_date": "2026-11-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-pegasus-premium-2",
+    "name": "Nike Pegasus Premium 2",
+    "brand": "Nike",
+    "release_date": "2026-11-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-adrenaline-gts-27",
+    "name": "Brooks Adrenaline GTS 27",
+    "brand": "Brooks",
+    "release_date": "2026-12-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-revel-max-2",
+    "name": "Brooks Revel Max 2",
+    "brand": "Brooks",
+    "release_date": "2026-12-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "brooks-brooks-glycerin-max-3",
+    "name": "Brooks Glycerin Max 3",
+    "brand": "Brooks",
+    "release_date": "2026-12-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "asics-asics-glideride-max-3",
+    "name": "Asics Glideride Max 3",
+    "brand": "ASICS",
+    "release_date": "2026-12-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "nike-nike-structure-27",
+    "name": "Nike Structure 27",
+    "brand": "Nike",
+    "release_date": "2026-12-01",
+    "release_year": 2026
+  },
+  {
+    "item_key": "on-half-marathon-training-plan-faster",
+    "name": "On half marathon training plan faster",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-school-team-registration",
+    "name": "On School Team Registration",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-how-to-run-on-a-busy-schedule",
+    "name": "On how to run on a busy schedule",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-what-to-eat-before-a-race",
+    "name": "On what to eat before a race",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-are-you-getting-enough-calcium",
+    "name": "On are you getting enough calcium",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-marathon-guide",
+    "name": "On marathon guide",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-half-marathon-training-plan",
+    "name": "On half marathon training plan",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-shoe-components",
+    "name": "On shoe components",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "altra-altra-footshape-fit",
+    "name": "Altra altra footshape fit",
+    "brand": "Altra",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-are-super-shoes-for-everyone",
+    "name": "On are super shoes for everyone",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-5-reasons-to-own-multiple-shoes",
+    "name": "On 5 reasons to own multiple shoes",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-choosing-a-heart-rate-monitor",
+    "name": "On choosing a heart rate monitor",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-how-to-clean-a-hydration-pack",
+    "name": "On how to clean a hydration pack",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-best-nutrition-for-long-runs",
+    "name": "On best nutrition for long runs",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-marathon-nutrition",
+    "name": "On marathon nutrition",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-best-for-dietary-restrictions",
+    "name": "On best for dietary restrictions",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-hydration-guide-for-runners",
+    "name": "On hydration guide for runners",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-energy-gels-explained",
+    "name": "On energy gels explained",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-maurten-fuel-guide",
+    "name": "On maurten fuel guide",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-best-running-nutrition",
+    "name": "On best running nutrition",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "brooks-how-to-choose-the-right-brooks-bra",
+    "name": "Brooks how to choose the right brooks bra",
+    "brand": "Brooks",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-salomon-pack-buying-guide",
+    "name": "On salomon pack buying guide",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-drymax-sock-comparison",
+    "name": "On drymax sock comparison",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-best-sun-protection-gear",
+    "name": "On best sun protection gear",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-how-to-choose-compression-clothing",
+    "name": "On how to choose compression clothing",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "altra-best-altra-trail-shoes",
+    "name": "Altra best altra trail shoes",
+    "brand": "Altra",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-track-and-field-nutrition",
+    "name": "On track and field nutrition",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "altra-best-altra-running-shoes",
+    "name": "Altra best altra running shoes",
+    "brand": "Altra",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-best-shoes-with-a-carbon-plate",
+    "name": "On best shoes with a carbon plate",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-pronation",
+    "name": "On pronation",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-wtrailcond",
+    "name": "On WTRAILCOND",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "saucony-wsasaucony",
+    "name": "Saucony WSASAUCONY",
+    "brand": "Saucony",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "topo-wrtopoc",
+    "name": "Topo WRTOPOC",
+    "brand": "Topo",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "topo-wrstoposale",
+    "name": "Topo WRSTOPOSALE",
+    "brand": "Topo",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "skechers-wrsskechers",
+    "name": "Skechers WRSSKECHERS",
+    "brand": "Skechers",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-wrssalomon",
+    "name": "On WRSSALOMON",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "saucony-wrssaucony",
+    "name": "Saucony WRSSAUCONY",
+    "brand": "Saucony",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-wrssaleronu",
+    "name": "On WRSSALERONU",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-wrsonrace",
+    "name": "On WRSONRACE",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-wrson",
+    "name": "On WRSON",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-wrsnike",
+    "name": "Nike WRSNIKE",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "mizuno-wrsmizuno",
+    "name": "Mizuno WRSMIZUNO",
+    "brand": "Mizuno",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "brooks-wrsbrooks",
+    "name": "Brooks WRSBROOKS",
+    "brand": "Brooks",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "asics-wrsasics",
+    "name": "ASICS WRSASICS",
+    "brand": "ASICS",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "adidas-wrsadidas",
+    "name": "Adidas WRSADIDAS",
+    "brand": "Adidas",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-wrrnikept",
+    "name": "Nike WRRNIKEPT",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-wrfoncldec",
+    "name": "On WRFONCLDEC",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-wrfocmon",
+    "name": "On WRFOCMON",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-wrfnikevom",
+    "name": "Nike WRFNIKEVOM",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-wrfnikestru",
+    "name": "Nike WRFNIKESTRU",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-wrfnikepegl",
+    "name": "Nike WRFNIKEPEGL",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-wrfnbvongo",
+    "name": "On WRFNBVONGO",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-wrfnikepeg",
+    "name": "Nike WRFNIKEPEG",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-wrfhokastin",
+    "name": "Hoka WRFHOKASTIN",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-wrfhokaor",
+    "name": "Hoka WRFHOKAOR",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-wrfhokaml",
+    "name": "Hoka WRFHOKAML",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-wrfhokamc",
+    "name": "Hoka WRFHOKAMC",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-wrfhokagoat",
+    "name": "Hoka WRFHOKAGOAT",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-wrfhokaclif",
+    "name": "Hoka WRFHOKACLIF",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-wrfhokacha",
+    "name": "Hoka WRFHOKACHA",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-wrfhokabond",
+    "name": "Hoka WRFHOKABOND",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-wrfaboston",
+    "name": "On WRFABOSTON",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "puma-wrapuma",
+    "name": "Puma WRAPUMA",
+    "brand": "Puma",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-wranike",
+    "name": "Nike WRANIKE",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-wrahoka",
+    "name": "Hoka WRAHOKA",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "brooks-wrabrooks",
+    "name": "Brooks WRABROOKS",
+    "brand": "Brooks",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "adidas-wraadidas",
+    "name": "Adidas WRAADIDAS",
+    "brand": "Adidas",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "asics-wraasics",
+    "name": "ASICS WRAASICS",
+    "brand": "ASICS",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-wlconnor",
+    "name": "On WLCONNOR",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-wcarbonp",
+    "name": "On WCARBONP",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-vwuolon",
+    "name": "On VWUOLON",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "topo-toporpp",
+    "name": "Topo TOPORPP",
+    "brand": "Topo",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-ssnutrition",
+    "name": "On SSNUTRITION",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-sdmonitors",
+    "name": "On SDMONITORS",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-rotation",
+    "name": "On ROTATION",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "puma-pumarpp",
+    "name": "Puma PUMARPP",
+    "brand": "Puma",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "puma-pumaws",
+    "name": "Puma PUMAWS",
+    "brand": "Puma",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "puma-pumams",
+    "name": "Puma PUMAMS",
+    "brand": "Puma",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-ppjonc1",
+    "name": "On PPJONC1",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-onwomt",
+    "name": "On ONWOMT",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-onwomrl",
+    "name": "On ONWOMRL",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-onwomn",
+    "name": "On ONWOMN",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-onshorts",
+    "name": "On ONSHORTS",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-onmenrl",
+    "name": "On ONMENRL",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-onmenn",
+    "name": "On ONMENN",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-oncrpp",
+    "name": "On ONCRPP",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-oncludsm",
+    "name": "On ONCLUDSM",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-onclmon2rev",
+    "name": "On ONCLMON2REV",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-onclmlw",
+    "name": "On ONCLMLW",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-onclmlm",
+    "name": "On ONCLMLM",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-onclmhw",
+    "name": "On ONCLMHW",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-oncpctr",
+    "name": "On ONCPCTR",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-onclmhm",
+    "name": "On ONCLMHM",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-oncldsurf",
+    "name": "On ONCLDSURF",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-oncldsnw",
+    "name": "On ONCLDSNW",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-oncldsnm",
+    "name": "On ONCLDSNM",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-omhokamrs",
+    "name": "Hoka OMHOKAMRS",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-nutritionpp",
+    "name": "On NUTRITIONPP",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-nutrition",
+    "name": "On NUTRITION",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-nonpad",
+    "name": "On NONPAD",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-nikesfly",
+    "name": "Nike NIKESFLY",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-nikerpp",
+    "name": "Nike NIKERPP",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-nikemom",
+    "name": "Nike NIKEMOM",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-nikeaero",
+    "name": "Nike NIKEAERO",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-nikekids",
+    "name": "Nike NIKEKIDS",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-nikehw",
+    "name": "Nike NIKEHW",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-mtrailcond",
+    "name": "On MTRAILCOND",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "saucony-msasaucony",
+    "name": "Saucony MSASAUCONY",
+    "brand": "Saucony",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "topo-mrtopoc",
+    "name": "Topo MRTOPOC",
+    "brand": "Topo",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "topo-mrstoposale",
+    "name": "Topo MRSTOPOSALE",
+    "brand": "Topo",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "skechers-mrsskechers",
+    "name": "Skechers MRSSKECHERS",
+    "brand": "Skechers",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "saucony-mrssaucony",
+    "name": "Saucony MRSSAUCONY",
+    "brand": "Saucony",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-mrsonrace",
+    "name": "On MRSONRACE",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-mrson",
+    "name": "On MRSON",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-mrsnike",
+    "name": "Nike MRSNIKE",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-mrssalomon",
+    "name": "On MRSSALOMON",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "mizuno-mrsmizuno",
+    "name": "Mizuno MRSMIZUNO",
+    "brand": "Mizuno",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "brooks-mrsbrooks",
+    "name": "Brooks MRSBROOKS",
+    "brand": "Brooks",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "asics-mrsasics",
+    "name": "ASICS MRSASICS",
+    "brand": "ASICS",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "adidas-mrsadidas",
+    "name": "Adidas MRSADIDAS",
+    "brand": "Adidas",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-mrfonother",
+    "name": "On MRFONOTHER",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-mrfoncldec",
+    "name": "On MRFONCLDEC",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-mrfocmon",
+    "name": "On MRFOCMON",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-mrfnikevom",
+    "name": "Nike MRFNIKEVOM",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-mrfnikeptr",
+    "name": "Nike MRFNIKEPTR",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-mrfnikerl",
+    "name": "Nike MRFNIKERL",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-mrfnikestru",
+    "name": "Nike MRFNIKESTRU",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-mrfnikept",
+    "name": "Nike MRFNIKEPT",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-mrfnikepeg",
+    "name": "Nike MRFNIKEPEG",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-mrfnbvongo",
+    "name": "On MRFNBVONGO",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-mrfnikepegl",
+    "name": "Nike MRFNIKEPEGL",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-mrfhokastin",
+    "name": "Hoka MRFHOKASTIN",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-mrfhokaml",
+    "name": "Hoka MRFHOKAML",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-mrfhokamc",
+    "name": "Hoka MRFHOKAMC",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-mrfhokagoat",
+    "name": "Hoka MRFHOKAGOAT",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-mrfhokaor",
+    "name": "Hoka MRFHOKAOR",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-mrfhokagav",
+    "name": "Hoka MRFHOKAGAV",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-mrfhokaclif",
+    "name": "Hoka MRFHOKACLIF",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-mrfhokacha",
+    "name": "Hoka MRFHOKACHA",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-mrfhokabond",
+    "name": "Hoka MRFHOKABOND",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-mrfhokaara",
+    "name": "Hoka MRFHOKAARA",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-mrfaboston",
+    "name": "On MRFABOSTON",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "puma-mrapuma",
+    "name": "Puma MRAPUMA",
+    "brand": "Puma",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "nike-mranike",
+    "name": "Nike MRANIKE",
+    "brand": "Nike",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-mralonglngt",
+    "name": "On MRALONGLNGT",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "brooks-mrabrooks",
+    "name": "Brooks MRABROOKS",
+    "brand": "Brooks",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "asics-mraasics",
+    "name": "ASICS MRAASICS",
+    "brand": "ASICS",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "adidas-mraadidas",
+    "name": "Adidas MRAADIDAS",
+    "brand": "Adidas",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-monsxc",
+    "name": "On MONSXC",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "mizuno-mizunorpp",
+    "name": "Mizuno MIZUNORPP",
+    "brand": "Mizuno",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-menont",
+    "name": "On MENONT",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-mcarbonp",
+    "name": "On MCARBONP",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-masalomon",
+    "name": "On MASALOMON",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-hydration",
+    "name": "On HYDRATION",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-hydaddons",
+    "name": "On HYDADDONS",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-honstngacc",
+    "name": "On HONSTNGACC",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-honeysnu",
+    "name": "On HONEYSNU",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokawrs",
+    "name": "Hoka HOKAWRS",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokawrstr",
+    "name": "Hoka HOKAWRSTR",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokawrace",
+    "name": "Hoka HOKAWRACE",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokawrec",
+    "name": "Hoka HOKAWREC",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokawtr",
+    "name": "Hoka HOKAWTR",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokaw",
+    "name": "Hoka HOKAW",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokasky",
+    "name": "Hoka HOKASKY",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokaspeedg",
+    "name": "Hoka HOKASPEEDG",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokarevpp",
+    "name": "Hoka HOKAREVPP",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokamtrn",
+    "name": "Hoka HOKAMTRN",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokar7pp",
+    "name": "Hoka HOKAR7PP",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokamrstr",
+    "name": "Hoka HOKAMRSTR",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokamrec",
+    "name": "Hoka HOKAMREC",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokamrace",
+    "name": "Hoka HOKAMRACE",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokam",
+    "name": "Hoka HOKAM",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokagavlp",
+    "name": "Hoka HOKAGAVLP",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokaclif",
+    "name": "Hoka HOKACLIF",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokaccess",
+    "name": "Hoka HOKACCESS",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "hoka-hokaacc",
+    "name": "Hoka HOKAACC",
+    "brand": "Hoka",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-electronics",
+    "name": "On ELECTRONICS",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-donations",
+    "name": "On DONATIONS",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-clearlongd",
+    "name": "On CLEARLONGD",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "brooks-brooksrpp",
+    "name": "Brooks BROOKSRPP",
+    "brand": "Brooks",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "brooks-brooksghst",
+    "name": "Brooks BROOKSGHST",
+    "brand": "Brooks",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-brafconvert",
+    "name": "On BRAFCONVERT",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-bondi8",
+    "name": "On BONDI8",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-brafcontcup",
+    "name": "On BRAFCONTCUP",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-bestgiftonc",
+    "name": "On BESTGIFTONC",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "asics-asicsmtaspd",
+    "name": "ASICS ASICSMTASPD",
+    "brand": "ASICS",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "asics-asicsrpp",
+    "name": "ASICS ASICSRPP",
+    "brand": "ASICS",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-amazonmusic",
+    "name": "On AMAZONMUSIC",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "altra-altraws",
+    "name": "Altra ALTRAWS",
+    "brand": "Altra",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "altra-altrarpp",
+    "name": "Altra ALTRARPP",
+    "brand": "Altra",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "altra-altrams",
+    "name": "Altra ALTRAMS",
+    "brand": "Altra",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-alonepeak",
+    "name": "On ALONEPEAK",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "adidas-adidasrpp",
+    "name": "Adidas ADIDASRPP",
+    "brand": "Adidas",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  },
+  {
+    "item_key": "on-aambitionm",
+    "name": "On AAMBITIONM",
+    "brand": "On",
+    "release_date": null,
+    "release_year": null,
+    "source": "running-warehouse"
+  }
+]

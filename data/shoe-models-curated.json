@@ -1,0 +1,777 @@
+[
+  {
+    "item_key": "brooks-glycerin-flex",
+    "name": "Brooks Glycerin Flex",
+    "brand": "Brooks",
+    "price": 170,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "speed_work",
+      "race_day",
+      "trail_running",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": null,
+    "drop": 6,
+    "weight_mens": 9.1,
+    "weight_womens": 9.1,
+    "description": "Tune in with the men's Glycerin Flex running shoes, combining flexibility and cushioning for a seamless connection during your run. ",
+    "pros": [],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-01-01",
+    "release_year": 2026,
+    "image_source": "https://www.brooksrunning.com/on/demandware.static/-/Sites-brooks-master-catalog/default/dwa7e4b83e/original/110478/110478-114-l-glycerin-flex-mens-dynamic-cushion-road-running-shoe.png",
+    "product_url": "https://www.brooksrunning.com/en_us/mens/shoes/road-running-shoes/glycerin-flex/110478.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:47.450Z"
+  },
+  {
+    "item_key": "brooks-glycerin-23-gts",
+    "name": "Brooks Glycerin 23 GTS",
+    "brand": "Brooks",
+    "price": 114.95,
+    "usage_types": [
+      "long_run",
+      "race_day",
+      "trail_running",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "heavyweight",
+    "stack": null,
+    "drop": 10,
+    "weight_mens": 10.7,
+    "weight_womens": 10.7,
+    "description": "Bring plush comfort to your run with the Brooks Men's Glycerin GTS 22 Running Shoes. Tuned cushioning offers luxuriously soft landings and responsive toe-offs, ideal for distraction-free runs.",
+    "pros": [
+      "Plush"
+    ],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "image_source": "https://www.brooksrunning.com/on/demandware.static/-/Sites-brooks-master-catalog/default/dw2eea140e/original/110446/110446-002-l-glycerin-gts-22-mens-supportive-cushion-road-running-shoe.png",
+    "product_url": "https://www.brooksrunning.com/en_us/mens/shoes/road-running-shoes/glycerin-gts-22/110446.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:48.184Z"
+  },
+  {
+    "item_key": "saucony-endorphin-pro-5",
+    "name": "Saucony Endorphin Pro 5",
+    "brand": "Saucony",
+    "price": 75,
+    "usage_types": [
+      "long_run",
+      "speed_work",
+      "race_day",
+      "trail_running",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "lightweight",
+    "stack": null,
+    "drop": 8,
+    "weight_mens": 7.5,
+    "weight_womens": 7.5,
+    "description": "Endorphin Pro 4: Race-ready with PWRRUN HG &amp; PB foam, full carbon plate, and SPEEDROLL tech for smooth, efficient speed. Vegan &amp; lightweight at 7.5 oz.",
+    "pros": [
+      "Lightweight"
+    ],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "image_source": "https://thekit.wolverineworldwide.com/match/media_lookup/S20939-343_1/?preset=dw-large",
+    "product_url": "https://www.saucony.com/en/endorphin-pro-4/58850M.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:48.643Z"
+  },
+  {
+    "item_key": "saucony-endorphin-azura",
+    "name": "Saucony Endorphin Azura",
+    "brand": "Saucony",
+    "price": 75,
+    "usage_types": [
+      "long_run",
+      "speed_work",
+      "race_day",
+      "trail_running"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": null,
+    "drop": null,
+    "weight_mens": null,
+    "weight_womens": null,
+    "description": "No matter the day or the pace, the Endorphin Azura helps you run fast. Soft, bouncy PWRRUN PB foam cushions your stride, while SpeedRoll technology powe",
+    "pros": [],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "image_source": "https://thekit.wolverineworldwide.com/match/media_lookup/S21070-172_1/?preset=dw-large",
+    "product_url": "https://www.saucony.com/en/endorphin-azura/60807M.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:48.848Z"
+  },
+  {
+    "item_key": "skechers-aero-razor",
+    "name": "Skechers Aero Razor",
+    "brand": "Skechers",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "speed_work",
+      "trail_running",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "lightweight",
+    "stack": 36,
+    "drop": 4,
+    "weight_mens": 5.6,
+    "weight_womens": 5.6,
+    "description": "The all-new Skechers AERO Razor&#153; continues the Razor's innovative legacy, bringing award-winning Super Critical&reg; foam technology to the cutting-edge AERO collection. Blend speed and comfort for your most dynamic runs yet with this lightweight technical running shoe designed to take you from everyday to fast day training. Featuring an exceptionally breathable engineered mesh upper with a sawtooth lace-up front, highly responsive HYPER BURST PRO&#153; midsole foam with HYPER ARC&reg; rocker technology, a shock-absorbing Arch Fit&reg; insole system, and a patented forefoot H-Wing&#153; for explosive energy return - all on a durable Goodyear&reg; Performance Outsole.",
+    "pros": [
+      "Lightweight",
+      "Durable"
+    ],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-02-01",
+    "release_year": 2026,
+    "image_source": "https://images.skechers.com/image;width=auto%2Cformat=auto/172240_YEL_HERO_LG",
+    "product_url": "https://www.skechers.com/skechers-aero-razor/172240.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:49.516Z"
+  },
+  {
+    "item_key": "brooks-cascadia-elite",
+    "name": "Brooks Cascadia Elite",
+    "brand": "Brooks",
+    "price": 275,
+    "usage_types": [
+      "speed_work",
+      "race_day",
+      "trail_running"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": null,
+    "drop": 6,
+    "weight_mens": 9.4,
+    "weight_womens": 9.4,
+    "description": "Refresh Your Look, Shop Cascadia Elite. Discover More on www.brooksrunning.com | Brooks Running",
+    "pros": [],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-03-01",
+    "release_year": 2026,
+    "image_source": "https://www.brooksrunning.com/on/demandware.static/-/Sites-brooks-master-catalog/default/dwc9303503/original/100055/100055-116-l-cascadia-elite-unisex-max-cushion-trail-running-shoe.png",
+    "product_url": "https://www.brooksrunning.com/en_us/featured/unisex-running-shoes/cascadia-elite/100055.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:50.198Z"
+  },
+  {
+    "item_key": "brooks-ghost-max-4",
+    "name": "Brooks Ghost Max 4",
+    "brand": "Brooks",
+    "price": 129.95,
+    "usage_types": [
+      "race_day",
+      "trail_running",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "heavyweight",
+    "stack": null,
+    "drop": 6,
+    "weight_mens": 11.6,
+    "weight_womens": 11.6,
+    "description": "Experience ultimate comfort and support with the Brooks Men's Ghost Max L, offering a smooth, protective, and durable leather upper. Shop today!",
+    "pros": [
+      "Durable"
+    ],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-07-01",
+    "release_year": 2026,
+    "image_source": "https://www.brooksrunning.com/on/demandware.static/-/Sites-brooks-master-catalog/default/dwbe6bb566/original/110443/110443-142-l-ghost-max-l-mens-max-cushion-road-running-shoe.png",
+    "product_url": "https://www.brooksrunning.com/en_us/mens/shoes/walking-shoes/ghost-max-l/110443.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:50.914Z"
+  },
+  {
+    "item_key": "brooks-hyperion-max-4",
+    "name": "Brooks Hyperion Max 4",
+    "brand": "Brooks",
+    "price": 200,
+    "usage_types": [
+      "long_run",
+      "speed_work",
+      "race_day",
+      "trail_running",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": null,
+    "drop": 6,
+    "weight_mens": 9.9,
+    "weight_womens": 9.9,
+    "description": "Experience the combination of speed and protection with the Men's Hyperion Max 3 Running Shoes for everything from track work to long runs.",
+    "pros": [],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-07-01",
+    "release_year": 2026,
+    "image_source": "https://www.brooksrunning.com/on/demandware.static/-/Sites-brooks-master-catalog/default/dwdc7fd1e7/original/110467/110467-670-l-hyperion-max-3-mens-max-cushion-road-running-shoe.png",
+    "product_url": "https://www.brooksrunning.com/en_us/mens/shoes/road-running-shoes/hyperion-max-3/110467.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:51.584Z"
+  },
+  {
+    "item_key": "brooks-hyperion-elite-6",
+    "name": "Brooks Hyperion Elite 6",
+    "brand": "Brooks",
+    "price": 150,
+    "usage_types": [
+      "long_run",
+      "speed_work",
+      "race_day",
+      "trail_running"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "lightweight",
+    "stack": null,
+    "drop": 0,
+    "weight_mens": 4.8,
+    "weight_womens": 4.8,
+    "description": " Get a competitive edge in track races with the Brooks Hyperion Elite LD. Lightweight and springy, these shoes feature DNA FLASH v2 cushioning and a carbon composite SpeedVault Race Plate for speed and energy return. Ideal for 1,500m-10,000m races.",
+    "pros": [
+      "Lightweight"
+    ],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-08-01",
+    "release_year": 2026,
+    "image_source": "https://www.brooksrunning.com/on/demandware.static/-/Sites-brooks-master-catalog/default/dw0102801f/original/100047/100047-488-l-hyperion-elite-ld-mens-fast-running-and-training-shoe.png",
+    "product_url": "https://www.brooksrunning.com/en_us/featured/unisex-running-shoes/hyperion-elite-ld/100047.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:52.274Z"
+  },
+  {
+    "item_key": "saucony-endorphin-speed-6",
+    "name": "Saucony Endorphin Speed 6",
+    "brand": "Saucony",
+    "price": 75,
+    "usage_types": [
+      "long_run",
+      "speed_work",
+      "race_day",
+      "trail_running",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": null,
+    "drop": 8,
+    "weight_mens": 8.3,
+    "weight_womens": 8.3,
+    "description": "Saucony Endorphin Speed 5: Lightweight 8.4 oz racer/trainer with PWRRUNPB foam,winged nylon plate,SPEEDROLL tech &amp; full-groove sole-for snappy,smooth runs.",
+    "pros": [
+      "Lightweight"
+    ],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-08-01",
+    "release_year": 2026,
+    "image_source": "https://thekit.wolverineworldwide.com/match/media_lookup/S21007-97_1/?preset=dw-large",
+    "product_url": "https://www.saucony.com/en/endorphin-speed-5/60307M.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:52.411Z"
+  },
+  {
+    "item_key": "saucony-endorphin-elite-3",
+    "name": "Saucony Endorphin Elite 3",
+    "brand": "Saucony",
+    "price": 75,
+    "usage_types": [
+      "long_run",
+      "speed_work",
+      "race_day",
+      "trail_running"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "lightweight",
+    "stack": null,
+    "drop": 8,
+    "weight_mens": 7,
+    "weight_womens": 6.4,
+    "description": "Endorphin Elite 2 by Saucony: ultra-light, IncrediRun foam, and carbon plate for max energy return and smooth, fast transitions in every race.",
+    "pros": [],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-08-01",
+    "release_year": 2026,
+    "image_source": "https://thekit.wolverineworldwide.com/match/media_lookup/S30994-343_1/?preset=dw-large",
+    "product_url": "https://www.saucony.com/en/endorphin-elite-2/59824U.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:52.533Z"
+  },
+  {
+    "item_key": "skechers-aero-burst-2",
+    "name": "Skechers Aero Burst 2",
+    "brand": "Skechers",
+    "price": 155,
+    "usage_types": [
+      "long_run",
+      "race_day",
+      "trail_running",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": 42,
+    "drop": 6,
+    "weight_mens": 8.7,
+    "weight_womens": 8.7,
+    "description": "<b>Aero Comfort Technology&reg;</b> Hit every mile marker in long-distance confidence and premium cushioned comfort with Skechers Aero Burst&reg;. This well-cushioned running style has been granted the APMA Seal of Acceptance and is designed for the daily runner. Featuring a lace-up breathable engineered mesh upper with our removable Arch Fit&reg; insole system, amplified HYPER BURST ICE&#153; midsole cushioning with HYPER ARC&reg; technology, a carbon-infused H-plate for next-level energy return, plus a durable Goodyear&reg; Performance Outsole.",
+    "pros": [
+      "Durable"
+    ],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-09-01",
+    "release_year": 2026,
+    "image_source": "https://images.skechers.com/image;width=auto%2Cformat=auto/172210_PWAQ_HERO_LG",
+    "product_url": "https://www.skechers.com/skechers-aero-burst/172210.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:52.800Z"
+  },
+  {
+    "item_key": "skechers-aero-spark-2",
+    "name": "Skechers Aero Spark 2",
+    "brand": "Skechers",
+    "price": 135,
+    "usage_types": [
+      "race_day",
+      "trail_running",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "lightweight",
+    "stack": 36,
+    "drop": 6,
+    "weight_mens": 7.8,
+    "weight_womens": 7.8,
+    "description": "<b>Aero Comfort Technology&reg;</b> Advance your strides in groundbreaking runners' comfort with Skechers Aero Spark&#153;. This innovative performance style lace-up has been granted the APMA Seal of Acceptance and is made for versatile daily running. Featuring a lace-up breathable engineered mesh upper with our removable Arch Fit&reg; insole system, HYPER BURST ICE&#153; cushioning with HYPER ARC&reg; technology, a carbon-infused H-plate for next-level energy return, plus a durable Goodyear&reg; Performance Outsole.",
+    "pros": [
+      "Durable"
+    ],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-09-01",
+    "release_year": 2026,
+    "image_source": "https://images.skechers.com/image;width=auto%2Cformat=auto/172200_CRL_HERO_LG",
+    "product_url": "https://www.skechers.com/skechers-aero-spark/172200.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:53.116Z"
+  },
+  {
+    "item_key": "brooks-ghost-trail-2",
+    "name": "Brooks Ghost Trail 2",
+    "brand": "Brooks",
+    "price": 150,
+    "usage_types": [
+      "race_day",
+      "trail_running",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "heavyweight",
+    "stack": null,
+    "drop": 8,
+    "weight_mens": 10.6,
+    "weight_womens": 10.6,
+    "description": "Get ready to adventure with the men's Ghost Trail running shoes, a hybrid, versatile shoe that delivers cross-functional use from road to trail. ",
+    "pros": [],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-11-01",
+    "release_year": 2026,
+    "image_source": "https://www.brooksrunning.com/on/demandware.static/-/Sites-brooks-master-catalog/default/dw184fe9c5/original/110475/110475-287-l-ghost-trail-mens-trail-running-shoe.png",
+    "product_url": "https://www.brooksrunning.com/en_us/mens/shoes/road-running-shoes/ghost-trail/110475.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:53.997Z"
+  },
+  {
+    "item_key": "brooks-adrenaline-gts-27",
+    "name": "Brooks Adrenaline GTS 27",
+    "brand": "Brooks",
+    "price": 170,
+    "usage_types": [
+      "daily_trainer",
+      "trail_running",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": null,
+    "drop": 12,
+    "weight_mens": null,
+    "weight_womens": null,
+    "description": "Explore the Adrenaline GTS 10, first launched in 2009 and now evolved to fuse the unforgettable style of its original era with the latest in Brooks innovation.",
+    "pros": [],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-12-01",
+    "release_year": 2026,
+    "image_source": "https://www.brooksrunning.com/on/demandware.static/-/Sites-brooks-master-catalog/default/dw835b861a/original/100058/100058-148-l-adrenaline-gts-10-unisex-supportive-cushion-running-shoe.png",
+    "product_url": "https://www.brooksrunning.com/en_us/featured/lifestyle/adrenaline-gts-10/100058.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:54.648Z"
+  },
+  {
+    "item_key": "brooks-revel-max-2",
+    "name": "Brooks Revel Max 2",
+    "brand": "Brooks",
+    "price": 120,
+    "usage_types": [
+      "daily_trainer",
+      "race_day",
+      "trail_running",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": null,
+    "drop": 6,
+    "weight_mens": 9.8,
+    "weight_womens": 9.8,
+    "description": "The Revel Max delivers an optimal blend of cushion and style that will keep you comfortable on and off the run.",
+    "pros": [],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-12-01",
+    "release_year": 2026,
+    "image_source": "https://www.brooksrunning.com/on/demandware.static/-/Sites-brooks-master-catalog/default/dwf10afebe/original/110482/110482-177-l-revel-max-mens-max-cushion-road-running-shoe.png",
+    "product_url": "https://www.brooksrunning.com/en_us/mens/shoes/road-running-shoes/revel-max/110482.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:55.566Z"
+  },
+  {
+    "item_key": "brooks-glycerin-max-3",
+    "name": "Brooks Glycerin Max 3",
+    "brand": "Brooks",
+    "price": 200,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "race_day",
+      "trail_running",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "heavyweight",
+    "stack": null,
+    "drop": 6,
+    "weight_mens": 11.3,
+    "weight_womens": 11.3,
+    "description": "Experience advanced technology and superior design in the men's Glycerin Max 2 running shoes with plush cushioning for effortless transitions.",
+    "pros": [
+      "Plush"
+    ],
+    "cons": [],
+    "popularity": 0,
+    "release_date": "2026-12-01",
+    "release_year": 2026,
+    "image_source": "https://www.brooksrunning.com/on/demandware.static/-/Sites-brooks-master-catalog/default/dw3e587ec2/original/110479/110479-091-l-glycerin-max-2-mens-neutral-cushion-running-shoe.png",
+    "product_url": "https://www.brooksrunning.com/en_us/mens/shoes/road-running-shoes/glycerin-max-2/110479.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:53.363Z"
+  },
+  {
+    "item_key": "brooks-how-to-choose-the-right-brooks-bra",
+    "name": "Brooks how to choose the right brooks bra",
+    "brand": "Brooks",
+    "price": 85,
+    "usage_types": [
+      "race_day",
+      "trail_running",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "trail_groomed",
+      "trail_technical"
+    ],
+    "weight_range": "all",
+    "stack": null,
+    "drop": 10,
+    "weight_mens": 9.8,
+    "weight_womens": 9.8,
+    "description": "Step into comfort with the Brooks Men's Anthem 7 Running Shoes. Designed for runners with a soft midsole and updated mesh for comfort and performance.",
+    "pros": [],
+    "cons": [],
+    "popularity": 0,
+    "release_date": null,
+    "release_year": null,
+    "image_source": "https://www.brooksrunning.com/on/demandware.static/-/Sites-brooks-master-catalog/default/dw8e5dd15d/original/110439/110439-121-l-anthem-7-mens-dynamic-cushion-road-running-shoe.png",
+    "product_url": "https://www.brooksrunning.com/en_us/mens/shoes/road-running-shoes/anthem-7/110439.html",
+    "retailer_url": null,
+    "is_active": true,
+    "updated_at": "2026-03-11T00:44:54.086Z"
+  }
+]

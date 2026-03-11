@@ -1,0 +1,30 @@
+[
+  {
+    "item_key": "nike-vaporfly-4",
+    "name": "Nike Vaporfly 4",
+    "brand": "Nike",
+    "release_date": "2026-03-01",
+    "release_year": 2026,
+    "price": 275,
+    "usage_types": ["race_day", "speed_work"],
+    "foot_strike": ["midfoot", "forefoot"],
+    "cadence": ["high"],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": ["road"],
+    "weight_range": "lightweight",
+    "stack": 40,
+    "drop": 8,
+    "weight_mens": 6.8,
+    "weight_womens": 5.9,
+    "description": "Race-day carbon shoe focused on efficiency.",
+    "pros": ["Fast", "Light", "Efficient"],
+    "cons": ["Premium price"],
+    "popularity": 90,
+    "product_url": "https://www.nike.com",
+    "retailer_url": "https://www.runningwarehouse.com",
+    "image_source": "",
+    "image_url": ""
+  }
+]

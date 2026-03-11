@@ -1,0 +1,60 @@
+{
+  "name": "RTK",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "scrape:solereview:2026": "node scripts/scrape-solereview-2026.mjs",
+    "import:shoes": "node scripts/import-shoe-models.mjs",
+    "import:shoes:complete": "node scripts/import-shoe-models.mjs data/shoe-models-complete.json",
+    "spotify:playlists": "node scripts/fetch-spotify-playlists.mjs",
+    "import:songs": "node scripts/import-music-songs.mjs",
+    "import:attire": "node scripts/import-attire-items.mjs",
+    "upload:attire-images": "node scripts/upload-attire-images.mjs",
+    "import:gels": "node scripts/import-fuel-gels.mjs",
+    "audit:shoes": "node scripts/audit-shoe-coverage.mjs",
+    "catalog:shoes:discover": "node scripts/catalog/discover-shoes.mjs",
+    "catalog:shoes:discover:free": "node scripts/catalog/discover-shoes-free.mjs",
+    "catalog:shoes:seeds": "node scripts/catalog/build-shoe-seeds.mjs",
+    "catalog:shoes:seeds:runrepeat": "node scripts/catalog/seed-runrepeat.mjs",
+    "catalog:shoes:seeds:rw": "node scripts/catalog/seed-running-warehouse.mjs",
+    "catalog:shoes:seeds:candidates": "node scripts/catalog/seed-candidates.mjs",
+    "catalog:shoes:enrich": "node scripts/catalog/enrich-shoes.mjs",
+    "catalog:shoes:validate": "node scripts/catalog/validate-shoes.mjs",
+    "catalog:shoes": "node scripts/catalog/run-shoes.mjs",
+    "catalog:attire:discover": "node scripts/catalog/discover-attire.mjs",
+    "catalog:attire:discover:free": "node scripts/catalog/discover-attire-free.mjs",
+    "catalog:attire:enrich": "node scripts/catalog/enrich-attire.mjs",
+    "catalog:attire:validate": "node scripts/catalog/validate-attire.mjs",
+    "catalog:attire": "node scripts/catalog/run-attire.mjs",
+    "catalog:gels:discover": "node scripts/catalog/discover-gels.mjs",
+    "catalog:gels:discover:free": "node scripts/catalog/discover-gels-free.mjs",
+    "catalog:gels:enrich": "node scripts/catalog/enrich-gels.mjs",
+    "catalog:gels:validate": "node scripts/catalog/validate-gels.mjs",
+    "catalog:gels": "node scripts/catalog/run-gels.mjs",
+    "catalog:music": "node scripts/catalog/run-music.mjs",
+    "rundown:discover": "node scripts/rundown/discover.mjs",
+    "rundown:topics": "node scripts/rundown/topics.mjs",
+    "rundown:publish": "node scripts/rundown/publish.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.90.1",
+    "next": "^15.5.12",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.9",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.35",
+    "typescript": "5.5.4"
+  },
+  "overrides": {
+    "glob": "10.4.5"
+  }
+}
