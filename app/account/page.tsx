@@ -166,36 +166,38 @@ export default function AccountPage() {
   return (
     <div>
       <section className="tool-hero container">
-        <span className="pill">Phase 2 · Race dashboard</span>
-        <h1>Your next race starts here.</h1>
-        <p>
-          Set your goal, save the tools that fit your training block, and build a race-day system you can come back to every week.
-        </p>
+        <div className="dashboard-hero stack">
+          <span className="pill">Phase 2 · Race dashboard</span>
+          <h1>Your next race starts here.</h1>
+          <p>
+            Set your goal, save the tools that fit your training block, and build a race-day system you can come back to every week.
+          </p>
+          <div className="kpi-grid">
+            <div className="kpi-card">
+              <strong>{profile.goal_race || "No race set"}</strong>
+              <span className="brand-sub">Goal race</span>
+            </div>
+            <div className="kpi-card">
+              <strong>{profile.target_time || "Set a target"}</strong>
+              <span className="brand-sub">Target time</span>
+            </div>
+            <div className="kpi-card">
+              <strong>{savedCount}</strong>
+              <span className="brand-sub">Saved building blocks</span>
+            </div>
+            <div className="kpi-card">
+              <strong>{profile.race_date || "Pick a date"}</strong>
+              <span className="brand-sub">Race date</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="section container">
         <div className="stack">
-          <div className="stat-grid">
-            <div className="stat">
-              <strong>{profile.goal_race || "No race set"}</strong>
-              <span>Goal race</span>
-            </div>
-            <div className="stat">
-              <strong>{profile.target_time || "Set a target"}</strong>
-              <span>Target time</span>
-            </div>
-            <div className="stat">
-              <strong>{savedCount}</strong>
-              <span>Saved building blocks</span>
-            </div>
-            <div className="stat">
-              <strong>{user.email}</strong>
-              <span>Signed in</span>
-            </div>
-          </div>
 
           <div className="grid grid-2">
-            <div className="card card-accent">
+            <div className="card card-premium">
               <div className="stack">
                 <strong>Race profile</strong>
                 <p style={{ margin: 0, color: "var(--ink-2)" }}>
@@ -256,7 +258,7 @@ export default function AccountPage() {
               </div>
             </div>
 
-            <div className="card">
+            <div className="card card-dashboard">
               <div className="stack">
                 <strong>Recommended next moves</strong>
                 <div className="list">
@@ -284,7 +286,7 @@ export default function AccountPage() {
           {status === "error" ? <div className="notice">Unable to load saved items right now.</div> : null}
 
           <div className="grid grid-2">
-            <div className="card">
+            <div className="card card-dashboard">
               <div className="stack">
                 <strong>Saved shoes</strong>
                 {grouped.shoe?.length ? (
@@ -305,7 +307,7 @@ export default function AccountPage() {
               </div>
             </div>
 
-            <div className="card">
+            <div className="card card-dashboard">
               <div className="stack">
                 <strong>Saved training plans</strong>
                 {grouped.plan?.length ? (
@@ -326,7 +328,7 @@ export default function AccountPage() {
               </div>
             </div>
 
-            <div className="card">
+            <div className="card card-dashboard">
               <div className="stack">
                 <strong>Saved songs</strong>
                 {grouped.song?.length ? (
@@ -347,7 +349,7 @@ export default function AccountPage() {
               </div>
             </div>
 
-            <div className="card">
+            <div className="card card-dashboard">
               <div className="stack">
                 <strong>Saved gear and attire</strong>
                 {grouped.attire?.length ? (

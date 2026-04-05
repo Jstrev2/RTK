@@ -169,12 +169,12 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="section section-tight container">
+      <section className="section section-tight container race-journey">
         <div className="grid grid-3">
           {journey.map((step, index) => (
             <div
               key={step.name}
-              className="card card-outline fade-up"
+              className="card card-premium race-step fade-up"
               style={{ "--delay": `${index * 0.08}s` } as CSSProperties}
             >
               <div className="stack">
@@ -200,7 +200,7 @@ export default async function HomePage() {
               <Link
                 key={article.slug}
                 href={`/rundown/${article.slug}`}
-                className="card card-accent fade-up"
+                className="card card-editorial fade-up"
                 style={{ "--delay": `${index * 0.08}s` } as CSSProperties}
               >
                 <div className="stack">
