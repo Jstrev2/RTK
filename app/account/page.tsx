@@ -41,6 +41,14 @@ const defaultProfile = {
   goal_notes: ""
 };
 
+const daysUntilRace = (raceDate: string) => {
+  if (!raceDate) return null;
+  const today = new Date();
+  const target = new Date(`${raceDate}T00:00:00`);
+  const diff = Math.ceil((target.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+  return Number.isFinite(diff) ? diff : null;
+};
+
 export default function AccountPage() {
   const { user, loading, supabaseAvailable } = useAuth();
   const [savedItems, setSavedItems] = useState<SavedItem[]>([]);
@@ -92,6 +100,7 @@ export default function AccountPage() {
 
   const grouped = useMemo(() => groupByType(savedItems), [savedItems]);
   const savedCount = savedItems.length;
+  const countdown = profile.race_date ? daysUntilRace(profile.race_date) : null;
 
   const saveProfile = async () => {
     const supabase = getSupabaseClient();
@@ -143,7 +152,7 @@ export default function AccountPage() {
   if (!user) {
     return (
       <section className="section container">
-        <div className="card card-accent">
+        <div className="card card-premium">
           <div className="stack">
             <strong>Build your race dashboard</strong>
             <p>
@@ -167,16 +176,22 @@ export default function AccountPage() {
     <div>
       <section className="tool-hero container">
         <div className="dashboard-hero stack">
-          <span className="pill">Phase 2 · Race dashboard</span>
-          <h1>Your next race starts here.</h1>
-          <p>
-            Set your goal, save the tools that fit your training block, and build a race-day system you can come back to every week.
-          </p>
-          <div className="kpi-grid">
-            <div className="kpi-card">
-              <strong>{profile.goal_race || "No race set"}</strong>
-              <span className="brand-sub">Goal race</span>
+          <div style={{ display: "flex", justifyContent: "space-between", gap: 16, flexWrap: "wrap", alignItems: "flex-start" }}>
+            <div className="stack" style={{ gap: 10 }}>
+              <span className="pill">Race HQ</span>
+              <h1 style={{ margin: 0 }}>{profile.goal_race || "Your next race starts here."}</h1>
+              <p>
+                Set your goal, save the tools that fit your training block, and build a race-day system you can come back to every week.
+              </p>
             </div>
+            <div className="kpi-card" style={{ minWidth: 180 }}>
+              <span className="brand-sub">Countdown</span>
+              <strong>
+                {countdown === null ? "Set a date" : countdown < 0 ? "Race passed" : `${countdown} days`}
+              </strong>
+            </div>
+          </div>
+          <div className="kpi-grid">
             <div className="kpi-card">
               <strong>{profile.target_time || "Set a target"}</strong>
               <span className="brand-sub">Target time</span>
@@ -189,63 +204,41 @@ export default function AccountPage() {
               <strong>{profile.race_date || "Pick a date"}</strong>
               <span className="brand-sub">Race date</span>
             </div>
+            <div className="kpi-card">
+              <strong>{grouped.plan?.length ?? 0}</strong>
+              <span className="brand-sub">Plans saved</span>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section container">
         <div className="stack">
-
           <div className="grid grid-2">
             <div className="card card-premium">
               <div className="stack">
                 <strong>Race profile</strong>
-                <p style={{ margin: 0, color: "var(--ink-2)" }}>
-                  This is the sticky layer: your race target, your date, your notes, and the tools you are using to prepare.
+                <p style={{ margin: 0, color: "rgba(248,251,255,0.78)" }}>
+                  Keep your race target, target time, and key notes in one place so the rest of the toolkit can orbit around your goal.
                 </p>
                 <div className="form-grid">
                   <div>
                     <label className="label" htmlFor="goal_race">Goal race</label>
-                    <input
-                      id="goal_race"
-                      className="input"
-                      placeholder="Chicago Marathon"
-                      value={profile.goal_race}
-                      onChange={(e) => setProfile((curr) => ({ ...curr, goal_race: e.target.value }))}
-                    />
+                    <input id="goal_race" className="input" placeholder="Chicago Marathon" value={profile.goal_race} onChange={(e) => setProfile((curr) => ({ ...curr, goal_race: e.target.value }))} />
                   </div>
                   <div className="grid grid-2">
                     <div>
                       <label className="label" htmlFor="race_date">Race date</label>
-                      <input
-                        id="race_date"
-                        className="input"
-                        type="date"
-                        value={profile.race_date}
-                        onChange={(e) => setProfile((curr) => ({ ...curr, race_date: e.target.value }))}
-                      />
+                      <input id="race_date" className="input" type="date" value={profile.race_date} onChange={(e) => setProfile((curr) => ({ ...curr, race_date: e.target.value }))} />
                     </div>
                     <div>
                       <label className="label" htmlFor="target_time">Target time</label>
-                      <input
-                        id="target_time"
-                        className="input"
-                        placeholder="1:45:00"
-                        value={profile.target_time}
-                        onChange={(e) => setProfile((curr) => ({ ...curr, target_time: e.target.value }))}
-                      />
+                      <input id="target_time" className="input" placeholder="1:45:00" value={profile.target_time} onChange={(e) => setProfile((curr) => ({ ...curr, target_time: e.target.value }))} />
                     </div>
                   </div>
                   <div>
                     <label className="label" htmlFor="goal_notes">Race notes</label>
-                    <textarea
-                      id="goal_notes"
-                      className="textarea"
-                      placeholder="Sub-1:45 half. Need better fueling and a steadier first 5K."
-                      rows={5}
-                      value={profile.goal_notes}
-                      onChange={(e) => setProfile((curr) => ({ ...curr, goal_notes: e.target.value }))}
-                    />
+                    <textarea id="goal_notes" className="textarea" placeholder="Sub-1:45 half. Need better fueling and a steadier first 5K." rows={5} value={profile.goal_notes} onChange={(e) => setProfile((curr) => ({ ...curr, goal_notes: e.target.value }))} />
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
@@ -258,26 +251,40 @@ export default function AccountPage() {
               </div>
             </div>
 
-            <div className="card card-dashboard">
-              <div className="stack">
-                <strong>Recommended next moves</strong>
-                <div className="list">
-                  <Link href="/tools/pace-calculator" className="card card-outline">
-                    <strong>Lock your pace plan</strong>
-                    <div className="brand-sub">Build splits for your goal time and race distance.</div>
-                  </Link>
-                  <Link href="/tools/fueling" className="card card-outline">
-                    <strong>Dial in race fueling</strong>
-                    <div className="brand-sub">Create a race-day gel and hydration strategy you can revisit.</div>
-                  </Link>
-                  <Link href="/tools/training-plans" className="card card-outline">
-                    <strong>Choose your training block</strong>
-                    <div className="brand-sub">Match your current plan to the race you are targeting.</div>
-                  </Link>
-                  <Link href="/tools/shoe-selector" className="card card-outline">
-                    <strong>Save your shoe rotation</strong>
-                    <div className="brand-sub">Keep race-day and training-day options in one place.</div>
-                  </Link>
+            <div className="stack" style={{ gap: 20 }}>
+              <div className="card card-dashboard">
+                <div className="stack">
+                  <strong>Race-week checklist</strong>
+                  <div className="list">
+                    <div className="card card-outline">Save a target time and lock your splits.</div>
+                    <div className="card card-outline">Pick your race shoe and training backup option.</div>
+                    <div className="card card-outline">Build a fueling plan you can test before race day.</div>
+                    <div className="card card-outline">Choose the training plan or block you are actually following.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card card-dashboard">
+                <div className="stack">
+                  <strong>Recommended next moves</strong>
+                  <div className="list">
+                    <Link href="/tools/pace-calculator" className="card card-outline">
+                      <strong>Lock your pace plan</strong>
+                      <div className="brand-sub">Build splits for your goal time and race distance.</div>
+                    </Link>
+                    <Link href="/tools/fueling" className="card card-outline">
+                      <strong>Dial in race fueling</strong>
+                      <div className="brand-sub">Create a race-day gel and hydration strategy you can revisit.</div>
+                    </Link>
+                    <Link href="/tools/training-plans" className="card card-outline">
+                      <strong>Choose your training block</strong>
+                      <div className="brand-sub">Match your current plan to the race you are targeting.</div>
+                    </Link>
+                    <Link href="/tools/shoe-selector" className="card card-outline">
+                      <strong>Save your shoe rotation</strong>
+                      <div className="brand-sub">Keep race-day and training-day options in one place.</div>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -301,9 +308,7 @@ export default function AccountPage() {
                       );
                     })}
                   </ul>
-                ) : (
-                  <p className="brand-sub">No shoes saved yet.</p>
-                )}
+                ) : <p className="brand-sub">No shoes saved yet.</p>}
               </div>
             </div>
 
@@ -322,9 +327,7 @@ export default function AccountPage() {
                       );
                     })}
                   </ul>
-                ) : (
-                  <p className="brand-sub">No plans saved yet.</p>
-                )}
+                ) : <p className="brand-sub">No plans saved yet.</p>}
               </div>
             </div>
 
@@ -343,9 +346,7 @@ export default function AccountPage() {
                       );
                     })}
                   </ul>
-                ) : (
-                  <p className="brand-sub">No songs saved yet.</p>
-                )}
+                ) : <p className="brand-sub">No songs saved yet.</p>}
               </div>
             </div>
 
@@ -364,15 +365,13 @@ export default function AccountPage() {
                       );
                     })}
                   </ul>
-                ) : (
-                  <p className="brand-sub">No attire saved yet.</p>
-                )}
+                ) : <p className="brand-sub">No attire saved yet.</p>}
               </div>
             </div>
           </div>
 
           <div className="notice">
-            Next evolution: adaptive recommendations, race-week checklists, and premium planning layers on top of this dashboard.
+            Next evolution: adaptive recommendations, race-week planning, and premium coaching layers built on top of this dashboard.
           </div>
         </div>
       </section>

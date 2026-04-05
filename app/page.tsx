@@ -105,7 +105,7 @@ export default async function HomePage() {
 
   return (
     <div>
-      <section className="hero container">
+      <section className="hero container hero-v2">
         <div>
           <span className="pill">Built for runners chasing a goal race</span>
           <h1>Your race-day toolkit for training smarter, fueling better, and showing up ready.</h1>
@@ -122,6 +122,20 @@ export default async function HomePage() {
           </div>
         </div>
         <div className="hero-panel">
+          <div className="hero-strip fade-up" style={{ "--delay": "0.05s" } as CSSProperties}>
+            <div className="hero-strip-item">
+              <span className="brand-sub">Built for</span>
+              <strong>Goal races</strong>
+            </div>
+            <div className="hero-strip-item">
+              <span className="brand-sub">Best for</span>
+              <strong>5K to marathon</strong>
+            </div>
+            <div className="hero-strip-item">
+              <span className="brand-sub">Return value</span>
+              <strong>Weekly race prep</strong>
+            </div>
+          </div>
           <div className="hero-card fade-up" style={{ "--delay": "0.1s" } as CSSProperties}>
             <div className="stack">
               <strong>What you get</strong>

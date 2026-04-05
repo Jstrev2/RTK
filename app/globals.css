@@ -995,3 +995,42 @@ details[open] summary {
   font-size: 1.35rem;
   color: #fff;
 }
+
+.hero-v2 {
+  position: relative;
+}
+
+.hero-v2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 18px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(31,140,255,0.26), rgba(255,122,26,0.40), transparent);
+}
+
+.hero-panel {
+  gap: 20px;
+}
+
+.hero-strip-item {
+  border-radius: 18px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(15,23,42,0.08);
+  box-shadow: 0 12px 22px rgba(15,23,42,0.08);
+}
+
+.hero-strip-item strong {
+  font-size: 1rem;
+}
+
+.card-premium .label {
+  color: rgba(248,251,255,0.82);
+}
+
+.card-premium .input,
+.card-premium .textarea,
+.card-premium .select {
+  background: rgba(255,255,255,0.94);
+}
