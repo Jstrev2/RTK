@@ -59,7 +59,7 @@ const mapSongRow = (row: SongRow): Song => ({
   id: row.id,
   title: row.title,
   artist: row.artist,
-  bpm: row.bpm ?? 150,
+  bpm: row.bpm ?? null,
   genre: row.genre ?? [],
   energy: normalizeEnergy(row.energy),
   workout: row.workout ?? [],
@@ -225,7 +225,10 @@ export default function MusicToolsPage() {
   };
 
   const filteredSongs = useMemo(() => {
-    const matchesRange = (bpm: number) => {
+    const matchesRange = (bpm: number | null) => {
+      if (bpm === null) {
+        return bpmRange === "all";
+      }
       if (bpmRange === "all") {
         return true;
       }
@@ -256,7 +259,7 @@ export default function MusicToolsPage() {
         return b.submittedDate.localeCompare(a.submittedDate);
       }
       if (sortBy === "bpm") {
-        return b.bpm - a.bpm;
+        return (b.bpm ?? -1) - (a.bpm ?? -1);
       }
       if (sortBy === "trending") {
         return scoreB - scoreA || b.submittedDate.localeCompare(a.submittedDate);
@@ -311,7 +314,7 @@ export default function MusicToolsPage() {
       id: `song-${songs.length + 1}`,
       title: form.title,
       artist: form.artist,
-      bpm: Number(form.bpm) || 150,
+      bpm: Number(form.bpm) || null,
       genre: [form.genre],
       energy: form.energy as Song["energy"],
       workout: [form.workout],
@@ -488,7 +491,7 @@ export default function MusicToolsPage() {
                               <strong>{song.title}</strong>
                               <div className="brand-sub">{song.artist}</div>
                             </div>
-                            <span className="tag">{song.bpm} BPM</span>
+                            <span className="tag">{song.bpm ? `${song.bpm} BPM` : "Unknown BPM"}</span>
                           </div>
                           <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
                             {song.genre.map((item) => (
@@ -617,7 +620,7 @@ export default function MusicToolsPage() {
                         {topByWorkout.easy.map((song) => (
                           <li key={song.id}>
                             <strong>{song.title}</strong>
-                            <span className="brand-sub"> — {song.artist} · {song.bpm} BPM</span>
+                            <span className="brand-sub"> — {song.artist}{song.bpm ? ` · ${song.bpm} BPM` : " · BPM pending"}</span>
                           </li>
                         ))}
                       </ul>
@@ -628,7 +631,7 @@ export default function MusicToolsPage() {
                         {topByWorkout.tempo.map((song) => (
                           <li key={song.id}>
                             <strong>{song.title}</strong>
-                            <span className="brand-sub"> — {song.artist} · {song.bpm} BPM</span>
+                            <span className="brand-sub"> — {song.artist}{song.bpm ? ` · ${song.bpm} BPM` : " · BPM pending"}</span>
                           </li>
                         ))}
                       </ul>
@@ -639,7 +642,7 @@ export default function MusicToolsPage() {
                         {topByWorkout.speed.map((song) => (
                           <li key={song.id}>
                             <strong>{song.title}</strong>
-                            <span className="brand-sub"> — {song.artist} · {song.bpm} BPM</span>
+                            <span className="brand-sub"> — {song.artist}{song.bpm ? ` · ${song.bpm} BPM` : " · BPM pending"}</span>
                           </li>
                         ))}
                       </ul>
