@@ -48,6 +48,21 @@ const tools = [
   },
 ];
 
+const journey = [
+  {
+    name: "Plan your goal",
+    description: "Set your race target, map your pacing, and choose the tools that match your current block.",
+  },
+  {
+    name: "Train with purpose",
+    description: "Use shoes, fueling, music, and training plans that actually fit the kind of runner you are.",
+  },
+  {
+    name: "Race with confidence",
+    description: "Show up with a clear pacing plan, a dialed fueling strategy, and fewer race-day question marks.",
+  },
+];
+
 interface RecentArticle {
   slug: string;
   title: string;
@@ -85,26 +100,24 @@ export default async function HomePage() {
     { label: "Running shoes", value: `${stats.shoes}+` },
     { label: "Songs with BPM", value: `${stats.songs.toLocaleString()}+` },
     { label: "Energy gels", value: `${stats.gels}` },
-    { label: "Cost", value: "Free" }
+    { label: "Goal", value: "PR-ready" }
   ];
 
   return (
     <div>
       <section className="hero container">
         <div>
-          <span className="pill">Free tools for real runners</span>
-          <h1>Everything you need to train smart and race ready.</h1>
+          <span className="pill">Built for runners chasing a goal race</span>
+          <h1>Your race-day toolkit for training smarter, fueling better, and showing up ready.</h1>
           <p>
-            Shoe recommendations, pace calculations, race-day fueling plans,
-            workout music by BPM, and training schedules — all in one place,
-            no account required.
+            Runner Toolkit helps serious everyday runners prepare for their next 5K, half, or marathon with practical tools for shoes, pacing, fueling, music, and training plans. Use it free, then save your race strategy when you are ready to build your dashboard.
           </p>
           <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-            <Link className="btn btn-primary" href="/tools/shoe-selector">
-              Find your shoe
+            <Link className="btn btn-primary" href="/account">
+              Build your race dashboard
             </Link>
             <Link className="btn btn-secondary" href="/tools/pace-calculator">
-              Calculate your pace
+              Start with pace
             </Link>
           </div>
         </div>
@@ -123,10 +136,9 @@ export default async function HomePage() {
             </div>
           </div>
           <div className="card card-accent fade-up" style={{ "--delay": "0.2s" } as CSSProperties}>
-            <strong>No sign-up required</strong>
+            <strong>Free now, personal when you want it</strong>
             <p>
-              Every tool works instantly. Create an account only if you want
-              to save favorites and log workouts.
+              Every tool works instantly. Create an account to save your race goal, training picks, pacing plans, and fueling strategy in one place.
             </p>
           </div>
         </div>
@@ -134,9 +146,9 @@ export default async function HomePage() {
 
       <section id="tools" className="section container">
         <div className="stack" style={{ marginBottom: "24px" }}>
-          <h2 className="section-title">All the tools you need in one place</h2>
+          <h2 className="section-title">Everything you need for your next race block</h2>
           <p className="section-lede">
-            Each tool works on its own. Use one or use them all.
+            Start with one tool or connect them into a complete race-prep workflow.
           </p>
         </div>
         <div className="grid grid-3">
@@ -153,6 +165,24 @@ export default async function HomePage() {
                 <span className="tag">{tool.detail}</span>
               </div>
             </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="section section-tight container">
+        <div className="grid grid-3">
+          {journey.map((step, index) => (
+            <div
+              key={step.name}
+              className="card card-outline fade-up"
+              style={{ "--delay": `${index * 0.08}s` } as CSSProperties}
+            >
+              <div className="stack">
+                <span className="pill">Step {index + 1}</span>
+                <strong>{step.name}</strong>
+                <p>{step.description}</p>
+              </div>
+            </div>
           ))}
         </div>
       </section>
@@ -200,16 +230,16 @@ export default async function HomePage() {
       <section id="how-it-works" className="section container">
         <div className="grid grid-2">
           <div className="stack">
-            <h2 className="section-title">Built for runners, not subscribers</h2>
+            <h2 className="section-title">Built for runners training toward something</h2>
             <ul className="list">
               <li className="card card-outline">
-                No paywall. Every tool is free and works without sign-up.
+                Start free. Use every tool instantly before you decide to save anything.
               </li>
               <li className="card card-outline">
-                Real data. Shoe specs from manufacturer pages, BPM from GetSongBPM, fueling science from sports nutrition research.
+                Save your race setup. Keep your target, pacing, shoes, and fueling plan together in one account.
               </li>
               <li className="card card-outline">
-                Works on mobile. Check your fueling plan or pace splits right before a race.
+                Come back every week. The goal is not a one-off calculator — it is a better race-day system.
               </li>
             </ul>
           </div>
