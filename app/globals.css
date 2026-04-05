@@ -1057,3 +1057,9 @@ details[open] summary {
 .hero-card > .stack > strong {
   color: #f8fbff;
 }
+
+.race-step .pill {
+  background: rgba(255, 255, 255, 0.14);
+  color: #f8fbff;
+  border: 1px solid rgba(255,255,255,0.10);
+}
