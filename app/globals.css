@@ -1034,3 +1034,26 @@ details[open] summary {
 .card-premium .select {
   background: rgba(255,255,255,0.94);
 }
+
+.hero-card .stat {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.hero-card .stat strong {
+  color: var(--ink);
+}
+
+.hero-card .stat span {
+  color: var(--ink-2);
+}
+
+.hero-card strong,
+.hero-card p,
+.hero-card span {
+  color: inherit;
+}
+
+.hero-card > .stack > strong {
+  color: #f8fbff;
+}
