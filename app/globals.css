@@ -285,6 +285,13 @@ main {
   font-size: 0.72rem;
 }
 
+.buy-links-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 92px;
+}
+
 .btn-primary {
   background: linear-gradient(135deg, var(--sky), var(--sun));
   color: #ffffff;

@@ -3,36 +3,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { shoes } from "@/lib/data";
 import type { Shoe } from "@/lib/data";
-import { mapDbShoe, type DbShoe } from "@/lib/shoe-utils";
+import { mapDbShoe, displayName, prettyLabel, modelFamily, type DbShoe } from "@/lib/shoe-utils";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
+import BuyLinks from "@/components/buy-links";
 
-const labelOverrides: Record<string, string> = {
-  daily_trainer: "Daily trainer",
-  long_run: "Long run",
-  speed_work: "Speed work",
-  race_day: "Race day",
-  trail_running: "Trail running",
-  recovery_runs: "Recovery runs",
-  trail_groomed: "Trail (groomed)",
-  trail_technical: "Trail (technical)",
-  motion_control: "Motion control",
-  extra_wide: "Extra wide",
-  midfoot: "Midfoot",
-  forefoot: "Forefoot",
-  heel: "Heel"
-};
-
-const prettyLabel = (value: string) => {
-  if (labelOverrides[value]) {
-    return labelOverrides[value];
-  }
-  return value
-    .split("_")
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(" ");
-};
-
-const joinLabels = (values: string[]) => values.map(prettyLabel).join(", ");
+const joinLabels = (values: string[]) =>
+  values.map(prettyLabel).join(", ");
 
 const clamp = (value: number, min: number, max: number) =>
   Math.min(max, Math.max(min, value));
@@ -65,7 +41,6 @@ const durabilityScore = (usageTypes: string[]) => {
   let score = 52;
   if (usageTypes.includes("daily_trainer")) score += 12;
   if (usageTypes.includes("long_run")) score += 10;
-  if (usageTypes.includes("trail_running")) score += 10;
   if (usageTypes.includes("recovery_runs")) score += 6;
   if (usageTypes.includes("race_day")) score -= 14;
   if (usageTypes.includes("speed_work")) score -= 6;
@@ -107,6 +82,57 @@ const buildRadarPoints = (values: number[], radius: number, center: number) => {
     .join(" ");
 };
 
+const usagePhrases: Record<string, string> = {
+  daily_trainer: "everyday training miles",
+  long_run: "long runs",
+  speed_work: "tempo days and intervals",
+  race_day: "race day",
+  recovery_runs: "easy recovery days"
+};
+
+const whoItsFor = (shoe: Shoe): string => {
+  const sentences: string[] = [];
+
+  const uses = shoe.usageTypes
+    .map((u) => usagePhrases[u])
+    .filter(Boolean);
+  if (uses.length) {
+    sentences.push(
+      `Reach for the ${displayName(shoe)} for ${
+        uses.length > 1
+          ? `${uses.slice(0, -1).join(", ")} and ${uses[uses.length - 1]}`
+          : uses[0]
+      }.`
+    );
+  }
+
+  if (shoe.stability === "moderate" || shoe.stability === "motion_control") {
+    sentences.push(
+      "It has real support built in, so it suits runners who overpronate or like a locked-in, guided ride."
+    );
+  } else if (shoe.stability === "mild") {
+    sentences.push(
+      "A wide, stable base keeps it steady without stability hardware — a good pick if you're mostly neutral but like a planted feel."
+    );
+  } else {
+    sentences.push(
+      "It's a neutral shoe, best for runners with an efficient stride who don't need pronation support."
+    );
+  }
+
+  if (shoe.cushion === "maximum") {
+    sentences.push(
+      "The tall, soft stack favors comfort over ground feel — great for high mileage and bigger runners, less so for racing snappiness."
+    );
+  } else if (shoe.cushion === "minimal") {
+    sentences.push(
+      "Expect a firm, low-to-the-ground feel that rewards fast turnover but offers less protection on long efforts."
+    );
+  }
+
+  return sentences.join(" ");
+};
+
 async function loadShoe(id: string): Promise<Shoe | undefined> {
   const supabase = getSupabaseAdmin();
   if (supabase) {
@@ -125,13 +151,71 @@ async function loadShoe(id: string): Promise<Shoe | undefined> {
   return shoes.find((item) => item.id === id);
 }
 
+async function loadAlternatives(shoe: Shoe): Promise<Shoe[]> {
+  const supabase = getSupabaseAdmin();
+  let pool: Shoe[] = [];
+
+  if (supabase) {
+    const { data } = await supabase
+      .from("shoe_models")
+      .select("*")
+      .eq("is_active", true)
+      .neq("item_key", shoe.id)
+      .overlaps("usage_types", shoe.usageTypes.length ? shoe.usageTypes : ["daily_trainer"])
+      .order("popularity", { ascending: false })
+      .limit(24);
+    if (data?.length) {
+      pool = (data as DbShoe[]).map(mapDbShoe);
+    }
+  }
+
+  if (!pool.length) {
+    pool = shoes.filter(
+      (item) =>
+        item.id !== shoe.id &&
+        item.usageTypes.some((u) => shoe.usageTypes.includes(u))
+    );
+  }
+
+  // Prefer same cushion class and a similar price band, then popularity.
+  // Keep one version per model family (not Bondi 9 AND Bondi 10), and never
+  // another version of the shoe being viewed.
+  const ranked = pool
+    .filter((item) => modelFamily(item.name) !== modelFamily(shoe.name))
+    .map((item) => {
+      let affinity = item.popularity / 100;
+      if (item.cushion === shoe.cushion) affinity += 1;
+      if (item.stability === shoe.stability) affinity += 0.75;
+      if (shoe.price && item.price && Math.abs(item.price - shoe.price) <= 40)
+        affinity += 0.5;
+      return { item, affinity };
+    })
+    .sort((a, b) => b.affinity - a.affinity);
+
+  const seen = new Set<string>();
+  const picks: Shoe[] = [];
+  for (const { item } of ranked) {
+    const family = modelFamily(item.name);
+    if (seen.has(family)) continue;
+    seen.add(family);
+    picks.push(item);
+    if (picks.length === 4) break;
+  }
+  return picks;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const shoe = await loadShoe(id);
   if (!shoe) return { title: "Shoe Not Found" };
+  const title = displayName(shoe);
   return {
-    title: `${shoe.brand} ${shoe.name}`,
-    description: `${shoe.brand} ${shoe.name} — ${shoe.cushion} cushion, ${shoe.stability} stability running shoe. Stack height: ${shoe.stack}mm, drop: ${shoe.drop}mm.`,
+    title,
+    description: `${title} review data — ${prettyLabel(shoe.cushion)} cushion, ${prettyLabel(
+      shoe.stability
+    )} support. ${shoe.stack ? `${shoe.stack}mm stack, ` : ""}${
+      shoe.drop ? `${shoe.drop}mm drop, ` : ""
+    }specs, pros & cons, and where to buy.`,
   };
 }
 
@@ -141,6 +225,9 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
   if (!shoe) {
     notFound();
   }
+
+  const alternatives = await loadAlternatives(shoe);
+  const title = displayName(shoe);
 
   const metrics = [
     { label: "Support", value: supportScore(shoe.stability) },
@@ -161,9 +248,9 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: `${shoe.brand} ${shoe.name}`,
+    name: title,
     brand: { "@type": "Brand", name: shoe.brand },
-    description: shoe.description || `${shoe.brand} ${shoe.name} running shoe`,
+    description: shoe.description || `${title} running shoe`,
     ...(shoe.price ? { offers: { "@type": "Offer", price: shoe.price, priceCurrency: "USD" } } : {}),
     ...(shoe.imageUrl ? { image: shoe.imageUrl } : {}),
   };
@@ -178,8 +265,8 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
         <Link className="btn btn-ghost btn-sm" href="/tools/shoe-selector">
           Back to Shoe Finder
         </Link>
-        <h1>{shoe.name}</h1>
-        <p>{shoe.description || `${shoe.brand} running shoe`}</p>
+        <h1>{title}</h1>
+        <p>{shoe.description || `${shoe.brand} road running shoe`}</p>
       </section>
 
       <section className="section container">
@@ -190,18 +277,6 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
                 <strong>Quick specs</strong>
                 <div className="hero-strip">
                   <div className="hero-strip-item">
-                    <span>Foot strike</span>
-                    <strong>{joinLabels(shoe.footStrike)}</strong>
-                  </div>
-                  <div className="hero-strip-item">
-                    <span>Cadence</span>
-                    <strong>{joinLabels(shoe.cadence)}</strong>
-                  </div>
-                  <div className="hero-strip-item">
-                    <span>Toe box</span>
-                    <strong>{prettyLabel(shoe.toeBox)}</strong>
-                  </div>
-                  <div className="hero-strip-item">
                     <span>Cushion</span>
                     <strong>{prettyLabel(shoe.cushion)}</strong>
                   </div>
@@ -210,8 +285,20 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
                     <strong>{prettyLabel(shoe.stability)}</strong>
                   </div>
                   <div className="hero-strip-item">
-                    <span>Surface</span>
-                    <strong>{joinLabels(shoe.surfaces)}</strong>
+                    <span>Drop</span>
+                    <strong>{shoe.drop ? `${shoe.drop} mm` : "—"}</strong>
+                  </div>
+                  <div className="hero-strip-item">
+                    <span>Heel stack</span>
+                    <strong>{shoe.stack ? `${shoe.stack} mm` : "—"}</strong>
+                  </div>
+                  <div className="hero-strip-item">
+                    <span>Toe box</span>
+                    <strong>{prettyLabel(shoe.toeBox)}</strong>
+                  </div>
+                  <div className="hero-strip-item">
+                    <span>Foot strike</span>
+                    <strong>{joinLabels(shoe.footStrike) || "All"}</strong>
                   </div>
                 </div>
               </div>
@@ -219,7 +306,8 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
 
             <div className="card">
               <div className="stack">
-                <strong>Best for</strong>
+                <strong>Who it&apos;s for</strong>
+                <p>{whoItsFor(shoe)}</p>
                 <div className="tag-grid">
                   {shoe.usageTypes.map((usage) => (
                     <span key={usage} className="tag">
@@ -227,33 +315,77 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
                     </span>
                   ))}
                 </div>
-                {shoe.pros.length > 0 ? (
-                  <>
-                    <div className="divider" />
-                    <strong>Pros</strong>
-                    <div className="tag-grid">
-                      {shoe.pros.map((item) => (
-                        <span key={item} className="tag">
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </>
-                ) : null}
-                {shoe.cons.length > 0 ? (
-                  <>
-                    <strong>Cons</strong>
-                    <div className="tag-grid">
-                      {shoe.cons.map((item) => (
-                        <span key={item} className="tag">
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </>
-                ) : null}
               </div>
             </div>
+
+            {shoe.pros.length > 0 || shoe.cons.length > 0 ? (
+              <div className="card">
+                <div className="stack">
+                  {shoe.pros.length > 0 ? (
+                    <>
+                      <strong>Pros</strong>
+                      <ul>
+                        {shoe.pros.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : null}
+                  {shoe.cons.length > 0 ? (
+                    <>
+                      <strong>Cons</strong>
+                      <ul>
+                        {shoe.cons.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : null}
+                </div>
+              </div>
+            ) : null}
+
+            {alternatives.length ? (
+              <div className="card">
+                <div className="stack">
+                  <strong>Similar shoes to consider</strong>
+                  <div className="table-wrap">
+                    <table className="table">
+                      <thead>
+                        <tr>
+                          <th>Shoe</th>
+                          <th>Cushion</th>
+                          <th>Support</th>
+                          <th>Price</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {alternatives.map((alt) => (
+                          <tr key={alt.id}>
+                            <td>
+                              <strong>{alt.name}</strong>
+                              <div className="brand-sub">{alt.brand}</div>
+                            </td>
+                            <td>{prettyLabel(alt.cushion)}</td>
+                            <td>{prettyLabel(alt.stability)}</td>
+                            <td>{alt.price ? `$${alt.price}` : "—"}</td>
+                            <td>
+                              <Link
+                                className="btn btn-xs btn-ghost"
+                                href={`/shoes/${alt.id}`}
+                              >
+                                Analyze
+                              </Link>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            ) : null}
           </div>
 
           <div className="stack">
@@ -332,15 +464,15 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
                 <strong>Key stats</strong>
                 <div className="stat-grid">
                   <div className="stat">
-                    <strong>{shoe.price ? `$${shoe.price}` : "TBD"}</strong>
-                    <span>Price</span>
+                    <strong>{shoe.price ? `$${shoe.price}` : "—"}</strong>
+                    <span>Price (MSRP)</span>
                   </div>
                   <div className="stat">
                     <strong>{shoe.stack ? `${shoe.stack} mm` : "—"}</strong>
                     <span>Stack height</span>
                   </div>
                   <div className="stat">
-                    <strong>{shoe.drop != null ? `${shoe.drop} mm` : "—"}</strong>
+                    <strong>{shoe.drop ? `${shoe.drop} mm` : "—"}</strong>
                     <span>Drop</span>
                   </div>
                   <div className="stat">
@@ -352,16 +484,20 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
                     <span>Women&apos;s weight</span>
                   </div>
                   <div className="stat">
-                    <strong>{shoe.weightRange ? prettyLabel(shoe.weightRange) : "—"}</strong>
-                    <span>Runner profile</span>
+                    <strong>{shoe.releaseYear ?? "—"}</strong>
+                    <span>Release year</span>
                   </div>
                 </div>
               </div>
             </div>
 
+            <div className="card">
+              <BuyLinks name={shoe.name} brand={shoe.brand} />
+            </div>
+
             {shoe.productUrl ? (
               <a
-                className="btn btn-secondary"
+                className="btn btn-ghost"
                 href={shoe.productUrl}
                 target="_blank"
                 rel="noopener noreferrer"

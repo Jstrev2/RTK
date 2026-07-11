@@ -4,8 +4,16 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { shoes as fallbackShoes, shoeOptions } from "@/lib/data";
 import type { Shoe } from "@/lib/data";
-import { scoreShoe, mapDbShoe, type DbShoe } from "@/lib/shoe-utils";
+import {
+  scoreShoe,
+  mapDbShoe,
+  prettyLabel,
+  type DbShoe,
+  type Pronation,
+  type Mileage
+} from "@/lib/shoe-utils";
 import SaveButton from "@/components/save-button";
+import BuyLinks from "@/components/buy-links";
 import { getSupabaseClient } from "@/lib/supabase-client";
 
 const sortOptions = [
@@ -17,28 +25,26 @@ const sortOptions = [
 
 const maxResults = 10;
 
-const labelOverrides: Record<string, string> = {
-  daily_trainer: "Daily trainer",
-  long_run: "Long run",
-  speed_work: "Speed work",
-  race_day: "Race day",
-  trail_running: "Trail running",
-  recovery_runs: "Recovery runs",
-  trail_groomed: "Trail (groomed)",
-  trail_technical: "Trail (technical)",
-  motion_control: "Motion control",
-  extra_wide: "Extra wide"
-};
+const pronationOptions: { id: Pronation; label: string }[] = [
+  { id: "not_sure", label: "Not sure" },
+  { id: "neutral", label: "Neutral" },
+  { id: "mild_overpronation", label: "Mild overpronation" },
+  { id: "severe_overpronation", label: "Significant overpronation" }
+];
 
-const prettyLabel = (value: string) => {
-  if (labelOverrides[value]) {
-    return labelOverrides[value];
-  }
-  return value
-    .split("_")
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(" ");
-};
+const mileageOptions: { id: Mileage; label: string }[] = [
+  { id: "", label: "Prefer not to say" },
+  { id: "under_15", label: "Under 15 mi / week" },
+  { id: "15_to_35", label: "15–35 mi / week" },
+  { id: "over_35", label: "35+ mi / week" }
+];
+
+const cushionFeelOptions = [
+  { id: "", label: "No preference" },
+  { id: "minimal", label: "Firm & fast (ground feel)" },
+  { id: "moderate", label: "Balanced" },
+  { id: "maximum", label: "Plush & protective" }
+];
 
 const joinLabels = (values: string[]) => values.map(prettyLabel).join(", ");
 
@@ -54,27 +60,26 @@ export default function ShoeSelectorPage() {
   const [showAll, setShowAll] = useState(false);
 
   const [usageTypes, setUsageTypes] = useState<string[]>([]);
+  const [pronation, setPronation] = useState<Pronation>("not_sure");
   const [footStrike, setFootStrike] = useState("not_sure");
-  const [cadence, setCadence] = useState("average");
+  const [cushion, setCushion] = useState("");
   const [toeBox, setToeBox] = useState("standard");
-  const [cushion, setCushion] = useState("moderate");
-  const [stability, setStability] = useState("neutral");
-  const surfaces: string[] = [];
-  const [weight, setWeight] = useState("155");
+  const [mileage, setMileage] = useState<Mileage>("");
+  const [weight, setWeight] = useState("");
   const [weightUnit, setWeightUnit] = useState("lb");
   const [brandFilter, setBrandFilter] = useState("all");
   const [priceMax, setPriceMax] = useState(300);
   const [sortBy, setSortBy] = useState("match");
   const [search, setSearch] = useState("");
   const [newOnly, setNewOnly] = useState(false);
-  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(true);
   const [compareIds, setCompareIds] = useState<string[]>([]);
   const [compareNotice, setCompareNotice] = useState("");
   const [restored, setRestored] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    const raw = window.sessionStorage.getItem("shoe-selector-state-v1");
+    const raw = window.sessionStorage.getItem("shoe-selector-state-v2");
     if (!raw) {
       setRestored(true);
       return;
@@ -82,12 +87,12 @@ export default function ShoeSelectorPage() {
     try {
       const parsed = JSON.parse(raw);
       setUsageTypes(Array.isArray(parsed.usageTypes) ? parsed.usageTypes : []);
+      setPronation(parsed.pronation || "not_sure");
       setFootStrike(parsed.footStrike || "not_sure");
-      setCadence(parsed.cadence || "average");
+      setCushion(parsed.cushion || "");
       setToeBox(parsed.toeBox || "standard");
-      setCushion(parsed.cushion || "moderate");
-      setStability(parsed.stability || "neutral");
-      setWeight(parsed.weight || "155");
+      setMileage(parsed.mileage || "");
+      setWeight(parsed.weight || "");
       setWeightUnit(parsed.weightUnit || "lb");
       setBrandFilter(parsed.brandFilter || "all");
       setPriceMax(Number(parsed.priceMax || 300));
@@ -107,11 +112,11 @@ export default function ShoeSelectorPage() {
     if (typeof window === "undefined" || !restored) return;
     const payload = {
       usageTypes,
+      pronation,
       footStrike,
-      cadence,
-      toeBox,
       cushion,
-      stability,
+      toeBox,
+      mileage,
       weight,
       weightUnit,
       brandFilter,
@@ -119,21 +124,20 @@ export default function ShoeSelectorPage() {
       sortBy,
       search,
       newOnly,
-      filtersOpen,
       showAll,
       compareIds
     };
     window.sessionStorage.setItem(
-      "shoe-selector-state-v1",
+      "shoe-selector-state-v2",
       JSON.stringify(payload)
     );
   }, [
     usageTypes,
+    pronation,
     footStrike,
-    cadence,
-    toeBox,
     cushion,
-    stability,
+    toeBox,
+    mileage,
     weight,
     weightUnit,
     brandFilter,
@@ -141,7 +145,6 @@ export default function ShoeSelectorPage() {
     sortBy,
     search,
     newOnly,
-    filtersOpen,
     showAll,
     compareIds,
     restored
@@ -188,6 +191,11 @@ export default function ShoeSelectorPage() {
     return ["all", ...Array.from(new Set(allShoes.map((shoe) => shoe.brand))).sort()];
   }, [allShoes]);
 
+  const usageOptions = useMemo(
+    () => shoeOptions.usageTypes.filter((option) => option.id !== "trail_running"),
+    []
+  );
+
   const toggleMulti = (
     list: string[],
     value: string,
@@ -205,29 +213,32 @@ export default function ShoeSelectorPage() {
   const hasAnyCriteria = useMemo(() => {
     return (
       usageTypes.length > 0 ||
+      pronation !== "not_sure" ||
       footStrike !== "not_sure" ||
-      cadence !== "average" ||
+      cushion !== "" ||
       toeBox !== "standard" ||
-      cushion !== "moderate" ||
-      stability !== "neutral"
+      mileage !== ""
     );
-  }, [usageTypes, footStrike, cadence, toeBox, cushion, stability]);
+  }, [usageTypes, pronation, footStrike, cushion, toeBox, mileage]);
+
+  const scoringInput = useMemo(
+    () => ({
+      usageTypes,
+      footStrike,
+      pronation,
+      cushion,
+      toeBox,
+      mileage,
+      budget: priceMax < 300 ? priceMax : undefined,
+      weight: weightLbs
+    }),
+    [usageTypes, footStrike, pronation, cushion, toeBox, mileage, priceMax, weightLbs]
+  );
 
   const scoredResults = useMemo(() => {
     const searchTerm = search.trim().toLowerCase();
     const scored = allShoes
-      .map((shoe) =>
-        scoreShoe(shoe, {
-          usageTypes,
-          footStrike,
-          cadence,
-          toeBox,
-          cushion,
-          stability,
-          surfaces: [],
-          weight: weightLbs
-        })
-      )
+      .map((shoe) => scoreShoe(shoe, scoringInput))
       .filter((shoe) => (brandFilter === "all" ? true : shoe.brand === brandFilter))
       .filter((shoe) => shoe.price <= priceMax)
       .filter((shoe) => (newOnly ? Boolean(shoe.isNew) : true))
@@ -252,22 +263,7 @@ export default function ShoeSelectorPage() {
       total: sorted.length,
       list: sorted.slice(0, limit)
     };
-  }, [
-    allShoes,
-    usageTypes,
-    footStrike,
-    cadence,
-    toeBox,
-    cushion,
-    stability,
-    weightLbs,
-    brandFilter,
-    priceMax,
-    sortBy,
-    search,
-    newOnly,
-    showAll
-  ]);
+  }, [allShoes, scoringInput, brandFilter, priceMax, sortBy, search, newOnly, showAll]);
 
   const compareShoes = useMemo(() => {
     const map = new Map(allShoes.map((shoe) => [shoe.id, shoe]));
@@ -295,22 +291,12 @@ export default function ShoeSelectorPage() {
       label: "Match",
       value: (shoe: Shoe) => {
         if (!hasAnyCriteria) return "N/A";
-        const score = scoreShoe(shoe, {
-          usageTypes,
-          footStrike,
-          cadence,
-          toeBox,
-          cushion,
-          stability,
-          surfaces: [],
-          weight: weightLbs
-        }).score;
-        return `${score}%`;
+        return `${scoreShoe(shoe, scoringInput).score}%`;
       }
     },
     {
       label: "Price",
-      value: (shoe: Shoe) => (shoe.price ? `$${shoe.price}` : "TBD")
+      value: (shoe: Shoe) => (shoe.price ? `$${shoe.price}` : "—")
     },
     {
       label: "Rating",
@@ -331,34 +317,34 @@ export default function ShoeSelectorPage() {
     },
     {
       label: "Drop",
-      value: (shoe: Shoe) => (shoe.drop ? `${shoe.drop} mm` : "TBD")
+      value: (shoe: Shoe) => (shoe.drop ? `${shoe.drop} mm` : "—")
     },
     {
       label: "Stack",
-      value: (shoe: Shoe) => (shoe.stack ? `${shoe.stack} mm` : "TBD")
+      value: (shoe: Shoe) => (shoe.stack ? `${shoe.stack} mm` : "—")
     },
     {
       label: "Weight (men's)",
-      value: (shoe: Shoe) => (shoe.weightMens ? `${shoe.weightMens} oz` : "TBD")
+      value: (shoe: Shoe) => (shoe.weightMens ? `${shoe.weightMens} oz` : "—")
     },
     {
       label: "Weight (women's)",
-      value: (shoe: Shoe) => (shoe.weightWomens ? `${shoe.weightWomens} oz` : "TBD")
+      value: (shoe: Shoe) => (shoe.weightWomens ? `${shoe.weightWomens} oz` : "—")
     },
     {
       label: "Release",
       value: (shoe: Shoe) =>
-        shoe.releaseYear ? String(shoe.releaseYear) : shoe.release ?? "TBD"
+        shoe.releaseYear ? String(shoe.releaseYear) : shoe.release ?? "—"
     }
   ];
 
   return (
     <div>
       <section className="tool-hero container">
-        <h1>Shoe Selector</h1>
+        <h1>Shoe Finder</h1>
         <p>
-          Filter by stride and cadence, then compare recommendations in a table
-          below.
+          Tell us how you run and we&apos;ll rank every current road shoe for
+          you — with the reasons why, not just a list.
         </p>
       </section>
 
@@ -366,7 +352,170 @@ export default function ShoeSelectorPage() {
         <div className="stack">
           <div className="card">
             <div className="stack">
-              <strong>Filters</strong>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  gap: "12px",
+                  flexWrap: "wrap"
+                }}
+              >
+                <div>
+                  <strong>Your runner profile</strong>
+                  <div className="brand-sub">
+                    Every answer sharpens your match scores. Skip anything you
+                    don&apos;t know.
+                  </div>
+                </div>
+                <button
+                  className="btn btn-secondary btn-sm"
+                  type="button"
+                  onClick={() => setProfileOpen((current) => !current)}
+                >
+                  {profileOpen ? "Hide profile" : "Edit profile"}
+                </button>
+              </div>
+
+              {profileOpen ? (
+                <>
+                  <div>
+                    <span className="label">What runs are these shoes for?</span>
+                    <div className="chip-group">
+                      {usageOptions.map((option) => (
+                        <label key={option.id} className="chip">
+                          <input
+                            type="checkbox"
+                            checked={usageTypes.includes(option.id)}
+                            onChange={() =>
+                              toggleMulti(usageTypes, option.id, setUsageTypes)
+                            }
+                          />
+                          {option.label}
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="filter-row">
+                    <div className="filter-group">
+                      <span className="label">Pronation</span>
+                      <select
+                        className="select"
+                        value={pronation}
+                        onChange={(event) =>
+                          setPronation(event.target.value as Pronation)
+                        }
+                      >
+                        {pronationOptions.map((option) => (
+                          <option key={option.id} value={option.id}>
+                            {option.label}
+                          </option>
+                        ))}
+                      </select>
+                      <span className="brand-sub">
+                        Check an old pair: wear on the inner edge of the sole
+                        means overpronation; even or outer-edge wear is neutral.
+                      </span>
+                    </div>
+                    <div className="filter-group">
+                      <span className="label">Cushion feel</span>
+                      <select
+                        className="select"
+                        value={cushion}
+                        onChange={(event) => setCushion(event.target.value)}
+                      >
+                        {cushionFeelOptions.map((option) => (
+                          <option key={option.id} value={option.id}>
+                            {option.label}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="filter-group">
+                      <span className="label">Weekly mileage</span>
+                      <select
+                        className="select"
+                        value={mileage}
+                        onChange={(event) =>
+                          setMileage(event.target.value as Mileage)
+                        }
+                      >
+                        {mileageOptions.map((option) => (
+                          <option key={option.id} value={option.id}>
+                            {option.label}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="filter-group">
+                      <span className="label">Foot strike</span>
+                      <select
+                        className="select"
+                        value={footStrike}
+                        onChange={(event) => setFootStrike(event.target.value)}
+                      >
+                        {shoeOptions.footStrike.map((option) => (
+                          <option key={option.id} value={option.id}>
+                            {option.label}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="filter-group">
+                      <span className="label">Foot width</span>
+                      <select
+                        className="select"
+                        value={toeBox}
+                        onChange={(event) => setToeBox(event.target.value)}
+                      >
+                        {shoeOptions.toeBox.map((option) => (
+                          <option key={option.id} value={option.id}>
+                            {option.label}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="filter-group">
+                      <span className="label">Budget (max price)</span>
+                      <input
+                        className="input"
+                        type="number"
+                        value={priceMax}
+                        onChange={(event) => setPriceMax(Number(event.target.value))}
+                        min={90}
+                        max={320}
+                        step={10}
+                      />
+                    </div>
+                    <div className="filter-group">
+                      <span className="label">Body weight (optional)</span>
+                      <div style={{ display: "flex", gap: "12px" }}>
+                        <input
+                          className="input"
+                          type="number"
+                          min="80"
+                          max="350"
+                          value={weight}
+                          placeholder="e.g. 165"
+                          onChange={(event) => setWeight(event.target.value)}
+                        />
+                        <select
+                          className="select"
+                          value={weightUnit}
+                          onChange={(event) => setWeightUnit(event.target.value)}
+                          style={{ maxWidth: "90px" }}
+                        >
+                          <option value="lb">lb</option>
+                          <option value="kg">kg</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : null}
+
+              <div className="divider" />
               <div className="filter-bar">
                 <div className="filter-group">
                   <span className="label">Search</span>
@@ -392,17 +541,6 @@ export default function ShoeSelectorPage() {
                   </select>
                 </div>
                 <div className="filter-group">
-                  <span className="label">Max price</span>
-                  <input
-                    className="input"
-                    type="number"
-                    value={priceMax}
-                    onChange={(event) => setPriceMax(Number(event.target.value))}
-                    min={90}
-                    max={320}
-                  />
-                </div>
-                <div className="filter-group">
                   <span className="label">Sort</span>
                   <select
                     className="select"
@@ -425,132 +563,8 @@ export default function ShoeSelectorPage() {
                     />
                     New releases only
                   </label>
-                  <button
-                    className="btn btn-secondary"
-                    type="button"
-                    onClick={() => setFiltersOpen((current) => !current)}
-                  >
-                    {filtersOpen ? "Hide Advanced Filters" : "Show Advanced Filters"}
-                  </button>
                 </div>
               </div>
-
-              <div style={{ marginTop: "16px" }}>
-                <span className="label">Usage type</span>
-                <div className="chip-group">
-                  {shoeOptions.usageTypes.map((option) => (
-                    <label key={option.id} className="chip">
-                      <input
-                        type="checkbox"
-                        checked={usageTypes.includes(option.id)}
-                        onChange={() =>
-                          toggleMulti(usageTypes, option.id, setUsageTypes)
-                        }
-                      />
-                      {option.label}
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              {filtersOpen ? (
-                <div className="filter-panel">
-                  <div className="filter-row">
-                    <div className="filter-group">
-                      <span className="label">Foot strike</span>
-                      <select
-                        className="select"
-                        value={footStrike}
-                        onChange={(event) => setFootStrike(event.target.value)}
-                      >
-                        {shoeOptions.footStrike.map((option) => (
-                          <option key={option.id} value={option.id}>
-                            {option.label}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="filter-group">
-                      <span className="label">Cadence</span>
-                      <select
-                        className="select"
-                        value={cadence}
-                        onChange={(event) => setCadence(event.target.value)}
-                      >
-                        {shoeOptions.cadence.map((option) => (
-                          <option key={option.id} value={option.id}>
-                            {option.label}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="filter-group">
-                      <span className="label">Toe box</span>
-                      <select
-                        className="select"
-                        value={toeBox}
-                        onChange={(event) => setToeBox(event.target.value)}
-                      >
-                        {shoeOptions.toeBox.map((option) => (
-                          <option key={option.id} value={option.id}>
-                            {option.label}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="filter-group">
-                      <span className="label">Cushion</span>
-                      <select
-                        className="select"
-                        value={cushion}
-                        onChange={(event) => setCushion(event.target.value)}
-                      >
-                        {shoeOptions.cushion.map((option) => (
-                          <option key={option.id} value={option.id}>
-                            {option.label}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="filter-group">
-                      <span className="label">Stability</span>
-                      <select
-                        className="select"
-                        value={stability}
-                        onChange={(event) => setStability(event.target.value)}
-                      >
-                        {shoeOptions.stability.map((option) => (
-                          <option key={option.id} value={option.id}>
-                            {option.label}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="filter-group">
-                      <span className="label">Weight (optional)</span>
-                      <div style={{ display: "flex", gap: "12px" }}>
-                        <input
-                          className="input"
-                          type="number"
-                          min="80"
-                          max="260"
-                          value={weight}
-                          onChange={(event) => setWeight(event.target.value)}
-                        />
-                        <select
-                          className="select"
-                          value={weightUnit}
-                          onChange={(event) => setWeightUnit(event.target.value)}
-                          style={{ maxWidth: "90px" }}
-                        >
-                          <option value="lb">lb</option>
-                          <option value="kg">kg</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ) : null}
             </div>
           </div>
 
@@ -643,9 +657,9 @@ export default function ShoeSelectorPage() {
                 <div className="notice" style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                   <span style={{ fontSize: "1.5rem" }}>&#x1f3af;</span>
                   <div>
-                    <strong>Select your preferences to see match scores.</strong>{" "}
-                    Pick a usage type above, or open Advanced Filters to set foot strike, cushion, and more.
-                    The more you tell us, the better your match percentages.
+                    <strong>Answer a few profile questions to see match scores.</strong>{" "}
+                    Pick your runs, pronation, and cushion feel above — the more
+                    you tell us, the sharper the recommendations.
                   </div>
                 </div>
               )}
@@ -665,10 +679,10 @@ export default function ShoeSelectorPage() {
                       <th>Match %</th>
                       <th>Shoe</th>
                       <th>Best for</th>
-                      <th>Rating</th>
                       <th>Cushion</th>
                       <th>Support</th>
                       <th>Price</th>
+                      <th>Shop</th>
                       <th>Save</th>
                       <th>Compare</th>
                       <th>Analyze</th>
@@ -695,17 +709,24 @@ export default function ShoeSelectorPage() {
                             {shoe.isNew ? (
                               <span className="badge">New {shoe.release ?? ""}</span>
                             ) : null}
+                            {hasAnyCriteria && shoe.reasons.length ? (
+                              <div className="brand-sub" style={{ marginTop: "4px" }}>
+                                {shoe.reasons.join(" · ")}
+                              </div>
+                            ) : null}
                           </td>
                           <td>{joinLabels(shoe.usageTypes)}</td>
-                          <td>{formatRating(shoe.popularity)}</td>
                           <td>{prettyLabel(shoe.cushion)}</td>
                           <td>{prettyLabel(shoe.stability)}</td>
-                          <td>{shoe.price ? `$${shoe.price}` : "TBD"}</td>
+                          <td>{shoe.price ? `$${shoe.price}` : "—"}</td>
+                          <td>
+                            <BuyLinks name={shoe.name} brand={shoe.brand} compact />
+                          </td>
                           <td>
                             <SaveButton
                               itemType="shoe"
                               itemId={shoe.id}
-                              label={`${shoe.name} (${shoe.brand})`}
+                              label={`${shoe.name}`}
                               metadata={{ brand: shoe.brand, price: shoe.price }}
                             />
                           </td>
@@ -751,6 +772,10 @@ export default function ShoeSelectorPage() {
                   Show top {maxResults} only
                 </button>
               ) : null}
+              <p className="brand-sub">
+                Runner Toolkit may earn a commission when you buy through shop
+                links. It never affects rankings.
+              </p>
             </div>
           )}
 
