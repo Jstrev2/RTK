@@ -10,7 +10,8 @@ const navItems = [
   { href: "/tools/music", label: "Music" },
   { href: "/tools/fueling", label: "Fueling" },
   { href: "/tools/training-plans", label: "Training" },
-  { href: "/rundown", label: "Rundown" }
+  { href: "/rundown", label: "Rundown" },
+  { href: "/premium", label: "Premium" }
 ];
 
 export default function SiteHeader() {

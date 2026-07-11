@@ -6,6 +6,7 @@ import type { CSSProperties } from "react";
 import { trainingPlans } from "@/lib/data";
 import { generateSchedule } from "@/lib/training-schedule";
 import SaveButton from "@/components/save-button";
+import InjuryAdjuster from "@/components/injury-adjuster";
 import { useAuth } from "@/components/auth-provider";
 import { getSupabaseClient } from "@/lib/supabase-client";
 
@@ -158,6 +159,8 @@ export default function TrainingPlansPage() {
         <h1>Training Plans</h1>
         <p>
           Pick a plan, browse the full weekly schedule, and log your workouts.
+          Get injured mid-plan? Report it and we&apos;ll adapt your remaining
+          weeks instead of starting over.
         </p>
       </section>
 
@@ -287,6 +290,8 @@ export default function TrainingPlansPage() {
                 </div>
               </div>
             )}
+
+            {selectedPlan && <InjuryAdjuster plan={selectedPlan} />}
 
             <div className="card">
               <div className="stack">

@@ -10,6 +10,7 @@ type AuthContextValue = {
   user: User | null;
   loading: boolean;
   supabaseAvailable: boolean;
+  isPremium: boolean;
   refresh: () => Promise<void>;
 };
 
@@ -18,6 +19,7 @@ const AuthContext = createContext<AuthContextValue>({
   user: null,
   loading: true,
   supabaseAvailable: false,
+  isPremium: false,
   refresh: async () => undefined
 });
 
@@ -58,6 +60,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       user: session?.user ?? null,
       loading,
       supabaseAvailable: Boolean(supabase),
+      isPremium: session?.user?.app_metadata?.premium === true,
       refresh: async () => {
         if (!supabase) {
           return;

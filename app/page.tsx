@@ -5,9 +5,9 @@ import Newsletter from "@/components/newsletter";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 
 export const metadata: Metadata = {
-  title: "Runner Toolkit — Tools for Serious Runners",
+  title: "Runner Toolkit — Training Plans That Adapt When You Get Injured",
   description:
-    "Free running tools: shoe finder, race-day fueling planner, workout music by BPM, and training plans — all in one place.",
+    "Got injured mid-training? Don't start over. Runner Toolkit rebuilds your plan around the injury — plus a free shoe finder, pace calculator, fueling planner, and more.",
 };
 
 const tools = [
@@ -42,9 +42,9 @@ const tools = [
   {
     name: "Training Plans",
     description:
-      "Pick a free plan from 5K to marathon, view the full weekly schedule, and log your workouts.",
+      "Pick a plan from 5K to marathon — and if you get injured mid-plan, it adapts instead of falling apart.",
     href: "/tools/training-plans",
-    detail: "9 plans, full schedules, workout log"
+    detail: "9 plans, injury-adaptive, workout log"
   },
 ];
 
@@ -85,50 +85,91 @@ export default async function HomePage() {
     { label: "Running shoes", value: `${stats.shoes}+` },
     { label: "Songs with BPM", value: `${stats.songs.toLocaleString()}+` },
     { label: "Energy gels", value: `${stats.gels}` },
-    { label: "Cost", value: "Free" }
+    { label: "Injury protocols", value: "11" }
   ];
 
   return (
     <div>
       <section className="hero container">
         <div>
-          <span className="pill">Free tools for real runners</span>
-          <h1>Everything you need to train smart and race ready.</h1>
+          <span className="pill">Life happens. Your plan should adapt.</span>
+          <h1>Got injured mid-training? Don&apos;t start over.</h1>
           <p>
-            Shoe recommendations, pace calculations, race-day fueling plans,
-            workout music by BPM, and training schedules — all in one place,
-            no account required.
+            Every other training plan falls apart the day your knee starts
+            barking. Runner Toolkit rebuilds your remaining weeks around the
+            injury — rest, cross-training swaps, a progressive return to
+            running, and an honest call on race day.
           </p>
           <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-            <Link className="btn btn-primary" href="/tools/shoe-selector">
-              Find your shoe
+            <Link className="btn btn-primary" href="/tools/training-plans">
+              Adapt my training plan
             </Link>
-            <Link className="btn btn-secondary" href="/tools/pace-calculator">
-              Calculate your pace
+            <Link className="btn btn-secondary" href="/tools/shoe-selector">
+              Find your shoe — free
             </Link>
           </div>
         </div>
         <div className="hero-panel">
           <div className="hero-card fade-up" style={{ "--delay": "0.1s" } as CSSProperties}>
             <div className="stack">
-              <strong>What you get</strong>
-              <div className="stat-grid">
-                {highlights.map((item) => (
-                  <div key={item.label} className="stat">
-                    <strong>{item.value}</strong>
-                    <span>{item.label}</span>
-                  </div>
-                ))}
-              </div>
+              <strong>When you report an injury</strong>
+              <ul className="list">
+                <li className="brand-sub">🛌 Rest weeks where you need them</li>
+                <li className="brand-sub">🚶 Progressive return-to-run protocol</li>
+                <li className="brand-sub">🔁 Cross-training matched to the injury</li>
+                <li className="brand-sub">📉 Taper preserved when the calendar allows</li>
+                <li className="brand-sub">🏁 Honest race-day pace expectations</li>
+              </ul>
             </div>
           </div>
           <div className="card card-accent fade-up" style={{ "--delay": "0.2s" } as CSSProperties}>
-            <strong>No sign-up required</strong>
+            <strong>Free tools stay free</strong>
             <p>
-              Every tool works instantly. Create an account only if you want
-              to save favorites and log workouts.
+              Shoe finder, pace calculator, fueling planner, music, and base
+              training plans — instant, no account required. Premium is for the
+              adaptive plans.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="section container">
+        <div className="grid grid-3">
+          <div className="card card-outline fade-up">
+            <div className="stack">
+              <strong>1. Train for your race</strong>
+              <p>
+                Pick a free plan from 5K to marathon and follow the weekly
+                schedule.
+              </p>
+            </div>
+          </div>
+          <div className="card card-outline fade-up" style={{ "--delay": "0.08s" } as CSSProperties}>
+            <div className="stack">
+              <strong>2. Something starts hurting</strong>
+              <p>
+                Runner&apos;s knee, IT band, shin splints, plantar fasciitis,
+                Achilles — pick the injury and how bad it is.
+              </p>
+            </div>
+          </div>
+          <div className="card card-outline fade-up" style={{ "--delay": "0.16s" } as CSSProperties}>
+            <div className="stack">
+              <strong>3. Your plan adapts</strong>
+              <p>
+                The remaining weeks get rebuilt so you recover <em>and</em>{" "}
+                still show up ready — no more winging it or giving up.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div style={{ marginTop: "20px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
+          <Link className="btn btn-primary" href="/premium">
+            See what Premium includes
+          </Link>
+          <Link className="btn btn-ghost" href="/tools/training-plans">
+            Try it on a plan first
+          </Link>
         </div>
       </section>
 
@@ -200,18 +241,29 @@ export default async function HomePage() {
       <section id="how-it-works" className="section container">
         <div className="grid grid-2">
           <div className="stack">
-            <h2 className="section-title">Built for runners, not subscribers</h2>
+            <h2 className="section-title">Free where it counts, premium where it matters</h2>
             <ul className="list">
               <li className="card card-outline">
-                No paywall. Every tool is free and works without sign-up.
+                The everyday tools — shoes, pace, fueling, music, base plans —
+                are free and work without sign-up.
               </li>
               <li className="card card-outline">
-                Real data. Shoe specs from manufacturer pages, BPM from GetSongBPM, fueling science from sports nutrition research.
+                Premium exists for one job: keeping your training on track when
+                an injury tries to derail it.
               </li>
               <li className="card card-outline">
-                Works on mobile. Check your fueling plan or pace splits right before a race.
+                Real data. Full specs on {stats.shoes}+ current road shoes, and
+                injury protocols built on standard return-to-run practice.
               </li>
             </ul>
+            <div className="stat-grid">
+              {highlights.map((item) => (
+                <div key={item.label} className="stat">
+                  <strong>{item.value}</strong>
+                  <span>{item.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
           <Newsletter />
         </div>
