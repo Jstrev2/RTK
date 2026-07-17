@@ -157,6 +157,13 @@ main {
   gap: 16px;
 }
 
+/* Chips inside column stacks hug their content instead of stretching. */
+.stack > .pill,
+.stack > .tag,
+.stack > .badge {
+  align-self: flex-start;
+}
+
 .grid {
   display: grid;
   gap: 20px;
