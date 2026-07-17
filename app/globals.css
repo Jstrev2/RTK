@@ -184,8 +184,7 @@ main {
 /* ---------- Surfaces ---------- */
 
 .card {
-  background: var(--card);
-  backdrop-filter: blur(12px);
+  background: rgba(15, 27, 46, 0.82);
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255, 255, 255, 0.04);
@@ -208,7 +207,6 @@ button.card:hover {
   background: rgba(11, 20, 36, 0.35);
   border: 1px dashed rgba(148, 179, 219, 0.22);
   box-shadow: none;
-  backdrop-filter: none;
 }
 
 .card-accent {
@@ -430,7 +428,6 @@ button.card:hover {
 .hero-card {
   border-radius: var(--radius-lg);
   background: var(--card-dark);
-  backdrop-filter: blur(14px);
   color: #f6faff;
   border: 1px solid rgba(148, 179, 219, 0.18);
   box-shadow: var(--shadow-strong), inset 0 1px 0 rgba(255, 255, 255, 0.06);
@@ -494,8 +491,7 @@ button.card:hover {
   justify-content: space-between;
   padding: 13px 16px;
   border-radius: 16px;
-  background: var(--card);
-  backdrop-filter: blur(10px);
+  background: rgba(15, 27, 46, 0.82);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
 }
@@ -704,7 +700,6 @@ button.card:hover {
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 16px;
   padding: 16px;
-  backdrop-filter: blur(8px);
 }
 
 .kpi-card strong {
