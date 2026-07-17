@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import { songs as initialSongs, type Song } from "@/lib/data";
 import SaveButton from "@/components/save-button";
+import ComebackCta from "@/components/comeback-cta";
 import { useAuth } from "@/components/auth-provider";
 import { getSupabaseClient } from "@/lib/supabase-client";
 
@@ -654,6 +655,7 @@ export default function MusicToolsPage() {
                   GetSongBPM
                 </a>
               </p>
+              <ComebackCta />
               <Link className="btn btn-ghost" href="/tools/fueling">
                 Next tool: Fueling
               </Link>

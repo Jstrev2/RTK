@@ -26,7 +26,7 @@ const groupByType = (items: SavedItem[]) => {
 };
 
 export default function AccountPage() {
-  const { user, loading, supabaseAvailable } = useAuth();
+  const { user, loading, supabaseAvailable, isPremium } = useAuth();
   const [savedItems, setSavedItems] = useState<SavedItem[]>([]);
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
 
@@ -99,7 +99,7 @@ export default function AccountPage() {
     <div>
       <section className="tool-hero container">
         <h1>Your profile</h1>
-        <p>Saved picks feed the future AI optimizer so your plan stays dialed.</p>
+        <p>Your saved gear, plans, and logs — and your comeback plan — in one place.</p>
       </section>
 
       <section className="section container">
@@ -112,6 +112,40 @@ export default function AccountPage() {
             <div className="stat">
               <strong>{user.email}</strong>
               <span>Signed in</span>
+            </div>
+          </div>
+
+          <div className="card card-accent">
+            <div className="stack">
+              <strong>
+                {isPremium ? "Premium — the comeback plan" : "Free toolkit"}
+              </strong>
+              {isPremium ? (
+                <p>
+                  Injury-adaptive rebuilds are unlocked on every training plan.
+                  If something starts hurting, report it and get your full
+                  adjusted schedule.
+                </p>
+              ) : (
+                <p>
+                  You&apos;re on the free toolkit — which stays free. If an
+                  injury hits mid-training, Premium rebuilds your plan and gets
+                  you back to the start line.
+                </p>
+              )}
+              <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+                <Link
+                  className="btn btn-primary"
+                  href="/tools/training-plans#injury"
+                >
+                  {isPremium ? "Adjust a plan" : "Try the injury rebuild"}
+                </Link>
+                {!isPremium ? (
+                  <Link className="btn btn-secondary" href="/premium">
+                    See Premium
+                  </Link>
+                ) : null}
+              </div>
             </div>
           </div>
 
@@ -206,8 +240,8 @@ export default function AccountPage() {
           </div>
 
           <div className="notice">
-            Saved items will train the AI recommendation engine for shoes,
-            fueling, and coaching.
+            Saved plans and workout logs live on the training plans page too —
+            premium status applies there automatically.
           </div>
         </div>
       </section>

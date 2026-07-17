@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Premium — Injury-Adaptive Training Plans",
+  title: "Premium — The Comeback Plan for Injured Runners",
   description:
-    "Got injured mid-training? Runner Toolkit Premium rebuilds your remaining plan: rest, cross-training swaps, return-to-run protocols, and honest race-day expectations.",
+    "Your plan broke you. Runner Toolkit Premium rebuilds it around the injury: rest, cross-training swaps, return-to-run progressions, and an honest race-day call. $9/month, cancel anytime.",
 };
 
 export default function Layout({ children }: { children: ReactNode }) {

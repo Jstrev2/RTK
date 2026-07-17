@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import { attireItems, attirePersonas, type AttireItem } from "@/lib/data";
 import SaveButton from "@/components/save-button";
+import ComebackCta from "@/components/comeback-cta";
 import { useCatalogItems } from "@/lib/catalog-client";
 import { getSupabaseClient } from "@/lib/supabase-client";
 
@@ -490,6 +491,7 @@ export default function AttireGuidePage() {
               <div className="card card-outline">Loading live attire signals...</div>
             ) : null}
 
+            <ComebackCta />
             <Link className="btn btn-ghost" href="/tools/music">
               Next tool: Music
             </Link>

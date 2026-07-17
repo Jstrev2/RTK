@@ -40,10 +40,10 @@ export default function Newsletter() {
   return (
     <div className="card card-accent">
       <div className="stack">
-        <strong>Get the launch drop</strong>
+        <strong>Get the drop</strong>
         <p>
-          We are building with real runners. Drop your email to get early access
-          and new plan releases.
+          New shoes in the finder, new plans, and comeback tactics that actually
+          work. Useful and minimal — that&apos;s the deal.
         </p>
         {status === "sent" ? (
           <div className="notice">Thanks. We will keep it useful and minimal.</div>

@@ -212,6 +212,24 @@ main {
   color: var(--ink);
 }
 
+.nav a.nav-cta {
+  background: linear-gradient(135deg, var(--sky), var(--sun));
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 8px 16px rgba(20, 145, 255, 0.22);
+}
+
+.nav a.nav-cta:hover {
+  background: linear-gradient(135deg, var(--sky), var(--sun));
+  color: #ffffff;
+  filter: brightness(1.06);
+}
+
+/* Deep-link target for the injury adjuster; keep it clear of the sticky header. */
+#injury {
+  scroll-margin-top: 96px;
+}
+
 .hero {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

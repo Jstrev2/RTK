@@ -11,7 +11,7 @@ const navItems = [
   { href: "/tools/fueling", label: "Fueling" },
   { href: "/tools/training-plans", label: "Training" },
   { href: "/rundown", label: "Rundown" },
-  { href: "/premium", label: "Premium" }
+  { href: "/premium", label: "Injured?", cta: true }
 ];
 
 export default function SiteHeader() {
@@ -29,7 +29,12 @@ export default function SiteHeader() {
         </Link>
         <nav className={`nav ${menuOpen ? "nav-open" : ""}`}>
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>
+            <Link
+              key={item.href}
+              href={item.href}
+              className={item.cta ? "nav-cta" : undefined}
+              onClick={() => setMenuOpen(false)}
+            >
               {item.label}
             </Link>
           ))}

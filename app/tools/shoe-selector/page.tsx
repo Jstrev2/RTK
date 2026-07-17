@@ -14,6 +14,7 @@ import {
 } from "@/lib/shoe-utils";
 import SaveButton from "@/components/save-button";
 import BuyLinks from "@/components/buy-links";
+import ComebackCta from "@/components/comeback-cta";
 import { getSupabaseClient } from "@/lib/supabase-client";
 
 const sortOptions = [
@@ -783,6 +784,7 @@ export default function ShoeSelectorPage() {
             Want to save favorites? Create a free account for saved shoes and
             alerts on new releases.
           </div>
+          <ComebackCta lead="The right shoe prevents a lot of injuries — but not all of them." />
           <Link className="btn btn-ghost" href="/tools/attire-guide">
             Next tool: Attire Guide
           </Link>

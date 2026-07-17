@@ -29,16 +29,17 @@ export default function PremiumGate({ children, feature, teaser }: Props) {
       {teaser}
       <div className="card card-accent">
         <div className="stack">
-          <span className="pill">Premium</span>
+          <span className="pill">Premium — the comeback plan</span>
           <strong>Unlock {feature}</strong>
           <p>
-            Runner Toolkit Premium adapts your training plan when life happens —
-            injury-adjusted schedules, cross-training swaps, recovery tracking,
-            and return-to-run protocols built into your remaining weeks.
+            This is the one part of Runner Toolkit we charge for: every
+            remaining week rebuilt around your injury — return-to-run
+            progression, cross-training swaps, a preserved taper, and an honest
+            race-day call. $9/month, cancel when you&apos;re back.
           </p>
           <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
             <Link className="btn btn-primary" href="/premium">
-              See Premium
+              Get the comeback plan
             </Link>
             {!user ? (
               <Link className="btn btn-secondary" href="/login">

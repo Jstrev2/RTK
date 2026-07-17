@@ -63,7 +63,7 @@ function LoginForm() {
     <div>
       <section className="tool-hero container">
         <h1>Sign in</h1>
-        <p>Save your picks, track progress, and unlock personalized insights.</p>
+        <p>Save your picks, log your training, and keep your comeback plan in one place.</p>
       </section>
 
       <section className="section container">
@@ -145,9 +145,12 @@ function LoginForm() {
             <div className="stack">
               <strong>Why create a free account?</strong>
               <ul className="list">
-                <li className="card card-outline">Save shoes, outfits, and playlists.</li>
-                <li className="card card-outline">Track what works so your training feels dialed.</li>
-                <li className="card card-outline">Log workouts and fueling to track what works.</li>
+                <li className="card card-outline">Save shoes, playlists, and plans across devices.</li>
+                <li className="card card-outline">Log workouts and fueling to see what actually works.</li>
+                <li className="card card-outline">
+                  Going Premium? Your comeback plan lives here — injury-adjusted
+                  schedules on every training plan.
+                </li>
               </ul>
             </div>
           </div>

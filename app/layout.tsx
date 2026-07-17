@@ -26,25 +26,25 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Runner Toolkit — Free Tools for Serious Runners",
+    default: "Runner Toolkit — The Training Plan That Survives Injury",
     template: "%s | Runner Toolkit"
   },
   description:
-    "Free running tools: shoe finder, pace calculator, race-day fueling planner, workout music by BPM, and training plans — all in one place.",
+    "Your plan broke you. Ours will get you back to the start line. Injury-adaptive training plans, plus free tools: shoe finder, pace calculator, fueling planner, and running music.",
   metadataBase: new URL("https://runnertoolkit.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "Runner Toolkit",
-    title: "Runner Toolkit — Free Tools for Serious Runners",
+    title: "Runner Toolkit — Your Plan Broke You. Ours Will Get You Back.",
     description:
-      "Shoe recommendations, pace calculations, race-day fueling plans, workout music by BPM, and training schedules — all free.",
+      "Injury-adaptive training plans that rebuild your remaining weeks around the injury — plus a free shoe finder, pace calculator, fueling planner, and running music library.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Runner Toolkit — Free Tools for Serious Runners",
+    title: "Runner Toolkit — Your Plan Broke You. Ours Will Get You Back.",
     description:
-      "Shoe recommendations, pace calculations, race-day fueling plans, workout music by BPM, and training schedules — all free.",
+      "Injury-adaptive training plans that rebuild your remaining weeks around the injury — plus a free shoe finder, pace calculator, fueling planner, and running music library.",
   },
   robots: {
     index: true,

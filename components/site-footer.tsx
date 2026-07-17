@@ -1,9 +1,11 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 const toolLinks = [
-  { href: "/tools/shoe-selector", label: "Shoe Selector" },
-  { href: "/tools/music", label: "Music Tools" },
-  { href: "/tools/fueling", label: "Fueling" },
+  { href: "/tools/shoe-selector", label: "Shoe Finder" },
+  { href: "/tools/pace-calculator", label: "Pace Calculator" },
+  { href: "/tools/music", label: "Running Music" },
+  { href: "/tools/fueling", label: "Fueling Planner" },
+  { href: "/tools/attire-guide", label: "Attire Guide" },
   { href: "/tools/training-plans", label: "Training Plans" }
 ];
 
@@ -17,12 +19,13 @@ export default function SiteFooter() {
             <span>Runner Toolkit</span>
           </div>
           <p>
-            The free toolkit for runners who want both joy and results.
+            Free tools for the everyday miles. A premium plan for the day
+            something snaps.
           </p>
-          <span className="pill">Built for real-world training</span>
+          <span className="pill">Get back to the start line</span>
         </div>
         <div className="stack">
-          <strong>Tools</strong>
+          <strong>Free tools</strong>
           {toolLinks.map((link) => (
             <Link key={link.href} href={link.href}>
               {link.label}
@@ -31,8 +34,9 @@ export default function SiteFooter() {
         </div>
         <div className="stack">
           <strong>Explore</strong>
-          <Link href="/#tools">All tools</Link>
+          <Link href="/premium">Premium — the comeback plan</Link>
           <Link href="/rundown">The Rundown</Link>
+          <Link href="/#tools">All tools</Link>
           <Link href="/#how-it-works">How it works</Link>
         </div>
         <div className="stack">
@@ -45,7 +49,7 @@ export default function SiteFooter() {
         <div className="divider" />
         <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "12px" }}>
           <span>© 2026 Runner Toolkit. All rights reserved.</span>
-          <span>Free tools. Real results.</span>
+          <span>Your plan broke you. Ours will get you back.</span>
         </div>
       </div>
     </footer>

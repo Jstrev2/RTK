@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import { buildFuelingPlan, formatFuelingSummary, fuelingProducts, type FuelingProduct } from "@/lib/fueling";
+import ComebackCta from "@/components/comeback-cta";
 import { useAuth } from "@/components/auth-provider";
 import { getSupabaseClient } from "@/lib/supabase-client";
 
@@ -627,6 +628,10 @@ export default function FuelingPage() {
             <p className="brand-sub">No gels match your search.</p>
           ) : null}
         </div>
+      </section>
+
+      <section className="section container">
+        <ComebackCta lead="Fueling gets you through race day. The comeback plan gets you to it." />
       </section>
     </div>
   );

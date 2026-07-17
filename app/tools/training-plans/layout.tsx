@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Training Plans",
+  title: "Free Training Plans That Adapt to Injury",
   description:
-    "Free running training plans for 5K, 10K, half marathon, and marathon. Structured weekly schedules for beginners to advanced runners.",
+    "Nine free running plans from 5K to marathon with full weekly schedules — plus the injury-adaptive rebuild that gets you back to the start line when training goes sideways.",
 };
 
 export default function Layout({ children }: { children: ReactNode }) {

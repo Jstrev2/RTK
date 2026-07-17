@@ -9,37 +9,35 @@ import { getSupabaseClient } from "@/lib/supabase-client";
 
 const premiumFeatures = [
   {
-    name: "Injury-adaptive training plans",
+    name: "Your full rebuilt schedule",
     detail:
-      "Report an injury mid-plan and get your remaining weeks rebuilt: rest, cross-training swaps, a progressive return-to-run, and a preserved taper."
+      "Every remaining week through race day — rest where you need it, a progressive return-to-run, a volume-capped rebuild, and your taper preserved when the calendar allows."
   },
   {
-    name: "Injury-specific guidance",
+    name: "Injury-specific guardrails",
     detail:
-      "What to avoid, what's safe, which cross-training holds fitness best, and the red flags that mean see a professional."
+      "What to avoid, what's safe, and which cross-training holds fitness best for your exact injury — across all 11 protocols."
   },
   {
-    name: "Race-day feasibility calls",
+    name: "An honest race-day call",
     detail:
-      "An honest read on whether your race is still on, with adjusted pace expectations — not wishful thinking."
+      "Whether your race is still realistic and what pace to expect if it is — including when the answer is no."
   },
   {
-    name: "Recovery timeline tracking",
-    detail: "Phase-by-phase schedule from rest to race, with weekly volume caps."
-  },
-  {
-    name: "Unlimited plan customization",
-    detail: "Every plan, every distance, adjusted as many times as life requires."
+    name: "Re-adjust as you heal",
+    detail:
+      "Setbacks happen. Change the injury, the severity, or the week and rebuild again — unlimited, on every plan and distance."
   }
 ];
 
 const freeFeatures = [
-  "Shoe Finder with personalized match scores",
+  "Shoe Finder with match scores for every current road shoe",
   "Pace calculator",
   "All 9 base training plans with full schedules",
-  "Fueling planner",
-  "Music by BPM",
-  "Workout logging"
+  "Race-day fueling planner",
+  "Running music library",
+  "Workout logging",
+  "Injury check: race-day verdict, guardrails, and your first rebuilt week"
 ];
 
 function PremiumContent() {
@@ -80,11 +78,12 @@ function PremiumContent() {
     <div>
       <section className="tool-hero container">
         <span className="pill">Runner Toolkit Premium</span>
-        <h1>Injuries happen. Your plan should adapt.</h1>
+        <h1>Your plan broke you. Ours will get you back to the start line.</h1>
         <p>
-          Free tools stay free. Premium is for the moment training goes
-          sideways — an injury-aware system that rebuilds your remaining weeks
-          instead of letting the plan fall apart.
+          The toolkit is free — shoes, pace, fuel, music, plans. Premium does
+          the one job no free plan does: when you get hurt mid-training, it
+          rebuilds your remaining weeks around the injury and tells you the
+          truth about race day.
         </p>
       </section>
 
@@ -108,6 +107,9 @@ function PremiumContent() {
                   <strong>$0</strong>
                   <span>no account required</span>
                 </div>
+                <p className="brand-sub">
+                  The free tools aren&apos;t a trial. They&apos;re the toolkit.
+                </p>
                 <ul className="list">
                   {freeFeatures.map((feature) => (
                     <li key={feature} className="card card-outline">
@@ -120,7 +122,7 @@ function PremiumContent() {
 
             <div className="card card-accent">
               <div className="stack">
-                <strong>Premium</strong>
+                <strong>Premium — the comeback plan</strong>
                 <div style={{ display: "flex", gap: "8px" }}>
                   <button
                     type="button"
@@ -188,14 +190,15 @@ function PremiumContent() {
 
           <div className="card">
             <div className="stack">
-              <strong>How the injury adjustment works</strong>
+              <strong>How the comeback works</strong>
               <ol className="list">
                 <li className="card card-outline">
                   <strong>1. Tell us what happened.</strong>
                   <div className="brand-sub">
-                    Pick from common running injuries — runner&apos;s knee, IT band,
-                    shin splints, plantar fasciitis, Achilles, and more — plus
-                    how bad it feels and which week of your plan you&apos;re in.
+                    Pick from 11 common running injuries — runner&apos;s knee, IT
+                    band, shin splints, plantar fasciitis, Achilles, and more —
+                    plus how bad it feels and which week of your plan you&apos;re
+                    in.
                   </div>
                 </li>
                 <li className="card card-outline">
@@ -214,8 +217,15 @@ function PremiumContent() {
                   </div>
                 </li>
               </ol>
-              <Link className="btn btn-secondary" href="/tools/training-plans">
-                Try it on a training plan
+              <div className="notice">
+                <strong>Sometimes the answer is no.</strong> Some injuries
+                don&apos;t negotiate — a suspected stress fracture never gets a
+                race-day green light here without professional clearance, and
+                the plan will tell you that to your face. That honesty is the
+                product.
+              </div>
+              <Link className="btn btn-secondary" href="/tools/training-plans#injury">
+                Try it free on a training plan
               </Link>
             </div>
           </div>

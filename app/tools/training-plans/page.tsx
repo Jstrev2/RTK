@@ -158,9 +158,10 @@ export default function TrainingPlansPage() {
       <section className="tool-hero container">
         <h1>Training Plans</h1>
         <p>
-          Pick a plan, browse the full weekly schedule, and log your workouts.
-          Get injured mid-plan? Report it and we&apos;ll adapt your remaining
-          weeks instead of starting over.
+          Nine free plans from 5K to marathon — complete weekly schedules, no
+          paywall. And unlike the PDF you downloaded last time, these come with
+          a Plan B: get injured and we rebuild your remaining weeks instead of
+          letting the plan fall apart.
         </p>
       </section>
 
@@ -291,7 +292,9 @@ export default function TrainingPlansPage() {
               </div>
             )}
 
-            {selectedPlan && <InjuryAdjuster plan={selectedPlan} />}
+            <div id="injury">
+              {selectedPlan && <InjuryAdjuster plan={selectedPlan} />}
+            </div>
 
             <div className="card">
               <div className="stack">
