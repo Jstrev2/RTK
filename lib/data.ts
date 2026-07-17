@@ -1335,7 +1335,7 @@ export type Song = {
   id: string;
   title: string;
   artist: string;
-  bpm: number;
+  bpm: number | null;
   genre: string[];
   energy: "low" | "medium" | "high" | "extreme";
   workout: string[];

@@ -15,20 +15,46 @@ type SavedItem = {
   created_at: string;
 };
 
+type RaceProfile = {
+  id: string;
+  user_id: string;
+  goal_race: string | null;
+  race_date: string | null;
+  target_time: string | null;
+  goal_notes: string | null;
+  created_at?: string;
+  updated_at?: string;
+};
+
 const groupByType = (items: SavedItem[]) => {
   return items.reduce<Record<string, SavedItem[]>>((groups, item) => {
-    if (!groups[item.item_type]) {
-      groups[item.item_type] = [];
-    }
+    if (!groups[item.item_type]) groups[item.item_type] = [];
     groups[item.item_type].push(item);
     return groups;
   }, {});
+};
+
+const defaultProfile = {
+  goal_race: "",
+  race_date: "",
+  target_time: "",
+  goal_notes: ""
+};
+
+const daysUntilRace = (raceDate: string) => {
+  if (!raceDate) return null;
+  const today = new Date();
+  const target = new Date(`${raceDate}T00:00:00`);
+  const diff = Math.ceil((target.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+  return Number.isFinite(diff) ? diff : null;
 };
 
 export default function AccountPage() {
   const { user, loading, supabaseAvailable, isPremium } = useAuth();
   const [savedItems, setSavedItems] = useState<SavedItem[]>([]);
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
+  const [profile, setProfile] = useState(defaultProfile);
+  const [profileStatus, setProfileStatus] = useState<"idle" | "saving" | "saved" | "error">("idle");
 
   const shoeMap = useMemo(() => new Map(shoes.map((shoe) => [shoe.id, shoe])), []);
   const attireMap = useMemo(() => new Map(attireItems.map((item) => [item.id, item])), []);
@@ -37,34 +63,78 @@ export default function AccountPage() {
 
   useEffect(() => {
     const supabase = getSupabaseClient();
-    if (!supabase || !user) {
-      return;
-    }
+    if (!supabase || !user) return;
 
     setStatus("loading");
 
-    supabase
-      .from("saved_items")
-      .select("id, item_type, item_id, label, metadata, created_at")
-      .eq("user_id", user.id)
-      .order("created_at", { ascending: false })
-      .then(({ data, error }) => {
-        if (error) {
-          setStatus("error");
-          return;
-        }
-        setSavedItems((data as SavedItem[]) ?? []);
+    Promise.all([
+      supabase
+        .from("saved_items")
+        .select("id, item_type, item_id, label, metadata, created_at")
+        .eq("user_id", user.id)
+        .order("created_at", { ascending: false }),
+      supabase
+        .from("race_profiles")
+        .select("id, user_id, goal_race, race_date, target_time, goal_notes, created_at, updated_at")
+        .eq("user_id", user.id)
+        .maybeSingle()
+    ]).then(([savedRes, profileRes]) => {
+      if (savedRes.error) {
+        setStatus("error");
+      } else {
+        setSavedItems((savedRes.data as SavedItem[]) ?? []);
         setStatus("idle");
-      });
+      }
+
+      if (profileRes.data) {
+        const raceProfile = profileRes.data as RaceProfile;
+        setProfile({
+          goal_race: raceProfile.goal_race ?? "",
+          race_date: raceProfile.race_date ?? "",
+          target_time: raceProfile.target_time ?? "",
+          goal_notes: raceProfile.goal_notes ?? ""
+        });
+      }
+    });
   }, [user]);
 
   const grouped = useMemo(() => groupByType(savedItems), [savedItems]);
+  const savedCount = savedItems.length;
+  const countdown = profile.race_date ? daysUntilRace(profile.race_date) : null;
+
+  const saveProfile = async () => {
+    const supabase = getSupabaseClient();
+    if (!supabase || !user) return;
+
+    setProfileStatus("saving");
+
+    const payload = {
+      user_id: user.id,
+      goal_race: profile.goal_race || null,
+      race_date: profile.race_date || null,
+      target_time: profile.target_time || null,
+      goal_notes: profile.goal_notes || null,
+      updated_at: new Date().toISOString()
+    };
+
+    const { error } = await supabase
+      .from("race_profiles")
+      .upsert(payload, { onConflict: "user_id" });
+
+    if (error) {
+      setProfileStatus("error");
+      return;
+    }
+
+    setProfileStatus("saved");
+    setTimeout(() => setProfileStatus("idle"), 2500);
+  };
 
   if (!supabaseAvailable) {
     return (
       <section className="section container">
         <div className="card">
-          <strong>Account</strong>
+          <strong>Race dashboard</strong>
           <p>Supabase auth is not configured yet. Add env vars to enable login.</p>
         </div>
       </section>
@@ -74,7 +144,7 @@ export default function AccountPage() {
   if (loading) {
     return (
       <section className="section container">
-        <div className="card">Loading your profile...</div>
+        <div className="card">Loading your race dashboard...</div>
       </section>
     );
   }
@@ -82,13 +152,20 @@ export default function AccountPage() {
   if (!user) {
     return (
       <section className="section container">
-        <div className="card">
+        <div className="card card-premium">
           <div className="stack">
-            <strong>Sign in to view your profile</strong>
-            <p>Save shoes, outfits, and playlists to build your training profile.</p>
-            <Link className="btn btn-primary" href="/login">
-              Sign in
-            </Link>
+            <strong>Build your race dashboard</strong>
+            <p>
+              Save your goal race, target time, fueling ideas, shoes, and training picks so Runner Toolkit becomes more than a one-off calculator.
+            </p>
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              <Link className="btn btn-primary" href="/login">
+                Sign in
+              </Link>
+              <Link className="btn btn-secondary" href="/tools/pace-calculator">
+                Explore tools first
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -98,20 +175,122 @@ export default function AccountPage() {
   return (
     <div>
       <section className="tool-hero container">
-        <h1>Your profile</h1>
-        <p>Your saved gear, plans, and logs — and your comeback plan — in one place.</p>
+        <div className="dashboard-hero stack">
+          <div style={{ display: "flex", justifyContent: "space-between", gap: 16, flexWrap: "wrap", alignItems: "flex-start" }}>
+            <div className="stack" style={{ gap: 10 }}>
+              <span className="pill">Race HQ</span>
+              <h1 style={{ margin: 0 }}>{profile.goal_race || "Your next race starts here."}</h1>
+              <p>
+                Set your goal, save the tools that fit your training block, and build a race-day system you can come back to every week.
+              </p>
+            </div>
+            <div className="kpi-card" style={{ minWidth: 180 }}>
+              <span className="brand-sub">Countdown</span>
+              <strong>
+                {countdown === null ? "Set a date" : countdown < 0 ? "Race passed" : `${countdown} days`}
+              </strong>
+            </div>
+          </div>
+          <div className="kpi-grid">
+            <div className="kpi-card">
+              <strong>{profile.target_time || "Set a target"}</strong>
+              <span className="brand-sub">Target time</span>
+            </div>
+            <div className="kpi-card">
+              <strong>{savedCount}</strong>
+              <span className="brand-sub">Saved building blocks</span>
+            </div>
+            <div className="kpi-card">
+              <strong>{profile.race_date || "Pick a date"}</strong>
+              <span className="brand-sub">Race date</span>
+            </div>
+            <div className="kpi-card">
+              <strong>{grouped.plan?.length ?? 0}</strong>
+              <span className="brand-sub">Plans saved</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="section container">
         <div className="stack">
-          <div className="stat-grid">
-            <div className="stat">
-              <strong>{savedItems.length}</strong>
-              <span>Saved items</span>
+          <div className="grid grid-2">
+            <div className="card card-premium">
+              <div className="stack">
+                <strong>Race profile</strong>
+                <p style={{ margin: 0, color: "rgba(248,251,255,0.78)" }}>
+                  Keep your race target, target time, and key notes in one place so the rest of the toolkit can orbit around your goal.
+                </p>
+                <div className="form-grid">
+                  <div>
+                    <label className="label" htmlFor="goal_race">Goal race</label>
+                    <input id="goal_race" className="input" placeholder="Chicago Marathon" value={profile.goal_race} onChange={(e) => setProfile((curr) => ({ ...curr, goal_race: e.target.value }))} />
+                  </div>
+                  <div className="grid grid-2">
+                    <div>
+                      <label className="label" htmlFor="race_date">Race date</label>
+                      <input id="race_date" className="input" type="date" value={profile.race_date} onChange={(e) => setProfile((curr) => ({ ...curr, race_date: e.target.value }))} />
+                    </div>
+                    <div>
+                      <label className="label" htmlFor="target_time">Target time</label>
+                      <input id="target_time" className="input" placeholder="1:45:00" value={profile.target_time} onChange={(e) => setProfile((curr) => ({ ...curr, target_time: e.target.value }))} />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="label" htmlFor="goal_notes">Race notes</label>
+                    <textarea id="goal_notes" className="textarea" placeholder="Sub-1:45 half. Need better fueling and a steadier first 5K." rows={5} value={profile.goal_notes} onChange={(e) => setProfile((curr) => ({ ...curr, goal_notes: e.target.value }))} />
+                  </div>
+                </div>
+                <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+                  <button className="btn btn-primary" type="button" onClick={saveProfile} disabled={profileStatus === "saving"}>
+                    {profileStatus === "saving" ? "Saving..." : "Save race profile"}
+                  </button>
+                  {profileStatus === "saved" ? <span className="notice">Race profile saved.</span> : null}
+                  {profileStatus === "error" ? <span className="notice">Could not save race profile.</span> : null}
+                </div>
+              </div>
             </div>
-            <div className="stat">
-              <strong>{user.email}</strong>
-              <span>Signed in</span>
+
+            <div className="stack" style={{ gap: 20 }}>
+              <div className="card card-dashboard">
+                <div className="stack">
+                  <strong>Race-week checklist</strong>
+                  <div className="list">
+                    <div className="card card-outline">Save a target time and lock your splits.</div>
+                    <div className="card card-outline">Pick your race shoe and training backup option.</div>
+                    <div className="card card-outline">Build a fueling plan you can test before race day.</div>
+                    <div className="card card-outline">Choose the training plan or block you are actually following.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card card-dashboard">
+                <div className="stack">
+                  <strong>Recommended next moves</strong>
+                  <div className="list">
+                    <Link href="/tools/pace-calculator" className="card card-outline">
+                      <strong>Lock your pace plan</strong>
+                      <div className="brand-sub">Build splits for your goal time and race distance.</div>
+                    </Link>
+                    <Link href="/tools/fueling" className="card card-outline">
+                      <strong>Dial in race fueling</strong>
+                      <div className="brand-sub">Create a race-day gel and hydration strategy you can revisit.</div>
+                    </Link>
+                    <Link href="/tools/training-plans" className="card card-outline">
+                      <strong>Choose your training block</strong>
+                      <div className="brand-sub">Match your current plan to the race you are targeting.</div>
+                    </Link>
+                    <Link href="/tools/shoe-selector" className="card card-outline">
+                      <strong>Save your shoe rotation</strong>
+                      <div className="brand-sub">Keep race-day and training-day options in one place.</div>
+                    </Link>
+                    <Link href="/tools/training-plans#injury" className="card card-outline">
+                      <strong>Have a Plan B for injury</strong>
+                      <div className="brand-sub">Report what hurts and rebuild your remaining weeks around it.</div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -121,23 +300,20 @@ export default function AccountPage() {
                 {isPremium ? "Premium — the comeback plan" : "Free toolkit"}
               </strong>
               {isPremium ? (
-                <p>
+                <p style={{ margin: 0 }}>
                   Injury-adaptive rebuilds are unlocked on every training plan.
                   If something starts hurting, report it and get your full
                   adjusted schedule.
                 </p>
               ) : (
-                <p>
+                <p style={{ margin: 0 }}>
                   You&apos;re on the free toolkit — which stays free. If an
                   injury hits mid-training, Premium rebuilds your plan and gets
                   you back to the start line.
                 </p>
               )}
-              <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-                <Link
-                  className="btn btn-primary"
-                  href="/tools/training-plans#injury"
-                >
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                <Link className="btn btn-primary" href="/tools/training-plans#injury">
                   {isPremium ? "Adjust a plan" : "Try the injury rebuild"}
                 </Link>
                 {!isPremium ? (
@@ -149,12 +325,10 @@ export default function AccountPage() {
             </div>
           </div>
 
-          {status === "error" ? (
-            <div className="notice">Unable to load saved items right now.</div>
-          ) : null}
+          {status === "error" ? <div className="notice">Unable to load saved items right now.</div> : null}
 
           <div className="grid grid-2">
-            <div className="card">
+            <div className="card card-dashboard">
               <div className="stack">
                 <strong>Saved shoes</strong>
                 {grouped.shoe?.length ? (
@@ -169,34 +343,30 @@ export default function AccountPage() {
                       );
                     })}
                   </ul>
-                ) : (
-                  <p className="brand-sub">No shoes saved yet.</p>
-                )}
+                ) : <p className="brand-sub">No shoes saved yet.</p>}
               </div>
             </div>
 
-            <div className="card">
+            <div className="card card-dashboard">
               <div className="stack">
-                <strong>Saved attire</strong>
-                {grouped.attire?.length ? (
+                <strong>Saved training plans</strong>
+                {grouped.plan?.length ? (
                   <ul className="list">
-                    {grouped.attire.map((item) => {
-                      const attire = attireMap.get(item.item_id);
+                    {grouped.plan.map((item) => {
+                      const plan = planMap.get(item.item_id);
                       return (
                         <li key={item.id} className="card card-outline">
-                          <strong>{attire?.name ?? item.label ?? item.item_id}</strong>
-                          <div className="brand-sub">{attire?.brand ?? "Attire"}</div>
+                          <strong>{plan?.name ?? item.label ?? item.item_id}</strong>
+                          <div className="brand-sub">{plan?.distance ?? "Plan"}</div>
                         </li>
                       );
                     })}
                   </ul>
-                ) : (
-                  <p className="brand-sub">No attire saved yet.</p>
-                )}
+                ) : <p className="brand-sub">No plans saved yet.</p>}
               </div>
             </div>
 
-            <div className="card">
+            <div className="card card-dashboard">
               <div className="stack">
                 <strong>Saved songs</strong>
                 {grouped.song?.length ? (
@@ -211,36 +381,32 @@ export default function AccountPage() {
                       );
                     })}
                   </ul>
-                ) : (
-                  <p className="brand-sub">No songs saved yet.</p>
-                )}
+                ) : <p className="brand-sub">No songs saved yet.</p>}
               </div>
             </div>
 
-            <div className="card">
+            <div className="card card-dashboard">
               <div className="stack">
-                <strong>Saved plans</strong>
-                {grouped.plan?.length ? (
+                <strong>Saved gear and attire</strong>
+                {grouped.attire?.length ? (
                   <ul className="list">
-                    {grouped.plan.map((item) => {
-                      const plan = planMap.get(item.item_id);
+                    {grouped.attire.map((item) => {
+                      const attire = attireMap.get(item.item_id);
                       return (
                         <li key={item.id} className="card card-outline">
-                          <strong>{plan?.name ?? item.label ?? item.item_id}</strong>
-                          <div className="brand-sub">{plan?.distance ?? "Plan"}</div>
+                          <strong>{attire?.name ?? item.label ?? item.item_id}</strong>
+                          <div className="brand-sub">{attire?.brand ?? "Attire"}</div>
                         </li>
                       );
                     })}
                   </ul>
-                ) : (
-                  <p className="brand-sub">No plans saved yet.</p>
-                )}
+                ) : <p className="brand-sub">No attire saved yet.</p>}
               </div>
             </div>
           </div>
 
           <div className="notice">
-            Saved plans and workout logs live on the training plans page too —
+            Injury-adjusted schedules live on the training plans page — your
             premium status applies there automatically.
           </div>
         </div>
