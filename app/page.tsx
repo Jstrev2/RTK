@@ -7,7 +7,7 @@ import { getSupabaseAdmin } from "@/lib/supabase-admin";
 export const metadata: Metadata = {
   title: "Runner Toolkit — The Training Plan That Survives Injury",
   description:
-    "Your plan broke you. Ours will get you back to the start line. Runner Toolkit rebuilds your training around 11 common running injuries — plus a free shoe finder, pace calculator, fueling planner, and running music.",
+    "Injured mid-training? Runner Toolkit rebuilds your plan around 11 common running injuries and gets you back to the start line — plus a free shoe finder, pace calculator, fueling planner, and running music.",
 };
 
 const tools = [
@@ -106,7 +106,7 @@ export default async function HomePage() {
       <section className="hero container">
         <div>
           <span className="pill">Training plans with a Plan B</span>
-          <h1>Your plan broke you. Ours will get you back to the start line.</h1>
+          <h1>Injured mid-training? We&apos;ll get you back to the start line.</h1>
           <p>
             Week nine of sixteen and your shin starts screaming — a normal plan
             just keeps going like nothing happened. Runner Toolkit rebuilds your

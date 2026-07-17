@@ -30,19 +30,19 @@ export const metadata: Metadata = {
     template: "%s | Runner Toolkit"
   },
   description:
-    "Your plan broke you. Ours will get you back to the start line. Injury-adaptive training plans, plus free tools: shoe finder, pace calculator, fueling planner, and running music.",
+    "Injured mid-training? Runner Toolkit rebuilds your plan and gets you back to the start line. Injury-adaptive training plans, plus free tools: shoe finder, pace calculator, fueling planner, and running music.",
   metadataBase: new URL("https://runnertoolkit.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "Runner Toolkit",
-    title: "Runner Toolkit — Your Plan Broke You. Ours Will Get You Back.",
+    title: "Runner Toolkit — We'll Get You Back to the Start Line",
     description:
       "Injury-adaptive training plans that rebuild your remaining weeks around the injury — plus a free shoe finder, pace calculator, fueling planner, and running music library.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Runner Toolkit — Your Plan Broke You. Ours Will Get You Back.",
+    title: "Runner Toolkit — We'll Get You Back to the Start Line",
     description:
       "Injury-adaptive training plans that rebuild your remaining weeks around the injury — plus a free shoe finder, pace calculator, fueling planner, and running music library.",
   },

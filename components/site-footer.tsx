@@ -19,8 +19,8 @@ export default function SiteFooter() {
             <span>Runner Toolkit</span>
           </div>
           <p>
-            Free tools for the everyday miles. A premium plan for the day
-            something snaps.
+            Free tools for the everyday miles. A premium plan for when
+            training doesn&apos;t go to plan.
           </p>
           <span className="pill">Get back to the start line</span>
         </div>
@@ -49,7 +49,7 @@ export default function SiteFooter() {
         <div className="divider" />
         <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "12px" }}>
           <span>© 2026 Runner Toolkit. All rights reserved.</span>
-          <span>Your plan broke you. Ours will get you back.</span>
+          <span>We&apos;ll get you back to the start line.</span>
         </div>
       </div>
     </footer>

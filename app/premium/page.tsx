@@ -78,7 +78,7 @@ function PremiumContent() {
     <div>
       <section className="tool-hero container">
         <span className="pill">Runner Toolkit Premium</span>
-        <h1>Your plan broke you. Ours will get you back to the start line.</h1>
+        <h1>Injured mid-training? We&apos;ll get you back to the start line.</h1>
         <p>
           The toolkit is free — shoes, pace, fuel, music, plans. Premium does
           the one job no free plan does: when you get hurt mid-training, it
