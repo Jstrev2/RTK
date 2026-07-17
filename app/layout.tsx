@@ -21,7 +21,7 @@ const body = IBM_Plex_Sans({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#1491ff",
+  themeColor: "#070d17",
 };
 
 export const metadata: Metadata = {

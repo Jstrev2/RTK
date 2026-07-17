@@ -106,7 +106,10 @@ export default async function HomePage() {
       <section className="hero container">
         <div>
           <span className="pill">Training plans with a Plan B</span>
-          <h1>Injured mid-training? We&apos;ll get you back to the start line.</h1>
+          <h1>
+            Injured mid-training? We&apos;ll get you{" "}
+            <span className="text-grad">back to the start line.</span>
+          </h1>
           <p>
             Week nine of sixteen and your shin starts screaming — a normal plan
             just keeps going like nothing happened. Runner Toolkit rebuilds your
