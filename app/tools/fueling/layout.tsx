@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Free Race Fueling Planner",
+  title: "Fuel Planner — Know What to Take and When",
   description:
-    "Plan your race-day nutrition free: a personalized gel schedule based on your pace, distance, and preferred energy gel.",
+    "Turn distance, expected time, conditions, and preferred products into a practical fuel schedule to practice before race day.",
 };
 
 export default function Layout({ children }: { children: ReactNode }) {

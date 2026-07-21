@@ -2,54 +2,48 @@ import Link from "next/link";
 
 const toolLinks = [
   { href: "/tools/shoe-selector", label: "Shoe Finder" },
-  { href: "/tools/pace-calculator", label: "Pace Calculator" },
   { href: "/tools/music", label: "Running Music" },
-  { href: "/tools/fueling", label: "Fueling Planner" },
-  { href: "/tools/attire-guide", label: "Attire Guide" },
-  { href: "/tools/training-plans", label: "Training Plans" }
+  { href: "/tools/fueling", label: "Fuel Planner" },
+  { href: "/tools/pace-calculator", label: "Pace Calculator" }
 ];
 
 export default function SiteFooter() {
   return (
     <footer className="footer">
       <div className="container footer-grid">
-        <div className="stack">
+        <div className="footer-intro">
           <div className="brand">
             <span className="brand-mark">RT</span>
             <span>Runner Toolkit</span>
           </div>
-          <p>
-            Free tools for the everyday miles. A premium plan for when
-            training doesn&apos;t go to plan.
-          </p>
-          <span className="pill">Get back to the start line</span>
+          <p>Better decisions before, during, and between the miles.</p>
+          <strong>Run smarter. Guess less.</strong>
         </div>
         <div className="stack">
-          <strong>Free tools</strong>
+          <strong>Tools</strong>
           {toolLinks.map((link) => (
-            <Link key={link.href} href={link.href}>
-              {link.label}
-            </Link>
+            <Link key={link.href} href={link.href}>{link.label}</Link>
           ))}
         </div>
         <div className="stack">
-          <strong>Explore</strong>
-          <Link href="/premium">Premium — the comeback plan</Link>
-          <Link href="/rundown">The Rundown</Link>
-          <Link href="/#tools">All tools</Link>
-          <Link href="/#how-it-works">How it works</Link>
+          <strong>Training</strong>
+          <Link href="/tools/training-plans">Free training plans</Link>
+          <Link href="/premium">Adaptive Training</Link>
+          <Link href="/rundown">Runner Guides</Link>
         </div>
         <div className="stack">
-          <strong>Get in touch</strong>
-          <span>hello@runnertoolkit.com</span>
-          <span>Boston, MA</span>
+          <strong>Trust</strong>
+          <Link href="/methodology">How recommendations work</Link>
+          <Link href="/about">About Runner Toolkit</Link>
+          <a href="mailto:hello@runnertoolkit.com">Contact</a>
         </div>
       </div>
-      <div className="container" style={{ marginTop: "32px" }}>
-        <div className="divider" />
-        <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "12px" }}>
-          <span>© 2026 Runner Toolkit. All rights reserved.</span>
-          <span>We&apos;ll get you back to the start line.</span>
+      <div className="container footer-bottom">
+        <span>© 2026 Runner Toolkit</span>
+        <div>
+          <Link href="/privacy">Privacy</Link>
+          <Link href="/terms">Terms</Link>
+          <span>Boston, MA</span>
         </div>
       </div>
     </footer>

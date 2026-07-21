@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState } from "react";
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import { buildFuelingPlan, formatFuelingSummary, fuelingProducts, type FuelingProduct } from "@/lib/fueling";
-import ComebackCta from "@/components/comeback-cta";
 import { useAuth } from "@/components/auth-provider";
 import { getSupabaseClient } from "@/lib/supabase-client";
 
@@ -280,12 +279,13 @@ export default function FuelingPage() {
   };
 
   return (
-    <div>
+    <div className="tool-page tool-page-fuel">
       <section className="tool-hero container">
-        <h1>Fueling Calculator</h1>
+        <span className="eyebrow">Fuel Planner</span>
+        <h1>Know what to take—and when to take it.</h1>
         <p>
-          Build a race-day fueling plan in minutes, then track what works on
-          your long runs.
+          Enter the distance, expected time, conditions, and products you can
+          tolerate. Get a practical schedule to practice before race day.
         </p>
       </section>
 
@@ -293,7 +293,7 @@ export default function FuelingPage() {
         <div className="grid grid-2">
           <div className="card">
             <div className="stack">
-              <strong>Race inputs</strong>
+              <strong>Tell us about the effort</strong>
               <div className="form-grid">
                 <div>
                   <span className="label">Distance</span>
@@ -418,7 +418,7 @@ export default function FuelingPage() {
           <div className="stack">
             <div className="card card-accent">
               <div className="stack">
-                <strong>Your fueling plan</strong>
+                <strong>Your schedule and packing list</strong>
                 {plan && summary ? (
                   <div className="stack">
                     <div className="stat-grid">
@@ -466,6 +466,14 @@ export default function FuelingPage() {
                           </li>
                         ))}
                       </ul>
+                    </div>
+                    <div className="packing-list">
+                      <span className="eyebrow">Packing list</span>
+                      <div>
+                        <strong>{plan.schedule.length} × {plan.gel.brand} {plan.gel.name}</strong>
+                        <span>{summary.fluids} planned across the effort</span>
+                        <span>Carry one familiar backup serving when practical</span>
+                      </div>
                     </div>
                   </div>
                 ) : (
@@ -565,9 +573,7 @@ export default function FuelingPage() {
               </div>
             </div>
 
-            <Link className="btn btn-ghost" href="/tools/training-plans">
-              Next tool: Training Plans
-            </Link>
+            <Link className="btn btn-ghost" href="/tools/pace-calculator">Need a goal time? Open the Pace Calculator</Link>
           </div>
         </div>
       </section>
@@ -631,7 +637,13 @@ export default function FuelingPage() {
       </section>
 
       <section className="section container">
-        <ComebackCta lead="Fueling gets you through race day. The comeback plan gets you to it." />
+        <div className="contextual-next">
+          <span className="eyebrow">Now practice it</span>
+          <div>
+            <strong>Use the schedule on long runs before trusting it on race day.</strong>
+            <Link className="text-link" href="/tools/training-plans">Choose a free training plan →</Link>
+          </div>
+        </div>
       </section>
     </div>
   );

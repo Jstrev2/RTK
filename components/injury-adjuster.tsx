@@ -67,20 +67,20 @@ export default function InjuryAdjuster({ plan }: { plan: TrainingPlan }) {
     <div className="card">
       <div className="stack">
         <div>
-          <span className="pill">Injured? Don&apos;t start over.</span>
+          <span className="pill">Sample Adaptive Training</span>
           <strong style={{ display: "block", marginTop: "8px" }}>
-            Adapt this plan around an injury
+            Preview a revised schedule after an injury
           </strong>
           <div className="brand-sub">
-            Report what happened and we&apos;ll rebuild your remaining weeks —
-            rest, cross-training, a progressive return, and an honest race-day
-            call.
+            Choose an issue you are already managing, its current impact, and
+            your place in the plan. This preview adjusts training load; it does
+            not diagnose the problem or replace professional guidance.
           </div>
         </div>
 
         <div className="filter-row">
           <div className="filter-group">
-            <span className="label">What&apos;s hurting?</span>
+            <span className="label">Issue being managed</span>
             <select
               className="select"
               value={injuryId}
@@ -97,7 +97,7 @@ export default function InjuryAdjuster({ plan }: { plan: TrainingPlan }) {
             </select>
           </div>
           <div className="filter-group">
-            <span className="label">How bad is it?</span>
+            <span className="label">Current training impact</span>
             <select
               className="select"
               value={severity}
@@ -138,7 +138,7 @@ export default function InjuryAdjuster({ plan }: { plan: TrainingPlan }) {
             type="button"
             onClick={() => setSubmitted(true)}
           >
-            Rebuild my remaining weeks
+            Preview the revised schedule
           </button>
         ) : null}
 
@@ -147,8 +147,8 @@ export default function InjuryAdjuster({ plan }: { plan: TrainingPlan }) {
             <div className={adjusted.feasibility.canRace ? "notice" : "card card-accent"}>
               <strong>
                 {adjusted.feasibility.canRace
-                  ? "Your race is still on."
-                  : "Let's talk about race day."}
+                  ? "The timeline may still be workable."
+                  : "The race timeline needs to change."}
               </strong>
               <p style={{ margin: "6px 0 0" }}>{adjusted.feasibility.message}</p>
             </div>
@@ -167,7 +167,7 @@ export default function InjuryAdjuster({ plan }: { plan: TrainingPlan }) {
                     </ul>
                   </div>
                   <div>
-                    <span className="label">Safe to do</span>
+                  <span className="label">Potential alternatives</span>
                     <ul className="list">
                       {selectedInjury.safe.map((item) => (
                         <li key={item} className="brand-sub">✓ {item}</li>
@@ -195,7 +195,7 @@ export default function InjuryAdjuster({ plan }: { plan: TrainingPlan }) {
                 remainingWeeks.length ? (
                   <div className="stack">
                     <strong>
-                      Your adjusted plan — week {adjusted.reportedWeek} preview
+                      Revised plan — week {adjusted.reportedWeek} preview
                     </strong>
                     <WeekCard week={remainingWeeks[0]} />
                     <div className="brand-sub">
@@ -209,7 +209,7 @@ export default function InjuryAdjuster({ plan }: { plan: TrainingPlan }) {
               }
             >
               <div className="stack">
-                <strong>Your adjusted schedule, week by week</strong>
+                <strong>Your revised schedule, week by week</strong>
                 {remainingWeeks.map((adjustedWeek) => (
                   <WeekCard key={adjustedWeek.weekNumber} week={adjustedWeek} />
                 ))}

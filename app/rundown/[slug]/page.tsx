@@ -39,7 +39,7 @@ export async function generateMetadata({
 
   return {
     title: article.title,
-    description: article.excerpt ?? `${article.title} — The Rundown by Runner Toolkit`,
+    description: article.excerpt ?? `${article.title} — Runner Guides by Runner Toolkit`,
     openGraph: {
       title: article.title,
       description: article.excerpt ?? undefined,
@@ -132,7 +132,7 @@ export default async function ArticlePage({
       <article className="container" style={{ maxWidth: "720px", margin: "0 auto" }}>
         <div className="tool-hero">
           <Link href="/rundown" className="brand-sub" style={{ display: "inline-block", marginBottom: "12px" }}>
-            &larr; The Rundown
+            &larr; Runner Guides
           </Link>
           <h1>{article.title}</h1>
           <div style={{ display: "flex", gap: "12px", alignItems: "center", flexWrap: "wrap" }}>
@@ -166,7 +166,7 @@ export default async function ArticlePage({
         <div className="divider" />
         <div style={{ padding: "12px 0 48px" }}>
           <Link href="/rundown" className="btn btn-secondary">
-            &larr; Back to The Rundown
+            &larr; Back to Runner Guides
           </Link>
         </div>
       </article>

@@ -7,59 +7,15 @@ import { trainingPlans } from "@/lib/data";
 import { generateSchedule } from "@/lib/training-schedule";
 import SaveButton from "@/components/save-button";
 import InjuryAdjuster from "@/components/injury-adjuster";
-import { useAuth } from "@/components/auth-provider";
-import { getSupabaseClient } from "@/lib/supabase-client";
 
 const distanceOptions = ["all", "5k", "10k", "half", "marathon"];
 const difficultyOptions = ["all", "beginner", "intermediate", "advanced"];
 
-type TrainingLogRow = {
-  id: string;
-  workout_date: string;
-  workout_type: string;
-  distance: string | null;
-  time: string | null;
-  effort: number | null;
-  notes: string | null;
-};
-
-type TrainingLog = {
-  id: string;
-  date: string;
-  workoutType: string;
-  distance: string;
-  time: string;
-  effort: string;
-  notes: string;
-};
-
-const mapTrainingLog = (row: TrainingLogRow): TrainingLog => ({
-  id: row.id,
-  date: row.workout_date,
-  workoutType: row.workout_type,
-  distance: row.distance ?? "",
-  time: row.time ?? "",
-  effort: row.effort?.toString() ?? "",
-  notes: row.notes ?? ""
-});
-
 export default function TrainingPlansPage() {
-  const { user, supabaseAvailable } = useAuth();
   const [distance, setDistance] = useState("all");
   const [difficulty, setDifficulty] = useState("all");
   const [selectedPlanId, setSelectedPlanId] = useState(trainingPlans[0]?.id ?? "");
   const [selectedWeek, setSelectedWeek] = useState(0);
-
-  const [logs, setLogs] = useState<TrainingLog[]>([]);
-  const [logStatus, setLogStatus] = useState<"idle" | "loading" | "error">("idle");
-  const [logForm, setLogForm] = useState({
-    date: "",
-    workoutType: "easy_run",
-    distance: "",
-    time: "",
-    effort: "3",
-    notes: ""
-  });
 
   const filteredPlans = useMemo(() => {
     return trainingPlans.filter((plan) => {
@@ -84,84 +40,15 @@ export default function TrainingPlansPage() {
 
   const currentWeekWorkouts = schedule[selectedWeek] ?? [];
 
-  const totalMiles = logs
-    .map((entry) => Number(entry.distance))
-    .filter((value) => !Number.isNaN(value))
-    .reduce((sum, value) => sum + value, 0);
-
-  useEffect(() => {
-    const supabase = getSupabaseClient();
-    if (!supabase || !user) return;
-
-    let active = true;
-    setLogStatus("loading");
-
-    supabase
-      .from("training_logs")
-      .select("id, workout_date, workout_type, distance, time, effort, notes")
-      .eq("user_id", user.id)
-      .order("workout_date", { ascending: false })
-      .then(({ data, error }) => {
-        if (!active) return;
-        if (error) { setLogStatus("error"); return; }
-        setLogs((data as TrainingLogRow[])?.map(mapTrainingLog) ?? []);
-        setLogStatus("idle");
-      });
-
-    return () => { active = false; };
-  }, [user, supabaseAvailable]);
-
-  const addLog = async () => {
-    if (!logForm.date || !logForm.distance || !logForm.time) return;
-
-    const supabase = getSupabaseClient();
-    const entry: TrainingLog = {
-      id: `local-${Date.now()}`,
-      date: logForm.date,
-      workoutType: logForm.workoutType,
-      distance: logForm.distance,
-      time: logForm.time,
-      effort: logForm.effort,
-      notes: logForm.notes
-    };
-
-    if (!supabase || !user) {
-      setLogs((current) => [entry, ...current]);
-      setLogForm({ date: "", workoutType: "easy_run", distance: "", time: "", effort: "3", notes: "" });
-      return;
-    }
-
-    setLogStatus("loading");
-    const { data, error } = await supabase
-      .from("training_logs")
-      .insert({
-        user_id: user.id,
-        workout_date: logForm.date,
-        workout_type: logForm.workoutType,
-        distance: logForm.distance,
-        time: logForm.time,
-        effort: Number(logForm.effort),
-        notes: logForm.notes
-      })
-      .select("id, workout_date, workout_type, distance, time, effort, notes")
-      .single();
-
-    if (error || !data) { setLogStatus("error"); return; }
-
-    setLogs((current) => [mapTrainingLog(data as TrainingLogRow), ...current]);
-    setLogStatus("idle");
-    setLogForm({ date: "", workoutType: "easy_run", distance: "", time: "", effort: "3", notes: "" });
-  };
-
   return (
-    <div>
+    <div className="tool-page tool-page-training">
       <section className="tool-hero container">
-        <h1>Training Plans</h1>
+        <span className="eyebrow">Free training plans</span>
+        <h1>Start with a plan. Change it when life does.</h1>
         <p>
-          Nine free plans from 5K to marathon — complete weekly schedules, no
-          paywall. And unlike the PDF you downloaded last time, these come with
-          a Plan B: get injured and we rebuild your remaining weeks instead of
-          letting the plan fall apart.
+          Choose a complete plan from 5K to marathon. Browse every week for
+          free, then preview how Adaptive Training can revise the schedule when
+          missed time or an appropriately cleared return changes the path.
         </p>
       </section>
 
@@ -292,81 +179,22 @@ export default function TrainingPlansPage() {
               </div>
             )}
 
-            <div id="injury">
+            <div id="adapt">
+              <span id="injury" className="anchor-target" aria-hidden="true" />
               {selectedPlan && <InjuryAdjuster plan={selectedPlan} />}
             </div>
 
-            <div className="card">
-              <div className="stack">
-                <strong>Workout log</strong>
-                {!supabaseAvailable && <div className="notice">Demo mode: logs are stored locally.</div>}
-                {supabaseAvailable && !user && <div className="notice">Sign in to save workouts across devices.</div>}
-                {logStatus === "error" && <div className="notice">Unable to load or save workouts right now.</div>}
-                <div className="form-grid">
-                  <div>
-                    <span className="label">Date</span>
-                    <input className="input" type="date" value={logForm.date} onChange={(e) => setLogForm({ ...logForm, date: e.target.value })} />
-                  </div>
-                  <div>
-                    <span className="label">Workout type</span>
-                    <select className="select" value={logForm.workoutType} onChange={(e) => setLogForm({ ...logForm, workoutType: e.target.value })}>
-                      <option value="easy_run">Easy run</option>
-                      <option value="tempo">Tempo</option>
-                      <option value="intervals">Intervals</option>
-                      <option value="long_run">Long run</option>
-                      <option value="race">Race pace</option>
-                      <option value="rest">Rest / cross-train</option>
-                    </select>
-                  </div>
-                  <div style={{ display: "flex", gap: "12px" }}>
-                    <div>
-                      <span className="label">Distance (mi)</span>
-                      <input className="input" value={logForm.distance} onChange={(e) => setLogForm({ ...logForm, distance: e.target.value })} />
-                    </div>
-                    <div>
-                      <span className="label">Time</span>
-                      <input className="input" value={logForm.time} onChange={(e) => setLogForm({ ...logForm, time: e.target.value })} />
-                    </div>
-                  </div>
-                  <div>
-                    <span className="label">Effort (1-5)</span>
-                    <select className="select" value={logForm.effort} onChange={(e) => setLogForm({ ...logForm, effort: e.target.value })}>
-                      <option value="5">5 - All out</option>
-                      <option value="4">4 - Hard</option>
-                      <option value="3">3 - Moderate</option>
-                      <option value="2">2 - Easy</option>
-                      <option value="1">1 - Recovery</option>
-                    </select>
-                  </div>
-                  <div>
-                    <span className="label">Notes</span>
-                    <textarea className="textarea" value={logForm.notes} onChange={(e) => setLogForm({ ...logForm, notes: e.target.value })} rows={2} />
-                  </div>
-                  <button className="btn btn-primary" type="button" onClick={addLog}>Log workout</button>
+            <div className="contextual-next">
+              <span className="eyebrow">Finish the race kit</span>
+              <div>
+                <strong>Use your plan to calculate pace, fuel, and music for the work ahead.</strong>
+                <div className="button-row">
+                  <Link className="text-link" href="/tools/pace-calculator">Calculate pace →</Link>
+                  <Link className="text-link" href="/tools/fueling">Plan fuel →</Link>
+                  <Link className="text-link" href="/tools/music">Find music →</Link>
                 </div>
-                {logs.length > 0 && (
-                  <>
-                    <div className="stat-grid">
-                      <div className="stat"><strong>{logs.length}</strong><span>Workouts</span></div>
-                      <div className="stat"><strong>{totalMiles.toFixed(1)}</strong><span>Total miles</span></div>
-                    </div>
-                    <ul className="list">
-                      {logs.slice(0, 10).map((entry) => (
-                        <li key={entry.id} className="card card-outline">
-                          <strong>{entry.date}</strong> | {entry.workoutType} | {entry.distance} mi | {entry.time}
-                          {entry.notes && <div className="brand-sub">{entry.notes}</div>}
-                        </li>
-                      ))}
-                      {logs.length > 10 && <li className="brand-sub">And {logs.length - 10} more...</li>}
-                    </ul>
-                  </>
-                )}
               </div>
             </div>
-
-            <Link className="btn btn-ghost" href="/tools/shoe-selector">
-              Back to Shoe Finder
-            </Link>
           </div>
         </div>
       </section>

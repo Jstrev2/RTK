@@ -284,9 +284,9 @@ export default function AccountPage() {
                       <strong>Save your shoe rotation</strong>
                       <div className="brand-sub">Keep race-day and training-day options in one place.</div>
                     </Link>
-                    <Link href="/tools/training-plans#injury" className="card card-outline">
-                      <strong>Have a Plan B for injury</strong>
-                      <div className="brand-sub">Report what hurts and rebuild your remaining weeks around it.</div>
+                    <Link href="/tools/training-plans#adapt" className="card card-outline">
+                      <strong>Preview a plan adjustment</strong>
+                      <div className="brand-sub">See how a changed training situation revises the remaining weeks.</div>
                     </Link>
                   </div>
                 </div>
@@ -297,28 +297,27 @@ export default function AccountPage() {
           <div className="card card-accent">
             <div className="stack">
               <strong>
-                {isPremium ? "Premium — the comeback plan" : "Free toolkit"}
+                {isPremium ? "Adaptive Training" : "Free toolkit"}
               </strong>
               {isPremium ? (
                 <p style={{ margin: 0 }}>
-                  Injury-adaptive rebuilds are unlocked on every training plan.
-                  If something starts hurting, report it and get your full
-                  adjusted schedule.
+                  Complete revised schedules are unlocked on every training
+                  plan, including the explanation behind each change.
                 </p>
               ) : (
                 <p style={{ margin: 0 }}>
-                  You&apos;re on the free toolkit — which stays free. If an
-                  injury hits mid-training, Premium rebuilds your plan and gets
-                  you back to the start line.
+                  You&apos;re on the free toolkit. Adaptive Training unlocks every
+                  remaining revised week when missed time or an appropriately
+                  cleared return changes the schedule.
                 </p>
               )}
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                <Link className="btn btn-primary" href="/tools/training-plans#injury">
-                  {isPremium ? "Adjust a plan" : "Try the injury rebuild"}
+                <Link className="btn btn-primary" href="/tools/training-plans#adapt">
+                  {isPremium ? "Adjust a plan" : "Try a sample adjustment"}
                 </Link>
                 {!isPremium ? (
                   <Link className="btn btn-secondary" href="/premium">
-                    See Premium
+                    See Adaptive Training
                   </Link>
                 ) : null}
               </div>

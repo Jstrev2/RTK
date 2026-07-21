@@ -14,7 +14,6 @@ import {
 } from "@/lib/shoe-utils";
 import SaveButton from "@/components/save-button";
 import BuyLinks from "@/components/buy-links";
-import ComebackCta from "@/components/comeback-cta";
 import { getSupabaseClient } from "@/lib/supabase-client";
 
 const sortOptions = [
@@ -340,12 +339,14 @@ export default function ShoeSelectorPage() {
   ];
 
   return (
-    <div>
+    <div className="tool-page tool-page-shoes">
       <section className="tool-hero container">
-        <h1>Shoe Finder</h1>
+        <span className="eyebrow">Shoe Finder</span>
+        <h1>Find the shoes that fit your run.</h1>
         <p>
-          Tell us how you run and we&apos;ll rank every current road shoe for
-          you — with the reasons why, not just a list.
+          Tell us what you are training for, how you like a shoe to feel, what
+          fits your foot, and what you want to spend. Get a short list with
+          reasons—not 200 shoes to research.
         </p>
       </section>
 
@@ -363,10 +364,9 @@ export default function ShoeSelectorPage() {
                 }}
               >
                 <div>
-                  <strong>Your runner profile</strong>
+                  <strong>Tell us about the run</strong>
                   <div className="brand-sub">
-                    Every answer sharpens your match scores. Skip anything you
-                    don&apos;t know.
+                    Each answer narrows the shortlist. Skip anything you do not know.
                   </div>
                 </div>
                 <button
@@ -400,7 +400,7 @@ export default function ShoeSelectorPage() {
 
                   <div className="filter-row">
                     <div className="filter-group">
-                      <span className="label">Pronation</span>
+                      <span className="label">Support preference (optional)</span>
                       <select
                         className="select"
                         value={pronation}
@@ -414,10 +414,7 @@ export default function ShoeSelectorPage() {
                           </option>
                         ))}
                       </select>
-                      <span className="brand-sub">
-                        Check an old pair: wear on the inner edge of the sole
-                        means overpronation; even or outer-edge wear is neutral.
-                      </span>
+                      <span className="brand-sub">Choose “Not sure” unless you already know what feels comfortable.</span>
                     </div>
                     <div className="filter-group">
                       <span className="label">Cushion feel</span>
@@ -656,17 +653,15 @@ export default function ShoeSelectorPage() {
               ) : null}
               {!hasAnyCriteria && (
                 <div className="notice" style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                  <span style={{ fontSize: "1.5rem" }}>&#x1f3af;</span>
                   <div>
-                    <strong>Answer a few profile questions to see match scores.</strong>{" "}
-                    Pick your runs, pronation, and cushion feel above — the more
-                    you tell us, the sharper the recommendations.
+                    <strong>Start with the run you need this shoe to handle.</strong>{" "}
+                    Add ride, fit, mileage, and budget preferences to narrow the shortlist.
                   </div>
                 </div>
               )}
               <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "12px" }}>
                 <div>
-                  <strong>Recommendations</strong>
+                  <strong>Your shortlist</strong>
                   <div className="brand-sub">
                     Showing {scoredResults.list.length} of {scoredResults.total} matches
                   </div>
@@ -784,10 +779,13 @@ export default function ShoeSelectorPage() {
             Want to save favorites? Create a free account for saved shoes and
             alerts on new releases.
           </div>
-          <ComebackCta lead="The right shoe prevents a lot of injuries — but not all of them." />
-          <Link className="btn btn-ghost" href="/tools/attire-guide">
-            Next tool: Attire Guide
-          </Link>
+          <div className="contextual-next">
+            <span className="eyebrow">Planning race day?</span>
+            <div>
+              <strong>Turn your goal time into a practical fuel schedule.</strong>
+              <Link className="text-link" href="/tools/fueling">Plan my fuel →</Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>

@@ -6,12 +6,10 @@ import AuthActions from "@/components/auth-actions";
 
 const navItems = [
   { href: "/tools/shoe-selector", label: "Shoes" },
-  { href: "/tools/pace-calculator", label: "Pace" },
   { href: "/tools/music", label: "Music" },
-  { href: "/tools/fueling", label: "Fueling" },
+  { href: "/tools/fueling", label: "Fuel" },
   { href: "/tools/training-plans", label: "Training" },
-  { href: "/rundown", label: "Rundown" },
-  { href: "/premium", label: "Injured?", cta: true }
+  { href: "/premium", label: "Adapt my plan", cta: true }
 ];
 
 export default function SiteHeader() {
@@ -24,7 +22,7 @@ export default function SiteHeader() {
           <span className="brand-mark">RT</span>
           <span>
             Runner Toolkit
-            <div className="brand-sub">runnertoolkit.com</div>
+            <div className="brand-sub">Run smarter. Guess less.</div>
           </span>
         </Link>
         <nav className={`nav ${menuOpen ? "nav-open" : ""}`}>

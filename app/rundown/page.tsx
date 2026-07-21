@@ -3,13 +3,13 @@ import Link from "next/link";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 
 export const metadata: Metadata = {
-  title: "The Rundown — Running News & Guides",
+  title: "Runner Guides — Shoes, Music, Fuel, and Training",
   description:
-    "The latest running news, gear reviews, training tips, and race-day strategies from Runner Toolkit.",
+    "Practical guides that help runners choose shoes, build playlists, practice fueling, and use a training plan well.",
   openGraph: {
-    title: "The Rundown — Running News & Guides",
+    title: "Runner Guides",
     description:
-      "The latest running news, gear reviews, training tips, and race-day strategies from Runner Toolkit.",
+      "Practical guidance connected to the tools runners use.",
     type: "website",
   },
 };
@@ -34,7 +34,9 @@ async function getArticles(): Promise<Article[]> {
     .eq("is_published", true)
     .order("published_at", { ascending: false });
 
-  return (data as Article[]) ?? [];
+  return ((data as Article[]) ?? []).filter((article) =>
+    !article.tags.map((tag) => tag.toLowerCase()).includes("news")
+  );
 }
 
 function formatDate(dateStr: string) {
@@ -49,13 +51,13 @@ export default async function RundownPage() {
   const articles = await getArticles();
 
   return (
-    <div>
+    <div className="editorial-page">
       <section className="container tool-hero">
-        <span className="pill">The Rundown</span>
-        <h1>Running news, guides &amp; deep dives</h1>
+        <span className="eyebrow">Runner Guides</span>
+        <h1>Use the answer well.</h1>
         <p className="section-lede">
-          Gear breakdowns, training strategies, race-day tips, and everything
-          in between.
+          Practical guidance for choosing shoes, building a playlist,
+          practicing fuel, and making a training plan work in the real world.
         </p>
       </section>
 
@@ -63,10 +65,10 @@ export default async function RundownPage() {
         {articles.length === 0 ? (
           <div className="card card-outline" style={{ textAlign: "center", padding: "48px 20px" }}>
             <p style={{ fontSize: "1.1rem", marginBottom: "8px" }}>
-              <strong>First articles dropping soon.</strong>
+              <strong>Focused runner guides are on the way.</strong>
             </p>
             <p style={{ color: "var(--ink-2)" }}>
-              Check back shortly — we&apos;re working on some good stuff.
+              In the meantime, start with one of the free tools.
             </p>
           </div>
         ) : (

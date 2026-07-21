@@ -23,11 +23,9 @@ export default function Newsletter() {
       .insert({ email: trimmed.toLowerCase() });
 
     if (error && error.code === "23505") {
-      // Already subscribed
       setStatus("sent");
       return;
     }
-
     if (error) {
       setStatus("error");
       return;
@@ -38,25 +36,25 @@ export default function Newsletter() {
   };
 
   return (
-    <div className="card card-accent">
+    <div className="newsletter-card">
       <div className="stack">
-        <strong>Get the drop</strong>
+        <strong>Choose what reaches you</strong>
         <p>
-          New shoes in the finder, new plans, and comeback tactics that actually
-          work. Useful and minimal — that&apos;s the deal.
+          Useful updates across shoes, music, fuel, and adaptive training.
+          Occasional by design.
         </p>
         {status === "sent" ? (
-          <div className="notice">Thanks. We will keep it useful and minimal.</div>
+          <div className="notice">You&apos;re in. We&apos;ll keep it useful.</div>
         ) : (
-          <div className="form-grid" style={{ gridTemplateColumns: "1fr auto" }}>
+          <div className="newsletter-form">
             <input
               className="input"
               type="email"
-              placeholder="name@email.com"
+              placeholder="you@example.com"
               aria-label="Email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
+              onChange={(event) => setEmail(event.target.value)}
+              onKeyDown={(event) => event.key === "Enter" && handleSubmit()}
             />
             <button
               className="btn btn-primary"
@@ -64,13 +62,11 @@ export default function Newsletter() {
               onClick={handleSubmit}
               disabled={status === "sending"}
             >
-              {status === "sending" ? "Sending..." : "Notify me"}
+              {status === "sending" ? "Joining..." : "Keep me posted"}
             </button>
           </div>
         )}
-        {status === "error" ? (
-          <div className="notice">Something went wrong. Please try again.</div>
-        ) : null}
+        {status === "error" ? <div className="notice">Something went wrong. Please try again.</div> : null}
       </div>
     </div>
   );

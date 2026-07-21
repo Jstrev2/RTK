@@ -1,50 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
 import { useAuth } from "@/components/auth-provider";
-import { getSupabaseClient } from "@/lib/supabase-client";
 
-const premiumFeatures = [
+const paidFeatures = [
   {
-    name: "Your full rebuilt schedule",
-    detail:
-      "Every remaining week through race day — rest where you need it, a progressive return-to-run, a volume-capped rebuild, and your taper preserved when the calendar allows."
+    name: "The complete revised schedule",
+    detail: "See every remaining week, including reduced load, progressive rebuilding, and a preserved taper when the timeline allows it."
   },
   {
-    name: "Injury-specific guardrails",
-    detail:
-      "What to avoid, what's safe, and which cross-training holds fitness best for your exact injury — across all 11 protocols."
+    name: "The reason behind every change",
+    detail: "Understand what was removed, reduced, delayed, or replaced—and what must be true before training progresses."
   },
   {
-    name: "An honest race-day call",
-    detail:
-      "Whether your race is still realistic and what pace to expect if it is — including when the answer is no."
+    name: "A realistic race-day update",
+    detail: "See whether the original goal still fits the available time, including the cases where a later or shorter race is the better choice."
   },
   {
-    name: "Re-adjust as you heal",
-    detail:
-      "Setbacks happen. Change the injury, the severity, or the week and rebuild again — unlimited, on every plan and distance."
+    name: "Revisions as circumstances change",
+    detail: "Update the timing or impact and generate a new schedule without starting the entire plan again."
   }
-];
-
-const freeFeatures = [
-  "Shoe Finder with match scores for every current road shoe",
-  "Pace calculator",
-  "All 9 base training plans with full schedules",
-  "Race-day fueling planner",
-  "Running music library",
-  "Workout logging",
-  "Injury check: race-day verdict, guardrails, and your first rebuilt week"
 ];
 
 function PremiumContent() {
   const { user, isPremium, session } = useAuth();
   const searchParams = useSearchParams();
   const status = searchParams.get("status");
-  const [interval, setInterval] = useState<"monthly" | "annual">("annual");
   const [checkoutState, setCheckoutState] = useState<"idle" | "loading" | "unavailable" | "error">("idle");
 
   const startCheckout = async () => {
@@ -57,7 +40,7 @@ function PremiumContent() {
           "Content-Type": "application/json",
           Authorization: `Bearer ${session.access_token}`
         },
-        body: JSON.stringify({ interval })
+        body: JSON.stringify({ interval: "monthly" })
       });
       if (response.status === 503) {
         setCheckoutState("unavailable");
@@ -75,163 +58,140 @@ function PremiumContent() {
   };
 
   return (
-    <div>
-      <section className="tool-hero container">
-        <span className="pill">Runner Toolkit Premium</span>
-        <h1>
-          Injured mid-training? We&apos;ll get you{" "}
-          <span className="text-grad">back to the start line.</span>
-        </h1>
+    <div className="tool-page tool-page-adaptive">
+      <section className="tool-hero container adaptive-hero">
+        <span className="eyebrow">Runner Toolkit Adaptive Training</span>
+        <h1>A training plan that changes when your training changes.</h1>
         <p>
-          The toolkit is free — shoes, pace, fuel, music, plans. Premium does
-          the one job no free plan does: when you get hurt mid-training, it
-          rebuilds your remaining weeks around the injury and tells you the
-          truth about race day.
+          Static plans assume perfect weeks. Adaptive Training revises the
+          remaining schedule when missed time or an appropriately cleared
+          return changes what is realistic—and explains every tradeoff.
         </p>
+        <div className="button-row">
+          <Link className="btn btn-primary" href="/tools/training-plans#adapt">Try a sample adjustment</Link>
+          <a className="btn btn-secondary" href="#pricing">See the options</a>
+        </div>
       </section>
 
       <section className="section container">
-        <div className="stack">
-          {status === "success" ? (
-            <div className="notice">
-              Payment received — welcome to Premium! Sign out and back in if
-              your features haven&apos;t unlocked within a minute.
-            </div>
-          ) : null}
-          {status === "cancelled" ? (
-            <div className="notice">Checkout cancelled. No charge was made.</div>
-          ) : null}
+        {status === "success" ? <div className="notice">Payment received. Welcome to Adaptive Training.</div> : null}
+        {status === "cancelled" ? <div className="notice">Checkout cancelled. No charge was made.</div> : null}
 
-          <div className="grid grid-2">
-            <div className="card">
-              <div className="stack">
-                <strong>Free — forever</strong>
-                <div className="stat">
-                  <strong>$0</strong>
-                  <span>no account required</span>
-                </div>
-                <p className="brand-sub">
-                  The free tools aren&apos;t a trial. They&apos;re the toolkit.
-                </p>
-                <ul className="list">
-                  {freeFeatures.map((feature) => (
-                    <li key={feature} className="card card-outline">
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+        <div className="adaptive-story">
+          <div>
+            <span className="eyebrow">The problem with static plans</span>
+            <h2 className="section-title">The PDF does not know you missed week nine.</h2>
+            <p className="section-lede">
+              It keeps prescribing the same mileage, workouts, and race goal.
+              The runner is left to improvise: skip ahead, repeat a week, cram
+              the missed work, or abandon the plan.
+            </p>
+          </div>
+          <div className="plan-compare">
+            <div className="plan-compare-head">
+              <span>Original week</span>
+              <span>Revised week</span>
+            </div>
+            <div className="plan-row"><span>Intervals</span><b>→</b><span>Easy cross-training</span></div>
+            <div className="plan-row"><span>7-mile steady run</span><b>→</b><span>Rest + reassess</span></div>
+            <div className="plan-row"><span>16-mile long run</span><b>→</b><span>Reduced easy effort</span></div>
+            <div className="plan-verdict"><span>Plan decision</span><strong>Remove intensity. Reduce volume. Protect the rebuild.</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="results-section">
+        <div className="container results-layout">
+          <div className="results-copy">
+            <span className="eyebrow">What you are buying</span>
+            <h2 className="section-title">A revised schedule—not a motivational paragraph.</h2>
+            <p className="section-lede">
+              The value is the plan itself: the next week, every remaining
+              week, the new race expectation, and the reasoning behind each
+              change.
+            </p>
+          </div>
+          <div className="adaptive-feature-list">
+            {paidFeatures.map((feature, index) => (
+              <div key={feature.name}>
+                <span>0{index + 1}</span>
+                <div><strong>{feature.name}</strong><p>{feature.detail}</p></div>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="card card-accent">
-              <div className="stack">
-                <strong>Premium — the comeback plan</strong>
-                <div style={{ display: "flex", gap: "8px" }}>
-                  <button
-                    type="button"
-                    className={`btn btn-sm ${interval === "annual" ? "btn-primary" : "btn-secondary"}`}
-                    onClick={() => setInterval("annual")}
-                  >
-                    $72 / year
-                  </button>
-                  <button
-                    type="button"
-                    className={`btn btn-sm ${interval === "monthly" ? "btn-primary" : "btn-secondary"}`}
-                    onClick={() => setInterval("monthly")}
-                  >
-                    $9 / month
-                  </button>
-                </div>
-                {interval === "annual" ? (
-                  <span className="brand-sub">Two months free versus monthly.</span>
-                ) : null}
-                <ul className="list">
-                  {premiumFeatures.map((feature) => (
-                    <li key={feature.name} className="card card-outline">
-                      <strong>{feature.name}</strong>
-                      <div className="brand-sub">{feature.detail}</div>
-                    </li>
-                  ))}
-                </ul>
+      <section id="pricing" className="section container">
+        <div className="pricing-heading">
+          <span className="eyebrow">Choose the access that fits the problem</span>
+          <h2 className="section-title">The free tools stay free.</h2>
+          <p className="section-lede">Pay only when you need a plan that keeps changing with you.</p>
+        </div>
 
-                {isPremium ? (
-                  <div className="notice">You&apos;re on Premium. Thanks for the support!</div>
-                ) : user ? (
-                  <>
-                    <button
-                      className="btn btn-primary"
-                      type="button"
-                      disabled={checkoutState === "loading"}
-                      onClick={startCheckout}
-                    >
-                      {checkoutState === "loading" ? "Opening checkout..." : "Upgrade to Premium"}
-                    </button>
-                    {checkoutState === "unavailable" ? (
-                      <div className="notice">
-                        Checkout is launching soon — payments aren&apos;t switched
-                        on yet. Check back shortly.
-                      </div>
-                    ) : null}
-                    {checkoutState === "error" ? (
-                      <div className="notice">
-                        Something went wrong starting checkout. Try again in a
-                        minute.
-                      </div>
-                    ) : null}
-                  </>
-                ) : (
-                  <Link className="btn btn-primary" href="/login">
-                    Sign in to upgrade
-                  </Link>
-                )}
-                <span className="brand-sub">
-                  Cancel anytime. Your plans and logs stay yours either way.
-                </span>
-              </div>
-            </div>
+        <div className="pricing-grid">
+          <div className="pricing-card">
+            <span className="eyebrow">Free toolkit</span>
+            <strong className="price">$0</strong>
+            <p>Shoes, music, fuel, pace, and every base training plan.</p>
+            <ul className="list">
+              <li>Complete free tool results</li>
+              <li>All base-plan weeks</li>
+              <li>One sample adjusted week</li>
+              <li>No account required to begin</li>
+            </ul>
+            <Link className="btn btn-secondary" href="/#tools">Use the free tools</Link>
           </div>
 
-          <div className="card">
-            <div className="stack">
-              <strong>How the comeback works</strong>
-              <ol className="list">
-                <li className="card card-outline">
-                  <strong>1. Tell us what happened.</strong>
-                  <div className="brand-sub">
-                    Pick from 11 common running injuries — runner&apos;s knee, IT
-                    band, shin splints, plantar fasciitis, Achilles, and more —
-                    plus how bad it feels and which week of your plan you&apos;re
-                    in.
-                  </div>
-                </li>
-                <li className="card card-outline">
-                  <strong>2. Your remaining weeks get rebuilt.</strong>
-                  <div className="brand-sub">
-                    Rest where you need it, cross-training that holds fitness,
-                    a progressive return-to-run, volume caps, and a preserved
-                    taper when the calendar allows.
-                  </div>
-                </li>
-                <li className="card card-outline">
-                  <strong>3. You get an honest race-day call.</strong>
-                  <div className="brand-sub">
-                    Whether the race is still realistic, and what pace to
-                    expect if it is.
-                  </div>
-                </li>
-              </ol>
-              <div className="notice">
-                <strong>Sometimes the answer is no.</strong> Some injuries
-                don&apos;t negotiate — a suspected stress fracture never gets a
-                race-day green light here without professional clearance, and
-                the plan will tell you that to your face. That honesty is the
-                product.
-              </div>
-              <Link className="btn btn-secondary" href="/tools/training-plans#injury">
-                Try it free on a training plan
-              </Link>
-            </div>
+          <div className="pricing-card pricing-featured">
+            <span className="eyebrow">Adaptive membership</span>
+            <strong className="price">$9 <small>/ month</small></strong>
+            <p>For a training cycle that needs continued revision.</p>
+            <ul className="list">
+              <li>Complete revised schedule</li>
+              <li>Ongoing re-adjustments</li>
+              <li>Race-goal update</li>
+              <li>Plan history and explanations</li>
+            </ul>
+            {isPremium ? (
+              <div className="notice">Your Adaptive Training access is active.</div>
+            ) : user ? (
+              <button className="btn btn-primary" type="button" onClick={startCheckout} disabled={checkoutState === "loading"}>
+                {checkoutState === "loading" ? "Opening checkout..." : "Start Adaptive Training"}
+              </button>
+            ) : (
+              <Link className="btn btn-primary" href="/login">Sign in to start</Link>
+            )}
+            {checkoutState === "unavailable" ? <div className="notice">Checkout is not switched on yet. Email hello@runnertoolkit.com for early access.</div> : null}
+            {checkoutState === "error" ? <div className="notice">Checkout could not start. Please try again.</div> : null}
           </div>
+
+          <div className="pricing-card">
+            <span className="eyebrow">Plan Rescue pass</span>
+            <strong className="price">Fixed access</strong>
+            <p>For one immediate disruption without another indefinite subscription.</p>
+            <ul className="list">
+              <li>Fixed access window</li>
+              <li>Complete revised schedule</li>
+              <li>Limited follow-up revisions</li>
+              <li>No automatic renewal</li>
+            </ul>
+            <a className="btn btn-secondary" href="mailto:hello@runnertoolkit.com?subject=Plan%20Rescue%20early%20access">Join Plan Rescue early access</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="section container">
+        <div className="boundaries-card">
+          <span className="eyebrow">Clear boundaries</span>
+          <h2 className="section-title">Schedule adaptation is not diagnosis or treatment.</h2>
+          <p>
+            Runner Toolkit will not identify an injury, replace a clinician, or
+            tell you to run through red flags. Some inputs should end with a
+            recommendation to stop, seek professional assessment, or choose a
+            later race. That refusal is part of the product.
+          </p>
+          <Link className="text-link" href="/methodology">Read the Adaptive Training methodology →</Link>
         </div>
       </section>
     </div>
@@ -240,7 +200,7 @@ function PremiumContent() {
 
 export default function PremiumPage() {
   return (
-    <Suspense fallback={<div className="section container">Loading...</div>}>
+    <Suspense fallback={<div className="section container">Loading Adaptive Training…</div>}>
       <PremiumContent />
     </Suspense>
   );

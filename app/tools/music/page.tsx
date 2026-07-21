@@ -5,7 +5,6 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import { songs as initialSongs, type Song } from "@/lib/data";
 import SaveButton from "@/components/save-button";
-import ComebackCta from "@/components/comeback-cta";
 import { useAuth } from "@/components/auth-provider";
 import { getSupabaseClient } from "@/lib/supabase-client";
 
@@ -360,12 +359,13 @@ export default function MusicToolsPage() {
   const submitDisabled = supabaseAvailable && !usingSampleData && !user;
 
   return (
-    <div>
+    <div className="tool-page tool-page-music">
       <section className="tool-hero container">
-        <h1>Music Tools</h1>
+        <span className="eyebrow">Running Music</span>
+        <h1>Build a soundtrack for the run you are about to do.</h1>
         <p>
-          Discover top running tracks, vote with the community, and build
-          playlists for every pace.
+          Search by workout, energy, genre, and BPM. Find tracks that fit the
+          flow from the first easy mile to the final push.
         </p>
       </section>
 
@@ -373,7 +373,7 @@ export default function MusicToolsPage() {
         <div className="stack">
           <div className="card">
             <div className="stack">
-              <strong>Filters</strong>
+              <strong>What should this run sound like?</strong>
               <div className="filter-bar">
                 <div className="filter-group">
                   <span className="label">Search</span>
@@ -454,6 +454,29 @@ export default function MusicToolsPage() {
             </div>
           </div>
 
+          <div className="run-flow-card">
+            <div className="run-flow-heading">
+              <div>
+                <span className="eyebrow">Example run flow</span>
+                <strong>Easy start. Working middle. Fast finish.</strong>
+              </div>
+              <span className="brand-sub">Use the filters to shape the catalog below.</span>
+            </div>
+            <div className="run-flow-track">
+              {[
+                { phase: "Warm up", time: "0–15 min", song: topByWorkout.easy[0] },
+                { phase: "Lock in", time: "15–45 min", song: topByWorkout.tempo[0] },
+                { phase: "Final push", time: "45–60 min", song: topByWorkout.speed[0] }
+              ].map((step) => (
+                <div key={step.phase}>
+                  <span>{step.time}</span>
+                  <strong>{step.phase}</strong>
+                  <p>{step.song ? `${step.song.title} · ${step.song.artist}` : "Choose a track below"}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {!supabaseAvailable ? (
             <div className="notice">Demo mode: connect Supabase to save songs and votes.</div>
           ) : null}
@@ -468,7 +491,7 @@ export default function MusicToolsPage() {
           <div className="grid grid-2">
             <div className="stack">
               <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "12px" }}>
-                <strong>Leaderboard</strong>
+                <strong>Tracks for this run</strong>
                 <span className="badge">{filteredSongs.length} tracks</span>
               </div>
               <div className="card-grid">
@@ -658,10 +681,13 @@ export default function MusicToolsPage() {
                   GetSongBPM
                 </a>
               </p>
-              <ComebackCta />
-              <Link className="btn btn-ghost" href="/tools/fueling">
-                Next tool: Fueling
-              </Link>
+              <div className="contextual-next">
+                <span className="eyebrow">Going long?</span>
+                <div>
+                  <strong>Build the fuel schedule to go with the playlist.</strong>
+                  <Link className="text-link" href="/tools/fueling">Plan my fuel →</Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

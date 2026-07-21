@@ -63,7 +63,7 @@ function LoginForm() {
     <div>
       <section className="tool-hero container">
         <h1>Sign in</h1>
-        <p>Save your picks, log your training, and keep your comeback plan in one place.</p>
+        <p>Save shoe picks, fuel plans, playlists, and adaptive training in one place.</p>
       </section>
 
       <section className="section container">
@@ -146,9 +146,9 @@ function LoginForm() {
               <strong>Why create a free account?</strong>
               <ul className="list">
                 <li className="card card-outline">Save shoes, playlists, and plans across devices.</li>
-                <li className="card card-outline">Log workouts and fueling to see what actually works.</li>
+                <li className="card card-outline">Keep fuel practice notes and useful results together.</li>
                 <li className="card card-outline">
-                  Going Premium? Your comeback plan lives here — injury-adjusted
+                  Using Adaptive Training? Your revised plan lives here — adjusted
                   schedules on every training plan.
                 </li>
               </ul>

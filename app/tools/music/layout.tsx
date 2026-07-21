@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Running Music — 3,000+ Songs for Every Pace",
+  title: "Running Music — Find Tracks for This Run",
   description:
-    "A free library of 3,000+ community-ranked running songs with workout tags. Find tracks for easy runs, tempo days, and speed work.",
+    "Find running music by workout, energy, genre, and BPM—from easy miles to the final push.",
 };
 
 export default function Layout({ children }: { children: ReactNode }) {

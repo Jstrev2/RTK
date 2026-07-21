@@ -1,65 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import type { CSSProperties } from "react";
 import Newsletter from "@/components/newsletter";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 
 export const metadata: Metadata = {
-  title: "Runner Toolkit — The Training Plan That Survives Injury",
+  title: "Runner Toolkit — Run Smarter. Guess Less.",
   description:
-    "Injured mid-training? Runner Toolkit rebuilds your plan around 11 common running injuries and gets you back to the start line — plus a free shoe finder, pace calculator, fueling planner, and running music.",
+    "Free tools to find running shoes, build a run playlist, and plan race fuel—plus adaptive training when your schedule changes."
 };
-
-const tools = [
-  {
-    name: "Shoe Finder",
-    description:
-      "Answer a few questions and every current road shoe gets ranked for your stride, mileage, and budget — with the reasons why.",
-    href: "/tools/shoe-selector",
-    detail: "Pronation, mileage, cushion, budget",
-    badge: "Free"
-  },
-  {
-    name: "Pace Calculator",
-    description:
-      "Predict your finish time, convert between paces, and get mile-by-mile splits for any race distance.",
-    href: "/tools/pace-calculator",
-    detail: "Finish time, splits, conversions",
-    badge: "Free"
-  },
-  {
-    name: "Running Music",
-    description:
-      "Community-ranked running tracks with workout tags — build a playlist for easy days, tempo runs, and speed work.",
-    href: "/tools/music",
-    detail: "3,000+ songs, community votes",
-    badge: "Free"
-  },
-  {
-    name: "Fueling Planner",
-    description:
-      "Build a race-day nutrition schedule: carb targets, gel timing, and hydration guidance, mile by mile.",
-    href: "/tools/fueling",
-    detail: "5K to ultra, gel library",
-    badge: "Free"
-  },
-  {
-    name: "Attire Guide",
-    description:
-      "Dress right for any run — kit recommendations matched to the weather and how you like to train.",
-    href: "/tools/attire-guide",
-    detail: "Weather-based kit builder",
-    badge: "Free"
-  },
-  {
-    name: "Training Plans",
-    description:
-      "9 full plans from 5K to marathon with complete weekly schedules. If you get hurt mid-plan, this is where the comeback starts.",
-    href: "/tools/training-plans",
-    detail: "9 plans, injury-adaptive",
-    badge: "Free + Premium"
-  },
-];
 
 interface RecentArticle {
   slug: string;
@@ -69,9 +17,16 @@ interface RecentArticle {
   published_at: string;
 }
 
-async function getStats() {
+async function getHomeData() {
+  const fallback = {
+    shoes: 223,
+    songs: 3000,
+    gels: 48,
+    articles: [] as RecentArticle[]
+  };
   const supabase = getSupabaseAdmin();
-  if (!supabase) return { shoes: 223, songs: 3000, gels: 48, articles: [] as RecentArticle[] };
+  if (!supabase) return fallback;
+
   const [shoeRes, songRes, gelRes, articleRes] = await Promise.all([
     supabase.from("shoe_models").select("*", { count: "exact", head: true }).eq("is_active", true),
     supabase.from("music_songs").select("*", { count: "exact", head: true }),
@@ -81,243 +36,238 @@ async function getStats() {
       .select("slug, title, excerpt, tags, published_at")
       .eq("is_published", true)
       .order("published_at", { ascending: false })
-      .limit(3),
+      .limit(12)
   ]);
+
+  const articles = ((articleRes.data as RecentArticle[]) ?? [])
+    .filter((article) => {
+      const tags = article.tags.map((tag) => tag.toLowerCase());
+      return !tags.includes("news") && tags.some((tag) =>
+        ["gear", "shoes", "fueling", "music", "training", "race-day"].includes(tag)
+      );
+    })
+    .slice(0, 3);
+
   return {
-    shoes: shoeRes.count ?? 223,
-    songs: songRes.count ?? 3000,
-    gels: gelRes.count ?? 48,
-    articles: (articleRes.data as RecentArticle[]) ?? [],
+    shoes: shoeRes.count ?? fallback.shoes,
+    songs: songRes.count ?? fallback.songs,
+    gels: gelRes.count ?? fallback.gels,
+    articles
   };
 }
 
 export default async function HomePage() {
-  const stats = await getStats();
-
-  const highlights = [
-    { label: "Injury protocols", value: "11" },
-    { label: "Road shoes scored", value: `${stats.shoes}+` },
-    { label: "Running songs", value: `${stats.songs.toLocaleString()}+` },
-    { label: "Free training plans", value: "9" }
-  ];
+  const data = await getHomeData();
 
   return (
     <div>
-      <section className="hero container">
-        <div>
-          <span className="pill">Training plans with a Plan B</span>
+      <section className="home-hero container">
+        <div className="home-hero-copy">
+          <span className="eyebrow">Free tools made for runners</span>
           <h1>
-            Injured mid-training? We&apos;ll get you{" "}
-            <span className="text-grad">back to the start line.</span>
+            Run smarter.<br />
+            <span>Guess less.</span>
           </h1>
           <p>
-            Week nine of sixteen and your shin starts screaming — a normal plan
-            just keeps going like nothing happened. Runner Toolkit rebuilds your
-            remaining weeks around the injury: rest that heals, cross-training
-            that holds fitness, a progressive return to running, and an honest
-            answer about race day.
-          </p>
-          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-            <Link className="btn btn-primary" href="/tools/training-plans#injury">
-              Rebuild my plan
-            </Link>
-            <Link className="btn btn-secondary" href="/#tools">
-              Explore the free toolkit
-            </Link>
-          </div>
-        </div>
-        <div className="hero-panel">
-          <div className="hero-card fade-up" style={{ "--delay": "0.1s" } as CSSProperties}>
-            <div className="stack">
-              <strong>When you report an injury</strong>
-              <ul className="list">
-                <li className="brand-sub">🛌 Rest weeks where you need them</li>
-                <li className="brand-sub">🚶 Progressive return-to-run protocol</li>
-                <li className="brand-sub">🔁 Cross-training matched to the injury</li>
-                <li className="brand-sub">📉 Taper preserved when the calendar allows</li>
-                <li className="brand-sub">🏁 Honest race-day pace expectations</li>
-              </ul>
-            </div>
-          </div>
-          <div className="card card-accent fade-up" style={{ "--delay": "0.2s" } as CSSProperties}>
-            <strong>The rest of the toolkit is free</strong>
-            <p>
-              Shoe finder, pace calculator, fueling planner, music, attire —
-              free forever, no account required. Premium exists for one thing:
-              the comeback.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section container">
-        <div className="grid grid-3">
-          <div className="card card-outline fade-up">
-            <div className="stack">
-              <strong>1. Train for your race</strong>
-              <p>
-                Pick any of 9 free plans, 5K to marathon, and follow the full
-                weekly schedule. No paywall, no trial clock.
-              </p>
-            </div>
-          </div>
-          <div className="card card-outline fade-up" style={{ "--delay": "0.08s" } as CSSProperties}>
-            <div className="stack">
-              <strong>2. Something breaks</strong>
-              <p>
-                Runner&apos;s knee, shin splints, IT band, plantar fasciitis, a
-                suspect stress fracture — tell us what hurts, how bad, and which
-                week you&apos;re in.
-              </p>
-            </div>
-          </div>
-          <div className="card card-outline fade-up" style={{ "--delay": "0.16s" } as CSSProperties}>
-            <div className="stack">
-              <strong>3. We rebuild the road back</strong>
-              <p>
-                Your remaining weeks get rebuilt: recover first, keep the
-                fitness you earned, and show up on race day knowing exactly what
-                you&apos;re capable of.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div style={{ marginTop: "20px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
-          <Link className="btn btn-primary" href="/premium">
-            See what Premium includes
-          </Link>
-          <Link className="btn btn-ghost" href="/tools/training-plans#injury">
-            Try it free on any plan
-          </Link>
-        </div>
-      </section>
-
-      <section id="tools" className="section container">
-        <div className="stack" style={{ marginBottom: "24px" }}>
-          <h2 className="section-title">Come for the free tools</h2>
-          <p className="section-lede">
-            Everything below is free — really free, no trial clock. It&apos;s how
-            most runners find us. The comeback plan is why they stay.
+            Find shoes that fit how you run. Build music for the workout. Plan
+            fuel for the distance. Get a useful answer in minutes—no account
+            required.
           </p>
         </div>
-        <div className="grid grid-3">
-          {tools.map((tool, index) => (
-            <Link
-              key={tool.name}
-              href={tool.href}
-              className="card card-accent fade-up"
-              style={{ "--delay": `${index * 0.08}s` } as CSSProperties}
-            >
-              <div className="stack">
-                <strong>{tool.name}</strong>
-                <p>{tool.description}</p>
-                <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
-                  <span className="badge">{tool.badge}</span>
-                  <span className="tag">{tool.detail}</span>
-                </div>
-              </div>
-            </Link>
-          ))}
+
+        <div className="home-hero-note" aria-label="Runner Toolkit promise">
+          <span>Before the run</span>
+          <strong>Make the decisions.</strong>
+          <span>When plans change</span>
+          <strong>Make a better plan.</strong>
         </div>
       </section>
 
-      {stats.articles.length > 0 && (
-        <section className="section container">
-          <div className="stack" style={{ marginBottom: "24px" }}>
-            <h2 className="section-title">The Rundown</h2>
+      <section id="tools" className="launch-section container" aria-labelledby="choose-tool-title">
+        <div className="section-heading-row">
+          <div>
+            <span className="eyebrow">Start with the run in front of you</span>
+            <h2 id="choose-tool-title" className="section-title">What do you need to figure out?</h2>
+          </div>
+          <p>Three focused tools. Each one gives you an answer you can act on.</p>
+        </div>
+
+        <div className="launch-grid">
+          <Link href="/tools/shoe-selector" className="launch-card launch-shoes">
+            <div className="launch-card-top">
+              <span className="launch-number">01</span>
+              <span className="launch-meta">{data.shoes}+ current road shoes</span>
+            </div>
+            <div>
+              <span className="tool-kicker">Shoe Finder</span>
+              <h3>Find the shoes that fit your run.</h3>
+              <p>
+                Tell us what you are training for, how you like a shoe to feel,
+                what fits your foot, and what you want to spend.
+              </p>
+            </div>
+            <div className="shoe-preview" aria-hidden="true">
+              <span><b>Daily miles</b><i>balanced + durable</i></span>
+              <span><b>Faster days</b><i>light + responsive</i></span>
+              <span><b>Race day</b><i>fast + efficient</i></span>
+            </div>
+            <span className="launch-action">Find my shoes <b>→</b></span>
+          </Link>
+
+          <Link href="/tools/music" className="launch-card launch-music">
+            <div className="launch-card-top">
+              <span className="launch-number">02</span>
+              <span className="launch-meta">{data.songs.toLocaleString()}+ tracks</span>
+            </div>
+            <div>
+              <span className="tool-kicker">Running Music</span>
+              <h3>Build a soundtrack for this run.</h3>
+              <p>
+                Match the workout, duration, BPM, and energy you want—from the
+                first easy mile to the final push.
+              </p>
+            </div>
+            <div className="music-preview" aria-hidden="true">
+              <span style={{ width: "22%" }}>Warm up</span>
+              <span style={{ width: "46%" }}>Lock in</span>
+              <span style={{ width: "32%" }}>Finish</span>
+            </div>
+            <span className="launch-action">Build my playlist <b>→</b></span>
+          </Link>
+
+          <Link href="/tools/fueling" className="launch-card launch-fuel">
+            <div className="launch-card-top">
+              <span className="launch-number">03</span>
+              <span className="launch-meta">{data.gels}+ fuel products</span>
+            </div>
+            <div>
+              <span className="tool-kicker">Fuel Planner</span>
+              <h3>Know what to take—and when.</h3>
+              <p>
+                Turn your distance, expected time, conditions, and preferred
+                fuel into a practical schedule and packing list.
+              </p>
+            </div>
+            <div className="fuel-preview" aria-hidden="true">
+              <span><b>0:25</b>Fuel</span>
+              <span><b>0:50</b>Fuel</span>
+              <span><b>1:15</b>Fuel</span>
+            </div>
+            <span className="launch-action">Plan my fuel <b>→</b></span>
+          </Link>
+        </div>
+      </section>
+
+      <section className="results-section">
+        <div className="container results-layout">
+          <div className="results-copy">
+            <span className="eyebrow">Answers, not more research</span>
+            <h2 className="section-title">Useful enough to change your next run.</h2>
             <p className="section-lede">
-              Latest news, guides, and deep dives from the team.
+              No generic top-ten lists. No unexplained score and a hundred
+              options. Runner Toolkit narrows the choice, shows the tradeoffs,
+              and gives you a clear next step.
             </p>
+            <Link href="/methodology" className="text-link">See how recommendations work →</Link>
           </div>
-          <div className="grid grid-3">
-            {stats.articles.map((article, index) => (
-              <Link
-                key={article.slug}
-                href={`/rundown/${article.slug}`}
-                className="card card-accent fade-up"
-                style={{ "--delay": `${index * 0.08}s` } as CSSProperties}
-              >
-                <div className="stack">
-                  <strong>{article.title}</strong>
-                  {article.excerpt && (
-                    <p style={{ color: "var(--ink-2)", margin: 0, lineHeight: 1.6 }}>
-                      {article.excerpt}
-                    </p>
-                  )}
-                  <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
-                    {article.tags.slice(0, 2).map((tag) => (
-                      <span key={tag} className="tag">{tag}</span>
-                    ))}
-                  </div>
+
+          <div className="result-principles">
+            <div>
+              <span>01</span>
+              <strong>Personalized</strong>
+              <p>Built around the run, runner, and constraints—not a universal ranking.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <strong>Explainable</strong>
+              <p>Every recommendation includes reasons, assumptions, and tradeoffs.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <strong>Independent</strong>
+              <p>Retailer relationships never decide what gets recommended.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="adaptive-section container">
+        <div className="adaptive-copy">
+          <span className="eyebrow">Runner Toolkit Adaptive Training</span>
+          <h2>When the plan stops fitting, change the plan.</h2>
+          <p>
+            Missed two weeks? Travel wrecked the schedule? Coming back after an
+            issue with appropriate clearance? Tell us what changed and get a
+            revised path forward—with an honest answer when the plan should not
+            continue.
+          </p>
+          <div className="button-row">
+            <Link href="/premium" className="btn btn-primary">See Adaptive Training</Link>
+            <Link href="/tools/training-plans#adapt" className="btn btn-secondary">Try a sample adjustment</Link>
+          </div>
+        </div>
+
+        <div className="plan-compare" aria-label="Example training plan adjustment">
+          <div className="plan-compare-head">
+            <span>Week 9 · before</span>
+            <span>Week 9 · adjusted</span>
+          </div>
+          <div className="plan-row">
+            <span>Tue · Intervals</span>
+            <b>→</b>
+            <span>Tue · Easy cross-train</span>
+          </div>
+          <div className="plan-row">
+            <span>Thu · 7 miles</span>
+            <b>→</b>
+            <span>Thu · Rest + reassess</span>
+          </div>
+          <div className="plan-row">
+            <span>Sun · 16 miles</span>
+            <b>→</b>
+            <span>Sun · Reduced easy effort</span>
+          </div>
+          <div className="plan-verdict">
+            <span>What changed</span>
+            <strong>Intensity removed. Volume reduced. Goal updated.</strong>
+          </div>
+        </div>
+      </section>
+
+      {data.articles.length > 0 ? (
+        <section className="guides-section container">
+          <div className="section-heading-row">
+            <div>
+              <span className="eyebrow">Runner Guides</span>
+              <h2 className="section-title">Use the answer well.</h2>
+            </div>
+            <Link href="/rundown" className="text-link">Browse all guides →</Link>
+          </div>
+          <div className="guide-grid">
+            {data.articles.map((article) => (
+              <Link key={article.slug} href={`/rundown/${article.slug}`} className="guide-card">
+                <div className="guide-tags">
+                  {article.tags.slice(0, 2).map((tag) => <span key={tag}>{tag}</span>)}
                 </div>
+                <h3>{article.title}</h3>
+                {article.excerpt ? <p>{article.excerpt}</p> : null}
+                <span className="text-link">Read guide →</span>
               </Link>
             ))}
           </div>
-          <div style={{ marginTop: "20px" }}>
-            <Link href="/rundown" className="btn btn-ghost">
-              View all articles &rarr;
-            </Link>
-          </div>
         </section>
-      )}
+      ) : null}
 
-      <section id="how-it-works" className="section container">
-        <div className="grid grid-2">
-          <div className="stack">
-            <h2 className="section-title">
-              The free tools get you training. The premium one keeps you training.
-            </h2>
-            <ul className="list">
-              <li className="card card-outline">
-                Free means free: shoes, pace, fueling, music, attire, and every
-                base plan work without an account — forever.
-              </li>
-              <li className="card card-outline">
-                Premium does one job. When an injury tries to end your season,
-                it rebuilds your plan and gets you to the start line.
-              </li>
-              <li className="card card-outline">
-                Honest by design: protocols follow standard return-to-run
-                practice, red flags tell you when to see a professional, and
-                some injuries never get a race-day green light from us.
-              </li>
-            </ul>
-            <div className="stat-grid">
-              {highlights.map((item) => (
-                <div key={item.label} className="stat">
-                  <strong>{item.value}</strong>
-                  <span>{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <Newsletter />
+      <section className="newsletter-section container">
+        <div>
+          <span className="eyebrow">Stay useful, stay occasional</span>
+          <h2 className="section-title">Get better answers in your inbox.</h2>
+          <p className="section-lede">
+            New shoe matches, practical race prep, fresh playlists, and training
+            updates. No daily noise.
+          </p>
         </div>
-      </section>
-
-      <section className="section container">
-        <div className="card card-accent">
-          <div className="stack">
-            <span className="pill">Runner Toolkit Premium</span>
-            <h2 className="section-title" style={{ margin: 0 }}>
-              Broken plans welcome.
-            </h2>
-            <p>
-              Report the injury and get your race-day verdict, injury guardrails,
-              and first rebuilt week free. Unlock the full comeback schedule when
-              you&apos;re ready — $9/month or $72/year. Cancel when you&apos;re
-              back.
-            </p>
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <Link className="btn btn-primary" href="/tools/training-plans#injury">
-                Rebuild my plan
-              </Link>
-              <Link className="btn btn-secondary" href="/premium">
-                See Premium pricing
-              </Link>
-            </div>
-          </div>
-        </div>
+        <Newsletter />
       </section>
     </div>
   );

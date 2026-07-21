@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import ComebackCta from "@/components/comeback-cta";
 
 const distances = [
   { id: "1mi", label: "1 Mile", miles: 1 },
@@ -103,9 +102,10 @@ export default function PaceCalculatorPage() {
   }, [result, miles]);
 
   return (
-    <div>
+    <div className="tool-page tool-page-pace">
       <section className="tool-hero container">
-        <h1>Pace Calculator</h1>
+        <span className="eyebrow">Quick utility</span>
+        <h1>Turn pace into time—and time into a plan.</h1>
         <p>
           Enter a finish time or a pace to calculate splits, predict race
           times, and convert between units.
@@ -264,9 +264,8 @@ export default function PaceCalculatorPage() {
               </div>
             )}
 
-            <ComebackCta lead="Chasing a finish time is usually how we get hurt in the first place." />
             <Link className="btn btn-ghost" href="/tools/fueling">
-              Plan your race-day fueling
+              Use this pace in the Fuel Planner
             </Link>
           </div>
         </div>
