@@ -4,11 +4,14 @@ import { useState } from "react";
 import Link from "next/link";
 import AuthActions from "@/components/auth-actions";
 
-const navItems = [
+const toolItems = [
   { href: "/tools/shoe-selector", label: "Shoes" },
   { href: "/tools/music", label: "Music" },
-  { href: "/tools/fueling", label: "Fuel" },
-  { href: "/tools/training-plans", label: "Training" },
+  { href: "/tools/fueling", label: "Fuel" }
+];
+
+const trainingItems = [
+  { href: "/tools/training-plans", label: "Free plans" },
   { href: "/premium", label: "Adapt my plan", cta: true }
 ];
 
@@ -25,17 +28,33 @@ export default function SiteHeader() {
             <div className="brand-sub">Run smarter. Guess less.</div>
           </span>
         </Link>
-        <nav className={`nav ${menuOpen ? "nav-open" : ""}`}>
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={item.cta ? "nav-cta" : undefined}
-              onClick={() => setMenuOpen(false)}
-            >
-              {item.label}
-            </Link>
-          ))}
+        <nav className={`nav ${menuOpen ? "nav-open" : ""}`} aria-label="Primary navigation">
+          <div className="nav-cluster">
+            <span className="nav-cluster-label">Tools</span>
+            <div className="nav-cluster-links">
+              {toolItems.map((item) => (
+                <Link key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <span className="nav-separator" aria-hidden="true" />
+          <div className="nav-cluster nav-cluster-training">
+            <span className="nav-cluster-label">Training</span>
+            <div className="nav-cluster-links">
+              {trainingItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={item.cta ? "nav-cta" : undefined}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
           <div className="nav-auth-mobile">
             <AuthActions />
           </div>
