@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandMark from "@/components/brand-mark";
 
 const toolLinks = [
   { href: "/tools/shoe-selector", label: "Shoe Finder" },
@@ -13,7 +14,7 @@ export default function SiteFooter() {
       <div className="container footer-grid">
         <div className="footer-intro">
           <div className="brand">
-            <span className="brand-mark">RT</span>
+            <BrandMark />
             <span>Runner Toolkit</span>
           </div>
           <p>Better decisions before, during, and between the miles.</p>

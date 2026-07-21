@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import AuthActions from "@/components/auth-actions";
+import BrandMark from "@/components/brand-mark";
 
 const toolItems = [
   { href: "/tools/shoe-selector", label: "Shoes" },
@@ -22,7 +23,7 @@ export default function SiteHeader() {
     <header className="site-header">
       <div className="container site-header-inner">
         <Link href="/" className="brand" onClick={() => setMenuOpen(false)}>
-          <span className="brand-mark">RT</span>
+          <BrandMark />
           <span>
             Runner Toolkit
             <div className="brand-sub">Run smarter. Guess less.</div>
