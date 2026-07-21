@@ -1610,10 +1610,10 @@ details[open] summary {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 300px;
   gap: 64px;
-  align-items: flex-end;
-  min-height: 610px;
-  padding-top: 110px;
-  padding-bottom: 86px;
+  align-items: center;
+  min-height: 500px;
+  padding-top: 58px;
+  padding-bottom: 68px;
 }
 
 .home-hero-copy h1 {
@@ -2123,8 +2123,8 @@ details[open] summary {
 
 @media (max-width: 720px) {
   .home-hero {
-    padding-top: 64px;
-    padding-bottom: 46px;
+    padding-top: 44px;
+    padding-bottom: 48px;
   }
 
   .home-hero-copy h1 {
