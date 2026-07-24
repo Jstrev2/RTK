@@ -1335,6 +1335,7 @@ export type Song = {
   id: string;
   title: string;
   artist: string;
+  spotifyId?: string | null;
   bpm: number | null;
   genre: string[];
   energy: "low" | "medium" | "high" | "extreme";
