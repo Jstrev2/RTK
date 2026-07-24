@@ -17,3 +17,15 @@ out/
 .mcp.json
 *.tsbuildinfo
 nul
+.env*
+
+# build/deploy artifacts
+.open-next/
+.wrangler/
+.sites-bundle/
+dist/
+test-results/
+
+# local tooling / reference
+.claude/
+solereview.html
