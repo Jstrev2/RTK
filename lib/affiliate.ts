@@ -62,5 +62,42 @@ export const getRetailerLinks = (shoe: {
   ];
 };
 
+/**
+ * Retailer search links for run fuel. Search pages are more durable than
+ * product-detail URLs and can use the same affiliate wrappers as shoes.
+ */
+export const getFuelRetailerLinks = (product: {
+  name: string;
+  brand: string;
+}): RetailerLink[] => {
+  const query = encodeURIComponent(`${product.brand} ${product.name}`);
+  const amazon = `https://www.amazon.com/s?k=${query}+energy+gel${
+    AMAZON_TAG ? `&tag=${AMAZON_TAG}` : ""
+  }`;
+  const runningWarehouse = `https://www.runningwarehouse.com/searchresults.html?searchterms=${query}`;
+  const fleetFeet = `https://www.fleetfeet.com/search?q=${query}`;
+
+  return [
+    {
+      retailer: "amazon",
+      label: "Amazon",
+      url: amazon,
+      affiliated: Boolean(AMAZON_TAG)
+    },
+    {
+      retailer: "running_warehouse",
+      label: "Running Warehouse",
+      url: wrap(RW_WRAP, runningWarehouse),
+      affiliated: Boolean(RW_WRAP)
+    },
+    {
+      retailer: "fleet_feet",
+      label: "Fleet Feet",
+      url: wrap(FLEET_FEET_WRAP, fleetFeet),
+      affiliated: Boolean(FLEET_FEET_WRAP)
+    }
+  ];
+};
+
 export const hasAnyAffiliateProgram = () =>
   Boolean(AMAZON_TAG || RW_WRAP || FLEET_FEET_WRAP || DICKS_WRAP);

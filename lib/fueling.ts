@@ -25,6 +25,7 @@ export type FuelingProduct = {
   sodiumMg?: number;
   caffeineMg?: number;
   notes?: string;
+  productUrl?: string;
 };
 
 export type FuelingPlan = {
@@ -65,16 +66,6 @@ const carbRange = (minutes: number, experience: FuelingInputs["experience"]) => 
   return "60-90g";
 };
 
-const tempMultiplier = (temperature: FuelingInputs["temperature"]) => {
-  if (temperature === "hot") {
-    return 1.3;
-  }
-  if (temperature === "warm") {
-    return 1.15;
-  }
-  return 1;
-};
-
 const sodiumRange = (temperature: FuelingInputs["temperature"]) => {
   if (temperature === "hot") {
     return "500-700mg";
@@ -83,6 +74,19 @@ const sodiumRange = (temperature: FuelingInputs["temperature"]) => {
     return "400-600mg";
   }
   return "300-500mg";
+};
+
+const fluidRange = (temperature: FuelingInputs["temperature"]) => {
+  if (temperature === "hot") {
+    return "18-28 oz";
+  }
+  if (temperature === "warm") {
+    return "16-24 oz";
+  }
+  if (temperature === "cool") {
+    return "12-18 oz";
+  }
+  return "14-20 oz";
 };
 
 export const fuelingProducts: FuelingProduct[] = [
@@ -192,7 +196,7 @@ export const fuelingProducts: FuelingProduct[] = [
   }
 ];
 
-const defaultCarbTarget = (
+export const suggestCarbTarget = (
   minutes: number,
   experience: FuelingInputs["experience"]
 ) => {
@@ -235,13 +239,10 @@ export const buildFuelingPlan = (input: FuelingInputs & { gels?: FuelingProduct[
   const totalCalories = caloriesPerMile * input.distanceMiles;
   const caloriesPerHour = totalCalories / hours;
 
-  const fluidBase = (input.weightLbs / 2) / hours;
-  const fluidsPerHour = fluidBase * tempMultiplier(input.temperature);
-
   const gel = resolveGel(input.gelId, input.gels);
   const carbTargetPerHour =
     input.carbTargetPerHour ??
-    defaultCarbTarget(input.goalTimeMinutes, input.experience);
+    suggestCarbTarget(input.goalTimeMinutes, input.experience);
 
   const interval = clamp(
     Math.round((gel.carbs / carbTargetPerHour) * 60),
@@ -267,8 +268,7 @@ export const buildFuelingPlan = (input: FuelingInputs & { gels?: FuelingProduct[
     caloriesPerHour: Math.round(caloriesPerHour),
     carbsPerHour: carbRange(input.goalTimeMinutes, input.experience),
     carbTargetPerHour,
-    fluidsPerHour: `${clamp(Math.round(fluidsPerHour), 8, 30)}-` +
-      `${clamp(Math.round(fluidsPerHour + 4), 12, 34)} oz`,
+    fluidsPerHour: fluidRange(input.temperature),
     sodiumPerHour: sodiumRange(input.temperature),
     gel,
     gelIntervalMinutes: interval,
