@@ -3,13 +3,13 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/components/auth-provider";
-import { getSupabaseClient } from "@/lib/supabase-client";
 
 export default function AuthActions() {
   const { user, loading, supabaseAvailable } = useAuth();
   const router = useRouter();
 
   const handleSignOut = async () => {
+    const { getSupabaseClient } = await import("@/lib/supabase-client");
     const supabase = getSupabaseClient();
     if (!supabase) {
       return;

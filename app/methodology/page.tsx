@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "How Runner Toolkit Recommendations Work",
-  description: "How Runner Toolkit creates explainable shoe, music, fuel, and adaptive training recommendations."
-};
+  description: "How Runner Toolkit creates explainable shoe, music, fuel, and adaptive training recommendations.",
+  path: "/methodology",
+});
 
 const methods = [
   {

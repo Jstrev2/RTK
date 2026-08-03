@@ -1,18 +1,16 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
+import JsonLd from "@/components/json-ld";
+import { pageMetadata, SITE_URL } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const revalidate = 3600;
+
+export const metadata = pageMetadata({
   title: "Runner Guides — Shoes, Music, Fuel, and Training",
   description:
     "Practical guides that help runners choose shoes, build playlists, practice fueling, and use a training plan well.",
-  openGraph: {
-    title: "Runner Guides",
-    description:
-      "Practical guidance connected to the tools runners use.",
-    type: "website",
-  },
-};
+  path: "/rundown",
+});
 
 interface Article {
   slug: string;
@@ -52,6 +50,20 @@ export default async function RundownPage() {
 
   return (
     <div className="editorial-page">
+      {articles.length > 0 ? (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            itemListElement: articles.map((article, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              url: `${SITE_URL}/rundown/${article.slug}`,
+              name: article.title,
+            })),
+          }}
+        />
+      ) : null}
       <section className="container tool-hero">
         <span className="eyebrow">Runner Guides</span>
         <h1>Use the answer well.</h1>
@@ -82,8 +94,10 @@ export default async function RundownPage() {
                 {article.cover_image && (
                   <img
                     src={article.cover_image}
-                    alt=""
+                    alt={article.title}
                     className="catalog-image"
+                    loading="lazy"
+                    decoding="async"
                     style={{ marginBottom: "12px" }}
                   />
                 )}

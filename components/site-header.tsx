@@ -8,7 +8,8 @@ import BrandMark from "@/components/brand-mark";
 const toolItems = [
   { href: "/tools/shoe-selector", label: "Shoes" },
   { href: "/tools/music", label: "Music" },
-  { href: "/tools/fueling", label: "Fuel" }
+  { href: "/tools/fueling", label: "Fuel" },
+  { href: "/rundown", label: "Guides" }
 ];
 
 const trainingItems = [

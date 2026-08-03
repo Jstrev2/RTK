@@ -3,10 +3,13 @@ import Link from "next/link";
 import Newsletter from "@/components/newsletter";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
-  title: "Runner Toolkit — Run Smarter. Guess Less.",
+  title: { absolute: "Runner Toolkit — Run Smarter. Guess Less." },
   description:
-    "Free tools to find running shoes, build a run playlist, and plan race fuel—plus adaptive training when your schedule changes."
+    "Free tools to find running shoes, build a run playlist, and plan race fuel—plus adaptive training when your schedule changes.",
+  alternates: { canonical: "/" }
 };
 
 interface RecentArticle {

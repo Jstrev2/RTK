@@ -1,12 +1,32 @@
-import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import JsonLd from "@/components/json-ld";
+import { pageMetadata, SITE_URL } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Shoe Finder — Find Shoes That Fit Your Run",
-  description:
-    "Tell us what you run, the ride and fit you prefer, and your budget. Get a short, explainable list of road shoes worth trying.",
-};
+const description =
+  "Tell us what you run, the ride and fit you prefer, and your budget. Get a short, explainable list of road running shoes worth trying.";
+
+export const metadata = pageMetadata({
+  title: "Running Shoe Finder — Match Shoes to How You Run",
+  description,
+  path: "/tools/shoe-selector",
+});
 
 export default function Layout({ children }: { children: ReactNode }) {
-  return children;
+  return (
+    <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          name: "Running Shoe Finder",
+          url: `${SITE_URL}/tools/shoe-selector`,
+          description,
+          applicationCategory: "HealthApplication",
+          operatingSystem: "Any",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        }}
+      />
+      {children}
+    </>
+  );
 }

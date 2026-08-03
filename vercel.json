@@ -1,15 +1,34 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.runnertoolkit.com" }],
+      "destination": "https://runnertoolkit.com/:path*",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(og\\.jpg|og\\.png|icon\\.svg)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
+    }
+  ],
   "crons": [
     {
-      "path": "/api/ingest?secret=${INGEST_SECRET}",
+      "path": "/api/ingest",
       "schedule": "0 6 * * 1"
     },
     {
-      "path": "/api/catalog/seed?secret=${INGEST_SECRET}",
+      "path": "/api/catalog/seed",
       "schedule": "0 7 * * 3"
     },
     {
-      "path": "/api/catalog/import?secret=${INGEST_SECRET}",
+      "path": "/api/catalog/import",
       "schedule": "0 8 * * 3"
     }
   ]

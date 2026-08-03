@@ -198,6 +198,30 @@ export default function TrainingPlansPage() {
           </div>
         </div>
       </section>
+
+      <section className="section container prose-block">
+        <h2>How to choose the right running plan</h2>
+        <p>
+          Match the plan to your last four weeks of running, not the runner
+          you plan to become. If you&apos;re running 15 miles a week now, a
+          plan that starts at 25 will hurt you by week three.
+        </p>
+        <ul>
+          <li>5K plans: 6–10 weeks, 3–4 runs per week. The best first-race distance.</li>
+          <li>10K plans: 8–10 weeks. Adds one quality workout per week.</li>
+          <li>Half marathon plans: 10–14 weeks. The long run becomes the anchor of your week.</li>
+          <li>Marathon plans: 16–20 weeks. Consistency beats any single workout.</li>
+        </ul>
+        <h2>What if I miss a week?</h2>
+        <p>
+          Don&apos;t make up the miles—that&apos;s how a missed week becomes a
+          missed month. Rejoin the plan where the calendar says you are and
+          downgrade the next hard workout. Missed more than two weeks?
+          That&apos;s what <Link href="/premium">Adaptive Training</Link> is
+          built for: it rebuilds the remaining schedule instead of pretending
+          nothing happened.
+        </p>
+      </section>
     </div>
   );
 }

@@ -270,6 +270,32 @@ export default function PaceCalculatorPage() {
           </div>
         </div>
       </section>
+
+      <section className="section container prose-block">
+        <h2>Common race pace targets</h2>
+        <ul>
+          <li>Sub-25 5K: 8:03 per mile</li>
+          <li>Sub-60 10K: 9:39 per mile</li>
+          <li>Sub-2:00 half marathon: 9:09 per mile</li>
+          <li>Sub-4:00 marathon: 9:09 per mile</li>
+          <li>3:00 marathon: 6:52 per mile</li>
+        </ul>
+        <h2>How the calculator works</h2>
+        <p>
+          Pick a distance and enter either a finish time or a pace. You get
+          pace per mile and per kilometer, speed in mph, mile-by-mile splits,
+          and predicted finish times for other distances at the same effort.
+        </p>
+        <h2>Why race predictions are estimates</h2>
+        <p>
+          The predictions hold your pace flat across distances. Real fitness
+          doesn&apos;t work that way—most runners slow as the distance
+          doubles—so treat a marathon prediction from a 5K time as a ceiling,
+          not a promise. The longer the jump, the more training it takes to
+          make the number real. A <Link href="/tools/training-plans">training
+          plan</Link> is how you close that gap.
+        </p>
+      </section>
     </div>
   );
 }

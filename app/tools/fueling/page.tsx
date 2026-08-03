@@ -524,7 +524,7 @@ export default function FuelingPage() {
   };
 
   return (
-    <main className="tool-page tool-page-fuel fuel-planner-simple">
+    <div className="tool-page tool-page-fuel fuel-planner-simple">
       <section className="tool-hero container fuel-tool-hero">
         <span className="eyebrow">Free Fuel Planner</span>
         <h1>A fueling schedule you can actually follow.</h1>
@@ -1087,6 +1087,6 @@ export default function FuelingPage() {
           change what is appropriate.
         </p>
       </section>
-    </main>
+    </div>
   );
 }

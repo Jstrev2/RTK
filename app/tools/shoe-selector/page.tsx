@@ -181,7 +181,9 @@ export default function ShoeSelectorPage() {
     let active = true;
     supabase
       .from("shoe_models")
-      .select("*")
+      .select(
+        "id,item_key,name,brand,price,usage_types,foot_strike,cadence,toe_box,cushion,stability,surfaces,weight_range,stack,drop,weight_mens,weight_womens,description,pros,cons,popularity,release_date,release_year,product_url,retailer_url,image_url,is_active"
+      )
       .eq("is_active", true)
       .then(({ data, error }) => {
         if (!active) return;
@@ -323,7 +325,7 @@ export default function ShoeSelectorPage() {
   };
 
   return (
-    <main className="page-shell shoe-finder-simple">
+    <div className="page-shell shoe-finder-simple">
       <section className="container tool-hero tool-hero-simple">
         <div className="eyebrow">Free shoe finder</div>
         <h1>Three answers. Three shoes worth considering.</h1>
@@ -689,7 +691,9 @@ export default function ShoeSelectorPage() {
                 {(showAll ? catalogShoes : catalogShoes.slice(0, maxBrowseResults)).map((shoe) => (
                   <tr key={shoe.id}>
                     <td>
-                      <strong>{displayName(shoe)}</strong>
+                      <Link href={"/shoes/" + shoe.id}>
+                        <strong>{displayName(shoe)}</strong>
+                      </Link>
                       {shoe.isNew && <span className="tag">New</span>}
                     </td>
                     <td>{prettyLabel(shoe.usageTypes[0] || "daily_trainer")}</td>
@@ -742,6 +746,32 @@ export default function ShoeSelectorPage() {
         Runner Toolkit may earn a commission from retailer links. That never changes
         the order of these recommendations or the price you pay.
       </p>
-    </main>
+
+      <section className="container section prose-block">
+        <h2>How the shoe finder works</h2>
+        <p>
+          Every shoe in our database of 220+ current road running shoes is
+          tagged for its job (daily miles, long runs, speed work, race day,
+          recovery), its ride from firm to plush, its support level, its fit,
+          and its price. Your answers filter and score that catalog. We show
+          three shoes on purpose: the best overall match, the closest match
+          for less money, and a different ride style in case the first two
+          feel wrong at try-on. Prefer to look at everything? Browse the
+          full <Link href="/shoes">running shoe database</Link>.
+        </p>
+        <h2>Why only three shoes?</h2>
+        <p>
+          Because a hundred options is how you end up buying the same shoe you
+          already own. Three lets you compare with intention—and every pick
+          shows its tradeoff before you spend anything.
+        </p>
+        <h2>When should I replace running shoes?</h2>
+        <p>
+          Most road shoes hold up for 300–500 miles. If you feel new aches
+          after ordinary runs, or the midsole creases deeply and stops
+          bouncing back, start the search before the shoe fails on you.
+        </p>
+      </section>
+    </div>
   );
 }

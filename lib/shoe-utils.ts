@@ -27,7 +27,16 @@ export type DbShoe = {
   release_year: number | null;
   product_url: string | null;
   retailer_url: string | null;
+  image_url: string | null;
   is_active: boolean;
+};
+
+/** Absolute URLs pass through; site-relative and bare paths get the origin. */
+const normalizeImageUrl = (value: string): string => {
+  if (value.startsWith("http") || value.startsWith("//")) {
+    return value;
+  }
+  return `https://runnertoolkit.com${value.startsWith("/") ? "" : "/"}${value}`;
 };
 
 /** Map a Supabase shoe_models row to the Shoe type used by the UI. */
@@ -59,6 +68,7 @@ export const mapDbShoe = (row: DbShoe): Shoe => {
     releaseDate: row.release_date ?? undefined,
     releaseYear: row.release_year ?? undefined,
     productUrl: row.product_url ?? undefined,
+    imageUrl: row.image_url ? normalizeImageUrl(row.image_url) : undefined,
   };
 };
 

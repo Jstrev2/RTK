@@ -1,6 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Terms and Important Limitations" };
+export const metadata = pageMetadata({
+  title: "Terms and Important Limitations",
+  description:
+    "The terms that govern Runner Toolkit's free tools and paid features, including medical, affiliate, and product-information limitations.",
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (

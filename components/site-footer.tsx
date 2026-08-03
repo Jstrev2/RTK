@@ -3,9 +3,11 @@ import BrandMark from "@/components/brand-mark";
 
 const toolLinks = [
   { href: "/tools/shoe-selector", label: "Shoe Finder" },
+  { href: "/shoes", label: "Shoe Database" },
   { href: "/tools/music", label: "Running Music" },
   { href: "/tools/fueling", label: "Fuel Planner" },
-  { href: "/tools/pace-calculator", label: "Pace Calculator" }
+  { href: "/tools/pace-calculator", label: "Pace Calculator" },
+  { href: "/tools/attire-guide", label: "What to Wear Running" }
 ];
 
 export default function SiteFooter() {

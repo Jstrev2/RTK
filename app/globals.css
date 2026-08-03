@@ -2534,7 +2534,7 @@ details[open] summary {
   padding-left: 12px;
   color: var(--ink-3);
   font-size: 0.58rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.14em;
   line-height: 1;
   text-transform: uppercase;
@@ -2608,7 +2608,7 @@ details[open] summary {
 .shoe-step-count {
   color: var(--sky);
   font-size: 0.72rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -2843,7 +2843,7 @@ details[open] summary {
 .shoe-role {
   color: var(--sky);
   font-size: 0.68rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -2882,7 +2882,7 @@ details[open] summary {
   color: var(--ink-2);
   background: var(--sand);
   font-size: 0.7rem;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .shoe-tradeoff {
@@ -2912,7 +2912,7 @@ details[open] summary {
 .shoe-price {
   font-family: var(--font-display), sans-serif;
   font-size: 1.35rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .shoe-card-actions {
@@ -3057,7 +3057,7 @@ details[open] summary {
   padding: 3px 0;
   color: var(--sky);
   font-size: 0.82rem;
-  font-weight: 750;
+  font-weight: 700;
   cursor: pointer;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -3396,7 +3396,7 @@ details[open] summary {
 .fuel-step-count {
   color: #728000;
   font-size: 0.7rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.13em;
   text-transform: uppercase;
 }
@@ -3510,7 +3510,7 @@ details[open] summary {
   border: 0;
   background: transparent;
   font-size: 1.15rem;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .fuel-duration-inputs label span {
@@ -3552,7 +3552,7 @@ details[open] summary {
   min-width: 0;
   color: var(--ink-2);
   font-size: 0.73rem;
-  font-weight: 750;
+  font-weight: 700;
   letter-spacing: 0.04em;
 }
 
@@ -3624,7 +3624,7 @@ details[open] summary {
   color: var(--ink);
   background: var(--lime);
   font-size: 0.67rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .fuel-plan-stats {
@@ -3697,7 +3697,7 @@ details[open] summary {
   color: var(--lime);
   background: var(--ink);
   font-size: 0.66rem;
-  font-weight: 800;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -3797,7 +3797,7 @@ details[open] summary {
   color: var(--ink);
   background: rgba(221, 234, 63, 0.52);
   font-size: 0.7rem;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .fuel-product-grid {
@@ -3839,7 +3839,7 @@ details[open] summary {
 .fuel-product-top > span {
   color: #687400;
   font-size: 0.66rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
@@ -4250,7 +4250,7 @@ details[open] summary {
 .music-step-count {
   color: #bd3f15;
   font-size: 0.7rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0.13em;
   text-transform: uppercase;
 }
@@ -4358,7 +4358,7 @@ details[open] summary {
   border-radius: 10px;
   background: var(--sand);
   font-size: 0.76rem;
-  font-weight: 750;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -4384,7 +4384,7 @@ details[open] summary {
   padding: 10px;
   border: 0;
   background: transparent;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .music-duration-row label span {
@@ -4425,7 +4425,7 @@ details[open] summary {
   min-width: 0;
   color: var(--ink-2);
   font-size: 0.73rem;
-  font-weight: 750;
+  font-weight: 700;
   letter-spacing: 0.04em;
 }
 
@@ -4472,7 +4472,7 @@ details[open] summary {
   color: #fffefa;
   background: var(--sky);
   font-size: 0.67rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .music-phase-bar {
@@ -4490,7 +4490,7 @@ details[open] summary {
   padding: 8px;
   color: var(--ink);
   font-size: 0.66rem;
-  font-weight: 850;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -4527,7 +4527,7 @@ details[open] summary {
 .music-phase-heading > div > span {
   color: rgba(255, 254, 248, 0.54);
   font-size: 0.64rem;
-  font-weight: 750;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -4618,7 +4618,7 @@ details[open] summary {
   border-radius: 7px;
   color: #fffefa;
   font-size: 0.61rem;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .music-phase-block li > a:hover {

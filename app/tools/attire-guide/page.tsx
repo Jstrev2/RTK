@@ -498,6 +498,22 @@ export default function AttireGuidePage() {
           </div>
         </div>
       </section>
+
+      <section className="section container prose-block">
+        <h2>What to wear running, by temperature</h2>
+        <p>
+          Dress for 15–20°F warmer than the thermometer says—you generate
+          that much heat in the first mile.
+        </p>
+        <ul>
+          <li>Above 60°F: shorts and a singlet or light tee. Sweat management beats coverage.</li>
+          <li>45–60°F: shorts with a long-sleeve tech shirt. If you run cold, add light gloves.</li>
+          <li>30–45°F: tights, a base layer, a light jacket or vest, gloves, and a headband or hat.</li>
+          <li>Below 30°F: wind-blocking layer up front, warm base underneath. Cover ears, hands, and exposed skin.</li>
+          <li>Rain: a brimmed hat keeps water off your face better than most hoods. Skip cotton everywhere.</li>
+          <li>Running in the dark: put reflective material on the parts of you that move—ankles and wrists are what drivers notice first.</li>
+        </ul>
+      </section>
     </div>
   );
 }

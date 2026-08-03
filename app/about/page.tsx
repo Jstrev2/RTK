@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "About Runner Toolkit",
-  description: "Runner Toolkit builds practical, explainable tools for the decisions runners make around every run."
-};
+  description: "Runner Toolkit builds practical, explainable tools for the decisions runners make around every run.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

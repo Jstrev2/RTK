@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { cache } from "react";
 import { shoes } from "@/lib/data";
 import type { Shoe } from "@/lib/data";
 import { mapDbShoe, displayName, prettyLabel, modelFamily, type DbShoe } from "@/lib/shoe-utils";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 import BuyLinks from "@/components/buy-links";
+import JsonLd from "@/components/json-ld";
+import { SITE_URL } from "@/lib/seo";
+
+export const revalidate = 86400;
+
+// Paths render on demand and are then cached for the revalidate window.
+export async function generateStaticParams(): Promise<{ id: string }[]> {
+  return [];
+}
 
 const joinLabels = (values: string[]) =>
   values.map(prettyLabel).join(", ");
@@ -133,23 +143,32 @@ const whoItsFor = (shoe: Shoe): string => {
   return sentences.join(" ");
 };
 
-async function loadShoe(id: string): Promise<Shoe | undefined> {
+// cache() dedupes the query between generateMetadata and the page render.
+const loadShoe = cache(async (id: string): Promise<Shoe | undefined> => {
   const supabase = getSupabaseAdmin();
   if (supabase) {
-    const { data } = await supabase
+    const { data, error } = await supabase
       .from("shoe_models")
       .select("*")
       .eq("item_key", id)
       .eq("is_active", true)
-      .single();
+      .maybeSingle();
 
+    // Throw on infrastructure errors: during ISR revalidation Next keeps
+    // serving the last good page, instead of caching a 404 over a live shoe.
+    if (error) {
+      throw new Error(`Failed to load shoe ${id}: ${error.message}`);
+    }
     if (data) {
       return mapDbShoe(data as DbShoe);
     }
+    // DB reachable but no active row: a deactivated shoe must 404, not
+    // resurrect from the bundled fallback list.
+    return undefined;
   }
 
   return shoes.find((item) => item.id === id);
-}
+});
 
 async function loadAlternatives(shoe: Shoe): Promise<Shoe[]> {
   const supabase = getSupabaseAdmin();
@@ -167,9 +186,9 @@ async function loadAlternatives(shoe: Shoe): Promise<Shoe[]> {
     if (data?.length) {
       pool = (data as DbShoe[]).map(mapDbShoe);
     }
-  }
-
-  if (!pool.length) {
+    // With a reachable DB, never fall back to the bundled list — bundled
+    // shoes that were since deactivated would render as 404ing links.
+  } else {
     pool = shoes.filter(
       (item) =>
         item.id !== shoe.id &&
@@ -209,13 +228,30 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const shoe = await loadShoe(id);
   if (!shoe) return { title: "Shoe Not Found" };
   const title = displayName(shoe);
+  const description = `${title} review data — ${prettyLabel(shoe.cushion)} cushion, ${prettyLabel(
+    shoe.stability
+  )} support. ${shoe.stack ? `${shoe.stack}mm stack, ` : ""}${
+    shoe.drop ? `${shoe.drop}mm drop, ` : ""
+  }specs, pros & cons, and where to buy.`;
+  const image = shoe.imageUrl ?? "/og.jpg";
   return {
     title,
-    description: `${title} review data — ${prettyLabel(shoe.cushion)} cushion, ${prettyLabel(
-      shoe.stability
-    )} support. ${shoe.stack ? `${shoe.stack}mm stack, ` : ""}${
-      shoe.drop ? `${shoe.drop}mm drop, ` : ""
-    }specs, pros & cons, and where to buy.`,
+    description,
+    alternates: { canonical: `/shoes/${id}` },
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      url: `/shoes/${id}`,
+      siteName: "Runner Toolkit",
+      images: [{ url: image, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
   };
 }
 
@@ -245,26 +281,53 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
   const ringLevels = [20, 40, 60, 80, 100];
   const metricValues = metrics.map((metric) => metric.value);
 
+  const pageUrl = `${SITE_URL}/shoes/${shoe.id}`;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: title,
+    url: pageUrl,
     brand: { "@type": "Brand", name: shoe.brand },
     description: shoe.description || `${title} running shoe`,
-    ...(shoe.price ? { offers: { "@type": "Offer", price: shoe.price, priceCurrency: "USD" } } : {}),
+    ...(shoe.price
+      ? {
+          offers: {
+            "@type": "Offer",
+            price: shoe.price,
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            itemCondition: "https://schema.org/NewCondition",
+            url: pageUrl,
+          },
+        }
+      : {}),
     ...(shoe.imageUrl ? { image: shoe.imageUrl } : {}),
+  };
+
+  const breadcrumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Shoe Database", item: `${SITE_URL}/shoes` },
+      { "@type": "ListItem", position: 3, name: title },
+    ],
   };
 
   return (
     <div>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={breadcrumbs} />
       <section className="tool-hero container">
-        <Link className="btn btn-ghost btn-sm" href="/tools/shoe-selector">
-          Back to Shoe Finder
-        </Link>
+        <div className="button-row">
+          <Link className="btn btn-ghost btn-sm" href="/shoes">
+            All shoes
+          </Link>
+          <Link className="btn btn-ghost btn-sm" href="/tools/shoe-selector">
+            Back to Shoe Finder
+          </Link>
+        </div>
         <h1>{title}</h1>
         <p>{shoe.description || `${shoe.brand} road running shoe`}</p>
       </section>
@@ -272,6 +335,18 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
       <section className="section container">
         <div className="analysis-grid">
           <div className="stack">
+            {shoe.imageUrl ? (
+              <div className="card">
+                <img
+                  src={shoe.imageUrl}
+                  alt={`${title} running shoe`}
+                  width={640}
+                  height={427}
+                  decoding="async"
+                  style={{ width: "100%", height: "auto", aspectRatio: "3 / 2", objectFit: "contain" }}
+                />
+              </div>
+            ) : null}
             <div className="card">
               <div className="stack">
                 <strong>Quick specs</strong>
@@ -364,8 +439,9 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
                         {alternatives.map((alt) => (
                           <tr key={alt.id}>
                             <td>
-                              <strong>{alt.name}</strong>
-                              <div className="brand-sub">{alt.brand}</div>
+                              <Link href={`/shoes/${alt.id}`}>
+                                <strong>{displayName(alt)}</strong>
+                              </Link>
                             </td>
                             <td>{prettyLabel(alt.cushion)}</td>
                             <td>{prettyLabel(alt.stability)}</td>

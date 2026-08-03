@@ -496,7 +496,7 @@ export default function MusicToolsPage() {
   const firstSpotifyTrack = playlistTracks[0];
 
   return (
-    <main className="tool-page tool-page-music music-builder-simple">
+    <div className="tool-page tool-page-music music-builder-simple">
       <section className="tool-hero container music-tool-hero">
         <span className="eyebrow">Free Running Music Builder</span>
         <h1>Make the playlist fit the workout.</h1>
@@ -913,6 +913,6 @@ export default function MusicToolsPage() {
           </a>.
         </span>
       </section>
-    </main>
+    </div>
   );
 }

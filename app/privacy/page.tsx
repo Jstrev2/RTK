@@ -1,6 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Privacy" };
+export const metadata = pageMetadata({
+  title: "Privacy",
+  description:
+    "How Runner Toolkit collects, uses, and protects the information you enter — accounts, saved items, payments, and sensitive training details.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (
