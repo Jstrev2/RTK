@@ -1,6 +1,12 @@
 {
   "redirects": [
     {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.runnertoolkit.com" }],
+      "destination": "https://runnertoolkit.com/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.runnertoolkit.com" }],
       "destination": "https://runnertoolkit.com/:path*",
