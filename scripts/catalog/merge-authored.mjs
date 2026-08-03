@@ -87,10 +87,11 @@ for (const file of files) {
     if (!Number.isFinite(shoe.drop) || shoe.drop < 0 || shoe.drop > 14) {
       errors.push(`${file} ${key}: implausible drop ${shoe.drop}`);
     }
-    if (!Number.isFinite(shoe.weight_mens) || shoe.weight_mens < 4 || shoe.weight_mens > 14) {
+    // Floor is 3oz, not 4: the lightest real racers (Adios Pro Evo 3, 97g) sit near 3.4oz.
+    if (!Number.isFinite(shoe.weight_mens) || shoe.weight_mens < 3 || shoe.weight_mens > 14) {
       errors.push(`${file} ${key}: implausible weight_mens ${shoe.weight_mens}`);
     }
-    if (!Number.isFinite(shoe.weight_womens) || shoe.weight_womens < 3.5 || shoe.weight_womens > 13) {
+    if (!Number.isFinite(shoe.weight_womens) || shoe.weight_womens < 3 || shoe.weight_womens > 13) {
       errors.push(`${file} ${key}: implausible weight_womens ${shoe.weight_womens}`);
     }
     if (!shoe.description || shoe.description.length < 40) {
