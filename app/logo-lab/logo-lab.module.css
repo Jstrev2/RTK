@@ -341,6 +341,9 @@
 }
 
 .stageA { background: #f4f0e7; }
+.stageA1 { background: #f4f0e7; }
+.stageA2 { background: var(--lime); }
+.stageA3 { background: #f4f0e7; }
 .stageB { background: var(--lime); }
 .stageC { background: var(--blue); }
 .stageD { background: var(--lime); }
@@ -860,6 +863,498 @@
 
 .paceMark.inverse {
   --pace-cream: #fffefa;
+}
+
+/* 01A · Breakout Runner */
+.breakoutMark {
+  --breakout-case: var(--ink);
+  --breakout-edge: transparent;
+  --breakout-handle: var(--orange);
+  --breakout-shadow-color: var(--lime);
+  --breakout-shoe: #fffefa;
+  --breakout-cutout: var(--ink);
+  --breakout-panel: var(--blue);
+  --breakout-laces: var(--orange);
+  --breakout-sole-color: var(--orange);
+  position: relative;
+  display: block;
+  width: var(--mark-size);
+  height: calc(var(--mark-size) * .69);
+  flex: 0 0 auto;
+  isolation: isolate;
+}
+
+.breakoutShadow {
+  position: absolute;
+  z-index: 0;
+  left: 3%;
+  top: 29%;
+  width: 91.5%;
+  height: 65%;
+  border-radius: calc(var(--mark-size) * .07);
+  background: var(--breakout-shadow-color);
+  transform: translate(3.5%, 5%);
+}
+
+.breakoutHandle {
+  position: absolute;
+  z-index: 1;
+  left: 28%;
+  top: 1%;
+  width: 35%;
+  height: 33%;
+  border: calc(var(--mark-size) * .043) solid var(--breakout-handle);
+  border-bottom: 0;
+  border-radius: calc(var(--mark-size) * .075) calc(var(--mark-size) * .075) 0 0;
+}
+
+.breakoutShell {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 23%;
+  width: 91.5%;
+  height: 70%;
+  border: calc(var(--mark-size) * .018) solid var(--breakout-edge);
+  border-radius: calc(var(--mark-size) * .072);
+  background: var(--breakout-case);
+}
+
+.breakoutRunner {
+  position: absolute;
+  z-index: 3;
+  left: 7.5%;
+  top: 29%;
+  width: 86%;
+  height: 64%;
+}
+
+.breakoutUpper,
+.breakoutHeel,
+.breakoutCollar,
+.breakoutThroat,
+.breakoutLace,
+.breakoutSole { position: absolute; }
+
+.breakoutUpper {
+  z-index: 1;
+  inset: 0 0 auto;
+  width: 100%;
+  height: 78%;
+  background: var(--breakout-shoe);
+  clip-path: polygon(0 48%, 8% 39%, 13% 15%, 24% 2%, 34% 6%, 44% 31%, 59% 46%, 80% 57%, 94% 61%, 100% 73%, 97% 91%, 62% 96%, 31% 92%, 10% 78%, 0 72%);
+}
+
+.breakoutHeel {
+  z-index: 2;
+  left: 0;
+  top: 34%;
+  width: 25%;
+  height: 45%;
+  background: var(--breakout-panel);
+  clip-path: polygon(0 22%, 52% 0, 100% 12%, 82% 100%, 18% 83%);
+}
+
+.breakoutCollar {
+  z-index: 3;
+  left: 13%;
+  top: 1%;
+  width: 29%;
+  height: 35%;
+  background: var(--breakout-cutout);
+  clip-path: polygon(0 45%, 36% 0, 100% 18%, 72% 100%, 31% 88%);
+}
+
+.breakoutThroat {
+  z-index: 2;
+  left: 34%;
+  top: 23%;
+  width: 31%;
+  height: 39%;
+  background: var(--breakout-panel);
+  clip-path: polygon(0 25%, 36% 0, 100% 90%, 73% 100%);
+}
+
+.breakoutLace {
+  z-index: 4;
+  left: 38%;
+  width: 23%;
+  height: 6.5%;
+  border-radius: 999px;
+  background: var(--breakout-laces);
+  transform: rotate(26deg);
+  transform-origin: left center;
+}
+
+.breakoutLaceOne { top: 27%; }
+.breakoutLaceTwo { top: 38%; left: 42%; width: 22%; }
+.breakoutLaceThree { top: 49%; left: 47%; width: 20%; }
+
+.breakoutSole {
+  z-index: 5;
+  left: -2%;
+  top: 67%;
+  width: 108%;
+  height: 33%;
+  background: var(--breakout-sole-color);
+  clip-path: polygon(0 4%, 14% 14%, 33% 28%, 62% 27%, 82% 19%, 94% 6%, 100% 0, 99% 50%, 94% 72%, 80% 87%, 36% 100%, 13% 78%, 0 56%);
+}
+
+.breakoutMark.mono {
+  --breakout-case: transparent;
+  --breakout-edge: var(--ink);
+  --breakout-handle: var(--ink);
+  --breakout-shadow-color: transparent;
+  --breakout-shoe: var(--ink);
+  --breakout-cutout: #fffefa;
+  --breakout-panel: #fffefa;
+  --breakout-laces: #fffefa;
+  --breakout-sole-color: var(--ink);
+}
+
+.breakoutMark.inverse {
+  --breakout-case: transparent;
+  --breakout-edge: #fffefa;
+  --breakout-handle: var(--orange);
+  --breakout-shadow-color: transparent;
+  --breakout-shoe: #fffefa;
+  --breakout-cutout: var(--ink);
+  --breakout-panel: var(--blue);
+  --breakout-laces: var(--orange);
+  --breakout-sole-color: var(--orange);
+}
+
+/* 01B · Open Kit */
+.openKitMark {
+  --open-ground: #f4f0e7;
+  --open-ink: var(--ink);
+  --open-blue: var(--blue);
+  --open-orange: var(--orange);
+  --open-acid: var(--lime);
+  position: relative;
+  display: block;
+  width: var(--mark-size);
+  aspect-ratio: 300 / 128;
+  flex: 0 0 auto;
+  isolation: isolate;
+}
+
+.openKitHandle,
+.openKitTray,
+.openKitUpper,
+.openKitPanel,
+.openKitTongue,
+.openKitHeel,
+.openKitCollar,
+.openKitLace,
+.openKitSpeedline,
+.openKitSole,
+.openKitGroove,
+.openKitToe { position: absolute; }
+
+.openKitHandle {
+  z-index: 0;
+  left: 5.33%;
+  top: 2.34%;
+  width: 28%;
+  height: 27.34%;
+  border: calc(var(--mark-size) * .03) solid var(--open-orange);
+  border-bottom: 0;
+  border-radius: calc(var(--mark-size) * .047) calc(var(--mark-size) * .047) 0 0;
+}
+
+.openKitTray {
+  z-index: 1;
+  left: 0;
+  top: 68.75%;
+  width: 86%;
+  height: 27.34%;
+  background: var(--open-ink);
+  clip-path: polygon(0 0, 85% 0, 100% 33%, 97% 100%, 5% 100%, 0 73%);
+}
+
+.openKitUpper {
+  z-index: 2;
+  left: 6.67%;
+  top: 17.19%;
+  width: 91.33%;
+  height: 62.5%;
+  background: var(--open-ink);
+  clip-path: polygon(0 83%, 3% 31%, 9% 17%, 25% 17%, 32% 35%, 45% 44%, 61% 52%, 75% 54%, 87% 42%, 93% 26%, 98% 29%, 100% 52%, 98% 70%, 92% 80%, 9% 91%);
+}
+
+.openKitPanel {
+  z-index: 3;
+  left: 10.33%;
+  top: 26.56%;
+  width: 83.33%;
+  height: 45.31%;
+  background: var(--open-ground);
+  clip-path: polygon(0 78%, 3% 18%, 21% 17%, 29% 38%, 44% 48%, 62% 59%, 77% 61%, 91% 42%, 97% 32%, 100% 52%, 97% 69%, 90% 77%, 10% 92%);
+}
+
+.openKitTongue {
+  z-index: 4;
+  left: 30.33%;
+  top: 19.53%;
+  width: 11.67%;
+  height: 46.09%;
+  background: var(--open-acid);
+  clip-path: polygon(20% 0, 78% 4%, 100% 100%, 0 100%);
+  transform: rotate(-7deg);
+  transform-origin: 50% 100%;
+}
+
+.openKitHeel {
+  z-index: 5;
+  left: 8.67%;
+  top: 35.94%;
+  width: 19.33%;
+  height: 39.06%;
+  background: var(--open-blue);
+  clip-path: polygon(0 0, 67% 0, 100% 48%, 83% 100%, 0 100%);
+}
+
+.openKitCollar {
+  z-index: 6;
+  left: 16.33%;
+  top: 21.88%;
+  width: 16%;
+  height: 21.88%;
+  border-radius: 8% 8% 50% 50%;
+  background: var(--open-ground);
+  transform: rotate(2deg);
+}
+
+.openKitLace {
+  z-index: 7;
+  left: 39.67%;
+  width: 11.67%;
+  height: 4.69%;
+  border-radius: 999px;
+  background: var(--open-ink);
+  transform: rotate(22deg);
+  transform-origin: left center;
+}
+
+.openKitLaceOne { top: 37.5%; }
+.openKitLaceTwo { top: 47.66%; left: 43.33%; }
+.openKitLaceThree { top: 57.81%; left: 47%; }
+
+.openKitSpeedline {
+  z-index: 7;
+  left: 61.33%;
+  top: 50.78%;
+  width: 20.67%;
+  height: 5.47%;
+  border-radius: 999px;
+  background: var(--open-blue);
+  transform: rotate(3deg);
+}
+
+.openKitSole {
+  z-index: 8;
+  left: 6%;
+  top: 67.19%;
+  width: 93.33%;
+  height: 22.66%;
+  background: var(--open-orange);
+  clip-path: polygon(0 7%, 70% 7%, 82% 0, 94% 0, 100% 24%, 100% 52%, 94% 77%, 78% 100%, 5% 100%, 0 68%);
+}
+
+.openKitGroove {
+  z-index: 9;
+  top: 75.78%;
+  width: 1.67%;
+  height: 14.06%;
+  background: var(--open-ink);
+  transform: skewX(-20deg);
+}
+
+.openKitGrooveOne { left: 27.33%; }
+.openKitGrooveTwo { left: 47.67%; }
+.openKitGrooveThree { left: 69%; }
+
+.openKitToe {
+  z-index: 9;
+  left: 87.67%;
+  top: 63.28%;
+  width: 10%;
+  height: 7.03%;
+  border-radius: 100% 20% 0 0;
+  background: var(--open-orange);
+  transform: rotate(-10deg);
+}
+
+.openKitMark.mono {
+  --open-ground: #fffefa;
+  --open-ink: var(--ink);
+  --open-blue: var(--ink);
+  --open-orange: var(--ink);
+  --open-acid: var(--ink);
+}
+
+.openKitMark.inverse {
+  --open-ground: var(--ink);
+  --open-ink: #fffefa;
+  --open-blue: var(--blue);
+  --open-orange: var(--orange);
+  --open-acid: var(--lime);
+}
+
+/* 01C · Shoe Window */
+.windowMark {
+  --window-field: #fffefa;
+  --window-case: var(--ink);
+  --window-handle-color: var(--orange);
+  --window-upper-color: var(--blue);
+  --window-detail: var(--ink);
+  --window-lace-color: var(--lime);
+  --window-sole-color: var(--orange);
+  position: relative;
+  display: block;
+  width: var(--mark-size);
+  height: calc(var(--mark-size) * .72);
+  flex: 0 0 auto;
+  isolation: isolate;
+}
+
+.windowCase,
+.windowHandle,
+.windowUpper,
+.windowHeel,
+.windowCollar,
+.windowThroat,
+.windowLace,
+.windowToeFlash,
+.windowSole { position: absolute; }
+
+.windowCase {
+  z-index: 1;
+  inset: 20% 2% 4%;
+  border: max(1.5px, calc(var(--mark-size) * .014)) solid var(--window-case);
+  border-radius: calc(var(--mark-size) * .066);
+}
+
+.windowHandle {
+  z-index: 2;
+  left: 40%;
+  top: 3%;
+  width: 20%;
+  height: 19%;
+  border: max(2px, calc(var(--mark-size) * .019)) solid var(--window-handle-color);
+  border-bottom: 0;
+  border-radius: calc(var(--mark-size) * .048) calc(var(--mark-size) * .048) 0 0;
+}
+
+.windowUpper {
+  z-index: 3;
+  left: 5%;
+  top: 30%;
+  width: 91%;
+  height: 47%;
+  background: var(--window-upper-color);
+  clip-path: polygon(0 80%, 1% 46%, 7% 31%, 15% 25%, 19% 3%, 37% 0, 44% 29%, 53% 37%, 62% 51%, 76% 61%, 91% 68%, 98% 76%, 100% 87%, 96% 97%, 76% 100%, 43% 97%, 15% 91%);
+}
+
+.windowHeel {
+  z-index: 4;
+  left: 6.5%;
+  top: 44%;
+  width: 19%;
+  height: 29%;
+  background: var(--window-detail);
+  clip-path: polygon(0 30%, 75% 0, 100% 18%, 88% 100%, 0 88%);
+}
+
+.windowCollar {
+  z-index: 5;
+  left: 23%;
+  top: 29%;
+  width: 16%;
+  height: 15%;
+  border-bottom: max(1.5px, calc(var(--mark-size) * .009)) solid var(--window-detail);
+  border-radius: 0 0 52% 44%;
+  background: var(--window-field);
+  transform: rotate(4deg);
+}
+
+.windowThroat {
+  z-index: 4;
+  left: 35%;
+  top: 37%;
+  width: 29%;
+  height: 29%;
+  background: var(--window-detail);
+  clip-path: polygon(0 8%, 31% 0, 100% 86%, 86% 100%, 19% 67%);
+}
+
+.windowLace {
+  z-index: 6;
+  width: 14%;
+  height: max(2px, 3.8%);
+  border-radius: 999px;
+  background: var(--window-lace-color);
+  transform: rotate(31deg);
+  transform-origin: left center;
+}
+
+.windowLaceOne { left: 41%; top: 39%; }
+.windowLaceTwo { left: 46%; top: 44.5%; }
+.windowLaceThree { left: 51%; top: 50%; }
+
+.windowToeFlash {
+  z-index: 4;
+  left: 68%;
+  top: 53%;
+  width: 25%;
+  height: 17%;
+  border-top: max(1.5px, calc(var(--mark-size) * .011)) solid var(--window-field);
+  border-radius: 56% 48% 0 0;
+  transform: rotate(7deg);
+  opacity: .9;
+}
+
+.windowSole {
+  z-index: 7;
+  left: 3.5%;
+  top: 68%;
+  width: 94%;
+  height: 18%;
+  background: var(--window-sole-color);
+  clip-path: polygon(0 7%, 15% 23%, 31% 37%, 56% 40%, 79% 31%, 93% 12%, 100% 0, 99% 48%, 94% 75%, 75% 92%, 43% 100%, 14% 84%, 0 54%);
+}
+
+.windowSole::after {
+  content: "";
+  position: absolute;
+  inset: auto 12% 13% 18%;
+  height: 13%;
+  border-radius: 999px;
+  background: var(--ink);
+  opacity: .34;
+}
+
+.windowMark.mono {
+  --window-field: #fffefa;
+  --window-case: var(--ink);
+  --window-handle-color: var(--ink);
+  --window-upper-color: var(--ink);
+  --window-detail: #fffefa;
+  --window-lace-color: #fffefa;
+  --window-sole-color: var(--ink);
+}
+
+.windowMark.mono .windowSole::after { background: #fffefa; opacity: .28; }
+
+.windowMark.inverse {
+  --window-field: var(--ink);
+  --window-case: #fffefa;
+  --window-handle-color: var(--orange);
+  --window-upper-color: var(--blue);
+  --window-detail: #fffefa;
+  --window-lace-color: var(--lime);
+  --window-sole-color: var(--orange);
 }
 
 @media (max-width: 980px) {

@@ -3,7 +3,7 @@
 import { useState, type CSSProperties } from "react";
 import styles from "./logo-lab.module.css";
 
-type LogoId = "a" | "b" | "c" | "d" | "e" | "f" | "g";
+type LogoId = "a" | "a1" | "a2" | "a3" | "b" | "c" | "d" | "e" | "f" | "g";
 type LogoVariant = "standard" | "mono" | "inverse";
 type Author = "codex" | "claude";
 
@@ -30,6 +30,36 @@ const options = [
     description:
       "Keeps the familiar toolkit case, but lets a larger, cleaner running shoe become the first read.",
     note: "Safest evolution of the current identity"
+  },
+  {
+    id: "a1" as const,
+    number: "01A",
+    author: "codex" as Author,
+    title: "Breakout Runner",
+    label: "More shoe",
+    description:
+      "Keeps the solid case, but a lower, longer running shoe owns the mark and its lifted toe breaks the frame.",
+    note: "Closest to #1, with a much stronger shoe silhouette"
+  },
+  {
+    id: "a2" as const,
+    number: "01B",
+    author: "codex" as Author,
+    title: "Open Kit",
+    label: "Shoe first",
+    description:
+      "Opens the case into a handle and lower tray, giving the low-cut runner all the space and visual weight.",
+    note: "Clearest running shoe while preserving the toolkit cue"
+  },
+  {
+    id: "a3" as const,
+    number: "01C",
+    author: "codex" as Author,
+    title: "Shoe Window",
+    label: "Balanced",
+    description:
+      "Turns the case into a thin outline so a blue runner, sloped throat, lifted toe, and rocker sole dominate.",
+    note: "Best balance of compact badge and immediate shoe recognition"
   },
   {
     id: "b" as const,
@@ -117,6 +147,85 @@ function CaseMark({ size, variant = "standard", decorative }: Omit<LogoProps, "k
         <i className={`${styles.caseLace} ${styles.laceThree}`} />
         <i className={styles.caseOutsole} />
       </i>
+    </span>
+  );
+}
+
+function BreakoutMark({ size, variant = "standard", decorative }: Omit<LogoProps, "kind">) {
+  return (
+    <span
+      className={`${styles.breakoutMark} ${styles[variant]}`}
+      style={markStyle(size)}
+      role={decorative ? undefined : "img"}
+      aria-hidden={decorative || undefined}
+      aria-label={decorative ? undefined : "Breakout Runner logo"}
+    >
+      <i className={styles.breakoutShadow} />
+      <i className={styles.breakoutHandle} />
+      <i className={styles.breakoutShell} />
+      <i className={styles.breakoutRunner}>
+        <i className={styles.breakoutUpper} />
+        <i className={styles.breakoutHeel} />
+        <i className={styles.breakoutCollar} />
+        <i className={styles.breakoutThroat} />
+        <i className={`${styles.breakoutLace} ${styles.breakoutLaceOne}`} />
+        <i className={`${styles.breakoutLace} ${styles.breakoutLaceTwo}`} />
+        <i className={`${styles.breakoutLace} ${styles.breakoutLaceThree}`} />
+        <i className={styles.breakoutSole} />
+      </i>
+    </span>
+  );
+}
+
+function OpenKitMark({ size, variant = "standard", decorative }: Omit<LogoProps, "kind">) {
+  return (
+    <span
+      className={`${styles.openKitMark} ${styles[variant]}`}
+      style={markStyle(size)}
+      role={decorative ? undefined : "img"}
+      aria-hidden={decorative || undefined}
+      aria-label={decorative ? undefined : "Open Kit running shoe logo"}
+    >
+      <i className={styles.openKitHandle} />
+      <i className={styles.openKitTray} />
+      <i className={styles.openKitUpper} />
+      <i className={styles.openKitPanel} />
+      <i className={styles.openKitTongue} />
+      <i className={styles.openKitHeel} />
+      <i className={styles.openKitCollar} />
+      <i className={`${styles.openKitLace} ${styles.openKitLaceOne}`} />
+      <i className={`${styles.openKitLace} ${styles.openKitLaceTwo}`} />
+      <i className={`${styles.openKitLace} ${styles.openKitLaceThree}`} />
+      <i className={styles.openKitSpeedline} />
+      <i className={styles.openKitSole} />
+      <i className={`${styles.openKitGroove} ${styles.openKitGrooveOne}`} />
+      <i className={`${styles.openKitGroove} ${styles.openKitGrooveTwo}`} />
+      <i className={`${styles.openKitGroove} ${styles.openKitGrooveThree}`} />
+      <i className={styles.openKitToe} />
+    </span>
+  );
+}
+
+function ShoeWindowMark({ size, variant = "standard", decorative }: Omit<LogoProps, "kind">) {
+  return (
+    <span
+      className={`${styles.windowMark} ${styles[variant]}`}
+      style={markStyle(size)}
+      role={decorative ? undefined : "img"}
+      aria-hidden={decorative || undefined}
+      aria-label={decorative ? undefined : "Shoe Window logo"}
+    >
+      <i className={styles.windowCase} />
+      <i className={styles.windowHandle} />
+      <i className={styles.windowUpper} />
+      <i className={styles.windowHeel} />
+      <i className={styles.windowCollar} />
+      <i className={styles.windowThroat} />
+      <i className={`${styles.windowLace} ${styles.windowLaceOne}`} />
+      <i className={`${styles.windowLace} ${styles.windowLaceTwo}`} />
+      <i className={`${styles.windowLace} ${styles.windowLaceThree}`} />
+      <i className={styles.windowToeFlash} />
+      <i className={styles.windowSole} />
     </span>
   );
 }
@@ -333,6 +442,9 @@ function DuffelMark({ size, variant = "standard", decorative }: Omit<LogoProps, 
 
 function LogoMark({ kind, ...props }: LogoProps) {
   if (kind === "a") return <CaseMark {...props} />;
+  if (kind === "a1") return <BreakoutMark {...props} />;
+  if (kind === "a2") return <OpenKitMark {...props} />;
+  if (kind === "a3") return <ShoeWindowMark {...props} />;
   if (kind === "b") return <SprintMark {...props} />;
   if (kind === "c") return <PaceMark {...props} />;
   if (kind === "d") return <WrenchMark {...props} />;
@@ -354,25 +466,24 @@ function Lockup({ kind, size = 54, inverse = false }: { kind: LogoId; size?: num
 }
 
 export default function LogoLabClient() {
-  const [active, setActive] = useState<LogoId>("b");
-  const selected = options.find((option) => option.id === active) ?? options[1];
+  const [active, setActive] = useState<LogoId>("a2");
+  const selected = options.find((option) => option.id === active) ?? options[2];
 
   return (
     <div className={styles.lab}>
       <section className={styles.intro}>
         <div>
           <span className={styles.eyebrow}>Runner Toolkit · Logo Lab</span>
-          <h1>Seven ways to weld tool to shoe.</h1>
+          <h1>Ten ways to weld tool to shoe.</h1>
           <p>
-            All seven keep the current blue, orange, lime, cream, and ink palette. Directions 01–03 are
-            Codex&rsquo;s; 04–07 are Claude&rsquo;s—07 is a direct answer to the front-runner: the case
-            concept, minus the box.
+            The original #1 now has three shoe-first descendants: 01A keeps the case, 01B opens it,
+            and 01C turns it into a window. Claude&rsquo;s challengers remain here beside every Codex direction.
           </p>
         </div>
         <div className={styles.reviewStamp} aria-label="Design review">
           <span>Design</span>
           <strong>Review</strong>
-          <small>7 directions</small>
+          <small>10 directions</small>
         </div>
       </section>
 
