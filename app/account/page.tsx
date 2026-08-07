@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useAuth } from "@/components/auth-provider";
 import { getSupabaseClient } from "@/lib/supabase-client";
+import ManageSubscription from "@/components/manage-subscription";
 import { attireItems, shoes, songs, trainingPlans } from "@/lib/data";
 
 type SavedItem = {
@@ -208,6 +209,18 @@ export default function AccountPage() {
               <strong>{grouped.plan?.length ?? 0}</strong>
               <span className="brand-sub">Plans saved</span>
             </div>
+          </div>
+          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+            {isPremium ? (
+              <>
+                <span className="pill">Adaptive member</span>
+                <ManageSubscription />
+              </>
+            ) : (
+              <Link className="btn btn-secondary btn-sm" href="/premium">
+                Upgrade to Adaptive Training
+              </Link>
+            )}
           </div>
         </div>
       </section>

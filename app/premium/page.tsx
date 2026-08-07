@@ -1,9 +1,10 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useAuth } from "@/components/auth-provider";
+import ManageSubscription from "@/components/manage-subscription";
 
 const paidFeatures = [
   {
@@ -30,7 +31,34 @@ function PremiumContent() {
   const status = searchParams.get("status");
   const [checkoutState, setCheckoutState] = useState<"idle" | "loading" | "unavailable" | "error">("idle");
 
-  const startCheckout = async () => {
+  // After Stripe redirects back with ?status=success, the webhook flips the
+  // premium flag in app_metadata — but the browser still holds the old JWT.
+  // Force token refreshes (webhook may lag the redirect by a few seconds) so
+  // access appears without signing out and back in.
+  useEffect(() => {
+    if (status !== "success" || isPremium) return;
+    let cancelled = false;
+    const refreshAfter = async (delay: number) => {
+      await new Promise((resolve) => setTimeout(resolve, delay));
+      if (cancelled) return;
+      try {
+        const { getSupabaseClient } = await import("@/lib/supabase-client");
+        await getSupabaseClient()?.auth.refreshSession();
+      } catch {
+        // Non-fatal; the next attempt or a manual reload picks it up.
+      }
+    };
+    (async () => {
+      await refreshAfter(0);
+      await refreshAfter(3000);
+      await refreshAfter(8000);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [status, isPremium]);
+
+  const startCheckout = async (interval: "monthly" | "annual") => {
     if (!session) return;
     setCheckoutState("loading");
     try {
@@ -40,7 +68,7 @@ function PremiumContent() {
           "Content-Type": "application/json",
           Authorization: `Bearer ${session.access_token}`
         },
-        body: JSON.stringify({ interval: "monthly" })
+        body: JSON.stringify({ interval })
       });
       if (response.status === 503) {
         setCheckoutState("unavailable");
@@ -154,11 +182,19 @@ function PremiumContent() {
               <li>Plan history and explanations</li>
             </ul>
             {isPremium ? (
-              <div className="notice">Your Adaptive Training access is active.</div>
+              <div className="stack">
+                <div className="notice">Your Adaptive Training access is active.</div>
+                <ManageSubscription />
+              </div>
             ) : user ? (
-              <button className="btn btn-primary" type="button" onClick={startCheckout} disabled={checkoutState === "loading"}>
-                {checkoutState === "loading" ? "Opening checkout..." : "Start Adaptive Training"}
-              </button>
+              <div className="stack">
+                <button className="btn btn-primary" type="button" onClick={() => startCheckout("monthly")} disabled={checkoutState === "loading"}>
+                  {checkoutState === "loading" ? "Opening checkout..." : "Start Adaptive Training"}
+                </button>
+                <button className="text-button" type="button" onClick={() => startCheckout("annual")} disabled={checkoutState === "loading"}>
+                  Or pay yearly — two months free
+                </button>
+              </div>
             ) : (
               <Link className="btn btn-primary" href="/login">Sign in to start</Link>
             )}
