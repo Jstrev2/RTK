@@ -181,6 +181,108 @@ down now is the insurance against the March 2026 failure mode.
   at this scale)
 - SEO infrastructure from the Aug 2026 overhaul (serves the tail-asset pages)
 
+---
+
+# Part 2: Higher-Ceiling Paths (added same day)
+
+Follow-up question: "$29 rescues are hobby money — what's worth more?" Validated
+five bigger models with a second workflow (5 sweeps + ranking + skeptic; skeptic
+verdict "amend"). Ranked result:
+
+## The winner: PT-clinic SaaS ("return-to-race" software for running physios)
+
+Sell the same injury engine to **cash-based running-specialty PT clinics** as a
+clinician tool: patient presents with a tibial stress reaction and a marathon in
+10 weeks → the tool generates the graded, race-aware return-to-run schedule the
+PT reviews, edits, signs off, and delivers branded to their patient.
+
+Why it's the one model where all the constraints invert:
+
+- **Verified product gap on the B2B side too**: Physitrack ($18.99/clinician/mo),
+  MedBridge ($329/seat/yr + $1.50/HEP episode), Rehab Guru (£10–20/mo) are
+  generic exercise-library HEP tools — none does race-timeline return-to-run.
+  Verified negative across 8 searches. Closest comp is RunDNA's manual portal.
+- **The PT supplies the credential** — the trust/YMYL wall that kills our B2C
+  becomes a non-issue; positioning is "documentation, delivery, adherence — the
+  clinician approves every plan" (non-device CDS framing).
+- **Buyers are enumerable by name**: ~300 visible doors via The Running Clinic
+  Find-an-Expert directory, RunDNA specialist finder, Running Repairs alumni,
+  Google-visible cash running-PT clinics. Solo owners buy on a credit card.
+- **They have money and motive**: cash PTs bill $150–300/session, sell $1–3k
+  "return to race" packages, plateau at $15–20k/mo and want premium offers.
+- **Price**: $49/mo solo, $79/mo clinic — above generic HEP because it powers a
+  revenue-generating package, not documentation.
+- **Ceiling**: $3–8k/mo probable at 18–24 months; $10–30k/mo best case (the
+  patient-pays white-label lever beyond that is a year-3 regulated product — see
+  caveats). Honest standalone probability of $5k/mo in 18mo: ~10–15%, rising
+  toward 25–30% only if the pre-sale gate below passes.
+
+### The skeptic's governing correction: SELL BEFORE BUILD
+
+PT-expressed demand is **inferred, not verified** (absence of product ≠ presence
+of demand; PTs publish free return-to-run PDFs and may see themselves as the
+plan-builders). And build-first is exactly the March-2026 failure shape. So:
+
+- **Weeks 1–8, zero new code**: 30–50 personalized emails/DMs from the named
+  list; 20-minute walkthroughs using the EXISTING consumer engine as the demo
+  ("here's a marathon plan rewritten around a grade-2 calf strain, with a race
+  verdict"). Goal: 10 discovery calls, 5 paid pilot commitments ($250 pilot or
+  founder-priced LOI).
+- **Pre-build kill gate**: fewer than 3 paid commitments from 30+ contacted
+  clinicians = the demand inference is false → don't build the clinician layer;
+  fall back to the asset-sale floor.
+- Only after the gate passes: 2–3 months part-time building the clinician layer
+  (case review/sign-off, branded PDF export, criteria gates). **V1 holds zero
+  PHI** (de-identified cases — "Runner A, grade-2 calf strain, race May 3") to
+  defer the HIPAA/BAA stack (Supabase Team is $599/mo + HIPAA add-on) until 30+
+  seats justify it. Budget: healthcare attorney ~$2–5k, E&O/cyber ~$1–3k/yr
+  from first paying clinic.
+- **Don't pitch RunDNA or cert bodies pre-revenue** — they're the
+  best-positioned fast-followers and their courses monetize teaching PTs to do
+  this manually. Partnerships are acceleration, not plan inputs; approach only
+  with 20+ paying seats as proof.
+
+### Layered, not replaced
+
+The B2C wedge stays: it's the live demo, the usage data, and eventually a
+patient-referral stream to subscriber clinics ("I send you patients worth
+$1–3k" — though referral density takes 12+ months to matter). The $299
+"rescue + DPT review" consumer tier launches only in phase 4, staffed by
+clinicians the SaaS already recruited — and geofenced: the PT Compact covers 38
+states but NOT CA, NY, FL, IL, MA (the biggest marathon markets), so it needs
+individually licensed reviewers there.
+
+## Rejected (with reasons, so we don't relitigate)
+
+- **Race-organizer channel**: money verifiably flows TOWARD races (they sell
+  the official-training slot — Runna owns Boston/NYRR/Eugene/Indy/Atlanta — and
+  charge $40–75 deferral fees; injured dropouts are a race PROFIT line). Capped
+  ~$2–5k/mo after years of BD, under a direct Strava kill shadow. Zero hours.
+- **Engine licensing to apps**: zero precedent of engine-only logic licensing in
+  endurance sports; 10–15 cash-poor buyers who solve this by hiring a physio
+  advisor; no moat. Keep as ~20 opportunistic cold emails + the **asset-sale
+  floor: $30–75k on Acquire.com** with a live demo and users.
+- **Paid AI-tool API**: no monetization rail exists (OpenAI apps can't sell
+  digital goods in-app; Anthropic directory pays nothing; <5% of 20k+ MCP
+  servers have earned a dollar). Ship the **free** MCP connector + citable
+  methodology pages (days of work, cheap optionality, ChatGPT referrals convert
+  ~4× organic) — but expected attributable revenue ≈ zero; it's optionality,
+  not funnel fuel.
+- **$299 productized comeback as a standalone launch**: proven price band
+  (E3 Rehab sells $300 consults), zero competitors for algorithm+async-DPT —
+  but every $149+ seller converts an owned audience; cold, it's the $29
+  distribution problem at a $299 price. Deferred to phase 4, never the lead.
+
+## The honest bottom line
+
+The modal outcome of even the best path is the kill gate firing and a $30–75k
+asset sale — the plan is a cheap option purchase (~$5k cash, ~200 hours) on a
+$5–15k/mo lifestyle business, not an expected outcome. And the whole thing is
+governed by one gate, in writing: **the first deliverable is 30 sent emails and
+10 booked calls by a named date — not software.** If that deliverable doesn't
+happen, no model on this list clears $5k/mo, and the right move is the asset
+sale.
+
 ## Key sources
 
 - Runna pricing/features/acquisition: press.strava.com; runna.com/training/post-injury-plan; support.runna.com (Not Feeling 100%, refunds)
