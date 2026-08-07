@@ -3,7 +3,7 @@
 import { useState, type CSSProperties } from "react";
 import styles from "./logo-lab.module.css";
 
-type LogoId = "a" | "b" | "c" | "d" | "e" | "f";
+type LogoId = "a" | "b" | "c" | "d" | "e" | "f" | "g";
 type LogoVariant = "standard" | "mono" | "inverse";
 type Author = "codex" | "claude";
 
@@ -80,6 +80,16 @@ const options = [
     description:
       "A single hex key bent into a runner's profile, capped with a lime hex nut. The whole mark is one continuous stroke.",
     note: "Most ownable; built for one color by design"
+  },
+  {
+    id: "g" as const,
+    number: "07",
+    author: "claude" as Author,
+    title: "Gear Shoe",
+    label: "Response",
+    description:
+      "The case idea with the box removed: the shoe itself is the soft gear bag—arched carry handle, zip seam, chunky sole. All curves.",
+    note: "Everything the case promises, nothing boxy"
   }
 ];
 
@@ -276,13 +286,59 @@ function HexMark({ size, variant = "standard", decorative }: Omit<LogoProps, "ki
   );
 }
 
+function DuffelMark({ size, variant = "standard", decorative }: Omit<LogoProps, "kind">) {
+  const c =
+    variant === "mono"
+      ? { upper: INK, sole: INK, handle: INK, seam: CREAM, latch: CREAM, lace: CREAM }
+      : variant === "inverse"
+        ? { upper: CREAM, sole: CREAM, handle: LIME, seam: INK, latch: LIME, lace: INK }
+        : { upper: BLUE, sole: INK, handle: ORANGE, seam: CREAM, latch: LIME, lace: CREAM };
+  return (
+    <span {...markShell(size, decorative, "Gear Shoe logo")}>
+      <svg viewBox="2 8 100 78" xmlns="http://www.w3.org/2000/svg">
+        {/* arched carry handle */}
+        <path
+          d="M36,27 A12,12 0 0 1 60,28"
+          fill="none"
+          stroke={c.handle}
+          strokeWidth="6.5"
+          strokeLinecap="round"
+        />
+        {/* soft duffel body in a shoe profile */}
+        <path
+          d="M8,68 C6,54 8,40 16,34 C24,28 36,25 48,25 C58,25 64,29 68,36 C74,46 82,52 90,56 C96,59 97,64 96,68 Z"
+          fill={c.upper}
+        />
+        {/* zip seam along the instep, with pull */}
+        <path
+          d="M18,42 C28,35 40,32.5 54,34"
+          fill="none"
+          stroke={c.seam}
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeDasharray="0.5 6"
+        />
+        <circle cx="58" cy="35.5" r="4" fill={c.latch} stroke={c.seam} strokeWidth="1.8" />
+        {/* laces on the vamp */}
+        <g stroke={c.lace} strokeWidth="3.2" strokeLinecap="round">
+          <line x1="62" y1="44" x2="70" y2="39.5" />
+          <line x1="68" y1="50" x2="76" y2="45.5" />
+        </g>
+        {/* chunky outsole */}
+        <rect x="6" y="70.5" width="92" height="12" rx="6" fill={c.sole} />
+      </svg>
+    </span>
+  );
+}
+
 function LogoMark({ kind, ...props }: LogoProps) {
   if (kind === "a") return <CaseMark {...props} />;
   if (kind === "b") return <SprintMark {...props} />;
   if (kind === "c") return <PaceMark {...props} />;
   if (kind === "d") return <WrenchMark {...props} />;
   if (kind === "e") return <SocketMark {...props} />;
-  return <HexMark {...props} />;
+  if (kind === "f") return <HexMark {...props} />;
+  return <DuffelMark {...props} />;
 }
 
 function Lockup({ kind, size = 54, inverse = false }: { kind: LogoId; size?: number; inverse?: boolean }) {
@@ -306,16 +362,17 @@ export default function LogoLabClient() {
       <section className={styles.intro}>
         <div>
           <span className={styles.eyebrow}>Runner Toolkit · Logo Lab</span>
-          <h1>Six ways to weld tool to shoe.</h1>
+          <h1>Seven ways to weld tool to shoe.</h1>
           <p>
-            All six keep the current blue, orange, lime, cream, and ink palette. Directions 01–03 are
-            Codex&rsquo;s; 04–06 are Claude&rsquo;s, briefed to fuse the tool and the shoe into one image.
+            All seven keep the current blue, orange, lime, cream, and ink palette. Directions 01–03 are
+            Codex&rsquo;s; 04–07 are Claude&rsquo;s—07 is a direct answer to the front-runner: the case
+            concept, minus the box.
           </p>
         </div>
         <div className={styles.reviewStamp} aria-label="Design review">
           <span>Design</span>
           <strong>Review</strong>
-          <small>6 directions</small>
+          <small>7 directions</small>
         </div>
       </section>
 

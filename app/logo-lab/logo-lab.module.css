@@ -346,6 +346,7 @@
 .stageD { background: var(--lime); }
 .stageE { background: #f4f0e7; }
 .stageF { background: var(--orange); }
+.stageG { background: #f4f0e7; }
 
 /* D/E/F · SVG marks */
 .svgMark {
