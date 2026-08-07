@@ -3,8 +3,15 @@
 import { useState, type CSSProperties } from "react";
 import styles from "./logo-lab.module.css";
 
-type LogoId = "a" | "b" | "c";
+type LogoId = "a" | "b" | "c" | "d" | "e" | "f";
 type LogoVariant = "standard" | "mono" | "inverse";
+type Author = "codex" | "claude";
+
+const INK = "#161814";
+const BLUE = "#1647d9";
+const ORANGE = "#ff6a35";
+const LIME = "#ddea3f";
+const CREAM = "#fffefa";
 
 interface LogoProps {
   kind: LogoId;
@@ -17,6 +24,7 @@ const options = [
   {
     id: "a" as const,
     number: "01",
+    author: "codex" as Author,
     title: "Shoe Case Redux",
     label: "Continuity",
     description:
@@ -26,6 +34,7 @@ const options = [
   {
     id: "b" as const,
     number: "02",
+    author: "codex" as Author,
     title: "Sprint Shoe",
     label: "Clarity",
     description:
@@ -35,11 +44,42 @@ const options = [
   {
     id: "c" as const,
     number: "03",
+    author: "codex" as Author,
     title: "Pace Badge",
     label: "Personality",
     description:
       "Pairs a shoe silhouette with one restrained track lane for a compact, more ownable athletic badge.",
     note: "Most distinctive app-icon system"
+  },
+  {
+    id: "d" as const,
+    number: "04",
+    author: "claude" as Author,
+    title: "Wrench Sole",
+    label: "Fusion",
+    description:
+      "A running shoe whose outsole is a full open-end wrench—ring at the heel, jaw at the toe. One object, both reads.",
+    note: "Tool and shoe welded into a single silhouette"
+  },
+  {
+    id: "e" as const,
+    number: "05",
+    author: "claude" as Author,
+    title: "Socket Sprint",
+    label: "Badge",
+    description:
+      "A socket-wrench head becomes the badge: a shoe mid-stride sits inside the drive while the handle trails off like a speed line.",
+    note: "Circular system that survives the favicon test"
+  },
+  {
+    id: "f" as const,
+    number: "06",
+    author: "claude" as Author,
+    title: "Hex Stride",
+    label: "One line",
+    description:
+      "A single hex key bent into a runner's profile, capped with a lime hex nut. The whole mark is one continuous stroke.",
+    note: "Most ownable; built for one color by design"
   }
 ];
 
@@ -110,10 +150,139 @@ function PaceMark({ size, variant = "standard", decorative }: Omit<LogoProps, "k
   );
 }
 
+function markShell(size: number, decorative: boolean | undefined, label: string) {
+  return {
+    className: styles.svgMark,
+    style: markStyle(size),
+    role: decorative ? undefined : ("img" as const),
+    "aria-hidden": decorative || undefined,
+    "aria-label": decorative ? undefined : label
+  };
+}
+
+function WrenchMark({ size, variant = "standard", decorative }: Omit<LogoProps, "kind">) {
+  const c =
+    variant === "mono"
+      ? { tool: INK, upper: INK, hole: CREAM, accent: INK, pop: null }
+      : variant === "inverse"
+        ? { tool: CREAM, upper: LIME, hole: INK, accent: CREAM, pop: null }
+        : { tool: INK, upper: BLUE, hole: CREAM, accent: ORANGE, pop: LIME };
+  return (
+    <span {...markShell(size, decorative, "Wrench Sole logo")}>
+      <svg viewBox="0 20 104 70" xmlns="http://www.w3.org/2000/svg">
+        {/* shoe upper */}
+        <path
+          d="M7,62.5 L6,52 C5,38 8,29 15,27 C20,25.5 24,29 26.5,32.5 C35,51 56,56 79,60 L80,62.5 Z"
+          fill={c.upper}
+        />
+        {c.pop && <path d="M7.2,55.5 L79.2,60.2 L80,62.5 L7,62.5 Z" fill={c.pop} />}
+        {/* collar accent */}
+        <path d="M15,27 C20,25.5 24,29 26.5,32.5 L23,37 C20.5,33 18,31 14,31.5 Z" fill={c.accent} />
+        {/* laces */}
+        <g stroke={c.hole} strokeWidth="3.2" strokeLinecap="round">
+          <line x1="33" y1="42.5" x2="41.5" y2="36.5" />
+          <line x1="40" y1="48" x2="48.5" y2="42" />
+          <line x1="47" y1="52.5" x2="55.5" y2="46.5" />
+        </g>
+        {/* wrench outsole: ring end at heel, open jaw at toe */}
+        <g fill={c.tool}>
+          <circle cx="16" cy="74" r="12.5" />
+          <rect x="16" y="67.5" width="62" height="13" rx="2" />
+          <path
+            d="M78,61.5 L85,61.5 A11.5,11.5 0 0 1 95.2,67.8 L89.5,69.5 L89.5,76.5 L95.2,78.2 A11.5,11.5 0 0 1 85,84.5 L78,84.5 Z"
+            transform="rotate(-12 82 73)"
+          />
+        </g>
+        <polygon points="21.8,74 18.9,79 13.1,79 10.2,74 13.1,69 18.9,69" fill={c.hole} />
+      </svg>
+    </span>
+  );
+}
+
+function SocketMark({ size, variant = "standard", decorative }: Omit<LogoProps, "kind">) {
+  const c =
+    variant === "mono"
+      ? { ring: INK, knurl: CREAM, face: CREAM, shoe: INK, sole: INK, speed: INK, handle: INK, line: INK }
+      : variant === "inverse"
+        ? { ring: CREAM, knurl: INK, face: CREAM, shoe: INK, sole: INK, speed: INK, handle: LIME, line: INK }
+        : { ring: BLUE, knurl: CREAM, face: CREAM, shoe: INK, sole: ORANGE, speed: BLUE, handle: ORANGE, line: INK };
+  return (
+    <span {...markShell(size, decorative, "Socket Sprint logo")}>
+      <svg viewBox="4 8 112 84" xmlns="http://www.w3.org/2000/svg">
+        {/* ratchet handle trailing behind the socket head */}
+        <rect
+          x="76"
+          y="47"
+          width="38"
+          height="14"
+          rx="7"
+          fill={c.handle}
+          stroke={c.line}
+          strokeWidth="2.5"
+          transform="rotate(8 80 54)"
+        />
+        {/* socket head with hex drive */}
+        <circle cx="46" cy="50" r="38" fill={c.ring} stroke={c.line} strokeWidth="3" />
+        <circle cx="46" cy="50" r="33.5" fill="none" stroke={c.knurl} strokeWidth="3.5" strokeDasharray="3.4 6" />
+        <polygon
+          points="73,50 59.5,26.6 32.5,26.6 19,50 32.5,73.4 59.5,73.4"
+          fill={c.face}
+          stroke={c.line}
+          strokeWidth="2"
+        />
+        {/* shoe mid-stride inside the drive */}
+        <path
+          d="M31,54 C30,45 32,37.5 36,36.2 C38.5,35.4 40.5,37.2 42.2,39.4 C48,48 57,50.5 66.5,52.2 L67.5,54 Z"
+          fill={c.shoe}
+        />
+        <rect x="29.5" y="56" width="37" height="6" rx="3" fill={c.sole} />
+        <g stroke={c.speed} strokeWidth="2.6" strokeLinecap="round">
+          <line x1="24" y1="43" x2="30.5" y2="43.4" />
+          <line x1="23" y1="49.5" x2="30" y2="49.9" />
+        </g>
+      </svg>
+    </span>
+  );
+}
+
+function HexMark({ size, variant = "standard", decorative }: Omit<LogoProps, "kind">) {
+  const c =
+    variant === "mono"
+      ? { stroke: INK, hex: CREAM, line: INK }
+      : variant === "inverse"
+        ? { stroke: CREAM, hex: LIME, line: CREAM }
+        : { stroke: BLUE, hex: LIME, line: INK };
+  return (
+    <span {...markShell(size, decorative, "Hex Stride logo")}>
+      <svg viewBox="6 4 98 82" xmlns="http://www.w3.org/2000/svg">
+        {/* one continuous hex-key stroke tracing the shoe */}
+        <path
+          d="M33,10 L33,24 C33,35 20,37 20,52 L20,66 Q20,77 31,77 L83,77 Q95,77 96.5,67.5 Q97.5,59.5 87,56.5 L61,49.5 C50.5,46.5 44.5,40.5 41.5,31"
+          fill="none"
+          stroke={c.stroke}
+          strokeWidth="7.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* hex nut cap at the working end */}
+        <polygon
+          points="51.5,28.5 47.3,35.9 38.7,35.9 34.5,28.5 38.7,21.1 47.3,21.1"
+          fill={c.hex}
+          stroke={c.line}
+          strokeWidth="2.6"
+        />
+      </svg>
+    </span>
+  );
+}
+
 function LogoMark({ kind, ...props }: LogoProps) {
   if (kind === "a") return <CaseMark {...props} />;
   if (kind === "b") return <SprintMark {...props} />;
-  return <PaceMark {...props} />;
+  if (kind === "c") return <PaceMark {...props} />;
+  if (kind === "d") return <WrenchMark {...props} />;
+  if (kind === "e") return <SocketMark {...props} />;
+  return <HexMark {...props} />;
 }
 
 function Lockup({ kind, size = 54, inverse = false }: { kind: LogoId; size?: number; inverse?: boolean }) {
@@ -137,16 +306,16 @@ export default function LogoLabClient() {
       <section className={styles.intro}>
         <div>
           <span className={styles.eyebrow}>Runner Toolkit · Logo Lab</span>
-          <h1>Three sharper ways to say “runner.”</h1>
+          <h1>Six ways to weld tool to shoe.</h1>
           <p>
-            All three keep the current blue, orange, lime, cream, and ink palette. The variable is how
-            directly the mark reads as a running shoe—and how much of the toolkit idea remains.
+            All six keep the current blue, orange, lime, cream, and ink palette. Directions 01–03 are
+            Codex&rsquo;s; 04–06 are Claude&rsquo;s, briefed to fuse the tool and the shoe into one image.
           </p>
         </div>
         <div className={styles.reviewStamp} aria-label="Design review">
           <span>Design</span>
           <strong>Review</strong>
-          <small>3 directions</small>
+          <small>6 directions</small>
         </div>
       </section>
 
@@ -187,7 +356,12 @@ export default function LogoLabClient() {
             <LogoMark kind={active} size={270} decorative />
           </div>
           <div className={styles.heroCopy}>
-            <span className={styles.directionLabel}>{selected.label} direction</span>
+            <span className={styles.directionLabel}>
+              {selected.label} direction
+              <span className={`${styles.authorChip} ${selected.author === "claude" ? styles.chipClaude : styles.chipCodex}`}>
+                {selected.author}
+              </span>
+            </span>
             <h3>{selected.title}</h3>
             <p>{selected.description}</p>
             <strong>{selected.note}</strong>
@@ -212,7 +386,12 @@ export default function LogoLabClient() {
                 <span>Preview in header</span>
               </button>
               <div className={styles.cardTitle}>
-                <span>{option.label}</span>
+                <span>
+                  {option.label}
+                  <span className={`${styles.authorChip} ${option.author === "claude" ? styles.chipClaude : styles.chipCodex}`}>
+                    {option.author}
+                  </span>
+                </span>
                 <h3>{option.title}</h3>
                 <p>{option.description}</p>
               </div>

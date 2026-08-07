@@ -343,6 +343,40 @@
 .stageA { background: #f4f0e7; }
 .stageB { background: var(--lime); }
 .stageC { background: var(--blue); }
+.stageD { background: var(--lime); }
+.stageE { background: #f4f0e7; }
+.stageF { background: var(--orange); }
+
+/* D/E/F · SVG marks */
+.svgMark {
+  display: block;
+  flex: 0 0 auto;
+  width: var(--mark-size);
+}
+
+.svgMark svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.authorChip {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 9px 3px;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.chipClaude { background: var(--lime); }
+.chipCodex { background: var(--paper); }
 
 .scaleTests {
   display: grid;
