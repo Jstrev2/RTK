@@ -37,6 +37,7 @@
     "catalog:gels:validate": "node scripts/catalog/validate-gels.mjs",
     "catalog:gels": "node scripts/catalog/run-gels.mjs",
     "catalog:music": "node scripts/catalog/run-music.mjs",
+    "rundown:import": "node scripts/rundown/import-authored.mjs",
     "rundown:discover": "node scripts/rundown/discover.mjs",
     "rundown:topics": "node scripts/rundown/topics.mjs",
     "rundown:publish": "node scripts/rundown/publish.mjs"
