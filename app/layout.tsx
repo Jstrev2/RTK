@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/next";
 import { IBM_Plex_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import SiteFooter from "@/components/site-footer";
@@ -98,6 +99,7 @@ export default function RootLayout({
           <main>{children}</main>
           <SiteFooter />
         </AuthProvider>
+        <Analytics />
       </body>
     </html>
   );
