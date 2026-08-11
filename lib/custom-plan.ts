@@ -2,7 +2,7 @@ import type { TrainingPlan, TrainingWorkout } from "@/lib/data";
 
 /**
  * Plan-shape intake: six fields that describe any training plan well enough
- * to rebuild its remaining weeks — a Hal Higdon PDF, a Garmin Coach plan, a
+ * to rebuild its remaining weeks, whether it's a Hal Higdon PDF, a Garmin Coach plan, a
  * coach's spreadsheet, or one of ours. We deliberately do NOT parse plan
  * files; we rebuild the remaining weeks around the plan's shape.
  */

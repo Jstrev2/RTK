@@ -47,7 +47,7 @@ export default function TrainingPlansPage() {
         <h1>Start with a plan. Change it when life does.</h1>
         <p>
           Choose a complete plan from 5K to marathon. Browse every week for
-          free—and if an injury interrupts the plan, Injury Rescue rebuilds
+          free, and if an injury interrupts the plan, Injury Rescue rebuilds
           the remaining weeks around a careful return.
         </p>
       </section>
@@ -214,7 +214,7 @@ export default function TrainingPlansPage() {
         </ul>
         <h2>What if I miss a week?</h2>
         <p>
-          Don&apos;t make up the miles—that&apos;s how a missed week becomes a
+          Don&apos;t make up the miles. That&apos;s how a missed week becomes a
           missed month. Rejoin the plan where the calendar says you are and
           downgrade the next hard workout. Hurt, or missed more than two
           weeks? That&apos;s what <Link href="/rescue">Injury Rescue</Link> is

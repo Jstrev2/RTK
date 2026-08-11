@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Runner Toolkit",
     short_name: "Runner Toolkit",
     description:
-      "Free tools to find running shoes, build a run playlist, and plan race fuel—plus adaptive training when your schedule changes.",
+      "Free tools to find running shoes, build a run playlist, and plan race fuel, plus adaptive training when your schedule changes.",
     start_url: "/",
     display: "browser",
     background_color: "#f4f0e7",

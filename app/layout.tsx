@@ -29,25 +29,25 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Runner Toolkit — Run Smarter. Guess Less.",
+    default: "Runner Toolkit: Run Smarter. Guess Less.",
     template: "%s | Runner Toolkit"
   },
   description:
-    "Free tools to find running shoes, plan race fuel, and check if your race is still on after an injury—with a rebuilt comeback schedule for any plan.",
+    "Free tools to find running shoes, plan race fuel, and check if your race is still on after an injury, with a rebuilt comeback schedule for any plan.",
   metadataBase: new URL(SITE_URL),
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "/",
     siteName: "Runner Toolkit",
-    title: "Runner Toolkit — Run Smarter. Guess Less.",
+    title: "Runner Toolkit: Run Smarter. Guess Less.",
     description:
       "Find shoes that fit how you run, build music for the workout, and plan fuel for the distance.",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Runner Toolkit — Run smarter. Guess less." }],
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Runner Toolkit: Run smarter. Guess less." }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Runner Toolkit — Run Smarter. Guess Less.",
+    title: "Runner Toolkit: Run Smarter. Guess Less.",
     description:
       "Find shoes that fit how you run, build music for the workout, and plan fuel for the distance.",
     images: ["/og.jpg"],

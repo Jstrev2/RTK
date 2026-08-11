@@ -197,7 +197,7 @@
     "drop": 3,
     "weight_mens": 4.8,
     "weight_womens": 4.8,
-    "description": "The second generation of Adidas' 138-gram, $500 marathon supershoe, launched around the 2025 Boston Marathon with 3mm more Lightstrike Pro Evo foam in the forefoot and a grippier grid-pattern outsole. It is a single-race elite tool for efficient, fast marathoners. Almost impossible to buy and far too fragile to train in — everyone else should race the Adios Pro 4.",
+    "description": "The second generation of Adidas' 138-gram, $500 marathon supershoe, launched around the 2025 Boston Marathon with 3mm more Lightstrike Pro Evo foam in the forefoot and a grippier grid-pattern outsole. It is a single-race elite tool for efficient, fast marathoners. Almost impossible to buy and far too fragile to train in; everyone else should race the Adios Pro 4.",
     "pros": [
       "Absurdly light for a 39mm marathon shoe",
       "Improved forefoot cushioning and traction over Evo 1",
@@ -239,7 +239,7 @@
     "drop": 3,
     "weight_mens": 3.4,
     "weight_womens": 3.4,
-    "description": "The third generation of Adidas' pinnacle road racer, introduced April 2026 at a staggering 97 grams with a 39/36mm Lightstrike Pro Evo platform. Released April 25, 2026 in limited quantities at $500, with wider availability expected later in the year. Strictly an elite marathon race-day shoe — not a purchase most runners will ever be able to make, or should.",
+    "description": "The third generation of Adidas' pinnacle road racer, introduced April 2026 at a staggering 97 grams with a 39/36mm Lightstrike Pro Evo platform. Released April 25, 2026 in limited quantities at $500, with wider availability expected later in the year. Strictly an elite marathon race-day shoe, and not a purchase most runners will ever be able to make, or should.",
     "pros": [
       "Lightest marathon supershoe ever at 97g",
       "Full 39mm race-legal stack",
@@ -375,7 +375,7 @@
     "drop": 6,
     "weight_mens": 8.5,
     "weight_womens": 7.2,
-    "description": "A January 2026 update of the wildly popular Evo SL that swaps the mesh upper for a more structured woven one while keeping the identical full Lightstrike Pro midsole and geometry. Same bouncy, do-everything performance trainer underneath, with slightly better lockdown at a small weight penalty. Skip it if you already own the original — the ride is unchanged.",
+    "description": "A January 2026 update of the wildly popular Evo SL that swaps the mesh upper for a more structured woven one while keeping the identical full Lightstrike Pro midsole and geometry. Same bouncy, do-everything performance trainer underneath, with slightly better lockdown at a small weight penalty. Skip it if you already own the original, because the ride is unchanged.",
     "pros": [
       "Same superb full Lightstrike Pro ride as the Evo SL",
       "More secure woven upper",
@@ -383,7 +383,7 @@
     ],
     "cons": [
       "Slightly heavier than the original mesh version",
-      "No midsole update — a targeted refresh only"
+      "No midsole update, just a targeted refresh"
     ],
     "popularity": 78,
     "release_year": 2026,
@@ -726,7 +726,7 @@
     "pros": [
       "Massive cushioning yet lightweight",
       "Bouncy Hyperboost Pro foam works at many paces",
-      "No plate — accessible max-stack ride"
+      "No plate: accessible max-stack ride"
     ],
     "cons": [
       "Tall stack can feel unstable in tight turns",
@@ -817,7 +817,7 @@
       "Comfortable for long easy miles"
     ],
     "cons": [
-      "Still over 9 oz — not a light shoe",
+      "Still over 9 oz, not a light shoe",
       "Dull at faster paces"
     ],
     "popularity": 68,
@@ -853,7 +853,7 @@
     "drop": 10,
     "weight_mens": 9.6,
     "weight_womens": 8.6,
-    "description": "The shoe that relaunched the Supernova franchise: a Dreamstrike+ supercritical-foam daily trainer that finally gave Adidas a credible everyday shoe. Smooth, stable, and durable for daily miles and recovery days, especially for heel strikers. It is on the heavy side for its stack and has no pop for workouts — the catalog already lists its successors Rise 2 and 3, so this founding model was an obvious gap.",
+    "description": "The shoe that relaunched the Supernova franchise: a Dreamstrike+ supercritical-foam daily trainer that finally gave Adidas a credible everyday shoe. Smooth, stable, and durable for daily miles and recovery days, especially for heel strikers. It is on the heavy side for its stack and has no pop for workouts. The catalog already lists its successors Rise 2 and 3, so this founding model was an obvious gap.",
     "pros": [
       "Comfortable Dreamstrike+ midsole",
       "Stable, reliable daily ride",
@@ -1081,7 +1081,7 @@
       "Roomy, comfortable daily fit"
     ],
     "cons": [
-      "Nearly 10 oz — on the heavy side",
+      "Nearly 10 oz, on the heavy side",
       "Muted energy return",
       "Warm upper"
     ],
@@ -1816,7 +1816,7 @@
     "drop": 8,
     "weight_mens": 9.2,
     "weight_womens": 7.8,
-    "description": "Budget-friendly little sibling to the Novablast with FF Blast foam and a similar rockered shape for $120. A good pick for newer runners and easy mileage on a budget. Skip it if you can stretch to the Novablast — the foam and outsole are a clear step down.",
+    "description": "Budget-friendly little sibling to the Novablast with FF Blast foam and a similar rockered shape for $120. A good pick for newer runners and easy mileage on a budget. Skip it if you can stretch to the Novablast: the foam and outsole are a clear step down.",
     "pros": [
       "Novablast-like ride for less",
       "Comfortable upper",
@@ -1859,7 +1859,7 @@
     "drop": 8,
     "weight_mens": 9,
     "weight_womens": 7.8,
-    "description": "Balanced everyday neutral trainer with FF Blast Plus foam — softer and taller than older Cumulus models but still unfussy. A safe one-shoe pick for new and mid-mileage runners. Skip it if you want either a plush max-stack ride (Nimbus) or real pop for workouts.",
+    "description": "Balanced everyday neutral trainer with FF Blast Plus foam that is softer and taller than older Cumulus models but still unfussy. A safe one-shoe pick for new and mid-mileage runners. Skip it if you want either a plush max-stack ride (Nimbus) or real pop for workouts.",
     "pros": [
       "Versatile daily ride",
       "Reasonable weight",
@@ -1990,7 +1990,7 @@
     "drop": 8,
     "weight_mens": 10.2,
     "weight_womens": 9,
-    "description": "Entry-level $90 neutral trainer for walkers, gym-goers, and beginner runners doing short easy miles. Comfortable enough and cheap, with surprising stack for the price. Regular runners logging real mileage should spend up — the foam is basic and the shoe is heavy for its class. Release month approximate (anchored to first lab review, Dec 2025).",
+    "description": "Entry-level $90 neutral trainer for walkers, gym-goers, and beginner runners doing short easy miles. Comfortable enough and cheap, with surprising stack for the price. Regular runners logging real mileage should spend up, because the foam is basic and the shoe is heavy for its class. Release month approximate (anchored to first lab review, Dec 2025).",
     "pros": [
       "Very affordable",
       "Comfortable for walking/easy miles"
@@ -2032,7 +2032,7 @@
     "drop": 10,
     "weight_mens": 10.7,
     "weight_womens": 9.4,
-    "description": "Big, soft stability flagship using ASICS' 4D Guidance System instead of a hard medial post. Excellent for overpronators and heavier runners logging easy miles who want plush, planted support. At nearly 11 oz it is one of the heaviest trainers in its class — anyone wanting a nimble or fast-feeling shoe should look elsewhere.",
+    "description": "Big, soft stability flagship using ASICS' 4D Guidance System instead of a hard medial post. Excellent for overpronators and heavier runners logging easy miles who want plush, planted support. At nearly 11 oz it is one of the heaviest trainers in its class, so anyone wanting a nimble or fast-feeling shoe should look elsewhere.",
     "pros": [
       "Supportive without harsh posting",
       "Plush, comfortable upper",
@@ -2165,7 +2165,7 @@
     "drop": 8,
     "weight_mens": 10.7,
     "weight_womens": 9.2,
-    "description": "Plush max-cushion cruiser with FF Blast Plus Eco and PureGEL that prioritizes soft comfort over liveliness. Great for easy miles, recovery days, and heel strikers who want a pillowy landing. Runners chasing a light, responsive ride should skip it — at nearly 11 oz it feels ponderous at anything faster than easy pace.",
+    "description": "Plush max-cushion cruiser with FF Blast Plus Eco and PureGEL that prioritizes soft comfort over liveliness. Great for easy miles, recovery days, and heel strikers who want a pillowy landing. Runners chasing a light, responsive ride should skip it: at nearly 11 oz it feels ponderous at anything faster than easy pace.",
     "pros": [
       "Very soft, protective cushioning",
       "Stable for a tall neutral shoe",
@@ -2382,7 +2382,7 @@
     "drop": 8,
     "weight_mens": 9.3,
     "weight_womens": 8.1,
-    "description": "Entry-level stability workhorse with PureGEL and light guidance features at a wallet-friendly $110. Solid pick for beginners and mild overpronators who need dependable support for easy daily miles. Runners wanting an energetic or plush ride should step up to the GT-2000 or Kayano — this foam is firm and basic.",
+    "description": "Entry-level stability workhorse with PureGEL and light guidance features at a wallet-friendly $110. Solid pick for beginners and mild overpronators who need dependable support for easy daily miles. Runners wanting an energetic or plush ride should step up to the GT-2000 or Kayano, since this foam is firm and basic.",
     "pros": [
       "Affordable stability",
       "Durable outsole",
@@ -2512,7 +2512,7 @@
     "drop": 8,
     "weight_mens": 9.4,
     "weight_womens": 8.3,
-    "description": "Mid-tier structured trainer with FF Blast Plus and ASICS' 3D Guidance System — unobtrusive support that suits mild overpronators for daily mileage and long runs. A sensible one-shoe rotation for runners who want reliability over excitement. Neutral runners chasing bounce will find it merely competent.",
+    "description": "Mid-tier structured trainer with FF Blast Plus and ASICS' 3D Guidance System, offering unobtrusive support that suits mild overpronators for daily mileage and long runs. A sensible one-shoe rotation for runners who want reliability over excitement. Neutral runners chasing bounce will find it merely competent.",
     "pros": [
       "Balanced cushion and support",
       "Smooth transitions",
@@ -2641,7 +2641,7 @@
     "drop": 7,
     "weight_mens": 7.6,
     "weight_womens": 6.5,
-    "description": "Budget lightweight speed trainer/racer (215 g) with simple FlyteFoam and a traditional low-stack feel. Great value for intervals, tempo days, and racers who don't want to spend supershoe money. Skip it if you want plate propulsion or modern max-stack cushioning — this is an old-school flat. Note: low-profile release with minimal US media coverage; US pricing estimated from line pricing ($90-110) and stack height is disputed across retailers (29.5-32 mm).",
+    "description": "Budget lightweight speed trainer/racer (215 g) with simple FlyteFoam and a traditional low-stack feel. Great value for intervals, tempo days, and racers who don't want to spend supershoe money. Skip it if you want plate propulsion or modern max-stack cushioning; this is an old-school flat. Note: low-profile release with minimal US media coverage; US pricing estimated from line pricing ($90-110) and stack height is disputed across retailers (29.5-32 mm).",
     "pros": [
       "Very affordable speed shoe",
       "Light and flexible",
@@ -2859,7 +2859,7 @@
     "drop": 8,
     "weight_mens": 7.9,
     "weight_womens": 6.5,
-    "description": "New top-of-line super trainer: 46 mm of FF Turbo Squared foam at a startling sub-8 oz weight, no plate. Superb for long runs and uptempo days when you want supershoe bounce with trainer flexibility. Skip it if you're budget-minded ($225) or need stability — the tall soft stack rewards efficient strides.",
+    "description": "New top-of-line super trainer: 46 mm of FF Turbo Squared foam at a startling sub-8 oz weight, no plate. Superb for long runs and uptempo days when you want supershoe bounce with trainer flexibility. Skip it if you're budget-minded ($225) or need stability, as the tall soft stack rewards efficient strides.",
     "pros": [
       "Remarkably light for the stack",
       "Bouncy premium foam",
@@ -2990,7 +2990,7 @@
     "drop": 5,
     "weight_mens": 4.5,
     "weight_womens": 3.8,
-    "description": "ASICS' radical 129 g carbon-plate marathon racer with FF Leap foam, a teardrop forefoot carbon plate, and a stripped Matryx upper — one of the lightest legal supershoes ever sold. Built for efficient, lighter racers chasing PRs from 10K to the marathon. Heavier runners and heel strikers should choose the Sky/Edge Tokyo instead: the minimal upper and firm-snappy ride trade comfort and durability for weight.",
+    "description": "ASICS' radical 129 g carbon-plate marathon racer with FF Leap foam, a teardrop forefoot carbon plate, and a stripped Matryx upper, one of the lightest legal supershoes ever sold. Built for efficient, lighter racers chasing PRs from 10K to the marathon. Heavier runners and heel strikers should choose the Sky/Edge Tokyo instead: the minimal upper and firm-snappy ride trade comfort and durability for weight.",
     "pros": [
       "Absurdly light (129 g)",
       "Aggressive race-day propulsion",
@@ -3122,7 +3122,7 @@
     "drop": 8,
     "weight_mens": 10.2,
     "weight_womens": 8.9,
-    "description": "Circular-design spin on the Nimbus built for recyclability: uniform single-polyester upper with no overlays and a special ASICS adhesive so sole and upper can be separated for take-back recycling. Ride is familiar soft Nimbus-style cushioning (FF Blast Plus Eco) for easy miles. Buy it for the sustainability story; skip it if you want maximum performance per dollar — it launched at a premium over the standard Nimbus with limited distribution.",
+    "description": "Circular-design spin on the Nimbus built for recyclability: uniform single-polyester upper with no overlays and a special ASICS adhesive so sole and upper can be separated for take-back recycling. Ride is familiar soft Nimbus-style cushioning (FF Blast Plus Eco) for easy miles. Buy it for the sustainability story; skip it if you want maximum performance per dollar, since it launched at a premium over the standard Nimbus with limited distribution.",
     "pros": [
       "Genuinely recyclable construction",
       "Soft max-cushion ride",
@@ -3385,7 +3385,7 @@
     "drop": 8,
     "weight_mens": 9,
     "weight_womens": 7.9,
-    "description": "Max-stack everyday trainer slotting between Novablast and Megablast: dual foams plus a three-quarter Pebax 'Astroplate' for a smooth, cushioned ride across daily, long, and moderate-tempo miles. A strong do-it-all pick for mid- and high-mileage runners. Skip if you want a light, agile feel — at 46 mm and 9 oz it runs big.",
+    "description": "Max-stack everyday trainer slotting between Novablast and Megablast: dual foams plus a three-quarter Pebax 'Astroplate' for a smooth, cushioned ride across daily, long, and moderate-tempo miles. A strong do-it-all pick for mid- and high-mileage runners. Skip if you want a light, agile feel: at 46 mm and 9 oz it runs big.",
     "pros": [
       "Huge, forgiving cushioning",
       "Versatile daily/long-run range",
@@ -3786,7 +3786,7 @@
       "Durable outsole"
     ],
     "cons": [
-      "Plays it safe — little energy return",
+      "Plays it safe, with little energy return",
       "Firmer than max-cushion rivals"
     ],
     "popularity": 95,
@@ -3867,7 +3867,7 @@
     "drop": 6,
     "weight_mens": 10.8,
     "weight_womens": 9.5,
-    "description": "A high-stack, rockered DNA Loft v3 cruiser with a broad, planted base — the protective easy-day option in the 2024 Ghost family. Great for heavier runners, recovery days, and anyone wanting max cushion without instability. It's over 10.5 oz and has zero pop, so skip it for tempo work.",
+    "description": "A high-stack, rockered DNA Loft v3 cruiser with a broad, planted base, the protective easy-day option in the 2024 Ghost family. Great for heavier runners, recovery days, and anyone wanting max cushion without instability. It's over 10.5 oz and has zero pop, so skip it for tempo work.",
     "pros": [
       "Protective max cushioning with a stable wide base",
       "Smooth rocker for easy heel-to-toe rolls",
@@ -4004,7 +4004,7 @@
     "drop": 10,
     "weight_mens": 10.2,
     "weight_womens": 9.1,
-    "description": "The Glycerin 22 debuts Brooks's DNA Tuned midsole in the standard Glycerin — larger, softer foam cells in the heel and smaller, responsive cells in the forefoot. The result is a plush premium trainer that soaks up easy and long-run miles while feeling less mushy than earlier Glycerins.",
+    "description": "The Glycerin 22 debuts Brooks's DNA Tuned midsole in the standard Glycerin: larger, softer foam cells in the heel and smaller, responsive cells in the forefoot. The result is a plush premium trainer that soaks up easy and long-run miles while feeling less mushy than earlier Glycerins.",
     "pros": [
       "Plush yet controlled DNA Tuned cushioning",
       "Premium, comfortable upper",
@@ -4446,7 +4446,7 @@
     "drop": 8,
     "weight_mens": 7.1,
     "weight_womens": 6,
-    "description": "A February 2025 upgrade of the Elite 4 that swapped in the bouncy DNA Gold supercritical PEBA midsole with a carbon plate — the first genuinely competitive Brooks super shoe. For marathon and half racers who want something different from the Vaporfly hegemony. Casual runners shouldn't pay $250 for what is strictly a race-day tool, and it fits snug.",
+    "description": "A February 2025 upgrade of the Elite 4 that swapped in the bouncy DNA Gold supercritical PEBA midsole with a carbon plate, making it the first genuinely competitive Brooks super shoe. For marathon and half racers who want something different from the Vaporfly hegemony. Casual runners shouldn't pay $250 for what is strictly a race-day tool, and it fits snug.",
     "pros": [
       "DNA Gold PEBA foam is a big leap over prior Elites",
       "Light, aggressive race-day ride",
@@ -4705,7 +4705,7 @@
     "drop": 8,
     "weight_mens": 7.7,
     "weight_womens": 6.5,
-    "description": "The value-priced lightweight trainer that kept the Launch line alive into 2025 — updated supercritical foam, low weight, no frills. Suits budget-minded runners who rotate one shoe for daily miles and occasional pickups. Skip it if you want plush cushioning; the release month (~Jan 2025, per RoadTrailRun's Jan 4, 2025 review) is approximate.",
+    "description": "The value-priced lightweight trainer that kept the Launch line alive into 2025: updated supercritical foam, low weight, no frills. Suits budget-minded runners who rotate one shoe for daily miles and occasional pickups. Skip it if you want plush cushioning; the release month (~Jan 2025, per RoadTrailRun's Jan 4, 2025 review) is approximate.",
     "pros": [
       "Light and quick-feeling for the price",
       "Good budget do-everything option"
@@ -5010,7 +5010,7 @@
     "drop": 6,
     "weight_mens": 8.4,
     "weight_womens": 7.1,
-    "description": "A soft, springy daily trainer built on expanded-bead Px TPE foam with a wide, accommodating platform — an affordable alternative to a Clifton or Rebel. Great easy-day and general training shoe for wider feet. The relaxed upper feels baggy on narrow feet and the insole is flimsy.",
+    "description": "A soft, springy daily trainer built on expanded-bead Px TPE foam with a wide, accommodating platform, an affordable alternative to a Clifton or Rebel. Great easy-day and general training shoe for wider feet. The relaxed upper feels baggy on narrow feet and the insole is flimsy.",
     "pros": [
       "Energetic, vibration-absorbing Px foam",
       "Wide stable platform suits broader feet",
@@ -6106,7 +6106,7 @@
     "drop": 5,
     "weight_mens": 9.3,
     "weight_womens": 7.9,
-    "description": "Hoka's plated super trainer: dual-layer PEBA over EVA with a Pebax plate at a 44mm stack. It covers daily miles, uptempo workouts, and long runs in one shoe with a best-of-both-worlds bounce. Skip it if you want a firm, snappy race-day plate feel — the plate acts more as a stabilizer than a propulsion element.",
+    "description": "Hoka's plated super trainer: dual-layer PEBA over EVA with a Pebax plate at a 44mm stack. It covers daily miles, uptempo workouts, and long runs in one shoe with a best-of-both-worlds bounce. Skip it if you want a firm, snappy race-day plate feel; the plate acts more as a stabilizer than a propulsion element.",
     "pros": [
       "Very versatile daily-to-uptempo range",
       "Big PEBA cushioning",
@@ -6282,7 +6282,7 @@
     "drop": 5,
     "weight_mens": 11.2,
     "weight_womens": 9.9,
-    "description": "The Skyward X is Hoka's biggest road shoe: a 48mm stack of supercritical EVA and PEBA with a convex carbon plate sandwiched in between. The plate here is for smoothing the rocker, not for racing — this is a plush, bouncy cruiser for long easy runs. It is heavy and expensive, but nothing else in the lineup feels this cushioned.",
+    "description": "The Skyward X is Hoka's biggest road shoe: a 48mm stack of supercritical EVA and PEBA with a convex carbon plate sandwiched in between. The plate here is for smoothing the rocker, not for racing. This is a plush, bouncy cruiser for long easy runs. It is heavy and expensive, but nothing else in the lineup feels this cushioned.",
     "pros": [
       "Enormous, bouncy cushioning",
       "Carbon plate smooths the rolling ride",
@@ -7283,7 +7283,7 @@
     "drop": 6,
     "weight_mens": 9.4,
     "weight_womens": 8,
-    "description": "A 42mm plateless max-cushion trainer built for road ultras, pairing a CircleCell top layer with rubberized EVA on a wide, stable, rockered platform. Firm but smooth, with standout durability — a strong pick for bigger runners and long steady training. Skip it if you want a soft, bouncy max-stack ride.",
+    "description": "A 42mm plateless max-cushion trainer built for road ultras, pairing a CircleCell top layer with rubberized EVA on a wide, stable, rockered platform. Firm but smooth, with standout durability, making it a strong pick for bigger runners and long steady training. Skip it if you want a soft, bouncy max-stack ride.",
     "pros": [
       "Wide, stable platform at a big stack",
       "Excellent durability for high mileage",
@@ -11496,7 +11496,7 @@
     "drop": 8,
     "weight_mens": 8.5,
     "weight_womens": 7.4,
-    "description": "A brand-new plateless supertrainer: full PWRRUN PB superfoam with SpeedRoll geometry that delivers a snappy, efficient ride at all paces for $150. Great for uptempo workouts and daily miles for runners who want superfoam bounce without a plate, and surprisingly stable for the category. Skip it if you want a soft, squishy ride — it runs firm — or if a tapered forefoot bothers your toes.",
+    "description": "A brand-new plateless supertrainer: full PWRRUN PB superfoam with SpeedRoll geometry that delivers a snappy, efficient ride at all paces for $150. Great for uptempo workouts and daily miles for runners who want superfoam bounce without a plate, and surprisingly stable for the category. Skip it if you want a soft, squishy ride (it runs firm) or if a tapered forefoot bothers your toes.",
     "pros": [
       "Responsive PWRRUN PB ride at every pace",
       "Light for a 40 mm trainer",
@@ -11799,7 +11799,7 @@
     "drop": 8,
     "weight_mens": 10.7,
     "weight_womens": 9.3,
-    "description": "A carbon-plated max-stack trainer built on IncrediRun foam that never figured out what it wants to be — too heavy for speedwork, too dense and blocky for recovery days. Reviewers found the plate purposeless and the ride bricky despite the bouncy top layer of foam. Only worth a look for runners who specifically like firm, dense plated trainers, especially at closeout prices.",
+    "description": "A carbon-plated max-stack trainer built on IncrediRun foam that never figured out what it wants to be: too heavy for speedwork, too dense and blocky for recovery days. Reviewers found the plate purposeless and the ride bricky despite the bouncy top layer of foam. Only worth a look for runners who specifically like firm, dense plated trainers, especially at closeout prices.",
     "pros": [
       "Comfortable, secure upper",
       "Soft, bouncy IncrediRun top layer",
@@ -11843,7 +11843,7 @@
     "drop": 6,
     "weight_mens": 9.4,
     "weight_womens": 8.1,
-    "description": "A light-touch stability trainer that dropped the medial post for CenterPath geometry — a wide base with raised sidewalls that guides the foot rather than correcting it. Great for mild overpronators who hate clunky stability shoes. Runners who need firm, structured support, or a precise fit, should look elsewhere — it runs a bit long.",
+    "description": "A light-touch stability trainer that dropped the medial post for CenterPath geometry, a wide base with raised sidewalls that guides the foot rather than correcting it. Great for mild overpronators who hate clunky stability shoes. Runners who need firm, structured support, or a precise fit, should look elsewhere, because it runs a bit long.",
     "pros": [
       "Unobtrusive, natural-feeling support",
       "Lighter and more nimble than most stability trainers",
@@ -11888,7 +11888,7 @@
     "drop": 6,
     "weight_mens": 9.5,
     "weight_womens": 8.5,
-    "description": "The stability sibling of the Ride, using a PWRRUN+ midsole with Saucony's CenterPath geometry — a wide base, raised sidewalls, and subtle guidance instead of a hard medial post. It supports overpronators without feeling stiff or corrective. A friendly pick for runners who want unobtrusive support for daily miles.",
+    "description": "The stability sibling of the Ride, using a PWRRUN+ midsole with Saucony's CenterPath geometry: a wide base, raised sidewalls, and subtle guidance instead of a hard medial post. It supports overpronators without feeling stiff or corrective. A friendly pick for runners who want unobtrusive support for daily miles.",
     "pros": [
       "Supportive without feeling controlling",
       "Comfortable PWRRUN+ cushioning",
@@ -11977,7 +11977,7 @@
     "drop": 6,
     "weight_mens": 10.6,
     "weight_womens": 9.8,
-    "description": "The revived Hurricane is a max-cushion stability tank: a PWRRUN PB core inside a supportive frame with CenterPath sidewalls on a very wide base. Excellent for overpronators and bigger runners logging easy miles who want deep cushioning plus real guidance. At 10.6 oz it is strictly a cruiser — skip it if you want anything lively.",
+    "description": "The revived Hurricane is a max-cushion stability tank: a PWRRUN PB core inside a supportive frame with CenterPath sidewalls on a very wide base. Excellent for overpronators and bigger runners logging easy miles who want deep cushioning plus real guidance. At 10.6 oz it is strictly a cruiser, so skip it if you want anything lively.",
     "pros": [
       "Outstanding stability with plush cushioning",
       "Very breathable upper",
@@ -12194,7 +12194,7 @@
     "drop": 8,
     "weight_mens": 10.1,
     "weight_womens": 8.5,
-    "description": "A traditional moderate-stability workhorse using firm PWRRUN foam and a HOLLOW-TECH support unit — durable, planted, and smooth, but short on energy return. A sensible pick for overpronators and flat-footed runners who want structured support at a fair price. Runners chasing a lively or plush ride should look elsewhere.",
+    "description": "A traditional moderate-stability workhorse using firm PWRRUN foam and a HOLLOW-TECH support unit: durable, planted, and smooth, but short on energy return. A sensible pick for overpronators and flat-footed runners who want structured support at a fair price. Runners chasing a lively or plush ride should look elsewhere.",
     "pros": [
       "Strong pronation control",
       "Durable outsole and build",
@@ -12238,7 +12238,7 @@
     "drop": 6,
     "weight_mens": 10.6,
     "weight_womens": 8.8,
-    "description": "Saucony's new max-cushion recovery trainer built on ultra-soft IncrediRun foam — marshmallow plush, surprisingly light for its 43 mm bulk, and stable thanks to a wide platform. Built for recovery days and easy miles with a roomy, wide-foot-friendly fit. It is one-dimensional at $200: do not buy it hoping to pick up the pace.",
+    "description": "Saucony's new max-cushion recovery trainer built on ultra-soft IncrediRun foam: marshmallow plush, surprisingly light for its 43 mm bulk, and stable thanks to a wide platform. Built for recovery days and easy miles with a roomy, wide-foot-friendly fit. It is one-dimensional at $200: do not buy it hoping to pick up the pace.",
     "pros": [
       "Exceptionally soft, protective cushioning",
       "Stable despite the plush stack",
@@ -12283,7 +12283,7 @@
     "drop": 8,
     "weight_mens": 9.9,
     "weight_womens": 8.4,
-    "description": "A soft-but-stable neutral daily trainer whose switch to a full PWRRUN+ midsole made it plusher — and nearly an ounce heavier — than the Ride 16. Good for easy miles and relaxed long runs on a wide, steady platform. Runners wanting a light, snappy do-everything trainer will find it sluggish.",
+    "description": "A soft-but-stable neutral daily trainer whose switch to a full PWRRUN+ midsole made it plusher (and nearly an ounce heavier) than the Ride 16. Good for easy miles and relaxed long runs on a wide, steady platform. Runners wanting a light, snappy do-everything trainer will find it sluggish.",
     "pros": [
       "Comfortable, smooth-transitioning ride",
       "Wide platform is stable for a neutral shoe",
@@ -12463,7 +12463,7 @@
     "drop": 10,
     "weight_mens": 10.1,
     "weight_womens": 8.8,
-    "description": "Saucony's plush neutral cruiser gained a full PWRRUN PB superfoam midsole, giving it a squishier, bouncier ride for easy and long days. The wide platform keeps all that softness stable, and the price held at $160. It is a one-pace shoe — comfortable and protective, but too heavy and warm for uptempo work.",
+    "description": "Saucony's plush neutral cruiser gained a full PWRRUN PB superfoam midsole, giving it a squishier, bouncier ride for easy and long days. The wide platform keeps all that softness stable, and the price held at $160. It is a one-pace shoe: comfortable and protective, but too heavy and warm for uptempo work.",
     "pros": [
       "Soft, bouncy PWRRUN PB cushioning",
       "Stable wide platform for a max-cushion shoe",
@@ -12508,7 +12508,7 @@
     "drop": 10,
     "weight_mens": 9.8,
     "weight_womens": 8.7,
-    "description": "Saucony's premium max-cushion neutral trainer, notable for moving to a full PEBA-based PWRRUN PB midsole — race-shoe foam in a plush daily package. It delivers a soft, bouncy ride for long runs and recovery days while staying reasonably light for its stack. One of the more energetic plush trainers on the market.",
+    "description": "Saucony's premium max-cushion neutral trainer, notable for moving to a full PEBA-based PWRRUN PB midsole, putting race-shoe foam in a plush daily package. It delivers a soft, bouncy ride for long runs and recovery days while staying reasonably light for its stack. One of the more energetic plush trainers on the market.",
     "pros": [
       "PEBA-based foam is soft and springy",
       "Great long-run and recovery cruiser",

@@ -502,7 +502,7 @@ export default function AttireGuidePage() {
       <section className="section container prose-block">
         <h2>What to wear running, by temperature</h2>
         <p>
-          Dress for 15–20°F warmer than the thermometer says—you generate
+          Dress for 15–20°F warmer than the thermometer says, because you generate
           that much heat in the first mile.
         </p>
         <ul>
@@ -511,7 +511,7 @@ export default function AttireGuidePage() {
           <li>30–45°F: tights, a base layer, a light jacket or vest, gloves, and a headband or hat.</li>
           <li>Below 30°F: wind-blocking layer up front, warm base underneath. Cover ears, hands, and exposed skin.</li>
           <li>Rain: a brimmed hat keeps water off your face better than most hoods. Skip cotton everywhere.</li>
-          <li>Running in the dark: put reflective material on the parts of you that move—ankles and wrists are what drivers notice first.</li>
+          <li>Running in the dark: put reflective material on the parts of you that move. Ankles and wrists are what drivers notice first.</li>
         </ul>
       </section>
     </div>

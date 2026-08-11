@@ -6,7 +6,7 @@ import { pageMetadata, SITE_URL } from "@/lib/seo";
 export const revalidate = 3600;
 
 export const metadata = pageMetadata({
-  title: "Runner Guides — Shoes, Music, Fuel, and Training",
+  title: "Runner Guides: Shoes, Music, Fuel, and Training",
   description:
     "Practical guides that help runners choose shoes, build playlists, practice fueling, and use a training plan well.",
   path: "/rundown",

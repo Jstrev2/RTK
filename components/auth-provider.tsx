@@ -17,7 +17,7 @@ type AuthContextValue = {
   supabaseAvailable: boolean;
   /** Any paid access: an active subscription OR an unexpired rescue. */
   isPremium: boolean;
-  /** Recurring subscription (monthly/season pass) — has a Billing Portal. */
+  /** Recurring subscription (monthly/season pass); has a Billing Portal. */
   isSubscriber: boolean;
   /** One-time Injury Rescue window is active. */
   hasRescue: boolean;

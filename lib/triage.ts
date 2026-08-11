@@ -3,7 +3,7 @@ import type { InjurySeverity } from "@/lib/injuries";
 /**
  * Symptom triage: derives injury severity from the questions a clinician
  * would ask, instead of asking the runner to self-grade "mild vs severe"
- * (most people under- or over-shoot). Deliberately conservative — ties
+ * (most people under- or over-shoot). Deliberately conservative: ties
  * break toward the more cautious grade, and bone-stress patterns escalate
  * out of self-management entirely.
  */
@@ -15,7 +15,7 @@ export type TriageAnswers = {
   nightOrRestPain: boolean;
   /** Pressing finds one precise, tender spot on a bone (not general soreness). */
   pinpointBoneTenderness: boolean;
-  /** Ten single-leg hops on that side hurt — or you wouldn't attempt them. */
+  /** Ten single-leg hops on that side hurt, or you wouldn't attempt them. */
   hopPainful: boolean;
   /** On an easy run, pain stays at 3/10 or below AND settles by the next morning. */
   runnableAtLowPain: boolean;
@@ -28,7 +28,7 @@ export type TriageResult = {
   /**
    * The pattern looks like bone stress (pinpoint bone pain plus night pain
    * or hop pain). We treat it as a suspected stress fracture until imaging
-   * says otherwise — that path requires medical clearance.
+   * says otherwise, and that path requires medical clearance.
    */
   suspectBoneStress: boolean;
   /** Self-managing shouldn't continue without a professional assessment. */
@@ -87,7 +87,7 @@ export function runTriage(answers: TriageAnswers): TriageResult {
     );
   } else if (answers.pinpointBoneTenderness) {
     reasons.push(
-      "Pinpoint bone tenderness on its own is worth ruling out bone stress before restarting a plan — get it checked rather than testing it with miles."
+      "Pinpoint bone tenderness on its own is worth ruling out bone stress before restarting a plan. Get it checked rather than testing it with miles."
     );
   }
 
@@ -110,14 +110,14 @@ export function runTriage(answers: TriageAnswers): TriageResult {
   }
   if (answers.overTwoWeeks) {
     score += 1;
-    reasons.push("Symptoms past two weeks deserve a more patient ramp — rushing this window is how comebacks fail.");
+    reasons.push("Symptoms past two weeks deserve a more patient ramp, because rushing this window is how comebacks fail.");
   }
 
   const severity: InjurySeverity = score >= 4 ? "severe" : score >= 2 ? "moderate" : "mild";
 
   if (score < 2) {
     reasons.push(
-      "You can walk normally and run at low, settling pain — that pattern usually tolerates a careful, reduced schedule."
+      "You can walk normally and run at low, settling pain. That pattern usually tolerates a careful, reduced schedule."
     );
   }
 
@@ -129,7 +129,7 @@ export function runTriage(answers: TriageAnswers): TriageResult {
 
   if (seeProfessionalFirst && !suspectBoneStress) {
     reasons.push(
-      "This combination has gone beyond confident self-management — get it assessed before restarting a plan."
+      "This combination has gone beyond confident self-management, so get it assessed before restarting a plan."
     );
   }
 

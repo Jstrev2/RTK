@@ -45,15 +45,15 @@ alter table affiliate_programs enable row level security;`;
 
 const APPLICATION_BLURB = `Runner Toolkit (runnertoolkit.com) is a free set of decision tools for runners: a running-shoe finder backed by a 300+ shoe database with individual spec/review pages, a race-fuel planner, a pace calculator, a what-to-wear guide, and free training plans.
 
-Recommendations are editorial — retailer relationships never change what we recommend, and every commercial link is labeled, uses rel="sponsored", and sits next to an on-page disclosure. Audience: committed recreational road runners, primarily US.
+Recommendations are editorial: retailer relationships never change what we recommend, and every commercial link is labeled, uses rel="sponsored", and sits next to an on-page disclosure. Audience: committed recreational road runners, primarily US.
 
 We already link retailer search and product pages from every shoe detail page and fuel plan, so approved links go live sitewide immediately. The site relaunched mid-2026 and organic traffic is early but growing on a fully indexed 300+ page catalog.`;
 
-const OUTREACH_EMAIL = `Subject: Affiliate partnership — Runner Toolkit shoe recommendations
+const OUTREACH_EMAIL = `Subject: Affiliate partnership: Runner Toolkit shoe recommendations
 
 Hi there,
 
-I run Runner Toolkit (runnertoolkit.com), a free set of tools that helps runners pick the right shoes, plan race fuel, and train well. Our shoe finder sits on a database of 300+ current road shoes, each with its own spec page — and we already link to your store from those pages because runners ask where to buy.
+I run Runner Toolkit (runnertoolkit.com), a free set of tools that helps runners pick the right shoes, plan race fuel, and train well. Our shoe finder sits on a database of 300+ current road shoes, each with its own spec page, and we already link to your store from those pages because runners ask where to buy.
 
 I'd love to make that relationship official through your affiliate program. Could you point me at the best way to apply, or approve runnertoolkit.com if you manage it directly?
 
@@ -62,10 +62,10 @@ A few things worth knowing:
 - All commercial links are labeled and use rel="sponsored".
 - We're happy to feature seasonal deals or launches in our guides where they genuinely fit.
 
-Thanks for taking a look — happy to answer anything.
+Thanks for taking a look. Happy to answer anything.
 
 Jon
-Runner Toolkit — runnertoolkit.com
+Runner Toolkit, runnertoolkit.com
 hello@runnertoolkit.com`;
 
 export default function PartnersPage() {
@@ -190,7 +190,7 @@ export default function PartnersPage() {
       setCopied(label);
       setTimeout(() => setCopied(null), 2000);
     } catch {
-      setMessage("Clipboard unavailable — select and copy manually.");
+      setMessage("Clipboard unavailable, so select and copy manually.");
     }
   };
 
@@ -237,7 +237,7 @@ export default function PartnersPage() {
                 {copied === "sql" ? "Copied" : "Copy SQL"}
               </button>
               <button className="btn btn-primary btn-sm" type="button" onClick={load}>
-                I ran it — reload
+                I ran it, reload
               </button>
             </div>
           </div>

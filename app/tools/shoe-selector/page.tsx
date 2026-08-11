@@ -588,11 +588,11 @@ export default function ShoeSelectorPage() {
               <article key={shoe.id} className="comparison-card">
                 <h3>{displayName(shoe)}</h3>
                 <dl>
-                  <div><dt>Price</dt><dd>{shoe.price ? "$" + shoe.price : "—"}</dd></div>
+                  <div><dt>Price</dt><dd>{shoe.price ? "$" + shoe.price : "–"}</dd></div>
                   <div><dt>Ride</dt><dd>{prettyLabel(shoe.cushion)}</dd></div>
                   <div><dt>Support</dt><dd>{prettyLabel(shoe.stability)}</dd></div>
-                  <div><dt>Weight</dt><dd>{shoe.weightMens ? shoe.weightMens + " oz" : "—"}</dd></div>
-                  <div><dt>Drop</dt><dd>{shoe.drop ? shoe.drop + " mm" : "—"}</dd></div>
+                  <div><dt>Weight</dt><dd>{shoe.weightMens ? shoe.weightMens + " oz" : "–"}</dd></div>
+                  <div><dt>Drop</dt><dd>{shoe.drop ? shoe.drop + " mm" : "–"}</dd></div>
                 </dl>
                 <button className="text-button" type="button" onClick={() => toggleCompare(shoe.id)}>
                   Remove
@@ -699,7 +699,7 @@ export default function ShoeSelectorPage() {
                     <td>{prettyLabel(shoe.usageTypes[0] || "daily_trainer")}</td>
                     <td>{prettyLabel(shoe.cushion)}</td>
                     <td>{prettyLabel(shoe.stability)}</td>
-                    <td>{shoe.price ? "$" + shoe.price : "—"}</td>
+                    <td>{shoe.price ? "$" + shoe.price : "–"}</td>
                     <td>
                       <div className="shoe-table-actions">
                         <Link className="btn btn-xs btn-secondary" href={"/shoes/" + shoe.id}>
@@ -762,7 +762,7 @@ export default function ShoeSelectorPage() {
         <h2>Why only three shoes?</h2>
         <p>
           Because a hundred options is how you end up buying the same shoe you
-          already own. Three lets you compare with intention—and every pick
+          already own. Three lets you compare with intention, and every pick
           shows its tradeoff before you spend anything.
         </p>
         <h2>When should I replace running shoes?</h2>

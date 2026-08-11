@@ -6,7 +6,7 @@ const description =
   "Choose the workout, duration, and energy arc to build a phased running playlist from warm-up through the final push.";
 
 export const metadata = pageMetadata({
-  title: "Running Playlist Builder — Music Matched to Your Workout",
+  title: "Running Playlist Builder: Music Matched to Your Workout",
   description,
   path: "/tools/music",
 });

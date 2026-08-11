@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useAuth } from "@/components/auth-provider";
 
 /**
- * "Manage subscription" button for premium members — opens the Stripe
+ * "Manage subscription" button for premium members. Opens the Stripe
  * Billing Portal (update card, switch plan, cancel). Renders nothing for
  * non-premium users.
  */
@@ -43,7 +43,7 @@ export default function ManageSubscription() {
         {state === "loading" ? "Opening…" : "Manage subscription"}
       </button>
       {state === "none" ? (
-        <span className="brand-sub">No billing record found — email hello@runnertoolkit.com.</span>
+        <span className="brand-sub">No billing record found. Email hello@runnertoolkit.com.</span>
       ) : null}
       {state === "error" ? (
         <span className="brand-sub">Could not open billing. Try again in a minute.</span>

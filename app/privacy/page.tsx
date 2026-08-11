@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Privacy",
   description:
-    "How Runner Toolkit collects, uses, and protects the information you enter — accounts, saved items, payments, and sensitive training details.",
+    "How Runner Toolkit collects, uses, and protects the information you enter: accounts, saved items, payments, and sensitive training details.",
   path: "/privacy",
 });
 

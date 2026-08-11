@@ -122,7 +122,7 @@ const whoItsFor = (shoe: Shoe): string => {
     );
   } else if (shoe.stability === "mild") {
     sentences.push(
-      "A wide, stable base keeps it steady without stability hardware — a good pick if you're mostly neutral but like a planted feel."
+      "A wide, stable base keeps it steady without stability hardware, so it's a good pick if you're mostly neutral but like a planted feel."
     );
   } else {
     sentences.push(
@@ -132,7 +132,7 @@ const whoItsFor = (shoe: Shoe): string => {
 
   if (shoe.cushion === "maximum") {
     sentences.push(
-      "The tall, soft stack favors comfort over ground feel — great for high mileage and bigger runners, less so for racing snappiness."
+      "The tall, soft stack favors comfort over ground feel. That's great for high mileage and bigger runners, less so for racing snappiness."
     );
   } else if (shoe.cushion === "minimal") {
     sentences.push(
@@ -186,7 +186,7 @@ async function loadAlternatives(shoe: Shoe): Promise<Shoe[]> {
     if (data?.length) {
       pool = (data as DbShoe[]).map(mapDbShoe);
     }
-    // With a reachable DB, never fall back to the bundled list — bundled
+    // With a reachable DB, never fall back to the bundled list, because bundled
     // shoes that were since deactivated would render as 404ing links.
   } else {
     pool = shoes.filter(
@@ -228,7 +228,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const shoe = await loadShoe(id);
   if (!shoe) return { title: "Shoe Not Found" };
   const title = displayName(shoe);
-  const description = `${title} review data — ${prettyLabel(shoe.cushion)} cushion, ${prettyLabel(
+  const description = `${title} review data: ${prettyLabel(shoe.cushion)} cushion, ${prettyLabel(
     shoe.stability
   )} support. ${shoe.stack ? `${shoe.stack}mm stack, ` : ""}${
     shoe.drop ? `${shoe.drop}mm drop, ` : ""
@@ -361,11 +361,11 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
                   </div>
                   <div className="hero-strip-item">
                     <span>Drop</span>
-                    <strong>{shoe.drop ? `${shoe.drop} mm` : "—"}</strong>
+                    <strong>{shoe.drop ? `${shoe.drop} mm` : "–"}</strong>
                   </div>
                   <div className="hero-strip-item">
                     <span>Heel stack</span>
-                    <strong>{shoe.stack ? `${shoe.stack} mm` : "—"}</strong>
+                    <strong>{shoe.stack ? `${shoe.stack} mm` : "–"}</strong>
                   </div>
                   <div className="hero-strip-item">
                     <span>Toe box</span>
@@ -445,7 +445,7 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
                             </td>
                             <td>{prettyLabel(alt.cushion)}</td>
                             <td>{prettyLabel(alt.stability)}</td>
-                            <td>{alt.price ? `$${alt.price}` : "—"}</td>
+                            <td>{alt.price ? `$${alt.price}` : "–"}</td>
                             <td>
                               <Link
                                 className="btn btn-xs btn-ghost"
@@ -540,27 +540,27 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
                 <strong>Key stats</strong>
                 <div className="stat-grid">
                   <div className="stat">
-                    <strong>{shoe.price ? `$${shoe.price}` : "—"}</strong>
+                    <strong>{shoe.price ? `$${shoe.price}` : "–"}</strong>
                     <span>Price (MSRP)</span>
                   </div>
                   <div className="stat">
-                    <strong>{shoe.stack ? `${shoe.stack} mm` : "—"}</strong>
+                    <strong>{shoe.stack ? `${shoe.stack} mm` : "–"}</strong>
                     <span>Stack height</span>
                   </div>
                   <div className="stat">
-                    <strong>{shoe.drop ? `${shoe.drop} mm` : "—"}</strong>
+                    <strong>{shoe.drop ? `${shoe.drop} mm` : "–"}</strong>
                     <span>Drop</span>
                   </div>
                   <div className="stat">
-                    <strong>{shoe.weightMens ? `${shoe.weightMens} oz` : "—"}</strong>
+                    <strong>{shoe.weightMens ? `${shoe.weightMens} oz` : "–"}</strong>
                     <span>Men&apos;s weight</span>
                   </div>
                   <div className="stat">
-                    <strong>{shoe.weightWomens ? `${shoe.weightWomens} oz` : "—"}</strong>
+                    <strong>{shoe.weightWomens ? `${shoe.weightWomens} oz` : "–"}</strong>
                     <span>Women&apos;s weight</span>
                   </div>
                   <div className="stat">
-                    <strong>{shoe.releaseYear ?? "—"}</strong>
+                    <strong>{shoe.releaseYear ?? "–"}</strong>
                     <span>Release year</span>
                   </div>
                 </div>

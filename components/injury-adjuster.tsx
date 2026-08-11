@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import type { TrainingPlan } from "@/lib/data";
 import { injuries, MEDICAL_DISCLAIMER, type InjurySeverity } from "@/lib/injuries";
-import { adjustPlan, type AdjustedWeek } from "@/lib/plan-adjuster";
+import { adjustPlan, NO_DISTANCE, type AdjustedWeek } from "@/lib/plan-adjuster";
 import PremiumGate from "@/components/premium-gate";
 import { useAuth } from "@/components/auth-provider";
 
@@ -35,8 +35,8 @@ function WeekCard({ week }: { week: AdjustedWeek }) {
         <ul className="list">
           {week.workouts.map((workout) => (
             <li key={`${week.weekNumber}-${workout.day}-${workout.type}`}>
-              <strong>{workout.day}</strong> — {workout.type}
-              {workout.distance && workout.distance !== "—" ? `, ${workout.distance}` : ""}
+              <strong>{workout.day}</strong>: {workout.type}
+              {workout.distance && workout.distance !== NO_DISTANCE ? `, ${workout.distance}` : ""}
               <div className="brand-sub">{workout.notes}</div>
             </li>
           ))}
@@ -108,7 +108,7 @@ export default function InjuryAdjuster({ plan }: { plan: TrainingPlan }) {
             >
               {severityOptions.map((option) => (
                 <option key={option.id} value={option.id}>
-                  {option.label} — {option.hint}
+                  {option.label}: {option.hint}
                 </option>
               ))}
             </select>
@@ -155,7 +155,7 @@ export default function InjuryAdjuster({ plan }: { plan: TrainingPlan }) {
 
             <div className="card card-outline">
               <div className="stack">
-                <strong>{selectedInjury.name} — the ground rules</strong>
+                <strong>{selectedInjury.name}: the ground rules</strong>
                 <p className="brand-sub">{selectedInjury.summary}</p>
                 <div className="grid grid-2">
                   <div>
@@ -195,7 +195,7 @@ export default function InjuryAdjuster({ plan }: { plan: TrainingPlan }) {
                 remainingWeeks.length ? (
                   <div className="stack">
                     <strong>
-                      Revised plan — week {adjusted.reportedWeek} preview
+                      Revised plan: week {adjusted.reportedWeek} preview
                     </strong>
                     <WeekCard week={remainingWeeks[0]} />
                     <div className="brand-sub">

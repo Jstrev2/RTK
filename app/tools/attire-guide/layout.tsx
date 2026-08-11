@@ -6,7 +6,7 @@ const description =
   "What to wear for your run, free: outfit recommendations for any temperature, weather, and training style.";
 
 export const metadata = pageMetadata({
-  title: "What to Wear Running — Attire Guide by Temperature",
+  title: "What to Wear Running: Attire Guide by Temperature",
   description,
   path: "/tools/attire-guide",
 });

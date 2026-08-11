@@ -8,9 +8,9 @@ import { pageMetadata } from "@/lib/seo";
 export const revalidate = 86400;
 
 export const metadata = pageMetadata({
-  title: "Running Shoe Database — Every Road Shoe We Track",
+  title: "Running Shoe Database: Every Road Shoe We Track",
   description:
-    "Browse 220+ current road running shoes by brand — cushion, support, drop, weight, and honest tradeoffs for every model, updated as new versions release.",
+    "Browse 220+ current road running shoes by brand, with cushion, support, drop, weight, and honest tradeoffs for every model, updated as new versions release.",
   path: "/shoes",
 });
 
@@ -79,8 +79,8 @@ export default async function ShoeIndexPage() {
                       </td>
                       <td>{prettyLabel(shoe.cushion)}</td>
                       <td>{prettyLabel(shoe.stability)}</td>
-                      <td>{shoe.drop ? `${shoe.drop} mm` : "—"}</td>
-                      <td>{shoe.price ? `$${shoe.price}` : "—"}</td>
+                      <td>{shoe.drop ? `${shoe.drop} mm` : "–"}</td>
+                      <td>{shoe.price ? `$${shoe.price}` : "–"}</td>
                     </tr>
                   ))}
                 </tbody>

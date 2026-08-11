@@ -319,19 +319,19 @@ export default function AccountPage() {
               </strong>
               {isPremium ? (
                 <p style={{ margin: 0 }}>
-                  Your full comeback schedules are unlocked — every rebuilt
+                  Your full comeback schedules are unlocked: every rebuilt
                   week through race day, with the reasoning behind each change.
                 </p>
               ) : (
                 <p style={{ margin: 0 }}>
                   You&apos;re on the free toolkit. If an injury interrupts your
                   training, the free calculator gives you an honest race
-                  verdict — and Injury Rescue unlocks the full rebuilt schedule.
+                  verdict, and Injury Rescue unlocks the full rebuilt schedule.
                 </p>
               )}
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
                 <Link className="btn btn-primary" href="/rescue">
-                  {isPremium ? "Open Injury Rescue" : "Check my race — free"}
+                  {isPremium ? "Open Injury Rescue" : "Check my race (free)"}
                 </Link>
                 {!isPremium ? (
                   <Link className="btn btn-secondary" href="/premium">
@@ -423,7 +423,7 @@ export default function AccountPage() {
           </div>
 
           <div className="notice">
-            Injury-adjusted schedules live on the training plans page — your
+            Injury-adjusted schedules live on the training plans page, and your
             premium status applies there automatically.
           </div>
         </div>

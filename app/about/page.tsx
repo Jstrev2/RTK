@@ -21,7 +21,7 @@ export default function AboutPage() {
       <section className="section container prose-block">
         <h2 className="section-title">Run smarter. Guess less.</h2>
         <p>
-          The free tools are the product—not a trial. They help a runner choose
+          The free tools are the product, not a trial. They help a runner choose
           shoes, fuel, pace, and a starting training plan. Runner Toolkit earns
           money through clearly disclosed shoe and fuel links and through
           Injury Rescue when an injury interrupts a training plan.

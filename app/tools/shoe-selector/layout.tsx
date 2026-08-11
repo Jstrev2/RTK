@@ -6,7 +6,7 @@ const description =
   "Tell us what you run, the ride and fit you prefer, and your budget. Get a short, explainable list of road running shoes worth trying.";
 
 export const metadata = pageMetadata({
-  title: "Running Shoe Finder — Match Shoes to How You Run",
+  title: "Running Shoe Finder: Match Shoes to How You Run",
   description,
   path: "/tools/shoe-selector",
 });

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { trainingPlans, type TrainingPlan } from "@/lib/data";
 import { injuries, MEDICAL_DISCLAIMER, type Injury } from "@/lib/injuries";
-import { adjustPlan, type AdjustedWeek } from "@/lib/plan-adjuster";
+import { adjustPlan, NO_DISTANCE, type AdjustedWeek } from "@/lib/plan-adjuster";
 import { runTriage, TRIAGE_QUESTIONS, type TriageAnswers, type TriageResult } from "@/lib/triage";
 import { buildCustomPlan, applyLongRunDay, type PlanShape } from "@/lib/custom-plan";
 import { useAuth } from "@/components/auth-provider";
@@ -44,8 +44,8 @@ function WeekCard({ week }: { week: AdjustedWeek }) {
         <ul className="list">
           {week.workouts.map((workout) => (
             <li key={`${week.weekNumber}-${workout.day}-${workout.type}`}>
-              <strong>{workout.day}</strong> — {workout.type}
-              {workout.distance && workout.distance !== "—" ? `, ${workout.distance}` : ""}
+              <strong>{workout.day}</strong>: {workout.type}
+              {workout.distance && workout.distance !== NO_DISTANCE ? `, ${workout.distance}` : ""}
               <div className="brand-sub">{workout.notes}</div>
             </li>
           ))}
@@ -93,7 +93,7 @@ function EmailGate({ onUnlock }: { onUnlock: () => void }) {
         <p className="brand-sub">
           Enter your email and the first week of your comeback schedule appears
           right here. We&apos;ll also send occasional, genuinely useful training
-          updates — no daily noise.
+          updates, and no daily noise.
         </p>
         <div className="newsletter-form">
           <input
@@ -154,7 +154,7 @@ function RescueCheckout() {
         <span className="pill">Injury Rescue</span>
         <strong>Unlock your full comeback schedule</strong>
         <p>
-          Every remaining week through race day — rest, graded return-to-run,
+          Every remaining week through race day: rest, graded return-to-run,
           volume-capped rebuild, and your taper when the timeline allows it.
           Re-run it as the injury evolves. One-time <strong>$29</strong>, 90
           days of access, no subscription.
@@ -162,7 +162,7 @@ function RescueCheckout() {
         <div className="button-row">
           {user ? (
             <button className="btn btn-primary" type="button" onClick={startCheckout} disabled={state === "loading"}>
-              {state === "loading" ? "Opening checkout..." : "Get my full schedule — $29"}
+              {state === "loading" ? "Opening checkout..." : "Get my full schedule for $29"}
             </button>
           ) : (
             <Link className="btn btn-primary" href="/login">Sign in to unlock</Link>
@@ -191,7 +191,7 @@ function RescueContent() {
   const status = searchParams.get("status");
 
   // After the Stripe redirect, the webhook stamps rescue access on the user's
-  // app_metadata — refresh the JWT so access appears without re-login.
+  // app_metadata, so refresh the JWT to make access appear without re-login.
   useEffect(() => {
     if (status !== "success" || isPremium) return;
     let cancelled = false;
@@ -270,7 +270,7 @@ function RescueContent() {
   const selectedInjury = injuries.find((i) => i.id === injuryId);
   const rtkPlan = trainingPlans.find((p) => p.id === rtkPlanId) ?? trainingPlans[0];
 
-  // A cleared number input becomes 0 via Number("") — never let that silently
+  // A cleared number input becomes 0 via Number(""). Never let that silently
   // clamp into a phantom 3-week plan; block submission instead.
   const shapeValid =
     planMode !== "custom" ||
@@ -286,7 +286,7 @@ function RescueContent() {
     const triage: TriageResult = runTriage(answers as TriageAnswers);
 
     // Bone-stress patterns escalate to the stress-fracture protocol no matter
-    // which injury was picked — conservative until imaging says otherwise.
+    // which injury was picked: stay conservative until imaging says otherwise.
     const effectiveInjuryId = triage.suspectBoneStress ? "stress_fracture" : injuryId;
 
     let plan: TrainingPlan;
@@ -327,7 +327,7 @@ function RescueContent() {
     <section className="section container">
         {status === "success" ? (
           <div className="notice" style={{ marginBottom: "24px" }}>
-            Payment received — your full comeback schedule is unlocked below.
+            Payment received. Your full comeback schedule is unlocked below.
           </div>
         ) : null}
         {status === "cancelled" ? (
@@ -376,8 +376,8 @@ function RescueContent() {
                   Symptom check
                 </strong>
                 <div className="brand-sub">
-                  We grade severity from your answers — the way a professional
-                  would — instead of asking you to guess how bad it is.
+                  We grade severity from your answers, the way a professional
+                  would, instead of asking you to guess how bad it is.
                 </div>
               </div>
               {TRIAGE_QUESTIONS.map((q) => (
@@ -418,7 +418,7 @@ function RescueContent() {
                 </strong>
                 <div className="brand-sub">
                   Hal Higdon PDF, Garmin Coach, a coach&apos;s spreadsheet, or a
-                  Runner Toolkit plan — six numbers describe its shape well
+                  Runner Toolkit plan: six numbers describe its shape well
                   enough to rebuild the rest of it.
                 </div>
               </div>
@@ -601,10 +601,10 @@ function RescueContent() {
                     <span className="pill">How we graded this</span>
                     <strong style={{ display: "block", marginTop: "8px" }}>
                       {result.triage.severity === "mild"
-                        ? "Mild — manageable with a careful, reduced schedule"
+                        ? "Mild: manageable with a careful, reduced schedule"
                         : result.triage.severity === "moderate"
-                          ? "Moderate — running load needs a real reset"
-                          : "Severe — the comeback starts with rest, not runs"}
+                          ? "Moderate: running load needs a real reset"
+                          : "Severe: the comeback starts with rest, not runs"}
                     </strong>
                   </div>
                   <ul className="list">
@@ -621,7 +621,7 @@ function RescueContent() {
                     <strong>Your answers fit a bone-stress pattern.</strong>
                     <p>
                       Pinpoint bone tenderness with night pain or hop pain can
-                      mean a stress fracture — so we&apos;ve switched your plan to
+                      mean a stress fracture, so we&apos;ve switched your plan to
                       the suspected-stress-fracture protocol until imaging says
                       otherwise. That&apos;s not us being dramatic; running on a
                       stress fracture is how a 6-week problem becomes a 6-month
@@ -638,7 +638,7 @@ function RescueContent() {
                     <p>
                       This combination of symptoms has gone beyond confident
                       self-management. Treat the schedule below as the plan to
-                      bring to that appointment — not a substitute for it.
+                      bring to that appointment, not a substitute for it.
                     </p>
                   </div>
                 </div>
@@ -656,7 +656,7 @@ function RescueContent() {
               {effectiveInjury ? (
                 <div className="card card-outline">
                   <div className="stack">
-                    <strong>{effectiveInjury.name} — the ground rules</strong>
+                    <strong>{effectiveInjury.name}: the ground rules</strong>
                     <div className="grid grid-2">
                       <div>
                         <span className="label">Avoid for now</span>
@@ -693,7 +693,7 @@ function RescueContent() {
               {result.remaining.length ? (
                 emailUnlocked || isPremium ? (
                   <div className="stack">
-                    <strong>Your comeback starts here — week {result.adjusted.reportedWeek}</strong>
+                    <strong>Your comeback starts here, in week {result.adjusted.reportedWeek}</strong>
                     <WeekCard week={result.remaining[0]} />
                   </div>
                 ) : (
@@ -721,7 +721,7 @@ function RescueContent() {
                   <div className="stack">
                     <div className="brand-sub">
                       {result.remaining.length - 1} more rebuilt week
-                      {result.remaining.length === 2 ? "" : "s"} through race day —
+                      {result.remaining.length === 2 ? "" : "s"} through race day:
                       graded return-to-run, volume-capped rebuild, and your taper
                       when the timeline allows it.
                     </div>
@@ -732,7 +732,7 @@ function RescueContent() {
 
               <p className="brand-sub">{MEDICAL_DISCLAIMER}</p>
               <Link className="text-link" href="/methodology">
-                How the comeback schedule is built — sources and methodology →
+                How the comeback schedule is built: sources and methodology →
               </Link>
             </div>
           ) : null}

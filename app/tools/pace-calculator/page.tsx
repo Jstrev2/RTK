@@ -105,7 +105,7 @@ export default function PaceCalculatorPage() {
     <div className="tool-page tool-page-pace">
       <section className="tool-hero container">
         <span className="eyebrow">Quick utility</span>
-        <h1>Turn pace into time—and time into a plan.</h1>
+        <h1>Turn pace into time, and time into a plan.</h1>
         <p>
           Enter a finish time or a pace to calculate splits, predict race
           times, and convert between units.
@@ -289,8 +289,8 @@ export default function PaceCalculatorPage() {
         <h2>Why race predictions are estimates</h2>
         <p>
           The predictions hold your pace flat across distances. Real fitness
-          doesn&apos;t work that way—most runners slow as the distance
-          doubles—so treat a marathon prediction from a 5K time as a ceiling,
+          doesn&apos;t work that way. Most runners slow as the distance
+          doubles, so treat a marathon prediction from a 5K time as a ceiling,
           not a promise. The longer the jump, the more training it takes to
           make the number real. A <Link href="/tools/training-plans">training
           plan</Link> is how you close that gap.

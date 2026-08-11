@@ -793,7 +793,7 @@ export default function FuelingPage() {
             </p>
           </div>
           <span className="fuel-selected-label">
-            Schedule uses: {activeProduct ? activeProduct.brand + " " + activeProduct.name : "—"}
+            Schedule uses: {activeProduct ? activeProduct.brand + " " + activeProduct.name : "none selected"}
           </span>
         </div>
 

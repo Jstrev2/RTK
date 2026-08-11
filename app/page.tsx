@@ -6,9 +6,9 @@ import { getSupabaseAdmin } from "@/lib/supabase-admin";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: { absolute: "Runner Toolkit — Run Smarter. Guess Less." },
+  title: { absolute: "Runner Toolkit: Run Smarter. Guess Less." },
   description:
-    "Free tools to find running shoes, plan race fuel, and find out if your race is still on after an injury—with a rebuilt comeback schedule for any training plan.",
+    "Free tools to find running shoes, plan race fuel, and find out if your race is still on after an injury, with a rebuilt comeback schedule for any training plan.",
   alternates: { canonical: "/" }
 };
 
@@ -71,7 +71,7 @@ export default async function HomePage() {
           <p>
             Find shoes that fit how you run. Plan fuel for the distance. And if
             you&apos;re hurt mid-plan, find out if your race is still on. Get a
-            useful answer in minutes—no account required.
+            useful answer in minutes. No account required.
           </p>
         </div>
 
@@ -124,7 +124,7 @@ export default async function HomePage() {
               <h3>Can I still make my race?</h3>
               <p>
                 Hurt mid-training? Answer a short symptom check and get an
-                honest verdict—plus a rebuilt week-by-week comeback schedule.
+                honest verdict, plus a rebuilt week-by-week comeback schedule.
               </p>
             </div>
             <div className="shoe-preview" aria-hidden="true">
@@ -142,7 +142,7 @@ export default async function HomePage() {
             </div>
             <div>
               <span className="tool-kicker">Fuel Planner</span>
-              <h3>Know what to take—and when.</h3>
+              <h3>Know what to take, and when.</h3>
               <p>
                 Turn your distance, expected time, conditions, and preferred
                 fuel into a practical schedule and packing list.
@@ -175,7 +175,7 @@ export default async function HomePage() {
             <div>
               <span>01</span>
               <strong>Personalized</strong>
-              <p>Built around the run, runner, and constraints—not a universal ranking.</p>
+              <p>Built around the run, runner, and constraints rather than a universal ranking.</p>
             </div>
             <div>
               <span>02</span>
@@ -196,14 +196,14 @@ export default async function HomePage() {
           <span className="eyebrow">Runner Toolkit Injury Rescue</span>
           <h2>Injured mid-training? We&apos;ll get you back to the start line.</h2>
           <p>
-            It works with the plan you&apos;re already on—Higdon PDF, Garmin
+            It works with the plan you&apos;re already on: Higdon PDF, Garmin
             Coach, your coach&apos;s spreadsheet, or ours. A short symptom check
             grades the injury the way a professional would, then the remaining
-            weeks are rebuilt around a careful return—with an honest answer
+            weeks are rebuilt around a careful return, with an honest answer
             when racing isn&apos;t the right call.
           </p>
           <div className="button-row">
-            <Link href="/rescue" className="btn btn-primary">Check my race — free</Link>
+            <Link href="/rescue" className="btn btn-primary">Check my race (free)</Link>
             <Link href="/premium" className="btn btn-secondary">See how Rescue works</Link>
           </div>
         </div>

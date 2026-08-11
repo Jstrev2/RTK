@@ -113,7 +113,7 @@ export async function POST(request: Request) {
           }
           if (session.mode === "payment" || session.metadata?.product === "rescue") {
             // Delayed-notification methods (ACH etc.) complete the session
-            // before the money moves; grant access only once actually paid —
+            // before the money moves; grant access only once actually paid.
             // async_payment_succeeded below covers the rest.
             if (session.payment_status === "paid") {
               await setRescue(userId, customerId ?? undefined);

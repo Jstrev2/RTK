@@ -42,7 +42,7 @@ export const injuries: Injury[] = [
     summary:
       "Dull ache around or behind the kneecap that builds with running volume, stairs, or long sits. Usually an overload problem, not structural damage.",
     redFlags:
-      "Swelling, locking, giving way, or pain that changes how you walk — get it assessed.",
+      "Swelling, locking, giving way, or pain that changes how you walk means it's time to get it assessed.",
     avoid: [
       "Downhill running",
       "Deep squats and lunges under load",
@@ -92,7 +92,7 @@ export const injuries: Injury[] = [
     summary:
       "Diffuse ache along the inner shin bone during or after running, common after volume or surface changes. Distinct from a stress fracture, which hurts in one precise spot.",
     redFlags:
-      "Pain focused on one small spot on the bone, night pain, or pain when hopping on one leg — that pattern needs imaging to rule out a stress fracture.",
+      "Pain focused on one small spot on the bone, night pain, or pain when hopping on one leg: that pattern needs imaging to rule out a stress fracture.",
     avoid: [
       "Hard surfaces (concrete)",
       "Speed work and hills",
@@ -117,7 +117,7 @@ export const injuries: Injury[] = [
     summary:
       "Stabbing heel or arch pain, worst with the first steps in the morning and after sitting. Often triggered by volume spikes or unsupportive footwear.",
     redFlags:
-      "Numbness, tingling, or pain that isn't clearly worst with first morning steps — could be something else; get it checked.",
+      "Numbness, tingling, or pain that isn't clearly worst with first morning steps could be something else, so get it checked.",
     avoid: [
       "Barefoot walking on hard floors",
       "Minimal or dead shoes",
@@ -142,7 +142,7 @@ export const injuries: Injury[] = [
     summary:
       "Stiffness and pain in the Achilles tendon, usually worst in the morning and at the start of runs. Responds to load management, not pure rest.",
     redFlags:
-      "A sudden pop, a palpable gap, or inability to rise onto your toes — that's an emergency assessment, stop running now.",
+      "A sudden pop, a palpable gap, or inability to rise onto your toes calls for an emergency assessment. Stop running now.",
     avoid: [
       "Hill running (especially uphill) and speed work",
       "Big drops to zero-drop or minimal shoes",
@@ -151,7 +151,7 @@ export const injuries: Injury[] = [
     ],
     safe: [
       "Easy flat running if pain stays at 3/10 or below and settles by the next morning",
-      "Daily calf raises — slow, heavy, both bent- and straight-knee",
+      "Daily calf raises: slow, heavy, both bent- and straight-knee",
       "A modest heel lift in shoes while symptomatic"
     ],
     crossTraining: ["Cycling", "Swimming", "Pool running"],
@@ -167,7 +167,7 @@ export const injuries: Injury[] = [
     summary:
       "Sudden grabbing or pulling pain in the calf muscle, often mid-run or during a surge. Grade matters: a twinge is very different from a tear.",
     redFlags:
-      "Significant bruising, swelling, or inability to walk normally — get it graded before running again.",
+      "Significant bruising, swelling, or inability to walk normally means you should get it graded before running again.",
     avoid: [
       "Running through it the day it happens",
       "Speed work, hills, and racing flats early in the return",
@@ -189,9 +189,9 @@ export const injuries: Injury[] = [
     id: "hamstring_strain",
     name: "Hamstring strain",
     summary:
-      "Pulling or sharp pain in the back of the thigh, usually during faster running. High re-injury rate if rushed — the return protocol matters.",
+      "Pulling or sharp pain in the back of the thigh, usually during faster running. High re-injury rate if rushed, so the return protocol matters.",
     redFlags:
-      "Large bruise, sharp pain sitting on hard chairs, or pain near the sit bone that lingers — get imaging before speed work.",
+      "Large bruise, sharp pain sitting on hard chairs, or pain near the sit bone that lingers? Get imaging before speed work.",
     avoid: [
       "Sprinting, strides, and fast downhills until late in the return",
       "Aggressive static stretching while acute",
@@ -213,7 +213,7 @@ export const injuries: Injury[] = [
     id: "stress_fracture",
     name: "Stress fracture (suspected or confirmed)",
     summary:
-      "Bone injury from accumulated load — pinpoint pain on bone that worsens with impact and can ache at night. This one is different: it needs a diagnosis and a medically supervised timeline, and running on it makes it worse.",
+      "Bone injury from accumulated load: pinpoint pain on bone that worsens with impact and can ache at night. This one is different: it needs a diagnosis and a medically supervised timeline, and running on it makes it worse.",
     redFlags:
       "All suspected stress fractures need imaging and professional management. Pain in high-risk sites (femoral neck, navicular, front of the shin) is urgent.",
     avoid: [
@@ -222,7 +222,7 @@ export const injuries: Injury[] = [
       "Calcium-poor fueling and under-eating during recovery"
     ],
     safe: [
-      "Whatever your clinician clears — typically pain-free cross-training",
+      "Whatever your clinician clears, typically pain-free cross-training",
       "Strength work that doesn't load the injured bone",
       "Prioritizing sleep and nutrition (bone healing is hungry)"
     ],
@@ -240,7 +240,7 @@ export const injuries: Injury[] = [
     summary:
       "Rolled ankle with pain and often swelling on the outside. Early movement beats total rest, but balance work is what prevents the next one.",
     redFlags:
-      "Can't bear weight for four steps, bone tenderness at the malleoli, or numbness — X-ray territory.",
+      "Can't bear weight for four steps, bone tenderness at the malleoli, or numbness puts you in X-ray territory.",
     avoid: [
       "Uneven surfaces and trails early on",
       "Cutting or lateral movements",
@@ -264,7 +264,7 @@ export const injuries: Injury[] = [
     summary:
       "Pain at the front of the hip when lifting the knee or striding out, common after speed work or big hills.",
     redFlags:
-      "Deep groin pain with weight-bearing or pain that wakes you at night — rule out bone involvement.",
+      "Deep groin pain with weight-bearing or pain that wakes you at night? Rule out bone involvement first.",
     avoid: [
       "Sprinting, hills, and long strides",
       "High knees and bounding drills",
@@ -288,7 +288,7 @@ export const injuries: Injury[] = [
     summary:
       "Deep buttock ache, sometimes with sciatic-like symptoms down the leg, aggravated by sitting and hill running.",
     redFlags:
-      "True numbness, weakness in the leg, or back pain with the symptoms — that pattern needs assessment for the spine, not the piriformis.",
+      "True numbness, weakness in the leg, or back pain with the symptoms. That pattern needs assessment for the spine, not the piriformis.",
     avoid: [
       "Hill repeats and speed work",
       "Long sits (break them up)",

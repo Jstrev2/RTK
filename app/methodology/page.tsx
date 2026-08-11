@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "How Runner Toolkit Recommendations Work",
-  description: "How Runner Toolkit creates explainable shoe, fuel, and injury-comeback recommendations—and the published research behind the Injury Rescue rules.",
+  description: "How Runner Toolkit creates explainable shoe, fuel, and injury-comeback recommendations, and the published research behind the Injury Rescue rules.",
   path: "/methodology",
 });
 
@@ -82,12 +82,12 @@ export default function MethodologyPage() {
 
       <section className="section container prose-block">
         <span className="eyebrow">Where the injury rules come from</span>
-        <h2 className="section-title">Conservative, literature-based — not &quot;physio-grade.&quot;</h2>
+        <h2 className="section-title">Conservative and literature-based, not &quot;physio-grade.&quot;</h2>
         <p>
           The Injury Rescue rules are built from published rehabilitation
           research and clinical guidelines, simplified into structured,
           deliberately cautious progressions. They are general information, not
-          individualized clinical judgment — which is why red flags stop the
+          individualized clinical judgment, which is why red flags stop the
           tool instead of the tool talking past them.
         </p>
         <ul>

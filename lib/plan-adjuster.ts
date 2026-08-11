@@ -4,6 +4,9 @@ import { getInjury, type Injury, type InjurySeverity } from "@/lib/injuries";
 
 export type AdjustedPhase = "rest" | "return" | "rebuild" | "taper" | "race";
 
+/** Placeholder shown in distance/pace cells on full rest days. */
+export const NO_DISTANCE = "–";
+
 export type AdjustedWeek = {
   weekNumber: number;
   phase: AdjustedPhase;
@@ -101,8 +104,8 @@ export function adjustPlan(
 
   const weeksRemaining = totalWeeks - injuryWeekIndex; // includes race week
   const weeksNeeded = restWeeks + returnWeeks + 1; // +1 = at least race week
-  // Clearance-gated injuries never green-light racing, regardless of runway —
-  // this must match the feasibility verdict or the race-week card contradicts
+  // Clearance-gated injuries never green-light racing, regardless of runway.
+  // This must match the feasibility verdict or the race-week card contradicts
   // the banner.
   const canRace = weeksRemaining >= weeksNeeded && !injury.requiresMedicalClearance;
 
@@ -120,7 +123,7 @@ export function adjustPlan(
 
   let cursor = injuryWeekIndex;
 
-  // Phase 1: rest — no running, cross-train to hold fitness.
+  // Phase 1: rest. No running; cross-train to hold fitness.
   for (let r = 0; r < restWeeks && cursor < totalWeeks; r++, cursor++) {
     const original = schedule[cursor];
     const workouts = sortByDay(
@@ -128,7 +131,7 @@ export function adjustPlan(
         .filter((w) => !isRace(w))
         .map((w, idx) => {
           if (idx % 2 === 1) {
-            return { day: w.day, type: "Rest", distance: "—", pace: "—", notes: "Full rest day. Recovery is the training." };
+            return { day: w.day, type: "Rest", distance: NO_DISTANCE, pace: NO_DISTANCE, notes: "Full rest day. Recovery is the training." };
           }
           const minutes = isLong(w) ? 50 : 30;
           return crossTrainWorkout(w.day, injury, minutes, "Zero running this week. Keep effort conversational.");
@@ -187,7 +190,7 @@ export function adjustPlan(
           type: "Easy Run",
           distance: `${Math.round(perRun * 10) / 10} miles`,
           pace: "Easy",
-          notes: "Symptoms should stay at 3/10 or below and settle by next morning — otherwise repeat last week instead of progressing."
+          notes: "Symptoms should stay at 3/10 or below and settle by next morning. If they don't, repeat last week instead of progressing."
         };
       })
     );
@@ -226,7 +229,7 @@ export function adjustPlan(
               )
             ),
         note: canRace
-          ? "Adjust your goal pace — see the expectation note above."
+          ? "Adjust your goal pace (see the expectation note above)."
           : undefined
       });
       continue;
@@ -264,7 +267,7 @@ export function adjustPlan(
         canRace: false,
         paceAdjustmentSecPerMile: secPerMile,
         message:
-          "A suspected stress fracture needs imaging and a clinician-managed timeline before any return to running. Treat the schedule below as a template to review with them — and be open to picking a later race."
+          "A suspected stress fracture needs imaging and a clinician-managed timeline before any return to running. Treat the schedule below as a template to review with them, and be open to picking a later race."
       }
     : canRace
     ? {
@@ -272,14 +275,14 @@ export function adjustPlan(
         paceAdjustmentSecPerMile: secPerMile,
         message:
           secPerMile <= 10
-            ? "Race day is very much on. Expect close to your original goal — treat the first miles conservatively."
+            ? "Race day is very much on. Expect close to your original goal, and treat the first miles conservatively."
             : `Race day is doable on this timeline. Plan for roughly ${secPerMile} seconds per mile slower than your original goal pace, and consider revising your A-goal to a strong finish.`
       }
     : {
         canRace: false,
         paceAdjustmentSecPerMile: secPerMile,
         message:
-          "There isn't enough runway to rest, rebuild, and safely race this distance. The schedule below prioritizes a full recovery — consider dropping to a shorter distance on race day, or targeting a race a few weeks later."
+          "There isn't enough runway to rest, rebuild, and safely race this distance. The schedule below prioritizes a full recovery instead. Consider dropping to a shorter distance on race day, or targeting a race a few weeks later."
       };
 
   return {

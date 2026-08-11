@@ -88,7 +88,7 @@ const options = [
     title: "Wrench Sole",
     label: "Fusion",
     description:
-      "A running shoe whose outsole is a full open-end wrench—ring at the heel, jaw at the toe. One object, both reads.",
+      "A running shoe whose outsole is a full open-end wrench: ring at the heel, jaw at the toe. One object, both reads.",
     note: "Tool and shoe welded into a single silhouette"
   },
   {
@@ -118,7 +118,7 @@ const options = [
     title: "Gear Shoe",
     label: "Response",
     description:
-      "The case idea with the box removed: the shoe itself is the soft gear bag—arched carry handle, zip seam, chunky sole. All curves.",
+      "The case idea with the box removed: the shoe itself is the soft gear bag, with an arched carry handle, zip seam, and chunky sole. All curves.",
     note: "Everything the case promises, nothing boxy"
   }
 ];

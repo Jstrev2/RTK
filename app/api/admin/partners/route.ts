@@ -16,7 +16,7 @@ const SEED_PROGRAMS = [
     signup_url: "https://affiliate-program.amazon.com/",
     env_var: "NEXT_PUBLIC_AMAZON_TAG",
     notes:
-      "Fastest to switch on — self-serve, wires every Amazon link on the site the moment the tag env var is set. Requires 3 qualifying sales in the first 180 days to stay approved.",
+      "Fastest to switch on: self-serve, wires every Amazon link on the site the moment the tag env var is set. Requires 3 qualifying sales in the first 180 days to stay approved.",
     priority: 1
   },
   {
@@ -40,7 +40,7 @@ const SEED_PROGRAMS = [
     signup_url: "https://thefeed.com/",
     env_var: "(new wrapper needed in lib/affiliate.ts)",
     notes:
-      "Endurance-fuel specialist — ideal match for the Fuel Planner's gel list. Check their site footer for the current affiliate/ambassador route.",
+      "Endurance-fuel specialist and an ideal match for the Fuel Planner's gel list. Check their site footer for the current affiliate/ambassador route.",
     priority: 3
   },
   {

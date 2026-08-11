@@ -6,7 +6,7 @@ const description =
   "Calculate running pace, predict finish times, and get mile-by-mile splits for 5K, 10K, half marathon, marathon, and ultras. Free, no account needed.";
 
 export const metadata = pageMetadata({
-  title: "Running Pace Calculator — Race Times & Mile Splits",
+  title: "Running Pace Calculator: Race Times & Mile Splits",
   description,
   path: "/tools/pace-calculator",
 });

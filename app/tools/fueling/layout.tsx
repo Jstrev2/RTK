@@ -6,7 +6,7 @@ const description =
   "Turn distance, expected time, and conditions into a practical carbohydrate schedule, hydration starting point, and short list of products to practice.";
 
 export const metadata = pageMetadata({
-  title: "Race Fuel Planner — Running Gel & Carb Schedule Calculator",
+  title: "Race Fuel Planner: Running Gel & Carb Schedule Calculator",
   description,
   path: "/tools/fueling",
 });

@@ -13,7 +13,7 @@ const paidFeatures = [
   },
   {
     name: "The reason behind every change",
-    detail: "Understand what was removed, reduced, delayed, or replaced—and what must be true before training progresses."
+    detail: "Understand what was removed, reduced, delayed, or replaced, and what must be true before training progresses."
   },
   {
     name: "A realistic race-day update",
@@ -32,7 +32,7 @@ function PremiumContent() {
   const [checkoutState, setCheckoutState] = useState<"idle" | "loading" | "unavailable" | "error">("idle");
 
   // After Stripe redirects back with ?status=success, the webhook flips the
-  // premium flag in app_metadata — but the browser still holds the old JWT.
+  // premium flag in app_metadata, but the browser still holds the old JWT.
   // Force token refreshes (webhook may lag the redirect by a few seconds) so
   // access appears without signing out and back in.
   useEffect(() => {
@@ -94,18 +94,18 @@ function PremiumContent() {
         <h1>Injured mid-training? We&apos;ll get you back to the start line.</h1>
         <p>
           A short symptom check grades the injury the way a professional would.
-          Then the remaining weeks of your plan—any plan, not just ours—are
+          Then the remaining weeks of your plan (any plan, not just ours) are
           rebuilt around a careful return, with an honest answer when racing
           isn&apos;t the right call.
         </p>
         <div className="button-row">
-          <Link className="btn btn-primary" href="/rescue">Check my race — free</Link>
+          <Link className="btn btn-primary" href="/rescue">Check my race for free</Link>
           <a className="btn btn-secondary" href="#pricing">See the options</a>
         </div>
       </section>
 
       <section className="section container">
-        {status === "success" ? <div className="notice">Payment received — your access is active. Head to the calculator when you&apos;re ready.</div> : null}
+        {status === "success" ? <div className="notice">Payment received. Your access is active. Head to the calculator when you&apos;re ready.</div> : null}
         {status === "cancelled" ? <div className="notice">Checkout cancelled. No charge was made.</div> : null}
 
         <div className="adaptive-story">
@@ -135,7 +135,7 @@ function PremiumContent() {
         <div className="container results-layout">
           <div className="results-copy">
             <span className="eyebrow">What you are buying</span>
-            <h2 className="section-title">A revised schedule—not a motivational paragraph.</h2>
+            <h2 className="section-title">A revised schedule, not a motivational paragraph.</h2>
             <p className="section-lede">
               The value is the plan itself: the next week, every remaining
               week, the new race expectation, and the reasoning behind each
@@ -168,7 +168,7 @@ function PremiumContent() {
             <ul className="list">
               <li>Symptom check and severity grade</li>
               <li>Honest race-day verdict</li>
-              <li>First rebuilt week — free with your email</li>
+              <li>First rebuilt week, free with your email</li>
               <li>Shoes, fuel, pace, and all base plans</li>
             </ul>
             <Link className="btn btn-secondary" href="/rescue">Check my race</Link>
@@ -182,7 +182,7 @@ function PremiumContent() {
               <li>Every rebuilt week through race day</li>
               <li>Re-run it as the injury evolves</li>
               <li>90 days of access</li>
-              <li>Works with any plan—yours or ours</li>
+              <li>Works with any plan, yours or ours</li>
             </ul>
             {isPremium ? (
               <div className="stack">
@@ -191,7 +191,7 @@ function PremiumContent() {
               </div>
             ) : user ? (
               <button className="btn btn-primary" type="button" onClick={() => startCheckout({ product: "rescue" })} disabled={checkoutState === "loading"}>
-                {checkoutState === "loading" ? "Opening checkout..." : "Get Injury Rescue — $29"}
+                {checkoutState === "loading" ? "Opening checkout..." : "Get Injury Rescue for $29"}
               </button>
             ) : (
               <Link className="btn btn-primary" href="/login">Sign in to start</Link>

@@ -55,7 +55,7 @@ export async function generateMetadata({
   const article = await getArticle(slug);
   if (!article) return { title: "Not Found" };
 
-  const description = article.excerpt ?? `${article.title} — Runner Guides by Runner Toolkit`;
+  const description = article.excerpt ?? `${article.title}, from Runner Guides by Runner Toolkit`;
   const image = article.cover_image ?? "/og.jpg";
 
   return {
