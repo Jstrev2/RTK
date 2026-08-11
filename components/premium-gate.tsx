@@ -19,14 +19,15 @@ export default function PremiumGate({ children, feature, teaser }: Props) {
       {teaser}
       <div className="card card-accent">
         <div className="stack">
-          <span className="pill">Adaptive Training</span>
+          <span className="pill">Injury Rescue</span>
           <strong>Unlock {feature}</strong>
           <p>
-            See every remaining revised week, the reason behind each change,
-            and an updated race-day expectation. Adaptive access is $9/month.
+            Every remaining revised week, the reason behind each change, and an
+            updated race-day expectation. One-time $29 for 90 days of access —
+            no subscription required.
           </p>
           <div className="button-row">
-            <Link className="btn btn-primary" href="/premium">See Adaptive Training</Link>
+            <Link className="btn btn-primary" href="/premium#pricing">See Injury Rescue — $29</Link>
             {!user ? <Link className="btn btn-secondary" href="/login">Sign in</Link> : null}
           </div>
         </div>

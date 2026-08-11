@@ -29,6 +29,31 @@ const setPremium = async (
   if (error) throw error;
 };
 
+/** One-time Injury Rescue purchase: 90 days of adaptive access. */
+const RESCUE_DAYS = 90;
+
+const setRescue = async (userId: string, stripeCustomerId?: string) => {
+  const admin = getAdmin();
+  if (!admin) throw new Error("Supabase admin not configured");
+  const until = new Date(Date.now() + RESCUE_DAYS * 24 * 60 * 60 * 1000);
+  // Never clobber an existing stripe_customer_id: an active subscriber who
+  // also buys a rescue keeps the customer their subscription (and Billing
+  // Portal) lives on. The rescue's payment-mode customer is stored separately.
+  const { data: existing } = await admin.auth.admin.getUserById(userId);
+  const hasCustomer = Boolean(existing?.user?.app_metadata?.stripe_customer_id);
+  const { error } = await admin.auth.admin.updateUserById(userId, {
+    app_metadata: {
+      rescue_until: until.toISOString(),
+      ...(stripeCustomerId
+        ? hasCustomer
+          ? { rescue_customer_id: stripeCustomerId }
+          : { stripe_customer_id: stripeCustomerId }
+        : {})
+    }
+  });
+  if (error) throw error;
+};
+
 /** Find the Supabase user id we stored on the subscription's customer. */
 const userIdFromSubscription = async (
   stripe: Stripe,
@@ -86,7 +111,29 @@ export async function POST(request: Request) {
               metadata: { supabase_user_id: userId }
             });
           }
-          await setPremium(userId, true, customerId ?? undefined);
+          if (session.mode === "payment" || session.metadata?.product === "rescue") {
+            // Delayed-notification methods (ACH etc.) complete the session
+            // before the money moves; grant access only once actually paid —
+            // async_payment_succeeded below covers the rest.
+            if (session.payment_status === "paid") {
+              await setRescue(userId, customerId ?? undefined);
+            }
+          } else {
+            await setPremium(userId, true, customerId ?? undefined);
+          }
+        }
+        break;
+      }
+      case "checkout.session.async_payment_succeeded": {
+        const session = event.data.object as Stripe.Checkout.Session;
+        const userId =
+          session.client_reference_id ?? session.metadata?.supabase_user_id;
+        if (userId && (session.mode === "payment" || session.metadata?.product === "rescue")) {
+          const customerId =
+            typeof session.customer === "string"
+              ? session.customer
+              : session.customer?.id;
+          await setRescue(userId, customerId ?? undefined);
         }
         break;
       }

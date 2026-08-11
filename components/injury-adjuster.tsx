@@ -67,7 +67,7 @@ export default function InjuryAdjuster({ plan }: { plan: TrainingPlan }) {
     <div className="card">
       <div className="stack">
         <div>
-          <span className="pill">Sample Adaptive Training</span>
+          <span className="pill">Sample Injury Rescue</span>
           <strong style={{ display: "block", marginTop: "8px" }}>
             Preview a revised schedule after an injury
           </strong>

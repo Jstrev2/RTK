@@ -101,9 +101,10 @@ export function adjustPlan(
 
   const weeksRemaining = totalWeeks - injuryWeekIndex; // includes race week
   const weeksNeeded = restWeeks + returnWeeks + 1; // +1 = at least race week
-  const canRace = weeksRemaining >= weeksNeeded && !injury.requiresMedicalClearance
-    ? true
-    : weeksRemaining >= weeksNeeded;
+  // Clearance-gated injuries never green-light racing, regardless of runway —
+  // this must match the feasibility verdict or the race-week card contradicts
+  // the banner.
+  const canRace = weeksRemaining >= weeksNeeded && !injury.requiresMedicalClearance;
 
   const adjusted: AdjustedWeek[] = [];
 

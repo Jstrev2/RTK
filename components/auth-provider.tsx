@@ -15,7 +15,14 @@ type AuthContextValue = {
   user: User | null;
   loading: boolean;
   supabaseAvailable: boolean;
+  /** Any paid access: an active subscription OR an unexpired rescue. */
   isPremium: boolean;
+  /** Recurring subscription (monthly/season pass) — has a Billing Portal. */
+  isSubscriber: boolean;
+  /** One-time Injury Rescue window is active. */
+  hasRescue: boolean;
+  /** ISO expiry of the rescue window, when active. */
+  rescueUntil: string | null;
   refresh: () => Promise<void>;
 };
 
@@ -25,6 +32,9 @@ const AuthContext = createContext<AuthContextValue>({
   loading: true,
   supabaseAvailable: false,
   isPremium: false,
+  isSubscriber: false,
+  hasRescue: false,
+  rescueUntil: null,
   refresh: async () => undefined
 });
 
@@ -80,12 +90,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const value = useMemo<AuthContextValue>(() => {
+    const meta = session?.user?.app_metadata;
+    const isSubscriber = meta?.premium === true;
+    const hasRescue =
+      typeof meta?.rescue_until === "string" &&
+      Date.parse(meta.rescue_until) > Date.now();
     return {
       session,
       user: session?.user ?? null,
       loading,
       supabaseAvailable: supabaseConfigured,
-      isPremium: session?.user?.app_metadata?.premium === true,
+      isPremium: isSubscriber || hasRescue,
+      isSubscriber,
+      hasRescue,
+      rescueUntil: hasRescue ? (meta?.rescue_until as string) : null,
       refresh: async () => {
         if (!supabaseConfigured) {
           return;

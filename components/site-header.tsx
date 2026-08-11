@@ -14,7 +14,7 @@ const toolItems = [
 
 const trainingItems = [
   { href: "/tools/training-plans", label: "Free plans" },
-  { href: "/premium", label: "Adapt my plan", cta: true }
+  { href: "/rescue", label: "Injured?", cta: true }
 ];
 
 export default function SiteHeader() {

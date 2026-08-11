@@ -8,7 +8,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: { absolute: "Runner Toolkit — Run Smarter. Guess Less." },
   description:
-    "Free tools to find running shoes, build a run playlist, and plan race fuel—plus adaptive training when your schedule changes.",
+    "Free tools to find running shoes, plan race fuel, and find out if your race is still on after an injury—with a rebuilt comeback schedule for any training plan.",
   alternates: { canonical: "/" }
 };
 
@@ -23,16 +23,14 @@ interface RecentArticle {
 async function getHomeData() {
   const fallback = {
     shoes: 223,
-    songs: 3000,
     gels: 48,
     articles: [] as RecentArticle[]
   };
   const supabase = getSupabaseAdmin();
   if (!supabase) return fallback;
 
-  const [shoeRes, songRes, gelRes, articleRes] = await Promise.all([
+  const [shoeRes, gelRes, articleRes] = await Promise.all([
     supabase.from("shoe_models").select("*", { count: "exact", head: true }).eq("is_active", true),
-    supabase.from("music_songs").select("*", { count: "exact", head: true }),
     supabase.from("fuel_gels").select("*", { count: "exact", head: true }).eq("is_active", true),
     supabase
       .from("articles")
@@ -53,7 +51,6 @@ async function getHomeData() {
 
   return {
     shoes: shoeRes.count ?? fallback.shoes,
-    songs: songRes.count ?? fallback.songs,
     gels: gelRes.count ?? fallback.gels,
     articles
   };
@@ -72,9 +69,9 @@ export default async function HomePage() {
             <span>Guess less.</span>
           </h1>
           <p>
-            Find shoes that fit how you run. Build music for the workout. Plan
-            fuel for the distance. Get a useful answer in minutes—no account
-            required.
+            Find shoes that fit how you run. Plan fuel for the distance. And if
+            you&apos;re hurt mid-plan, find out if your race is still on. Get a
+            useful answer in minutes—no account required.
           </p>
         </div>
 
@@ -117,25 +114,25 @@ export default async function HomePage() {
             <span className="launch-action">Find my shoes <b>→</b></span>
           </Link>
 
-          <Link href="/tools/music" className="launch-card launch-music">
+          <Link href="/rescue" className="launch-card launch-rescue">
             <div className="launch-card-top">
               <span className="launch-number">02</span>
-              <span className="launch-meta">{data.songs.toLocaleString()}+ tracks</span>
+              <span className="launch-meta">Works with any plan</span>
             </div>
             <div>
-              <span className="tool-kicker">Running Music</span>
-              <h3>Build a soundtrack for this run.</h3>
+              <span className="tool-kicker">Injury Rescue</span>
+              <h3>Can I still make my race?</h3>
               <p>
-                Match the workout, duration, BPM, and energy you want—from the
-                first easy mile to the final push.
+                Hurt mid-training? Answer a short symptom check and get an
+                honest verdict—plus a rebuilt week-by-week comeback schedule.
               </p>
             </div>
-            <div className="music-preview" aria-hidden="true">
-              <span style={{ width: "22%" }}>Warm up</span>
-              <span style={{ width: "46%" }}>Lock in</span>
-              <span style={{ width: "32%" }}>Finish</span>
+            <div className="shoe-preview" aria-hidden="true">
+              <span><b>Symptom check</b><i>graded like a pro would</i></span>
+              <span><b>Race verdict</b><i>honest, not hopeful</i></span>
+              <span><b>Rebuilt weeks</b><i>rest → return → race</i></span>
             </div>
-            <span className="launch-action">Build my playlist <b>→</b></span>
+            <span className="launch-action">Check my race <b>→</b></span>
           </Link>
 
           <Link href="/tools/fueling" className="launch-card launch-fuel">
@@ -196,17 +193,18 @@ export default async function HomePage() {
 
       <section className="adaptive-section container">
         <div className="adaptive-copy">
-          <span className="eyebrow">Runner Toolkit Adaptive Training</span>
-          <h2>When the plan stops fitting, change the plan.</h2>
+          <span className="eyebrow">Runner Toolkit Injury Rescue</span>
+          <h2>Injured mid-training? We&apos;ll get you back to the start line.</h2>
           <p>
-            Missed two weeks? Travel wrecked the schedule? Coming back after an
-            issue with appropriate clearance? Tell us what changed and get a
-            revised path forward—with an honest answer when the plan should not
-            continue.
+            It works with the plan you&apos;re already on—Higdon PDF, Garmin
+            Coach, your coach&apos;s spreadsheet, or ours. A short symptom check
+            grades the injury the way a professional would, then the remaining
+            weeks are rebuilt around a careful return—with an honest answer
+            when racing isn&apos;t the right call.
           </p>
           <div className="button-row">
-            <Link href="/premium" className="btn btn-primary">See Adaptive Training</Link>
-            <Link href="/tools/training-plans#adapt" className="btn btn-secondary">Try a sample adjustment</Link>
+            <Link href="/rescue" className="btn btn-primary">Check my race — free</Link>
+            <Link href="/premium" className="btn btn-secondary">See how Rescue works</Link>
           </div>
         </div>
 

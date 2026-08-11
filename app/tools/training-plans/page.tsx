@@ -47,8 +47,8 @@ export default function TrainingPlansPage() {
         <h1>Start with a plan. Change it when life does.</h1>
         <p>
           Choose a complete plan from 5K to marathon. Browse every week for
-          free, then preview how Adaptive Training can revise the schedule when
-          missed time or an appropriately cleared return changes the path.
+          free—and if an injury interrupts the plan, Injury Rescue rebuilds
+          the remaining weeks around a careful return.
         </p>
       </section>
 
@@ -216,8 +216,8 @@ export default function TrainingPlansPage() {
         <p>
           Don&apos;t make up the miles—that&apos;s how a missed week becomes a
           missed month. Rejoin the plan where the calendar says you are and
-          downgrade the next hard workout. Missed more than two weeks?
-          That&apos;s what <Link href="/premium">Adaptive Training</Link> is
+          downgrade the next hard workout. Hurt, or missed more than two
+          weeks? That&apos;s what <Link href="/rescue">Injury Rescue</Link> is
           built for: it rebuilds the remaining schedule instead of pretending
           nothing happened.
         </p>

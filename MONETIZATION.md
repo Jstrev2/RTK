@@ -102,16 +102,20 @@ touching those components.
 
 1. Create/activate the Stripe account; enable the **Billing Portal** default
    configuration (Settings → Billing → Customer portal → Save).
-2. Create product "Adaptive Training" with two prices:
+2. Create product "Injury Rescue" with three prices:
+   - **one-time — $29** (the flagship SKU; 90 days of access, stamped as
+     `app_metadata.rescue_until` by the webhook)
    - monthly recurring — $9 (matches /premium copy)
-   - annual recurring — price it at "two months free" (the page copy
-     promises that; $90 if monthly stays $9)
+   - annual recurring — $90 ("season pass" on /premium)
 3. Add webhook endpoint `https://runnertoolkit.com/api/stripe/webhook` with
    events: `checkout.session.completed`,
+   `checkout.session.async_payment_succeeded`,
    `customer.subscription.updated`, `customer.subscription.deleted`.
 4. Set Vercel Production env vars:
    - `STRIPE_SECRET_KEY`
    - `STRIPE_WEBHOOK_SECRET`
+   - `STRIPE_PRICE_RESCUE` (the $29 one-time price ID — without it the
+     flagship buttons on /rescue and /premium 503)
    - `STRIPE_PRICE_MONTHLY` / `STRIPE_PRICE_ANNUAL` (price IDs)
    - `NEXT_PUBLIC_SITE_URL=https://runnertoolkit.com` (optional; defaults)
 5. Redeploy, then test end-to-end in test mode first (test keys + card

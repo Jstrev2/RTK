@@ -26,7 +26,7 @@ const paidFeatures = [
 ];
 
 function PremiumContent() {
-  const { user, isPremium, session } = useAuth();
+  const { user, isPremium, isSubscriber, session } = useAuth();
   const searchParams = useSearchParams();
   const status = searchParams.get("status");
   const [checkoutState, setCheckoutState] = useState<"idle" | "loading" | "unavailable" | "error">("idle");
@@ -58,7 +58,9 @@ function PremiumContent() {
     };
   }, [status, isPremium]);
 
-  const startCheckout = async (interval: "monthly" | "annual") => {
+  const startCheckout = async (
+    body: { product: "rescue" } | { interval: "monthly" | "annual" }
+  ) => {
     if (!session) return;
     setCheckoutState("loading");
     try {
@@ -68,7 +70,7 @@ function PremiumContent() {
           "Content-Type": "application/json",
           Authorization: `Bearer ${session.access_token}`
         },
-        body: JSON.stringify({ interval })
+        body: JSON.stringify(body)
       });
       if (response.status === 503) {
         setCheckoutState("unavailable");
@@ -88,21 +90,22 @@ function PremiumContent() {
   return (
     <div className="tool-page tool-page-adaptive">
       <section className="tool-hero container adaptive-hero">
-        <span className="eyebrow">Runner Toolkit Adaptive Training</span>
-        <h1>A training plan that changes when your training changes.</h1>
+        <span className="eyebrow">Runner Toolkit Injury Rescue</span>
+        <h1>Injured mid-training? We&apos;ll get you back to the start line.</h1>
         <p>
-          Static plans assume perfect weeks. Adaptive Training revises the
-          remaining schedule when missed time or an appropriately cleared
-          return changes what is realistic—and explains every tradeoff.
+          A short symptom check grades the injury the way a professional would.
+          Then the remaining weeks of your plan—any plan, not just ours—are
+          rebuilt around a careful return, with an honest answer when racing
+          isn&apos;t the right call.
         </p>
         <div className="button-row">
-          <Link className="btn btn-primary" href="/tools/training-plans#adapt">Try a sample adjustment</Link>
+          <Link className="btn btn-primary" href="/rescue">Check my race — free</Link>
           <a className="btn btn-secondary" href="#pricing">See the options</a>
         </div>
       </section>
 
       <section className="section container">
-        {status === "success" ? <div className="notice">Payment received. Welcome to Adaptive Training.</div> : null}
+        {status === "success" ? <div className="notice">Payment received — your access is active. Head to the calculator when you&apos;re ready.</div> : null}
         {status === "cancelled" ? <div className="notice">Checkout cancelled. No charge was made.</div> : null}
 
         <div className="adaptive-story">
@@ -161,40 +164,35 @@ function PremiumContent() {
           <div className="pricing-card">
             <span className="eyebrow">Free toolkit</span>
             <strong className="price">$0</strong>
-            <p>Shoes, music, fuel, pace, and every base training plan.</p>
+            <p>The verdict, the symptom check, and every free tool.</p>
             <ul className="list">
-              <li>Complete free tool results</li>
-              <li>All base-plan weeks</li>
-              <li>One sample adjusted week</li>
-              <li>No account required to begin</li>
+              <li>Symptom check and severity grade</li>
+              <li>Honest race-day verdict</li>
+              <li>First rebuilt week — free with your email</li>
+              <li>Shoes, fuel, pace, and all base plans</li>
             </ul>
-            <Link className="btn btn-secondary" href="/#tools">Use the free tools</Link>
+            <Link className="btn btn-secondary" href="/rescue">Check my race</Link>
           </div>
 
           <div className="pricing-card pricing-featured">
-            <span className="eyebrow">Adaptive membership</span>
-            <strong className="price">$9 <small>/ month</small></strong>
-            <p>For a training cycle that needs continued revision.</p>
+            <span className="eyebrow">Injury Rescue</span>
+            <strong className="price">$29 <small>one-time</small></strong>
+            <p>The full comeback, for this injury. No subscription.</p>
             <ul className="list">
-              <li>Complete revised schedule</li>
-              <li>Ongoing re-adjustments</li>
-              <li>Race-goal update</li>
-              <li>Plan history and explanations</li>
+              <li>Every rebuilt week through race day</li>
+              <li>Re-run it as the injury evolves</li>
+              <li>90 days of access</li>
+              <li>Works with any plan—yours or ours</li>
             </ul>
             {isPremium ? (
               <div className="stack">
-                <div className="notice">Your Adaptive Training access is active.</div>
-                <ManageSubscription />
+                <div className="notice">Your access is active. Head to the calculator.</div>
+                <Link className="btn btn-primary" href="/rescue">Open Injury Rescue</Link>
               </div>
             ) : user ? (
-              <div className="stack">
-                <button className="btn btn-primary" type="button" onClick={() => startCheckout("monthly")} disabled={checkoutState === "loading"}>
-                  {checkoutState === "loading" ? "Opening checkout..." : "Start Adaptive Training"}
-                </button>
-                <button className="text-button" type="button" onClick={() => startCheckout("annual")} disabled={checkoutState === "loading"}>
-                  Or pay yearly — two months free
-                </button>
-              </div>
+              <button className="btn btn-primary" type="button" onClick={() => startCheckout({ product: "rescue" })} disabled={checkoutState === "loading"}>
+                {checkoutState === "loading" ? "Opening checkout..." : "Get Injury Rescue — $29"}
+              </button>
             ) : (
               <Link className="btn btn-primary" href="/login">Sign in to start</Link>
             )}
@@ -203,16 +201,29 @@ function PremiumContent() {
           </div>
 
           <div className="pricing-card">
-            <span className="eyebrow">Plan Rescue pass</span>
-            <strong className="price">Fixed access</strong>
-            <p>For one immediate disruption without another indefinite subscription.</p>
+            <span className="eyebrow">Season pass</span>
+            <strong className="price">$90 <small>/ year</small></strong>
+            <p>For a whole training cycle that keeps changing on you.</p>
             <ul className="list">
-              <li>Fixed access window</li>
-              <li>Complete revised schedule</li>
-              <li>Limited follow-up revisions</li>
-              <li>No automatic renewal</li>
+              <li>Everything in Injury Rescue, all year</li>
+              <li>Unlimited adjustments and re-runs</li>
+              <li>Missed weeks, travel, and goal changes</li>
+              <li>Cancel anytime</li>
             </ul>
-            <a className="btn btn-secondary" href="mailto:hello@runnertoolkit.com?subject=Plan%20Rescue%20early%20access">Join Plan Rescue early access</a>
+            {isSubscriber ? (
+              <ManageSubscription />
+            ) : user ? (
+              <div className="stack">
+                <button className="btn btn-secondary" type="button" onClick={() => startCheckout({ interval: "annual" })} disabled={checkoutState === "loading"}>
+                  Start a season pass
+                </button>
+                <button className="text-button" type="button" onClick={() => startCheckout({ interval: "monthly" })} disabled={checkoutState === "loading"}>
+                  Or $9 month-to-month
+                </button>
+              </div>
+            ) : (
+              <Link className="btn btn-secondary" href="/login">Sign in to start</Link>
+            )}
           </div>
         </div>
       </section>
@@ -227,7 +238,7 @@ function PremiumContent() {
             recommendation to stop, seek professional assessment, or choose a
             later race. That refusal is part of the product.
           </p>
-          <Link className="text-link" href="/methodology">Read the Adaptive Training methodology →</Link>
+          <Link className="text-link" href="/methodology">Read the Injury Rescue methodology and sources →</Link>
         </div>
       </section>
     </div>
@@ -236,7 +247,7 @@ function PremiumContent() {
 
 export default function PremiumPage() {
   return (
-    <Suspense fallback={<div className="section container">Loading Adaptive Training…</div>}>
+    <Suspense fallback={<div className="section container">Loading Injury Rescue…</div>}>
       <PremiumContent />
     </Suspense>
   );

@@ -31,7 +31,7 @@ export default function SiteFooter() {
         <div className="stack">
           <strong>Training</strong>
           <Link href="/tools/training-plans">Free training plans</Link>
-          <Link href="/premium">Adaptive Training</Link>
+          <Link href="/rescue">Injury Rescue</Link>
           <Link href="/rundown">Runner Guides</Link>
         </div>
         <div className="stack">

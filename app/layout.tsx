@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s | Runner Toolkit"
   },
   description:
-    "Free tools to find running shoes, build a run playlist, and plan race fuel—plus adaptive training when your schedule changes.",
+    "Free tools to find running shoes, plan race fuel, and check if your race is still on after an injury—with a rebuilt comeback schedule for any plan.",
   metadataBase: new URL(SITE_URL),
   openGraph: {
     type: "website",

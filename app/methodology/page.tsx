@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "How Runner Toolkit Recommendations Work",
-  description: "How Runner Toolkit creates explainable shoe, music, fuel, and adaptive training recommendations.",
+  description: "How Runner Toolkit creates explainable shoe, fuel, and injury-comeback recommendations—and the published research behind the Injury Rescue rules.",
   path: "/methodology",
 });
 
@@ -25,8 +25,35 @@ const methods = [
   },
   {
     number: "04",
-    title: "Adaptive Training",
-    copy: "Structured rules set the allowable changes to training load and timing. The schedule explains what changed and why, includes red-flag stops, and does not diagnose or treat a medical condition."
+    title: "Injury Rescue",
+    copy: "A symptom check grades severity from walking tolerance, night pain, bone tenderness, hop tolerance, and how running actually feels. Structured rules then set rest, starting volume, and ramp rate. The schedule explains what changed and why, includes red-flag stops, and does not diagnose or treat a medical condition."
+  }
+];
+
+const injurySources = [
+  {
+    area: "Bone stress injuries",
+    note: "Rest-first management, graded return, and the hard rule that suspected stress fractures need imaging and clinician-managed timelines draw on Warden, Davis & Fredericson's work on bone stress injuries in runners (JOSPT, 2014) and subsequent return-to-run frameworks."
+  },
+  {
+    area: "Achilles tendinopathy",
+    note: "Keeping tolerable load rather than resting completely, with pain kept low and settling by the next morning, follows the pain-monitoring model studied by Silbernagel and colleagues (AJSM, 2007)."
+  },
+  {
+    area: "Patellofemoral pain (runner's knee)",
+    note: "Load management plus hip and quad strengthening reflects the JOSPT clinical practice guideline for patellofemoral pain (Willy et al., 2019)."
+  },
+  {
+    area: "Hamstring and calf strains",
+    note: "Progressive loading, delayed return to speed work, and re-injury caution follow the rehabilitation progressions described by Heiderscheit and colleagues for hamstring strain injury (JOSPT, 2010)."
+  },
+  {
+    area: "Ankle sprains",
+    note: "Early movement over immobilization and balance training to prevent recurrence reflect the international ankle consortium and clinical guideline consensus (Vuurberg et al., BJSM, 2018)."
+  },
+  {
+    area: "Ramp rates and the return itself",
+    note: "Conservative weekly volume increases, run-walk re-entry, and cutback logic follow widely used graded-exposure principles in running-injury rehabilitation. Where evidence is uncertain, the rules break toward caution on purpose."
   }
 ];
 
@@ -54,6 +81,25 @@ export default function MethodologyPage() {
       </section>
 
       <section className="section container prose-block">
+        <span className="eyebrow">Where the injury rules come from</span>
+        <h2 className="section-title">Conservative, literature-based — not &quot;physio-grade.&quot;</h2>
+        <p>
+          The Injury Rescue rules are built from published rehabilitation
+          research and clinical guidelines, simplified into structured,
+          deliberately cautious progressions. They are general information, not
+          individualized clinical judgment — which is why red flags stop the
+          tool instead of the tool talking past them.
+        </p>
+        <ul>
+          {injurySources.map((source) => (
+            <li key={source.area} style={{ marginBottom: "10px" }}>
+              <strong>{source.area}.</strong> {source.note}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="section container prose-block">
         <span className="eyebrow">Commercial independence</span>
         <h2 className="section-title">Recommend first. Monetize second.</h2>
         <p>
@@ -66,7 +112,7 @@ export default function MethodologyPage() {
         <h2 className="section-title">A tool is not a fitting, diagnosis, or prescription.</h2>
         <p>
           Shoe results are a shortlist worth trying. Fuel results are a plan to
-          practice and adjust. Adaptive Training changes a schedule; it does not
+          practice and adjust. Injury Rescue changes a schedule; it does not
           identify or treat an injury. Seek qualified professional guidance for
           medical concerns, persistent pain, red flags, or individual nutrition needs.
         </p>

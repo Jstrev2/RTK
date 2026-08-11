@@ -1723,6 +1723,11 @@ details[open] summary {
   background: var(--lime);
 }
 
+.launch-rescue {
+  color: #fffefa;
+  background: var(--ink);
+}
+
 .launch-card-top {
   display: flex;
   align-items: center;

@@ -51,7 +51,7 @@ const daysUntilRace = (raceDate: string) => {
 };
 
 export default function AccountPage() {
-  const { user, loading, supabaseAvailable, isPremium } = useAuth();
+  const { user, loading, supabaseAvailable, isPremium, isSubscriber, hasRescue, rescueUntil } = useAuth();
   const [savedItems, setSavedItems] = useState<SavedItem[]>([]);
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const [profile, setProfile] = useState(defaultProfile);
@@ -211,14 +211,19 @@ export default function AccountPage() {
             </div>
           </div>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
-            {isPremium ? (
+            {isSubscriber ? (
               <>
-                <span className="pill">Adaptive member</span>
+                <span className="pill">Season member</span>
                 <ManageSubscription />
               </>
+            ) : hasRescue ? (
+              <span className="pill">
+                Rescue access
+                {rescueUntil ? ` through ${new Date(rescueUntil).toLocaleDateString()}` : " active"}
+              </span>
             ) : (
               <Link className="btn btn-secondary btn-sm" href="/premium">
-                Upgrade to Adaptive Training
+                See Injury Rescue
               </Link>
             )}
           </div>
@@ -310,27 +315,27 @@ export default function AccountPage() {
           <div className="card card-accent">
             <div className="stack">
               <strong>
-                {isPremium ? "Adaptive Training" : "Free toolkit"}
+                {isPremium ? "Injury Rescue" : "Free toolkit"}
               </strong>
               {isPremium ? (
                 <p style={{ margin: 0 }}>
-                  Complete revised schedules are unlocked on every training
-                  plan, including the explanation behind each change.
+                  Your full comeback schedules are unlocked — every rebuilt
+                  week through race day, with the reasoning behind each change.
                 </p>
               ) : (
                 <p style={{ margin: 0 }}>
-                  You&apos;re on the free toolkit. Adaptive Training unlocks every
-                  remaining revised week when missed time or an appropriately
-                  cleared return changes the schedule.
+                  You&apos;re on the free toolkit. If an injury interrupts your
+                  training, the free calculator gives you an honest race
+                  verdict — and Injury Rescue unlocks the full rebuilt schedule.
                 </p>
               )}
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                <Link className="btn btn-primary" href="/tools/training-plans#adapt">
-                  {isPremium ? "Adjust a plan" : "Try a sample adjustment"}
+                <Link className="btn btn-primary" href="/rescue">
+                  {isPremium ? "Open Injury Rescue" : "Check my race — free"}
                 </Link>
                 {!isPremium ? (
                   <Link className="btn btn-secondary" href="/premium">
-                    See Adaptive Training
+                    See how Rescue works
                   </Link>
                 ) : null}
               </div>

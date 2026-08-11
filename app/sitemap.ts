@@ -10,6 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // everything "just modified" and trains crawlers to ignore the field.
   const staticPages: MetadataRoute.Sitemap = [
     { url: baseUrl, changeFrequency: "weekly", priority: 1.0 },
+    { url: `${baseUrl}/rescue`, changeFrequency: "monthly", priority: 1.0 },
     { url: `${baseUrl}/premium`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/tools/training-plans`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/tools/shoe-selector`, changeFrequency: "weekly", priority: 0.9 },

@@ -12,7 +12,9 @@ const getStripe = () => {
 
 /**
  * Creates a Stripe Checkout session for the signed-in user.
- * Body: { interval: "monthly" | "annual" }
+ * Body: { product?: "rescue" | "membership", interval?: "monthly" | "annual" }
+ *  - product "rescue" = one-time Injury Rescue payment (90-day access)
+ *  - otherwise a membership subscription at the given interval
  * Auth: Supabase access token in the Authorization header.
  */
 export async function POST(request: Request) {
@@ -43,17 +45,21 @@ export async function POST(request: Request) {
   }
 
   let interval = "monthly";
+  let product = "membership";
   try {
     const body = await request.json();
     if (body?.interval === "annual") interval = "annual";
+    if (body?.product === "rescue") product = "rescue";
   } catch {
-    // default to monthly
+    // defaults
   }
 
   const priceId =
-    interval === "annual"
-      ? process.env.STRIPE_PRICE_ANNUAL
-      : process.env.STRIPE_PRICE_MONTHLY;
+    product === "rescue"
+      ? process.env.STRIPE_PRICE_RESCUE
+      : interval === "annual"
+        ? process.env.STRIPE_PRICE_ANNUAL
+        : process.env.STRIPE_PRICE_MONTHLY;
   if (!priceId) {
     return NextResponse.json(
       { error: "Pricing is not configured yet." },
@@ -63,15 +69,19 @@ export async function POST(request: Request) {
 
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://runnertoolkit.com";
+  const returnPath = product === "rescue" ? "/rescue" : "/premium";
 
   const session = await stripe.checkout.sessions.create({
-    mode: "subscription",
+    mode: product === "rescue" ? "payment" : "subscription",
+    // Payment mode defaults to a guest customer; always create one so the
+    // webhook can tag it and later events map back to the user.
+    ...(product === "rescue" ? { customer_creation: "always" as const } : {}),
     line_items: [{ price: priceId, quantity: 1 }],
     client_reference_id: data.user.id,
     customer_email: data.user.email ?? undefined,
-    success_url: `${siteUrl}/premium?status=success`,
-    cancel_url: `${siteUrl}/premium?status=cancelled`,
-    metadata: { supabase_user_id: data.user.id }
+    success_url: `${siteUrl}${returnPath}?status=success`,
+    cancel_url: `${siteUrl}${returnPath}?status=cancelled`,
+    metadata: { supabase_user_id: data.user.id, product }
   });
 
   return NextResponse.json({ url: session.url });
