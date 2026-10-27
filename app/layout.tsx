@@ -7,6 +7,7 @@ import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import { AuthProvider } from "@/components/auth-provider";
 import JsonLd from "@/components/json-ld";
+import GoogleAnalytics from "@/components/google-analytics";
 import { SITE_URL } from "@/lib/seo";
 
 const display = Space_Grotesk({
@@ -100,6 +101,7 @@ export default function RootLayout({
           <SiteFooter />
         </AuthProvider>
         <Analytics />
+        <GoogleAnalytics />
       </body>
     </html>
   );

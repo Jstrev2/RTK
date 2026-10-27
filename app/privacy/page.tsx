@@ -13,7 +13,7 @@ export default function PrivacyPage() {
       <section className="tool-hero container">
         <span className="eyebrow">Privacy</span>
         <h1>Your running information deserves restraint.</h1>
-        <p>Last updated July 21, 2026.</p>
+        <p>Last updated October 27, 2026.</p>
       </section>
       <section className="section container prose-block legal-copy">
         <h2>What we collect</h2>
@@ -24,6 +24,8 @@ export default function PrivacyPage() {
         <p>Injury, symptom, and training-impact information can be sensitive. Provide only what is needed for the requested schedule preview. Do not use Runner Toolkit for emergency communication or to store medical records.</p>
         <h2>Third parties</h2>
         <p>Service providers may support authentication, data hosting, email, payments, and outbound retailer links. Their own policies govern information they receive. Commercial links are labeled.</p>
+        <h2>Website traffic</h2>
+        <p>We use Google Analytics 4 to understand how many people visit Runner Toolkit and which pages they view. Google Analytics uses cookies to distinguish visitors and sessions and receives basic browser, device, and page information. Our tracking does not send account identifiers, form contents, injury details, or URL query strings. Advertising personalization and Google signals are disabled. You can block analytics through your browser settings or an analytics-blocking extension. See <a href="https://policies.google.com/privacy">Google's privacy policy</a> for how Google handles this information.</p>
         <h2>Your choices</h2>
         <p>You may request access, correction, or deletion by emailing hello@runnertoolkit.com. Legal rights vary by location.</p>
         <p>This page is a plain-language product notice and should be reviewed by qualified privacy counsel before handling sensitive health information at scale.</p>
