@@ -1,49 +1,5 @@
 [
   {
-    "item_key": "adidas-adizero-adios-10",
-    "name": "Adidas Adizero Adios 10",
-    "brand": "Adidas",
-    "price": 130,
-    "usage_types": [
-      "speed_work",
-      "race_day"
-    ],
-    "foot_strike": [
-      "heel",
-      "midfoot",
-      "forefoot"
-    ],
-    "cadence": [
-      "average",
-      "high"
-    ],
-    "toe_box": "standard",
-    "cushion": "minimal",
-    "stability": "neutral",
-    "surfaces": [
-      "road"
-    ],
-    "weight_range": "lightweight",
-    "stack": 27,
-    "drop": 8,
-    "weight_mens": 7,
-    "weight_womens": 6,
-    "description": "The tenth edition of Adidas's classic lightweight racing flat, continuing the low-stack Lightstrike Pro formula of the Adios 9. It targets runners who prefer a fast, firm, unplated shoe for intervals, tempos, and 5K-10K racing. A rare traditional flat in a market full of tall super trainers.",
-    "pros": [
-      "Light and responsive for speed work",
-      "Grippy, long-wearing outsole",
-      "Good value for a fast shoe"
-    ],
-    "cons": [
-      "Sparse cushioning over long distances",
-      "Firm ride is not for everyone"
-    ],
-    "popularity": 68,
-    "release_year": 2026,
-    "release_date": "2026-10-01",
-    "product_url": null
-  },
-  {
     "item_key": "adidas-adizero-adios-9",
     "name": "Adidas Adizero Adios 9",
     "brand": "Adidas",
@@ -2269,6 +2225,49 @@
     "product_url": null
   },
   {
+    "item_key": "asics-gel-slowcush",
+    "name": "ASICS GEL-Slowcush",
+    "brand": "ASICS",
+    "price": 200,
+    "usage_types": [
+      "recovery_runs",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 48,
+    "drop": 8,
+    "weight_mens": 10.5,
+    "weight_womens": 8.9,
+    "description": "The GEL-Slowcush is ASICS's tallest, plushest running shoe yet, built at a 48mm heel stack purely for easy and recovery miles rather than performance. Its FF LUXE PLUS foam and PureGEL PLUS cushioning trade responsiveness for cloud-like softness, making it a strong choice for zone 2 days and tired legs. Skip it if you want a shoe that can also handle pace work; it feels tall, soft, and disconnected once you try to speed up.",
+    "pros": [
+      "Extremely soft, plush ride for easy days",
+      "Comfortable engineered mesh upper",
+      "Stands out as a true recovery-day specialist"
+    ],
+    "cons": [
+      "Too soft and tall for faster paces",
+      "Heavy for daily use",
+      "Premium price for a single-purpose shoe"
+    ],
+    "popularity": 76,
+    "release_year": 2026,
+    "release_date": "2026-10-01",
+    "product_url": null
+  },
+  {
     "item_key": "asics-glideride-max",
     "name": "ASICS GlideRide Max",
     "brand": "ASICS",
@@ -3575,6 +3574,50 @@
     "popularity": 93,
     "release_year": 2025,
     "release_date": "2025-11-01",
+    "product_url": null
+  },
+  {
+    "item_key": "brooks-adrenaline-gts-26",
+    "name": "Brooks Adrenaline GTS 26",
+    "brand": "Brooks",
+    "price": 155,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 10,
+    "weight_mens": 10.8,
+    "weight_womens": 9.6,
+    "description": "The Adrenaline GTS 26 keeps Brooks's GuideRails support system and nitrogen-infused DNA Loft v3 foam from the 25, with retuned foam and an updated upper for a smoother, more secure ride. It remains the dependable, do-it-all stability trainer for overpronators logging daily and long-run miles. Skip it if your current GTS still has life left or you want a lighter, faster-feeling shoe.",
+    "pros": [
+      "Proven GuideRails support",
+      "Reliable fit with wide options",
+      "Smoother ride than the 25"
+    ],
+    "cons": [
+      "Still on the heavier side for a daily trainer",
+      "High drop and structure feel dull at pace"
+    ],
+    "popularity": 93,
+    "release_year": 2026,
+    "release_date": "2026-11-01",
     "product_url": null
   },
   {
@@ -5507,6 +5550,49 @@
     "popularity": 80,
     "release_year": 2025,
     "release_date": "2025-07-01",
+    "product_url": null
+  },
+  {
+    "item_key": "hoka-arahi-9",
+    "name": "Hoka Arahi 9",
+    "brand": "Hoka",
+    "price": 150,
+    "usage_types": [
+      "daily_trainer",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "wide",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 39,
+    "drop": 8,
+    "weight_mens": 9.7,
+    "weight_womens": 8.2,
+    "description": "The Arahi 9 keeps Hoka's J-Frame midsole guide for light stability while trimming weight and widening the forefoot for a roomier fit than the 8. It rides like Hoka's neutral trainers with just enough structure to check overpronation on easy-to-moderate days. A good pick for runners who found the Arahi 8's toe box too narrow, but not for anyone chasing a fast, snappy ride.",
+    "pros": [
+      "Lighter than the Arahi 8",
+      "Wider, roomier forefoot fit",
+      "Subtle stability without a harsh post"
+    ],
+    "cons": [
+      "Still unexciting at faster paces",
+      "Firmer ride than Hoka's max-cushion neutrals"
+    ],
+    "popularity": 80,
+    "release_year": 2026,
+    "release_date": "2026-10-01",
     "product_url": null
   },
   {
@@ -8568,7 +8654,7 @@
     ],
     "popularity": 90,
     "release_year": 2026,
-    "release_date": "2026-12-01",
+    "release_date": "2026-10-29",
     "product_url": null
   },
   {
@@ -8920,7 +9006,7 @@
     ],
     "popularity": 78,
     "release_year": 2026,
-    "release_date": "2026-10-01",
+    "release_date": "2026-08-30",
     "product_url": null
   },
   {
@@ -11770,6 +11856,51 @@
     "popularity": 92,
     "release_year": 2025,
     "release_date": "2025-07-01",
+    "product_url": null
+  },
+  {
+    "item_key": "saucony-endorphin-speed-6",
+    "name": "Saucony Endorphin Speed 6",
+    "brand": "Saucony",
+    "price": 175,
+    "usage_types": [
+      "speed_work",
+      "long_run",
+      "race_day"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "lightweight",
+    "stack": 38,
+    "drop": 8,
+    "weight_mens": 8.2,
+    "weight_womens": 7.0,
+    "description": "The sixth Endorphin Speed keeps the PWRRUN PB and nylon-plate platform that made the line famous, adding a touch more stack and a retuned plate for a bouncier push-off. It remains the versatile workhorse for runners who want race-shoe snap for tempos, intervals, and long runs without carbon-plate stiffness or fragility. Best for existing Speed fans; runners chasing a true max-stack racer should look at the Endorphin Pro or Elite instead.",
+    "pros": [
+      "Lighter, bouncier PWRRUN PB than the 5",
+      "Versatile across tempo, speed work, and race pace",
+      "Durable enough for regular training"
+    ],
+    "cons": [
+      "Price keeps climbing",
+      "Fit runs slightly short, consider sizing up"
+    ],
+    "popularity": 89,
+    "release_year": 2026,
+    "release_date": "2026-10-15",
     "product_url": null
   },
   {
