@@ -1,49 +1,5 @@
 [
   {
-    "item_key": "adidas-adizero-adios-10",
-    "name": "Adidas Adizero Adios 10",
-    "brand": "Adidas",
-    "price": 130,
-    "usage_types": [
-      "speed_work",
-      "race_day"
-    ],
-    "foot_strike": [
-      "heel",
-      "midfoot",
-      "forefoot"
-    ],
-    "cadence": [
-      "average",
-      "high"
-    ],
-    "toe_box": "standard",
-    "cushion": "minimal",
-    "stability": "neutral",
-    "surfaces": [
-      "road"
-    ],
-    "weight_range": "lightweight",
-    "stack": 27,
-    "drop": 8,
-    "weight_mens": 7,
-    "weight_womens": 6,
-    "description": "The tenth edition of Adidas's classic lightweight racing flat, continuing the low-stack Lightstrike Pro formula of the Adios 9. It targets runners who prefer a fast, firm, unplated shoe for intervals, tempos, and 5K-10K racing. A rare traditional flat in a market full of tall super trainers.",
-    "pros": [
-      "Light and responsive for speed work",
-      "Grippy, long-wearing outsole",
-      "Good value for a fast shoe"
-    ],
-    "cons": [
-      "Sparse cushioning over long distances",
-      "Firm ride is not for everyone"
-    ],
-    "popularity": 68,
-    "release_year": 2026,
-    "release_date": "2026-10-01",
-    "product_url": null
-  },
-  {
     "item_key": "adidas-adizero-adios-9",
     "name": "Adidas Adizero Adios 9",
     "brand": "Adidas",
@@ -1748,6 +1704,50 @@
     "product_url": null
   },
   {
+    "item_key": "altra-vanish-carbon-3",
+    "name": "Altra Vanish Carbon 3",
+    "brand": "Altra",
+    "price": 240,
+    "usage_types": [
+      "race_day",
+      "speed_work",
+      "long_run"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "wide",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "lightweight",
+    "stack": 40,
+    "drop": 4,
+    "weight_mens": 7.7,
+    "weight_womens": 6.7,
+    "description": "Altra's third-generation carbon racer trades its old zero-drop stance for a 4mm drop and a split-toe carbon plate that separates at the big toe for more natural push-off. Two layers of PEBA foam make it Altra's most protective super shoe yet, holding pace well from 10K through the marathon rather than just short, fast efforts.",
+    "pros": [
+      "Anatomic wide toe box unusual among carbon racers",
+      "Smooth, stable transitions once broken in",
+      "Holds pace well across 10K-to-marathon distances"
+    ],
+    "cons": [
+      "Heavier than most rival super shoes",
+      "Lacks snap for short/fast efforts"
+    ],
+    "popularity": 60,
+    "release_year": 2026,
+    "release_date": "2026-08-18",
+    "product_url": null
+  },
+  {
     "item_key": "altra-vanish-pulse",
     "name": "Altra Vanish Pulse",
     "brand": "Altra",
@@ -1786,7 +1786,7 @@
     ],
     "popularity": 52,
     "release_year": 2026,
-    "release_date": "2026-08-22",
+    "release_date": "2026-08-17",
     "product_url": null
   },
   {
@@ -2269,6 +2269,49 @@
     "product_url": null
   },
   {
+    "item_key": "asics-gel-slowcush",
+    "name": "ASICS GEL-Slowcush",
+    "brand": "ASICS",
+    "price": 200,
+    "usage_types": [
+      "recovery_runs",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 48,
+    "drop": 8,
+    "weight_mens": 10.5,
+    "weight_womens": 8.9,
+    "description": "The GEL-Slowcush is ASICS's tallest, plushest running shoe yet, built at a 48mm heel stack purely for easy and recovery miles rather than performance. Its FF LUXE PLUS foam and PureGEL PLUS cushioning trade responsiveness for cloud-like softness, making it a strong choice for zone 2 days and tired legs. Skip it if you want a shoe that can also handle pace work; it feels tall, soft, and disconnected once you try to speed up.",
+    "pros": [
+      "Extremely soft, plush ride for easy days",
+      "Comfortable engineered mesh upper",
+      "Stands out as a true recovery-day specialist"
+    ],
+    "cons": [
+      "Too soft and tall for faster paces",
+      "Heavy for daily use",
+      "Premium price for a single-purpose shoe"
+    ],
+    "popularity": 76,
+    "release_year": 2026,
+    "release_date": "2026-10-01",
+    "product_url": null
+  },
+  {
     "item_key": "asics-glideride-max",
     "name": "ASICS GlideRide Max",
     "brand": "ASICS",
@@ -2739,7 +2782,7 @@
     ],
     "popularity": 62,
     "release_year": 2026,
-    "release_date": "2026-07-01",
+    "release_date": "2026-07-16",
     "product_url": null
   },
   {
@@ -3401,6 +3444,50 @@
     "product_url": null
   },
   {
+    "item_key": "asics-sonicblast-2",
+    "name": "ASICS Sonicblast 2",
+    "brand": "ASICS",
+    "price": 190,
+    "usage_types": [
+      "daily_trainer",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "narrow",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 46,
+    "drop": 8,
+    "weight_mens": 8.4,
+    "weight_womens": 7.6,
+    "description": "A plated update to the Sonicblast that trims weight and reshapes the Pebax Astroplate into a more flexible forked design under a springy FF Turbo Squared top layer. It suits tempo runs and up to half-marathon racing for runners who want a bouncy, high-stack super-trainer. The narrow toe box makes it a tougher fit for longer efforts.",
+    "pros": [
+      "Lighter than the original Sonicblast",
+      "Lively, bouncy plated ride",
+      "Versatile from tempo to half-marathon race day"
+    ],
+    "cons": [
+      "Narrow toe box",
+      "Pricey at $190"
+    ],
+    "popularity": 73,
+    "release_year": 2026,
+    "release_date": "2026-09-01",
+    "product_url": null
+  },
+  {
     "item_key": "asics-superblast-2",
     "name": "ASICS Superblast 2",
     "brand": "ASICS",
@@ -3575,6 +3662,50 @@
     "popularity": 93,
     "release_year": 2025,
     "release_date": "2025-11-01",
+    "product_url": null
+  },
+  {
+    "item_key": "brooks-adrenaline-gts-26",
+    "name": "Brooks Adrenaline GTS 26",
+    "brand": "Brooks",
+    "price": 155,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 10,
+    "weight_mens": 10.8,
+    "weight_womens": 9.6,
+    "description": "The Adrenaline GTS 26 keeps Brooks's GuideRails support system and nitrogen-infused DNA Loft v3 foam from the 25, with retuned foam and an updated upper for a smoother, more secure ride. It remains the dependable, do-it-all stability trainer for overpronators logging daily and long-run miles. Skip it if your current GTS still has life left or you want a lighter, faster-feeling shoe.",
+    "pros": [
+      "Proven GuideRails support",
+      "Reliable fit with wide options",
+      "Smoother ride than the 25"
+    ],
+    "cons": [
+      "Still on the heavier side for a daily trainer",
+      "High drop and structure feel dull at pace"
+    ],
+    "popularity": 93,
+    "release_year": 2026,
+    "release_date": "2026-11-01",
     "product_url": null
   },
   {
@@ -3835,7 +3966,7 @@
     ],
     "popularity": 70,
     "release_year": 2026,
-    "release_date": "2026-07-01",
+    "release_date": "2026-07-09",
     "product_url": null
   },
   {
@@ -4893,6 +5024,51 @@
     "product_url": null
   },
   {
+    "item_key": "craft-atmosfar-1",
+    "name": "Craft Atmosfar 1",
+    "brand": "Craft",
+    "price": 190,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 51,
+    "drop": 6,
+    "weight_mens": 8.5,
+    "weight_womens": 7.9,
+    "description": "Craft's first true max-cushion daily trainer, developed with elite ultrarunner Tommy Rivs to soften high-mileage training days. A soft-but-springy nitrogen-infused Px Foam midsole gives it a smooth, protective ride without the busy feel of some max-stack rivals, though it's flat and unhurried rather than built for pace changes.",
+    "pros": [
+      "High, plush stack that stays comfortable over long miles",
+      "Lighter than key rivals despite the huge stack",
+      "Backed by real ultrarunning development pedigree"
+    ],
+    "cons": [
+      "Curved, snugger toe box - some reviewers size up",
+      "No plate or aggressive rocker, so it's flat for tempo work",
+      "New-to-market shoe with limited long-term durability data"
+    ],
+    "popularity": 55,
+    "release_year": 2026,
+    "release_date": "2026-08-18",
+    "product_url": "https://www.craftsports.us/pages/atmosfar"
+  },
+  {
     "item_key": "craft-kype-pro",
     "name": "Craft Kype Pro",
     "brand": "Craft",
@@ -5155,6 +5331,51 @@
     "popularity": 48,
     "release_year": 2025,
     "release_date": "2025-11-01",
+    "product_url": null
+  },
+  {
+    "item_key": "diadora-corsa",
+    "name": "Diadora Corsa",
+    "brand": "Diadora",
+    "price": 155,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "narrow",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "lightweight",
+    "stack": 39,
+    "drop": 8,
+    "weight_mens": 8.1,
+    "weight_womens": 6.9,
+    "description": "A genuinely versatile daily trainer that covers everything from recovery jogs to uptempo work on a nitrogen-infused Anima N2 foam that's lighter and more responsive than standard EVA. At $155 it's an accessible do-it-all option, though its snug, narrow-leaning fit and stiffer heel counter won't suit every foot.",
+    "pros": [
+      "Genuinely versatile across paces, from easy jogs to tempo",
+      "Nitrogen-infused foam is light and responsive",
+      "Affordable for the category"
+    ],
+    "cons": [
+      "Narrow, tapered fit - wide feet may need to size up",
+      "Stiffer heel counter"
+    ],
+    "popularity": 60,
+    "release_year": 2026,
+    "release_date": "2026-08-13",
     "product_url": null
   },
   {
@@ -5507,6 +5728,49 @@
     "popularity": 80,
     "release_year": 2025,
     "release_date": "2025-07-01",
+    "product_url": null
+  },
+  {
+    "item_key": "hoka-arahi-9",
+    "name": "Hoka Arahi 9",
+    "brand": "Hoka",
+    "price": 150,
+    "usage_types": [
+      "daily_trainer",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "wide",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 39,
+    "drop": 8,
+    "weight_mens": 9.7,
+    "weight_womens": 8.2,
+    "description": "The Arahi 9 keeps Hoka's J-Frame midsole guide for light stability while trimming weight and widening the forefoot for a roomier fit than the 8. It rides like Hoka's neutral trainers with just enough structure to check overpronation on easy-to-moderate days. A good pick for runners who found the Arahi 8's toe box too narrow, but not for anyone chasing a fast, snappy ride.",
+    "pros": [
+      "Lighter than the Arahi 8",
+      "Wider, roomier forefoot fit",
+      "Subtle stability without a harsh post"
+    ],
+    "cons": [
+      "Still unexciting at faster paces",
+      "Firmer ride than Hoka's max-cushion neutrals"
+    ],
+    "popularity": 80,
+    "release_year": 2026,
+    "release_date": "2026-10-01",
     "product_url": null
   },
   {
@@ -6163,6 +6427,50 @@
     "popularity": 80,
     "release_year": 2024,
     "release_date": "2024-08-01",
+    "product_url": null
+  },
+  {
+    "item_key": "hoka-rincon-5",
+    "name": "Hoka Rincon 5",
+    "brand": "Hoka",
+    "price": 125,
+    "usage_types": [
+      "daily_trainer",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 36,
+    "drop": 5,
+    "weight_mens": 9.7,
+    "weight_womens": 7.7,
+    "description": "Hoka's affordable lightweight trainer gets an overhauled upper and a more durable outsole after the Rincon 4's lateral heel wore out quickly, while keeping the simple EVA midsole and easy-rolling MetaRocker. It remains a good value pick for daily miles and up-tempo days for runners who do not need premium foam. It picked up some weight over the 4, so it is less of a featherweight than before.",
+    "pros": [
+      "Strong value at $125",
+      "Easy-rolling, nimble ride",
+      "More durable outsole than the Rincon 4"
+    ],
+    "cons": [
+      "Heavier than the previous Rincon",
+      "Basic EVA foam lacks bounce"
+    ],
+    "popularity": 78,
+    "release_year": 2026,
+    "release_date": "2026-03-01",
     "product_url": null
   },
   {
@@ -8265,7 +8573,7 @@
     ],
     "popularity": 83,
     "release_year": 2026,
-    "release_date": "2026-08-01",
+    "release_date": "2026-07-27",
     "product_url": null
   },
   {
@@ -8568,7 +8876,7 @@
     ],
     "popularity": 90,
     "release_year": 2026,
-    "release_date": "2026-12-01",
+    "release_date": "2026-10-29",
     "product_url": null
   },
   {
@@ -8920,7 +9228,7 @@
     ],
     "popularity": 78,
     "release_year": 2026,
-    "release_date": "2026-10-01",
+    "release_date": "2026-08-30",
     "product_url": null
   },
   {
@@ -10234,7 +10542,7 @@
     ],
     "popularity": 75,
     "release_year": 2026,
-    "release_date": "2026-09-01",
+    "release_date": "2026-10-01",
     "product_url": null
   },
   {
@@ -10674,6 +10982,50 @@
     "popularity": 72,
     "release_year": 2025,
     "release_date": "2025-02-06",
+    "product_url": null
+  },
+  {
+    "item_key": "puma-foreverrun-nitro-3",
+    "name": "Puma ForeverRun Nitro 3",
+    "brand": "Puma",
+    "price": 150,
+    "usage_types": [
+      "daily_trainer",
+      "recovery_runs",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "moderate",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 38,
+    "drop": 8,
+    "weight_mens": 9.5,
+    "weight_womens": 7.8,
+    "description": "The third generation of Puma's stability trainer upgrades to a dual-density PEBA-blend Nitrofoam, with a softer nitrogen-infused core ringed by a firmer rim for guidance instead of a traditional medial post. It is a comfortable everyday option for runners who want gentle, unobtrusive support on easy and long miles. The heavier, muted ride is not built for faster workouts.",
+    "pros": [
+      "Comfortable modern stability without a hard post",
+      "Durable, cushioned for daily mileage",
+      "Secure PWRTAPE-reinforced upper"
+    ],
+    "cons": [
+      "Heavy and sluggish at faster paces",
+      "Not a shoe for workouts or racing"
+    ],
+    "popularity": 70,
+    "release_year": 2026,
+    "release_date": "2026-08-01",
     "product_url": null
   },
   {
@@ -11773,6 +12125,51 @@
     "product_url": null
   },
   {
+    "item_key": "saucony-endorphin-speed-6",
+    "name": "Saucony Endorphin Speed 6",
+    "brand": "Saucony",
+    "price": 175,
+    "usage_types": [
+      "speed_work",
+      "long_run",
+      "race_day"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "lightweight",
+    "stack": 38,
+    "drop": 8,
+    "weight_mens": 8.2,
+    "weight_womens": 7,
+    "description": "The sixth Endorphin Speed keeps the PWRRUN PB and nylon-plate platform that made the line famous, adding a touch more stack and a retuned plate for a bouncier push-off. It remains the versatile workhorse for runners who want race-shoe snap for tempos, intervals, and long runs without carbon-plate stiffness or fragility. Best for existing Speed fans; runners chasing a true max-stack racer should look at the Endorphin Pro or Elite instead.",
+    "pros": [
+      "Lighter, bouncier PWRRUN PB than the 5",
+      "Versatile across tempo, speed work, and race pace",
+      "Durable enough for regular training"
+    ],
+    "cons": [
+      "Price keeps climbing",
+      "Fit runs slightly short, consider sizing up"
+    ],
+    "popularity": 89,
+    "release_year": 2026,
+    "release_date": "2026-10-15",
+    "product_url": null
+  },
+  {
     "item_key": "saucony-endorphin-trainer",
     "name": "Saucony Endorphin Trainer",
     "brand": "Saucony",
@@ -12564,7 +12961,7 @@
     ],
     "popularity": 86,
     "release_year": 2026,
-    "release_date": "2026-07-01",
+    "release_date": "2026-06-01",
     "product_url": null
   },
   {
@@ -13050,7 +13447,50 @@
     ],
     "popularity": 68,
     "release_year": 2026,
-    "release_date": "2026-07-01",
+    "release_date": "2026-07-15",
+    "product_url": null
+  },
+  {
+    "item_key": "topo-athletic-specter-elite",
+    "name": "Topo Athletic Specter Elite",
+    "brand": "Topo Athletic",
+    "price": 250,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "wide",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "lightweight",
+    "stack": 39,
+    "drop": 5,
+    "weight_mens": 7.1,
+    "weight_womens": 5.6,
+    "description": "Topo's first carbon-plated racer pairs a supercritical RevFoam midsole with the brand's signature wide, anatomical toe box, a rare combination in race-day shoes. It is built for marathon and half-marathon racing for runners who want a propulsive plate without cramming their toes. Its 39mm stack and firmer strobel are still a step below the top super-shoes for outright pop.",
+    "pros": [
+      "Rare wide toe box on a carbon racer",
+      "Light at 7.1 oz for the stack",
+      "Strong value at $250 for a plated shoe"
+    ],
+    "cons": [
+      "Less explosive than top-tier super-shoes",
+      "New to the plated racing category, less proven durability"
+    ],
+    "popularity": 62,
+    "release_year": 2026,
+    "release_date": "2026-08-13",
     "product_url": null
   },
   {
