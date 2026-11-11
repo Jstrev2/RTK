@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/next";
-import { IBM_Plex_Sans, Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
@@ -10,16 +10,24 @@ import JsonLd from "@/components/json-ld";
 import GoogleAnalytics from "@/components/google-analytics";
 import { SITE_URL } from "@/lib/seo";
 
-const display = Space_Grotesk({
-  subsets: ["latin"],
+// Fonts are bundled in app/fonts rather than fetched from Google at build
+// time: that fetch failed often enough to break production deploys.
+const display = localFont({
+  src: "./fonts/space-grotesk-latin-wght-normal.woff2",
   variable: "--font-display",
-  weight: ["400", "500", "600", "700"]
+  weight: "300 700",
+  display: "swap"
 });
 
-const body = IBM_Plex_Sans({
-  subsets: ["latin"],
+const body = localFont({
+  src: [
+    { path: "./fonts/ibm-plex-sans-latin-400-normal.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/ibm-plex-sans-latin-500-normal.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/ibm-plex-sans-latin-600-normal.woff2", weight: "600", style: "normal" },
+    { path: "./fonts/ibm-plex-sans-latin-700-normal.woff2", weight: "700", style: "normal" }
+  ],
   variable: "--font-body",
-  weight: ["400", "500", "600", "700"]
+  display: "swap"
 });
 
 export const viewport: Viewport = {
