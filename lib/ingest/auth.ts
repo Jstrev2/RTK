@@ -8,9 +8,8 @@ export function isAuthorized(request: Request): boolean {
   const secret = process.env.INGEST_SECRET ?? "";
   if (!secret) return false;
 
+  // Header only. The secret used to be accepted as a ?secret= query parameter
+  // too, which put it in access logs.
   const header = request.headers.get("x-ingest-secret");
-  if (header && header === secret) return true;
-
-  const url = new URL(request.url);
-  return url.searchParams.get("secret") === secret;
+  return Boolean(header) && header === secret;
 }

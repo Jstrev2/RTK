@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { useAuth } from "@/components/auth-provider";
+import { PAID_RESCUE_ENABLED } from "@/lib/billing";
 
 type Props = {
   children: ReactNode;
@@ -12,7 +13,8 @@ type Props = {
 
 export default function PremiumGate({ children, feature, teaser }: Props) {
   const { user, isPremium } = useAuth();
-  if (isPremium) return <>{children}</>;
+  // With paid Rescue switched off there is nothing to sell, so nothing is gated.
+  if (isPremium || !PAID_RESCUE_ENABLED) return <>{children}</>;
 
   return (
     <div className="stack">

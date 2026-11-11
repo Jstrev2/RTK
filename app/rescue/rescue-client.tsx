@@ -4,11 +4,13 @@ import { Suspense, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { trainingPlans, type TrainingPlan } from "@/lib/data";
-import { injuries, MEDICAL_DISCLAIMER, type Injury } from "@/lib/injuries";
+import { getInjuryBySlug, injuries, injurySlug, MEDICAL_DISCLAIMER, type Injury } from "@/lib/injuries";
 import { adjustPlan, NO_DISTANCE, type AdjustedWeek } from "@/lib/plan-adjuster";
 import { runTriage, TRIAGE_QUESTIONS, type TriageAnswers, type TriageResult } from "@/lib/triage";
 import { buildCustomPlan, applyLongRunDay, type PlanShape } from "@/lib/custom-plan";
 import { useAuth } from "@/components/auth-provider";
+import { PAID_RESCUE_ENABLED } from "@/lib/billing";
+import { trackEvent } from "@/lib/analytics";
 
 const phaseIcons: Record<AdjustedWeek["phase"], string> = {
   rest: "🛌",
@@ -55,7 +57,17 @@ function WeekCard({ week }: { week: AdjustedWeek }) {
   );
 }
 
-function EmailGate({ onUnlock }: { onUnlock: () => void }) {
+function EmailGate({
+  onUnlock,
+  title,
+  body,
+  cta
+}: {
+  onUnlock: () => void;
+  title: string;
+  body: string;
+  cta: string;
+}) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
 
@@ -80,6 +92,7 @@ function EmailGate({ onUnlock }: { onUnlock: () => void }) {
       } catch {
         // Private browsing: unlock for the session anyway.
       }
+      trackEvent("generate_lead", { source: "rescue" });
       onUnlock();
     } catch {
       setStatus("error");
@@ -89,12 +102,8 @@ function EmailGate({ onUnlock }: { onUnlock: () => void }) {
   return (
     <div className="card card-accent">
       <div className="stack">
-        <strong>See your first rebuilt week</strong>
-        <p className="brand-sub">
-          Enter your email and the first week of your comeback schedule appears
-          right here. We&apos;ll also send occasional, genuinely useful training
-          updates, and no daily noise.
-        </p>
+        <strong>{title}</strong>
+        <p className="brand-sub">{body}</p>
         <div className="newsletter-form">
           <input
             className="input"
@@ -106,7 +115,7 @@ function EmailGate({ onUnlock }: { onUnlock: () => void }) {
             onKeyDown={(event) => event.key === "Enter" && submit()}
           />
           <button className="btn btn-primary" type="button" onClick={submit} disabled={status === "sending"}>
-            {status === "sending" ? "Unlocking..." : "Show my week"}
+            {status === "sending" ? "Unlocking..." : cta}
           </button>
         </div>
         {status === "error" ? (
@@ -253,6 +262,53 @@ function RescueContent() {
     } catch {
       // Storage unavailable or corrupt: start fresh.
     }
+
+    // A link from an injury page (?injury=shin-splints) or a shared verdict
+    // (adds the answers and plan shape) overrides whatever was saved.
+    const params = new URLSearchParams(window.location.search);
+    const linked = getInjuryBySlug(params.get("injury") ?? "");
+    if (!linked) return;
+    setInjuryId(linked.id);
+
+    const bits = params.get("t") ?? "";
+    if (!/^[01]{6}$/.test(bits)) {
+      setSubmitted(false);
+      return;
+    }
+    const linkedAnswers: Partial<TriageAnswers> = {};
+    TRIAGE_QUESTIONS.forEach((q, index) => {
+      linkedAnswers[q.id] = bits[index] === "1";
+    });
+    setAnswers(linkedAnswers);
+
+    const num = (key: string, min: number, max: number) => {
+      const raw = params.get(key);
+      if (raw === null) return undefined;
+      const value = Number(raw);
+      return Number.isFinite(value) && value >= min && value <= max ? value : undefined;
+    };
+    const linkedPlan = params.get("plan");
+    if (linkedPlan && trainingPlans.some((p) => p.id === linkedPlan)) {
+      setPlanMode("rtk");
+      setRtkPlanId(linkedPlan);
+      setRtkWeek(num("wk", 1, 40) ?? 1);
+    } else {
+      const distance = params.get("d");
+      setPlanMode("custom");
+      setShape((s) => ({
+        ...s,
+        distance:
+          distance === "5k" || distance === "10k" || distance === "half" || distance === "marathon"
+            ? distance
+            : s.distance,
+        weeksToRace: num("w", 1, 30) ?? s.weeksToRace,
+        runsPerWeek: num("r", 2, 6) ?? s.runsPerWeek,
+        currentWeeklyMiles: num("m", 1, 120) ?? s.currentWeeklyMiles,
+        peakWeeklyMiles: num("p", 1, 140),
+        longRunDay: params.get("l") === "sat" ? "Saturday" : "Sunday"
+      }));
+    }
+    setSubmitted(true);
   }, []);
 
   // Persist the submitted inputs so the verdict survives reloads/redirects.
@@ -317,6 +373,48 @@ function RescueContent() {
   const effectiveInjury: Injury | undefined = result
     ? result.adjusted.injury
     : selectedInjury;
+
+  // Free mode: week one is open and an email unlocks the rest. Paid mode keeps
+  // the original ladder (email for week one, purchase for the rest).
+  const showFirstWeek = !PAID_RESCUE_ENABLED || emailUnlocked || isPremium;
+  const showAllWeeks = isPremium || (!PAID_RESCUE_ENABLED && emailUnlocked);
+
+  const [shareState, setShareState] = useState<"idle" | "copied" | "manual">("idle");
+  const shareQuery = useMemo(() => {
+    if (!result) return "";
+    const p = new URLSearchParams();
+    p.set("injury", injurySlug(injuryId));
+    p.set("t", TRIAGE_QUESTIONS.map((q) => (answers[q.id] ? "1" : "0")).join(""));
+    if (planMode === "custom") {
+      p.set("d", shape.distance);
+      p.set("w", String(shape.weeksToRace));
+      p.set("r", String(shape.runsPerWeek));
+      p.set("m", String(shape.currentWeeklyMiles));
+      if (shape.peakWeeklyMiles !== undefined) p.set("p", String(shape.peakWeeklyMiles));
+      if (shape.longRunDay === "Saturday") p.set("l", "sat");
+    } else {
+      p.set("plan", rtkPlanId);
+      p.set("wk", String(rtkWeek));
+    }
+    return p.toString();
+  }, [result, injuryId, answers, planMode, shape, rtkPlanId, rtkWeek]);
+  const shareUrl = shareQuery ? `https://runnertoolkit.com/rescue?${shareQuery}` : "";
+
+  useEffect(() => {
+    setShareState("idle");
+  }, [shareQuery]);
+
+  const copyShareLink = async () => {
+    if (!shareUrl) return;
+    trackEvent("share", { method: "copy_link", content_type: "rescue_verdict" });
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setShareState("copied");
+    } catch {
+      // Clipboard blocked (older browser, insecure context): show the link.
+      setShareState("manual");
+    }
+  };
 
   const setAnswer = (id: keyof TriageAnswers, value: boolean) => {
     setAnswers((prev) => ({ ...prev, [id]: value }));
@@ -582,7 +680,10 @@ function RescueContent() {
               className="btn btn-primary"
               type="button"
               disabled={!triageComplete || !shapeValid}
-              onClick={() => setSubmitted(true)}
+              onClick={() => {
+                setSubmitted(true);
+                trackEvent("rescue_verdict");
+              }}
               style={{ alignSelf: "flex-start" }}
             >
               {!triageComplete
@@ -653,6 +754,19 @@ function RescueContent() {
                 <p style={{ margin: "6px 0 0" }}>{result.adjusted.feasibility.message}</p>
               </div>
 
+              <div className="stack" style={{ gap: "8px" }}>
+                <div className="button-row">
+                  <button className="btn btn-secondary btn-sm" type="button" onClick={copyShareLink}>
+                    {shareState === "copied" ? "Link copied" : "Copy a link to this verdict"}
+                  </button>
+                </div>
+                <div className="brand-sub" style={{ overflowWrap: "anywhere" }}>
+                  {shareState === "manual"
+                    ? shareUrl
+                    : "Handy for a coach, a physio, or a training partner. The link carries your answers and plan numbers, nothing else."}
+                </div>
+              </div>
+
               {effectiveInjury ? (
                 <div className="card card-outline">
                   <div className="stack">
@@ -691,18 +805,23 @@ function RescueContent() {
               ) : null}
 
               {result.remaining.length ? (
-                emailUnlocked || isPremium ? (
+                showFirstWeek ? (
                   <div className="stack">
                     <strong>Your comeback starts here, in week {result.adjusted.reportedWeek}</strong>
                     <WeekCard week={result.remaining[0]} />
                   </div>
                 ) : (
-                  <EmailGate onUnlock={() => setEmailUnlocked(true)} />
+                  <EmailGate
+                    onUnlock={() => setEmailUnlocked(true)}
+                    title="See your first rebuilt week"
+                    body="Enter your email and the first week of your comeback schedule appears right here. We'll also send occasional, genuinely useful training updates, and no daily noise."
+                    cta="Show my week"
+                  />
                 )
               ) : null}
 
               {result.remaining.length > 1 ? (
-                isPremium ? (
+                showAllWeeks ? (
                   <div className="stack">
                     <strong>Every remaining week through race day</strong>
                     {result.remaining.slice(1).map((week) => (
@@ -717,7 +836,7 @@ function RescueContent() {
                       Re-run with different answers
                     </button>
                   </div>
-                ) : (
+                ) : PAID_RESCUE_ENABLED ? (
                   <div className="stack">
                     <div className="brand-sub">
                       {result.remaining.length - 1} more rebuilt week
@@ -727,6 +846,13 @@ function RescueContent() {
                     </div>
                     <RescueCheckout />
                   </div>
+                ) : (
+                  <EmailGate
+                    onUnlock={() => setEmailUnlocked(true)}
+                    title={`See the other ${result.remaining.length - 1} week${result.remaining.length === 2 ? "" : "s"} through race day`}
+                    body="Enter your email and the rest of your comeback schedule appears right here, free: the graded return to running, the volume-capped rebuild, and your taper when the timeline allows it. We'll also send occasional, genuinely useful training updates, and no daily noise."
+                    cta="Show my full schedule"
+                  />
                 )
               ) : null}
 

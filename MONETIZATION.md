@@ -1,5 +1,17 @@
 # Monetization
 
+> **Status, November 2026: paid Injury Rescue is switched off.** Stripe was
+> never configured, so the $29 button led to an error. The site now runs in
+> free mode: the first rebuilt week is open and the remaining weeks unlock
+> for an email. No page mentions a price or opens checkout.
+>
+> Everything below is still built and still works. To turn the paywall back
+> on, finish the Stripe launch checklist and set `NEXT_PUBLIC_RESCUE_PAID=1`
+> in Vercel (Production), then redeploy. That one flag (`lib/billing.ts`)
+> restores the $29 offer on /rescue, /premium, the training-plan preview and
+> /account. Note that Vercel's Hobby plan does not allow commercial use, so
+> charging also means moving the project to Pro.
+
 Two revenue streams, in order of how fast they can produce dollars:
 
 1. **Affiliate links** — already wired sitewide; each program goes live the

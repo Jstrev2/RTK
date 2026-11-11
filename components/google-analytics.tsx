@@ -23,6 +23,11 @@ export default function GoogleAnalytics() {
     // Preview deployments and local development must not inflate live traffic.
     if (!["runnertoolkit.com", "www.runnertoolkit.com"].includes(window.location.hostname)) return;
 
+    // Automated browsers (crawlers, scrapers, uptime checks) announce
+    // themselves here. In the first two weeks of data they were about 90% of
+    // sessions, which buries the real visitors.
+    if (navigator.webdriver) return;
+
     const pageLocation = window.location.origin + pathname;
     if (previousPage.current === pageLocation) return;
 

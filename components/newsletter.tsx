@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { getSupabaseClient } from "@/lib/supabase-client";
+import { trackEvent } from "@/lib/analytics";
 
 export default function Newsletter() {
   const [email, setEmail] = useState("");
@@ -31,6 +32,7 @@ export default function Newsletter() {
       return;
     }
 
+    trackEvent("generate_lead", { source: "newsletter" });
     setStatus("sent");
     setEmail("");
   };

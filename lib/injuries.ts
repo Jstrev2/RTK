@@ -310,3 +310,29 @@ export const injuries: Injury[] = [
 
 export const getInjury = (id: string) =>
   injuries.find((injury) => injury.id === id);
+
+/** URL slug for an injury's page: "shin_splints" -> "shin-splints". */
+export const injurySlug = (id: string) => id.replace(/_/g, "-");
+
+/** Accepts either the slug or the raw id, so links and share URLs both work. */
+export const getInjuryBySlug = (slug: string) =>
+  getInjury(slug.replace(/-/g, "_"));
+
+/**
+ * How each injury reads mid-sentence ("with a calf strain"), in a title, and
+ * the name most runners actually type into a search box when it differs from
+ * the clinical one.
+ */
+export const INJURY_PHRASES: Record<string, { phrase: string; title: string; alias?: string }> = {
+  runners_knee: { phrase: "runner's knee", title: "Runner's Knee", alias: "patellofemoral pain" },
+  it_band: { phrase: "IT band syndrome", title: "IT Band Syndrome", alias: "ITBS" },
+  shin_splints: { phrase: "shin splints", title: "Shin Splints", alias: "medial tibial stress syndrome" },
+  plantar_fasciitis: { phrase: "plantar fasciitis", title: "Plantar Fasciitis" },
+  achilles_tendinopathy: { phrase: "Achilles tendinopathy", title: "Achilles Tendinopathy", alias: "Achilles tendonitis" },
+  calf_strain: { phrase: "a calf strain", title: "a Calf Strain", alias: "a pulled calf" },
+  hamstring_strain: { phrase: "a hamstring strain", title: "a Hamstring Strain", alias: "a pulled hamstring" },
+  stress_fracture: { phrase: "a stress fracture", title: "a Stress Fracture" },
+  ankle_sprain: { phrase: "an ankle sprain", title: "an Ankle Sprain", alias: "a rolled ankle" },
+  hip_flexor_strain: { phrase: "a hip flexor strain", title: "a Hip Flexor Strain" },
+  piriformis_syndrome: { phrase: "piriformis syndrome", title: "Piriformis Syndrome" }
+};

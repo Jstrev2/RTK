@@ -1,6 +1,6 @@
 "use client";
 
-import { track } from "@vercel/analytics";
+import { trackEvent } from "@/lib/analytics";
 import { getRetailerLinks } from "@/lib/affiliate";
 
 type Props = {
@@ -12,7 +12,7 @@ type Props = {
 export default function BuyLinks({ name, brand, compact }: Props) {
   const links = getRetailerLinks({ name, brand });
   const trackClick = (retailer: string) => {
-    track("buy_link_click", { retailer, shoe: name, brand });
+    trackEvent("buy_link_click", { retailer, shoe: name, brand });
   };
 
   if (compact) {

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useAuth } from "@/components/auth-provider";
 import { getSupabaseClient } from "@/lib/supabase-client";
 import ManageSubscription from "@/components/manage-subscription";
+import { PAID_RESCUE_ENABLED } from "@/lib/billing";
 import { attireItems, shoes, songs, trainingPlans } from "@/lib/data";
 
 type SavedItem = {
@@ -324,9 +325,9 @@ export default function AccountPage() {
                 </p>
               ) : (
                 <p style={{ margin: 0 }}>
-                  You&apos;re on the free toolkit. If an injury interrupts your
-                  training, the free calculator gives you an honest race
-                  verdict, and Injury Rescue unlocks the full rebuilt schedule.
+                  {PAID_RESCUE_ENABLED
+                    ? "You're on the free toolkit. If an injury interrupts your training, the free calculator gives you an honest race verdict, and Injury Rescue unlocks the full rebuilt schedule."
+                    : "If an injury interrupts your training, the calculator gives you an honest race verdict and rebuilds every remaining week through race day. It's free."}
                 </p>
               )}
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>

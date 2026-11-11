@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useAuth } from "@/components/auth-provider";
 import ManageSubscription from "@/components/manage-subscription";
+import { PAID_RESCUE_ENABLED } from "@/lib/billing";
 
 const paidFeatures = [
   {
@@ -100,7 +101,11 @@ function PremiumContent() {
         </p>
         <div className="button-row">
           <Link className="btn btn-primary" href="/rescue">Check my race for free</Link>
-          <a className="btn btn-secondary" href="#pricing">See the options</a>
+          {PAID_RESCUE_ENABLED ? (
+            <a className="btn btn-secondary" href="#pricing">See the options</a>
+          ) : (
+            <Link className="btn btn-secondary" href="/methodology">Where the numbers come from</Link>
+          )}
         </div>
       </section>
 
@@ -134,7 +139,7 @@ function PremiumContent() {
       <section className="results-section">
         <div className="container results-layout">
           <div className="results-copy">
-            <span className="eyebrow">What you are buying</span>
+            <span className="eyebrow">{PAID_RESCUE_ENABLED ? "What you are buying" : "What you get"}</span>
             <h2 className="section-title">A revised schedule, not a motivational paragraph.</h2>
             <p className="section-lede">
               The value is the plan itself: the next week, every remaining
@@ -153,6 +158,46 @@ function PremiumContent() {
         </div>
       </section>
 
+      {!PAID_RESCUE_ENABLED ? (
+        <section id="pricing" className="section container">
+          <div className="pricing-heading">
+            <span className="eyebrow">What it costs</span>
+            <h2 className="section-title">Nothing. The whole comeback is free right now.</h2>
+            <p className="section-lede">
+              The verdict and your first rebuilt week open straight away. The
+              remaining weeks ask for an email, and that&apos;s the only ask.
+            </p>
+          </div>
+
+          <div className="pricing-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))" }}>
+            <div className="pricing-card pricing-featured">
+              <span className="eyebrow">Injury Rescue</span>
+              <strong className="price">$0</strong>
+              <p>The full comeback, for the plan you&apos;re already on.</p>
+              <ul className="list">
+                <li>Symptom check and severity grade</li>
+                <li>Honest race-day verdict</li>
+                <li>Every rebuilt week through race day</li>
+                <li>Re-run it as the injury changes</li>
+              </ul>
+              <Link className="btn btn-primary" href="/rescue">Check my race</Link>
+            </div>
+
+            <div className="pricing-card">
+              <span className="eyebrow">The rest of the toolkit</span>
+              <strong className="price">$0</strong>
+              <p>No account needed for any of it.</p>
+              <ul className="list">
+                <li><Link href="/tools/shoe-selector">Shoe finder</Link></li>
+                <li><Link href="/tools/fueling">Fuel planner</Link></li>
+                <li><Link href="/tools/pace-calculator">Pace calculator</Link></li>
+                <li><Link href="/tools/training-plans">Base training plans</Link></li>
+              </ul>
+              <Link className="btn btn-secondary" href="/tools/training-plans">Browse free plans</Link>
+            </div>
+          </div>
+        </section>
+      ) : (
       <section id="pricing" className="section container">
         <div className="pricing-heading">
           <span className="eyebrow">Choose the access that fits the problem</span>
@@ -227,6 +272,7 @@ function PremiumContent() {
           </div>
         </div>
       </section>
+      )}
 
       <section className="section container">
         <div className="boundaries-card">

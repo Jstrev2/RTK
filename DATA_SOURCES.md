@@ -55,7 +55,7 @@ IMAGE_FETCH_LIMIT=8
 Call the ingestion route (protected by `INGEST_SECRET`):
 
 ```
-POST /api/ingest?secret=YOUR_SECRET
+POST /api/ingest   (header: x-ingest-secret: YOUR_SECRET)
 ```
 
 ## Next Additions
@@ -83,3 +83,25 @@ We keep a canonical `shoe_models` list so the Shoe Selector and the "New for 202
 ### Where It Shows Up
 - Shoe Selector: "New for 2026" pulls from `shoe_models`.
 - Audit with `npm run audit:shoes` (optionally set `SHOE_AUDIT_YEAR=2026`).
+
+## How the catalog stays current (November 2026)
+
+The scraper pipeline above is dormant. The shoe catalog now maintains itself:
+
+1. A scheduled Claude Code routine audits releases on the 1st of each month and
+   opens a PR from a `catalog-audit-*` branch that edits
+   `data/shoe-models-authored.json`.
+2. The routine then runs `scripts/catalog/check-audit.mjs` against its own
+   change (required fields present, no more than 40 shoes added or 8 removed)
+   and, if it passes, squash-merges the PR. If the check fails it leaves the
+   PR open for a human.
+3. The daily Vercel cron (`/api/cron/daily`, 09:00 UTC) reads the file from
+   GitHub and applies the differences to `shoe_models` via
+   `lib/catalog-sync.ts`, then refreshes the affected pages and pings IndexNow.
+   The same limits are enforced again before anything is written.
+
+The file is the source of truth: a shoe removed from it is deactivated in the
+database. Nobody needs to run `npm run import:shoes` anymore.
+
+Optional hardening: set `CRON_SECRET` in Vercel (Production). The cron route
+then accepts only Vercel's signed scheduler call.

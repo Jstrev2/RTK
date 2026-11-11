@@ -1,0 +1,34 @@
+# Runner Toolkit
+
+> Free decision tools for runners: an injury comeback calculator that works with any training plan, a road running shoe finder covering 300+ current models, a race fuel planner, a pace calculator, and free training plans. No account required.
+
+Numbers on the injury pages are produced by the same engine as the calculator. The approach is conservative and literature-based; it is general information, not medical advice. Sources are listed on the methodology page.
+
+## Injury Rescue
+
+- [Can I still make my race? (calculator)](https://runnertoolkit.com/rescue): six-question symptom check, race verdict, and a rebuilt week-by-week schedule for the remaining weeks of any plan
+- [Runner's knee](https://runnertoolkit.com/rescue/runners-knee): rest days, return-to-running weeks, and weeks needed before race day
+- [IT band syndrome](https://runnertoolkit.com/rescue/it-band)
+- [Shin splints](https://runnertoolkit.com/rescue/shin-splints)
+- [Plantar fasciitis](https://runnertoolkit.com/rescue/plantar-fasciitis)
+- [Achilles tendinopathy](https://runnertoolkit.com/rescue/achilles-tendinopathy)
+- [Calf strain](https://runnertoolkit.com/rescue/calf-strain)
+- [Hamstring strain](https://runnertoolkit.com/rescue/hamstring-strain)
+- [Stress fracture](https://runnertoolkit.com/rescue/stress-fracture): always requires medical clearance
+- [Ankle sprain](https://runnertoolkit.com/rescue/ankle-sprain)
+- [Hip flexor strain](https://runnertoolkit.com/rescue/hip-flexor-strain)
+- [Piriformis syndrome](https://runnertoolkit.com/rescue/piriformis-syndrome)
+- [Methodology and sources](https://runnertoolkit.com/methodology)
+
+## Tools
+
+- [Shoe finder](https://runnertoolkit.com/tools/shoe-selector): matches road shoes to pronation, mileage, cushion feel, and budget, with reasons
+- [Shoe database](https://runnertoolkit.com/shoes): specs for every tracked road shoe, by brand
+- [Fuel planner](https://runnertoolkit.com/tools/fueling)
+- [Pace calculator](https://runnertoolkit.com/tools/pace-calculator)
+- [Training plans](https://runnertoolkit.com/tools/training-plans)
+- [What to wear running](https://runnertoolkit.com/tools/attire-guide)
+
+## Guides
+
+- [Runner guides](https://runnertoolkit.com/rundown)

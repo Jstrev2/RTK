@@ -1,4 +1,6 @@
+import Link from "next/link";
 import JsonLd from "@/components/json-ld";
+import { injuries, injurySlug } from "@/lib/injuries";
 import { pageMetadata } from "@/lib/seo";
 import RescueClient from "./rescue-client";
 
@@ -26,7 +28,7 @@ export default function RescuePage() {
             "@type": "Offer",
             price: "0",
             priceCurrency: "USD",
-            description: "Free race verdict and symptom check"
+            description: "Free symptom check, race verdict, and rebuilt comeback schedule"
           }
         }}
       />
@@ -45,6 +47,24 @@ export default function RescuePage() {
       </section>
 
       <RescueClient />
+
+      <section className="section container">
+        <div className="stack">
+          <span className="eyebrow">Timelines by injury</span>
+          <h2 className="section-title">How much runway each injury needs</h2>
+          <p className="section-lede">
+            Rest days, return-to-running weeks, and the fewest weeks you need
+            before race day, for each of the injuries the calculator covers.
+          </p>
+          <div className="tag-grid">
+            {injuries.map((injury) => (
+              <Link key={injury.id} className="tag" href={`/rescue/${injurySlug(injury.id)}`}>
+                {injury.name.replace(/ \(.*\)$/, "")}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="section container prose-block">
         <h2>How the verdict works</h2>

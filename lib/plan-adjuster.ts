@@ -144,7 +144,7 @@ export function adjustPlan(
       workouts,
       note:
         r === 0
-          ? `No running while the ${injury.name.toLowerCase()} calms down. ${injury.requiresMedicalClearance ? "Do not restart running without medical clearance. " : ""}Avoid: ${injury.avoid[0].toLowerCase()}.`
+          ? `No running this week while it calms down. ${injury.requiresMedicalClearance ? "Do not restart running without medical clearance. " : ""}Avoid: ${injury.avoid[0].toLowerCase()}.`
           : undefined
     });
   }
@@ -222,11 +222,22 @@ export function adjustPlan(
         workouts: canRace
           ? original
           : sortByDay(
-              original.map((w) =>
-                isRace(w)
-                  ? { ...w, type: "Time Trial (optional)", notes: "Racing isn't recommended on this timeline. If you're symptom-free, run it as a supported training effort at easy-to-steady pace instead." }
-                  : w
-              )
+              original.map((w) => {
+                if (!isRace(w)) return w;
+                // Clearance-gated injuries (stress fractures) never get the
+                // race distance back as an "optional" run: a runner one week
+                // into a return should not be nudged toward 13 or 26 miles.
+                if (injury.requiresMedicalClearance) {
+                  return {
+                    day: w.day,
+                    type: "Rest",
+                    distance: NO_DISTANCE,
+                    pace: NO_DISTANCE,
+                    notes: "No race this week. Pick a later date with your clinician once you're cleared and back to normal training."
+                  };
+                }
+                return { ...w, type: "Time Trial (optional)", notes: "Racing isn't recommended on this timeline. If you're symptom-free, run it as a supported training effort at easy-to-steady pace instead." };
+              })
             ),
         note: canRace
           ? "Adjust your goal pace (see the expectation note above)."

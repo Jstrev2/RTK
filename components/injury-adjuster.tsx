@@ -6,6 +6,7 @@ import { injuries, MEDICAL_DISCLAIMER, type InjurySeverity } from "@/lib/injurie
 import { adjustPlan, NO_DISTANCE, type AdjustedWeek } from "@/lib/plan-adjuster";
 import PremiumGate from "@/components/premium-gate";
 import { useAuth } from "@/components/auth-provider";
+import { PAID_RESCUE_ENABLED } from "@/lib/billing";
 
 const severityOptions: { id: InjurySeverity; label: string; hint: string }[] = [
   { id: "mild", label: "Mild", hint: "Noticeable but doesn't change how you run" },
@@ -217,7 +218,7 @@ export default function InjuryAdjuster({ plan }: { plan: TrainingPlan }) {
             </PremiumGate>
 
             <p className="brand-sub">{MEDICAL_DISCLAIMER}</p>
-            {isPremium ? (
+            {isPremium || !PAID_RESCUE_ENABLED ? (
               <button
                 className="btn btn-secondary btn-sm"
                 type="button"

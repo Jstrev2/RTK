@@ -2,13 +2,23 @@
   "redirects": [
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "www.runnertoolkit.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.runnertoolkit.com"
+        }
+      ],
       "destination": "https://runnertoolkit.com/",
       "permanent": true
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.runnertoolkit.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.runnertoolkit.com"
+        }
+      ],
       "destination": "https://runnertoolkit.com/:path*",
       "permanent": true
     }
@@ -26,16 +36,8 @@
   ],
   "crons": [
     {
-      "path": "/api/ingest",
-      "schedule": "0 6 * * 1"
-    },
-    {
-      "path": "/api/catalog/seed",
-      "schedule": "0 7 * * 3"
-    },
-    {
-      "path": "/api/catalog/import",
-      "schedule": "0 8 * * 3"
+      "path": "/api/cron/daily",
+      "schedule": "0 9 * * *"
     }
   ]
 }

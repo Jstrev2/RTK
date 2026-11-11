@@ -20,6 +20,39 @@ Configured October 27, 2026 for basic traffic reporting.
   signals and advertising personalization are disabled in the tag.
 - Existing Vercel Analytics is independent and remains available.
 
+## Events (added November 2026)
+
+`lib/analytics.ts` `trackEvent()` sends anonymous events to GA4 and Vercel
+Analytics. No tool inputs are ever attached (no injury, symptoms, mileage or
+email).
+
+| Event | Fires when |
+| ----- | ---------- |
+| `rescue_verdict` | someone runs the injury calculator |
+| `generate_lead` (`source`: `rescue` or `newsletter`) | an email is captured |
+| `share` | the "copy a link to this verdict" button is used |
+| `buy_link_click` (`retailer`, `shoe`, `brand`) | a retailer link is clicked |
+
+In GA4, Admin > Events lets you star `generate_lead` and `rescue_verdict` as
+key events so they show up as conversions.
+
+## Bots
+
+The first two weeks of data were about 90% automated traffic (one crawler in
+Singapore, zero engagement). The tag now skips browsers that report
+`navigator.webdriver`, which removes most headless crawlers. If a country
+still dominates with 0% engagement, filter it in the report instead of
+trusting the totals.
+
+## Search Console and IndexNow
+
+- Google Search Console: URL-prefix property `https://runnertoolkit.com/`,
+  verified by the file `public/google280c128eef2df7c4.html` (keep it).
+- IndexNow (Bing and the engines that share its index): key file
+  `public/eaaceb07ebc326c7a6d2ae8549fd9d11.txt`. The daily cron submits shoe
+  pages that changed; `node scripts/indexnow-submit.mjs` resubmits the whole
+  sitemap after a big content change.
+
 Use GA4 Reports > Realtime to check current visits, and the traffic reports
 for visitors, sessions and page views over a chosen date range. Collection
 starts at installation; earlier traffic cannot be recovered by this tag.

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
+import { injuries, injurySlug } from "@/lib/injuries";
 
 export const revalidate = 86400;
 
@@ -25,6 +26,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/privacy`, changeFrequency: "yearly", priority: 0.2 },
     { url: `${baseUrl}/terms`, changeFrequency: "yearly", priority: 0.2 },
   ];
+
+  const injuryPages: MetadataRoute.Sitemap = injuries.map((injury) => ({
+    url: `${baseUrl}/rescue/${injurySlug(injury.id)}`,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
 
   const supabase = getSupabaseAdmin();
 
@@ -72,5 +79,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  return [...staticPages, ...shoePages, ...articlePages];
+  return [...staticPages, ...injuryPages, ...shoePages, ...articlePages];
 }
