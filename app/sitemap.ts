@@ -32,7 +32,6 @@ export default async function sitemap(): Promise<Entries> {
     { url: `${baseUrl}/rundown`, changeFrequency: "daily", priority: 0.9 },
     { url: `${baseUrl}/shoes`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/tools/pace-calculator`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${baseUrl}/tools/attire-guide`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/methodology`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${baseUrl}/about`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${baseUrl}/privacy`, changeFrequency: "yearly", priority: 0.2 },

@@ -1,52 +1,48 @@
 ---
 slug: heel-drop-explained-4mm-vs-10mm
 title: Heel Drop Explained: Does 4mm vs 10mm Matter for You?
-excerpt: Heel drop moves work between your calves and your knees, but the research on injury is thin. Here's what the numbers in our shoe data look like and how to switch drop without a sore Achilles.
+excerpt: Heel drop shifts work between your calves and your knees, and the injury research is thin. Stay within 4 mm of the drop you run in now, and change it slowly if you change it at all.
 tags: shoes, training, beginners
 author: Runner Toolkit
 published_at: 2026-11-23T17:10:00+00:00
 ---
-Heel drop is the difference in midsole height between the heel and the forefoot, measured in millimeters. A 12mm drop means your heel sits 12mm higher than the ball of your foot. A zero drop means they sit level.
+**Short answer:** Heel drop shifts load between your calves and your knees, and no trial shows one drop is safer. Buy within 4 mm of the drop you run in pain-free now, and change it over weeks if you change it.
 
-It's one of the few numbers on a shoe's spec sheet that changes how the shoe feels the moment you stand in it. It's also one of the most over-sold. My position: pick the drop you already run in, and change it slowly or not at all.
+## Drop is heel height minus forefoot height
 
-## The spread is bigger than most runners expect
+A 12 mm drop means your heel sits 12 mm higher than the ball of your foot. Zero drop means they sit level. Shoes at the same price cover the whole range:
 
-Look at what's actually on shelves. The [Brooks Ghost 18](/shoes/brooks-ghost-18) has a 12mm drop at $150. The [Nike Pegasus 42](/shoes/nike-pegasus-42) is 10mm at $145. The [Saucony Guide 19](/shoes/saucony-guide-19) sits at 6mm, the [Saucony Kinvara 16](/shoes/saucony-kinvara-16) at 4mm, and the [Altra Torin 9](/shoes/altra-torin-9) at 0mm. Same price band, a 12mm swing in geometry.
+- [Brooks Ghost 18](/shoes/brooks-ghost-18): 12 mm, $150
+- [Nike Pegasus 42](/shoes/nike-pegasus-42): 10 mm, $145
+- [Saucony Guide 19](/shoes/saucony-guide-19): 6 mm, $145
+- Saucony Kinvara 16: 4 mm, $130
+- [Altra Torin 9](/shoes/altra-torin-9): 0 mm, $150
 
-Brooks and Mizuno lean high (the [Wave Rider 30](/shoes/mizuno-wave-rider-30) is 12mm too). Nike and Adidas cluster around 10mm. Saucony and Hoka wander between 4 and 8. Altra builds everything flat. If you've only ever bought one brand, you may have run in a narrow slice of this range without knowing it.
+Brands have house habits. In our data, Nike's running shoes run 6 to 10 mm, Hoka's 5 to 8 and Altra's 0 to 4. Brooks ranges from 6 to 12. If you've only bought one brand, you may have run in a narrow slice of this range without knowing it.
 
-## What drop changes, and what it doesn't
+## What drop changes
 
-The mechanical story is simple. A higher heel shifts load toward the knee and away from the calf and Achilles. A lower or zero drop does the reverse, asking your calves and the tendon behind them to do more work, especially at the start of a run. That's why people who move from 12mm to 0mm without a ramp tend to report tight calves for a few weeks.
+A higher heel moves load toward the knee and away from the calf and Achilles tendon. A lower drop does the reverse. That's why runners who jump from 12 mm to 0 mm often get tight calves for a few weeks.
 
-What drop doesn't do is decide how you land. Plenty of heel strikers run happily in 4mm shoes, and plenty of forefoot runners prefer 10mm. Footstrike is mostly set by your speed, cadence and habit, and a few millimeters of foam rarely overrules those.
+Drop doesn't decide how you land. Speed, cadence and habit set that, and plenty of heel strikers run in 4 mm shoes.
 
-On injury, the evidence is thin. I'm not aware of a trial that shows one drop is safer for runners in general, and the studies that exist are small and measure joint loading in a lab rather than injuries over a season. Treat anyone selling a "correct" drop with some suspicion. If you have pain that lingers, see a physio or sports medicine doctor rather than a shoe store.
+The injury evidence is thin. The studies are small and measure joint loads in a lab, not injuries over a season. If pain lingers, see a doctor or physical therapist rather than shopping for a new drop.
 
-Stack height tangles this up too. The [New Balance More v6](/shoes/new-balance-fresh-foam-x-more-v6) has only a 4mm drop but a 43mm stack, so the foam under your forefoot is thick too. The [Altra Escalante 5](/shoes/altra-escalante-5) is also flat but only 24mm tall. Same drop story, completely different feel.
+## Stack height changes the feel too
 
-## The drop you already run in is the safe default
+Two shoes with the same drop can feel nothing alike. The [New Balance More v6](/shoes/new-balance-fresh-foam-x-more-v6) has a 4 mm drop on a 43 mm stack. The [Altra Escalante 5](/shoes/altra-escalante-5) is zero drop on 24 mm. Compare both numbers.
 
-Here's the rule I'd give a friend. Look at the shoe you've been running pain-free in for the last six months, find its drop in our data, and shop within about 4mm of it.
+## Stay within 4 mm of what works
 
-That means a Ghost runner can move to a Pegasus or a Wave Rider without thinking. A Guide runner can try a Kinvara or step up to an Adrenaline. A runner on 10mm shoes jumping straight to a zero-drop Torin is the move that causes trouble.
+Find the drop of the shoe you've run in pain-free for six months and shop within 4 mm of it. A Ghost runner can move to a Pegasus without thinking. A runner on 10 mm shoes going straight to a zero-drop Torin is the switch that causes trouble.
 
-This is wrong for you if your current shoe is the problem. If calves are never sore but your knees complain every time you run downhill in 12mm shoes, a lower drop is a fair experiment. Make it a gradual one.
+The exception: if your knees complain on downhills in a 12 mm shoe but your calves never do, a lower drop is a fair experiment.
 
-## How to switch drop without a sore Achilles
+## Switch drop over weeks, not runs
 
-If you do want to change by more than a few millimeters, treat it like adding mileage:
+- Keep the old pair and add the new one. A [two-pair rotation](/rundown/shoe-rotation-two-pairs) makes this easy.
+- Start with one short easy run a week in the lower drop.
+- Add a second run after two weeks without soreness. Do long runs in it last.
+- Sore calves the next day mean slow down. Sharp pain, or soreness that lasts several days, means see a professional.
 
-- Buy the new shoe and keep the old pair in your rotation. A [two-pair rotation](/rundown/shoe-rotation-two-pairs) is the natural way to do this.
-- Wear the lower-drop shoe for one easy run a week at first, and keep it to a short distance.
-- Add a second run in them only after a couple of weeks of feeling fine, and stretch the long run in them last.
-- Back off if the back of your lower leg is sore the day after. Sore for a day is a signal to slow down. Sore for more than a few days, or sharp pain, is a reason to see a professional.
-
-Most runners who go from 10mm to 4mm do fine on this schedule. Going to 0mm is a bigger step, and it's the one I'd stretch over two months.
-
-## Pick by how the shoe feels at easy pace
-
-Heel drop is a tiebreaker, not a headline. Fit, cushion and weight matter more, and our [shoe selector](/tools/shoe-selector) lets you filter on drop alongside them.
-
-Try this at the store or on day one at home: jog a few minutes at conversational pace. If your calves feel loaded in a way that makes you shorten your stride, the drop is lower than your body is used to. If your knees feel like they're taking more of the hit, it may be higher than they like. Either is useful information, and either is fixable by moving 2 to 4mm in the other direction on your next pair.
+Going from 10 mm to 4 mm usually takes a month on this plan. Going to zero, give it two. The [Shoe Finder](/tools/shoe-selector) filters by drop alongside cushion and fit.

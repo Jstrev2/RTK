@@ -18,7 +18,8 @@ const nextConfig = {
       { source: "/rescue", destination: "/", permanent: true },
       { source: "/rescue/:path*", destination: "/rundown", permanent: true },
       { source: "/premium", destination: "/", permanent: true },
-      { source: "/tools/training-plans", destination: "/rundown", permanent: true }
+      { source: "/tools/training-plans", destination: "/rundown", permanent: true },
+      { source: "/tools/attire-guide", destination: "/shoes", permanent: true }
     ];
   }
 };
