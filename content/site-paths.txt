@@ -2680,7 +2680,6 @@
 /shoes/under-armour-velociti-elite-2
 /shoes/under-armour-velociti-elite-3
 /terms
-/tools/attire-guide
 /tools/fueling
 /tools/music
 /tools/pace-calculator

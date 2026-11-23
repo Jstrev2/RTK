@@ -1,60 +1,64 @@
 import Link from "next/link";
 import JsonLd from "@/components/json-ld";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
-import { getGuides } from "@/lib/guides";
-import { GuideList, TopicNav, tagCounts } from "./guide-list";
+import { getGuides, photoChoices, toCards, topicChips } from "@/lib/guides";
+import { PHOTOS } from "@/lib/photos";
+import GuideBrowser from "./guide-browser";
 
 export const revalidate = 1800;
 
 export const metadata = pageMetadata({
-  title: "Runner Guides: Shoes, Music, Fuel and Race Day",
+  title: "Runner Guides: Shoes, Fuel, Music and Race Day",
   description:
-    "Practical running guides on choosing shoes, cadence and playlists, race fueling and race day, with prices and specs checked against our database. New guides every day.",
+    "Short answers for runners: how many gels to take, which shoes to buy, what cadence to run. Each guide opens with the answer, with prices and specs from our database.",
   path: "/rundown",
 });
 
 export default async function RundownPage() {
-  const articles = await getGuides();
-  const counts = tagCounts(articles);
+  const guides = await getGuides();
+  const photo = PHOTOS.guides();
 
   return (
-    <div className="editorial-page">
-      {articles.length > 0 ? (
+    <div>
+      {guides.length > 0 ? (
         <JsonLd
           data={{
             "@context": "https://schema.org",
             "@type": "ItemList",
-            itemListElement: articles.slice(0, 100).map((article, index) => ({
+            itemListElement: guides.slice(0, 100).map((guide, index) => ({
               "@type": "ListItem",
               position: index + 1,
-              url: `${SITE_URL}/rundown/${article.slug}`,
-              name: article.title,
+              url: `${SITE_URL}/rundown/${guide.slug}`,
+              name: guide.title,
             })),
           }}
         />
       ) : null}
-      <section className="container tool-hero">
-        <span className="eyebrow">Runner Guides</span>
-        <h1>Use the answer well.</h1>
-        <p className="section-lede">
-          Straight answers on shoes, cadence and playlists, race fueling and
-          race day. New guides land every day.
-        </p>
+
+      <section className="page-hero on-photo rd-hero">
+        <div className="photo-duo">
+          <img src={photo.src} alt={photo.alt} fetchPriority="high" />
+        </div>
+        <div className="container">
+          <span className="eyebrow" style={{ color: "var(--volt)" }}>Runner Guides</span>
+          <h1>Short answers for runners.</h1>
+          <p className="page-hero-sub">Shoes, fuel, music and race day. Every guide starts with the answer.</p>
+        </div>
+        <span className="photo-credit">
+          Photo: <a href={photo.source} target="_blank" rel="noopener noreferrer">{photo.author}</a>, {photo.license}
+        </span>
       </section>
 
-      <section className="section container">
-        <TopicNav counts={counts} />
-        {articles.length === 0 ? (
-          <div className="card card-outline" style={{ textAlign: "center", padding: "48px 20px" }}>
-            <p style={{ fontSize: "1.1rem", marginBottom: "8px" }}>
+      <section className="container">
+        {guides.length ? (
+          <GuideBrowser guides={toCards(guides)} topics={topicChips(guides)} photos={photoChoices()} />
+        ) : (
+          <div className="empty" style={{ margin: "8px 0 72px" }}>
+            <p style={{ margin: "0 0 12px" }}>
               <strong>Guides are on the way.</strong>
             </p>
-            <p style={{ color: "var(--ink-2)" }}>
-              In the meantime, start with the <Link href="/tools/shoe-selector">Shoe Finder</Link>.
-            </p>
+            <Link className="btn btn-sm" href="/tools/shoe-selector">Find my shoes</Link>
           </div>
-        ) : (
-          <GuideList guides={articles} />
         )}
       </section>
     </div>

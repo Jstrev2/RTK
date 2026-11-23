@@ -1,39 +1,44 @@
 ---
 slug: train-your-gut-race-fueling
-title: Your Gut Is Trainable: How to Practice Race Fueling Before It Counts
-excerpt: The runners who take gels at mile 18 without drama practiced it for months. Gut training is real, it's boring, and it's the cheapest fitness you'll ever buy.
+title: How to Train Your Gut for Race Fueling in Six to Eight Weeks
+excerpt: Your gut adapts to carbs taken while running. Fuel every long run for six to eight weeks, building from 30 to 60 grams an hour with the gels you'll race with.
 tags: fueling, training, race-day
 author: Runner Toolkit
 published_at: 2026-08-07T16:30:00+00:00
 ---
-Every marathon has a stretch after mile 16 where you can watch fueling plans die. Runners slowing to walk through aid stations, hands on knees, doing math about porta-potties. Most of them made the same bet: that a stomach which had never handled 60 grams of carbs an hour at race effort would figure it out on the day.
+**Short answer:** Your gut adapts to carbs taken while running. Fuel every long run for six to eight weeks, building from 30 to 60 grams an hour with the exact gels you'll race with.
 
-It won't. But it can learn, and the learning is straightforward.
+## Practice raises how much your gut can take
 
-## What gut training actually changes
+Regular carbs during exercise increase how much sugar the gut absorbs. Four weeks of high-carb training raised carb use during exercise in trained cyclists (Cox and colleagues, 2010). Two weeks of repeated carbs during running cut gut symptoms in a small group of runners (Costa and colleagues, 2017).
 
-Your intestines adapt to what you ask of them. Feed them carbohydrate during running consistently and they upregulate the transporters that move sugar out of your gut and into your blood — which means more energy absorbed and less sitting in your stomach causing trouble. Sports-science labs have measured this repeatedly: a few weeks of practicing in-run fueling measurably increases carb absorption and cuts GI complaints.
+The adaptation is specific to effort. Hard running pulls blood away from the gut, so a gel on an easy jog says little about a gel at marathon pace. Practice some of it at race effort.
 
-The adaptation is specific, though. Handling a gel on a casual Saturday run says little about handling one at marathon effort in month-three heat, because hard running diverts blood away from your gut exactly when you're asking it to work. You have to practice under something like race conditions.
+## The six to eight week build
 
-## The progression
+- Weeks 1 and 2: fuel on every run over 75 minutes at 30 to 40 grams an hour. One 25 g gel every 40 minutes does it.
+- Weeks 3 and 4: raise it to 50 to 60 grams an hour. Take at least one gel during the hard part of a workout.
+- Week 5 on: hold 60 grams an hour on every long run.
+- Going past 60 toward 90 grams: only for races over about 3:30, and only with gels that mix glucose and fructose. The label lists maltodextrin or glucose plus fructose.
 
-Give it six to eight weeks. It slots into the long runs you're already doing.
+Our [Fuel Finder](/tools/fueling) turns a distance and finish time into a schedule you can follow on these runs.
 
-- Weeks 1–2: take fuel on every run over 75 minutes, aiming for 30–40 grams of carbs per hour. One gel every 40 minutes gets you there. It'll feel like too much. That's the point of starting now.
-- Weeks 3–4: raise it to 50–60 grams per hour, and take at least one gel during the harder segments of a workout, not just the easy miles.
-- Weeks 5 onward: hold 60 grams per hour on every long run. Going past 75 toward 90 — worthwhile for marathons over 3:30 — needs products mixing glucose and fructose, because the two sugars use separate absorption pathways. Most current gels do this; the label will say maltodextrin and fructose.
+## Rehearse the race, not just the gel
 
-Two rules make the practice transfer. Use the exact products, flavors, and caffeine doses you'll race with — your race-morning stomach is not the place to discover you hate salted watermelon. And practice the logistics too: carrying the gels, opening one at pace with numb fingers, washing it down with water rather than sports drink so you don't stack sugar on sugar.
+- Use the exact product, flavor and caffeine dose you'll race with.
+- Carry the gels where you'll carry them on race day.
+- Open one at pace, with cold fingers if the race will be cold.
+- Wash each gel down with water. Gel plus sports drink stacks sugar on sugar.
 
-## When it goes wrong
+By the taper, 60 grams an hour should feel routine.
 
-A bad session is data. Sloshing usually means too much volume at once — smaller, more frequent doses. Cramping or urgency often traces to a high-caffeine gel or to fructose-heavy fuel before your gut adapted; drop to glucose-primary products for two weeks and rebuild. Nausea at hard effort mostly means you took fuel too late and were already deep in deficit — earlier, smaller, more often is the fix for almost everything.
+## Fixes when a session goes wrong
 
-What you're looking for by taper time is boredom. Fueling at 60 grams an hour should feel like brushing your teeth.
+- Sloshing stomach: too much at once. Take smaller amounts more often.
+- Cramping or a rush to the toilet: often a high-caffeine gel or a fructose-heavy one before your gut adapted. Switch to [caffeine-free gels](/fuel/best/caffeine-free-gels) for two weeks, then build again.
+- Nausea at hard effort: usually fuel taken too late. Start earlier and go smaller.
+- Symptoms that keep coming back after weeks of practice: see a doctor or a sports dietitian.
 
-## Turn it into a schedule
+## Pair it with a race plan
 
-The [fuel planner](/tools/fueling) does the arithmetic for you: give it your distance, expected time, and conditions and it produces a minute-by-minute schedule and a packing list you can rehearse on your next long run. And if you want the companion piece — the race-day errors that undo months of good practice — we wrote up the [five fueling mistakes that wreck marathons](/rundown/race-day-fueling-mistakes).
-
-Your legs get months of training before race day. Give your gut a few weeks of the same.
+Gut training sets your ceiling. The race plan uses it. [How many gels for a marathon](/rundown/how-many-gels-for-a-marathon) gives the count by finish time, and [race-day fueling mistakes](/rundown/race-day-fueling-mistakes) lists the five habits that undo the practice.

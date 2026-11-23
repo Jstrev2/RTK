@@ -1,43 +1,45 @@
 ---
 slug: race-day-fueling-mistakes
-title: 5 Race-Day Fueling Mistakes That Will Wreck Your Marathon
-excerpt: Most bonks and GI disasters are completely preventable. Here are the mistakes we see over and over, and how to avoid them.
-tags: fueling, marathon, race-day
+title: Race-Day Fueling Mistakes That Wreck a Marathon, and the Fix for Each
+excerpt: Most race-day fueling problems come from a new gel, a late first gel, gels without water, no salt in the heat or a fast first half. Each fix can be rehearsed on a long run.
+tags: fueling, race-day
 author: Runner Toolkit
 published_at: 2026-03-08T12:00:00+00:00
 ---
-You trained for 16 weeks. Your legs are ready. But race day still goes sideways because of what you ate (or didn't eat) during the run. Here are the five fueling mistakes that ruin more marathons than undertrained legs.
+**Short answer:** Most marathon fueling problems come from five habits: a new gel on race day, a late first gel, gels without water, no extra sodium in the heat and a first half run too fast. Each fix can be rehearsed on a long run.
 
-## 1. Trying Something New on Race Day
+## Use only fuel you've trained with
 
-This is the golden rule of race nutrition, and people still break it constantly. That free gel at mile 8? Skip it if you've never tried that brand. The sports drink on course? It might not be what your stomach expects.
+The gel handed out at mile 8 may be a brand your stomach has never met. Check the race website for the course gel and drink, then either train with them or carry your own.
 
-Practice your exact fueling plan during at least 3–4 long training runs before the race.
+Run your exact race plan on at least three long runs: same gel, same flavor, same timing.
 
-## 2. Starting Fueling Too Late
+## Take the first gel 30 to 45 minutes in
 
-By the time you feel hungry or low on energy, you're already behind. Glycogen depletion is a slow process, and gels take 15–20 minutes to hit your bloodstream.
+Hunger shows up after the deficit has started. By then the gel is playing catch-up. Start early and keep a steady clock: 60 grams of carbs an hour is the usual marathon target, which is a 25 g gel every 25 minutes. [How many gels for a marathon](/rundown/how-many-gels-for-a-marathon) has the count for each finish time.
 
-Start taking in carbs by mile 4–5 of a marathon. Aim for 60–90g of carbs per hour for efforts over 2 hours.
+## Wash every gel down with water
 
-## 3. Not Drinking Enough Water With Gels
+A gel is concentrated sugar. Without water it sits in the stomach and can cause nausea or cramping. Take a few sips from a water cup with each one.
 
-Gels are concentrated carbohydrate. Without water, they sit in your stomach and cause cramping, nausea or worse. Every gel should be followed by 4–6 oz of water.
+Taking a gel with sports drink instead stacks sugar on sugar, which upsets some stomachs. If you want both, take them at different aid stations.
 
-Conversely, don't wash gels down with sports drink. That's a double dose of sugar that can overwhelm your gut.
+## Add sodium when the day is hot
 
-## 4. Ignoring Sodium
+Sweat salt varies a lot from runner to runner. Our [Fuel Finder](/tools/fueling) suggests 300 to 500 mg of sodium an hour in cool weather and 500 to 700 mg in heat. Gels in our table carry 0 to 245 mg each, so on a hot day a [high-sodium gel](/fuel/best/high-sodium-gels) or an electrolyte drink fills the gap.
 
-Sweat contains sodium, and as you lose it, your muscles lose their ability to contract efficiently. This is a major cause of late-race cramping.
+The evidence that salt prevents cramps is weak. Late-race cramps track more with fatigue and pace than with sodium, so don't expect salt tabs to fix a race run too fast.
 
-Aim for 300–700mg of sodium per hour, depending on your sweat rate and conditions. Salt tabs, electrolyte drinks or salty snacks all work.
+## Run the first half at goal pace or slower
 
-## 5. Going Out Too Fast and Burning Through Glycogen
+Running faster burns carbohydrate faster. A first half a few minutes ahead of plan spends stores that no gel replaces in time. Even pacing is the safer plan for almost everyone. The [pace calculator](/tools/pace-calculator) gives you per-mile splits to hold.
 
-This is a fueling mistake disguised as a pacing mistake. Running the first half too fast burns glycogen at a dramatically higher rate, which means you'll deplete your stores before mile 20 no matter how many gels you take.
+## Check five things on race morning
 
-Stick to your goal pace from the start. Negative splits are always better than positive ones.
+- The gel and flavor you used on three or more long runs
+- Gel times set as watch alerts or written on your arm
+- One spare gel beyond the plan
+- Breakfast two to three hours before the start, the same one you eat before long runs
+- Course drink and water stations marked on the course map
 
-## Build Your Plan
-
-Use our Fueling Planner to build a mile-by-mile nutrition schedule based on your goal time, body weight and race conditions. It's free and takes about 30 seconds.
+If your stomach has failed you before, start with [training your gut for race fueling](/rundown/train-your-gut-race-fueling) six to eight weeks out.
