@@ -13,6 +13,26 @@
 
 export const GUIDES_URL = "https://raw.githubusercontent.com/Jstrev2/RTK/main/content/guides.json";
 
+/**
+ * raw.githubusercontent.com caches a branch path for about five minutes, so
+ * a sync right after a merge would read the old bundle. Read it at main's
+ * current commit instead (an immutable URL); fall back to the branch path if
+ * GitHub's API is unavailable or rate-limited.
+ */
+async function bundleUrl(): Promise<string> {
+  try {
+    const res = await fetch("https://api.github.com/repos/Jstrev2/RTK/commits/main", {
+      cache: "no-store",
+      headers: { Accept: "application/vnd.github.sha", "User-Agent": "runnertoolkit-guide-sync" }
+    });
+    const sha = res.ok ? (await res.text()).trim() : "";
+    if (/^[0-9a-f]{40}$/.test(sha)) return `https://raw.githubusercontent.com/Jstrev2/RTK/${sha}/content/guides.json`;
+  } catch {
+    // fall through
+  }
+  return GUIDES_URL;
+}
+
 // A routine run adds a handful of guides. Anything far beyond that is a bug.
 const MAX_NEW_PER_RUN = 40;
 
@@ -55,7 +75,7 @@ function valid(guide: BundledGuide) {
 export async function syncGuides(db: GuideDb, { dryRun = false } = {}): Promise<GuideSyncResult> {
   const result: GuideSyncResult = { ok: false, dryRun, total: 0, added: [], updated: [] };
 
-  const response = await fetch(GUIDES_URL, { cache: "no-store" });
+  const response = await fetch(await bundleUrl(), { cache: "no-store" });
   if (!response.ok) return { ...result, error: `guide bundle fetch failed: HTTP ${response.status}` };
 
   let guides: BundledGuide[];
