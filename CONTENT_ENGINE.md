@@ -21,10 +21,20 @@ Runner Toolkit publishes on its own. Nobody imports, merges or deploys by hand.
    and opens a PR from a `guides-*` branch.
 2. It runs `node scripts/rundown/check-guides.mjs --pr` (only content files,
    at most 8 new guides, no deletions, bundle up to date) and squash-merges.
-3. It opens `https://runnertoolkit.com/api/guides/sync`, which reads
-   `content/guides.json` from GitHub's main branch into the `articles` table,
-   refreshes the pages and pings IndexNow. The daily cron
-   (`/api/cron/daily`, 09:00 UTC) runs the same sync as a fallback.
+3. Every push to main makes Vercel run `scripts/vercel-ignore.sh` (the
+   project's `ignoreCommand`). It opens `https://runnertoolkit.com/api/guides/sync`,
+   which reads `content/guides.json` at main's current commit into the
+   `articles` table, refreshes the pages and pings IndexNow. Then, if the push
+   changed only `content/`, it tells Vercel to skip the build (guides don't
+   need a deploy). The daily cron (`/api/cron/daily`, 09:00 UTC) runs the same
+   sync as a fallback. The routine's sandbox cannot reach runnertoolkit.com,
+   which is why the publish hangs off Vercel instead.
+
+The routine can't see the live site, so it works from snapshots in the repo:
+`content/site-paths.txt` (every page in the sitemap; refresh it with
+`curl -s https://runnertoolkit.com/sitemap.xml` when page types change, and
+the check also accepts the generated page shapes) and `data/fuel-gels-live.json` (the live gel table,
+exported November 23, 2026).
 
 The sync only adds and updates; it never unpublishes. To take a guide down,
 delete its row in Supabase (`articles`) and its file in `content/rundown/`.

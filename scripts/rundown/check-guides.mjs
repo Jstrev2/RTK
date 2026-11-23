@@ -32,7 +32,7 @@ const LEGACY = new Set([
   "la-marathon-2026-unlikely-winners", "shoe-rotation-two-pairs", "train-your-gut-race-fueling",
   "good-running-shoes-under-120"
 ]);
-const PR_ALLOWED = [/^content\/rundown\/[a-z0-9-]+\.md$/, /^content\/guides\.json$/, /^content\/topics\.md$/];
+const PR_ALLOWED = [/^content\/rundown\/[a-z0-9-]+\.md$/, /^content\/guides\.json$/, /^content\/topics\.md$/, /^content\/site-paths\.txt$/];
 
 // Data pages generated from the database. When the live sitemap can't be
 // read (the routine's sandbox may have no network), links of these shapes are
@@ -92,6 +92,13 @@ async function knownPaths() {
     }
   } catch {
     // offline: use repo data below
+  }
+  // Offline (the routine's sandbox can't reach the site): use the page list a
+  // GitHub Action refreshes every day from the live sitemap.
+  const snapshot = path.join(ROOT, "content", "site-paths.txt");
+  if (!live && fs.existsSync(snapshot)) {
+    for (const line of fs.readFileSync(snapshot, "utf8").split(/\r?\n/)) if (line.trim()) paths.add(line.trim());
+    live = paths.size > 100;
   }
   const shoes = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "shoe-models-authored.json"), "utf8"));
   for (const shoe of Array.isArray(shoes) ? shoes : shoes.shoes ?? []) paths.add(`/shoes/${shoe.item_key}`);
@@ -195,7 +202,7 @@ if (args.has("--write") && !errors.length) {
 }
 if (args.has("--pr")) checkDiff(files);
 
-if (!known.live) console.log("Note: live sitemap unreachable, links checked against repo data only.");
+if (!known.live) console.log("Note: no sitemap or content/site-paths.txt, links checked against repo data only.");
 if (errors.length) {
   console.error(`
 ${errors.length} problem(s):`);
