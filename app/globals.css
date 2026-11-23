@@ -5002,3 +5002,9 @@ details[open] summary {
 .guide-topic-nav a:hover span {
   color: rgba(255, 254, 248, 0.7);
 }
+.account-gate-switch {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 16px;
+}

@@ -1,149 +1,31 @@
 "use client";
 
-import { useState, Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { getSupabaseClient } from "@/lib/supabase-client";
+import { useAuth } from "@/components/auth-provider";
+import { SignupCard } from "@/components/account-gate";
 
-function LoginForm() {
-  const [mode, setMode] = useState<"sign-in" | "sign-up">("sign-in");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "error" | "success">("idle");
-  const [message, setMessage] = useState("");
+function LoginInner() {
+  const { user } = useAuth();
   const router = useRouter();
-  const searchParams = useSearchParams();
+  const params = useSearchParams();
+  const next = params.get("redirect") ?? "/account";
 
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
-    const supabase = getSupabaseClient();
-
-    if (!supabase) {
-      setStatus("error");
-      setMessage("Supabase is not configured yet. Add env vars to enable login.");
-      return;
-    }
-
-    setStatus("loading");
-    setMessage("");
-
-    if (mode === "sign-in") {
-      const { error } = await supabase.auth.signInWithPassword({
-        email,
-        password
-      });
-
-      if (error) {
-        setStatus("error");
-        setMessage(error.message);
-        return;
-      }
-
-      setStatus("success");
-      const redirect = searchParams.get("redirect") ?? "/account";
-      router.push(redirect);
-      return;
-    }
-
-    const { data: signUpData, error } = await supabase.auth.signUp({
-      email,
-      password
-    });
-
-    if (error) {
-      setStatus("error");
-      setMessage(error.message);
-      return;
-    }
-
-    if (signUpData.session) {
-      router.push(searchParams.get("redirect") ?? "/account");
-      return;
-    }
-    setStatus("success");
-    setMessage("Check your email to confirm your account.");
-  };
+  useEffect(() => {
+    if (user) router.push(next.startsWith("/") ? next : "/account");
+  }, [user, next, router]);
 
   return (
-    <div>
-      <section className="tool-hero container">
-        <h1>Sign in</h1>
-        <p>A free account opens the full Shoe Finder, Music Finder and Fuel Finder results and keeps what you save.</p>
-      </section>
-
-      <section className="section container">
-        <div className="grid grid-2">
-          <div className="card">
-            <div className="stack">
-              <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-                <button
-                  className={`btn ${mode === "sign-in" ? "btn-primary" : "btn-ghost"}`}
-                  type="button"
-                  onClick={() => setMode("sign-in")}
-                >
-                  Sign in
-                </button>
-                <button
-                  className={`btn ${mode === "sign-up" ? "btn-primary" : "btn-ghost"}`}
-                  type="button"
-                  onClick={() => setMode("sign-up")}
-                >
-                  Create account
-                </button>
-              </div>
-
-              <form className="form-grid" onSubmit={handleSubmit}>
-                <div>
-                  <span className="label">Email</span>
-                  <input
-                    className="input"
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(event) => setEmail(event.target.value)}
-                  />
-                </div>
-                <div>
-                  <span className="label">Password</span>
-                  <input
-                    className="input"
-                    type="password"
-                    required
-                    minLength={6}
-                    value={password}
-                    onChange={(event) => setPassword(event.target.value)}
-                  />
-                </div>
-                <button className="btn btn-primary" type="submit" disabled={status === "loading"}>
-                  {status === "loading" ? "Working..." : mode === "sign-in" ? "Sign in" : "Create account"}
-                </button>
-              </form>
-
-              {status === "error" ? <div className="notice">{message}</div> : null}
-              {status === "success" && message ? <div className="notice">{message}</div> : null}
-            </div>
-          </div>
-
-          <div className="card card-accent">
-            <div className="stack">
-              <strong>Why create a free account?</strong>
-              <ul className="list">
-                <li className="card card-outline">See every shoe match, not just the first one.</li>
-                <li className="card card-outline">Get the full playlist for your run, timed to your cadence.</li>
-                <li className="card card-outline">Get your complete fuel schedule, packing list and practice log.</li>
-                <li className="card card-outline">Save shoes, songs and fuel across devices. Free, always.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <section className="section container" style={{ maxWidth: 960 }}>
+      <SignupCard tool="shoes" initialMode="sign-in" unlocks="every tool's full results" />
+    </section>
   );
 }
 
 export default function LoginPage() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <LoginForm />
+    <Suspense fallback={null}>
+      <LoginInner />
     </Suspense>
   );
 }
