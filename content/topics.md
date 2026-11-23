@@ -8,8 +8,8 @@ covered by a guide or a data page). Format: `- [ ] Working title | tags | angle`
 ## Shoes
 - [x] best-running-shoes-for-beginners: Best running shoes for beginners: what actually matters in your first pair | shoes, beginners | fit and comfort over specs; name three safe starting points from the database
 - [x] how-long-do-running-shoes-last: How long do running shoes last? Miles, signs, and what the foam is doing | shoes | 300-500 miles is a range; the signs that beat the odometer
-- [ ] Heel drop explained: does 4mm vs 10mm matter for you? | shoes, training | calf and Achilles load; how to switch drop safely
-- [ ] Stability shoes vs neutral: do you really need support? | shoes | what overpronation evidence says; who benefits from guide rails
+- [x] heel-drop-explained-4mm-vs-10mm: Heel drop explained: does 4mm vs 10mm matter for you? | shoes, training | calf and Achilles load; how to switch drop safely
+- [x] stability-shoes-vs-neutral-do-you-need-support: Stability shoes vs neutral: do you really need support? | shoes | what overpronation evidence says; who benefits from guide rails
 - [ ] Max cushion shoes: who they help and who they slow down | shoes | stack height trade-offs with real stack numbers
 - [ ] Carbon plate shoes for non-elite runners: worth it at 9-minute pace? | shoes, race-day | what the research measured and at what speeds
 - [ ] Wide feet running shoe guide: brands and models that run roomy | shoes | toe box data from our database; sizing tips
@@ -44,7 +44,7 @@ covered by a guide or a data page). Format: `- [ ] Working title | tags | angle`
 
 ## Music
 - [x] how-to-find-your-running-cadence: How to find your running cadence and pick songs to match | music, training | count steps for 30 seconds; BPM ranges by pace
-- [ ] 170 BPM running songs and why 170 keeps coming up | music | the cadence myth and what is actually useful
+- [x] 170-bpm-running-songs: 170 BPM running songs and why 170 keeps coming up | music | the cadence myth and what is actually useful
 - [ ] 180 steps per minute: does it really prevent injury? | music, training | where 180 came from and what changing cadence does
 - [ ] Running to music vs running without: what studies found | music | performance and perceived effort research
 - [ ] Half-time songs: why 85 BPM tracks work at 170 steps | music | how beat matching actually works
@@ -66,7 +66,7 @@ covered by a guide or a data page). Format: `- [ ] Working title | tags | angle`
 
 ## Fuel
 - [x] how-many-gels-for-a-marathon: How many gels for a marathon? The math by finish time | fueling, race-day | carbs per hour times hours; link fuel plans
-- [ ] How many gels for a half marathon? | fueling, race-day | under 90 minutes vs over
+- [x] how-many-gels-for-a-half-marathon: How many gels for a half marathon? | fueling, race-day | under 90 minutes vs over
 - [ ] Carbs per hour explained: 30, 60, 90 grams | fueling | who needs which and how to build up
 - [ ] Caffeine gels: timing, dose, and how much is too much | fueling, race-day | mg per kg and stomach limits
 - [ ] Sodium and electrolytes for runners | fueling | sweat rate, heat, and what gels already carry
