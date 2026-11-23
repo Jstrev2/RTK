@@ -1,6 +1,9 @@
 import type { MetadataRoute } from "next";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 import { GUIDE_TOPICS } from "@/lib/guides";
+import { getShoeContentSitemapEntries } from "@/lib/content/shoes";
+import { getMusicContentSitemapEntries } from "@/lib/content/music";
+import { getFuelContentSitemapEntries } from "@/lib/content/fuel";
 
 export const revalidate = 21600;
 
@@ -28,9 +31,6 @@ export default async function sitemap(): Promise<Entries> {
     { url: `${baseUrl}/tools/fueling`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/rundown`, changeFrequency: "daily", priority: 0.9 },
     { url: `${baseUrl}/shoes`, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${baseUrl}/shoes/best`, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${baseUrl}/music`, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${baseUrl}/fuel`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/tools/pace-calculator`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/tools/attire-guide`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/methodology`, changeFrequency: "monthly", priority: 0.5 },
@@ -87,7 +87,12 @@ export default async function sitemap(): Promise<Entries> {
     ];
   });
 
-  // CONTENT_GENERATORS
+  // Data pages generated from the database. Each generator includes its hub.
+  const [shoeContent, musicContent, fuelContent] = await Promise.all([
+    safe(getShoeContentSitemapEntries),
+    safe(getMusicContentSitemapEntries),
+    safe(getFuelContentSitemapEntries),
+  ]);
 
-  return [...staticPages, ...shoePages, ...guidePages];
+  return [...staticPages, ...shoePages, ...guidePages, ...shoeContent, ...musicContent, ...fuelContent];
 }
