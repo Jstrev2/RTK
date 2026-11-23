@@ -46,7 +46,7 @@ async function getHomeData() {
       .limit(12),
     supabase.from("shoe_models").select("*", { count: "exact", head: true }).eq("is_active", true),
     supabase.from("music_songs").select("*", { count: "exact", head: true }).not("bpm", "is", null),
-    supabase.from("fuel_gels").select("*", { count: "exact", head: true }).eq("is_active", true).gt("carbs_g", 0)
+    supabase.from("fuel_gels").select("*", { count: "exact", head: true }).eq("is_active", true)
   ]);
 
   const shoes = ((popular.data as Shoe[]) ?? []).sort((a, b) => Number(Boolean(b.image_url)) - Number(Boolean(a.image_url))).slice(0, 8);
@@ -84,7 +84,7 @@ export default async function HomePage() {
           <span className="home-hero2-bib">
             <span className="clock">{data.counts.shoes || "300+"}</span> shoes ·{" "}
             <span className="clock">{data.counts.songs ? data.counts.songs.toLocaleString() : "1,000s of"}</span> songs ·{" "}
-            <span className="clock">{data.counts.fuel || "50+"}</span> gels
+            <span className="clock">{data.counts.fuel || "150+"}</span> fuel picks
           </span>
           <h1>
             Shoes. Songs. Gels.<br />

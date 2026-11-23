@@ -24,7 +24,7 @@ These counts start at 30 minutes, keep 60 grams an hour and stop 20 minutes from
 - 4:30: 9 gels of 25 g, or 11 of 22 g
 - 5:00: 11 gels of 25 g, or 12 of 22 g
 
-The [Maurten Gel 100](/fuel/gels/maurten-gel-100) and the Clif Shot are 25 g. The [GU Original](/fuel/gels/gu-original-energy-gel) is 22 g. A 30 g gel such as the [Precision Fuel PF 30](/fuel/gels/precision-fuel-pf-30-gel) brings a 4:00 marathon down to 7 packets.
+The [Maurten Gel 100](/fuel/gels/maurten-gel-100) is 25 g, the [GU Energy Gel](/fuel/gels/gu-original-energy-gel) 23 g and the [SiS GO Isotonic](/fuel/gels/sis-go-isotonic-energy-gel) 22 g. A 30 g gel such as the [Precision Fuel PF 30](/fuel/gels/precision-fuel-pf-30-gel) brings a 4:00 marathon down to 7 packets.
 
 Sports drink from the course counts too. Look up the drink's carbs per cup on the race website and skip one gel for every 25 grams you expect to drink.
 

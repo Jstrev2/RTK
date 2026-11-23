@@ -30,7 +30,7 @@ export async function searchSite(q: string, limit = 6): Promise<SearchResults> {
   // Every word must appear in the name, the brand or the artist.
   const shoeQ = supabase.from("shoe_models").select("item_key,name,brand,price,image_url,popularity").eq("is_active", true);
   const songQ = supabase.from("music_songs").select("id,title,artist,bpm,image_url,spotify_id,popularity").not("bpm", "is", null);
-  const fuelQ = supabase.from("fuel_gels").select("item_key,name,brand,carbs_g,image_url").eq("is_active", true).gt("carbs_g", 0);
+  const fuelQ = supabase.from("fuel_gels").select("item_key,name,brand,carbs_g,image_url").eq("is_active", true);
   const guideQ = supabase.from("articles").select("slug,title,excerpt,tags").eq("is_published", true);
 
   let s = shoeQ, m = songQ, f = fuelQ, g = guideQ;
@@ -69,7 +69,7 @@ export async function searchSite(q: string, limit = 6): Promise<SearchResults> {
     fuel: rows(fuel).map((r) => ({
       kind: "fuel",
       title: String(r.name),
-      sub: `${r.brand} · ${r.carbs_g}g carbs`,
+      sub: r.carbs_g ? `${r.brand} · ${r.carbs_g}g carbs` : String(r.brand),
       href: `/fuel/gels/${r.item_key}`,
       image: (r.image_url as string) ?? null
     })),
