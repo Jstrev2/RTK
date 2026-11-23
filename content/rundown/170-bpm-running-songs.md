@@ -28,7 +28,7 @@ If you count 164, songs at 170 feel like a push. Pick music near your own number
 - Save the faster songs for the last third of a run, when form tends to slip.
 - Use half-time tracks. A song at 85 BPM works at 170 steps if you land one step on the beat and one between.
 
-The [170 BPM page](/music/bpm/170) lists songs at that tempo, with neighbors at [168](/music/bpm/168) and [171](/music/bpm/171) for variety. [Pop at 170 to 180 BPM](/music/genre/pop) is the deepest genre in this range. The [Music Finder](/tools/music) builds a full playlist at your number.
+The [170 BPM page](/music/bpm/170) lists songs at that tempo, with neighbors at [168](/music/bpm/168) and [171](/music/bpm/171) for variety. [The pop page](/music/genre/pop), filtered to the 170s, is the deepest genre in this range. The [Music Finder](/tools/music) builds a full playlist at your number.
 
 ## When 170 is the wrong target
 
