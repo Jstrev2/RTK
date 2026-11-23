@@ -10,10 +10,10 @@ knee and the like): the site covers gear, fuel, music and training, and a
 guide that touches pain sends the reader to a doctor or physical therapist.
 
 ## Next up (high search volume, answerable from our data)
-- [ ] Hoka Clifton 11 vs Brooks Ghost 18: which daily trainer to buy | shoes | stack, drop, weight and price side by side; who each is wrong for; link the compare page
-- [ ] Nike Pegasus 42 vs Pegasus 41: what changed and which to buy | shoes | spec differences from our data; the old model on sale is the value pick
-- [ ] Saucony Endorphin Speed 6 vs Endorphin Pro 5 | shoes, race-day | nylon vs carbon plate, weight, price; which runner each suits
-- [ ] Nike Vaporfly 4 vs Alphafly 4 | shoes, race-day | weight, stack, price and fit; marathon vs shorter races
+- [x] hoka-clifton-11-vs-brooks-ghost-18: Hoka Clifton 11 vs Brooks Ghost 18: which daily trainer to buy | shoes | stack, drop, weight and price side by side; who each is wrong for; link the compare page
+- [x] nike-pegasus-42-vs-41: Nike Pegasus 42 vs Pegasus 41: what changed and which to buy | shoes | spec differences from our data; the old model on sale is the value pick
+- [x] saucony-endorphin-speed-6-vs-pro-5: Saucony Endorphin Speed 6 vs Endorphin Pro 5 | shoes, race-day | nylon vs carbon plate, weight, price; which runner each suits
+- [x] nike-vaporfly-4-vs-alphafly-4: Nike Vaporfly 4 vs Alphafly 4 | shoes, race-day | weight, stack, price and fit; marathon vs shorter races
 - [ ] How many miles a week to train for a marathon | training | weekly ranges by goal time and experience, longest run, build rate
 - [ ] How long should your longest run be for a half marathon | training | 10 to 12 miles for most; time on feet for slower runners
 - [ ] Zone 2 running: how slow, how long and how to tell you're in it | training | heart rate and talk test; why it feels too slow
