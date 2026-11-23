@@ -29,3 +29,6 @@ test-results/
 # local tooling / reference
 .claude/
 solereview.html
+
+# local working files (music backfill and others)
+.tmp/

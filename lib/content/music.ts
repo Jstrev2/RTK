@@ -1,130 +1,35 @@
 import type { MetadataRoute } from "next";
 import { cache } from "react";
-import { getSupabaseAdmin } from "@/lib/supabase-admin";
+import { getLibrary } from "@/lib/music/library";
+import { CADENCE_MAX, CADENCE_MIN, GENRES, clock, genreName, stepsFor, type LibSong } from "@/lib/music/shared";
 import { SITE_URL } from "@/lib/seo";
 
 /*
- * Running music content pages, generated from the live music_songs table.
- *
- * Facts about the data that shape every page (checked November 2026):
- * - About a third of the rows (the ones pulled from Spotify searches) have no
- *   BPM, no genre, and default energy/workout tags. These pages only use songs
- *   with a measured BPM, and borrow a Spotify track id from the Spotify copy of
- *   the same song when there is one.
- * - The energy and workout tags on BPM rows were derived from the raw BPM at
- *   import (under 120 is "low"/"warm_up", 120 to 139 "medium"/"easy_run" and so
- *   on). Pages say so instead of presenting them as independent judgments.
- * - Almost no songs carry votes, so votes only break ties.
+ * The /music browse pages, generated from the live song library
+ * (lib/music/library.ts: every song with a trusted BPM and a cover).
+ * Each page is a cover grid and two sentences; the Music Finder does the rest.
+ * A page needs MIN_SONGS songs or it 404s.
  */
 
 export const MIN_SONGS = 8;
-export const TABLE_LIMIT = 50;
-export const CADENCE_MIN = 140;
-export const CADENCE_MAX = 200;
-const PAGE_SIZE = 1000;
+/** Songs sent to a page's grid (it shows 24, then "Show all", and filters all of them). */
+const GRID = 150;
 
-export type Energy = "low" | "medium" | "high" | "extreme";
-
-export type MusicSong = {
-  id: string;
-  title: string;
-  artist: string;
-  artistSlugs: string[];
-  bpm: number;
-  genres: string[];
-  energy: Energy;
-  workouts: string[];
-  spotifyId: string | null;
-  netVotes: number;
-  /** How many tracks by this artist came from the Spotify running-song searches. */
-  pull: number;
-};
-
-export type RankedSong = MusicSong & {
+export type MusicPageModel = {
+  path: string;
+  metaTitle: string;
+  metaDescription: string;
+  eyebrow: string;
+  h1: string;
+  lines: [string, string];
+  songs: LibSong[];
+  /** Target step rate for the grid's fit labels and the finder link. */
   steps: number | null;
-  halfTime: boolean;
+  toolHref: string;
+  toolLabel: string;
+  crumbs: { name: string; path: string }[];
+  related: { heading: string; links: { href: string; label: string }[] }[];
 };
-
-type SongRow = {
-  id: string;
-  title: string | null;
-  artist: string | null;
-  bpm: number | null;
-  genre: string[] | null;
-  energy: string | null;
-  workout: string[] | null;
-  spotify_id: string | null;
-  upvotes: number | null;
-  downvotes: number | null;
-  source: string | null;
-};
-
-/* ---------- Labels and slugs ---------- */
-
-const GENRES: Record<string, { slug: string; label: string }> = {
-  rock: { slug: "rock", label: "Rock" },
-  pop: { slug: "pop", label: "Pop" },
-  electronic: { slug: "electronic", label: "Electronic" },
-  jazz: { slug: "jazz", label: "Jazz" },
-  folk: { slug: "folk", label: "Folk" },
-  punk: { slug: "punk", label: "Punk" },
-  "heavy metal": { slug: "metal", label: "Metal" },
-  metal: { slug: "metal", label: "Metal" },
-  soul: { slug: "soul", label: "Soul" },
-  rap: { slug: "hip-hop", label: "Hip-hop" },
-  "hip hop": { slug: "hip-hop", label: "Hip-hop" },
-  "hip-hop": { slug: "hip-hop", label: "Hip-hop" },
-  country: { slug: "country", label: "Country" },
-  classical: { slug: "classical", label: "Classical" },
-  funk: { slug: "funk", label: "Funk" },
-  blues: { slug: "blues", label: "Blues" },
-  "r&b": { slug: "r-and-b", label: "R&B" },
-  reggae: { slug: "reggae", label: "Reggae" },
-  latin: { slug: "latin", label: "Latin" },
-  world: { slug: "world", label: "World" },
-  "new age": { slug: "new-age", label: "New age" }
-};
-
-const genreLabels = new Map<string, string>(Object.values(GENRES).map((g) => [g.slug, g.label]));
-
-export const genreLabel = (slug: string) =>
-  genreLabels.get(slug) ?? slug.replace(/-/g, " ").replace(/^./, (c) => c.toUpperCase());
-
-export type WorkoutInfo = {
-  slug: string;
-  tag: string;
-  label: string;
-  /** Step-rate window this kind of run usually sits in, used for ranking. */
-  low: number;
-  high: number;
-  /** Energy rank the run wants: 0 low, 1 medium, 2 high, 3 extreme. */
-  energy: number;
-};
-
-export const WORKOUTS: WorkoutInfo[] = [
-  { slug: "warm-up", tag: "warm_up", label: "Warm-up", low: 140, high: 160, energy: 0 },
-  { slug: "easy-run", tag: "easy_run", label: "Easy run", low: 150, high: 165, energy: 1 },
-  { slug: "long-run", tag: "long_run", label: "Long run", low: 155, high: 170, energy: 1 },
-  { slug: "tempo-run", tag: "tempo_run", label: "Tempo run", low: 165, high: 180, energy: 2 },
-  { slug: "intervals", tag: "speed_work", label: "Intervals", low: 175, high: 190, energy: 3 },
-  { slug: "finish-kick", tag: "finish_kick", label: "Finish kick", low: 175, high: 195, energy: 3 }
-];
-
-const workoutByTag = new Map(WORKOUTS.map((w) => [w.tag, w]));
-export const workoutBySlug = (slug: string) => WORKOUTS.find((w) => w.slug === slug);
-
-const energyRank: Record<Energy, number> = { low: 0, medium: 1, high: 2, extreme: 3 };
-export const energyLabel = (energy: Energy) => energy.charAt(0).toUpperCase() + energy.slice(1);
-
-/** Kids' and lullaby cover acts: in the builder's catalog, but nobody's running music. */
-const EXCLUDED_ARTISTS = new Set([
-  "unknown",
-  "kidz-bop",
-  "kidz-bop-kids",
-  "rockabye-baby",
-  "twinkle-twinkle-little-rock-star",
-  "sweet-little-band"
-]);
 
 export const slugify = (value: string) =>
   value
@@ -136,66 +41,41 @@ export const slugify = (value: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 
-export const spotifyUrl = (song: { spotifyId: string | null; title: string; artist: string }) =>
-  song.spotifyId
-    ? "https://open.spotify.com/track/" + song.spotifyId
-    : "https://open.spotify.com/search/" + encodeURIComponent(song.title + " " + song.artist);
+export const fmt = (value: number) => value.toLocaleString("en-US");
 
-/* ---------- Cadence math ---------- */
+const byPopularity = (a: LibSong, b: LibSong) => b.p - a.p || a.t.localeCompare(b.t);
 
-/** Step rate a song's beat lines up with: on the beat, or two steps per beat (half-time). */
-export const stepRate = (bpm: number): { steps: number; halfTime: boolean } | null => {
-  if (bpm >= CADENCE_MIN && bpm <= CADENCE_MAX) return { steps: bpm, halfTime: false };
-  if (bpm * 2 >= CADENCE_MIN && bpm * 2 <= CADENCE_MAX) return { steps: bpm * 2, halfTime: true };
-  return null;
-};
+/** Songs whose stride lands within `window` steps of a target, most popular first. */
+const nearStride = (songs: LibSong[], target: number, window: number) =>
+  songs
+    .filter((song) => {
+      const fit = stepsFor(song.b);
+      return fit && Math.abs(fit.steps - target) <= window;
+    })
+    .sort(byPopularity);
 
-/*
- * Pace to cadence. Our working assumption, stated on every pace page: about 162
- * steps a minute at 10:00 a mile, rising about 2.3 steps a minute for every
- * 1 km/h faster, with a window of 6 either side for height and stride.
- */
-const CADENCE_AT_ZERO = 140;
-const CADENCE_PER_KMH = 2.3;
-export const PACE_WINDOW = 6;
+/* ---------- Paces ---------- */
+
 const KM_PER_MILE = 1.609344;
+export const PACE_WINDOW = 4;
 
-export const cadenceForSpeed = (kmh: number) => CADENCE_AT_ZERO + CADENCE_PER_KMH * kmh;
-export const speedForCadence = (steps: number) => (steps - CADENCE_AT_ZERO) / CADENCE_PER_KMH;
-
-export const formatPace = (seconds: number) => {
-  const rounded = Math.round(seconds / 5) * 5;
-  const minutes = Math.floor(rounded / 60);
-  return minutes + ":" + String(rounded % 60).padStart(2, "0");
-};
-
-export type PaceInfo = {
-  slug: string;
-  unit: "mile" | "km";
-  seconds: number;
-  label: string;
-  otherLabel: string;
-  center: number;
-  low: number;
-  high: number;
-};
+export type PaceInfo = { slug: string; unit: "mile" | "km"; seconds: number; label: string; otherLabel: string; center: number; low: number; high: number };
 
 const makePace = (unit: "mile" | "km", seconds: number): PaceInfo => {
-  const km = unit === "mile" ? KM_PER_MILE : 1;
-  const kmh = (3600 * km) / seconds;
-  const center = cadenceForSpeed(kmh);
+  const kmh = (3600 * (unit === "mile" ? KM_PER_MILE : 1)) / seconds;
+  const center = Math.round(140 + 2.3 * kmh);
   const minutes = Math.floor(seconds / 60);
   const secs = String(seconds % 60).padStart(2, "0");
-  const otherSeconds = unit === "mile" ? seconds / KM_PER_MILE : seconds * KM_PER_MILE;
+  const other = unit === "mile" ? seconds / KM_PER_MILE : seconds * KM_PER_MILE;
   return {
     slug: `${minutes}-${secs}-min-${unit}`,
     unit,
     seconds,
     label: unit === "mile" ? `${minutes}:${secs} a mile` : `${minutes}:${secs} per km`,
-    otherLabel: unit === "mile" ? `${formatPace(otherSeconds)} per km` : `${formatPace(otherSeconds)} a mile`,
-    center: Math.round(center),
-    low: Math.round(center - PACE_WINDOW),
-    high: Math.round(center + PACE_WINDOW)
+    otherLabel: unit === "mile" ? `${clock(other)} per km` : `${clock(other)} a mile`,
+    center,
+    low: center - PACE_WINDOW,
+    high: center + PACE_WINDOW
   };
 };
 
@@ -204,315 +84,276 @@ const ALL_PACES: PaceInfo[] = [
   ...Array.from({ length: 9 }, (_, i) => makePace("km", 240 + i * 30))
 ];
 
-// A pace whose step window matches an earlier one would list exactly the same
-// songs, so only the first (miles before km, fast before slow) gets a page and
-// the others point to it.
-export const PACES: PaceInfo[] = ALL_PACES.filter(
-  (pace, i) => ALL_PACES.findIndex((other) => other.low === pace.low && other.high === pace.high) === i
-);
+/** One page per distinct step rate (miles first); the others redirect to it. */
+export const PACES: PaceInfo[] = ALL_PACES.filter((pace, i) => ALL_PACES.findIndex((o) => o.center === pace.center) === i);
 
-export const KM_PACES = ALL_PACES.filter((pace) => pace.unit === "km").map((pace) => ({
-  ...pace,
-  target: PACES.find((other) => other.low === pace.low && other.high === pace.high)?.slug ?? pace.slug
-}));
-
-/** The published pace slug a duplicate pace slug should redirect to, if any. */
 export const paceAlias = (slug: string) => {
   const pace = ALL_PACES.find((p) => p.slug === slug);
   if (!pace || PACES.includes(pace)) return null;
-  return PACES.find((other) => other.low === pace.low && other.high === pace.high)?.slug ?? null;
+  return PACES.find((o) => o.center === pace.center)?.slug ?? null;
 };
 
-/** Pace that matches a step rate under the assumption, when it falls inside our pace pages' span. */
-export const paceForSteps = (steps: number) => {
-  const kmh = speedForCadence(steps);
-  const mileSeconds = (3600 * KM_PER_MILE) / kmh;
-  if (kmh <= 0 || mileSeconds > 13 * 60 + 15 || mileSeconds < 5 * 60 + 45) return null;
-  return { mile: formatPace(mileSeconds), km: formatPace(3600 / kmh) };
-};
+/* ---------- Run types ---------- */
 
-export const GENRE_RANGES: [number, number][] = [
-  [140, 150],
-  [150, 160],
-  [160, 170],
-  [170, 180],
-  [180, 190],
-  [190, 200]
+export type WorkoutInfo = { slug: string; label: string; run: string; steps: number; minEnergy: number; maxEnergy: number; line: string };
+
+export const WORKOUTS: WorkoutInfo[] = [
+  { slug: "warm-up", label: "Warm-up", run: "easy", steps: 156, minEnergy: 0, maxEnergy: 1, line: "Calm songs a touch under an easy stride, for the first ten minutes." },
+  { slug: "easy-run", label: "Easy run", run: "easy", steps: 162, minEnergy: 1, maxEnergy: 2, line: "Relaxed songs on an easy stride, around 160 steps a minute." },
+  { slug: "long-run", label: "Long run", run: "long", steps: 165, minEnergy: 1, maxEnergy: 2, line: "Steady songs that hold a long-run stride without wearing you out." },
+  { slug: "tempo-run", label: "Tempo run", run: "tempo", steps: 172, minEnergy: 2, maxEnergy: 3, line: "Driving songs for comfortably hard running, around 172 steps a minute." },
+  { slug: "intervals", label: "Intervals", run: "intervals", steps: 178, minEnergy: 2, maxEnergy: 3, line: "Loud, fast songs for hard reps at 175 steps a minute and up." },
+  { slug: "finish-kick", label: "Finish kick", run: "race", steps: 182, minEnergy: 3, maxEnergy: 3, line: "The loudest songs in the library on a sprinting stride." }
 ];
-export const rangeSlug = ([low, high]: [number, number]) => `${low}-${high}-bpm`;
 
-/* ---------- Loading ---------- */
+export const workoutBySlug = (slug: string) => WORKOUTS.find((w) => w.slug === slug);
 
-const normalizeKey = (title: string, artist: string) => {
-  const t = title
-    .toLowerCase()
-    .replace(/\s*[([].*?[)\]]/g, "")
-    .replace(/\s+-\s+.*$/, "")
-    .replace(/[^a-z0-9]+/g, "");
-  const a = artist.split(", ")[0].toLowerCase().replace(/[^a-z0-9]+/g, "");
-  return t + "|" + a;
-};
+const workoutSongs = (songs: LibSong[], w: WorkoutInfo) =>
+  nearStride(
+    songs.filter((s) => s.e >= w.minEnergy && s.e <= w.maxEnergy),
+    w.steps,
+    4
+  );
 
-const fetchRows = async (): Promise<SongRow[]> => {
-  const supabase = getSupabaseAdmin();
-  if (!supabase) return [];
-
-  const rows: SongRow[] = [];
-  // Supabase caps a select at 1000 rows, so page through the table.
-  for (let from = 0; from < 50_000; from += PAGE_SIZE) {
-    const { data, error } = (await supabase
-      .from("music_songs")
-      .select("id, title, artist, bpm, genre, energy, workout, spotify_id, upvotes, downvotes, source")
-      .order("id")
-      .range(from, from + PAGE_SIZE - 1)) as { data: SongRow[] | null; error: { message: string } | null };
-    // Throw rather than return a partial catalog: a failed revalidation keeps
-    // the last good page instead of turning it into a 404.
-    if (error) throw new Error("music_songs query failed: " + error.message);
-    if (!data?.length) break;
-    rows.push(...data);
-    if (data.length < PAGE_SIZE) break;
-  }
-  return rows;
-};
-
-export type MusicCatalog = {
-  songs: MusicSong[];
-  totalRows: number;
-  withoutBpm: number;
-};
-
-const buildCatalog = (rows: SongRow[]): MusicCatalog => {
-  const spotifyIds = new Map<string, string>();
-  const pullByArtist = new Map<string, number>();
-  for (const row of rows) {
-    if (!row.title || !row.artist) continue;
-    if (row.spotify_id) {
-      const key = normalizeKey(row.title, row.artist);
-      if (!spotifyIds.has(key)) spotifyIds.set(key, row.spotify_id);
-    }
-    if (row.source === "spotify") {
-      for (const name of row.artist.split(", ")) {
-        const slug = slugify(name);
-        pullByArtist.set(slug, (pullByArtist.get(slug) ?? 0) + 1);
-      }
-    }
-  }
-
-  const byKey = new Map<string, MusicSong>();
-  let withoutBpm = 0;
-  for (const row of rows) {
-    if (!row.title || !row.artist) continue;
-    if (row.bpm == null || row.bpm <= 0) {
-      withoutBpm += 1;
-      continue;
-    }
-    const names = row.source === "spotify" ? row.artist.split(", ") : [row.artist];
-    const artistSlugs = names.map(slugify).filter(Boolean);
-    if (!artistSlugs.length || artistSlugs.some((slug) => EXCLUDED_ARTISTS.has(slug))) continue;
-
-    const genres: string[] = [];
-    for (const raw of row.genre ?? []) {
-      const known = GENRES[raw.toLowerCase()];
-      const slug = known?.slug ?? slugify(raw);
-      if (!slug) continue;
-      if (!genres.includes(slug)) genres.push(slug);
-    }
-
-    const energy = (["low", "medium", "high", "extreme"] as const).includes(row.energy as Energy)
-      ? (row.energy as Energy)
-      : "medium";
-    const key = normalizeKey(row.title, row.artist);
-    const song: MusicSong = {
-      id: row.id,
-      title: row.title.trim(),
-      artist: row.artist.trim(),
-      artistSlugs,
-      bpm: Math.round(row.bpm),
-      genres,
-      energy,
-      workouts: (row.workout ?? [])
-        .map((tag) => workoutByTag.get(tag)?.slug)
-        .filter((slug): slug is string => Boolean(slug)),
-      spotifyId: row.spotify_id ?? spotifyIds.get(key) ?? null,
-      netVotes: (row.upvotes ?? 0) - (row.downvotes ?? 0),
-      pull: Math.max(...artistSlugs.map((slug) => pullByArtist.get(slug) ?? 0))
-    };
-
-    // Keep one copy per song: the one with votes, then the one with a track link.
-    const existing = byKey.get(key);
-    if (
-      !existing ||
-      song.netVotes > existing.netVotes ||
-      (song.netVotes === existing.netVotes && song.spotifyId && !existing.spotifyId)
-    ) {
-      byKey.set(key, existing ? { ...song, genres: song.genres.length ? song.genres : existing.genres } : song);
-    }
-  }
-
-  return {
-    songs: [...byKey.values()],
-    totalRows: rows.length,
-    withoutBpm
-  };
-};
-
-/** One database read per request, shared by generateMetadata and the page. */
-export const getMusicCatalog = cache(async (): Promise<MusicCatalog> => buildCatalog(await fetchRows()));
-
-/* ---------- Selections ---------- */
-
-const tieBreak = (a: RankedSong, b: RankedSong) =>
-  b.netVotes - a.netVotes ||
-  b.pull - a.pull ||
-  Number(Boolean(b.spotifyId)) - Number(Boolean(a.spotifyId)) ||
-  a.title.localeCompare(b.title);
-
-const withSteps = (song: MusicSong): RankedSong => {
-  const match = stepRate(song.bpm);
-  return { ...song, steps: match?.steps ?? null, halfTime: match?.halfTime ?? false };
-};
-
-/** Songs for one step rate: on the beat, or half-time within one step of it. */
-export const songsForBpm = (songs: MusicSong[], target: number): RankedSong[] =>
-  songs
-    .filter((song) => song.bpm === target || Math.abs(song.bpm * 2 - target) <= 1)
-    .map((song) => ({ ...song, steps: song.bpm === target ? target : song.bpm * 2, halfTime: song.bpm !== target }))
-    .sort(
-      (a, b) =>
-        Number(a.halfTime) - Number(b.halfTime) ||
-        energyRank[b.energy] - energyRank[a.energy] ||
-        tieBreak(a, b)
-    );
-
-export const songsInStepWindow = (songs: MusicSong[], low: number, high: number, center: number) =>
-  songs
-    .map(withSteps)
-    .filter((song) => song.steps !== null && song.steps >= low && song.steps <= high)
-    .sort(
-      (a, b) =>
-        Math.abs((a.steps ?? 0) - center) - Math.abs((b.steps ?? 0) - center) ||
-        Number(a.halfTime) - Number(b.halfTime) ||
-        tieBreak(a, b)
-    );
-
-export const songsForGenre = (songs: MusicSong[], genre: string) =>
-  songs
-    .filter((song) => song.genres.includes(genre))
-    .map(withSteps)
-    .filter((song) => song.steps !== null)
-    .sort(
-      (a, b) =>
-        Number(a.halfTime) - Number(b.halfTime) ||
-        energyRank[b.energy] - energyRank[a.energy] ||
-        tieBreak(a, b)
-    );
-
-export const songsForWorkout = (songs: MusicSong[], workout: WorkoutInfo) => {
-  const center = (workout.low + workout.high) / 2;
-  const distance = (song: RankedSong) =>
-    song.steps === null
-      ? 1000
-      : song.steps < workout.low
-        ? workout.low - song.steps
-        : song.steps > workout.high
-          ? song.steps - workout.high
-          : 0;
-  return songs
-    .filter((song) => song.workouts.includes(workout.slug))
-    .map(withSteps)
-    .sort(
-      (a, b) =>
-        distance(a) - distance(b) ||
-        Math.abs(energyRank[a.energy] - workout.energy) - Math.abs(energyRank[b.energy] - workout.energy) ||
-        Math.abs((a.steps ?? 0) - center) - Math.abs((b.steps ?? 0) - center) ||
-        tieBreak(a, b)
-    );
-};
-
-export const songsForArtist = (songs: MusicSong[], artist: string) =>
-  songs
-    .filter((song) => song.artistSlugs.includes(artist))
-    .map(withSteps)
-    .sort((a, b) => a.bpm - b.bpm || a.title.localeCompare(b.title));
-
-/* ---------- The index of every publishable page ---------- */
+/* ---------- Index ---------- */
 
 export type MusicIndex = {
+  total: number;
   bpms: { bpm: number; count: number }[];
   paces: (PaceInfo & { count: number })[];
-  genres: { slug: string; label: string; count: number; ranges: { slug: string; range: [number, number]; count: number }[] }[];
-  workouts: (WorkoutInfo & { count: number })[];
+  workouts: (WorkoutInfo & { count: number; covers: string[] })[];
+  genres: { slug: string; label: string; count: number; covers: string[] }[];
   artists: { slug: string; name: string; count: number }[];
+  popular: LibSong[];
 };
 
-const buildIndex = (catalog: MusicCatalog): MusicIndex => {
-  const { songs } = catalog;
+const songsForBpm = (songs: LibSong[], target: number) =>
+  songs.filter((s) => s.b === target || Math.abs(s.b * 2 - target) <= 1).sort(byPopularity);
 
+const songsForGenre = (songs: LibSong[], genre: string) => songs.filter((s) => s.g.includes(genre) && stepsFor(s.b)).sort(byPopularity);
+
+const artistGroups = (songs: LibSong[]) => {
+  const groups = new Map<string, { name: string; songs: LibSong[] }>();
+  for (const song of songs) {
+    const slug = slugify(song.a);
+    if (!slug) continue;
+    const group = groups.get(slug) ?? { name: song.a, songs: [] };
+    group.songs.push(song);
+    groups.set(slug, group);
+  }
+  return groups;
+};
+
+const coversOf = (songs: LibSong[], n = 4) => [...new Set(songs.map((s) => s.i).filter((c): c is string => Boolean(c)))].slice(0, n);
+
+export const getMusicIndex = cache(async (): Promise<MusicIndex> => {
+  const songs = await getLibrary();
   const bpms: MusicIndex["bpms"] = [];
   for (let bpm = CADENCE_MIN; bpm <= CADENCE_MAX; bpm += 1) {
     const count = songsForBpm(songs, bpm).length;
     if (count >= MIN_SONGS) bpms.push({ bpm, count });
   }
-
-  const paces = PACES.map((pace) => ({
-    ...pace,
-    count: songsInStepWindow(songs, pace.low, pace.high, pace.center).length
-  })).filter((pace) => pace.count >= MIN_SONGS);
-
-  const genreSlugs = [...new Set(songs.flatMap((song) => song.genres))];
-  const genres = genreSlugs
-    .map((slug) => {
-      const list = songsForGenre(songs, slug);
-      return {
-        slug,
-        label: genreLabel(slug),
-        count: list.length,
-        ranges: GENRE_RANGES.map((range) => ({
-          slug: rangeSlug(range),
-          range,
-          count: list.filter((song) => (song.steps ?? 0) >= range[0] && (song.steps ?? 0) <= range[1]).length
-        })).filter((entry) => entry.count >= MIN_SONGS)
-      };
-    })
-    .filter((genre) => genre.count >= MIN_SONGS)
+  const paces = PACES.map((p) => ({ ...p, count: nearStride(songs, p.center, PACE_WINDOW).length })).filter((p) => p.count >= MIN_SONGS);
+  const workouts = WORKOUTS.map((w) => {
+    const list = workoutSongs(songs, w);
+    return { ...w, count: list.length, covers: coversOf(list) };
+  }).filter((w) => w.count >= MIN_SONGS);
+  const genres = GENRES.map((g) => {
+    const list = songsForGenre(songs, g.slug);
+    return { ...g, count: list.length, covers: coversOf(list) };
+  })
+    .filter((g) => g.count >= MIN_SONGS)
     .sort((a, b) => b.count - a.count);
-
-  const workouts = WORKOUTS.map((workout) => ({
-    ...workout,
-    count: songs.filter((song) => song.workouts.includes(workout.slug)).length
-  })).filter((workout) => workout.count >= MIN_SONGS);
-
-  const artistCounts = new Map<string, { name: string; count: number }>();
-  for (const song of songs) {
-    const names = song.artistSlugs.length > 1 ? song.artist.split(", ") : [song.artist];
-    song.artistSlugs.forEach((slug, index) => {
-      const entry = artistCounts.get(slug) ?? { name: names[index] ?? song.artist, count: 0 };
-      entry.count += 1;
-      artistCounts.set(slug, entry);
-    });
-  }
-  const artists = [...artistCounts.entries()]
-    .filter(([slug, entry]) => slug && entry.count >= MIN_SONGS && !EXCLUDED_ARTISTS.has(slug))
-    .map(([slug, entry]) => ({ slug, name: entry.name, count: entry.count }))
+  const artists = [...artistGroups(songs).entries()]
+    .map(([slug, g]) => ({ slug, name: g.name, count: g.songs.length }))
+    .filter((a) => a.count >= 5)
     .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+  const popular = songs.filter((s) => stepsFor(s.b)).slice(0, 24);
+  return { total: songs.length, bpms, paces, workouts, genres, artists, popular };
+});
 
-  return { bpms, paces, genres, workouts, artists };
-};
+/* ---------- Pages ---------- */
 
-export const getMusicIndex = cache(async (): Promise<MusicIndex> => buildIndex(await getMusicCatalog()));
+const HUB = { name: "Running songs", path: "/music" };
+
+const finderLink = (params: Record<string, string | number>) =>
+  "/tools/music?" + new URLSearchParams(Object.entries(params).map(([k, v]) => [k, String(v)])).toString();
+
+const relatedPaces = (index: MusicIndex, near: number) => ({
+  heading: "By pace",
+  links: index.paces
+    .filter((p) => p.unit === "mile")
+    .sort((a, b) => Math.abs(a.center - near) - Math.abs(b.center - near))
+    .slice(0, 6)
+    .sort((a, b) => a.seconds - b.seconds)
+    .map((p) => ({ href: `/music/pace/${p.slug}`, label: p.label }))
+});
+
+const relatedWorkouts = (index: MusicIndex, except?: string) => ({
+  heading: "By run",
+  links: index.workouts.filter((w) => w.slug !== except).map((w) => ({ href: `/music/workout/${w.slug}`, label: w.label }))
+});
+
+const relatedGenres = (index: MusicIndex, except?: string) => ({
+  heading: "By genre",
+  links: index.genres
+    .filter((g) => g.slug !== except)
+    .slice(0, 10)
+    .map((g) => ({ href: `/music/genre/${g.slug}`, label: g.label }))
+});
+
+export async function getBpmPage(raw: string): Promise<MusicPageModel | null> {
+  const bpm = Number(raw);
+  if (!Number.isInteger(bpm) || bpm < CADENCE_MIN || bpm > CADENCE_MAX) return null;
+  const songs = songsForBpm(await getLibrary(), bpm);
+  if (songs.length < MIN_SONGS) return null;
+  const index = await getMusicIndex();
+  const half = songs.filter((s) => s.b !== bpm).length;
+  const pace = index.paces.find((p) => p.unit === "mile" && Math.abs(p.center - bpm) <= 1);
+  return {
+    path: `/music/bpm/${bpm}`,
+    metaTitle: `${bpm} BPM Running Songs: ${fmt(songs.length)} Songs for ${bpm} Steps a Minute`,
+    metaDescription: `${fmt(songs.length)} popular songs that land on ${bpm} steps a minute, with cover art and previews. Build a ${bpm} BPM running playlist in one tap.`,
+    eyebrow: "Songs by BPM",
+    h1: `${bpm} BPM running songs`,
+    lines: [
+      `${fmt(songs.length)} songs whose beat lands on ${bpm} steps a minute${half ? `, ${fmt(half)} of them half-time songs near ${Math.round(bpm / 2)} BPM (a beat every two steps)` : ""}.`,
+      pace ? `That's about the stride of a ${pace.label} runner.` : "Not sure of your stride? The Music Finder works it out from how the run feels."
+    ],
+    songs: songs.slice(0, GRID),
+    steps: bpm,
+    toolHref: finderLink({ steps: bpm }),
+    toolLabel: `Build a ${bpm} BPM playlist`,
+    crumbs: [HUB, { name: `${bpm} BPM`, path: `/music/bpm/${bpm}` }],
+    related: [
+      {
+        heading: "Nearby BPM",
+        links: index.bpms.filter((b) => b.bpm !== bpm && Math.abs(b.bpm - bpm) <= 5).map((b) => ({ href: `/music/bpm/${b.bpm}`, label: `${b.bpm} BPM` }))
+      },
+      relatedPaces(index, bpm)
+    ]
+  };
+}
+
+export async function getPacePage(slug: string): Promise<MusicPageModel | null> {
+  const pace = PACES.find((p) => p.slug === slug);
+  if (!pace) return null;
+  const songs = nearStride(await getLibrary(), pace.center, PACE_WINDOW);
+  if (songs.length < MIN_SONGS) return null;
+  const index = await getMusicIndex();
+  const minutes = Math.floor(pace.seconds / 60);
+  const secs = String(pace.seconds % 60).padStart(2, "0");
+  const title = pace.unit === "mile" ? `${minutes}:${secs} Mile` : `${minutes}:${secs}/km`;
+  return {
+    path: `/music/pace/${pace.slug}`,
+    metaTitle: `Running Songs for a ${title} Pace (${pace.center} Steps a Minute)`,
+    metaDescription: `${fmt(songs.length)} songs that fit a ${pace.label} pace (${pace.otherLabel}), about ${pace.center} steps a minute. Cover art, previews and a playlist builder.`,
+    eyebrow: "Songs by pace",
+    h1: `Songs for a ${pace.label} pace`,
+    lines: [
+      `At ${pace.label} (${pace.otherLabel}) most runners take about ${pace.center} steps a minute, so these ${fmt(songs.length)} songs land between ${pace.low} and ${pace.high}.`,
+      "Long legs run a few steps lower, short legs a few higher: nudge it in the Music Finder."
+    ],
+    songs: songs.slice(0, GRID),
+    steps: pace.center,
+    toolHref: finderLink({ pace: `${minutes}:${secs}`, unit: pace.unit === "km" ? "km" : "mi" }),
+    toolLabel: "Build this playlist",
+    crumbs: [HUB, { name: pace.label, path: `/music/pace/${pace.slug}` }],
+    related: [relatedPaces(index, pace.center), relatedWorkouts(index)]
+  };
+}
+
+export async function getWorkoutPage(slug: string): Promise<MusicPageModel | null> {
+  const workout = workoutBySlug(slug);
+  if (!workout) return null;
+  const songs = workoutSongs(await getLibrary(), workout);
+  if (songs.length < MIN_SONGS) return null;
+  const index = await getMusicIndex();
+  return {
+    path: `/music/workout/${workout.slug}`,
+    metaTitle: `${workout.label} Songs: ${fmt(songs.length)} Running Songs Matched to the Run`,
+    metaDescription: `${workout.line} ${fmt(songs.length)} songs with cover art and previews, ready to build into a playlist.`,
+    eyebrow: "Songs by run",
+    h1: `${workout.label} songs`,
+    lines: [workout.line, `${fmt(songs.length)} songs fit; here are the most popular. The Music Finder builds the whole run, warm-up to finish.`],
+    songs: songs.slice(0, GRID),
+    steps: workout.steps,
+    toolHref: finderLink({ run: workout.run, steps: workout.steps }),
+    toolLabel: `Build a ${workout.label.toLowerCase()} playlist`,
+    crumbs: [HUB, { name: workout.label, path: `/music/workout/${workout.slug}` }],
+    related: [relatedWorkouts(index, workout.slug), relatedGenres(index)]
+  };
+}
+
+export async function getGenrePage(slug: string): Promise<MusicPageModel | null> {
+  if (!GENRES.some((g) => g.slug === slug)) return null;
+  const songs = songsForGenre(await getLibrary(), slug);
+  if (songs.length < MIN_SONGS) return null;
+  const index = await getMusicIndex();
+  const label = genreName(slug);
+  const steps = songs.map((s) => stepsFor(s.b)!.steps).sort((a, b) => a - b);
+  const mid = steps[Math.floor(steps.length / 2)];
+  return {
+    path: `/music/genre/${slug}`,
+    metaTitle: `${label} Running Songs with BPM: ${fmt(songs.length)} Songs`,
+    metaDescription: `${fmt(songs.length)} ${label.toLowerCase()} songs for running, each with its BPM and the stride it fits. Cover art, previews and a playlist builder.`,
+    eyebrow: "Songs by genre",
+    h1: `${label} running songs`,
+    lines: [
+      `${fmt(songs.length)} ${label.toLowerCase()} songs with a beat you can run to; the middle of the pack lands on ${mid} steps a minute.`,
+      "Filter by stride below, or let the Music Finder pick the ones that fit your run."
+    ],
+    songs: songs.slice(0, GRID),
+    steps: null,
+    toolHref: finderLink({ genre: slug }),
+    toolLabel: `Build a ${label.toLowerCase()} playlist`,
+    crumbs: [HUB, { name: label, path: `/music/genre/${slug}` }],
+    related: [relatedGenres(index, slug), relatedWorkouts(index)]
+  };
+}
+
+export async function getArtistPage(slug: string): Promise<MusicPageModel | null> {
+  const group = artistGroups(await getLibrary()).get(slug);
+  if (!group || group.songs.length < 5) return null;
+  const songs = [...group.songs].sort(byPopularity);
+  const fits = songs.filter((s) => stepsFor(s.b));
+  const index = await getMusicIndex();
+  return {
+    path: `/music/artist/${slug}`,
+    metaTitle: `${group.name} Songs for Running, with BPM`,
+    metaDescription: `${fmt(songs.length)} ${group.name} songs with their BPM and the running stride each one fits. Cover art, previews and a playlist builder.`,
+    eyebrow: "Songs by artist",
+    h1: `${group.name} for running`,
+    lines: [
+      `${fmt(songs.length)} ${group.name} songs in our library, ${fmt(fits.length)} of them on a running stride.`,
+      "Tap a cover for a preview, or search any song in the Music Finder to swap it into your playlist."
+    ],
+    songs: songs.slice(0, GRID),
+    steps: null,
+    toolHref: "/tools/music",
+    toolLabel: "Open the Music Finder",
+    crumbs: [HUB, { name: group.name, path: `/music/artist/${slug}` }],
+    related: [
+      {
+        heading: "More artists",
+        links: index.artists
+          .filter((a) => a.slug !== slug)
+          .slice(0, 12)
+          .map((a) => ({ href: `/music/artist/${a.slug}`, label: a.name }))
+      }
+    ]
+  };
+}
 
 /* ---------- Sitemap ---------- */
 
 export const musicPaths = (index: MusicIndex) => [
   "/music",
-  ...index.bpms.map((entry) => `/music/bpm/${entry.bpm}`),
-  ...index.paces.map((pace) => `/music/pace/${pace.slug}`),
-  ...index.genres.flatMap((genre) => [
-    `/music/genre/${genre.slug}`,
-    ...genre.ranges.map((range) => `/music/genre/${genre.slug}/${range.slug}`)
-  ]),
-  ...index.workouts.map((workout) => `/music/workout/${workout.slug}`),
-  ...index.artists.map((artist) => `/music/artist/${artist.slug}`)
+  ...index.paces.map((p) => `/music/pace/${p.slug}`),
+  ...index.workouts.map((w) => `/music/workout/${w.slug}`),
+  ...index.genres.map((g) => `/music/genre/${g.slug}`),
+  ...index.bpms.map((b) => `/music/bpm/${b.bpm}`),
+  ...index.artists.map((a) => `/music/artist/${a.slug}`)
 ];
 
 export async function getMusicContentSitemapEntries(): Promise<MetadataRoute.Sitemap> {
@@ -523,40 +364,10 @@ export async function getMusicContentSitemapEntries(): Promise<MetadataRoute.Sit
     console.error("music sitemap entries skipped:", error);
     return [];
   }
-  if (!index.bpms.length) return [];
+  if (!index.total) return [];
   return musicPaths(index).map((path) => ({
     url: `${SITE_URL}${path}`,
     changeFrequency: "weekly",
     priority: path === "/music" ? 0.7 : 0.5
   }));
 }
-
-/* ---------- Text helpers for the data-written copy ---------- */
-
-export const fmt = (value: number) => value.toLocaleString("en-US");
-
-export const plural = (count: number, one: string, many = one + "s") =>
-  `${fmt(count)} ${count === 1 ? one : many}`;
-
-export const listWords = (items: string[]) => {
-  if (items.length <= 1) return items.join("");
-  if (items.length === 2) return `${items[0]} and ${items[1]}`;
-  return `${items.slice(0, -1).join(", ")} and ${items[items.length - 1]}`;
-};
-
-export const topGenres = (songs: MusicSong[], limit = 3) => {
-  const counts = new Map<string, number>();
-  for (const song of songs) for (const genre of song.genres) counts.set(genre, (counts.get(genre) ?? 0) + 1);
-  return [...counts.entries()]
-    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-    .slice(0, limit)
-    .map(([slug, count]) => ({ slug, label: genreLabel(slug), count }));
-};
-
-export const songName = (song: MusicSong) => `"${song.title}" by ${song.artist}`;
-
-export const median = (values: number[]) => {
-  if (!values.length) return 0;
-  const sorted = [...values].sort((a, b) => a - b);
-  return sorted[Math.floor(sorted.length / 2)];
-};

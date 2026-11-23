@@ -6,6 +6,7 @@ import { syncShoeCatalog } from "@/lib/catalog-sync";
 import { runGuideSync } from "@/lib/guide-publish";
 import { submitToIndexNow } from "@/lib/indexnow";
 import { SITE_URL } from "@/lib/seo";
+import { runDailyMusicIngest } from "@/lib/music/ingest";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -16,7 +17,9 @@ export const dynamic = "force-dynamic";
  *   1. syncs the shoe catalog from GitHub into the database,
  *   2. tells search engines about any shoe pages that changed,
  *   3. publishes any guides on GitHub that are not live yet,
- *   4. as a side effect, touches the database so Supabase's free tier never
+ *   4. adds new chart and runners' playlist songs to the music library, finds
+ *      BPM for songs missing it and maps Spotify ids (lib/music/ingest.ts),
+ *   5. as a side effect, touches the database so Supabase's free tier never
  *      pauses the project for inactivity.
  *
  * Auth: when CRON_SECRET is set in Vercel, Vercel's scheduler sends it and
@@ -30,6 +33,7 @@ let lastUnsecuredRun = 0;
 const THROTTLE_MS = 10 * 60 * 1000;
 
 export async function GET(request: Request) {
+  const startedAt = Date.now();
   const authorized = isAuthorized(request);
   if (!authorized) {
     const fromScheduler = (request.headers.get("user-agent") ?? "").startsWith("vercel-cron/");
@@ -70,7 +74,12 @@ export async function GET(request: Request) {
     // fallback in case its call to /api/guides/sync didn't land.
     const [guides] = dryRun ? [{ skipped: "dry run" }] : await runGuideSync().catch((error) => [{ ok: false, error: (error as Error).message }]);
 
-    return NextResponse.json({ ok: catalog.ok, catalog, indexNow, guides }, { status: catalog.ok ? 200 : 500 });
+    // Music gets whatever is left of the 60 seconds, up to 25, with 8 to spare.
+    const musicBudget = Math.min(25_000, 52_000 - (Date.now() - startedAt));
+    const music = dryRun || musicBudget < 8_000 ? { skipped: dryRun ? "dry run" : "no time left" } : await runDailyMusicIngest(supabase, musicBudget);
+    if ("added" in music && music.added.length) revalidatePath("/api/music/library");
+
+    return NextResponse.json({ ok: catalog.ok, catalog, indexNow, guides, music }, { status: catalog.ok ? 200 : 500 });
   } catch (error) {
     return NextResponse.json({ ok: false, error: (error as Error).message }, { status: 500 });
   }

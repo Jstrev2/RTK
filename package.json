@@ -36,15 +36,18 @@
     "catalog:gels:enrich": "node scripts/catalog/enrich-gels.mjs",
     "catalog:gels:validate": "node scripts/catalog/validate-gels.mjs",
     "catalog:gels": "node scripts/catalog/run-gels.mjs",
-    "catalog:music": "node scripts/catalog/run-music.mjs",
+    "catalog:music": "node scripts/music/run.mjs backfill",
     "rundown:import": "node scripts/rundown/import-authored.mjs",
     "rundown:discover": "node scripts/rundown/discover.mjs",
     "rundown:topics": "node scripts/rundown/topics.mjs",
-    "rundown:publish": "node scripts/rundown/publish.mjs"
+    "rundown:publish": "node scripts/rundown/publish.mjs",
+    "music:backfill": "node scripts/music/run.mjs backfill",
+    "music:validate-tempo": "node scripts/music/run.mjs validate-tempo"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.90.1",
     "@vercel/analytics": "^2.0.1",
+    "mpg123-decoder": "^1.0.3",
     "next": "^15.5.12",
     "react": "18.2.0",
     "react-dom": "18.2.0",

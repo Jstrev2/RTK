@@ -6,7 +6,7 @@ Runner Toolkit publishes on its own. Nobody imports, merges or deploys by hand.
 
 1. **Data pages** (generated from Supabase, rendered on demand, cached a day):
    - Shoes: `/shoes/best/*` collections and `/shoes/compare/a-vs-b` comparisons (`lib/content/shoes.ts`).
-   - Music: `/music/bpm/*`, `/music/pace/*`, `/music/genre/*`, `/music/workout/*`, `/music/artist/*` (`lib/content/music.ts`).
+   - Music: `/music/pace/*`, `/music/workout/*`, `/music/genre/*`, `/music/bpm/*`, `/music/artist/*` (`lib/content/music.ts`, fed by the song library below).
    - Fuel: `/fuel/gels/*`, `/fuel/compare/*`, `/fuel/plan/<race>/<finish>`, `/fuel/best/*` (`lib/content/fuel.ts`).
    Every page has a minimum-data rule and 404s below it. When the catalog grows,
    new pages appear by themselves and enter the sitemap.
@@ -49,6 +49,58 @@ every fuel serving, the catalogs and the practice log) needs a free account
 
 Unchanged: the monthly routine "Monthly shoe catalog re-audit" edits
 `data/shoe-models-authored.json`, and the daily cron syncs it.
+
+## Song library
+
+`music_songs` holds the songs the Music Finder and the /music pages use. Only
+songs with a BPM and a cover show anywhere (`lib/music/library.ts`).
+
+- **Where songs come from:** Deezer's public API (no key): the global chart
+  and 15 genre charts, plus the tracks in runners' public playlists (searches
+  for running, run, workout, cardio, marathon, tempo run and more). A playlist
+  track gets in when two playlists carry it or Deezer ranks it as popular.
+  Kids' and lullaby acts, karaoke, "workout remix" factories, sped-up and
+  slowed versions, and cheap covers of a popular original are kept out
+  (`lib/music/catalog-rules.ts`). Deezer's playlists lean French, so a
+  playlist-only track must be registered in an English-speaking market (its
+  ISRC) or be by an artist on the US charts; chart songs always get in.
+  Runners add any song in the finder: `/api/music/find` searches Spotify (or
+  Deezer while Spotify is rate limiting us) and `/api/music/add` stores it
+  (`added_by`, and `user_songs` remembers it as theirs).
+- **BPM:** GetSongBPM when it knows the song by that artist
+  (`bpm_source = 'getsongbpm'`); otherwise the tempo is read from Deezer's
+  30-second preview (`lib/music/tempo.ts`, `'analysis'`). A preview without a
+  clear beat gets no BPM (`'unreadable'`) and stays hidden. `'catalog'` marks
+  older rows whose tempo came with the original import. GetSongBPM's terms
+  require the visible getsongbpm.com link under every song list. Energy (low
+  to extreme) comes from the preview's loudness, attack and brightness.
+- **Spotify:** each song's Spotify id is found by ISRC (client credentials);
+  Spotify's cover fills in when Deezer has none. Spotify keeps development-mode
+  apps on a small quota: on November 23, 2026 about 700 searches at 10 a
+  second locked the app out for 23 hours. Calls are now paced at one per 0.7
+  seconds, and a long 429 stops every Spotify step until the lockout ends
+  (`SpotifyUnavailable` in `lib/music/sources.ts`). Save to Spotify looks up
+  any song still missing an id with the runner's own sign-in.
+- **Every day** (`runDailyMusicIngest` in `lib/music/ingest.ts`, called by
+  `/api/cron/daily` with up to 25 of its 60 seconds): reads the global chart,
+  two genre charts and three runners' playlists (rotating by day), adds the
+  popular songs we lack with a BPM from their preview, retries BPM for songs
+  that have none (GetSongBPM first), and maps Spotify ids for songs missing
+  one. Each step stops when the time runs out; the next day carries on.
+- **Backfill** (local, resumable, working files in `.tmp/music/`):
+  `npm run music:backfill -- <stage>` with the stages `discover`, `details`,
+  `existing`, `apply`, `getsong` (about one song a second), `spotify` and
+  `report`. `npm run music:validate-tempo` checks the preview reader against
+  GetSongBPM.
+- Previews play through `/api/music/preview/<deezer id>`: Deezer's preview
+  links expire after about fifteen minutes, so the stored `preview_url` is
+  only a hint.
+- **Save to Spotify** uses Spotify's PKCE sign-in in the browser
+  (`lib/music/spotify-export.ts`). Redirect URIs registered on the Spotify app:
+  `https://runnertoolkit.com/tools/music/spotify` and
+  `http://127.0.0.1:3202/tools/music/spotify`. While the app is in Spotify's
+  development mode only allow-listed accounts can save; everyone else gets the
+  copy-the-links fallback.
 
 ## Deploys
 
