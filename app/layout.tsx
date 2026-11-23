@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/next";
 import localFont from "next/font/local";
 import "./globals.css";
+import "./design.css";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import { AuthProvider } from "@/components/auth-provider";
@@ -12,28 +13,26 @@ import { SITE_URL } from "@/lib/seo";
 
 // Fonts are bundled in app/fonts rather than fetched from Google at build
 // time: that fetch failed often enough to break production deploys.
-const display = localFont({
-  src: "./fonts/space-grotesk-latin-wght-normal.woff2",
+// Archivo is variable in weight and width: headlines run it wide (125%).
+const archivo = localFont({
+  src: "./fonts/archivo-latin-wdth-normal.woff2",
   variable: "--font-display",
-  weight: "300 700",
-  display: "swap"
+  weight: "100 900",
+  display: "swap",
+  declarations: [{ prop: "font-stretch", value: "62% 125%" }]
 });
 
-const body = localFont({
-  src: [
-    { path: "./fonts/ibm-plex-sans-latin-400-normal.woff2", weight: "400", style: "normal" },
-    { path: "./fonts/ibm-plex-sans-latin-500-normal.woff2", weight: "500", style: "normal" },
-    { path: "./fonts/ibm-plex-sans-latin-600-normal.woff2", weight: "600", style: "normal" },
-    { path: "./fonts/ibm-plex-sans-latin-700-normal.woff2", weight: "700", style: "normal" }
-  ],
-  variable: "--font-body",
+const mono = localFont({
+  src: "./fonts/jetbrains-mono-latin-wght-normal.woff2",
+  variable: "--font-mono-face",
+  weight: "100 800",
   display: "swap"
 });
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f4f0e7",
+  themeColor: "#121212",
 };
 
 export const metadata: Metadata = {
@@ -77,7 +76,7 @@ export default function RootLayout({
   children: ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
+    <html lang="en" className={`${archivo.variable} ${mono.variable}`}>
       <body>
         {supabaseOrigin ? (
           <link rel="preconnect" href={supabaseOrigin} crossOrigin="anonymous" />
