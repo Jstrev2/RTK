@@ -6,7 +6,9 @@ import { cache } from "react";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 import JsonLd from "@/components/json-ld";
 import { SITE_URL } from "@/lib/seo";
-import { getGuides } from "@/lib/guides";
+import { GUIDE_TOPICS, getGuides, photoChoices, readingMinutes, splitShortAnswer, toCards, topicChips } from "@/lib/guides";
+import { photoForGuide } from "@/lib/photos";
+import { GuideCards } from "../guide-browser";
 
 export const revalidate = 3600;
 
@@ -57,7 +59,7 @@ export async function generateMetadata({
   if (!article) return { title: "Not Found" };
 
   const description = article.excerpt ?? `${article.title}, from Runner Guides by Runner Toolkit`;
-  const image = article.cover_image ?? "/og.jpg";
+  const image = article.cover_image ?? photoForGuide(article.tags, article.slug).src;
 
   return {
     title: article.title,
@@ -88,6 +90,7 @@ function formatDate(dateStr: string) {
     year: "numeric",
     month: "long",
     day: "numeric",
+    timeZone: "UTC",
   });
 }
 
@@ -112,12 +115,7 @@ function renderInline(text: string, keyPrefix: string): ReactNode[] {
             {match[1]}
           </Link>
         ) : (
-          <a
-            key={`${keyPrefix}-${index}`}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a key={`${keyPrefix}-${index}`} href={href} target="_blank" rel="noopener noreferrer">
             {match[1]}
           </a>
         )
@@ -135,54 +133,33 @@ function renderInline(text: string, keyPrefix: string): ReactNode[] {
   return parts;
 }
 
+// The guide format (CONTENT_VOICE.md): paragraphs, ## and ### headings,
+// "- " lists, links and bold.
 function renderBody(body: string) {
-  // Split on double newlines for paragraphs, support ## headings and - lists
-  const blocks = body.split(/\n\n+/);
-  return blocks.map((block, i) => {
+  return body.split(/\n\s*\n/).map((block, i) => {
     const trimmed = block.trim();
     if (!trimmed) return null;
-
-    if (trimmed.startsWith("## ")) {
-      return (
-        <h2 key={i} style={{ fontFamily: "var(--font-display), sans-serif", margin: "32px 0 12px" }}>
-          {renderInline(trimmed.slice(3), `h2-${i}`)}
-        </h2>
-      );
-    }
-
-    if (trimmed.startsWith("### ")) {
-      return (
-        <h3 key={i} style={{ fontFamily: "var(--font-display), sans-serif", margin: "24px 0 8px" }}>
-          {renderInline(trimmed.slice(4), `h3-${i}`)}
-        </h3>
-      );
-    }
-
-    // Check if the block is a list
+    if (trimmed.startsWith("### ")) return <h3 key={i}>{renderInline(trimmed.slice(4), `h3-${i}`)}</h3>;
+    if (trimmed.startsWith("## ")) return <h2 key={i}>{renderInline(trimmed.slice(3), `h2-${i}`)}</h2>;
     const lines = trimmed.split("\n");
-    if (lines.every((l) => l.trim().startsWith("- "))) {
+    if (lines.every((line) => line.trim().startsWith("- "))) {
       return (
-        <ul key={i} style={{ paddingLeft: "20px", margin: "12px 0", lineHeight: 1.8 }}>
+        <ul key={i}>
           {lines.map((line, j) => (
             <li key={j}>{renderInline(line.trim().slice(2), `li-${i}-${j}`)}</li>
           ))}
         </ul>
       );
     }
-
-    return (
-      <p key={i} style={{ lineHeight: 1.8, margin: "0 0 16px" }}>
-        {renderInline(trimmed, `p-${i}`)}
-      </p>
-    );
+    return <p key={i}>{renderInline(trimmed, `p-${i}`)}</p>;
   });
 }
 
 const TOOL_CTA = [
-  { tags: ["music"], href: "/tools/music", label: "Build my playlist", title: "Get a playlist timed to your run", copy: "The Music Finder picks songs at your cadence for the workout and length you choose, each one a tap from Spotify." },
-  { tags: ["fueling", "nutrition"], href: "/tools/fueling", label: "Plan my fuel", title: "Turn this into your own fuel plan", copy: "The Fuel Finder works out how much to take and when for your distance and finish time, with a packing list." },
-  { tags: ["shoes", "gear"], href: "/tools/shoe-selector", label: "Find my shoes", title: "Find the shoes that fit your run", copy: "Answer four questions and the Shoe Finder narrows hundreds of current road shoes to three, each with a reason." },
-  { tags: ["race-day", "training", "beginners"], href: "/tools/fueling", label: "Plan my race fuel", title: "Plan race day", copy: "Work out your race fuel and pacing before the start line, then rehearse it on your long runs." }
+  { tags: ["music"], href: "/tools/music", label: "Build my playlist", kicker: "Music Finder", title: "Get a playlist at your cadence", copy: "Songs at your BPM for the run and length you pick, each a tap from Spotify." },
+  { tags: ["fueling", "nutrition"], href: "/tools/fueling", label: "Plan my fuel", kicker: "Fuel Finder", title: "Turn this into your fuel plan", copy: "How much to take and when, for your distance and finish time, with a packing list." },
+  { tags: ["shoes", "gear", "beginners"], href: "/tools/shoe-selector", label: "Find my shoes", kicker: "Shoe Finder", title: "Find the shoes that fit your running", copy: "Four questions narrow hundreds of current road shoes to three, each with a reason." },
+  { tags: ["race-day", "training"], href: "/tools/fueling", label: "Plan my race fuel", kicker: "Fuel Finder", title: "Plan race day", copy: "Work out your race fuel before the start line, then rehearse it on your long runs." }
 ];
 
 export default async function ArticlePage({
@@ -196,12 +173,17 @@ export default async function ArticlePage({
 
   const pageUrl = `${SITE_URL}/rundown/${article.slug}`;
   const tags = article.tags.map((tag) => tag.toLowerCase());
-  const related = (await getGuides().catch(() => []))
+  const { shortAnswer, rest } = splitShortAnswer(article.body);
+  const topics = GUIDE_TOPICS.filter((topic) => tags.includes(topic.tag));
+
+  const allGuides = await getGuides().catch(() => []);
+  const photo = photoForGuide(tags, article.slug);
+  const related = allGuides
     .filter((guide) => guide.slug !== article.slug)
     .map((guide) => ({ guide, shared: guide.tags.filter((tag) => tags.includes(tag.toLowerCase())).length }))
     .filter((entry) => entry.shared > 0)
     .sort((a, b) => b.shared - a.shared || b.guide.published_at.localeCompare(a.guide.published_at))
-    .slice(0, 4)
+    .slice(0, 3)
     .map((entry) => entry.guide);
   const tool = TOOL_CTA.find((cta) => cta.tags.some((tag) => tags.includes(tag)));
 
@@ -213,13 +195,13 @@ export default async function ArticlePage({
     datePublished: article.published_at,
     dateModified: article.updated_at ?? article.published_at,
     mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
-    author: { "@type": "Person", name: article.author },
+    author: { "@type": "Organization", name: article.author },
     publisher: {
       "@type": "Organization",
       name: "Runner Toolkit",
       logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.svg` },
     },
-    ...(article.cover_image ? { image: article.cover_image } : {}),
+    image: article.cover_image ?? `${SITE_URL}${photo.src}`,
   };
 
   const breadcrumbs = {
@@ -237,76 +219,64 @@ export default async function ArticlePage({
       <JsonLd data={jsonLd} />
       <JsonLd data={breadcrumbs} />
 
-      <article className="container" style={{ maxWidth: "720px", margin: "0 auto" }}>
-        <div className="tool-hero">
-          <Link href="/rundown" className="brand-sub" style={{ display: "inline-block", marginBottom: "12px" }}>
-            &larr; Runner Guides
-          </Link>
+      <header className="page-hero on-photo rd-article-hero">
+        <div className="photo-duo">
+          <img src={photo.src} alt={photo.alt} fetchPriority="high" />
+        </div>
+        <div className="container" style={{ paddingBottom: shortAnswer ? 56 : 0 }}>
+          <Link href="/rundown" className="rd-back">&larr; Runner Guides</Link>
           <h1>{article.title}</h1>
-          <div style={{ display: "flex", gap: "12px", alignItems: "center", flexWrap: "wrap" }}>
-            <span className="brand-sub">
-              {article.author} &middot; {formatDate(article.published_at)}
-            </span>
-            {article.tags.map((tag) => (
-              <span key={tag} className="tag">{tag}</span>
+          <div className="rd-meta">
+            {topics.map((topic) => (
+              <Link key={topic.tag} href={`/rundown/tag/${topic.tag}`}>{topic.label}</Link>
             ))}
+            <span>{formatDate(article.published_at)}</span>
+            {article.updated_at && formatDate(article.updated_at) !== formatDate(article.published_at) ? (
+              <>
+                <span aria-hidden="true">·</span>
+                <span>Updated {formatDate(article.updated_at)}</span>
+              </>
+            ) : null}
+            <span aria-hidden="true">·</span>
+            <span>{readingMinutes(article.body)} min read</span>
           </div>
         </div>
+        <span className="photo-credit">
+          Photo: <a href={photo.source} target="_blank" rel="noopener noreferrer">{photo.author}</a>, {photo.license}
+        </span>
+      </header>
 
-        {article.cover_image && (
-          <img
-            src={article.cover_image}
-            alt={article.title}
-            width={720}
-            height={405}
-            decoding="async"
-            style={{
-              width: "100%",
-              height: "auto",
-              aspectRatio: "16 / 9",
-              borderRadius: "var(--radius-md)",
-              marginBottom: "32px",
-              maxHeight: "400px",
-              objectFit: "cover",
-            }}
-          />
-        )}
+      <article className="rd-article">
+        {shortAnswer ? (
+          <aside className="rd-answer" aria-label="Short answer">
+            <span className="eyebrow">Short answer</span>
+            <p>{renderInline(shortAnswer, "answer")}</p>
+          </aside>
+        ) : null}
 
-        <div className="section-tight">
-          {renderBody(article.body)}
-        </div>
+        <div className="rd-body">{renderBody(rest)}</div>
 
         {tool ? (
-          <div className="card card-accent" style={{ margin: "32px 0" }}>
-            <div className="stack">
-              <strong>{tool.title}</strong>
-              <p style={{ margin: 0, color: "var(--ink-2)" }}>{tool.copy}</p>
-              <div>
-                <Link className="btn btn-primary" href={tool.href}>{tool.label}</Link>
-              </div>
+          <div className="panel-dark rd-tool">
+            <div>
+              <span className="eyebrow">{tool.kicker}</span>
+              <h2>{tool.title}</h2>
+              <p>{tool.copy}</p>
             </div>
+            <Link className="btn btn-volt" href={tool.href}>{tool.label} &rarr;</Link>
           </div>
         ) : null}
-        {related.length ? (
-          <section style={{ margin: "32px 0" }} aria-labelledby="related-guides">
-            <h2 id="related-guides" style={{ fontFamily: "var(--font-display), sans-serif", margin: "0 0 12px" }}>Keep reading</h2>
-            <ul className="list">
-              {related.map((guide) => (
-                <li key={guide.slug} className="card card-outline">
-                  <Link href={`/rundown/${guide.slug}`}><strong>{guide.title}</strong></Link>
-                  {guide.excerpt ? <div className="brand-sub">{guide.excerpt}</div> : null}
-                </li>
-              ))}
-            </ul>
-          </section>
-        ) : null}
-        <div className="divider" />
-        <div style={{ padding: "12px 0 48px" }}>
-          <Link href="/rundown" className="btn btn-secondary">
-            &larr; Back to Runner Guides
-          </Link>
-        </div>
       </article>
+
+      {related.length ? (
+        <section className="container rd-related" aria-labelledby="related-guides">
+          <div className="section-head">
+            <h2 id="related-guides">Keep reading</h2>
+            <Link className="btn btn-sm" href="/rundown">All guides</Link>
+          </div>
+          <GuideCards guides={toCards(related)} topics={topicChips(allGuides)} photos={photoChoices()} />
+        </section>
+      ) : null}
     </div>
   );
 }

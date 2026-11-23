@@ -5,6 +5,28 @@ each `- [x]` with the slug it published. When fewer than 30 remain unchecked
 it adds new ones at the bottom (searches runners actually make, not already
 covered by a guide or a data page). Format: `- [ ] Working title | tags | angle`.
 
+No injury or pain treatment topics (shin splints, plantar fasciitis, runner's
+knee and the like): the site covers gear, fuel, music and training, and a
+guide that touches pain sends the reader to a doctor or physical therapist.
+
+## Next up (high search volume, answerable from our data)
+- [ ] Hoka Clifton 11 vs Brooks Ghost 18: which daily trainer to buy | shoes | stack, drop, weight and price side by side; who each is wrong for; link the compare page
+- [ ] Nike Pegasus 42 vs Pegasus 41: what changed and which to buy | shoes | spec differences from our data; the old model on sale is the value pick
+- [ ] Saucony Endorphin Speed 6 vs Endorphin Pro 5 | shoes, race-day | nylon vs carbon plate, weight, price; which runner each suits
+- [ ] Nike Vaporfly 4 vs Alphafly 4 | shoes, race-day | weight, stack, price and fit; marathon vs shorter races
+- [ ] How many miles a week to train for a marathon | training | weekly ranges by goal time and experience, longest run, build rate
+- [ ] How long should your longest run be for a half marathon | training | 10 to 12 miles for most; time on feet for slower runners
+- [ ] Zone 2 running: how slow, how long and how to tell you're in it | training | heart rate and talk test; why it feels too slow
+- [ ] Treadmill pace vs outdoor pace: the 1% incline setting | training | what the research measured and when it matters
+- [ ] What pace is a 2-hour half marathon, and what training it takes | training, race-day | 9:09 per mile; the 10K and long-run markers that predict it
+- [ ] How to pace a 10K | race-day, training | even splits, the first mile, and a per-mile plan from the pace calculator
+- [ ] What to eat the night before a marathon | fueling, race-day, nutrition | carbs in grams per kg, low fiber, familiar food, timing
+- [ ] Should you run the day before a race | race-day, training | a short shakeout: how far and how fast
+- [ ] Caffeine before a race: how much and when | fueling, race-day | 3 mg per kg, 30 to 60 minutes out; caffeinated gels from our table
+- [ ] Do you need electrolytes on a one-hour run | fueling | water is enough in cool weather; when sodium starts to matter
+- [ ] Running shoes that also work for walking all day | shoes | soft, stable trainers from our data; what to skip
+- [ ] How many rest days a week runners need | training, beginners | by weekly runs and experience; easy days vs days off
+
 ## Shoes
 - [x] best-running-shoes-for-beginners: Best running shoes for beginners: what actually matters in your first pair | shoes, beginners | fit and comfort over specs; name three safe starting points from the database
 - [x] how-long-do-running-shoes-last: How long do running shoes last? Miles, signs, and what the foam is doing | shoes | 300-500 miles is a range; the signs that beat the odometer
@@ -45,7 +67,7 @@ covered by a guide or a data page). Format: `- [ ] Working title | tags | angle`
 ## Music
 - [x] how-to-find-your-running-cadence: How to find your running cadence and pick songs to match | music, training | count steps for 30 seconds; BPM ranges by pace
 - [x] 170-bpm-running-songs: 170 BPM running songs and why 170 keeps coming up | music | the cadence myth and what is actually useful
-- [ ] 180 steps per minute: does it really prevent injury? | music, training | where 180 came from and what changing cadence does
+- [ ] 180 steps per minute: where the number came from and who it fits | music, training | Daniels' 1984 Olympic count; what raising cadence changes about stride
 - [ ] Running to music vs running without: what studies found | music | performance and perceived effort research
 - [ ] Half-time songs: why 85 BPM tracks work at 170 steps | music | how beat matching actually works
 - [ ] Building a tempo run playlist | music, training | steady BPM, rising energy, no slow bridges
@@ -81,7 +103,7 @@ covered by a guide or a data page). Format: `- [ ] Working title | tags | angle`
 - [ ] Fueling in hot weather | fueling, race-day | more fluid and sodium, same carbs
 - [ ] Glucose-fructose gels and the 2:1 ratio | fueling | why mixed sugars absorb more
 - [ ] Gels with no caffeine | fueling | when and why to skip caffeine
-- [ ] Stomach problems while running: causes and fixes | fueling | timing, fiber, fat, concentration
+- [ ] Why gels upset your stomach, and what to change in your fuel plan | fueling | concentration, timing, fiber and fat before the run; low-concentration gels from our table
 - [ ] How to take a gel while running | fueling, race-day | open, sip, water, toss responsibly
 - [ ] Ultramarathon fueling basics | fueling | hours, savory food, variety
 - [ ] Post-run recovery food: the first hour | nutrition | carbs and protein, real amounts
@@ -97,7 +119,7 @@ covered by a guide or a data page). Format: `- [ ] Working title | tags | angle`
 - [ ] Long run pacing: why slower builds you faster | training | time on feet
 - [ ] Race day pacing: why you should start slower | race-day | negative splits and glycogen
 - [ ] Taper: what to do in the last three weeks | training, race-day | cut volume, keep intensity
-- [ ] What to wear running in 40, 50 and 60 degrees | gear, training | link the attire guide
+- [ ] What to wear running in 40, 50 and 60 degrees | gear, training | a layer list for each temperature, with wind and rain adjustments
 - [ ] Running in the cold: layers and what to skip | gear | the 20-degree rule
 - [ ] Running in the heat: pace adjustments and fuel | training, fueling | slow down per degree
 - [ ] Marathon pace calculator: how to choose a realistic goal | race-day, training | race equivalents, honest limits
