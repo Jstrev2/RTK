@@ -4,7 +4,7 @@ title: Your Gut Is Trainable: How to Practice Race Fueling Before It Counts
 excerpt: The runners who take gels at mile 18 without drama practiced it for months. Gut training is real, it's boring, and it's the cheapest fitness you'll ever buy.
 tags: fueling, training, race-day
 author: Runner Toolkit
-published_at: 2026-08-07T16:30:00Z
+published_at: 2026-08-07T16:30:00+00:00
 ---
 Every marathon has a stretch after mile 16 where you can watch fueling plans die. Runners slowing to walk through aid stations, hands on knees, doing math about porta-potties. Most of them made the same bet: that a stomach which had never handled 60 grams of carbs an hour at race effort would figure it out on the day.
 

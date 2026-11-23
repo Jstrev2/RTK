@@ -4,7 +4,7 @@ title: Two Pairs Is a Rotation: A Sane Guide to Rotating Running Shoes
 excerpt: Shoe rotation gets sold as a five-shoe collection project. It isn't. Here's the two-pair version that covers almost everyone, and the honest case for a third.
 tags: gear, shoes, training
 author: Runner Toolkit
-published_at: 2026-08-07T16:00:00Z
+published_at: 2026-08-07T16:00:00+00:00
 ---
 Somewhere along the way, "rotate your shoes" turned into "own a shoe wardrobe." Shoe content loves the five-slot rotation: the daily, the max-cushion recovery shoe, the tempo shoe, the race shoe, the trail shoe. That's a fun collection. It is not a requirement for running well.
 

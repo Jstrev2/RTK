@@ -4,8 +4,8 @@ import BrandMark from "@/components/brand-mark";
 const toolLinks = [
   { href: "/tools/shoe-selector", label: "Shoe Finder" },
   { href: "/shoes", label: "Shoe Database" },
-  { href: "/tools/music", label: "Running Music" },
-  { href: "/tools/fueling", label: "Fuel Planner" },
+  { href: "/tools/music", label: "Music Finder" },
+  { href: "/tools/fueling", label: "Fuel Finder" },
   { href: "/tools/pace-calculator", label: "Pace Calculator" },
   { href: "/tools/attire-guide", label: "What to Wear Running" }
 ];
@@ -29,10 +29,11 @@ export default function SiteFooter() {
           ))}
         </div>
         <div className="stack">
-          <strong>Training</strong>
-          <Link href="/tools/training-plans">Free training plans</Link>
-          <Link href="/rescue">Injury Rescue</Link>
+          <strong>Read</strong>
           <Link href="/rundown">Runner Guides</Link>
+          <Link href="/shoes/best">Best running shoes</Link>
+          <Link href="/music">Running songs by BPM</Link>
+          <Link href="/fuel">Race fuel plans</Link>
         </div>
         <div className="stack">
           <strong>Trust</strong>

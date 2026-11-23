@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import AccountGate, { SignupCard } from "@/components/account-gate";
 import { getFuelRetailerLinks } from "@/lib/affiliate";
 import {
   buildFuelingPlan,
@@ -196,6 +197,7 @@ function FuelShopLinks({ product }: { product: FuelingProduct }) {
 
 export default function FuelingPage() {
   const { user, supabaseAvailable } = useAuth();
+  const signedIn = Boolean(user) || !supabaseAvailable;
   const [distance, setDistance] = useState("half");
   const [hours, setHours] = useState("1");
   const [minutes, setMinutes] = useState("55");
@@ -732,7 +734,7 @@ export default function FuelingPage() {
                   </div>
                 </div>
                 {plan.schedule.length ? (
-                  plan.schedule.map((step, index) => (
+                  plan.schedule.slice(0, signedIn ? plan.schedule.length : 2).map((step, index) => (
                     <div className="fuel-timeline-step" key={String(step.timeMinutes) + step.item}>
                       <span>{formatClock(step.timeMinutes)}</span>
                       <div>
@@ -752,6 +754,11 @@ export default function FuelingPage() {
                 )}
               </div>
 
+              {!signedIn && plan.schedule.length > 2 ? (
+                <SignupCard tool="fuel" unlocks={"all " + plan.schedule.length + " servings, your packing list and the practice log"} />
+              ) : null}
+
+              {signedIn ? (
               <div className="fuel-packing-card">
                 <div>
                   <span className="eyebrow">Pack this</span>
@@ -765,6 +772,7 @@ export default function FuelingPage() {
                   <li>One familiar backup serving when practical</li>
                 </ul>
               </div>
+              ) : null}
 
               <div className="fuel-plan-caution">
                 <strong>Practice, then personalize.</strong>
@@ -865,7 +873,13 @@ export default function FuelingPage() {
         </button>
       </section>
 
-      {catalogOpen && (
+      {catalogOpen && !signedIn && (
+        <section className="container">
+          <AccountGate tool="fuel" unlocks="every fuel product with its carbs, caffeine and sodium">{null}</AccountGate>
+        </section>
+      )}
+
+      {catalogOpen && signedIn && (
         <section className="container fuel-catalog" aria-labelledby="fuel-catalog-title">
           <div className="fuel-catalog-heading">
             <div>
@@ -972,7 +986,13 @@ export default function FuelingPage() {
         </button>
       </section>
 
-      {practiceOpen && (
+      {practiceOpen && !signedIn && (
+        <section className="container">
+          <AccountGate tool="fuel" unlocks="the practice log that remembers how each product sat">{null}</AccountGate>
+        </section>
+      )}
+
+      {practiceOpen && signedIn && (
         <section className="container fuel-practice-panel">
           <div className="fuel-practice-form">
             <div>
@@ -1070,11 +1090,11 @@ export default function FuelingPage() {
       <section className="container next-step-card fuel-next-step">
         <div>
           <span className="eyebrow">Put it into training</span>
-          <h2>Practice this rhythm on the right long runs.</h2>
-          <p>Choose a free plan, then use training to make the fuel plan familiar.</p>
+          <h2>Practice this rhythm on your long runs.</h2>
+          <p>See ready-made fuel plans for every race distance and finish time, then rehearse yours before race day.</p>
         </div>
-        <Link className="btn btn-primary" href="/tools/training-plans">
-          Choose a training plan
+        <Link className="btn btn-primary" href="/fuel">
+          Browse race fuel plans
         </Link>
       </section>
 

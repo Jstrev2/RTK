@@ -14,17 +14,17 @@ export default function AboutPage() {
         <span className="eyebrow">About Runner Toolkit</span>
         <h1>Running creates enough hard decisions. The small ones should be easier.</h1>
         <p>
-          Runner Toolkit exists to turn shoe research, playlist hunting, fuel
-          math, and disrupted training plans into clear next steps.
+          Runner Toolkit exists to turn shoe research, playlist hunting and fuel
+          math into clear next steps.
         </p>
       </section>
       <section className="section container prose-block">
         <h2 className="section-title">Run smarter. Guess less.</h2>
         <p>
-          The free tools are the product, not a trial. They help a runner choose
-          shoes, fuel, pace, and a starting training plan. Runner Toolkit earns
-          money through clearly disclosed shoe and fuel links and through
-          Injury Rescue when an injury interrupts a training plan.
+          Everything here is free. A free account opens the full results of
+          the Shoe Finder, Music Finder and Fuel Finder and keeps what you save.
+          Runner Toolkit earns money only through clearly disclosed shoe and
+          fuel links, and those links never decide what gets recommended.
         </p>
         <p>
           We are building for committed recreational runners: people training

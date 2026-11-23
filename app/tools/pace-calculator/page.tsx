@@ -292,8 +292,8 @@ export default function PaceCalculatorPage() {
           doesn&apos;t work that way. Most runners slow as the distance
           doubles, so treat a marathon prediction from a 5K time as a ceiling,
           not a promise. The longer the jump, the more training it takes to
-          make the number real. A <Link href="/tools/training-plans">training
-          plan</Link> is how you close that gap.
+          make the number real. Our <Link href="/rundown">runner guides</Link> cover
+          how to close that gap.
         </p>
       </section>
     </div>

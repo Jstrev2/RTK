@@ -3,6 +3,8 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import SaveButton from "@/components/save-button";
+import AccountGate, { SignupCard } from "@/components/account-gate";
+import { useAuth } from "@/components/auth-provider";
 import { songs as initialSongs, type Song } from "@/lib/data";
 import { getSupabaseClient } from "@/lib/supabase-client";
 
@@ -260,6 +262,8 @@ const dedupeSongs = (songs: Song[]) => {
 };
 
 export default function MusicToolsPage() {
+  const { user, supabaseAvailable } = useAuth();
+  const signedIn = Boolean(user) || !supabaseAvailable;
   const [songs, setSongs] = useState<Song[]>(initialSongs);
   const [workout, setWorkout] = useState<Workout>("easy_run");
   const [duration, setDuration] = useState(45);
@@ -683,7 +687,7 @@ export default function MusicToolsPage() {
           </div>
 
           <div className="music-phase-list">
-            {playlist.map((phase) => (
+            {playlist.slice(0, signedIn ? playlist.length : 1).map((phase) => (
               <section className={"music-phase-block music-phase-block-" + phase.id} key={phase.id}>
                 <div className="music-phase-heading">
                   <div>
@@ -723,6 +727,9 @@ export default function MusicToolsPage() {
             ))}
           </div>
 
+          {!signedIn ? (
+            <SignupCard tool="music" unlocks="the rest of this playlist, timed to your run, with one-tap Spotify links" />
+          ) : (
           <div className="music-playlist-actions">
             <button className="btn btn-primary" type="button" onClick={copyPlaylist}>
               {copyStatus || "Copy full playlist"}
@@ -748,6 +755,7 @@ export default function MusicToolsPage() {
               Give me another mix
             </button>
           </div>
+          )}
 
           <div className="music-safety-note">
             Set the playlist before moving. Keep volume low enough to hear traffic,
@@ -779,7 +787,13 @@ export default function MusicToolsPage() {
         </button>
       </section>
 
-      {catalogOpen && (
+      {catalogOpen && !signedIn && (
+        <section className="container">
+          <AccountGate tool="music" unlocks="the full song catalog with BPM for every track">{null}</AccountGate>
+        </section>
+      )}
+
+      {catalogOpen && signedIn && (
         <section className="container music-catalog" aria-labelledby="music-catalog-title">
           <div className="music-catalog-heading">
             <div>

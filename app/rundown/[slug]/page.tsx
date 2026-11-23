@@ -6,6 +6,7 @@ import { cache } from "react";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 import JsonLd from "@/components/json-ld";
 import { SITE_URL } from "@/lib/seo";
+import { getGuides } from "@/lib/guides";
 
 export const revalidate = 3600;
 
@@ -177,6 +178,13 @@ function renderBody(body: string) {
   });
 }
 
+const TOOL_CTA = [
+  { tags: ["music"], href: "/tools/music", label: "Build my playlist", title: "Get a playlist timed to your run", copy: "The Music Finder picks songs at your cadence for the workout and length you choose, each one a tap from Spotify." },
+  { tags: ["fueling", "nutrition"], href: "/tools/fueling", label: "Plan my fuel", title: "Turn this into your own fuel plan", copy: "The Fuel Finder works out how much to take and when for your distance and finish time, with a packing list." },
+  { tags: ["shoes", "gear"], href: "/tools/shoe-selector", label: "Find my shoes", title: "Find the shoes that fit your run", copy: "Answer four questions and the Shoe Finder narrows hundreds of current road shoes to three, each with a reason." },
+  { tags: ["race-day", "training", "beginners"], href: "/tools/fueling", label: "Plan my race fuel", title: "Plan race day", copy: "Work out your race fuel and pacing before the start line, then rehearse it on your long runs." }
+];
+
 export default async function ArticlePage({
   params,
 }: {
@@ -187,6 +195,15 @@ export default async function ArticlePage({
   if (!article) notFound();
 
   const pageUrl = `${SITE_URL}/rundown/${article.slug}`;
+  const tags = article.tags.map((tag) => tag.toLowerCase());
+  const related = (await getGuides().catch(() => []))
+    .filter((guide) => guide.slug !== article.slug)
+    .map((guide) => ({ guide, shared: guide.tags.filter((tag) => tags.includes(tag.toLowerCase())).length }))
+    .filter((entry) => entry.shared > 0)
+    .sort((a, b) => b.shared - a.shared || b.guide.published_at.localeCompare(a.guide.published_at))
+    .slice(0, 4)
+    .map((entry) => entry.guide);
+  const tool = TOOL_CTA.find((cta) => cta.tags.some((tag) => tags.includes(tag)));
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -259,6 +276,30 @@ export default async function ArticlePage({
           {renderBody(article.body)}
         </div>
 
+        {tool ? (
+          <div className="card card-accent" style={{ margin: "32px 0" }}>
+            <div className="stack">
+              <strong>{tool.title}</strong>
+              <p style={{ margin: 0, color: "var(--ink-2)" }}>{tool.copy}</p>
+              <div>
+                <Link className="btn btn-primary" href={tool.href}>{tool.label}</Link>
+              </div>
+            </div>
+          </div>
+        ) : null}
+        {related.length ? (
+          <section style={{ margin: "32px 0" }} aria-labelledby="related-guides">
+            <h2 id="related-guides" style={{ fontFamily: "var(--font-display), sans-serif", margin: "0 0 12px" }}>Keep reading</h2>
+            <ul className="list">
+              {related.map((guide) => (
+                <li key={guide.slug} className="card card-outline">
+                  <Link href={`/rundown/${guide.slug}`}><strong>{guide.title}</strong></Link>
+                  {guide.excerpt ? <div className="brand-sub">{guide.excerpt}</div> : null}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
         <div className="divider" />
         <div style={{ padding: "12px 0 48px" }}>
           <Link href="/rundown" className="btn btn-secondary">

@@ -4,6 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import BuyLinks from "@/components/buy-links";
 import SaveButton from "@/components/save-button";
+import AccountGate, { SignupCard } from "@/components/account-gate";
+import { useAuth } from "@/components/auth-provider";
 import { shoeOptions, shoes as fallbackShoes, type Shoe } from "@/lib/data";
 import { getSupabaseClient } from "@/lib/supabase-client";
 import {
@@ -90,6 +92,8 @@ const recommendationReason = (shoe: ScoredShoe, index: number) => {
 };
 
 export default function ShoeSelectorPage() {
+  const { user, supabaseAvailable } = useAuth();
+  const signedIn = Boolean(user) || !supabaseAvailable;
   const [allShoes, setAllShoes] = useState<Shoe[]>(fallbackShoes);
   const [loading, setLoading] = useState(true);
   const [usageTypes, setUsageTypes] = useState<string[]>(["daily_trainer"]);
@@ -516,8 +520,9 @@ export default function ShoeSelectorPage() {
         </div>
 
         {recommendations.length ? (
+          <>
           <div className="shoe-recommendation-grid">
-            {recommendations.map((shoe, index) => {
+            {recommendations.slice(0, signedIn ? recommendations.length : 1).map((shoe, index) => {
               const label = recommendationLabels[index];
               return (
                 <article
@@ -561,6 +566,10 @@ export default function ShoeSelectorPage() {
               );
             })}
           </div>
+          {!signedIn && recommendations.length > 1 ? (
+            <SignupCard tool="shoes" unlocks="your other two matches, side-by-side compare and every shoe that fits" />
+          ) : null}
+          </>
         ) : (
           <div className="empty-state">
             <h3>No shoes fit that budget yet.</h3>
@@ -619,7 +628,13 @@ export default function ShoeSelectorPage() {
         </button>
       </section>
 
-      {catalogOpen && (
+      {catalogOpen && !signedIn && (
+        <section className="container">
+          <AccountGate tool="shoes" unlocks="every shoe that matches your answers">{null}</AccountGate>
+        </section>
+      )}
+
+      {catalogOpen && signedIn && (
         <section className="container shoe-catalog" aria-labelledby="catalog-title">
           <div className="shoe-catalog-heading">
             <div>

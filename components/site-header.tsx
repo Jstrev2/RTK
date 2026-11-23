@@ -6,15 +6,16 @@ import AuthActions from "@/components/auth-actions";
 import BrandMark from "@/components/brand-mark";
 
 const toolItems = [
-  { href: "/tools/shoe-selector", label: "Shoes" },
-  { href: "/tools/music", label: "Music" },
-  { href: "/tools/fueling", label: "Fuel" },
-  { href: "/rundown", label: "Guides" }
+  { href: "/tools/shoe-selector", label: "Shoe Finder" },
+  { href: "/tools/music", label: "Music Finder" },
+  { href: "/tools/fueling", label: "Fuel Finder" }
 ];
 
 const trainingItems = [
-  { href: "/tools/training-plans", label: "Free plans" },
-  { href: "/rescue", label: "Injured?", cta: true }
+  { href: "/shoes/best", label: "Best shoes" },
+  { href: "/music", label: "Songs by BPM" },
+  { href: "/fuel", label: "Fuel plans" },
+  { href: "/rundown", label: "Guides", cta: true }
 ];
 
 export default function SiteHeader() {
@@ -43,7 +44,7 @@ export default function SiteHeader() {
           </div>
           <span className="nav-separator" aria-hidden="true" />
           <div className="nav-cluster nav-cluster-training">
-            <span className="nav-cluster-label">Training</span>
+            <span className="nav-cluster-label">Read</span>
             <div className="nav-cluster-links">
               {trainingItems.map((item) => (
                 <Link

@@ -4881,3 +4881,124 @@ details[open] summary {
     justify-content: flex-start;
   }
 }
+
+/* Free-account gate (components/account-gate.tsx) */
+.account-gate {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  margin: 18px 0;
+  padding: 28px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  box-shadow: var(--shadow-soft);
+}
+.account-gate-loading {
+  min-height: 180px;
+  background: var(--fog);
+  box-shadow: none;
+}
+.account-gate-copy h3 {
+  margin: 8px 0 10px;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  line-height: 1.15;
+}
+.account-gate-copy p {
+  margin: 0;
+  color: var(--ink-2);
+}
+.account-gate-form {
+  display: grid;
+  gap: 8px;
+}
+.account-gate-form .btn {
+  margin-top: 8px;
+}
+.account-gate-form .text-button {
+  justify-self: start;
+}
+@media (max-width: 760px) {
+  .account-gate {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+}
+
+/* Homepage: four pillars (shoes, music, fuel, guides) */
+.launch-grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.launch-grid-4 .launch-card {
+  min-height: 420px;
+}
+.launch-grid-4 .launch-card h3 {
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+}
+.launch-guides {
+  color: #fffefa;
+  background: var(--ink);
+}
+.result-principles > a {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 6px 18px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  color: inherit;
+  text-decoration: none;
+}
+.result-principles > a p {
+  grid-column: 2;
+}
+.result-principles > a:hover strong {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 1180px) {
+  .launch-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 720px) {
+  .launch-grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .launch-grid-4 .launch-card {
+    min-height: 0;
+  }
+}
+
+/* Guide topics (app/rundown/guide-list.tsx) */
+.guide-topic-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.guide-topic-nav a {
+  padding: 8px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--card);
+}
+.guide-topic-nav a span {
+  color: var(--ink-3);
+  font-weight: 500;
+}
+.guide-topic-nav a.active,
+.guide-topic-nav a:hover {
+  color: #fffefa;
+  background: var(--ink);
+  border-color: var(--ink);
+}
+.guide-topic-nav a.active span,
+.guide-topic-nav a:hover span {
+  color: rgba(255, 254, 248, 0.7);
+}

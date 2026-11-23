@@ -4,7 +4,7 @@ title: Good Running Shoes Under $120: What You Give Up, What You Don't
 excerpt: The $150-and-up default is a marketing achievement, not a biomechanical fact. Here's what cheaper shoes actually cost you, and the five worth buying right now.
 tags: gear, shoes
 author: Runner Toolkit
-published_at: 2026-08-07T17:00:00Z
+published_at: 2026-08-07T17:00:00+00:00
 ---
 The average price of the ten most popular daily trainers in our database is about $150. None of them will make you meaningfully healthier than the shoes one shelf down. The budget tier is where brands quietly sell last year's ideas at honest prices, and for most training miles that's exactly what you want.
 

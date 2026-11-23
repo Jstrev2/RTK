@@ -25,7 +25,7 @@ export default function TermsPage() {
         <h2>Affiliate disclosure</h2>
         <p>Runner Toolkit may earn a commission from qualifying purchases through labeled commercial links. That relationship does not change the price paid or the recommendation methodology.</p>
         <h2>Paid access</h2>
-        <p>Paid features, billing intervals, renewals, and cancellation terms are shown at checkout. Contact hello@runnertoolkit.com for billing support.</p>
+        <p>Runner Toolkit is free. A free account is required to see full tool results and to save items. You can delete your account at any time by writing to hello@runnertoolkit.com.</p>
         <p>These terms require review by qualified counsel before commercial launch and are not a substitute for jurisdiction-specific legal terms.</p>
       </section>
     </div>

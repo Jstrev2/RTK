@@ -3,6 +3,7 @@ import { revalidatePath } from "next/cache";
 import { isAuthorized } from "@/lib/ingest/auth";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 import { syncShoeCatalog } from "@/lib/catalog-sync";
+import { runGuideSync } from "@/lib/guide-publish";
 import { submitToIndexNow } from "@/lib/indexnow";
 import { SITE_URL } from "@/lib/seo";
 
@@ -14,7 +15,8 @@ export const dynamic = "force-dynamic";
  * The one scheduled job (see vercel.json). Each day it:
  *   1. syncs the shoe catalog from GitHub into the database,
  *   2. tells search engines about any shoe pages that changed,
- *   3. as a side effect, touches the database so Supabase's free tier never
+ *   3. publishes any guides on GitHub that are not live yet,
+ *   4. as a side effect, touches the database so Supabase's free tier never
  *      pauses the project for inactivity.
  *
  * Auth: when CRON_SECRET is set in Vercel, Vercel's scheduler sends it and
@@ -64,7 +66,11 @@ export async function GET(request: Request) {
       ]);
     }
 
-    return NextResponse.json({ ok: catalog.ok, catalog, indexNow }, { status: catalog.ok ? 200 : 500 });
+    // Guides publish themselves when the writing routine merges; this is the
+    // fallback in case its call to /api/guides/sync didn't land.
+    const [guides] = dryRun ? [{ skipped: "dry run" }] : await runGuideSync().catch((error) => [{ ok: false, error: (error as Error).message }]);
+
+    return NextResponse.json({ ok: catalog.ok, catalog, indexNow, guides }, { status: catalog.ok ? 200 : 500 });
   } catch (error) {
     return NextResponse.json({ ok: false, error: (error as Error).message }, { status: 500 });
   }

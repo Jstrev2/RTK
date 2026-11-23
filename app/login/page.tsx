@@ -44,7 +44,7 @@ function LoginForm() {
       return;
     }
 
-    const { error } = await supabase.auth.signUp({
+    const { data: signUpData, error } = await supabase.auth.signUp({
       email,
       password
     });
@@ -55,6 +55,10 @@ function LoginForm() {
       return;
     }
 
+    if (signUpData.session) {
+      router.push(searchParams.get("redirect") ?? "/account");
+      return;
+    }
     setStatus("success");
     setMessage("Check your email to confirm your account.");
   };
@@ -63,7 +67,7 @@ function LoginForm() {
     <div>
       <section className="tool-hero container">
         <h1>Sign in</h1>
-        <p>Save shoe picks, fuel plans, and your injury comeback schedule in one place.</p>
+        <p>A free account opens the full Shoe Finder, Music Finder and Fuel Finder results and keeps what you save.</p>
       </section>
 
       <section className="section container">
@@ -85,28 +89,6 @@ function LoginForm() {
                 >
                   Create account
                 </button>
-              </div>
-
-              <button
-                className="btn btn-secondary"
-                type="button"
-                style={{ width: "100%" }}
-                onClick={async () => {
-                  const supabase = getSupabaseClient();
-                  if (!supabase) return;
-                  await supabase.auth.signInWithOAuth({
-                    provider: "google",
-                    options: { redirectTo: `${window.location.origin}/account` }
-                  });
-                }}
-              >
-                Continue with Google
-              </button>
-
-              <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                <div className="divider" style={{ flex: 1 }} />
-                <span className="brand-sub">or</span>
-                <div className="divider" style={{ flex: 1 }} />
               </div>
 
               <form className="form-grid" onSubmit={handleSubmit}>
@@ -145,12 +127,10 @@ function LoginForm() {
             <div className="stack">
               <strong>Why create a free account?</strong>
               <ul className="list">
-                <li className="card card-outline">Save shoes, playlists, and plans across devices.</li>
-                <li className="card card-outline">Keep fuel practice notes and useful results together.</li>
-                <li className="card card-outline">
-                  Using Injury Rescue? Your rebuilt comeback schedule lives
-                  here, and unlocking the full plan requires an account.
-                </li>
+                <li className="card card-outline">See every shoe match, not just the first one.</li>
+                <li className="card card-outline">Get the full playlist for your run, timed to your cadence.</li>
+                <li className="card card-outline">Get your complete fuel schedule, packing list and practice log.</li>
+                <li className="card card-outline">Save shoes, songs and fuel across devices. Free, always.</li>
               </ul>
             </div>
           </div>
