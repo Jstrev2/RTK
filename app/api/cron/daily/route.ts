@@ -115,7 +115,7 @@ export async function GET(request: Request) {
     // fallback in case its call to /api/guides/sync didn't land.
     const [guides] = dryRun ? [{ skipped: "dry run" }] : await runGuideSync().catch((error) => [{ ok: false, error: (error as Error).message }]);
 
-    // Music gets whatever is left of the 60 seconds, up to 20, with 6 to spare.
+    // Music has its own job (/api/cron/music); here it only uses spare time.
     const musicBudget = Math.min(20_000, 54_000 - (Date.now() - startedAt));
     const music = dryRun || musicBudget < 6_000 ? { skipped: dryRun ? "dry run" : "no time left" } : await runDailyMusicIngest(supabase, musicBudget);
     if ("added" in music && music.added.length) revalidatePath("/api/music/library");

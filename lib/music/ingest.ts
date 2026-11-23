@@ -415,14 +415,16 @@ export async function runDailyMusicIngest(db: Db, budgetMs = 25_000): Promise<Da
         .select("id", { count: "exact", head: true })
         .is("spotify_id", null)
         .not("isrc", "is", null);
-      const offset = count ? (day * 20) % count : 0;
+      // As many as the time allows (paced at 0.7 s a call), at most 80 a run.
+      const batch = 80;
+      const offset = count ? (day * batch) % count : 0;
       const { data } = await db
         .from("music_songs")
         .select(SONG_COLUMNS)
         .is("spotify_id", null)
         .not("isrc", "is", null)
         .order("popularity", { ascending: false, nullsFirst: false })
-        .range(offset, offset + 19);
+        .range(offset, offset + batch - 1);
       for (const row of (data ?? []) as unknown as SongRow[]) {
         if (Date.now() > deadline - 2_000) break;
         const match = await spotifyOrSkip(row);
