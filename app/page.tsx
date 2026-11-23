@@ -23,8 +23,8 @@ interface RecentArticle {
 async function getHomeData() {
   const fallback = {
     shoes: 440,
-    gels: 56,
-    songs: 4400,
+    gels: 48,
+    songs: 2800,
     guides: 0,
     articles: [] as RecentArticle[]
   };
@@ -33,8 +33,9 @@ async function getHomeData() {
 
   const [shoeRes, gelRes, songRes, articleRes] = await Promise.all([
     supabase.from("shoe_models").select("*", { count: "exact", head: true }).eq("is_active", true),
-    supabase.from("fuel_gels").select("*", { count: "exact", head: true }).eq("is_active", true),
-    supabase.from("music_songs").select("*", { count: "exact", head: true }),
+    // Count only what the pages can use: gels with nutrition, songs with a measured BPM.
+    supabase.from("fuel_gels").select("*", { count: "exact", head: true }).eq("is_active", true).gt("carbs_g", 0),
+    supabase.from("music_songs").select("*", { count: "exact", head: true }).not("bpm", "is", null),
     supabase
       .from("articles")
       .select("slug, title, excerpt, tags, published_at", { count: "exact" })

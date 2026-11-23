@@ -765,7 +765,7 @@ export default function ShoeSelectorPage() {
       <section className="container section prose-block">
         <h2>How the shoe finder works</h2>
         <p>
-          Every shoe in our database of 220+ current road running shoes is
+          Every shoe in our database of 300+ current road running shoes is
           tagged for its job (daily miles, long runs, speed work, race day,
           recovery), its ride from firm to plush, its support level, its fit,
           and its price. Your answers filter and score that catalog. We show
