@@ -694,6 +694,51 @@
     "product_url": null
   },
   {
+    "item_key": "adidas-hyperboost-run",
+    "name": "Adidas Hyperboost Run",
+    "brand": "Adidas",
+    "price": 170,
+    "usage_types": [
+      "daily_trainer",
+      "speed_work",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 34,
+    "drop": 6,
+    "weight_mens": 8.6,
+    "weight_womens": 7.4,
+    "description": "A lower, lighter sibling of the Hyperboost Edge, with Hyperboost Pro foam, no plate and a Primeweave upper. It handles daily miles and tempo runs with more ground feel.",
+    "pros": [
+      "Light and bouncy without a plate",
+      "Versatile pace range",
+      "Grippy Lighttraxion outsole"
+    ],
+    "cons": [
+      "Less cushion than the Edge",
+      "Pricey"
+    ],
+    "popularity": 66,
+    "release_year": 2026,
+    "release_date": "2026-10-13",
+    "product_url": null
+  },
+  {
     "item_key": "adidas-supernova-prima",
     "name": "Adidas Supernova Prima",
     "brand": "Adidas",
@@ -1396,6 +1441,50 @@
     "product_url": null
   },
   {
+    "item_key": "altra-experience-flow-3",
+    "name": "Altra Experience Flow 3",
+    "brand": "Altra",
+    "price": 145,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "wide",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 32,
+    "drop": 4,
+    "weight_mens": 9,
+    "weight_womens": 7.5,
+    "description": "Altra's 4 mm drop daily trainer for runners who want a roomy toe box without going zero drop. EGO P35 foam and a rocker keep it light and smooth.",
+    "pros": [
+      "Wide toe box with a normal-ish drop",
+      "Light, easy ride",
+      "Improved heel fit"
+    ],
+    "cons": [
+      "Moderate cushion for very long runs",
+      "Upper is simple"
+    ],
+    "popularity": 70,
+    "release_year": 2026,
+    "release_date": "2026-01-29",
+    "product_url": null
+  },
+  {
     "item_key": "altra-experience-form",
     "name": "Altra Experience Form",
     "brand": "Altra",
@@ -1570,6 +1659,50 @@
     "popularity": 60,
     "release_year": 2023,
     "release_date": "2023-08-01",
+    "product_url": null
+  },
+  {
+    "item_key": "altra-paradigm-8",
+    "name": "Altra Paradigm 8",
+    "brand": "Altra",
+    "price": 170,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "extra_wide",
+    "cushion": "maximum",
+    "stability": "moderate",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 30,
+    "drop": 0,
+    "weight_mens": 10.9,
+    "weight_womens": 8.6,
+    "description": "Altra's zero-drop stability trainer, with GuideRail sidewalls and a softer EGO MAX midsole. The FootShape toe box gives toes room to spread on long runs.",
+    "pros": [
+      "Roomiest stability toe box",
+      "Gentle, unobtrusive support",
+      "Plush for long miles"
+    ],
+    "cons": [
+      "Zero drop needs a calf transition",
+      "Heavy"
+    ],
+    "popularity": 58,
+    "release_year": 2025,
+    "release_date": "2025-06-01",
     "product_url": null
   },
   {
@@ -2269,6 +2402,50 @@
     "product_url": null
   },
   {
+    "item_key": "asics-gel-nimbus-29",
+    "name": "ASICS Gel-Nimbus 29",
+    "brand": "ASICS",
+    "price": 170,
+    "usage_types": [
+      "daily_trainer",
+      "recovery_runs",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 43,
+    "drop": 8,
+    "weight_mens": 9.8,
+    "weight_womens": 8.4,
+    "description": "The newest Nimbus, with a softer, livelier FF LUXE midsole, a padded knit tongue and a hybrid ASICSGRIP outsole. Lighter than the Nimbus 28 and still one of the plushest daily trainers.",
+    "pros": [
+      "Plush, more responsive FF LUXE foam",
+      "Lighter than the 28",
+      "Grippy hybrid outsole"
+    ],
+    "cons": [
+      "Premium price",
+      "Too soft for fast workouts"
+    ],
+    "popularity": 88,
+    "release_year": 2026,
+    "release_date": "2026-10-30",
+    "product_url": null
+  },
+  {
     "item_key": "asics-gel-slowcush",
     "name": "ASICS GEL-Slowcush",
     "brand": "ASICS",
@@ -2353,6 +2530,50 @@
     "popularity": 60,
     "release_year": 2024,
     "release_date": "2024-09-01",
+    "product_url": null
+  },
+  {
+    "item_key": "asics-glideride-max-2",
+    "name": "ASICS GlideRide Max 2",
+    "brand": "ASICS",
+    "price": 170,
+    "usage_types": [
+      "long_run",
+      "daily_trainer",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 44,
+    "drop": 6,
+    "weight_mens": 9.4,
+    "weight_womens": 8.4,
+    "description": "A rockered max-cushion cruiser with FF BLAST MAX foam and a stiff EVA plate that rolls you forward. Lighter than the first version and made for long, steady miles.",
+    "pros": [
+      "Effortless rocker on long runs",
+      "Lighter than version one",
+      "Breathable woven upper"
+    ],
+    "cons": [
+      "Stiff feel some runners dislike",
+      "Not for quick turnover"
+    ],
+    "popularity": 60,
+    "release_year": 2025,
+    "release_date": "2025-12-01",
     "product_url": null
   },
   {
@@ -2611,6 +2832,49 @@
     "popularity": 80,
     "release_year": 2026,
     "release_date": "2026-08-01",
+    "product_url": null
+  },
+  {
+    "item_key": "asics-gt-4000-4",
+    "name": "ASICS GT-4000 4",
+    "brand": "ASICS",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "motion_control",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 34,
+    "drop": 8,
+    "weight_mens": 10.9,
+    "weight_womens": 8.6,
+    "description": "ASICS's most supportive trainer, with LITETRUSS medial support under an FF BLAST foam midsole and a PureGEL heel. It reins in strong overpronation without the brick-like feel of older motion control shoes.",
+    "pros": [
+      "Firm, dependable medial support",
+      "Softer ride than past GT-4000s",
+      "Durable AHAR outsole"
+    ],
+    "cons": [
+      "Heavy for faster days",
+      "Overkill for neutral runners"
+    ],
+    "popularity": 62,
+    "release_year": 2025,
+    "release_date": "2025-07-01",
     "product_url": null
   },
   {
@@ -3752,6 +4016,49 @@
     "product_url": null
   },
   {
+    "item_key": "brooks-ariel-gts-26",
+    "name": "Brooks Ariel GTS 26",
+    "brand": "Brooks",
+    "price": 170,
+    "usage_types": [
+      "daily_trainer",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "wide",
+    "cushion": "maximum",
+    "stability": "motion_control",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 38,
+    "drop": 10,
+    "weight_mens": 12.4,
+    "weight_womens": 11.1,
+    "description": "The women's version of the Beast GTS 26: GuideRails support, a wide base and soft DNA LOFT v3 foam. Made for runners who need the most support Brooks offers.",
+    "pros": [
+      "Maximum support with a soft ride",
+      "Roomy fit",
+      "Easy-on heel pull tab"
+    ],
+    "cons": [
+      "Heavy",
+      "Not for neutral runners"
+    ],
+    "popularity": 54,
+    "release_year": 2026,
+    "release_date": "2026-03-18",
+    "product_url": null
+  },
+  {
     "item_key": "brooks-beast-gts-24",
     "name": "Brooks Beast GTS 24",
     "brand": "Brooks",
@@ -3792,6 +4099,49 @@
     "popularity": 65,
     "release_year": 2024,
     "release_date": "2024-07-01",
+    "product_url": null
+  },
+  {
+    "item_key": "brooks-beast-gts-26",
+    "name": "Brooks Beast GTS 26",
+    "brand": "Brooks",
+    "price": 170,
+    "usage_types": [
+      "daily_trainer",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "wide",
+    "cushion": "maximum",
+    "stability": "motion_control",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 38,
+    "drop": 10,
+    "weight_mens": 12.4,
+    "weight_womens": 11.1,
+    "description": "Brooks's maximum support shoe, with GuideRails, a wide base and soft DNA LOFT v3 cushioning. The drop falls to 10 mm and a heel pull tab makes it easier to get on.",
+    "pros": [
+      "Most support Brooks makes",
+      "Soft, stable DNA LOFT v3",
+      "Generous fit, wide sizes"
+    ],
+    "cons": [
+      "Heavy",
+      "Too much shoe for neutral runners"
+    ],
+    "popularity": 66,
+    "release_year": 2026,
+    "release_date": "2026-03-18",
     "product_url": null
   },
   {
@@ -4419,6 +4769,51 @@
     "popularity": 86,
     "release_year": 2025,
     "release_date": "2025-11-01",
+    "product_url": null
+  },
+  {
+    "item_key": "brooks-glycerin-max-3",
+    "name": "Brooks Glycerin Max 3",
+    "brand": "Brooks",
+    "price": 200,
+    "usage_types": [
+      "long_run",
+      "recovery_runs",
+      "daily_trainer"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 45,
+    "drop": 6,
+    "weight_mens": 11,
+    "weight_womens": 9.9,
+    "description": "The third version of Brooks's tallest, softest trainer, with nitrogen-infused DNA Tuned foam and a rocker for long, easy miles. Specs below carry over from the Glycerin Max 2 until Brooks publishes the new ones.",
+    "pros": [
+      "Huge, soft stack",
+      "Smooth rocker",
+      "Stable for its height"
+    ],
+    "cons": [
+      "$200",
+      "Heavy and slow at speed"
+    ],
+    "popularity": 76,
+    "release_year": 2026,
+    "release_date": "2026-11-20",
     "product_url": null
   },
   {
@@ -7002,6 +7397,50 @@
     "product_url": null
   },
   {
+    "item_key": "mizuno-wave-horizon-9",
+    "name": "Mizuno Wave Horizon 9",
+    "brand": "Mizuno",
+    "price": 180,
+    "usage_types": [
+      "daily_trainer",
+      "long_run",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "moderate",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 38,
+    "drop": 8,
+    "weight_mens": 11.3,
+    "weight_womens": 10.2,
+    "description": "Mizuno's max-cushion stability shoe, pairing ENERZY NXT and ENERZY foams in a Foam Wave with rubber sidewalls for support. Soft, bouncy and steady for overpronators who log long miles.",
+    "pros": [
+      "Plush and supportive at once",
+      "Bouncy dual-foam midsole",
+      "Stretchy woven upper"
+    ],
+    "cons": [
+      "Heavy",
+      "Pricey for a stability trainer"
+    ],
+    "popularity": 58,
+    "release_year": 2026,
+    "release_date": "2026-02-27",
+    "product_url": null
+  },
+  {
     "item_key": "mizuno-wave-inspire-20",
     "name": "Mizuno Wave Inspire 20",
     "brand": "Mizuno",
@@ -7560,6 +7999,50 @@
     "popularity": 70,
     "release_year": 2025,
     "release_date": "2025-08-01",
+    "product_url": null
+  },
+  {
+    "item_key": "mizuno-wave-sky-prime",
+    "name": "Mizuno Wave Sky Prime",
+    "brand": "Mizuno",
+    "price": 200,
+    "usage_types": [
+      "long_run",
+      "recovery_runs",
+      "daily_trainer"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 40,
+    "drop": 6,
+    "weight_mens": 10.3,
+    "weight_womens": 8.9,
+    "description": "Mizuno's premium max-cushion trainer, with an ENERZY+ top layer for a soft but responsive ride and X10 rubber underneath. Made for long runs and easy recovery days.",
+    "pros": [
+      "Soft, balanced cushioning",
+      "Plush upper and knit tongue",
+      "Durable X10 outsole"
+    ],
+    "cons": [
+      "$200",
+      "Too much shoe for fast days"
+    ],
+    "popularity": 58,
+    "release_year": 2026,
+    "release_date": "2026-09-24",
     "product_url": null
   },
   {
@@ -10057,6 +10540,49 @@
     "product_url": null
   },
   {
+    "item_key": "on-cloudboom-volt",
+    "name": "On Cloudboom Volt",
+    "brand": "On",
+    "price": 200,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "narrow",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "lightweight",
+    "stack": 38,
+    "drop": 4,
+    "weight_mens": 7.4,
+    "weight_womens": 5.9,
+    "description": "On's lower-priced carbon racer, with dual-layer Helion HF foam over a carbon Speedboard and an aggressive rocker. Built for 5Ks through half marathons at a much friendlier price than the Cloudboom Strike.",
+    "pros": [
+      "Carbon plate for $200",
+      "Light and propulsive",
+      "Good for 5K to half marathon"
+    ],
+    "cons": [
+      "Narrow, race-style fit",
+      "Less forgiving than marathon super shoes"
+    ],
+    "popularity": 66,
+    "release_year": 2026,
+    "release_date": "2026-02-09",
+    "product_url": null
+  },
+  {
     "item_key": "on-cloudeclipse",
     "name": "On Cloudeclipse",
     "brand": "On",
@@ -10456,6 +10982,50 @@
     "product_url": null
   },
   {
+    "item_key": "on-cloudrunner-3-max",
+    "name": "On Cloudrunner 3 Max",
+    "brand": "On",
+    "price": 180,
+    "usage_types": [
+      "daily_trainer",
+      "recovery_runs",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "mild",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 38,
+    "drop": 8,
+    "weight_mens": 12,
+    "weight_womens": 10,
+    "description": "A taller, softer Cloudrunner with a dual-foam midsole, a wide base and raised sidewalls for a stable ride. Aimed at beginners and heavier runners who want comfort and support.",
+    "pros": [
+      "Stable and well cushioned",
+      "Plush step-in feel",
+      "Secure heel clip"
+    ],
+    "cons": [
+      "Heavy",
+      "Pricey"
+    ],
+    "popularity": 56,
+    "release_year": 2026,
+    "release_date": "2026-08-21",
+    "product_url": null
+  },
+  {
     "item_key": "on-cloudsurfer-2",
     "name": "On Cloudsurfer 2",
     "brand": "On",
@@ -10633,6 +11203,48 @@
     "popularity": 72,
     "release_year": 2024,
     "release_date": "2024-08-01",
+    "product_url": null
+  },
+  {
+    "item_key": "on-cloudswift-4",
+    "name": "On Cloudswift 4",
+    "brand": "On",
+    "price": 170,
+    "usage_types": [
+      "daily_trainer",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 33,
+    "drop": 8,
+    "weight_mens": 9.9,
+    "weight_womens": 9.5,
+    "description": "On's city running shoe, with dual-density Helion foam over a nylon-blend Speedboard and a knit upper. It is a cushioned daily trainer that also looks right off the run.",
+    "pros": [
+      "Comfortable knit upper",
+      "Smooth, rolling ride",
+      "Works for running and all day wear"
+    ],
+    "cons": [
+      "Pricey for a daily trainer",
+      "Firmer than max cushion shoes"
+    ],
+    "popularity": 64,
+    "release_year": 2025,
+    "release_date": "2025-03-01",
     "product_url": null
   },
   {
@@ -10853,6 +11465,48 @@
     "popularity": 68,
     "release_year": 2026,
     "release_date": "2026-06-01",
+    "product_url": null
+  },
+  {
+    "item_key": "puma-fast-fwd-nitro-elite-2",
+    "name": "Puma Fast-FWD Nitro Elite 2",
+    "brand": "Puma",
+    "price": 200,
+    "usage_types": [
+      "race_day",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "high"
+    ],
+    "toe_box": "narrow",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "lightweight",
+    "stack": 33,
+    "drop": 8,
+    "weight_mens": 4.4,
+    "weight_womens": 3.7,
+    "description": "A featherweight carbon road racer for 5K and 10K, with NITRO ELITE foam, a carbon PWRPLATE and an Ultraweave upper. It trades marathon cushioning for speed and ground feel.",
+    "pros": [
+      "Extremely light",
+      "Snappy carbon PWRPLATE",
+      "Reliable PUMAGRIP traction"
+    ],
+    "cons": [
+      "Too little cushion past a half marathon",
+      "Race-only fit"
+    ],
+    "popularity": 52,
+    "release_year": 2026,
+    "release_date": "2026-06-11",
     "product_url": null
   },
   {
@@ -11162,6 +11816,50 @@
     "product_url": null
   },
   {
+    "item_key": "puma-magnify-nitro-3",
+    "name": "Puma Magnify Nitro 3",
+    "brand": "Puma",
+    "price": 160,
+    "usage_types": [
+      "long_run",
+      "daily_trainer",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 38,
+    "drop": 10,
+    "weight_mens": 8.7,
+    "weight_womens": 7.7,
+    "description": "Puma's max-cushion long run shoe, now lighter with an updated NITROFOAM midsole and a stretchier knit upper. PUMAGRIP rubber gives it real traction and durability for high mileage.",
+    "pros": [
+      "Light for a max-cushion shoe",
+      "Excellent PUMAGRIP traction",
+      "Soft but not mushy"
+    ],
+    "cons": [
+      "Less bounce than supercritical foams",
+      "Upper runs warm"
+    ],
+    "popularity": 66,
+    "release_year": 2025,
+    "release_date": "2025-06-01",
+    "product_url": null
+  },
+  {
     "item_key": "puma-velocity-nitro-3",
     "name": "Puma Velocity Nitro 3",
     "brand": "Puma",
@@ -11249,6 +11947,51 @@
     "popularity": 80,
     "release_year": 2025,
     "release_date": "2025-08-01",
+    "product_url": null
+  },
+  {
+    "item_key": "puma-velocity-nitro-5",
+    "name": "Puma Velocity Nitro 5",
+    "brand": "Puma",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "long_run"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "low",
+      "average",
+      "high"
+    ],
+    "toe_box": "standard",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 37,
+    "drop": 8,
+    "weight_mens": 8.1,
+    "weight_womens": 6.7,
+    "description": "Puma's all-round daily trainer, lighter again with full-length NITROFOAM and PUMAGRIP rubber. It handles easy days, long runs and some tempo work for a fair price.",
+    "pros": [
+      "Light, versatile trainer",
+      "Great grip in the wet",
+      "Fair price"
+    ],
+    "cons": [
+      "Not the softest for recovery days",
+      "Plain upper"
+    ],
+    "popularity": 78,
+    "release_year": 2026,
+    "release_date": "2026-07-03",
     "product_url": null
   },
   {
@@ -11513,6 +12256,49 @@
     "popularity": 56,
     "release_year": 2025,
     "release_date": "2025-07-01",
+    "product_url": null
+  },
+  {
+    "item_key": "salomon-aero-blaze-4",
+    "name": "Salomon Aero Blaze 4",
+    "brand": "Salomon",
+    "price": 140,
+    "usage_types": [
+      "daily_trainer",
+      "speed_work"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "narrow",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 35,
+    "drop": 8,
+    "weight_mens": 8.1,
+    "weight_womens": 6.9,
+    "description": "A light, rockered road trainer with optiFOAM 2 and a snug engineered mesh upper. It feels quick enough for tempo days and comfortable enough for everyday miles.",
+    "pros": [
+      "Light and lively",
+      "Smooth rocker",
+      "Fair price"
+    ],
+    "cons": [
+      "Snug, narrow fit",
+      "Thin outsole coverage"
+    ],
+    "popularity": 56,
+    "release_year": 2026,
+    "release_date": "2026-07-06",
     "product_url": null
   },
   {
@@ -11816,6 +12602,49 @@
     "popularity": 48,
     "release_year": 2024,
     "release_date": "2024-11-01",
+    "product_url": null
+  },
+  {
+    "item_key": "saucony-echelon-11",
+    "name": "Saucony Echelon 11",
+    "brand": "Saucony",
+    "price": 155,
+    "usage_types": [
+      "daily_trainer",
+      "recovery_runs"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "extra_wide",
+    "cushion": "moderate",
+    "stability": "mild",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "heavyweight",
+    "stack": 35,
+    "drop": 8,
+    "weight_mens": 11.5,
+    "weight_womens": 10.3,
+    "description": "Saucony's roomy, straight-lasted trainer for wide feet and custom orthotics, with a soft PWRRUN midsole and full rubber coverage. Stable without a medial post.",
+    "pros": [
+      "Lots of room inside",
+      "Fits custom orthotics",
+      "Very durable outsole"
+    ],
+    "cons": [
+      "Heavy",
+      "Not built for speed"
+    ],
+    "popularity": 52,
+    "release_year": 2026,
+    "release_date": "2026-09-22",
     "product_url": null
   },
   {
@@ -12650,6 +13479,49 @@
     "popularity": 62,
     "release_year": 2026,
     "release_date": "2026-07-01",
+    "product_url": null
+  },
+  {
+    "item_key": "saucony-procyon-max",
+    "name": "Saucony Procyon Max",
+    "brand": "Saucony",
+    "price": 120,
+    "usage_types": [
+      "recovery_runs",
+      "daily_trainer"
+    ],
+    "foot_strike": [
+      "heel",
+      "midfoot"
+    ],
+    "cadence": [
+      "low",
+      "average"
+    ],
+    "toe_box": "standard",
+    "cushion": "maximum",
+    "stability": "mild",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "all",
+    "stack": 38,
+    "drop": 6,
+    "weight_mens": 10.7,
+    "weight_womens": 9.4,
+    "description": "A budget max-cushion shoe with a thick PWRRUN midsole, a broad base and raised sidewalls that add a touch of stability. Good for easy miles and long days on your feet.",
+    "pros": [
+      "Lots of cushion for $120",
+      "Stable broad platform",
+      "Works for walking and running"
+    ],
+    "cons": [
+      "Not lively at faster paces",
+      "Basic upper"
+    ],
+    "popularity": 50,
+    "release_year": 2026,
+    "release_date": "2026-06-23",
     "product_url": null
   },
   {
@@ -13928,6 +14800,49 @@
     "popularity": 62,
     "release_year": 2025,
     "release_date": "2025-10-23",
+    "product_url": null
+  },
+  {
+    "item_key": "under-armour-velociti-pro",
+    "name": "Under Armour Velociti Pro",
+    "brand": "Under Armour",
+    "price": 160,
+    "usage_types": [
+      "speed_work",
+      "daily_trainer"
+    ],
+    "foot_strike": [
+      "midfoot",
+      "forefoot"
+    ],
+    "cadence": [
+      "average",
+      "high"
+    ],
+    "toe_box": "narrow",
+    "cushion": "moderate",
+    "stability": "neutral",
+    "surfaces": [
+      "road"
+    ],
+    "weight_range": "lightweight",
+    "stack": 34,
+    "drop": 8.5,
+    "weight_mens": 9.5,
+    "weight_womens": 8.2,
+    "description": "A plated uptempo trainer with a supercritical UA Flow midsole, a full-length Pebax plate and no rubber outsole. It feels close to the ground and snappy for tempo runs and workouts.",
+    "pros": [
+      "Snappy Pebax plate",
+      "Grippy rubberless Flow foam",
+      "Often discounted"
+    ],
+    "cons": [
+      "Snug, narrow fit",
+      "Not soft enough for easy long runs"
+    ],
+    "popularity": 52,
+    "release_year": 2024,
+    "release_date": "2024-09-01",
     "product_url": null
   }
 ]

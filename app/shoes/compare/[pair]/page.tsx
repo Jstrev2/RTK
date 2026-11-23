@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
 import BuyLinks from "@/components/buy-links";
 import JsonLd from "@/components/json-ld";
+import ShoeBib from "@/components/shoe-bib";
+import { shoeToCard, shortParagraphs } from "@/lib/shoe-catalog";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
 import {
   capitalize,
@@ -26,7 +28,7 @@ import {
   whoSuits,
   type ContentShoe
 } from "@/lib/content/shoes";
-import styles from "../../best/content.module.css";
+import "@/components/shoes.css";
 
 export const revalidate = 86400;
 export const dynamicParams = true;
@@ -53,47 +55,44 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-const specRows: { label: string; value: (shoe: ContentShoe) => string }[] = [
-  { label: "Price (MSRP)", value: (s) => (s.price ? money(s.price) : "Not listed") },
-  { label: "Weight, men's", value: (s) => (s.weightMens ? oz(s.weightMens) : "Not listed") },
-  { label: "Weight, women's", value: (s) => (s.weightWomens ? oz(s.weightWomens) : "Not listed") },
+const specRows: { label: string; value: (shoe: ContentShoe) => string; better?: (shoe: ContentShoe) => number }[] = [
+  { label: "Price", value: (s) => (s.price ? money(s.price) : "n/a"), better: (s) => (s.price ? -s.price : -Infinity) },
+  { label: "Weight (M)", value: (s) => (s.weightMens ? oz(s.weightMens) : "n/a"), better: (s) => (s.weightMens ? -s.weightMens : -Infinity) },
+  { label: "Weight (W)", value: (s) => (s.weightWomens ? oz(s.weightWomens) : "n/a"), better: (s) => (s.weightWomens ? -s.weightWomens : -Infinity) },
   { label: "Heel stack", value: (s) => mm(s.stack) },
   { label: "Drop", value: (s) => mm(s.drop) },
   { label: "Cushion", value: (s) => cushionLabel(s.cushion) },
   { label: "Support", value: (s) => supportLabel(s.stability) },
   { label: "Toe box", value: (s) => toeBoxLabel(s.toeBox) },
-  { label: "Foot strike", value: (s) => (s.footStrike.length ? capitalize(joinWords(s.footStrike)) : "Any") },
-  { label: "Listed for", value: (s) => capitalize(joinWords(s.usageTypes.map(usageWords))) },
+  { label: "Best for", value: (s) => capitalize(joinWords(s.usageTypes.map(usageWords))) },
   { label: "Released", value: (s) => monthYear(s) }
 ];
 
-function ProsCons({ shoe }: { shoe: ContentShoe }) {
+function GoodBad({ shoe }: { shoe: ContentShoe }) {
   return (
-    <div className="card">
-      <div className="stack">
-        <strong>
-          <Link href={`/shoes/${shoe.id}`}>{shoeName(shoe)}</Link>
-        </strong>
-        {shoe.pros.length ? (
-          <>
-            <span className="label">Good</span>
-            <ul>
-              {shoe.pros.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </>
-        ) : null}
-        {shoe.cons.length ? (
-          <>
-            <span className="label">Watch for</span>
-            <ul>
-              {shoe.cons.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </>
-        ) : null}
+    <div className="panel">
+      <h3>
+        <Link href={`/shoes/${shoe.id}`}>{shoeName(shoe)}</Link>
+      </h3>
+      {shoe.pros.length ? (
+        <div className="goodbad good">
+          <ul>
+            {shoe.pros.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+      {shoe.cons.length ? (
+        <div className="goodbad bad" style={{ marginTop: 10 }}>
+          <ul>
+            {shoe.cons.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+      <div style={{ marginTop: 14 }}>
         <BuyLinks name={shoe.name} brand={shoe.brand} compact />
       </div>
     </div>
@@ -115,6 +114,7 @@ export default async function ComparisonPage({ params }: Props) {
   const verdicts = comparisonVerdicts(a, b);
   const shared = sharedCollections(collections, a, b);
   const others = (shoe: ContentShoe) => otherComparisons(comparisons, shoe.id, slug).slice(0, OTHER_LINKS);
+  const lead = shortParagraphs([comparisonLead(a, b)], 2)[0];
 
   const product = (shoe: ContentShoe) => ({
     "@type": "Product",
@@ -137,7 +137,7 @@ export default async function ComparisonPage({ params }: Props) {
   });
 
   return (
-    <div className="editorial-page">
+    <div>
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -160,150 +160,146 @@ export default async function ComparisonPage({ params }: Props) {
         }}
       />
 
-      <section className="tool-hero container">
-        <span className="eyebrow">
-          <Link href="/shoes">Shoe database</Link> · Head to head
-        </span>
-        <h1>{title}</h1>
-        <p>{comparisonLead(a, b)}</p>
-        <div className="button-row" style={{ marginTop: "20px" }}>
-          <Link className="btn btn-secondary btn-sm" href={`/shoes/${a.id}`}>
-            {nameA} specs
-          </Link>
-          <Link className="btn btn-secondary btn-sm" href={`/shoes/${b.id}`}>
-            {nameB} specs
-          </Link>
+      <section className="page-hero collection-hero">
+        <div className="container">
+          <nav className="shoe-detail-crumbs" aria-label="Breadcrumb">
+            <Link href="/shoes">All shoes</Link>
+            <span>Head to head</span>
+          </nav>
+          <h1>{title}</h1>
+          <p className="page-hero-sub">{lead}</p>
         </div>
       </section>
 
-      <section className="section container">
-        <div className="stack" style={{ gap: "18px" }}>
-          <h2 className="section-title">Which one suits you</h2>
-          <div className={styles.picks}>
-            <div className="card">
-              <p>{whoSuits(a, b)}</p>
-            </div>
-            <div className="card">
-              <p>{whoSuits(b, a)}</p>
-            </div>
-          </div>
+      <section className="container">
+        <div className="versus">
+          <ShoeBib shoe={shoeToCard(a)} eager />
+          <span className="versus-vs" aria-hidden="true">
+            VS
+          </span>
+          <ShoeBib shoe={shoeToCard(b)} eager />
         </div>
       </section>
 
-      <section className="section container">
-        <div className="stack" style={{ gap: "18px" }}>
-          <h2 className="section-title">The specs, side by side</h2>
-          <div className="table-wrap">
-            <table className={`table ${styles.compareTable}`}>
-              <thead>
-                <tr>
-                  <th>Spec</th>
-                  <th>
-                    <Link href={`/shoes/${a.id}`}>{nameA}</Link>
-                  </th>
-                  <th>
-                    <Link href={`/shoes/${b.id}`}>{nameB}</Link>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {specRows.map((row) => (
+      <section className="container shoe-section">
+        <h2>Side by side</h2>
+        <div className="table-wrap">
+          <table className="vs-table">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <span className="sr-only">Spec</span>
+                </th>
+                <th scope="col">{nameA}</th>
+                <th scope="col">{nameB}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {specRows.map((row) => {
+                const [va, vb] = row.better ? [row.better(a), row.better(b)] : [0, 0];
+                return (
                   <tr key={row.label}>
-                    <td>
-                      <strong>{row.label}</strong>
-                    </td>
-                    <td>{row.value(a)}</td>
-                    <td>{row.value(b)}</td>
+                    <th scope="row">{row.label}</th>
+                    <td className={row.better && va > vb ? "win" : undefined}>{row.value(a)}</td>
+                    <td className={row.better && vb > va ? "win" : undefined}>{row.value(b)}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {verdicts.some((v) => v.edge) ? (
+        <section className="container shoe-section">
+          <h2>Who wins what</h2>
+          <div className="table-wrap">
+            <table className="vs-table">
+              <tbody>
+                {verdicts.map((v) => (
+                  <tr key={v.dimension}>
+                    <th scope="row">{v.dimension}</th>
+                    <td className={v.edge ? "win" : undefined}>{v.edge ?? "Tie"}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-        </div>
-      </section>
-
-      <section className="section container">
-        <div className="stack" style={{ gap: "18px" }}>
-          <h2 className="section-title">Where each one wins</h2>
-          <div className={styles.verdicts}>
+          <details className="fineprint">
+            <summary>Why</summary>
             {verdicts.map((v) => (
-              <div key={v.dimension} className={styles.verdict}>
-                <strong>
-                  {v.dimension}
-                  {v.edge ? <span className={styles.edge}>Edge: {v.edge}</span> : null}
-                </strong>
-                <p>{v.text}</p>
-              </div>
+              <p key={v.dimension}>
+                <strong>{v.dimension}.</strong> {v.text}
+              </p>
             ))}
-          </div>
+          </details>
+        </section>
+      ) : null}
+
+      <section className="container shoe-section">
+        <h2>Pick it if...</h2>
+        <div className="verdict-pair">
+          {[
+            [a, b],
+            [b, a]
+          ].map(([x, y]) => (
+            <div key={x.id} className="panel">
+              {shortParagraphs([whoSuits(x, y)]).map((paragraph) => (
+                <p key={paragraph} style={{ margin: "0 0 8px" }}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="section container">
-        <div className="stack" style={{ gap: "18px" }}>
-          <h2 className="section-title">The tradeoffs on each</h2>
-          <div className="grid grid-2">
-            <ProsCons shoe={a} />
-            <ProsCons shoe={b} />
-          </div>
+      <section className="container shoe-section">
+        <h2>Good and not so good</h2>
+        <div className="verdict-pair">
+          <GoodBad shoe={a} />
+          <GoodBad shoe={b} />
         </div>
       </section>
 
-      <section className="section container">
-        <div className="stack" style={{ gap: "18px" }}>
-          {[a, b].map((shoe) => {
-            const list = others(shoe);
-            if (!list.length) return null;
-            return (
-              <div key={shoe.id} className="stack">
-                <span className="label">Other comparisons with the {shoeName(shoe)}</span>
-                <div className={styles.linkGrid}>
-                  {list.map(({ slug: otherSlug, other }) => (
-                    <Link key={otherSlug} className="tag" href={`/shoes/compare/${otherSlug}`}>
-                      vs {shoeName(other)}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-          {shared.length ? (
-            <div className="stack">
-              <span className="label">Lists with both shoes</span>
-              <div className={styles.linkGrid}>
-                {shared.map((c) => {
-                  const rankA = c.ranked.find((r) => r.shoe.id === a.id)?.rank;
-                  const rankB = c.ranked.find((r) => r.shoe.id === b.id)?.rank;
-                  return (
-                    <Link key={c.slug} className="tag" href={`/shoes/best/${c.slug}`}>
-                      Best {c.title} (#{rankA} and #{rankB})
-                    </Link>
-                  );
-                })}
+      <section className="container shoe-section">
+        {[a, b].map((shoe) => {
+          const list = others(shoe);
+          if (!list.length) return null;
+          return (
+            <div key={shoe.id} style={{ marginBottom: 18 }}>
+              <h3>More {shoeName(shoe)} matchups</h3>
+              <div className="compare-links">
+                {list.map(({ slug: otherSlug, other }) => (
+                  <Link key={otherSlug} className="chip" href={`/shoes/compare/${otherSlug}`}>
+                    vs {shoeName(other)}
+                  </Link>
+                ))}
               </div>
             </div>
-          ) : null}
-        </div>
+          );
+        })}
+        {shared.length ? (
+          <div>
+            <h3>Lists with both</h3>
+            <div className="compare-links">
+              {shared.map((c) => {
+                const rankA = c.ranked.find((r) => r.shoe.id === a.id)?.rank;
+                const rankB = c.ranked.find((r) => r.shoe.id === b.id)?.rank;
+                return (
+                  <Link key={c.slug} className="chip" href={`/shoes/best/${c.slug}`}>
+                    Best {c.title} (#{rankA}, #{rankB})
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        ) : null}
+        <p className="fineprint-inline">
+          Still a tie? The <Link className="text-link" href="/tools/shoe-selector">Shoe Finder</Link> picks three in three
+          taps. Runner Toolkit may earn a commission from retailer links; that never changes how we compare shoes.
+        </p>
       </section>
-
-      <section className="container next-step-card section">
-        <div>
-          <div className="eyebrow">Shoe Finder</div>
-          <h2>If it&apos;s still a tie, let your stride break it.</h2>
-          <p>
-            The Shoe Finder scores every shoe in our database against how you land, how far you run and what you want to
-            spend, so you can see where these two fall for you.
-          </p>
-        </div>
-        <Link className="btn btn-primary" href="/tools/shoe-selector">
-          Find my shoe
-        </Link>
-      </section>
-
-      <p className="container shoe-affiliate-note">
-        Runner Toolkit may earn a commission from retailer links. That never changes how we compare shoes or the price
-        you pay.
-      </p>
     </div>
   );
 }

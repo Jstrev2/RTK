@@ -1,21 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import BuyLinks from "@/components/buy-links";
 import JsonLd from "@/components/json-ld";
+import ShoeBib from "@/components/shoe-bib";
+import { shoeToCard, shortParagraphs } from "@/lib/shoe-catalog";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
 import {
   SHOWN_IN_LIST,
   collectionFaq,
   collectionIntro,
   collectionStats,
-  cushionLabel,
-  firstSentence,
   getCollection,
   getCollectionIndex,
   getComparisonIndex,
   listHeading,
-  lowerFirst,
   mm,
   money,
   oz,
@@ -23,11 +21,9 @@ import {
   rankingRule,
   relatedCollections,
   shoeName,
-  supportLabel,
-  tableHeading,
-  toeBoxLabel
+  supportLabel
 } from "@/lib/content/shoes";
-import styles from "../content.module.css";
+import "@/components/shoes.css";
 
 export const revalidate = 86400;
 export const dynamicParams = true;
@@ -62,17 +58,20 @@ export default async function CollectionPage({ params }: Props) {
 
   const [index, comparisons] = await Promise.all([getCollectionIndex(), getComparisonIndex()]);
   const path = `/shoes/best/${collection.slug}`;
-  const intro = collectionIntro(collection);
+  const intro = shortParagraphs([...collectionIntro(collection), rankingRule(collection)]);
   const faq = collectionFaq(collection);
   const related = relatedCollections(index, collection);
   const shown = collection.ranked.slice(0, SHOWN_IN_LIST);
+  const podium = shown.slice(0, 3);
+  const chasers = shown.slice(3);
   const rest = collection.ranked.slice(SHOWN_IN_LIST);
   const [first, second] = collection.ranked;
   const headToHead = second ? comparisons.bySlug.get(pairSlug(first.shoe.id, second.shoe.id)) : undefined;
   const title = `Best ${collection.title}`;
+  const st = collectionStats(collection);
 
   return (
-    <div className="editorial-page">
+    <div>
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -109,196 +108,192 @@ export default async function CollectionPage({ params }: Props) {
         }}
       />
 
-      <section className="tool-hero container">
-        <span className="eyebrow">
-          <Link href="/shoes/best">Best running shoes</Link> · {collection.ranked.length} ranked
-        </span>
-        <h1>{title}</h1>
-        <div className={styles.intro}>
-          {intro.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+      <section className="page-hero collection-hero">
+        <div className="container">
+          <nav className="shoe-detail-crumbs" aria-label="Breadcrumb">
+            <Link href="/shoes">All shoes</Link>
+            <Link href="/shoes/best">Best running shoes</Link>
+          </nav>
+          <h1>{title}</h1>
+          <p className="page-hero-sub">
+            {listHeading(collection)}. Ranked by popularity, freshness and fit.
+          </p>
+          <div className="bib-stats">
+            <span className="split">
+              <b>{st.count}</b> shoes
+            </span>
+            <span className="split">
+              <b>
+                {money(st.minPrice)} to {money(st.maxPrice)}
+              </b>
+            </span>
+            <span className="split">
+              median <b>{oz(st.medianWeight)}</b>
+            </span>
+            <span className="split">
+              median <b>{mm(st.medianDrop)}</b> drop
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section className="container shoe-section">
+        <div className="bib-grid finder-results-grid">
+          {podium.map((row, i) => (
+            <ShoeBib
+              key={row.shoe.id}
+              shoe={shoeToCard(row.shoe)}
+              number={row.rank}
+              badge={i === 0 ? "Top pick" : undefined}
+              reason={row.shoe.pros[0] ? `${row.shoe.pros[0]}.` : undefined}
+              eager
+            />
           ))}
         </div>
-        <div className="button-row" style={{ marginTop: "20px" }}>
-          <Link className="btn btn-primary" href="/tools/shoe-selector">
-            Match a shoe to how I run
-          </Link>
-          <Link className="btn btn-ghost" href="/shoes">
-            All shoes
-          </Link>
-        </div>
       </section>
 
-      <section className="section container">
-        <div className="stack" style={{ gap: "18px" }}>
-          <h2 className="section-title">{listHeading(collection)}</h2>
-          <p className={styles.rule}>{rankingRule(collection)}</p>
-          <ol className={styles.ranked}>
-            {shown.map((row) => {
+      {chasers.length ? (
+        <section className="container shoe-section">
+          <h2>The rest of the top {shown.length}</h2>
+          <div className="collection-rank">
+            {chasers.map((row) => {
               const shoe = row.shoe;
               return (
-                <li key={shoe.id} className={styles.item}>
-                  <div className={styles.rank} aria-label={`Rank ${row.rank}`}>
-                    {row.rank}
-                  </div>
-                  <div>
-                    <div className={styles.itemTop}>
-                      <h3>
-                        <Link href={`/shoes/${shoe.id}`}>{shoeName(shoe)}</Link>
-                      </h3>
-                      <span className={styles.score}>
-                        {row.score} pts = {row.popularity} popularity
-                        {row.recency ? ` + ${row.recency} recency` : ""}
-                        {row.fit ? ` + ${row.fit} fit` : ""}
+                <Link key={shoe.id} href={`/shoes/${shoe.id}`} className="collection-row">
+                  <span className="bib-photo">
+                    {shoe.imageUrl ? (
+                      <img src={shoe.imageUrl} alt={`${shoeName(shoe)} running shoe`} width={900} height={600} loading="lazy" />
+                    ) : (
+                      <span className="bib-photo-fallback">{shoe.brand}</span>
+                    )}
+                  </span>
+                  <span className="collection-row-body">
+                    <span className="collection-row-title">
+                      <span className="clock">{String(row.rank).padStart(2, "0")}</span>
+                      <strong>{shoeName(shoe)}</strong>
+                    </span>
+                    <span className="bib-stats">
+                      <span className="split">
+                        <b>{shoe.price ? money(shoe.price) : "n/a"}</b>
                       </span>
-                    </div>
-                    <ul className={styles.specs}>
-                      <li><span>Price</span><strong>{shoe.price ? money(shoe.price) : "Not listed"}</strong></li>
-                      <li><span>Weight</span><strong>{shoe.weightMens ? oz(shoe.weightMens) : "Not listed"}</strong></li>
-                      <li><span>Stack</span><strong>{mm(shoe.stack)}</strong></li>
-                      <li><span>Drop</span><strong>{mm(shoe.drop)}</strong></li>
-                      <li><span>Support</span><strong>{supportLabel(shoe.stability)}</strong></li>
-                    </ul>
-                    {shoe.description ? <p className={styles.blurb}>{firstSentence(shoe.description)}</p> : null}
-                    {shoe.pros.length || shoe.cons.length ? (
-                      <p className={styles.proCon}>
-                        {shoe.pros.length ? <>Good: {lowerFirst(shoe.pros[0])}. </> : null}
-                        {shoe.cons.length ? <>Watch for: {lowerFirst(shoe.cons[0])}.</> : null}
-                      </p>
-                    ) : null}
-                    <div className={styles.itemActions}>
-                      <Link className="btn btn-xs btn-ghost" href={`/shoes/${shoe.id}`}>
-                        Full specs
-                      </Link>
-                      <BuyLinks name={shoe.name} brand={shoe.brand} compact />
-                    </div>
-                  </div>
-                </li>
+                      {shoe.weightMens ? (
+                        <span className="split">
+                          <b>{shoe.weightMens}</b>oz
+                        </span>
+                      ) : null}
+                      <span className="split">
+                        <b>{shoe.drop}</b>mm drop
+                      </span>
+                      <span className="split">{supportLabel(shoe.stability)}</span>
+                    </span>
+                    {shoe.pros[0] ? <p>{shoe.pros[0]}.</p> : null}
+                  </span>
+                </Link>
               );
             })}
-          </ol>
-          {rest.length ? (
-            <div className="stack">
-              <span className="label">Also on the list, #{SHOWN_IN_LIST + 1} to #{collection.ranked.length}</span>
-              <div className={styles.linkGrid}>
-                {rest.map((row) => (
-                  <Link key={row.shoe.id} className="tag" href={`/shoes/${row.shoe.id}`}>
-                    {row.rank}. {shoeName(row.shoe)}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          ) : null}
-          {headToHead ? (
-            <p>
-              The top two, side by side:{" "}
-              <Link className="text-link" href={`/shoes/compare/${headToHead.slug}`}>
-                {shoeName(first.shoe)} vs {shoeName(second.shoe)}, spec by spec
-              </Link>
-            </p>
-          ) : null}
-        </div>
-      </section>
-
-      <section className="section container">
-        <div className="stack" style={{ gap: "18px" }}>
-          <h2 className="section-title">{tableHeading(collection)}</h2>
-          <div className="table-wrap">
-            <table className="table">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Shoe</th>
-                  <th>Price</th>
-                  <th>Weight (M / W)</th>
-                  <th>Heel stack</th>
-                  <th>Drop</th>
-                  <th>Cushion</th>
-                  <th>Support</th>
-                  <th>Toe box</th>
-                </tr>
-              </thead>
-              <tbody>
-                {collection.ranked.slice(0, TABLE_ROWS).map((row) => (
-                  <tr key={row.shoe.id}>
-                    <td>{row.rank}</td>
-                    <td>
-                      <Link href={`/shoes/${row.shoe.id}`}>
-                        <strong>{shoeName(row.shoe)}</strong>
-                      </Link>
-                    </td>
-                    <td>{row.shoe.price ? money(row.shoe.price) : "Not listed"}</td>
-                    <td>
-                      {row.shoe.weightMens ? oz(row.shoe.weightMens) : "n/a"} /{" "}
-                      {row.shoe.weightWomens ? oz(row.shoe.weightWomens) : "n/a"}
-                    </td>
-                    <td>{mm(row.shoe.stack)}</td>
-                    <td>{mm(row.shoe.drop)}</td>
-                    <td>{cushionLabel(row.shoe.cushion)}</td>
-                    <td>{supportLabel(row.shoe.stability)}</td>
-                    <td>{toeBoxLabel(row.shoe.toeBox)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
-          {collection.ranked.length > TABLE_ROWS ? (
-            <p className="brand-sub">The table shows the top {TABLE_ROWS}. Every shoe on the list links to its full spec page.</p>
-          ) : null}
-        </div>
-      </section>
+        </section>
+      ) : null}
 
-      <section className="section container">
-        <div className="stack" style={{ gap: "18px" }}>
-          <h2 className="section-title">Questions about {collection.phrase}, answered from our data</h2>
-          <div className={styles.faq}>
-            {faq.map((item) => (
-              <div key={item.q}>
-                <h3>{item.q}</h3>
-                <p>{item.a}</p>
-              </div>
+      {rest.length ? (
+        <section className="container shoe-section">
+          <h2>
+            Also on the list, #{SHOWN_IN_LIST + 1} to #{collection.ranked.length}
+          </h2>
+          <div className="compare-links">
+            {rest.map((row) => (
+              <Link key={row.shoe.id} className="chip" href={`/shoes/${row.shoe.id}`}>
+                {row.rank}. {shoeName(row.shoe)}
+              </Link>
             ))}
           </div>
+        </section>
+      ) : null}
+
+      <section className="container shoe-section">
+        <div className="section-head">
+          <h2>Specs side by side</h2>
+          {headToHead ? (
+            <Link className="btn btn-sm" href={`/shoes/compare/${headToHead.slug}`}>
+              #1 vs #2
+            </Link>
+          ) : null}
+        </div>
+        <div className="table-wrap">
+          <table className="vs-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Shoe</th>
+                <th>Price</th>
+                <th>Weight</th>
+                <th>Stack</th>
+                <th>Drop</th>
+                <th>Support</th>
+              </tr>
+            </thead>
+            <tbody>
+              {collection.ranked.slice(0, TABLE_ROWS).map((row) => (
+                <tr key={row.shoe.id}>
+                  <td>{row.rank}</td>
+                  <td>
+                    <Link className="text-link" href={`/shoes/${row.shoe.id}`}>
+                      {shoeName(row.shoe)}
+                    </Link>
+                  </td>
+                  <td>{row.shoe.price ? money(row.shoe.price) : "n/a"}</td>
+                  <td>{row.shoe.weightMens ? oz(row.shoe.weightMens) : "n/a"}</td>
+                  <td>{mm(row.shoe.stack)}</td>
+                  <td>{mm(row.shoe.drop)}</td>
+                  <td>{supportLabel(row.shoe.stability)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
 
       {related.length ? (
-        <section className="section container">
-          <div className="stack">
-            <span className="label">Narrow it down or try a neighboring list</span>
-            <div className={styles.linkGrid}>
-              {related.map((other) => (
-                <Link key={other.slug} className="tag" href={`/shoes/best/${other.slug}`}>
-                  Best {other.title}
-                  <span className={styles.count}>{other.ranked.length}</span>
-                </Link>
-              ))}
-            </div>
-            <Link className="text-link" href="/shoes/best">
-              Every list we keep →
+        <section className="container shoe-section">
+          <h2>Narrow it down</h2>
+          <div className="compare-links">
+            {related.map((other) => (
+              <Link key={other.slug} className="chip" href={`/shoes/best/${other.slug}`}>
+                Best {other.title} <span className="clock">{other.ranked.length}</span>
+              </Link>
+            ))}
+            <Link className="chip" href="/shoes/best">
+              Every list →
             </Link>
           </div>
         </section>
       ) : null}
 
-      <section className="container next-step-card section">
-        <div>
-          <div className="eyebrow">Shoe Finder</div>
-          <h2>A list ranks shoes. The finder ranks them for you.</h2>
-          <p>
-            Answer a few questions about your stride, mileage and budget, and the Shoe Finder scores every shoe in
-            our database against them and hands back three.
-          </p>
-        </div>
-        <Link className="btn btn-primary" href="/tools/shoe-selector">
-          Find my shoe
-        </Link>
+      <section className="container shoe-section">
+        <details className="fineprint">
+          <summary>How this list works</summary>
+          {intro.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </details>
+        <details className="fineprint">
+          <summary>Questions, answered from our data</summary>
+          {faq.map((item) => (
+            <div key={item.q}>
+              <p>
+                <strong>{item.q}</strong>
+              </p>
+              {shortParagraphs([item.a]).map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          ))}
+        </details>
+        <p className="fineprint-inline">
+          Runner Toolkit may earn a commission from retailer links. That never changes the order of this list or the price
+          you pay. Not sure? The <Link className="text-link" href="/tools/shoe-selector">Shoe Finder</Link> picks three in three taps.
+        </p>
       </section>
-
-      <p className="container shoe-affiliate-note">
-        Runner Toolkit may earn a commission from retailer links. That never changes the order of this list or the price
-        you pay.
-      </p>
     </div>
   );
 }
