@@ -40,10 +40,9 @@ export default function Newsletter() {
   return (
     <div className="newsletter-card">
       <div className="stack">
-        <strong>Choose what reaches you</strong>
+        <strong>The monthly drop</strong>
         <p>
-          Useful updates across shoes, music, fuel, and adaptive training.
-          Occasional by design.
+          New shoes, new songs, new gels. One email a month.
         </p>
         {status === "sent" ? (
           <div className="notice">You&apos;re in. We&apos;ll keep it useful.</div>
@@ -64,7 +63,7 @@ export default function Newsletter() {
               onClick={handleSubmit}
               disabled={status === "sending"}
             >
-              {status === "sending" ? "Joining..." : "Keep me posted"}
+              {status === "sending" ? "Joining..." : "Sign me up"}
             </button>
           </div>
         )}

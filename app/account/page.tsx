@@ -17,8 +17,7 @@ type SavedItem = {
 const SECTIONS: { type: string; title: string; empty: string; href: (id: string) => string | null; tool: string; toolLabel: string }[] = [
   { type: "shoe", title: "Saved shoes", empty: "No shoes saved yet.", href: (id) => `/shoes/${id}`, tool: "/tools/shoe-selector", toolLabel: "Open the Shoe Finder" },
   { type: "song", title: "Saved songs", empty: "No songs saved yet.", href: () => null, tool: "/tools/music", toolLabel: "Open the Music Finder" },
-  { type: "plan", title: "Saved fuel plans", empty: "No fuel plans saved yet.", href: () => null, tool: "/tools/fueling", toolLabel: "Open the Fuel Finder" },
-  { type: "attire", title: "Saved gear", empty: "No gear saved yet.", href: () => null, tool: "/tools/attire-guide", toolLabel: "What to wear running" }
+  { type: "plan", title: "Saved fuel plans", empty: "No fuel plans saved yet.", href: () => null, tool: "/tools/fueling", toolLabel: "Open the Fuel Finder" }
 ];
 
 export default function AccountPage() {

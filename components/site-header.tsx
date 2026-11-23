@@ -2,79 +2,65 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import AuthActions from "@/components/auth-actions";
 import BrandMark from "@/components/brand-mark";
+import SiteSearch from "@/components/site-search";
 
-const toolItems = [
-  { href: "/tools/shoe-selector", label: "Shoe Finder" },
-  { href: "/tools/music", label: "Music Finder" },
-  { href: "/tools/fueling", label: "Fuel Finder" }
-];
-
-const trainingItems = [
-  { href: "/shoes/best", label: "Best shoes" },
-  { href: "/music", label: "Songs by BPM" },
-  { href: "/fuel", label: "Fuel plans" },
-  { href: "/rundown", label: "Guides", cta: true }
+const NAV = [
+  { href: "/shoes", label: "Shoes", match: ["/shoes", "/tools/shoe-selector"] },
+  { href: "/tools/music", label: "Music", match: ["/tools/music", "/music"] },
+  { href: "/tools/fueling", label: "Fuel", match: ["/tools/fueling", "/fuel"] },
+  { href: "/rundown", label: "Guides", match: ["/rundown"] }
 ];
 
 export default function SiteHeader() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname() ?? "/";
+  const close = () => setOpen(false);
 
   return (
-    <header className="site-header">
-      <div className="container site-header-inner">
-        <Link href="/" className="brand" onClick={() => setMenuOpen(false)}>
+    <header className="rt-header">
+      <div className="container rt-header-inner">
+        <Link href="/" className="rt-brand" onClick={close}>
           <BrandMark />
-          <span>
-            Runner Toolkit
-            <div className="brand-sub">Run smarter. Guess less.</div>
-          </span>
+          <span>Runner<br />Toolkit</span>
         </Link>
-        <nav className={`nav ${menuOpen ? "nav-open" : ""}`} aria-label="Primary navigation">
-          <div className="nav-cluster">
-            <span className="nav-cluster-label">Tools</span>
-            <div className="nav-cluster-links">
-              {toolItems.map((item) => (
-                <Link key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>
-                  {item.label}
-                </Link>
-              ))}
-            </div>
+
+        <nav className={`rt-nav${open ? " is-open" : ""}`} aria-label="Main">
+          {NAV.map((item) => {
+            const active = item.match.some((m) => pathname === m || pathname.startsWith(m + "/"));
+            return (
+              <Link key={item.href} href={item.href} className={active ? "is-active" : undefined} onClick={close}>
+                {item.label}
+              </Link>
+            );
+          })}
+          <div className="rt-nav-search">
+            <SiteSearch onNavigate={close} />
           </div>
-          <span className="nav-separator" aria-hidden="true" />
-          <div className="nav-cluster nav-cluster-training">
-            <span className="nav-cluster-label">Read</span>
-            <div className="nav-cluster-links">
-              {trainingItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={item.cta ? "nav-cta" : undefined}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div className="nav-auth-mobile">
+          <div className="rt-nav-auth">
             <AuthActions />
           </div>
         </nav>
-        <div className="header-actions">
-          <AuthActions />
-          <button
-            type="button"
-            className="hamburger"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            onClick={() => setMenuOpen((o) => !o)}
-          >
-            <span className={`hamburger-bar ${menuOpen ? "open" : ""}`} />
-            <span className={`hamburger-bar ${menuOpen ? "open" : ""}`} />
-            <span className={`hamburger-bar ${menuOpen ? "open" : ""}`} />
-          </button>
+
+        <div className="rt-header-search">
+          <SiteSearch />
         </div>
+        <div className="rt-header-auth">
+          <AuthActions />
+        </div>
+        <button
+          type="button"
+          className="rt-burger"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((o) => !o)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </div>
     </header>
   );
