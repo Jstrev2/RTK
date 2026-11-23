@@ -188,6 +188,12 @@ export default function MusicFinder({ spotifyClientId }: { spotifyClientId: stri
       const g = params.get("genre");
       if (g && GENRES.some((x) => x.slug === g)) next = { ...next, genres: [g] };
     }
+    // Site search sends song results here as ?q=title: open the library search on it.
+    const q = params.get("q");
+    if (q) {
+      setPanel("library");
+      setQuery(q.slice(0, 120));
+    }
     if (params.get("export") === "copy") setMessage("Spotify wouldn't take the playlist directly. Copy the links below and paste them into an empty Spotify playlist on a computer (Ctrl+V or Cmd+V), or open each song.");
     if (saved) {
       const restored = loadPhases(saved, new Map(library.map((s) => [s.id, s])));

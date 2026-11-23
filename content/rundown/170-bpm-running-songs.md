@@ -1,51 +1,41 @@
 ---
 slug: 170-bpm-running-songs
 title: 170 BPM Running Songs and Why 170 Keeps Coming Up
-excerpt: 170 beats per minute is a good cadence target for a lot of recreational runners, but it isn't a law. Here's where the number comes from, who it fits, and how to find songs for it.
+excerpt: 170 steps a minute is a reasonable target for many easy runs, but it comes from a rough compromise, not a rule. Count your own cadence first and pick songs within a few BPM of it.
 tags: music, training
 author: Runner Toolkit
 published_at: 2026-11-23T17:12:00+00:00
 ---
-Search for running playlists and you'll hit 170 BPM almost immediately. It's the number half the internet quotes, usually next to 180. It deserves a straight explanation, because for plenty of runners it's useful and for plenty of others it's the wrong target.
+**Short answer:** 170 BPM suits many runners at an easy to steady pace, but it's a compromise, not a rule. Count your own cadence first and use songs within 3 to 5 BPM of it.
 
-My position: 170 is a sensible default for an easy-to-moderate run, but you should check it against your own cadence before you build a playlist around it.
+## 170 is a compromise between two findings
 
-## Where 170 comes from
+The first is Jack Daniels, the running coach and physiologist, who counted the steps of runners at the 1984 Olympics and found nearly all of them near 180 a minute. Those were elite runners at race pace. Slower runners take fewer, shorter steps.
 
-There are two threads. The first is Jack Daniels, the exercise physiologist, who counted the steps of elite runners at the 1984 Olympics and noticed almost all of them landed near 180 per minute. That number turned into folk wisdom for everyone. The catch is that those were elite runners moving fast. A recreational runner at a 10-minute mile usually steps at a lower rate, because they're moving more slowly with a shorter stride.
+The second is a 2011 lab study (Heiderscheit and colleagues). Raising step rate by 5% cut the load the knee absorbed in 45 recreational runners, and 10% cut hip load as well. It was one short lab session, not a season of running.
 
-The second thread is gentler. In a 2011 lab study, Bryan Heiderscheit and colleagues found that increasing step rate by about 10 percent reduced loading at the knee and hip in runners they tested. It was a small lab study of a short experiment, not a season of running, so don't read it as a guaranteed injury fix. It did, though, make the idea of nudging your cadence up a little more credible.
+Put together, 170 lands between what casual runners do and what elites do. That's the whole story behind the number.
 
-Put those together and 170 lands as a compromise: higher than a lot of casual runners naturally run, but not as demanding as 180.
+## Count your own cadence before building a playlist
 
-## Check your own number first
+Run a steady, flat stretch at your normal pace. Count your steps for 30 seconds and double it. Many recreational runners at easy pace land in the 160s, and cadence climbs as you speed up.
 
-Your cadence at an easy pace is the number that matters. Count your steps for 30 seconds on a steady run and double it. Do it on a flat route, at the pace you actually run, not your fastest.
+If you count 164, songs at 170 feel like a push. Pick music near your own number instead. The [9:00 per mile playlist](/music/pace/9-00-min-mile) and the other pace pages group songs by the pace you run, so you don't have to convert. [How to find your running cadence](/rundown/how-to-find-your-running-cadence) covers the count in more detail.
 
-Plenty of runners at 9:00 to 10:00 per mile are in the 160s. Runners at 8:00 per mile are often in the 170s. Taller runners tend to run lower, shorter runners higher, and neither is wrong. Our [music pace pages](/music/pace/9-00-min-mile) group songs by the pace you run, which saves you from translating.
+## Three ways to use 170 BPM songs
 
-If you're at 164 and 170 BPM songs feel like a sprint, you don't need to force it. Pick songs near your own rate. If you want to nudge your cadence up, the next section is how.
+- Start 3 to 5 BPM above your current cadence. Your steps drift toward the beat without effort.
+- Save the faster songs for the last third of a run, when form tends to slip.
+- Use half-time tracks. A song at 85 BPM works at 170 steps if you land one step on the beat and one between.
 
-## How to use 170 BPM songs without forcing it
-
-The song doesn't have to match your cadence exactly to be useful. A few things work:
-
-- Start with songs 3 to 5 BPM above where you run now. Your steps drift toward the beat without you thinking about it.
-- Use the song as a reminder during the last third of the run, when form sags, rather than for the whole session.
-- Allow for half-time. A track at about 85 BPM can feel like a 170 cadence if you land a step on every second beat, and many slower rock and hip-hop songs work this way.
-
-You'll find a long list on our [170 BPM page](/music/bpm/170), with neighbors at [168](/music/bpm/168) and [171](/music/bpm/171) when you want variety. If you'd rather filter by genre, [electronic](/music/genre/electronic) and [pop](/music/genre/pop) both have deep catalogs in this range, and the [music finder](/tools/music) does the matching for you.
+The [170 BPM page](/music/bpm/170) lists songs at that tempo, with neighbors at [168](/music/bpm/168) and [171](/music/bpm/171) for variety. [Pop at 170 to 180 BPM](/music/genre/pop/170-180-bpm) is the deepest genre in this range. The [Music Finder](/tools/music) builds a full playlist at your number.
 
 ## When 170 is the wrong target
 
-Three cases where I'd skip it:
+- Run-walk beginners. Match the cadence you have, which may be well under 170.
+- Long easy runs where you're keeping heart rate low. A list near 160 keeps you from speeding up.
+- Fast racing. At 7:00 per mile or quicker most runners are already above 170.
 
-- You're a beginner who walks and runs in intervals. Match your actual cadence, which may be well below 170, and don't push the number.
-- You're doing a long easy run where you're trying to keep your heart rate low. a slower playlist near 160 may serve you better than a brisk 170.
-- You're racing fast. At 7:00 pace or quicker you'll probably be above 170 on your own, and a faster playlist should follow.
+Cadence changes don't treat pain. If something hurts, stop and see a doctor or physical therapist.
 
-None of this is a diagnosis of your form, and cadence changes don't cure pain. If something hurts, stop and see a professional.
-
-## Try a 170 playlist on one easy run
-
-Count your cadence, pick a dozen songs within a few BPM of it, and run an easy 30 minutes to them. If your legs feel light, keep going. If you feel hurried, slide the target down 5 BPM and try again. The right number is the one you stop noticing.
+For a first try, pick a dozen songs within a few BPM of your count and run an easy 30 minutes to them. If the beat feels hurried, drop 5 BPM and try again.

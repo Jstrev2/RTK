@@ -1,8 +1,9 @@
 import Link from "next/link";
 import JsonLd from "@/components/json-ld";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
-import { getCollectionIndex, loadContentShoes, money, shoeName, type Collection } from "@/lib/content/shoes";
-import styles from "./content.module.css";
+import { getCollectionIndex, loadContentShoes, type Collection } from "@/lib/content/shoes";
+import ListSearch, { type ListHub } from "./list-search";
+import "@/components/shoes.css";
 
 export const revalidate = 86400;
 
@@ -57,11 +58,14 @@ export default async function BestShoesHub() {
     list.sort((a, b) => a.facetIds.length - b.facetIds.length || b.ranked.length - a.ranked.length);
   }
 
-  const daily = index.bySlug.get("daily-trainers");
-  const budget = index.bySlug.get("running-shoes-under-120");
+  const hubs: ListHub[] = ordered.map(([hub, list]) => ({
+    hub,
+    note: SECTION_NOTES[hub],
+    lists: list.map((collection) => ({ slug: collection.slug, title: collection.title, count: collection.ranked.length }))
+  }));
 
   return (
-    <div className="editorial-page">
+    <div>
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -74,66 +78,24 @@ export default async function BestShoesHub() {
         }}
       />
 
-      <section className="tool-hero container">
-        <span className="eyebrow">
-          <Link href="/shoes">Shoe database</Link> · {index.list.length} lists
-        </span>
-        <h1>Best running shoes, sorted by the run you have in mind.</h1>
-        <p>
-          Every list here is built from the specs of the {shoes.length} current road shoes we track, and every one
-          says how it ranks: popularity first, a bump for new releases, and fit points where a spec matters, like
-          drop on a low-drop list.
-          {daily ? (
-            <>
-              {" "}
-              The biggest is <Link href={`/shoes/best/${daily.slug}`}>daily trainers</Link>, {daily.ranked.length}{" "}
-              models led by the {shoeName(daily.ranked[0].shoe)}.
-            </>
-          ) : null}
-          {budget ? (
-            <>
-              {" "}
-              On a tight budget, <Link href={`/shoes/best/${budget.slug}`}>shoes under $120</Link> start at{" "}
-              {money(Math.min(...budget.ranked.map((r) => r.shoe.price)))}.
-            </>
-          ) : null}
-        </p>
-        <div className="button-row" style={{ marginTop: "20px" }}>
-          <Link className="btn btn-primary" href="/tools/shoe-selector">
-            Skip the lists, match my run
-          </Link>
-        </div>
-      </section>
-
-      <section className="section container">
-        {ordered.map(([hub, list]) => (
-          <div key={hub} className={styles.hubSection}>
-            <h2 className="section-title">{hub}</h2>
-            {SECTION_NOTES[hub] ? <p className="section-lede">{SECTION_NOTES[hub]}</p> : null}
-            <div className={styles.linkGrid}>
-              {list.map((collection) => (
-                <Link key={collection.slug} className="tag" href={`/shoes/best/${collection.slug}`}>
-                  {collection.title}
-                  <span className={styles.count}>{collection.ranked.length}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        ))}
-      </section>
-
-      <section className="container next-step-card section">
-        <div>
-          <div className="eyebrow">Shoe Finder</div>
-          <h2>Lists are a start. Your stride decides.</h2>
-          <p>
-            The Shoe Finder asks how you land, how far you run and what you want to spend, then scores every shoe in
-            our database against your answers.
+      <section className="page-hero collection-hero">
+        <div className="container">
+          <nav className="shoe-detail-crumbs" aria-label="Breadcrumb">
+            <Link href="/shoes">All shoes</Link>
+          </nav>
+          <h1>Best running shoes, by the run you have in mind.</h1>
+          <p className="page-hero-sub">
+            {index.list.length} ranked lists built from {shoes.length} current road shoes. Or let the{" "}
+            <Link className="text-link" href="/tools/shoe-selector">
+              Shoe Finder
+            </Link>{" "}
+            pick three.
           </p>
         </div>
-        <Link className="btn btn-primary" href="/tools/shoe-selector">
-          Find my shoe
-        </Link>
+      </section>
+
+      <section className="container shoe-index-body">
+        <ListSearch hubs={hubs} />
       </section>
     </div>
   );

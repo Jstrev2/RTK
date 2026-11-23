@@ -41,6 +41,8 @@
     "rundown:discover": "node scripts/rundown/discover.mjs",
     "rundown:topics": "node scripts/rundown/topics.mjs",
     "rundown:publish": "node scripts/rundown/publish.mjs",
+    "catalog:shoes:images": "node scripts/catalog/backfill-shoe-images.mjs",
+    "catalog:shoes:sync": "node scripts/catalog/sync-local.mjs",
     "music:backfill": "node scripts/music/run.mjs backfill",
     "music:validate-tempo": "node scripts/music/run.mjs validate-tempo"
   },
@@ -51,6 +53,7 @@
     "next": "^15.5.12",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sharp": "^0.35.5",
     "stripe": "^22.3.1"
   },
   "devDependencies": {

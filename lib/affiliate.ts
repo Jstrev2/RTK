@@ -71,7 +71,7 @@ export const getFuelRetailerLinks = (product: {
   brand: string;
 }): RetailerLink[] => {
   const query = encodeURIComponent(`${product.brand} ${product.name}`);
-  const amazon = `https://www.amazon.com/s?k=${query}+energy+gel${
+  const amazon = `https://www.amazon.com/s?k=${query}${
     AMAZON_TAG ? `&tag=${AMAZON_TAG}` : ""
   }`;
   const runningWarehouse = `https://www.runningwarehouse.com/searchresults.html?searchterms=${query}`;

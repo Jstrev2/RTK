@@ -47,8 +47,29 @@ every fuel serving, the catalogs and the practice log) needs a free account
 
 ## Shoe catalog
 
-Unchanged: the monthly routine "Monthly shoe catalog re-audit" edits
-`data/shoe-models-authored.json`, and the daily cron syncs it.
+The weekly routine "Weekly shoe catalog audit" (prompt in
+`scripts/catalog/ROUTINE-shoes.md`) adds new releases and lineup gaps to
+`data/shoe-models-authored.json`, checks its PR with
+`scripts/catalog/check-audit.mjs` and squash-merges it. The daily cron syncs
+the file into `shoe_models` and fetches photos for up to three shoes a day that
+have none (`lib/ingest/shoe-images.ts`). The one-time backfill and any re-run is
+`node scripts/catalog/backfill-shoe-images.mjs`; `node scripts/catalog/sync-local.mjs`
+applies a local copy of the catalog file with the same limits.
+
+## Fuel catalog
+
+`data/fuel-catalog.json` is the source of truth for every gel, chew, drink mix,
+bar and electrolyte product (nutrition, flavors, price, brand page, official
+photo). The monthly routine in `scripts/catalog/ROUTINE-fuel.md` audits brand
+pages, edits the file, passes `node scripts/catalog/check-fuel.mjs` and merges
+its PR. The daily cron syncs it (`lib/fuel-sync.ts`) and stores the official
+photo of anything new in Supabase Storage (`lib/fuel-images.ts`, bucket
+`site-images`, `fuel/<item_key>.webp` plus a 360px `fuel/thumb/` copy). From
+this computer: `node scripts/fuel-catalog.mjs sync` and
+`node scripts/fuel-catalog.mjs images`. A product removed from the file is
+deactivated and its page redirects to its brand in the `/fuel` grid.
+`data/fuel-gels-live.json` (the guide writer's snapshot) was regenerated from
+the catalog on November 23, 2026.
 
 ## Song library
 
@@ -82,7 +103,7 @@ songs with a BPM and a cover show anywhere (`lib/music/library.ts`).
   (`SpotifyUnavailable` in `lib/music/sources.ts`). Save to Spotify looks up
   any song still missing an id with the runner's own sign-in.
 - **Every day** (`runDailyMusicIngest` in `lib/music/ingest.ts`, called by
-  `/api/cron/daily` with up to 25 of its 60 seconds): reads the global chart,
+  `/api/cron/daily` with whatever is left of its 60 seconds, up to 20): reads the global chart,
   two genre charts and three runners' playlists (rotating by day), adds the
   popular songs we lack with a BPM from their preview, retries BPM for songs
   that have none (GetSongBPM first), and maps Spotify ids for songs missing

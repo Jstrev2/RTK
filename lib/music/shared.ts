@@ -282,9 +282,9 @@ export const searchSongs = (library: LibSong[], query: string, target?: number, 
     .map((song) => {
       const fit = target ? fitOf(song, target) : null;
       const starts = hay(song).startsWith(words[0]) ? 1 : 0;
-      // With a target, songs that fit (within 3 steps) come first, then the nearest.
-      const fitScore = target ? (fit && fit.off <= 3 ? 8 : 0) - (fit ? Math.min(fit.off, 20) : 24) / 3 : 0;
-      return { song, rank: song.p / 12 + starts * 2 + fitScore };
+      // The song people mean comes first (popularity), then how well it fits the stride.
+      const fitScore = target ? (fit && fit.off <= 3 ? 4 : 0) - (fit ? Math.min(fit.off, 20) : 24) / 4 : 0;
+      return { song, rank: song.p / 5 + starts * 2 + fitScore };
     })
     .sort((a, b) => b.rank - a.rank)
     .slice(0, limit)

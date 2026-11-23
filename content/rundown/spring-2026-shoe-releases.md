@@ -1,42 +1,40 @@
 ---
 slug: spring-2026-shoe-releases
-title: Spring 2026 Shoe Releases Worth Watching
-excerpt: From the Saucony Endorphin Speed 6 to the Brooks Ghost Max 4, the best new running shoes dropping this spring.
-tags: gear, shoes, new-releases
+title: Spring 2026 Running Shoe Releases: What Came Out and What It Costs
+excerpt: The shoes that shipped from February to May 2026, with price and weight from our data, plus when the shoes tipped for spring arrived.
+tags: shoes, gear
 author: Runner Toolkit
 published_at: 2026-03-05T10:00:00+00:00
 ---
-Spring is prime time for running shoe releases, and 2026 is shaping up to be one of the most competitive seasons in years. Here are the shoes we're most excited about.
+**Short answer:** Spring 2026's biggest releases were the Hoka Mach 7, ASICS Superblast 3, Brooks Ghost 18 and Nike Pegasus 42. Most racing shoes tipped for spring arrived later, between June and October.
 
-## Daily Trainers
+## Daily trainers that shipped in spring
 
-### Brooks Ghost Max 4
-Brooks continues to refine the Ghost Max, which has become one of the most popular max-cushion daily trainers. The v4 gets a slightly updated midsole geometry and improved upper breathability. If you liked the 3, you'll love this.
+Release dates, prices and weights below are from our shoe data.
 
-### Skechers Aero Burst 2
-Skechers keeps quietly making excellent running shoes. The Aero Burst 2 features their HyperBurst+ foam and a lower price point than most competitors. Don't sleep on this one.
+- [Hoka Mach 7](/shoes/hoka-mach-7), March: $145, 8.3 oz, 5 mm drop. Light enough for tempo runs, $5 more than the Mach 6.
+- [Saucony Guide 19](/shoes/saucony-guide-19), March: $145, 9.4 oz. Moderate support with a planted ride.
+- [ASICS Superblast 3](/shoes/asics-superblast-3), April: $200, 8.8 oz on a 45 mm stack. Race-style foam for training miles, at a race-style price.
+- ASICS Gel-Cumulus 28, May: $145, 9.2 oz. Middle-of-the-road cushioning that's light for its stack.
+- [Brooks Ghost 18](/shoes/brooks-ghost-18) and [Nike Pegasus 42](/shoes/nike-pegasus-42), May: $150 and $145, both 9.8 oz. Small updates to the two most popular daily trainers.
 
-## Racing Shoes
+## Racing shoes from early 2026
 
-### Saucony Endorphin Speed 6
-The Speed line has been our go-to recommendation for runners buying their first fast shoe, and the v6 doesn't mess with the formula. Updated PWRRUN PB foam, refreshed upper, same versatile nylon plate.
+- Saucony Endorphin Pro 5, February: $230, 7.3 oz, narrow fit
+- Puma Deviate Nitro Elite 4, February: $230, 6.9 oz
+- Adidas Adizero Adios Pro Evo 3, April: $500, 3.4 oz, the lightest shoe in our data
 
-### Saucony Endorphin Elite 3
-For serious racers, the Elite 3 pushes Saucony's carbon plate tech further with a new full-length carbon plate and lighter overall weight. Early reviews are promising.
+## The shoes tipped for spring came later
 
-### Brooks Hyperion Elite 6
-Brooks' race-day shoe gets a significant update with new DNA Flash foam and a redesigned carbon plate. They're clearly targeting the Vaporfly and Adios Pro crowd.
+In March this guide listed seven shoes expected between March and May. Here is when the four we track arrived:
 
-## Trail
+- Saucony Endorphin Elite 3: June, $275, 7.0 oz
+- Brooks Ghost Max 4: August, $160, 10.3 oz
+- Brooks Hyperion Elite 6: August, $250, 7.0 oz
+- [Saucony Endorphin Speed 6](/shoes/saucony-endorphin-speed-6): October 15, $175, 8.2 oz
 
-### Brooks Cascadia Elite
-A new entry in the premium trail racing space. Carbon plate in a trail shoe is still relatively uncommon, and Brooks is betting runners want that speed advantage off-road too.
+The Skechers Aero Burst 2, Brooks Cascadia Elite and Brooks Ghost Trail 2 aren't in our data. The two Brooks models are trail shoes, and we track road shoes.
 
-### Brooks Ghost Trail 2
-For trail runners who want Ghost-level comfort on dirt. Not a racing shoe. This is about comfortable miles on groomed trails.
+## Last year's version is often the better buy
 
-## When They Drop
-
-Most of these are hitting stores between March and May 2026. We'll update our Shoe Finder with full specs and recommendations as each shoe becomes available.
-
-Check the Shoe Finder to see what's already in our database and find the right shoe for your needs.
+Most of these updates are small, and our data says so for several (the Pegasus 42 is an "incremental update over the 41"). When a new version lands, the old one usually drops in price, and the Mach 6, Superblast 2 and Ghost 17 are all still in our data for comparison. The [newest running shoes](/shoes/best/new-running-shoes) list shows every recent release, and the [Shoe Finder](/tools/shoe-selector) compares old and new side by side.

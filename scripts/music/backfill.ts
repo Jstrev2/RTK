@@ -6,6 +6,7 @@
  *   node scripts/music/run.mjs backfill details    new candidates: Deezer record, genres, preview tempo
  *   node scripts/music/run.mjs backfill existing   rows already in the table: find them on Deezer, preview tempo
  *   node scripts/music/run.mjs backfill apply      write to music_songs (update, insert, remove junk and covers)
+ *   node scripts/music/run.mjs backfill tidy --go  drop obscure old-catalog acts, covers and doubles
  *   node scripts/music/run.mjs backfill getsong    GetSongBPM for every song it might know (slow: ~1 a second)
  *   node scripts/music/run.mjs backfill spotify    Spotify ids by ISRC
  *   node scripts/music/run.mjs backfill report     counts
@@ -518,6 +519,51 @@ async function spotifyStage() {
   console.log(`Done: ${found} matched, ${dupes} duplicates removed.${spotifyAvailable() ? "" : " Spotify locked the app out; run again tomorrow."}`);
 }
 
+/* ---------- tidy ---------- */
+
+/**
+ * Second cleanup over the table, after apply: rows from the old catalog
+ * (GetSongBPM and Spotify-search imports) by obscure acts, and old-catalog
+ * versions of a title far less popular than its best-known version (covers),
+ * or the same song twice. Runners' own songs are never touched.
+ * Dry run unless --go.
+ */
+async function tidy() {
+  const rows = await loadLibrary(db);
+  const old = (r: (typeof rows)[number]) => !["deezer-chart", "deezer-playlist", "user"].includes(r.source ?? "");
+  const groups = new Map<string, typeof rows>();
+  for (const r of rows) groups.set(titleKey(r.title), [...(groups.get(titleKey(r.title)) ?? []), r]);
+  const artistCount = new Map<string, number>();
+  for (const r of rows) artistCount.set(artistKey(r.artist), (artistCount.get(artistKey(r.artist)) ?? 0) + 1);
+  const known = (r: (typeof rows)[number]) => (artistCount.get(artistKey(r.artist)) ?? 0) >= 3;
+  const drop = new Set<string>();
+  // Obscure acts from the old catalog (mostly cover bands).
+  for (const r of rows) if (old(r) && !r.added_by && (r.popularity ?? 0) < 150_000 && !known(r)) drop.add(r.id);
+  for (const g of groups.values()) {
+    if (g.length < 2) continue;
+    const topRow = g.reduce((a, b) => ((b.popularity ?? 0) > (a.popularity ?? 0) ? b : a));
+    const top = topRow.popularity ?? 0;
+    for (const r of g) {
+      if (!old(r) || r.added_by || r === topRow) continue;
+      const sameSong = songKey(r.title, r.artist) === songKey(topRow.title, topRow.artist);
+      // The same song twice: keep the popular release. Another act's version far less popular: a cover.
+      if (sameSong || ((r.popularity ?? 0) < top * 0.6 && !known(r))) drop.add(r.id);
+    }
+  }
+  const oldRows = rows.filter(old);
+  console.log("old rows", oldRows.length, "would drop", drop.size);
+  console.log("kept old sample:", oldRows.filter((r) => !drop.has(r.id)).sort(() => Math.random() - 0.5).slice(0, 25).map((r) => `${r.title} - ${r.artist} ${Math.round((r.popularity ?? 0) / 1000)}k`).join(" | "));
+  console.log("dropped sample:", oldRows.filter((r) => drop.has(r.id)).sort(() => Math.random() - 0.5).slice(0, 25).map((r) => `${r.title} - ${r.artist} ${Math.round((r.popularity ?? 0) / 1000)}k`).join(" | "));
+  if (process.argv.includes("--go")) {
+    const ids = [...drop];
+    for (let i = 0; i < ids.length; i += 200) {
+      const { error } = await db.from("music_songs").delete().in("id", ids.slice(i, i + 200));
+      if (error) console.error(error.message);
+    }
+    console.log("deleted", ids.length);
+  }
+}
+
 /* ---------- report ---------- */
 
 async function report() {
@@ -542,7 +588,7 @@ async function report() {
 }
 
 const stage = process.argv[2];
-const stages: Record<string, () => Promise<void>> = { discover, details, reanalyze, existing, apply, "getsong-pre": getsongPre, "spotify-pre": spotifyPre, getsong, spotify: spotifyStage, report };
+const stages: Record<string, () => Promise<void>> = { discover, details, reanalyze, existing, apply, tidy, "getsong-pre": getsongPre, "spotify-pre": spotifyPre, getsong, spotify: spotifyStage, report };
 if (!stages[stage]) {
   console.error("stages:", Object.keys(stages).join(", "));
   process.exit(1);

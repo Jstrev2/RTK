@@ -3,10 +3,10 @@ import JsonLd from "@/components/json-ld";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
 
 const description =
-  "Tell us what you run, the ride and fit you prefer, and your budget. Get a short, explainable list of road running shoes worth trying.";
+  "Three taps: what you run, how it should feel and what your feet need. Get your top 3 road running shoes, with photos and one plain reason each.";
 
 export const metadata = pageMetadata({
-  title: "Running Shoe Finder: Match Shoes to How You Run",
+  title: "Running Shoe Finder: Your Top 3 Shoes in Three Taps",
   description,
   path: "/tools/shoe-selector",
 });

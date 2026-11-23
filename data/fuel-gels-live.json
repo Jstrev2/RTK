@@ -1,534 +1,2791 @@
 {
-  "note": "Snapshot of the live fuel_gels table (usable rows only) for guide writing. Page URL: /fuel/gels/<item_key>.",
-  "exported": "2026-11-23",
-  "gels": [
-    {
-      "item_key": "clif-shot-energy-gel",
-      "brand": "Clif",
-      "name": "Clif Shot Energy Gel",
-      "carbs_g": 25,
-      "caffeine_mg": 0,
-      "sodium_mg": 40,
-      "calories": 100,
-      "flavors": [],
-      "notes": "85-90% organic ingredients. Organic cane sugar. Litter Leash packaging. Non-caffeinated flavors."
-    },
-    {
-      "item_key": "clif-shot-energy-gel-100mg-caffeine",
-      "brand": "Clif",
-      "name": "Clif Shot Energy Gel (100mg Caffeine)",
-      "carbs_g": 25,
-      "caffeine_mg": 100,
-      "sodium_mg": 40,
-      "calories": 100,
-      "flavors": [],
-      "notes": "85-90% organic. 100mg caffeine from green tea extract. High-caffeine option."
-    },
-    {
-      "item_key": "clif-shot-energy-gel-25mg-caffeine",
-      "brand": "Clif",
-      "name": "Clif Shot Energy Gel (25mg Caffeine)",
-      "carbs_g": 25,
-      "caffeine_mg": 25,
-      "sodium_mg": 40,
-      "calories": 100,
-      "flavors": [],
-      "notes": "85-90% organic. 25mg caffeine from green tea extract. Litter Leash packaging."
-    },
-    {
-      "item_key": "clif-shot-energy-gel-50mg-caffeine",
-      "brand": "Clif",
-      "name": "Clif Shot Energy Gel (50mg Caffeine)",
-      "carbs_g": 25,
-      "caffeine_mg": 50,
-      "sodium_mg": 40,
-      "calories": 100,
-      "flavors": [],
-      "notes": "85-90% organic. 50mg caffeine from green tea extract. Litter Leash packaging."
-    },
-    {
-      "item_key": "gu-liquid-energy-gel",
-      "brand": "GU",
-      "name": "GU Liquid Energy Gel",
-      "carbs_g": 22,
-      "caffeine_mg": 0,
-      "sodium_mg": 75,
-      "calories": 100,
-      "flavors": [],
-      "notes": "Thinner, more liquid consistency. 60g packet. 450mg amino acids. No water needed."
-    },
-    {
-      "item_key": "gu-liquid-energy-gel-caffeinated",
-      "brand": "GU",
-      "name": "GU Liquid Energy Gel (Caffeinated)",
-      "carbs_g": 22,
-      "caffeine_mg": 40,
-      "sodium_mg": 75,
-      "calories": 100,
-      "flavors": [],
-      "notes": "Thinner, more liquid consistency. 60g packet. 40mg caffeine. 450mg amino acids."
-    },
-    {
-      "item_key": "gu-original-energy-gel",
-      "brand": "GU",
-      "name": "GU Original Energy Gel",
-      "carbs_g": 22,
-      "caffeine_mg": 0,
-      "sodium_mg": 60,
-      "calories": 100,
-      "flavors": [],
-      "notes": "Dual-source carbs (maltodextrin + fructose). 450mg amino acids. Non-caffeinated flavors."
-    },
-    {
-      "item_key": "gu-original-energy-gel-caffeinated",
-      "brand": "GU",
-      "name": "GU Original Energy Gel (Caffeinated)",
-      "carbs_g": 22,
-      "caffeine_mg": 40,
-      "sodium_mg": 60,
-      "calories": 100,
-      "flavors": [],
-      "notes": "Dual-source carbs (maltodextrin + fructose). 450mg amino acids. 20-40mg caffeine depending on flavor."
-    },
-    {
-      "item_key": "gu-roctane-energy-gel",
-      "brand": "GU",
-      "name": "GU Roctane Ultra Endurance Energy Gel",
-      "carbs_g": 21,
-      "caffeine_mg": 0,
-      "sodium_mg": 125,
-      "calories": 100,
-      "flavors": [],
-      "notes": "3x amino acids (1425mg) and 2x sodium vs Original. Dual-source carbs. For high-intensity efforts."
-    },
-    {
-      "item_key": "gu-roctane-energy-gel-caffeinated",
-      "brand": "GU",
-      "name": "GU Roctane Ultra Endurance Energy Gel (Caffeinated)",
-      "carbs_g": 21,
-      "caffeine_mg": 35,
-      "sodium_mg": 125,
-      "calories": 100,
-      "flavors": [],
-      "notes": "3x amino acids (1425mg) and 2x sodium vs Original. 35mg caffeine. For high-intensity efforts."
-    },
-    {
-      "item_key": "hammer-nutrition-hammer-gel",
-      "brand": "Hammer Nutrition",
-      "name": "Hammer Gel",
-      "carbs_g": 22,
-      "caffeine_mg": 0,
-      "sodium_mg": 25,
-      "calories": 90,
-      "flavors": [],
-      "notes": "Concentrated complex carb gel (syrup consistency). 33g serving. Available in packets and jugs."
-    },
-    {
-      "item_key": "hammer-nutrition-hammer-gel-espresso",
-      "brand": "Hammer Nutrition",
-      "name": "Hammer Gel Espresso",
-      "carbs_g": 22,
-      "caffeine_mg": 50,
-      "sodium_mg": 25,
-      "calories": 90,
-      "flavors": [],
-      "notes": "Concentrated complex carb gel with 50mg caffeine. Syrup consistency. 33g serving."
-    },
-    {
-      "item_key": "hammer-nutrition-hammer-gel-tropical",
-      "brand": "Hammer Nutrition",
-      "name": "Hammer Gel Tropical",
-      "carbs_g": 22,
-      "caffeine_mg": 25,
-      "sodium_mg": 25,
-      "calories": 90,
-      "flavors": [],
-      "notes": "Concentrated complex carb gel with 25mg caffeine. Syrup consistency. 33g serving."
-    },
-    {
-      "item_key": "honey-stinger-gold-energy-gel",
-      "brand": "Honey Stinger",
-      "name": "Honey Stinger Gold Energy Gel",
-      "carbs_g": 24,
-      "caffeine_mg": 0,
-      "sodium_mg": 45,
-      "calories": 90,
-      "flavors": [],
-      "notes": "Gluten-free. Pure honey base with B vitamins. Simpler ingredient list than Organic line. 31g packet."
-    },
-    {
-      "item_key": "honey-stinger-organic-energy-gel",
-      "brand": "Honey Stinger",
-      "name": "Honey Stinger Organic Energy Gel",
-      "carbs_g": 24,
-      "caffeine_mg": 0,
-      "sodium_mg": 50,
-      "calories": 100,
-      "flavors": [],
-      "notes": "Honey-based organic formula. Contains B vitamins. USDA Organic. 31g packet."
-    },
-    {
-      "item_key": "honey-stinger-organic-energy-gel-caffeinated",
-      "brand": "Honey Stinger",
-      "name": "Honey Stinger Organic Energy Gel (Caffeinated)",
-      "carbs_g": 24,
-      "caffeine_mg": 32,
-      "sodium_mg": 50,
-      "calories": 100,
-      "flavors": [],
-      "notes": "Honey-based with 32mg caffeine from green tea. USDA Organic. 31g packet."
-    },
-    {
-      "item_key": "huma-chia-energy-gel",
-      "brand": "Huma",
-      "name": "Huma Chia Energy Gel",
-      "carbs_g": 21,
-      "caffeine_mg": 0,
-      "sodium_mg": 105,
-      "calories": 100,
-      "flavors": [],
-      "notes": "Real-food based with chia seeds. Made with fruit purees. Gentle on stomach."
-    },
-    {
-      "item_key": "huma-chia-energy-gel-caffeinated",
-      "brand": "Huma",
-      "name": "Huma Chia Energy Gel (Caffeinated)",
-      "carbs_g": 24,
-      "caffeine_mg": 25,
-      "sodium_mg": 105,
-      "calories": 100,
-      "flavors": [],
-      "notes": "Real-food based with chia seeds plus 25mg caffeine. Same gentle formula as Original."
-    },
-    {
-      "item_key": "huma-chia-energy-gel-plus",
-      "brand": "Huma",
-      "name": "Huma Chia Energy Gel Plus",
-      "carbs_g": 21,
-      "caffeine_mg": 0,
-      "sodium_mg": 245,
-      "calories": 100,
-      "flavors": [],
-      "notes": "Double electrolytes vs Original: 245mg sodium, 50-145mg potassium, plus magnesium and calcium."
-    },
-    {
-      "item_key": "maurten-gel-100",
-      "brand": "Maurten",
-      "name": "Maurten Gel 100",
-      "carbs_g": 25,
-      "caffeine_mg": 0,
-      "sodium_mg": 20,
-      "calories": 100,
-      "flavors": [],
-      "notes": "Patented hydrogel technology. 0.8:1 fructose:glucose ratio. Minimal taste. 40g packet."
-    },
-    {
-      "item_key": "maurten-gel-100-caf-100",
-      "brand": "Maurten",
-      "name": "Maurten Gel 100 CAF 100",
-      "carbs_g": 25,
-      "caffeine_mg": 100,
-      "sodium_mg": 22,
-      "calories": 100,
-      "flavors": [],
-      "notes": "Hydrogel technology with 100mg caffeine. 0.8:1 fructose:glucose ratio. 40g packet."
-    },
-    {
-      "item_key": "maurten-gel-160",
-      "brand": "Maurten",
-      "name": "Maurten Gel 160",
-      "carbs_g": 40,
-      "caffeine_mg": 0,
-      "sodium_mg": 30,
-      "calories": 160,
-      "flavors": [],
-      "notes": "Larger hydrogel packet with 40g carbs. 0.8:1 fructose:glucose ratio. 65g packet. Premium price point."
-    },
-    {
-      "item_key": "muir-energy-fast-burning-gel",
-      "brand": "Muir Energy",
-      "name": "Muir Energy Fast Burning Gel",
-      "carbs_g": 28,
-      "caffeine_mg": 0,
-      "sodium_mg": 40,
-      "calories": 120,
-      "flavors": [],
-      "notes": "4-6 organic whole food ingredients. Fast-burning for quick energy. 100% organic, vegan, gluten-free."
-    },
-    {
-      "item_key": "muir-energy-mate-caffeinated-gel",
-      "brand": "Muir Energy",
-      "name": "Muir Energy Mate Caffeinated Gel",
-      "carbs_g": 25,
-      "caffeine_mg": 90,
-      "sodium_mg": 40,
-      "calories": 140,
-      "flavors": [],
-      "notes": "90mg caffeine from yerba mate. Organic whole food ingredients. Over 300mg potassium per packet."
-    },
-    {
-      "item_key": "muir-energy-slow-burning-gel",
-      "brand": "Muir Energy",
-      "name": "Muir Energy Slow Burning Gel",
-      "carbs_g": 22,
-      "caffeine_mg": 0,
-      "sodium_mg": 40,
-      "calories": 150,
-      "flavors": [],
-      "notes": "Raw nut/seed butter base for slow sustained energy. Best for ultras and long efforts. 100% organic."
-    },
-    {
-      "item_key": "naak-ultra-energy-gel",
-      "brand": "Naak",
-      "name": "Naak Ultra Energy Gel",
-      "carbs_g": 27,
-      "caffeine_mg": 0,
-      "sodium_mg": 187,
-      "calories": 200,
-      "flavors": [],
-      "notes": "1:1 short/complex carb ratio. 2g protein with BCAAs. 460mg total electrolytes. High calorie density."
-    },
-    {
-      "item_key": "naak-ultra-energy-gel-caffeine",
-      "brand": "Naak",
-      "name": "Naak Ultra Energy Gel (Caffeine)",
-      "carbs_g": 27,
-      "caffeine_mg": 35,
-      "sodium_mg": 187,
-      "calories": 200,
-      "flavors": [],
-      "notes": "1:1 short/complex carb ratio. 2g protein with BCAAs. 460mg total electrolytes. 35mg caffeine."
-    },
-    {
-      "item_key": "neversecond-c30-energy-gel",
-      "brand": "Neversecond",
-      "name": "Neversecond C30 Energy Gel",
-      "carbs_g": 30,
-      "caffeine_mg": 0,
-      "sodium_mg": 200,
-      "calories": 120,
-      "flavors": [],
-      "notes": "2:1 glucose:fructose ratio. 30g carbs per 60ml gel. High sodium content (200mg)."
-    },
-    {
-      "item_key": "neversecond-c30-plus-caffeine-gel",
-      "brand": "Neversecond",
-      "name": "Neversecond C30+ Caffeine Energy Gel",
-      "carbs_g": 30,
-      "caffeine_mg": 75,
-      "sodium_mg": 200,
-      "calories": 120,
-      "flavors": [],
-      "notes": "2:1 glucose:fructose ratio with 75mg caffeine. 30g carbs per 60ml gel. High sodium (200mg)."
-    },
-    {
-      "item_key": "powerbar-powergel-original",
-      "brand": "PowerBar",
-      "name": "PowerBar PowerGel Original",
-      "carbs_g": 27,
-      "caffeine_mg": 0,
-      "sodium_mg": 200,
-      "calories": 107,
-      "flavors": [],
-      "notes": "Dual-source carbs (maltodextrin + fructose). 41g packet. C2MAX carb blend. High sodium (200mg)."
-    },
-    {
-      "item_key": "powerbar-powergel-caffeinated",
-      "brand": "PowerBar",
-      "name": "PowerBar PowerGel Original (Caffeinated)",
-      "carbs_g": 27,
-      "caffeine_mg": 50,
-      "sodium_mg": 200,
-      "calories": 107,
-      "flavors": [],
-      "notes": "Dual-source carbs with 50mg caffeine. 41g packet. C2MAX carb blend. High sodium (200mg)."
-    },
-    {
-      "item_key": "precision-fuel-pf-30-caffeine-gel",
-      "brand": "Precision Fuel & Hydration",
-      "name": "PF 30 Caffeine Gel",
-      "carbs_g": 30,
-      "caffeine_mg": 100,
-      "sodium_mg": 0,
-      "calories": 120,
-      "flavors": [],
-      "notes": "30g carbs + 100mg caffeine. 51g packet. Separate fueling from hydration philosophy."
-    },
-    {
-      "item_key": "precision-fuel-pf-30-gel",
-      "brand": "Precision Fuel & Hydration",
-      "name": "PF 30 Gel",
-      "carbs_g": 30,
-      "caffeine_mg": 0,
-      "sodium_mg": 0,
-      "calories": 120,
-      "flavors": [],
-      "notes": "30g carbs in a compact 50g packet. Designed to separate fueling from hydration. Very mild flavor."
-    },
-    {
-      "item_key": "sis-go-energy-caffeine-gel",
-      "brand": "Science in Sport",
-      "name": "SiS GO Energy + Caffeine Gel",
-      "carbs_g": 22,
-      "caffeine_mg": 75,
-      "sodium_mg": 10,
-      "calories": 87,
-      "flavors": [],
-      "notes": "Isotonic formula with 75mg caffeine. Same easy-digest base as standard GO gel. 60ml packet."
-    },
-    {
-      "item_key": "sis-go-energy-electrolyte-gel",
-      "brand": "Science in Sport",
-      "name": "SiS GO Energy + Electrolyte Gel",
-      "carbs_g": 22,
-      "caffeine_mg": 0,
-      "sodium_mg": 118,
-      "calories": 87,
-      "flavors": [],
-      "notes": "Enhanced electrolytes: 118mg sodium, 9.5mg potassium, 1.5mg magnesium. Not isotonic."
-    },
-    {
-      "item_key": "sis-go-isotonic-energy-gel",
-      "brand": "Science in Sport",
-      "name": "SiS GO Isotonic Energy Gel",
-      "carbs_g": 22,
-      "caffeine_mg": 0,
-      "sodium_mg": 10,
-      "calories": 87,
-      "flavors": [],
-      "notes": "World's first isotonic gel. No water needed. Maltodextrin-based. 60ml packet."
-    },
-    {
-      "item_key": "skratch-labs-energy-chews-sport-fuel",
-      "brand": "Skratch Labs",
-      "name": "Skratch Labs Energy Chews Sport Fuel",
-      "carbs_g": 40,
-      "caffeine_mg": 0,
-      "sodium_mg": 80,
-      "calories": 160,
-      "flavors": [],
-      "notes": "Chew format (not gel). Real fruit ingredients. 40g carbs per package. Gel alternative."
-    },
-    {
-      "item_key": "skratch-labs-energy-chews-caffeinated",
-      "brand": "Skratch Labs",
-      "name": "Skratch Labs Energy Chews Sport Fuel (Caffeinated)",
-      "carbs_g": 40,
-      "caffeine_mg": 50,
-      "sodium_mg": 80,
-      "calories": 160,
-      "flavors": [],
-      "notes": "Chew format with 50mg caffeine from green tea. Real fruit. 40g carbs per package."
-    },
-    {
-      "item_key": "spring-energy-awesome-sauce",
-      "brand": "Spring Energy",
-      "name": "Spring Energy Awesome Sauce",
-      "carbs_g": 28,
-      "caffeine_mg": 0,
-      "sodium_mg": 45,
-      "calories": 180,
-      "flavors": [],
-      "notes": "Vegan real-food gel. Reformulated 2024. 60g packet. 7g fat. Note: past label accuracy controversy."
-    },
-    {
-      "item_key": "spring-energy-canaberry",
-      "brand": "Spring Energy",
-      "name": "Spring Energy CanaBerry",
-      "carbs_g": 17,
-      "caffeine_mg": 0,
-      "sodium_mg": 30,
-      "calories": 100,
-      "flavors": [],
-      "notes": "Vegan real-food gel. Lighter option. 46g packet. Rice, banana, strawberry, coconut."
-    },
-    {
-      "item_key": "spring-energy-hill-aid",
-      "brand": "Spring Energy",
-      "name": "Spring Energy Hill Aid",
-      "carbs_g": 19,
-      "caffeine_mg": 30,
-      "sodium_mg": 35,
-      "calories": 100,
-      "flavors": [],
-      "notes": "Real-food gel with 30mg caffeine. Mango, rice, banana, honey, coconut, mint. Designed for climbs."
-    },
-    {
-      "item_key": "spring-energy-long-haul",
-      "brand": "Spring Energy",
-      "name": "Spring Energy Long Haul",
-      "carbs_g": 30,
-      "caffeine_mg": 0,
-      "sodium_mg": 40,
-      "calories": 200,
-      "flavors": [],
-      "notes": "High-calorie real-food gel for ultras. Rice, banana, peanuts, honey, molasses, chia seeds."
-    },
-    {
-      "item_key": "spring-energy-speednut",
-      "brand": "Spring Energy",
-      "name": "Spring Energy Speednut",
-      "carbs_g": 33,
-      "caffeine_mg": 50,
-      "sodium_mg": 50,
-      "calories": 250,
-      "flavors": [],
-      "notes": "High-calorie real-food gel with 50mg caffeine. Medium-chain fatty acids. For extreme efforts."
-    },
-    {
-      "item_key": "torq-energy-gel",
-      "brand": "Torq",
-      "name": "Torq Energy Gel",
-      "carbs_g": 30,
-      "caffeine_mg": 0,
-      "sodium_mg": 49,
-      "calories": 113,
-      "flavors": [],
-      "notes": "2:1 maltodextrin:fructose. All 5 electrolytes included. 45g serving. Research-proven ratio."
-    },
-    {
-      "item_key": "torq-energy-gel-caffeinated",
-      "brand": "Torq",
-      "name": "Torq Energy Gel (Caffeinated)",
-      "carbs_g": 30,
-      "caffeine_mg": 89,
-      "sodium_mg": 49,
-      "calories": 113,
-      "flavors": [],
-      "notes": "2:1 maltodextrin:fructose with 89mg caffeine from guarana. All 5 electrolytes. 45g serving."
-    },
-    {
-      "item_key": "untapped-coffee-energy-gel",
-      "brand": "UnTapped",
-      "name": "UnTapped Coffee Energy Gel",
-      "carbs_g": 26,
-      "caffeine_mg": 27,
-      "sodium_mg": 5,
-      "calories": 100,
-      "flavors": [],
-      "notes": "Maple syrup + organic coffee. 27mg naturally occurring caffeine. Low glycemic. 38g packet."
-    },
-    {
-      "item_key": "untapped-maple-energy-gel",
-      "brand": "UnTapped",
-      "name": "UnTapped Maple Energy Gel",
-      "carbs_g": 26,
-      "caffeine_mg": 0,
-      "sodium_mg": 5,
-      "calories": 100,
-      "flavors": [],
-      "notes": "Pure Vermont maple syrup. Single ingredient. Low glycemic. Natural minerals. 38g packet."
-    },
-    {
-      "item_key": "untapped-salted-cocoa-energy-gel",
-      "brand": "UnTapped",
-      "name": "UnTapped Salted Cocoa Energy Gel",
-      "carbs_g": 26,
-      "caffeine_mg": 0,
-      "sodium_mg": 60,
-      "calories": 100,
-      "flavors": [],
-      "notes": "Maple syrup + organic cocoa + sea salt. Higher sodium than plain maple. 38g packet."
-    }
-  ]
+ "note": "Snapshot of the fuel catalog (data/fuel-catalog.json, the source of truth) for guide writing. Write the product as brand + name. Page URL: /fuel/gels/<item_key>. Electrolyte rows have no carbs to fuel with.",
+ "exported": "2026-11-23",
+ "gels": [
+  {
+   "item_key": "carbs-fuel-caffeinated-original-50g-gel",
+   "brand": "Carbs Fuel",
+   "name": "Caffeinated Original 50g Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (76 g)",
+   "carbs_g": 50,
+   "caffeine_mg": 100,
+   "sodium_mg": 150,
+   "calories": 200,
+   "flavors": [
+    "Caffeinated Original"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "carbs-fuel-original-25g-gel",
+   "brand": "Carbs Fuel",
+   "name": "Original 25g Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (37 g)",
+   "carbs_g": 25,
+   "caffeine_mg": 0,
+   "sodium_mg": 65,
+   "calories": 100,
+   "flavors": [
+    "Original"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "carbs-fuel-original-50g-gel",
+   "brand": "Carbs Fuel",
+   "name": "Original 50g Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (76 g)",
+   "carbs_g": 50,
+   "caffeine_mg": 0,
+   "sodium_mg": 105,
+   "calories": 200,
+   "flavors": [
+    "Original"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "carbs-fuel-original-sport-drink-mix",
+   "brand": "Carbs Fuel",
+   "name": "Original Sport Drink Mix",
+   "product_type": "drink",
+   "serving_size": "3 scoops (78 g)",
+   "carbs_g": 75,
+   "caffeine_mg": 0,
+   "sodium_mg": 500,
+   "calories": 300,
+   "flavors": [
+    "Original"
+   ],
+   "notes": "Bag holds about 13 servings; mix each with a full bottle of water."
+  },
+  {
+   "item_key": "carbs-fuel-salted-original-50g-gel",
+   "brand": "Carbs Fuel",
+   "name": "Salted Original 50g Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (76 g)",
+   "carbs_g": 50,
+   "caffeine_mg": 0,
+   "sodium_mg": 450,
+   "calories": 200,
+   "flavors": [
+    "Salted Original"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "clif-bloks-energy-chews",
+   "brand": "Clif",
+   "name": "Bloks Energy Chews",
+   "product_type": "chew",
+   "serving_size": "3 pieces (30 g, half a packet)",
+   "carbs_g": 24,
+   "caffeine_mg": 0,
+   "sodium_mg": 50,
+   "calories": 100,
+   "flavors": [
+    "Strawberry",
+    "Mountain Berry"
+   ],
+   "notes": "Each packet is two servings; price is per serving."
+  },
+  {
+   "item_key": "clif-bloks-energy-chews-caffeinated",
+   "brand": "Clif",
+   "name": "Bloks Energy Chews (Caffeinated)",
+   "product_type": "chew",
+   "serving_size": "3 pieces (30 g, half a packet)",
+   "carbs_g": 24,
+   "caffeine_mg": 25,
+   "sodium_mg": 50,
+   "calories": 100,
+   "flavors": [
+    "Orange",
+    "Tropical Punch",
+    "Black Cherry"
+   ],
+   "notes": "Black Cherry has 50 mg caffeine. Each packet is two servings; price is per serving."
+  },
+  {
+   "item_key": "clif-bloks-energy-chews-salted",
+   "brand": "Clif",
+   "name": "Bloks Energy Chews (Salted)",
+   "product_type": "chew",
+   "serving_size": "3 pieces (30 g, half a packet)",
+   "carbs_g": 24,
+   "caffeine_mg": 0,
+   "sodium_mg": 100,
+   "calories": 90,
+   "flavors": [
+    "Salted Watermelon",
+    "Margarita"
+   ],
+   "notes": "Margarita has 150 mg sodium and 23 g carbs. Each packet is two servings; price is per serving."
+  },
+  {
+   "item_key": "clif-bloks-sours-energy-chews",
+   "brand": "Clif",
+   "name": "Bloks Sours Energy Chews",
+   "product_type": "chew",
+   "serving_size": "3 pieces (30 g, half a packet)",
+   "carbs_g": 21,
+   "caffeine_mg": 0,
+   "sodium_mg": 105,
+   "calories": 80,
+   "flavors": [
+    "Sour Green Apple"
+   ],
+   "notes": "Each packet is two servings; price is per serving."
+  },
+  {
+   "item_key": "clif-bloks-sours-energy-chews-caffeinated",
+   "brand": "Clif",
+   "name": "Bloks Sours Energy Chews (Caffeinated)",
+   "product_type": "chew",
+   "serving_size": "3 pieces (30 g, half a packet)",
+   "carbs_g": 22,
+   "caffeine_mg": 25,
+   "sodium_mg": 105,
+   "calories": 90,
+   "flavors": [
+    "Sour Strawberry Lemonade"
+   ],
+   "notes": "Each packet is two servings; price is per serving."
+  },
+  {
+   "item_key": "enervit-carbo-bar-c2-1pro",
+   "brand": "Enervit",
+   "name": "C2:1PRO Carbo Bar",
+   "product_type": "bar",
+   "serving_size": "1 bar (45 g)",
+   "carbs_g": 37,
+   "caffeine_mg": 0,
+   "sodium_mg": 10,
+   "calories": 160,
+   "flavors": [
+    "Brownie"
+   ],
+   "notes": "Page text says 30 g carbs per bar; the US label reads 37 g total carbohydrate."
+  },
+  {
+   "item_key": "enervit-carbo-drink-mix-c2-1pro",
+   "brand": "Enervit",
+   "name": "C2:1PRO Carbo Drink Mix",
+   "product_type": "drink",
+   "serving_size": "2 tbsp (47 g) in 12 fl oz water",
+   "carbs_g": 43,
+   "caffeine_mg": 0,
+   "sodium_mg": 170,
+   "calories": 180,
+   "flavors": [
+    "Lemon"
+   ],
+   "notes": "Page text says 60 g carbs per serving; the US label reads 43 g total carbohydrate."
+  },
+  {
+   "item_key": "enervit-carbo-gel-c2-1pro",
+   "brand": "Enervit",
+   "name": "C2:1PRO Carbo Gel",
+   "product_type": "gel",
+   "serving_size": "1 gel (60 ml)",
+   "carbs_g": 40,
+   "caffeine_mg": 0,
+   "sodium_mg": 0,
+   "calories": 160,
+   "flavors": [
+    "Mango"
+   ],
+   "notes": "Other flavors exist at The Feed (Lime, Citrus Orange); a Neutral version with sodium lists 200 mg."
+  },
+  {
+   "item_key": "enervit-liquid-gel",
+   "brand": "Enervit",
+   "name": "Liquid Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (60 mL)",
+   "carbs_g": 30,
+   "caffeine_mg": 0,
+   "sodium_mg": 0,
+   "calories": 120,
+   "flavors": [
+    "Orange"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "gatorade-endurance-energy-chews",
+   "brand": "Gatorade",
+   "name": "Endurance Energy Chews",
+   "product_type": "chew",
+   "serving_size": "1 pouch (6 chews)",
+   "carbs_g": 25,
+   "caffeine_mg": 0,
+   "sodium_mg": 70,
+   "calories": 100,
+   "flavors": [
+    "Cool Blue",
+    "Fruit Punch",
+    "Green Apple",
+    "Strawberry"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "gatorade-endurance-energy-gel-caffeine",
+   "brand": "Gatorade",
+   "name": "Endurance Energy Gel (Caffeinated)",
+   "product_type": "gel",
+   "serving_size": "1 pouch (37 g)",
+   "carbs_g": 20,
+   "caffeine_mg": 30,
+   "sodium_mg": 90,
+   "calories": 80,
+   "flavors": [
+    "Lemon Ginger",
+    "Strawberry",
+    "Watermelon",
+    "Caramel Candy"
+   ],
+   "notes": "Gatorade's own gel is on the small side at 20 g carbs per pouch."
+  },
+  {
+   "item_key": "gatorade-endurance-formula",
+   "brand": "Gatorade",
+   "name": "Endurance Formula Powder",
+   "product_type": "drink",
+   "serving_size": "1/2 packet (mixed in 12 fl oz)",
+   "carbs_g": 22,
+   "caffeine_mg": 0,
+   "sodium_mg": 310,
+   "calories": 90,
+   "flavors": [
+    "Lemon-Lime",
+    "Watermelon"
+   ],
+   "notes": "Brand page also prints 42 g carbs and 600 mg sodium for a full packet (24 oz); numbers here are per 12 fl oz."
+  },
+  {
+   "item_key": "gu-energy-chews",
+   "brand": "GU",
+   "name": "Energy Chews",
+   "product_type": "chew",
+   "serving_size": "About 8 pieces (30 g, half a pouch)",
+   "carbs_g": 24,
+   "caffeine_mg": 0,
+   "sodium_mg": 40,
+   "calories": 100,
+   "flavors": [
+    "Fruit Punch",
+    "Rainbow Fruit Mix",
+    "Orange",
+    "Blueberry Pomegranate",
+    "Watermelon",
+    "Salted Lime",
+    "Lemonade"
+   ],
+   "notes": "Each pouch is two servings; Salted Lime has 125 mg sodium."
+  },
+  {
+   "item_key": "gu-energy-chews-caffeinated",
+   "brand": "GU",
+   "name": "Energy Chews (Caffeinated)",
+   "product_type": "chew",
+   "serving_size": "About 8 pieces (30 g, half a pouch)",
+   "carbs_g": 24,
+   "caffeine_mg": 20,
+   "sodium_mg": 40,
+   "calories": 100,
+   "flavors": [
+    "Strawberry"
+   ],
+   "notes": "Each pouch is two servings."
+  },
+  {
+   "item_key": "gu-energy-waffle",
+   "brand": "GU",
+   "name": "Energy Waffle",
+   "product_type": "bar",
+   "serving_size": "1 waffle (30 g)",
+   "carbs_g": 19,
+   "caffeine_mg": 0,
+   "sodium_mg": 70,
+   "calories": 130,
+   "flavors": [
+    "Maple Cinnamon",
+    "Campfire S'mores",
+    "Coconut",
+    "Coffee Caramel",
+    "Salted Caramel",
+    "Wild Berries",
+    "Salted Chocolate"
+   ],
+   "notes": "Carbs 19 to 20 g and sodium 70 to 170 mg by flavor; has 5 to 6 g fat."
+  },
+  {
+   "item_key": "gu-hydration-drink-tabs",
+   "brand": "GU",
+   "name": "Hydration Drink Tabs",
+   "product_type": "electrolyte",
+   "serving_size": "1 tablet (4.5 g)",
+   "carbs_g": 3,
+   "caffeine_mg": 0,
+   "sodium_mg": 320,
+   "calories": 10,
+   "flavors": [
+    "Strawberry Lemonade",
+    "Strawberry Hibiscus",
+    "Tropical Citrus",
+    "Orange",
+    "Tri-Berry",
+    "Lemon Lime"
+   ],
+   "notes": "Panel read on Strawberry Lemonade only."
+  },
+  {
+   "item_key": "gu-liquid-energy-gel",
+   "brand": "GU",
+   "name": "Liquid Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (1.7 fl oz, 51 mL)",
+   "carbs_g": 24,
+   "caffeine_mg": 0,
+   "sodium_mg": 75,
+   "calories": 100,
+   "flavors": [
+    "Plain & Simple",
+    "Passion Fruit Orange Guava",
+    "Lemonade",
+    "Strawberry Banana"
+   ],
+   "notes": "Sugars are 7 g in these flavors."
+  },
+  {
+   "item_key": "gu-liquid-energy-gel-caffeinated",
+   "brand": "GU",
+   "name": "Liquid Energy Gel (Caffeinated)",
+   "product_type": "gel",
+   "serving_size": "1 packet (1.7 fl oz, 51 mL)",
+   "carbs_g": 24,
+   "caffeine_mg": 40,
+   "sodium_mg": 75,
+   "calories": 100,
+   "flavors": [
+    "Cola",
+    "Orange"
+   ],
+   "notes": "Cola has 40 mg caffeine; Orange has 20 mg."
+  },
+  {
+   "item_key": "gu-original-energy-gel",
+   "brand": "GU",
+   "name": "Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (32 g)",
+   "carbs_g": 23,
+   "caffeine_mg": 0,
+   "sodium_mg": 60,
+   "calories": 100,
+   "flavors": [
+    "Birthday Cake",
+    "Campfire S'mores",
+    "Lemon Sublime",
+    "Raspberry Lemonade",
+    "Sour Peach",
+    "Strawberry Banana"
+   ],
+   "notes": "Carbs run 22 to 23 g by flavor."
+  },
+  {
+   "item_key": "gu-original-energy-gel-caffeinated",
+   "brand": "GU",
+   "name": "Energy Gel (Caffeinated)",
+   "product_type": "gel",
+   "serving_size": "1 packet (32 g)",
+   "carbs_g": 23,
+   "caffeine_mg": 20,
+   "sodium_mg": 60,
+   "calories": 100,
+   "flavors": [
+    "Chocolate Outrage",
+    "Mandarin Orange",
+    "Salted Caramel",
+    "Salted Watermelon",
+    "Tri-Berry",
+    "Vanilla Bean",
+    "Caramel Macchiato",
+    "Cola-Me Happy",
+    "Espresso Love",
+    "Jet Blackberry"
+   ],
+   "notes": "20 mg caffeine in six flavors, 40 mg in Caramel Macchiato, Cola-Me Happy, Espresso Love and Jet Blackberry; Salted Caramel and Salted Watermelon have 125 mg sodium."
+  },
+  {
+   "item_key": "gu-roctane-electrolyte-capsules",
+   "brand": "GU",
+   "name": "Roctane Electrolyte Capsules",
+   "product_type": "electrolyte",
+   "serving_size": "1 capsule",
+   "carbs_g": 0,
+   "caffeine_mg": 0,
+   "sodium_mg": 140,
+   "calories": 0,
+   "flavors": [],
+   "notes": "Also 125 mg chloride and 9 mg magnesium per capsule."
+  },
+  {
+   "item_key": "gu-roctane-energy-drink-mix",
+   "brand": "GU",
+   "name": "Roctane Energy & Hydration Drink Mix",
+   "product_type": "drink",
+   "serving_size": "2 scoops (65 g)",
+   "carbs_g": 59,
+   "caffeine_mg": 0,
+   "sodium_mg": 320,
+   "calories": 250,
+   "flavors": [
+    "Grape",
+    "Strawberry Hibiscus"
+   ],
+   "notes": "Mix with about 500 ml water."
+  },
+  {
+   "item_key": "gu-roctane-energy-drink-mix-caffeinated",
+   "brand": "GU",
+   "name": "Roctane Energy & Hydration Drink Mix (Caffeinated)",
+   "product_type": "drink",
+   "serving_size": "2 scoops (65 g)",
+   "carbs_g": 59,
+   "caffeine_mg": 35,
+   "sodium_mg": 320,
+   "calories": 250,
+   "flavors": [
+    "Lemon Berry",
+    "Summit Tea",
+    "Tropical Fruit"
+   ],
+   "notes": "Mix with about 500 ml water."
+  },
+  {
+   "item_key": "gu-roctane-energy-gel",
+   "brand": "GU",
+   "name": "Roctane Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (32 g)",
+   "carbs_g": 21,
+   "caffeine_mg": 0,
+   "sodium_mg": 125,
+   "calories": 100,
+   "flavors": [
+    "Lemonade",
+    "Pineapple",
+    "Strawberry Kiwi"
+   ],
+   "notes": "Lemonade has 180 mg sodium; carbs are from the caffeinated flavors of the same formula."
+  },
+  {
+   "item_key": "gu-roctane-energy-gel-caffeinated",
+   "brand": "GU",
+   "name": "Roctane Energy Gel (Caffeinated)",
+   "product_type": "gel",
+   "serving_size": "1 packet (32 g)",
+   "carbs_g": 21,
+   "caffeine_mg": 35,
+   "sodium_mg": 125,
+   "calories": 100,
+   "flavors": [
+    "Cold Brew Coffee",
+    "Blueberry Pomegranate",
+    "Chocolate Coconut",
+    "Vanilla Orange",
+    "Cherry Lime",
+    "Sea Salt Chocolate",
+    "Salted Lime"
+   ],
+   "notes": "Cold Brew has 70 mg caffeine; Sea Salt Chocolate and Salted Lime have 180 to 190 mg sodium."
+  },
+  {
+   "item_key": "hammer-nutrition-endurolytes",
+   "brand": "Hammer Nutrition",
+   "name": "Endurolytes",
+   "product_type": "electrolyte",
+   "serving_size": "2 capsules",
+   "carbs_g": 0,
+   "caffeine_mg": 0,
+   "sodium_mg": 80,
+   "calories": 0,
+   "flavors": [],
+   "notes": "Also 50 mg potassium and 50 mg magnesium per serving."
+  },
+  {
+   "item_key": "hammer-nutrition-endurolytes-extreme",
+   "brand": "Hammer Nutrition",
+   "name": "Endurolytes Extreme",
+   "product_type": "electrolyte",
+   "serving_size": "1 capsule",
+   "carbs_g": 0,
+   "caffeine_mg": 0,
+   "sodium_mg": 110,
+   "calories": 0,
+   "flavors": [],
+   "notes": "The powder version has 120 mg sodium per scoop."
+  },
+  {
+   "item_key": "hammer-nutrition-endurolytes-fizz",
+   "brand": "Hammer Nutrition",
+   "name": "Endurolytes Fizz",
+   "product_type": "electrolyte",
+   "serving_size": "1 tablet (4.4 g)",
+   "carbs_g": 0,
+   "caffeine_mg": 0,
+   "sodium_mg": 200,
+   "calories": 7,
+   "flavors": [
+    "Grapefruit",
+    "Grape",
+    "Lemon-Lime",
+    "Mango"
+   ],
+   "notes": "Carbs under 1 g; priced from the 13-count tube."
+  },
+  {
+   "item_key": "hammer-nutrition-endurolytes-fizz-cola",
+   "brand": "Hammer Nutrition",
+   "name": "Endurolytes Fizz Cola (Caffeinated)",
+   "product_type": "electrolyte",
+   "serving_size": "1 tablet (4.24 g)",
+   "carbs_g": 2,
+   "caffeine_mg": 20,
+   "sodium_mg": 200,
+   "calories": 7,
+   "flavors": [
+    "Cola"
+   ],
+   "notes": "Priced from the 13-count tube."
+  },
+  {
+   "item_key": "hammer-nutrition-hammer-bar",
+   "brand": "Hammer Nutrition",
+   "name": "Hammer Bar",
+   "product_type": "bar",
+   "serving_size": "1 bar (50 g)",
+   "carbs_g": 26,
+   "caffeine_mg": 0,
+   "sodium_mg": 0,
+   "calories": 220,
+   "flavors": [
+    "Almond Raisin",
+    "Chocolate Chip",
+    "Coconut Chocolate Chip",
+    "Cranberry",
+    "Oatmeal Apple"
+   ],
+   "notes": "Real-food bar with 4 to 6 g protein and up to 14 g fat; carbs run 24 to 30 g by flavor."
+  },
+  {
+   "item_key": "hammer-nutrition-hammer-gel",
+   "brand": "Hammer Nutrition",
+   "name": "Hammer Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (33 g)",
+   "carbs_g": 22,
+   "caffeine_mg": 0,
+   "sodium_mg": 25,
+   "calories": 90,
+   "flavors": [
+    "Apple Cinnamon",
+    "Banana",
+    "Chocolate",
+    "Huckleberry",
+    "Nocciola (Hazelnut)",
+    "Orange",
+    "Peanut Butter",
+    "Peanut Butter-Chocolate",
+    "Raspberry",
+    "Vanilla"
+   ],
+   "notes": "Nocciola and the peanut butter flavors have 18 to 20 g carbs, 100 calories and 1 g protein."
+  },
+  {
+   "item_key": "hammer-nutrition-hammer-gel-espresso",
+   "brand": "Hammer Nutrition",
+   "name": "Hammer Gel Espresso (Caffeinated)",
+   "product_type": "gel",
+   "serving_size": "1 packet (33 g)",
+   "carbs_g": 22,
+   "caffeine_mg": 50,
+   "sodium_mg": 35,
+   "calories": 90,
+   "flavors": [
+    "Espresso"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "hammer-nutrition-hammer-gel-tropical",
+   "brand": "Hammer Nutrition",
+   "name": "Hammer Gel Tropical (Caffeinated)",
+   "product_type": "gel",
+   "serving_size": "1 packet (33 g)",
+   "carbs_g": 22,
+   "caffeine_mg": 25,
+   "sodium_mg": 25,
+   "calories": 90,
+   "flavors": [
+    "Tropical"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "hammer-nutrition-heed",
+   "brand": "Hammer Nutrition",
+   "name": "HEED Sports Drink",
+   "product_type": "drink",
+   "serving_size": "1 scoop (30 g)",
+   "carbs_g": 28,
+   "caffeine_mg": 0,
+   "sodium_mg": 150,
+   "calories": 110,
+   "flavors": [
+    "Lemon-Lime",
+    "Orange",
+    "Melon",
+    "Strawberry"
+   ],
+   "notes": "Priced from the 32-serving jug."
+  },
+  {
+   "item_key": "hammer-nutrition-heed-cherry-bomb",
+   "brand": "Hammer Nutrition",
+   "name": "HEED Sports Drink Cherry Bomb (Caffeinated)",
+   "product_type": "drink",
+   "serving_size": "1 scoop (30 g)",
+   "carbs_g": 28,
+   "caffeine_mg": 25,
+   "sodium_mg": 150,
+   "calories": 110,
+   "flavors": [
+    "Cherry Bomb"
+   ],
+   "notes": "Priced from the 32-serving jug."
+  },
+  {
+   "item_key": "hammer-nutrition-perpetuem",
+   "brand": "Hammer Nutrition",
+   "name": "Perpetuem",
+   "product_type": "drink",
+   "serving_size": "2 scoops (46 g)",
+   "carbs_g": 34,
+   "caffeine_mg": 0,
+   "sodium_mg": 170,
+   "calories": 180,
+   "flavors": [
+    "Chocolate",
+    "Orange",
+    "Strawberry"
+   ],
+   "notes": "Contains 5 g protein and soy; Orange has 100 mg sodium and 35 g carbs."
+  },
+  {
+   "item_key": "hammer-nutrition-perpetuem-caffe-latte",
+   "brand": "Hammer Nutrition",
+   "name": "Perpetuem Caffe Latte (Caffeinated)",
+   "product_type": "drink",
+   "serving_size": "2 scoops (46 g)",
+   "carbs_g": 34,
+   "caffeine_mg": 30,
+   "sodium_mg": 170,
+   "calories": 180,
+   "flavors": [
+    "Caffe Latte"
+   ],
+   "notes": "Contains 5 g protein and soy."
+  },
+  {
+   "item_key": "hammer-nutrition-perpetuem-solids",
+   "brand": "Hammer Nutrition",
+   "name": "Perpetuem Solids",
+   "product_type": "chew",
+   "serving_size": "3 tablets (26 g)",
+   "carbs_g": 20,
+   "caffeine_mg": 0,
+   "sodium_mg": 100,
+   "calories": 100,
+   "flavors": [
+    "Chocolate",
+    "Orange",
+    "Strawberry"
+   ],
+   "notes": "Contains 3 g protein; Caffe Latte (30 mg caffeine) is out of stock."
+  },
+  {
+   "item_key": "hammer-nutrition-sustained-energy",
+   "brand": "Hammer Nutrition",
+   "name": "Sustained Energy",
+   "product_type": "drink",
+   "serving_size": "2 scoops (53 g)",
+   "carbs_g": 43,
+   "caffeine_mg": 0,
+   "sodium_mg": 80,
+   "calories": 200,
+   "flavors": [],
+   "notes": "Unflavored; contains 6 g protein."
+  },
+  {
+   "item_key": "honey-stinger-electrolyte-energy-gel",
+   "brand": "Honey Stinger",
+   "name": "Electrolyte Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (31 g)",
+   "carbs_g": 24,
+   "caffeine_mg": 0,
+   "sodium_mg": 100,
+   "calories": 100,
+   "flavors": [
+    "Raspberry Lemonade",
+    "Watermelon Lime"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "honey-stinger-energy-chews",
+   "brand": "Honey Stinger",
+   "name": "Classic Energy Chews",
+   "product_type": "chew",
+   "serving_size": "6 chews (30 g)",
+   "carbs_g": 23,
+   "caffeine_mg": 0,
+   "sodium_mg": 40,
+   "calories": 100,
+   "flavors": [
+    "Citrus Splash",
+    "Pomegranate Passionfruit",
+    "Pink Lemonade",
+    "Fruit Smoothie",
+    "Orange Blossom",
+    "Cherry Blossom"
+   ],
+   "notes": "Citrus Splash has 35 mg sodium."
+  },
+  {
+   "item_key": "honey-stinger-energy-chews-caffeinated",
+   "brand": "Honey Stinger",
+   "name": "Caffeinated Energy Chews",
+   "product_type": "chew",
+   "serving_size": "6 chews (30 g)",
+   "carbs_g": 24,
+   "caffeine_mg": 50,
+   "sodium_mg": 80,
+   "calories": 100,
+   "flavors": [
+    "Stingerita Lime",
+    "Cherry Cola"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "honey-stinger-energy-chews-caffeinated-100",
+   "brand": "Honey Stinger",
+   "name": "Caffeinated Energy Chews (100 mg)",
+   "product_type": "chew",
+   "serving_size": "5 chews (25 g)",
+   "carbs_g": 20,
+   "caffeine_mg": 100,
+   "sodium_mg": 65,
+   "calories": 80,
+   "flavors": [
+    "Berry Blast",
+    "Tropical Twist"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "honey-stinger-energy-waffle",
+   "brand": "Honey Stinger",
+   "name": "Classic Energy Waffle",
+   "product_type": "bar",
+   "serving_size": "1 waffle (30 g)",
+   "carbs_g": 19,
+   "caffeine_mg": 0,
+   "sodium_mg": 80,
+   "calories": 140,
+   "flavors": [
+    "Honey",
+    "Vanilla",
+    "Chocolate"
+   ],
+   "notes": "Chocolate is 160 calories; Vanilla has 18 g carbs."
+  },
+  {
+   "item_key": "honey-stinger-gluten-free-energy-waffle",
+   "brand": "Honey Stinger",
+   "name": "Gluten-Free Energy Waffle",
+   "product_type": "bar",
+   "serving_size": "1 waffle (30 g)",
+   "carbs_g": 19,
+   "caffeine_mg": 0,
+   "sodium_mg": 90,
+   "calories": 140,
+   "flavors": [
+    "Salted Caramel",
+    "Cookies & Cream",
+    "Cinnamon"
+   ],
+   "notes": "Sodium runs 85 to 160 mg by flavor; Salted Caramel is 130 calories."
+  },
+  {
+   "item_key": "honey-stinger-gold-energy-gel",
+   "brand": "Honey Stinger",
+   "name": "Gold Classic Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (31 g)",
+   "carbs_g": 24,
+   "caffeine_mg": 0,
+   "sodium_mg": 45,
+   "calories": 90,
+   "flavors": [
+    "Gold"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "honey-stinger-nut-butter-energy-waffle",
+   "brand": "Honey Stinger",
+   "name": "Nut Butter Energy Waffle",
+   "product_type": "bar",
+   "serving_size": "1 waffle (30 g)",
+   "carbs_g": 16,
+   "caffeine_mg": 0,
+   "sodium_mg": 80,
+   "calories": 150,
+   "flavors": [
+    "Peanut Butter",
+    "Almond Butter Maple",
+    "Peanut Butter Banana",
+    "Peanut Butter Chocolate",
+    "Peanut Butter Strawberry"
+   ],
+   "notes": "Less carb and more fat than the classic waffle; sodium runs 80 to 110 mg."
+  },
+  {
+   "item_key": "honey-stinger-organic-energy-gel",
+   "brand": "Honey Stinger",
+   "name": "Classic Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (31 g)",
+   "carbs_g": 24,
+   "caffeine_mg": 0,
+   "sodium_mg": 50,
+   "calories": 100,
+   "flavors": [
+    "Acai Pomegranate",
+    "Fruit Smoothie"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "honey-stinger-organic-energy-gel-caffeinated",
+   "brand": "Honey Stinger",
+   "name": "Caffeinated Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (31 g)",
+   "carbs_g": 24,
+   "caffeine_mg": 32,
+   "sodium_mg": 50,
+   "calories": 100,
+   "flavors": [
+    "Strawberry Kiwi",
+    "Salted Caramel Latte"
+   ],
+   "notes": "Strawberry Kiwi has 32 mg caffeine; Salted Caramel Latte has 70 mg and 60 mg sodium."
+  },
+  {
+   "item_key": "huma-chia-energy-gel",
+   "brand": "Huma",
+   "name": "Chia Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 pouch (43 g)",
+   "carbs_g": 24,
+   "caffeine_mg": 0,
+   "sodium_mg": 105,
+   "calories": 100,
+   "flavors": [
+    "Strawberries",
+    "Apples & Cinnamon",
+    "Blueberries",
+    "Lemonade",
+    "Mangoes",
+    "Raspberries"
+   ],
+   "notes": "Numbers are for Strawberries; other flavors may differ slightly."
+  },
+  {
+   "item_key": "huma-chia-energy-gel-caffeinated",
+   "brand": "Huma",
+   "name": "Chia Energy Gel (Caffeinated)",
+   "product_type": "gel",
+   "serving_size": "1 pouch (36 g)",
+   "carbs_g": 25,
+   "caffeine_mg": 100,
+   "sodium_mg": 110,
+   "calories": 100,
+   "flavors": [
+    "Double-Shot Mocha",
+    "Chocolate"
+   ],
+   "notes": "Double-Shot Mocha has 100 mg caffeine and 110 mg sodium; Chocolate has 25 mg caffeine and 150 mg sodium."
+  },
+  {
+   "item_key": "huma-chia-energy-gel-plus",
+   "brand": "Huma",
+   "name": "Chia Energy Gel Plus",
+   "product_type": "gel",
+   "serving_size": "1 pouch (42 g)",
+   "carbs_g": 24,
+   "caffeine_mg": 0,
+   "sodium_mg": 240,
+   "calories": 100,
+   "flavors": [
+    "Berries & Pomegranate",
+    "Strawberry Lemonade",
+    "Lemons & Limes",
+    "Chocolate Peanut Butter",
+    "Oranges & Mangoes",
+    "Bananas & Berries"
+   ],
+   "notes": "Double electrolytes; numbers are for Berries & Pomegranate."
+  },
+  {
+   "item_key": "huma-hydration-electrolyte-drink-mix",
+   "brand": "Huma",
+   "name": "Hydration Electrolyte Drink Mix",
+   "product_type": "electrolyte",
+   "serving_size": "1 packet (5 g)",
+   "carbs_g": 2,
+   "caffeine_mg": 0,
+   "sodium_mg": 380,
+   "calories": 10,
+   "flavors": [
+    "Coconut Pineapple",
+    "Lemon Lime",
+    "Raspberry Lemonade"
+   ],
+   "notes": "Numbers are for Coconut Pineapple."
+  },
+  {
+   "item_key": "huma-ultra-energy-gel",
+   "brand": "Huma",
+   "name": "Ultra Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (70 g)",
+   "carbs_g": 40,
+   "caffeine_mg": 0,
+   "sodium_mg": 245,
+   "calories": 160,
+   "flavors": [
+    "Apple Pie"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "infinit-go-far",
+   "brand": "Infinit Nutrition",
+   "name": "Go Far Endurance Fuel",
+   "product_type": "drink",
+   "serving_size": "1 packet (77.1 g)",
+   "carbs_g": 66,
+   "caffeine_mg": 0,
+   "sodium_mg": 379,
+   "calories": 280,
+   "flavors": [
+    "Fruit Punch",
+    "Orange"
+   ],
+   "notes": "Contains 4 g whey protein; mix one packet with 20 oz water."
+  },
+  {
+   "item_key": "infinit-go-far-women",
+   "brand": "Infinit Nutrition",
+   "name": "Go Far for Women Lighter Endurance Fuel",
+   "product_type": "drink",
+   "serving_size": "1 packet (68 g)",
+   "carbs_g": 60,
+   "caffeine_mg": 0,
+   "sodium_mg": 325,
+   "calories": 250,
+   "flavors": [
+    "Grape"
+   ],
+   "notes": "Contains 2 g whey protein; mix one packet with 20 oz water."
+  },
+  {
+   "item_key": "infinit-hydrate",
+   "brand": "Infinit Nutrition",
+   "name": "Hydrate Daily Hydration",
+   "product_type": "drink",
+   "serving_size": "1/2 packet (27.6 g)",
+   "carbs_g": 25,
+   "caffeine_mg": 0,
+   "sodium_mg": 200,
+   "calories": 100,
+   "flavors": [
+    "Strawberry Lemonade"
+   ],
+   "notes": "A serving is half a packet in 12 to 16 oz water; a full packet is 200 cal, 50 g carbs, 400 mg sodium."
+  },
+  {
+   "item_key": "infinit-speed",
+   "brand": "Infinit Nutrition",
+   "name": "Speed High-Intensity Fuel",
+   "product_type": "drink",
+   "serving_size": "1 packet (63.8 g)",
+   "carbs_g": 57,
+   "caffeine_mg": 0,
+   "sodium_mg": 379,
+   "calories": 230,
+   "flavors": [
+    "Lemon Lime"
+   ],
+   "notes": "Mix one packet with 20 oz water."
+  },
+  {
+   "item_key": "infinit-speed-caffeine-boost",
+   "brand": "Infinit Nutrition",
+   "name": "Speed Caffeine Boost (Caffeinated)",
+   "product_type": "drink",
+   "serving_size": "1 packet (64.1 g)",
+   "carbs_g": 57,
+   "caffeine_mg": 125,
+   "sodium_mg": 379,
+   "calories": 230,
+   "flavors": [
+    "Pink Lemonade"
+   ],
+   "notes": "Mix one packet with 20 oz water."
+  },
+  {
+   "item_key": "infinit-tempo",
+   "brand": "Infinit Nutrition",
+   "name": "Tempo Liquid Fuel Concentrate",
+   "product_type": "drink",
+   "serving_size": "3 scoops (26.9 g)",
+   "carbs_g": 25,
+   "caffeine_mg": 0,
+   "sodium_mg": 368,
+   "calories": 100,
+   "flavors": [
+    "Grape",
+    "Salted Watermelon"
+   ],
+   "notes": "A powder you mix into a 2 oz flask concentrate, then sip with water."
+  },
+  {
+   "item_key": "jelly-belly-extreme-sport-beans",
+   "brand": "Jelly Belly",
+   "name": "Extreme Sport Beans (Caffeinated)",
+   "product_type": "chew",
+   "serving_size": "1 bag (1 oz)",
+   "carbs_g": 25,
+   "caffeine_mg": 50,
+   "sodium_mg": 90,
+   "calories": 100,
+   "flavors": [
+    "Pomegranate",
+    "Watermelon",
+    "Cherry"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "jelly-belly-sport-beans",
+   "brand": "Jelly Belly",
+   "name": "Sport Beans",
+   "product_type": "chew",
+   "serving_size": "1 bag (1 oz)",
+   "carbs_g": 25,
+   "caffeine_mg": 0,
+   "sodium_mg": 90,
+   "calories": 100,
+   "flavors": [
+    "Lemon Lime",
+    "Orange",
+    "Fruit Punch",
+    "Berry",
+    "Juicy Pear",
+    "Green Apple"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "lmnt-electrolyte-drink-mix",
+   "brand": "LMNT",
+   "name": "Electrolyte Drink Mix",
+   "product_type": "electrolyte",
+   "serving_size": "1 stick pack (6 g)",
+   "carbs_g": 1,
+   "caffeine_mg": 0,
+   "sodium_mg": 1000,
+   "calories": 5,
+   "flavors": [
+    "Citrus Salt",
+    "Watermelon Salt",
+    "Raspberry Salt",
+    "Grapefruit Salt",
+    "Orange Salt",
+    "Raw Unflavored",
+    "Mango Chili",
+    "Chocolate Salt",
+    "Chocolate Caramel"
+   ],
+   "notes": "Zero sugar; carbs and calories read from the Citrus Salt label."
+  },
+  {
+   "item_key": "maurten-drink-mix-160",
+   "brand": "Maurten",
+   "name": "Drink Mix 160",
+   "product_type": "drink",
+   "serving_size": "1 sachet (42 g)",
+   "carbs_g": 41,
+   "caffeine_mg": 0,
+   "sodium_mg": 210,
+   "calories": 160,
+   "flavors": [],
+   "notes": "Mix one sachet with 500 ml water."
+  },
+  {
+   "item_key": "maurten-drink-mix-320",
+   "brand": "Maurten",
+   "name": "Drink Mix 320",
+   "product_type": "drink",
+   "serving_size": "1 sachet (83 g)",
+   "carbs_g": 80,
+   "caffeine_mg": 0,
+   "sodium_mg": 245,
+   "calories": 320,
+   "flavors": [],
+   "notes": "Mix one sachet with 500 ml water."
+  },
+  {
+   "item_key": "maurten-drink-mix-320-caf-100",
+   "brand": "Maurten",
+   "name": "Drink Mix 320 CAF 100",
+   "product_type": "drink",
+   "serving_size": "1 sachet (83 g)",
+   "carbs_g": 80,
+   "caffeine_mg": 100,
+   "sodium_mg": 245,
+   "calories": 320,
+   "flavors": [],
+   "notes": "Mix one sachet with 500 ml water."
+  },
+  {
+   "item_key": "maurten-gel-100",
+   "brand": "Maurten",
+   "name": "Gel 100",
+   "product_type": "gel",
+   "serving_size": "1 sachet (40 g)",
+   "carbs_g": 25,
+   "caffeine_mg": 0,
+   "sodium_mg": 20,
+   "calories": 100,
+   "flavors": [],
+   "notes": "Single neutral-tasting hydrogel gel with no flavors."
+  },
+  {
+   "item_key": "maurten-gel-100-caf-100",
+   "brand": "Maurten",
+   "name": "Gel 100 CAF 100",
+   "product_type": "gel",
+   "serving_size": "1 sachet (40 g)",
+   "carbs_g": 25,
+   "caffeine_mg": 100,
+   "sodium_mg": 22,
+   "calories": 100,
+   "flavors": [],
+   "notes": null
+  },
+  {
+   "item_key": "maurten-gel-160",
+   "brand": "Maurten",
+   "name": "Gel 160",
+   "product_type": "gel",
+   "serving_size": "1 sachet (65 g)",
+   "carbs_g": 40,
+   "caffeine_mg": 0,
+   "sodium_mg": 30,
+   "calories": 160,
+   "flavors": [],
+   "notes": null
+  },
+  {
+   "item_key": "maurten-solid-160",
+   "brand": "Maurten",
+   "name": "Solid 160",
+   "product_type": "bar",
+   "serving_size": "1 bar (55 g)",
+   "carbs_g": 41.4,
+   "caffeine_mg": 0,
+   "sodium_mg": 247,
+   "calories": 199,
+   "flavors": [],
+   "notes": "Oat and rice bar with 3 g fat and 2 g protein; splits into two halves."
+  },
+  {
+   "item_key": "maurten-solid-c-160",
+   "brand": "Maurten",
+   "name": "Solid C 160",
+   "product_type": "bar",
+   "serving_size": "1 bar (55 g)",
+   "carbs_g": 41.9,
+   "caffeine_mg": 0,
+   "sodium_mg": 246,
+   "calories": 201,
+   "flavors": [
+    "Cocoa"
+   ],
+   "notes": "Oat and rice bar with cocoa; 3 g fat and 2.5 g protein."
+  },
+  {
+   "item_key": "muir-energy-fast-burning-gel",
+   "brand": "Muir Energy",
+   "name": "Fast Burning Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 pack (31 g)",
+   "carbs_g": 23,
+   "caffeine_mg": 0,
+   "sodium_mg": 100,
+   "calories": 100,
+   "flavors": [
+    "Strawberry",
+    "Red Raspberry",
+    "Pineapple Kale",
+    "Blueberry Bergamot"
+   ],
+   "notes": "Fruit-and-vegetable gel; carbs run 18 to 24 g and calories 100 to 110 by flavor (Strawberry shown)."
+  },
+  {
+   "item_key": "muir-energy-mate-caffeinated-gel",
+   "brand": "Muir Energy",
+   "name": "Mate Caffeinated Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (30 g)",
+   "carbs_g": 12,
+   "caffeine_mg": 90,
+   "sodium_mg": 100,
+   "calories": 145,
+   "flavors": [
+    "Cashew Vanilla Mate"
+   ],
+   "notes": "Nut-butter gel with 6 g fat and 90 mg caffeine from yerba mate."
+  },
+  {
+   "item_key": "muir-energy-slow-burning-gel",
+   "brand": "Muir Energy",
+   "name": "Slow Burning Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (30 g)",
+   "carbs_g": 12,
+   "caffeine_mg": 0,
+   "sodium_mg": 100,
+   "calories": 145,
+   "flavors": [
+    "Cacao Almond",
+    "Cashew Vanilla",
+    "Cashew Lemon",
+    "Hazelnut Banana",
+    "Cacao Almond Peppermint"
+   ],
+   "notes": "Nut-butter gel with 5 to 7 g fat; carbs run 12 to 17 g and calories 140 to 150 by flavor."
+  },
+  {
+   "item_key": "naak-boost-drink-mix-60",
+   "brand": "Näak",
+   "name": "Boost Drink Mix 60",
+   "product_type": "drink",
+   "serving_size": "1 serving (64 g)",
+   "carbs_g": 60,
+   "caffeine_mg": 0,
+   "sodium_mg": 250,
+   "calories": 240,
+   "flavors": [
+    "Neutral",
+    "Salted Cucumber",
+    "Pomegranate Berries"
+   ],
+   "notes": "Numbers are for Neutral; flavored versions may differ."
+  },
+  {
+   "item_key": "naak-boost-gel-30",
+   "brand": "Näak",
+   "name": "Boost Gel 30",
+   "product_type": "gel",
+   "serving_size": "1 gel (48 g)",
+   "carbs_g": 30,
+   "caffeine_mg": 0,
+   "sodium_mg": 125,
+   "calories": 120,
+   "flavors": [
+    "Neutral",
+    "Salted Lemon"
+   ],
+   "notes": "Neutral has 125 mg sodium; Salted Lemon has 250 mg."
+  },
+  {
+   "item_key": "naak-boost-gel-30-caffeine",
+   "brand": "Näak",
+   "name": "Boost Gel 30 (Caffeinated)",
+   "product_type": "gel",
+   "serving_size": "1 gel (48 g)",
+   "carbs_g": 30,
+   "caffeine_mg": 100,
+   "sodium_mg": 0,
+   "calories": 120,
+   "flavors": [
+    "Peach Tea"
+   ],
+   "notes": "Contains no sodium."
+  },
+  {
+   "item_key": "naak-hydration-daily-mix",
+   "brand": "Näak",
+   "name": "Hydration Daily Mix",
+   "product_type": "electrolyte",
+   "serving_size": "1 stick (6.8 g)",
+   "carbs_g": 2,
+   "caffeine_mg": 0,
+   "sodium_mg": 400,
+   "calories": 10,
+   "flavors": [
+    "Lemon",
+    "Peach Tea"
+   ],
+   "notes": "Daily electrolyte stick, no added sugar; caffeine is not listed."
+  },
+  {
+   "item_key": "naak-ultra-bar-200",
+   "brand": "Näak",
+   "name": "Ultra Bar 200",
+   "product_type": "bar",
+   "serving_size": "1 bar (50 g)",
+   "carbs_g": 27,
+   "caffeine_mg": 0,
+   "sodium_mg": 180,
+   "calories": 200,
+   "flavors": [
+    "Peanut Butter & Chocolate",
+    "Berries & Nuts"
+   ],
+   "notes": "Plant-based bar with 9 g fat and 7 g protein; numbers are for Peanut Butter & Chocolate."
+  },
+  {
+   "item_key": "naak-ultra-drink-mix-250",
+   "brand": "Näak",
+   "name": "Ultra Drink Mix 250",
+   "product_type": "drink",
+   "serving_size": "1 serving (72 g, 2 scoops)",
+   "carbs_g": 55,
+   "caffeine_mg": 0,
+   "sodium_mg": 400,
+   "calories": 250,
+   "flavors": [
+    "Lime",
+    "Watermelon",
+    "Peach Apricot",
+    "Pineapple Ginseng"
+   ],
+   "notes": "Includes about 6 to 8 g plant protein; numbers are for Lime."
+  },
+  {
+   "item_key": "naak-ultra-puree-200",
+   "brand": "Näak",
+   "name": "Ultra Puree 200",
+   "product_type": "gel",
+   "serving_size": "1 puree (90 g)",
+   "carbs_g": 26,
+   "caffeine_mg": 0,
+   "sodium_mg": 170,
+   "calories": 200,
+   "flavors": [
+    "Sweet Potato & Butternut Squash",
+    "Apple Strawberry",
+    "Banana Pear",
+    "Apple & Maple Syrup"
+   ],
+   "notes": "Real-food puree with 8 g fat and 5 g protein; numbers are for Sweet Potato & Butternut Squash."
+  },
+  {
+   "item_key": "naak-ultra-waffle-140",
+   "brand": "Näak",
+   "name": "Ultra Waffle 140",
+   "product_type": "bar",
+   "serving_size": "1 waffle (30 g)",
+   "carbs_g": 18,
+   "caffeine_mg": 0,
+   "sodium_mg": 140,
+   "calories": 140,
+   "flavors": [
+    "Berries",
+    "Maple Syrup",
+    "Salted Caramel",
+    "Lemon"
+   ],
+   "notes": "Numbers are for Berries and carry 6 g fat."
+  },
+  {
+   "item_key": "neversecond-c30-energy-gel",
+   "brand": "Neversecond",
+   "name": "C30 Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 gel (60 ml)",
+   "carbs_g": 30,
+   "caffeine_mg": 0,
+   "sodium_mg": 200,
+   "calories": 120,
+   "flavors": [
+    "Berry",
+    "Citrus",
+    "Fruit Punch",
+    "Orange",
+    "Passion Fruit",
+    "Unflavored",
+    "Watermelon"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "neversecond-c30-plus-caffeine-gel",
+   "brand": "Neversecond",
+   "name": "C30+ Caffeine Gel",
+   "product_type": "gel",
+   "serving_size": "1 gel (60 ml)",
+   "carbs_g": 30,
+   "caffeine_mg": 75,
+   "sodium_mg": 200,
+   "calories": 120,
+   "flavors": [
+    "Espresso",
+    "Cola",
+    "Berry",
+    "Unflavored"
+   ],
+   "notes": "Brand advises no more than one C30+ gel per hour."
+  },
+  {
+   "item_key": "nuun-sport",
+   "brand": "Nuun",
+   "name": "Sport",
+   "product_type": "electrolyte",
+   "serving_size": "1 tablet (5 g)",
+   "carbs_g": 4,
+   "caffeine_mg": 0,
+   "sodium_mg": 300,
+   "calories": 15,
+   "flavors": [
+    "Strawberry Lemonade",
+    "Citrus Fruit",
+    "Watermelon",
+    "Fruit Punch",
+    "Grape",
+    "Lemon Lime",
+    "Orange",
+    "Tri-Berry",
+    "Tropical",
+    "Peach"
+   ],
+   "notes": "Tablet dissolves in 16 oz of water; a tube holds 10."
+  },
+  {
+   "item_key": "nuun-sport-caffeine",
+   "brand": "Nuun",
+   "name": "Sport + Caffeine",
+   "product_type": "electrolyte",
+   "serving_size": "1 tablet (5.4 g)",
+   "carbs_g": 4,
+   "caffeine_mg": 40,
+   "sodium_mg": 300,
+   "calories": 15,
+   "flavors": [
+    "Cherry Limeade",
+    "Mango Orange",
+    "Wild Berry"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "nuun-sport-powder",
+   "brand": "Nuun",
+   "name": "Sport Powder",
+   "product_type": "electrolyte",
+   "serving_size": "1 stick pack",
+   "carbs_g": 2,
+   "caffeine_mg": 0,
+   "sodium_mg": 300,
+   "calories": 10,
+   "flavors": [
+    "Strawberry Kiwi",
+    "Pink Lemonade"
+   ],
+   "notes": "Page's facts say 10 servings per container while the box is sold as 16 packs."
+  },
+  {
+   "item_key": "powerbar-powergel-caffeinated",
+   "brand": "PowerBar",
+   "name": "PowerGel Original (Caffeinated)",
+   "product_type": "gel",
+   "serving_size": "1 gel (41 g)",
+   "carbs_g": 26,
+   "caffeine_mg": 50,
+   "sodium_mg": 210,
+   "calories": 100,
+   "flavors": [
+    "Green Apple"
+   ],
+   "notes": "Carbs, sodium and calories are the Tropical Fruit panel values, not read for Green Apple."
+  },
+  {
+   "item_key": "powerbar-powergel-original",
+   "brand": "PowerBar",
+   "name": "PowerGel Original",
+   "product_type": "gel",
+   "serving_size": "1 gel (41 g)",
+   "carbs_g": 26,
+   "caffeine_mg": 0,
+   "sodium_mg": 210,
+   "calories": 100,
+   "flavors": [
+    "Tropical Fruit",
+    "Salty Peanut",
+    "Vanilla",
+    "Strawberry Banana"
+   ],
+   "notes": "No PowerBar US store found; numbers are the Tropical Fruit panel on a US retailer and may differ by flavor."
+  },
+  {
+   "item_key": "powerbar-powergel-shots",
+   "brand": "PowerBar",
+   "name": "PowerGel Shots",
+   "product_type": "chew",
+   "serving_size": "1 pouch",
+   "carbs_g": 48,
+   "caffeine_mg": 0,
+   "sodium_mg": 30,
+   "calories": 210,
+   "flavors": [
+    "Raspberry"
+   ],
+   "notes": "Orange flavor caffeine was not stated; no PowerBar US store found."
+  },
+  {
+   "item_key": "powerbar-powergel-shots-caffeinated",
+   "brand": "PowerBar",
+   "name": "PowerGel Shots (Caffeinated)",
+   "product_type": "chew",
+   "serving_size": "1 pouch",
+   "carbs_g": 48,
+   "caffeine_mg": 75,
+   "sodium_mg": 30,
+   "calories": 210,
+   "flavors": [
+    "Cola"
+   ],
+   "notes": "Macros are the Raspberry panel values, not read for Cola."
+  },
+  {
+   "item_key": "precision-fuel-carb-electrolyte-drink-mix",
+   "brand": "Precision Fuel & Hydration",
+   "name": "Carb & Electrolyte Drink Mix",
+   "product_type": "drink",
+   "serving_size": "2 scoops mixed in 500 ml water",
+   "carbs_g": 30,
+   "caffeine_mg": 0,
+   "sodium_mg": 500,
+   "calories": 120,
+   "flavors": [
+    "Original"
+   ],
+   "notes": "Sodium is 1,000 mg per litre as mixed, so 500 mg per 500 ml serving."
+  },
+  {
+   "item_key": "precision-fuel-electrolyte-capsules",
+   "brand": "Precision Fuel & Hydration",
+   "name": "Electrolyte Capsules",
+   "product_type": "electrolyte",
+   "serving_size": "1 capsule",
+   "carbs_g": 0,
+   "caffeine_mg": 0,
+   "sodium_mg": 250,
+   "calories": 0,
+   "flavors": [],
+   "notes": "Each capsule also has 125 mg potassium; calories and carbs are not published."
+  },
+  {
+   "item_key": "precision-fuel-pf-30-caffeine-gel",
+   "brand": "Precision Fuel & Hydration",
+   "name": "PF 30 Caffeine Gel",
+   "product_type": "gel",
+   "serving_size": "1 gel (51 g)",
+   "carbs_g": 30,
+   "caffeine_mg": 100,
+   "sodium_mg": 0,
+   "calories": 120,
+   "flavors": [
+    "Original"
+   ],
+   "notes": "No added electrolytes: Precision pairs it with its own drink or capsules."
+  },
+  {
+   "item_key": "precision-fuel-pf-30-chews",
+   "brand": "Precision Fuel & Hydration",
+   "name": "PF 30 Chews",
+   "product_type": "chew",
+   "serving_size": "1 packet (34 g)",
+   "carbs_g": 30,
+   "caffeine_mg": 0,
+   "sodium_mg": 0,
+   "calories": 120,
+   "flavors": [
+    "Original",
+    "Watermelon",
+    "Mint & Lemon"
+   ],
+   "notes": "Under 40mg sodium (label: salt under 0.1g); pair with electrolytes."
+  },
+  {
+   "item_key": "precision-fuel-pf-30-gel",
+   "brand": "Precision Fuel & Hydration",
+   "name": "PF 30 Gel",
+   "product_type": "gel",
+   "serving_size": "1 gel (51 g)",
+   "carbs_g": 30,
+   "caffeine_mg": 0,
+   "sodium_mg": 0,
+   "calories": 120,
+   "flavors": [
+    "Original"
+   ],
+   "notes": "No added electrolytes: Precision pairs it with its own drink or capsules."
+  },
+  {
+   "item_key": "precision-fuel-pf-60-chew-bar",
+   "brand": "Precision Fuel & Hydration",
+   "name": "PF 60 Chew Bar",
+   "product_type": "chew",
+   "serving_size": "1 packet (68 g)",
+   "carbs_g": 60,
+   "caffeine_mg": 0,
+   "sodium_mg": 0,
+   "calories": 240,
+   "flavors": [
+    "Original",
+    "Mint & Lemon"
+   ],
+   "notes": "Under 40mg sodium (label: salt under 0.1g); pair with electrolytes."
+  },
+  {
+   "item_key": "precision-fuel-pf-90-gel",
+   "brand": "Precision Fuel & Hydration",
+   "name": "PF 90 Gel",
+   "product_type": "gel",
+   "serving_size": "1 pouch (153 g)",
+   "carbs_g": 90,
+   "caffeine_mg": 0,
+   "sodium_mg": 0,
+   "calories": 360,
+   "flavors": [
+    "Original"
+   ],
+   "notes": "No added electrolytes: Precision pairs it with its own drink or capsules."
+  },
+  {
+   "item_key": "precision-fuel-ph-1000-tablets",
+   "brand": "Precision Fuel & Hydration",
+   "name": "PH 1000 Electrolyte Tablets",
+   "product_type": "electrolyte",
+   "serving_size": "1 tablet in 500 ml water",
+   "carbs_g": 2.2,
+   "caffeine_mg": 0,
+   "sodium_mg": 500,
+   "calories": 16,
+   "flavors": [],
+   "notes": "Sodium per tablet worked out from 1,000 mg per litre as mixed."
+  },
+  {
+   "item_key": "precision-fuel-ph-1500-tablets",
+   "brand": "Precision Fuel & Hydration",
+   "name": "PH 1500 Electrolyte Tablets",
+   "product_type": "electrolyte",
+   "serving_size": "1 tablet in 500 ml water",
+   "carbs_g": 1.8,
+   "caffeine_mg": 0,
+   "sodium_mg": 750,
+   "calories": 16,
+   "flavors": [],
+   "notes": "Sodium per tablet worked out from 1,500 mg per litre as mixed."
+  },
+  {
+   "item_key": "saltstick-caps-plus-caffeine",
+   "brand": "SaltStick",
+   "name": "Caps Plus Caffeine",
+   "product_type": "electrolyte",
+   "serving_size": "1 capsule",
+   "carbs_g": 0,
+   "caffeine_mg": 30,
+   "sodium_mg": 190,
+   "calories": 0,
+   "flavors": [],
+   "notes": null
+  },
+  {
+   "item_key": "saltstick-electrolyte-capsules",
+   "brand": "SaltStick",
+   "name": "Electrolyte Capsules",
+   "product_type": "electrolyte",
+   "serving_size": "1 capsule",
+   "carbs_g": 0,
+   "caffeine_mg": 0,
+   "sodium_mg": 215,
+   "calories": 0,
+   "flavors": [],
+   "notes": "Brand says up to 660 mg total electrolytes per capsule; sodium itself is 215 mg."
+  },
+  {
+   "item_key": "saltstick-energy-gummies",
+   "brand": "SaltStick",
+   "name": "Energy Gummies",
+   "product_type": "chew",
+   "serving_size": "4 gummies",
+   "carbs_g": 18,
+   "caffeine_mg": 0,
+   "sodium_mg": 65,
+   "calories": 70,
+   "flavors": [
+    "OMG! (Orange, Mango, Guava)",
+    "Green Apple",
+    "Strawberry",
+    "Rainbow Blast",
+    "Sour Blue Razz",
+    "Sour Pop Rocket"
+   ],
+   "notes": "Each packet is 2 servings (36 g carbs); the two Sour flavors have 14 g carbs and 60 calories, and Sour Blue Razz has 50 mg sodium."
+  },
+  {
+   "item_key": "saltstick-fastchews",
+   "brand": "SaltStick",
+   "name": "FastChews",
+   "product_type": "electrolyte",
+   "serving_size": "2 tablets (3.2 g)",
+   "carbs_g": 2,
+   "caffeine_mg": 0,
+   "sodium_mg": 100,
+   "calories": 10,
+   "flavors": [
+    "Tart Orange",
+    "Lemon-Lime",
+    "Mixed Berry",
+    "Watermelon",
+    "Peach",
+    "Pink Lemonade",
+    "Green Apple",
+    "Coconut Pineapple"
+   ],
+   "notes": "Chewable electrolyte tablets; brand suggests 2 tablets every 30 minutes."
+  },
+  {
+   "item_key": "saltstick-fastchews-caffeinated",
+   "brand": "SaltStick",
+   "name": "FastChews (Caffeinated)",
+   "product_type": "electrolyte",
+   "serving_size": "2 tablets (4.1 g)",
+   "carbs_g": 2.5,
+   "caffeine_mg": 15,
+   "sodium_mg": 100,
+   "calories": 10,
+   "flavors": [
+    "Citrus Burst",
+    "Tropical Twist"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "sis-beta-fuel-80-drink-mix",
+   "brand": "Science in Sport",
+   "name": "Beta Fuel 80 Drink Mix",
+   "product_type": "drink",
+   "serving_size": "1 sachet (82 g)",
+   "carbs_g": 80,
+   "caffeine_mg": 0,
+   "sodium_mg": 4,
+   "calories": 320,
+   "flavors": [
+    "Red Berry",
+    "Orange",
+    "Strawberry and Lime"
+   ],
+   "notes": "Very low sodium; mix with 500 ml or more of water."
+  },
+  {
+   "item_key": "sis-beta-fuel-chews",
+   "brand": "Science in Sport",
+   "name": "Beta Fuel Energy Chews",
+   "product_type": "chew",
+   "serving_size": "1 pack (60 g)",
+   "carbs_g": 46,
+   "caffeine_mg": 0,
+   "sodium_mg": 44,
+   "calories": 190,
+   "flavors": [
+    "Lemon",
+    "Orange"
+   ],
+   "notes": "Calories read 188 (Lemon) or 190 (Orange)."
+  },
+  {
+   "item_key": "sis-beta-fuel-electrolyte-gel",
+   "brand": "Science in Sport",
+   "name": "Beta Fuel + Electrolyte Gel",
+   "product_type": "gel",
+   "serving_size": "1 gel (60 ml)",
+   "carbs_g": 40,
+   "caffeine_mg": 0,
+   "sodium_mg": 200,
+   "calories": 160,
+   "flavors": [
+    "Raspberry & Lemon"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "sis-beta-fuel-gel",
+   "brand": "Science in Sport",
+   "name": "Beta Fuel Gel",
+   "product_type": "gel",
+   "serving_size": "1 gel (60 ml)",
+   "carbs_g": 41,
+   "caffeine_mg": 0,
+   "sodium_mg": 15,
+   "calories": 160,
+   "flavors": [
+    "Strawberry and Lime",
+    "Neutral",
+    "Orange"
+   ],
+   "notes": "Carbs read 40 to 41 g depending on flavor."
+  },
+  {
+   "item_key": "sis-beta-fuel-nootropics-gel",
+   "brand": "Science in Sport",
+   "name": "Beta Fuel + Nootropics Gel",
+   "product_type": "gel",
+   "serving_size": "1 gel (60 ml)",
+   "carbs_g": 40,
+   "caffeine_mg": 200,
+   "sodium_mg": 15,
+   "calories": 160,
+   "flavors": [
+    "Lemon and Lime",
+    "Apple"
+   ],
+   "notes": "Also has 1,000 mg L-taurine, 250 mg citicoline and 200 mg L-theanine."
+  },
+  {
+   "item_key": "sis-go-electrolyte-drink-mix",
+   "brand": "Science in Sport",
+   "name": "GO Electrolyte Drink Mix",
+   "product_type": "drink",
+   "serving_size": "2 scoops (40 g)",
+   "carbs_g": 36,
+   "caffeine_mg": 0,
+   "sodium_mg": 240,
+   "calories": 150,
+   "flavors": [
+    "Lemon and Lime",
+    "Raspberry",
+    "Orange"
+   ],
+   "notes": "Sold as a 1.6 kg tub of 40 servings."
+  },
+  {
+   "item_key": "sis-go-energy-caffeine-gel",
+   "brand": "Science in Sport",
+   "name": "GO Energy + Caffeine Gel",
+   "product_type": "gel",
+   "serving_size": "1 gel (60 ml)",
+   "carbs_g": 22,
+   "caffeine_mg": 75,
+   "sodium_mg": 10,
+   "calories": 90,
+   "flavors": [
+    "Citrus",
+    "Berry",
+    "Double Espresso"
+   ],
+   "notes": "Citrus and Berry have 75 mg caffeine; Double Espresso has 150 mg."
+  },
+  {
+   "item_key": "sis-go-energy-electrolyte-gel",
+   "brand": "Science in Sport",
+   "name": "GO Energy + Electrolyte Gel",
+   "product_type": "gel",
+   "serving_size": "1 gel (60 ml)",
+   "carbs_g": 21,
+   "caffeine_mg": 0,
+   "sodium_mg": 100,
+   "calories": 90,
+   "flavors": [
+    "Raspberry",
+    "Salted Strawberry"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "sis-go-hydro-tablets",
+   "brand": "Science in Sport",
+   "name": "GO Hydro Tablets",
+   "product_type": "electrolyte",
+   "serving_size": "1 tablet",
+   "carbs_g": 0,
+   "caffeine_mg": 0,
+   "sodium_mg": 340,
+   "calories": 10,
+   "flavors": [
+    "Berry",
+    "Lemon",
+    "Pineapple and Mango",
+    "Strawberry and Lime"
+   ],
+   "notes": "Effervescent tablet; the label does not list carbs. Add one to 500 ml water."
+  },
+  {
+   "item_key": "sis-go-isotonic-energy-gel",
+   "brand": "Science in Sport",
+   "name": "GO Isotonic Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 gel (60 ml)",
+   "carbs_g": 22,
+   "caffeine_mg": 0,
+   "sodium_mg": 20,
+   "calories": 90,
+   "flavors": [
+    "Orange",
+    "Lemon and Lime",
+    "Tropical",
+    "Cherry",
+    "Pineapple",
+    "Apple",
+    "Tutti Frutti"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "skratch-labs-energy-chews-caffeinated",
+   "brand": "Skratch Labs",
+   "name": "Energy Chews Sport Fuel (Caffeinated)",
+   "product_type": "chew",
+   "serving_size": "1/2 pouch (about 25 g)",
+   "carbs_g": 19,
+   "caffeine_mg": 25,
+   "sodium_mg": 35,
+   "calories": 80,
+   "flavors": [
+    "Sour Cherry"
+   ],
+   "notes": "Caffeine is 50 mg per full pouch, 25 mg per serving."
+  },
+  {
+   "item_key": "skratch-labs-energy-chews-sport-fuel",
+   "brand": "Skratch Labs",
+   "name": "Energy Chews Sport Fuel",
+   "product_type": "chew",
+   "serving_size": "1/2 pouch (about 25 g)",
+   "carbs_g": 19,
+   "caffeine_mg": 0,
+   "sodium_mg": 35,
+   "calories": 80,
+   "flavors": [
+    "Grape",
+    "Raspberry",
+    "Orange"
+   ],
+   "notes": "A 50 g pouch holds 2 servings; sodium is 45 mg in Grape and 35 mg in the others."
+  },
+  {
+   "item_key": "skratch-labs-hydration-drink-mix",
+   "brand": "Skratch Labs",
+   "name": "Hydration Sport Drink Mix",
+   "product_type": "drink",
+   "serving_size": "1 scoop (22 g)",
+   "carbs_g": 19,
+   "caffeine_mg": 0,
+   "sodium_mg": 400,
+   "calories": 80,
+   "flavors": [
+    "Blood Orange",
+    "Apple Cider",
+    "Lemon + Lime",
+    "Strawberry Lemonade",
+    "Passion Fruit + Orange + Guava",
+    "Mango",
+    "Orange"
+   ],
+   "notes": "Carbs run 19 to 20 g and sodium 370 to 400 mg by flavor."
+  },
+  {
+   "item_key": "skratch-labs-hydration-drink-mix-caffeinated",
+   "brand": "Skratch Labs",
+   "name": "Hydration Sport Drink Mix (Caffeinated)",
+   "product_type": "drink",
+   "serving_size": "1 scoop (22 g)",
+   "carbs_g": 19,
+   "caffeine_mg": 50,
+   "sodium_mg": 400,
+   "calories": 80,
+   "flavors": [
+    "Lemon + Lime",
+    "Mango"
+   ],
+   "notes": "Sold only in 20-serving bags; carbs listed as 19 to 20 g."
+  },
+  {
+   "item_key": "skratch-labs-super-high-carb-drink-mix",
+   "brand": "Skratch Labs",
+   "name": "Super High-Carb Sport Drink Mix",
+   "product_type": "drink",
+   "serving_size": "1 packet (53 g)",
+   "carbs_g": 50,
+   "caffeine_mg": 0,
+   "sodium_mg": 200,
+   "calories": 200,
+   "flavors": [
+    "Lemon + Lime",
+    "Raspberry"
+   ],
+   "notes": "Raspberry lists 51 g carbs; page suggests shaking with about 10 oz of water per packet."
+  },
+  {
+   "item_key": "spring-energy-acai-power-snack",
+   "brand": "Spring Energy",
+   "name": "Acai Power Snack",
+   "product_type": "gel",
+   "serving_size": "1 packet (53 g)",
+   "carbs_g": 23,
+   "caffeine_mg": 0,
+   "sodium_mg": 115,
+   "calories": 100,
+   "flavors": [
+    "Acai"
+   ],
+   "notes": "Light 100-calorie gel."
+  },
+  {
+   "item_key": "spring-energy-awesome-sauce",
+   "brand": "Spring Energy",
+   "name": "Awesome Sauce",
+   "product_type": "gel",
+   "serving_size": "1 packet (60 g)",
+   "carbs_g": 28,
+   "caffeine_mg": 0,
+   "sodium_mg": 45,
+   "calories": 180,
+   "flavors": [
+    "Cinnamon Apple Pie"
+   ],
+   "notes": "Has 7 g fat from MCT and avocado oil."
+  },
+  {
+   "item_key": "spring-energy-canaberry",
+   "brand": "Spring Energy",
+   "name": "Canaberry",
+   "product_type": "gel",
+   "serving_size": "1 packet (46 g)",
+   "carbs_g": 17,
+   "caffeine_mg": 0,
+   "sodium_mg": 60,
+   "calories": 100,
+   "flavors": [
+    "Strawberry Smoothie"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "spring-energy-chocolate-heaven",
+   "brand": "Spring Energy",
+   "name": "Chocolate Heaven",
+   "product_type": "gel",
+   "serving_size": "1 packet (54 g)",
+   "carbs_g": 28,
+   "caffeine_mg": 0,
+   "sodium_mg": 80,
+   "calories": 180,
+   "flavors": [
+    "Chocolate Cherry"
+   ],
+   "notes": "Seasonal winter flavor; the label lists no caffeine."
+  },
+  {
+   "item_key": "spring-energy-electroride",
+   "brand": "Spring Energy",
+   "name": "Electroride Drink Mix",
+   "product_type": "drink",
+   "serving_size": "1 pouch (53 g)",
+   "carbs_g": 24,
+   "caffeine_mg": 0,
+   "sodium_mg": 600,
+   "calories": 100,
+   "flavors": [
+    "Apple Ginger"
+   ],
+   "notes": "Liquid concentrate; squeeze into 16 to 18 oz of water."
+  },
+  {
+   "item_key": "spring-energy-grape-lemonade-drink-mix",
+   "brand": "Spring Energy",
+   "name": "Grape Lemonade Drink Mix",
+   "product_type": "drink",
+   "serving_size": "1 scoop (40 g)",
+   "carbs_g": 35,
+   "caffeine_mg": 0,
+   "sodium_mg": 400,
+   "calories": 140,
+   "flavors": [
+    "Grape Lemonade"
+   ],
+   "notes": "Sold as a 22-serving bag at $29.85."
+  },
+  {
+   "item_key": "spring-energy-hill-aid",
+   "brand": "Spring Energy",
+   "name": "Hill Aid (Caffeinated)",
+   "product_type": "gel",
+   "serving_size": "1 packet (49 g)",
+   "carbs_g": 20,
+   "caffeine_mg": 30,
+   "sodium_mg": 156,
+   "calories": 120,
+   "flavors": [
+    "Mango Mint"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "spring-energy-lemon-power-snack",
+   "brand": "Spring Energy",
+   "name": "Lemon Power Snack (Caffeinated)",
+   "product_type": "gel",
+   "serving_size": "1 packet (53 g)",
+   "carbs_g": 25,
+   "caffeine_mg": 113,
+   "sodium_mg": 100,
+   "calories": 100,
+   "flavors": [
+    "Lemon"
+   ],
+   "notes": "Light 100-calorie gel with 113 mg caffeine."
+  },
+  {
+   "item_key": "spring-energy-long-haul",
+   "brand": "Spring Energy",
+   "name": "Long Haul",
+   "product_type": "gel",
+   "serving_size": "1 packet (52 g)",
+   "carbs_g": 19,
+   "caffeine_mg": 0,
+   "sodium_mg": 140,
+   "calories": 140,
+   "flavors": [
+    "Peanut Butter and Fruit"
+   ],
+   "notes": "Contains peanuts and 5.7 g fat."
+  },
+  {
+   "item_key": "spring-energy-orange-power-snack",
+   "brand": "Spring Energy",
+   "name": "Orange Power Snack",
+   "product_type": "gel",
+   "serving_size": "1 packet (53 g)",
+   "carbs_g": 21,
+   "caffeine_mg": 0,
+   "sodium_mg": 0,
+   "calories": 100,
+   "flavors": [
+    "Orange"
+   ],
+   "notes": "Light 100-calorie gel with no sodium."
+  },
+  {
+   "item_key": "spring-energy-peach-cobbler-xl",
+   "brand": "Spring Energy",
+   "name": "Peach Cobbler Gel XL",
+   "product_type": "gel",
+   "serving_size": "1 packet (110 g)",
+   "carbs_g": 50,
+   "caffeine_mg": 0,
+   "sodium_mg": 240,
+   "calories": 210,
+   "flavors": [
+    "Peach Cobbler"
+   ],
+   "notes": "Double-size 110 g packet."
+  },
+  {
+   "item_key": "spring-energy-speednut",
+   "brand": "Spring Energy",
+   "name": "Speednut (Caffeinated)",
+   "product_type": "gel",
+   "serving_size": "1 packet (52 g)",
+   "carbs_g": 12,
+   "caffeine_mg": 50,
+   "sodium_mg": 6,
+   "calories": 250,
+   "flavors": [
+    "Nuts and Berries"
+   ],
+   "notes": "High-fat nut gel (19 g fat) with only 12 g carbs."
+  },
+  {
+   "item_key": "styrkr-bar30",
+   "brand": "Styrkr",
+   "name": "BAR30 Energy Bar",
+   "product_type": "bar",
+   "serving_size": "1 bar (42 g)",
+   "carbs_g": 30,
+   "caffeine_mg": 0,
+   "sodium_mg": 152,
+   "calories": 175,
+   "flavors": [
+    "Dark Chocolate Chip",
+    "Apple, Cinnamon & Caramel",
+    "Date, Almond & Sea Salt"
+   ],
+   "notes": "Sold in the US through The Feed; Styrkr's own page shows no US price. Sodium is converted from label salt (0.38 g) and runs 32 to 160 mg by flavor."
+  },
+  {
+   "item_key": "styrkr-bar50",
+   "brand": "Styrkr",
+   "name": "BAR50 Energy Bar",
+   "product_type": "bar",
+   "serving_size": "1 bar (70 g)",
+   "carbs_g": 50,
+   "caffeine_mg": 0,
+   "sodium_mg": 240,
+   "calories": 249,
+   "flavors": [
+    "Dark Chocolate Chip",
+    "Apple Cinnamon Caramel & Sultana",
+    "Date Almond & Sea Salt"
+   ],
+   "notes": "Sold in the US through The Feed; Styrkr's own page shows no US price. Sodium is converted from label salt (0.6 g); calories run 249 to 273 by flavor."
+  },
+  {
+   "item_key": "styrkr-gel30",
+   "brand": "Styrkr",
+   "name": "GEL30 Dual-Carb Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 gel (72 g)",
+   "carbs_g": 30,
+   "caffeine_mg": 0,
+   "sodium_mg": 0,
+   "calories": 128,
+   "flavors": [
+    "Berry"
+   ],
+   "notes": "Sold in the US through The Feed; Styrkr's own page shows no US price. Label lists salt as 0 g; contains L-citrulline and L-arginine."
+  },
+  {
+   "item_key": "styrkr-gel30-caffeine",
+   "brand": "Styrkr",
+   "name": "GEL30 Caffeine Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 gel (72 g)",
+   "carbs_g": 30,
+   "caffeine_mg": 150,
+   "sodium_mg": 0,
+   "calories": 128,
+   "flavors": [
+    "Cola"
+   ],
+   "notes": "Sold in the US through The Feed; Styrkr's own page shows no US price. Label lists salt as 0 g."
+  },
+  {
+   "item_key": "styrkr-gel50",
+   "brand": "Styrkr",
+   "name": "GEL50 Dual-Carb Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 gel (72 g)",
+   "carbs_g": 50,
+   "caffeine_mg": 0,
+   "sodium_mg": 0,
+   "calories": 200,
+   "flavors": [
+    "Citrus Fruits",
+    "Mixed Berry"
+   ],
+   "notes": "Sold in the US through The Feed; Styrkr's own page shows no US price. Label lists salt as 0 g."
+  },
+  {
+   "item_key": "styrkr-mix60",
+   "brand": "Styrkr",
+   "name": "MIX60 Dual-Carb Energy Drink Mix",
+   "product_type": "drink",
+   "serving_size": "1 serving (65 g)",
+   "carbs_g": 60,
+   "caffeine_mg": 0,
+   "sodium_mg": 56,
+   "calories": 256,
+   "flavors": [
+    "Unflavoured"
+   ],
+   "notes": "Sold in the US through The Feed; Styrkr's own page shows no US price. Sodium is converted from label salt (0.14 g)."
+  },
+  {
+   "item_key": "styrkr-mix90",
+   "brand": "Styrkr",
+   "name": "MIX90 Dual-Carb Energy Drink Mix",
+   "product_type": "drink",
+   "serving_size": "1 serving (95 g)",
+   "carbs_g": 90,
+   "caffeine_mg": 0,
+   "sodium_mg": 80,
+   "calories": 372,
+   "flavors": [
+    "Unflavoured"
+   ],
+   "notes": "Sold in the US through The Feed; Styrkr's own page shows no US price. Sodium is converted from label salt (0.2 g)."
+  },
+  {
+   "item_key": "styrkr-mix90-caffeine",
+   "brand": "Styrkr",
+   "name": "MIX90 Caffeine Dual-Carb Energy Drink Mix",
+   "product_type": "drink",
+   "serving_size": "1 serving (95 g)",
+   "carbs_g": 90,
+   "caffeine_mg": 150,
+   "sodium_mg": 80,
+   "calories": 372,
+   "flavors": [
+    "Unflavoured"
+   ],
+   "notes": "Sold in the US through The Feed; Styrkr's own page shows no US price. Sodium is converted from label salt (0.2 g)."
+  },
+  {
+   "item_key": "styrkr-slt-plus",
+   "brand": "Styrkr",
+   "name": "SLT+ Electrolyte Powder",
+   "product_type": "electrolyte",
+   "serving_size": "1 sachet (7.5 g)",
+   "carbs_g": 0.8,
+   "caffeine_mg": 0,
+   "sodium_mg": 1080,
+   "calories": 10,
+   "flavors": [
+    "Orange",
+    "Berry & Lime"
+   ],
+   "notes": "Sold in the US through The Feed; Styrkr's own page shows no US price. Box of 30 sachets; Berry & Lime lists 0.9 g carbs."
+  },
+  {
+   "item_key": "styrkr-slt07-berry",
+   "brand": "Styrkr",
+   "name": "SLT07 Berry Hydration Tablet (500mg Sodium)",
+   "product_type": "electrolyte",
+   "serving_size": "1 tablet (7.2 g)",
+   "carbs_g": 0.9,
+   "caffeine_mg": 0,
+   "sodium_mg": 500,
+   "calories": 15,
+   "flavors": [
+    "Berry"
+   ],
+   "notes": "Sold in the US through The Feed; Styrkr's own page shows no US price. Effervescent tablet, tube of 12."
+  },
+  {
+   "item_key": "styrkr-slt07-citrus",
+   "brand": "Styrkr",
+   "name": "SLT07 Citrus Hydration Tablet (1000mg Sodium)",
+   "product_type": "electrolyte",
+   "serving_size": "1 tablet (7.2 g)",
+   "carbs_g": 0.55,
+   "caffeine_mg": 0,
+   "sodium_mg": 1000,
+   "calories": 11,
+   "flavors": [
+    "Citrus"
+   ],
+   "notes": "Sold in the US through The Feed; Styrkr's own page shows no US price. Effervescent tablet, tube of 12."
+  },
+  {
+   "item_key": "tailwind-endurance-fuel",
+   "brand": "Tailwind",
+   "name": "Endurance Fuel",
+   "product_type": "drink",
+   "serving_size": "1 scoop (27 g)",
+   "carbs_g": 25,
+   "caffeine_mg": 0,
+   "sodium_mg": 310,
+   "calories": 100,
+   "flavors": [
+    "Dauwaltermelon",
+    "Mandarin",
+    "Lemon",
+    "Berry",
+    "Grape",
+    "Naked (Unflavored)",
+    "Cherry Limeade",
+    "Mango Yuzu (Limited Edition)"
+   ],
+   "notes": "Single-serving sticks hold 2 scoops (50 g carbs, 620 mg sodium) and cost $2.75."
+  },
+  {
+   "item_key": "tailwind-endurance-fuel-caffeinated",
+   "brand": "Tailwind",
+   "name": "Endurance Fuel (Caffeinated)",
+   "product_type": "drink",
+   "serving_size": "1 scoop (27 g)",
+   "carbs_g": 25,
+   "caffeine_mg": 35,
+   "sodium_mg": 310,
+   "calories": 100,
+   "flavors": [
+    "Raspberry",
+    "Tropical",
+    "Blood Orange",
+    "Margarita"
+   ],
+   "notes": "Single-serving sticks hold 2 scoops (70 mg caffeine, 50 g carbs) and cost $2.75."
+  },
+  {
+   "item_key": "tailwind-high-carb-fuel",
+   "brand": "Tailwind",
+   "name": "High Carb Fuel",
+   "product_type": "drink",
+   "serving_size": "1 pouch (3 scoops)",
+   "carbs_g": 90,
+   "caffeine_mg": 0,
+   "sodium_mg": 680,
+   "calories": 360,
+   "flavors": [
+    "Ginger Lime",
+    "Lemonade"
+   ],
+   "notes": "Mix with about a full bottle of water."
+  },
+  {
+   "item_key": "tailwind-rapid-hydration",
+   "brand": "Tailwind",
+   "name": "Rapid Hydration",
+   "product_type": "electrolyte",
+   "serving_size": "1 sachet (1 scoop)",
+   "carbs_g": 12,
+   "caffeine_mg": 0,
+   "sodium_mg": 320,
+   "calories": 45,
+   "flavors": [
+    "Orange",
+    "Strawberry Lemonade",
+    "Lemon Lime",
+    "Raspberry",
+    "Berry"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "torq-energy-bar",
+   "brand": "Torq",
+   "name": "Organic Energy Bar",
+   "product_type": "bar",
+   "serving_size": "1 bar (45 g)",
+   "carbs_g": 34,
+   "caffeine_mg": 0,
+   "sodium_mg": 24,
+   "calories": 153,
+   "flavors": [
+    "Zesty Orange",
+    "Zingy Apple",
+    "Sundrenched Banana"
+   ],
+   "notes": "Label lists salt only (0.06 g), so sodium is converted from salt; numbers are for Zesty Orange."
+  },
+  {
+   "item_key": "torq-energy-drink",
+   "brand": "Torq",
+   "name": "Energy Drink",
+   "product_type": "drink",
+   "serving_size": "1 sachet in 500 ml water",
+   "carbs_g": 30,
+   "caffeine_mg": 0,
+   "sodium_mg": 279,
+   "calories": 121,
+   "flavors": [
+    "Orange",
+    "Black Currant",
+    "Pink Grapefruit",
+    "Vanilla"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "torq-energy-drink-caffeinated",
+   "brand": "Torq",
+   "name": "Energy Drink (Caffeinated)",
+   "product_type": "drink",
+   "serving_size": "1 sachet in 500 ml water",
+   "carbs_g": 30,
+   "caffeine_mg": 100,
+   "sodium_mg": 279,
+   "calories": 120,
+   "flavors": [
+    "Cola Caffeine"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "torq-energy-gel",
+   "brand": "Torq",
+   "name": "Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 gel (45 g)",
+   "carbs_g": 29,
+   "caffeine_mg": 0,
+   "sodium_mg": 49,
+   "calories": 114,
+   "flavors": [
+    "Apple Crumble",
+    "Banoffee",
+    "Lemon Drizzle",
+    "Orange & Banana",
+    "Raspberry Ripple",
+    "Rhubarb & Custard",
+    "Strawberry Yogurt",
+    "Naked Flavorless"
+   ],
+   "notes": "Some flavors list $44 a box of 15 instead of $42."
+  },
+  {
+   "item_key": "torq-energy-gel-caffeinated",
+   "brand": "Torq",
+   "name": "Energy Gel (Caffeinated)",
+   "product_type": "gel",
+   "serving_size": "1 gel (45 g)",
+   "carbs_g": 29,
+   "caffeine_mg": 89,
+   "sodium_mg": 49,
+   "calories": 116,
+   "flavors": [
+    "Cola Caffeine",
+    "Caramel Latte"
+   ],
+   "notes": "Caramel Latte lists $44 a box of 15 instead of $42."
+  },
+  {
+   "item_key": "torq-energy-jellies",
+   "brand": "Torq",
+   "name": "Energy Jellies",
+   "product_type": "chew",
+   "serving_size": "1 pack of 6 jellies (36 g)",
+   "carbs_g": 29,
+   "caffeine_mg": 0,
+   "sodium_mg": 20,
+   "calories": 119,
+   "flavors": [
+    "Berries",
+    "Orange",
+    "Lime"
+   ],
+   "notes": "Label lists salt only (0.05 g), so sodium is converted from salt."
+  },
+  {
+   "item_key": "ucan-edge-gel",
+   "brand": "UCAN",
+   "name": "Edge Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 pouch (53 g)",
+   "carbs_g": 19,
+   "caffeine_mg": 0,
+   "sodium_mg": 45,
+   "calories": 70,
+   "flavors": [
+    "Strawberry Banana",
+    "Orange Mango",
+    "Pineapple",
+    "Unflavored",
+    "Chocolate"
+   ],
+   "notes": "Zero-sugar slow-release carb (LIVSTEADY); UCAN says 70 to 80 calories depending on flavor."
+  },
+  {
+   "item_key": "ucan-edge-gel-caffeine",
+   "brand": "UCAN",
+   "name": "Edge Energy Gel (Caffeinated)",
+   "product_type": "gel",
+   "serving_size": "1 pouch (53 g)",
+   "carbs_g": 34,
+   "caffeine_mg": 45,
+   "sodium_mg": 30,
+   "calories": 100,
+   "flavors": [
+    "Mixed Berry",
+    "Watermelon",
+    "Mocha",
+    "Vanilla Latte",
+    "Salted Caramel"
+   ],
+   "notes": "Caffeine is 45 mg in Mixed Berry and Watermelon and 75 mg in Mocha; carbs run 33 to 36 g."
+  },
+  {
+   "item_key": "ucan-edge-gel-electrolytes",
+   "brand": "UCAN",
+   "name": "Energy Gel + Electrolytes",
+   "product_type": "gel",
+   "serving_size": "1 pouch (53 g)",
+   "carbs_g": 20,
+   "caffeine_mg": 0,
+   "sodium_mg": 200,
+   "calories": 80,
+   "flavors": [
+    "Lemon Lime",
+    "Cherry",
+    "Strawberry Kiwi",
+    "Citrus"
+   ],
+   "notes": "Zero-sugar slow-release carb with 200 mg sodium, 90 mg potassium and 20 mg magnesium."
+  },
+  {
+   "item_key": "ucan-energy-drink-mix",
+   "brand": "UCAN",
+   "name": "Energy Drink Mix",
+   "product_type": "drink",
+   "serving_size": "1 scoop (25 g)",
+   "carbs_g": 21,
+   "caffeine_mg": 0,
+   "sodium_mg": 170,
+   "calories": 90,
+   "flavors": [
+    "Tropical Orange",
+    "Cran Raspberry",
+    "Lemon",
+    "Unflavored",
+    "Chocolate"
+   ],
+   "notes": "Slow-release carb with only 21 g per scoop; most runners use two scoops per bottle."
+  },
+  {
+   "item_key": "ucan-hydrate",
+   "brand": "UCAN",
+   "name": "Hydrate Electrolyte Mix",
+   "product_type": "electrolyte",
+   "serving_size": "1 stick (3 g)",
+   "carbs_g": 1,
+   "caffeine_mg": 0,
+   "sodium_mg": 300,
+   "calories": 0,
+   "flavors": [
+    "Pineapple",
+    "Berry",
+    "Watermelon",
+    "Lemon Lime"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "untapped-coffee-energy-gel",
+   "brand": "UnTapped",
+   "name": "Coffee Energy Gel (Caffeinated)",
+   "product_type": "gel",
+   "serving_size": "1 packet (38 g)",
+   "carbs_g": 26,
+   "caffeine_mg": 27,
+   "sodium_mg": 11,
+   "calories": 100,
+   "flavors": [
+    "Coffee"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "untapped-maple-energy-gel",
+   "brand": "UnTapped",
+   "name": "Maple Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (38 g)",
+   "carbs_g": 26,
+   "caffeine_mg": 0,
+   "sodium_mg": 5,
+   "calories": 100,
+   "flavors": [
+    "Maple",
+    "Mint"
+   ],
+   "notes": "Pure maple syrup, nearly no sodium."
+  },
+  {
+   "item_key": "untapped-maple-waffle",
+   "brand": "UnTapped",
+   "name": "Maple Waffle",
+   "product_type": "bar",
+   "serving_size": "1 waffle (30 g)",
+   "carbs_g": 20,
+   "caffeine_mg": 0,
+   "sodium_mg": 60,
+   "calories": 140,
+   "flavors": [
+    "Maple",
+    "Cocoa",
+    "Lemon"
+   ],
+   "notes": "Stroopwafel-style waffle with 6 g fat."
+  },
+  {
+   "item_key": "untapped-mapleaid-drink-mix",
+   "brand": "UnTapped",
+   "name": "Mapleaid Drink Mix",
+   "product_type": "drink",
+   "serving_size": "1 packet (32 g)",
+   "carbs_g": 20,
+   "caffeine_mg": 0,
+   "sodium_mg": 250,
+   "calories": 80,
+   "flavors": [
+    "Maple",
+    "Lime",
+    "Grape",
+    "Ginger",
+    "Lemon Tea"
+   ],
+   "notes": "Sodium runs 110 to 300 mg depending on flavor."
+  },
+  {
+   "item_key": "untapped-salted-citrus-energy-gel",
+   "brand": "UnTapped",
+   "name": "Salted Citrus Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (38 g)",
+   "carbs_g": 26,
+   "caffeine_mg": 0,
+   "sodium_mg": 100,
+   "calories": 100,
+   "flavors": [
+    "Salted Citrus",
+    "Salted Cinnamon Spice"
+   ],
+   "notes": null
+  },
+  {
+   "item_key": "untapped-salted-cocoa-energy-gel",
+   "brand": "UnTapped",
+   "name": "Salted Cocoa Energy Gel",
+   "product_type": "gel",
+   "serving_size": "1 packet (38 g)",
+   "carbs_g": 26,
+   "caffeine_mg": 0,
+   "sodium_mg": 60,
+   "calories": 100,
+   "flavors": [
+    "Salted Cocoa",
+    "Salted Raspberry"
+   ],
+   "notes": null
+  }
+ ]
 }
