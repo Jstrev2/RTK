@@ -1305,3 +1305,90 @@ a.bib:hover {
 .newsletter-form .input {
   flex: 1 1 200px;
 }
+
+/* ---------- Legacy pieces, restyled (pace calculator, about, account) ---------- */
+
+:root {
+  --sea: var(--volt);
+  --mist: var(--chalk);
+  --fog: #ece9e1;
+}
+
+.tool-hero::before {
+  display: none;
+}
+
+.tool-hero {
+  padding-top: 48px;
+}
+
+.card {
+  border-radius: var(--r-lg);
+  border: 0;
+  background: var(--paper);
+  box-shadow: var(--shadow-bib);
+}
+
+.card-accent,
+.card-premium,
+.card-dashboard {
+  border: 2px solid var(--asphalt);
+  box-shadow: 6px 6px 0 var(--volt);
+  background: var(--paper);
+  color: var(--asphalt);
+}
+
+.card-outline {
+  box-shadow: none;
+  border: 1px solid var(--line);
+}
+
+.stat {
+  background: var(--asphalt);
+  border: 0;
+  border-radius: var(--r-md);
+  color: #cfcfcf;
+}
+
+.stat strong {
+  font-family: var(--font-mono);
+  color: var(--volt);
+  background: none;
+  -webkit-text-fill-color: currentColor;
+}
+
+.stat span {
+  color: #bdbdbd;
+}
+
+.results-table {
+  font-size: 0.95rem;
+}
+
+.results-table th,
+.results-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 10px 12px;
+}
+
+.results-table th {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  background: var(--chalk);
+}
+
+.prose-block {
+  max-width: 760px;
+}
+
+.prose-block h2 {
+  margin-top: 36px;
+}
+
+.prose-block ul {
+  padding-left: 20px;
+  line-height: 1.8;
+}
