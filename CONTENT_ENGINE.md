@@ -50,6 +50,21 @@ every fuel serving, the catalogs and the practice log) needs a free account
 Unchanged: the monthly routine "Monthly shoe catalog re-audit" edits
 `data/shoe-models-authored.json`, and the daily cron syncs it.
 
+## Fuel catalog
+
+`data/fuel-catalog.json` is the source of truth for every gel, chew, drink mix,
+bar and electrolyte product (nutrition, flavors, price, brand page, official
+photo). The monthly routine in `scripts/catalog/ROUTINE-fuel.md` audits brand
+pages, edits the file, passes `node scripts/catalog/check-fuel.mjs` and merges
+its PR. The daily cron syncs it (`lib/fuel-sync.ts`) and stores the official
+photo of anything new in Supabase Storage (`lib/fuel-images.ts`, bucket
+`site-images`, `fuel/<item_key>.webp` plus a 360px `fuel/thumb/` copy). From
+this computer: `node scripts/fuel-catalog.mjs sync` and
+`node scripts/fuel-catalog.mjs images`. A product removed from the file is
+deactivated and its page redirects to its brand in the `/fuel` grid.
+`data/fuel-gels-live.json` (the guide writer's snapshot) was regenerated from
+the catalog on November 23, 2026.
+
 ## Deploys
 
 The Vercel project `fun-run` is connected to GitHub: a push to `main` deploys.

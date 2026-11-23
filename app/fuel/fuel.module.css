@@ -1,343 +1,1093 @@
+/* Race fuel: the Fuel Finder, /fuel hub, plan, product, compare and list pages.
+   Built on app/design.css (bibs, splits, chips, panels); only fuel-specific pieces live here. */
+
 .crumbs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
   margin-bottom: 14px;
-  color: var(--ink-3);
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
 }
 
 .crumbs a {
-  color: var(--ink-2);
+  color: inherit;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.lede {
-  font-size: 1.08rem;
+.hubHero,
+.planHero,
+.finderHero {
+  padding-bottom: 20px;
 }
 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-  margin-top: 24px;
+.hClock {
+  font-family: var(--font-mono);
+  font-stretch: 100%;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  background: var(--volt);
+  padding: 0 0.12em;
+  border-radius: 6px;
 }
 
-.stat {
-  padding: 16px 14px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  background: var(--card);
-}
-
-.stat strong {
-  display: block;
-  font-family: var(--font-display), sans-serif;
-  font-size: clamp(1.3rem, 2vw, 1.7rem);
-  line-height: 1.05;
-}
-
-.stat span {
-  display: block;
-  margin-top: 6px;
-  color: var(--ink-2);
-  font-size: 0.78rem;
-  line-height: 1.4;
-}
-
-.block {
-  padding: 36px 0;
-}
-
-.block h2 {
-  font-family: var(--font-display), sans-serif;
-  font-size: clamp(1.4rem, 1.4vw + 1rem, 2rem);
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin: 0 0 12px;
-}
-
-.block p {
-  max-width: 720px;
-  color: var(--ink-2);
-  line-height: 1.65;
-  margin: 0 0 12px;
-}
-
-.block p a,
-.inlineLink {
-  color: var(--ink);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.tableWrap {
-  overflow-x: auto;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  background: var(--card);
-  margin: 14px 0;
-}
-
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  font-variant-numeric: tabular-nums;
-}
-
-.table th,
-.table td {
-  padding: 11px 14px;
-  border-bottom: 1px solid var(--border);
-  text-align: left;
-  vertical-align: top;
-  font-size: 0.92rem;
-}
-
-.table th {
-  color: var(--ink-2);
-  background: var(--fog);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.table tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.table td a {
-  color: var(--ink);
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.num {
-  text-align: right !important;
+.pace {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--muted);
   white-space: nowrap;
 }
 
-.better {
-  font-weight: 700;
+.muted {
+  color: var(--muted);
 }
 
-.timeline {
-  margin: 16px 0;
-  padding: 24px;
-  border-radius: var(--radius-md);
-  color: #fffefa;
-  background: var(--ink);
-  box-shadow: 6px 6px 0 var(--sun);
-  max-width: 720px;
-}
-
-.step {
+.lists {
   display: grid;
-  grid-template-columns: 74px 1fr;
-  gap: 14px;
-  padding: 0 0 16px;
+  gap: 10px;
+  margin-top: 30px;
 }
 
-.step:last-child {
-  padding-bottom: 0;
+.lists .eyebrow {
+  margin-top: 6px;
 }
 
-.step > span {
-  align-self: start;
-  padding: 5px 6px;
-  border: 1px solid rgba(221, 234, 63, 0.5);
-  border-radius: 7px;
-  color: var(--lime);
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-align: center;
-}
+/* ---------- Controls (Fuel Finder and the hub's race picker) ---------- */
 
-.step strong {
-  display: block;
-  color: #fffefa;
-  font-size: 0.9rem;
-}
-
-.step p {
-  margin: 4px 0 0;
-  color: rgba(255, 254, 248, 0.66);
-  font-size: 0.8rem;
-  line-height: 1.45;
-}
-
-.cards {
+.controls,
+.picker {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 14px;
-  margin: 14px 0;
+  gap: 22px;
 }
 
-.lineup {
-  display: flex;
-  flex-direction: column;
+.raceChips {
   gap: 8px;
-  padding: 20px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  background: var(--card);
 }
 
-.lineup h3 {
-  margin: 0;
-  font-size: 1.02rem;
+.darkChip {
+  background: var(--asphalt-2);
+  border-color: var(--asphalt-3);
+  color: #f1f1f1;
+  min-height: 42px;
+  padding: 0 18px;
+  font-size: 0.95rem;
 }
 
-.lineup p {
-  margin: 0;
-  font-size: 0.9rem;
+.darkChip:hover {
+  border-color: var(--volt);
 }
 
-.lineup ul {
-  margin: 0;
-  padding-left: 18px;
-  color: var(--ink-2);
-  font-size: 0.88rem;
-  line-height: 1.55;
+.darkChip:global(.is-on) {
+  background: var(--volt);
+  border-color: var(--volt);
+  color: var(--asphalt);
 }
 
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 10px 0 4px;
-}
-
-.chip {
-  display: inline-flex;
-  padding: 6px 12px;
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-  color: var(--ink);
-  background: var(--card);
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.chip:hover {
-  border-color: var(--ink);
-}
-
-.chipCurrent {
-  color: #fffefa;
-  background: var(--ink);
-  border-color: var(--ink);
-}
-
-.raceRow {
-  display: grid;
-  grid-template-columns: 130px 1fr;
-  gap: 12px;
-  align-items: start;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.raceRow:last-child {
-  border-bottom: none;
-}
-
-.raceRow > strong {
-  padding-top: 8px;
-}
-
-.raceRow p {
-  margin: 6px 0 0;
-}
-
-.cta {
+.customRow {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin: 8px 0;
-  padding: 22px 24px;
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-md);
-  background: var(--mist);
+  gap: 10px;
 }
 
-.cta p {
+.customInput {
+  max-width: 140px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.timeRow {
+  display: grid;
+  gap: 10px;
+}
+
+.timeRead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 16px;
+}
+
+.numLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.controls .numLabel {
+  color: #a8a8a8;
+  width: 100%;
+}
+
+.bigClock {
+  font-size: clamp(3.2rem, 9vw, 5.4rem);
+  line-height: 0.9;
+  color: var(--volt);
+}
+
+.slider {
+  --fill: 50%;
+  width: 100%;
+  height: 34px;
   margin: 0;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-runnable-track {
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--volt) var(--fill), var(--asphalt-3) var(--fill));
+}
+
+.slider::-moz-range-track {
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--volt) var(--fill), var(--asphalt-3) var(--fill));
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 34px;
+  height: 34px;
+  margin-top: -11px;
+  border: 4px solid var(--asphalt);
+  border-radius: 50%;
+  background: var(--flare);
+  box-shadow: 0 0 0 3px var(--volt);
+}
+
+.slider::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border: 4px solid var(--asphalt);
+  border-radius: 50%;
+  background: var(--flare);
+  box-shadow: 0 0 0 3px var(--volt);
+}
+
+.slider:focus-visible {
+  outline: 3px solid var(--lane);
+  outline-offset: 4px;
+}
+
+.sliderEnds {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #9a9a9a;
+}
+
+.gutRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+}
+
+.gutRow .numLabel {
+  width: auto;
+}
+
+.timeChips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeChips[hidden] {
+  display: none;
+}
+
+.timeLink {
+  min-height: 38px;
+  padding: 0 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.12s ease;
+}
+
+.timeLink:hover {
+  transform: translateY(-2px);
+  border-color: var(--volt);
+}
+
+.timeLink b {
+  font-size: 1rem;
+}
+
+.pickerNote {
+  width: 100%;
+  margin: 0;
+  color: #d6d6d6;
+}
+
+.exact {
+  margin-left: 4px;
+}
+
+/* ---------- The result ---------- */
+
+.resultPanel {
+  margin-top: 18px;
+  display: grid;
+  gap: 18px;
+}
+
+.usingRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 16px;
+  border-bottom: 2px dashed var(--line-strong);
+}
+
+.usingPhoto {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--r-sm);
+  background: #fff;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.usingPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.usingPhoto :global(.bib-photo-fallback) {
+  font-size: 1.1rem;
+}
+
+.usingText {
+  display: grid;
+  gap: 2px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.usingText b {
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.usingStats {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.result {
+  display: grid;
+  gap: 18px;
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.numbers > div {
+  padding: 14px 16px 12px;
+  border-radius: var(--r-md);
+  background: var(--asphalt);
+  color: #fff;
+}
+
+.numbers .numLabel {
+  color: #a8a8a8;
+}
+
+.numbers b {
+  display: block;
+  margin-top: 4px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1;
+  color: var(--volt);
+}
+
+.numbers small {
+  margin-left: 4px;
+  font-size: 0.42em;
+  font-weight: 700;
+  color: #cfcfcf;
+}
+
+.noFuel {
+  display: grid;
+  gap: 6px;
+  padding: 24px;
+  border-radius: var(--r-md);
+  background: var(--volt);
+  color: var(--asphalt);
+}
+
+.noFuel b {
+  font-family: var(--font-display);
+  font-stretch: 125%;
+  font-weight: 900;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1;
+}
+
+.noFuel span {
+  font-size: 1.05rem;
+}
+
+.resultLine {
+  margin: 0;
+  font-size: 0.98rem;
+  color: var(--ink-2);
+}
+
+/* The race strip: a road with a photo bubble at every serving. */
+
+.stripWrap {
+  display: grid;
+  gap: 12px;
+}
+
+.strip {
+  --pad: 56px;
+  --bubble: 46px;
+  position: relative;
+  height: 172px;
+}
+
+.road {
+  position: absolute;
+  left: var(--pad);
+  right: var(--pad);
+  top: 79px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--asphalt) linear-gradient(90deg, var(--volt) 50%, transparent 50%) center / 18px 2px repeat-x;
+}
+
+.stripStart,
+.stripFinish {
+  position: absolute;
+  top: 74px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 24px;
+}
+
+.stripStart {
+  left: 0;
+}
+
+.stripFinish {
+  right: 0;
+  padding: 0 6px;
+  border-radius: 4px;
+  background: var(--asphalt);
+  color: var(--volt);
+  font-size: 0.8rem;
+}
+
+.marker {
+  position: absolute;
+  top: 0;
+  height: 79px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+  transform: translateX(-50%);
+}
+
+.marker::before {
+  content: "";
+  width: 2px;
+  height: 8px;
+  background: var(--asphalt);
+}
+
+.markerLow {
+  top: 93px;
+  flex-direction: column;
+}
+
+.bubble {
+  display: grid;
+  place-items: center;
+  width: var(--bubble);
+  height: var(--bubble);
+  border: 3px solid var(--asphalt);
+  border-radius: 50%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.bubble img {
+  width: 82%;
+  height: 82%;
+  object-fit: contain;
+}
+
+.bubble :global(.bib-photo-fallback) {
+  font-size: 0.8rem;
+}
+
+.markerCaf .bubble {
+  border-color: var(--flare);
+}
+
+.markerTime {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.strip[data-dense] {
+  --bubble: 30px;
+  height: 128px;
+}
+
+.strip[data-dense] .road {
+  top: 57px;
+}
+
+.strip[data-dense] .stripStart,
+.strip[data-dense] .stripFinish {
+  top: 52px;
+}
+
+.strip[data-dense] .marker {
+  height: 57px;
+}
+
+.strip[data-dense] .markerLow {
+  top: 71px;
+}
+
+.servingList {
+  display: none;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: serving;
+}
+
+.strip[data-dense] + .servingList {
+  display: flex;
+}
+
+.servingList li {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--chalk);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--muted);
+  counter-increment: serving;
+}
+
+.servingList li::before {
+  content: counter(serving);
+  font-weight: 800;
+  color: var(--asphalt);
+}
+
+.servingList li b {
+  color: var(--asphalt);
+  font-size: 0.9rem;
+}
+
+.servingList .servingCaf {
+  border-color: var(--flare);
+}
+
+/* ---------- Kit (picks, packing list, product grid, log) ---------- */
+
+.kit {
+  margin-top: 36px;
+}
+
+.kitHead {
+  margin: 34px 0 14px;
+  font-size: 1.5rem;
+}
+
+.picks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
+  gap: 18px;
+}
+
+.bibButton {
+  border: 0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.bibButton:hover {
+  transform: translateY(-3px);
+}
+
+.bibSelected {
+  outline: 4px solid var(--volt);
+  outline-offset: 0;
+  box-shadow: 0 0 0 6px var(--asphalt);
+}
+
+.tearAction {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--lane);
+}
+
+.packing {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 22px;
+  margin-top: 26px;
+  padding: 22px;
+  border-radius: var(--r-lg);
+  background: var(--paper);
+  box-shadow: var(--shadow-bib);
+}
+
+.packing h3 {
+  font-size: 1.4rem;
+}
+
+.packList {
+  margin: 8px 0 12px;
+  padding-left: 20px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.packStats {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.flavors {
+  gap: 6px;
+}
+
+.log {
+  margin-top: 34px;
+  padding: 22px;
+  border-radius: var(--r-lg);
+  background: var(--paper);
+  box-shadow: var(--shadow-bib);
+}
+
+.log h3 {
+  font-size: 1.4rem;
+}
+
+.logForm {
+  display: grid;
+  grid-template-columns: 160px 1fr 1fr 170px;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.logNotes {
+  grid-column: 1 / 4;
+}
+
+.logList {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.logList li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+
+.logNote {
+  flex: 1 1 200px;
+  color: var(--muted);
+}
+
+/* ---------- Product grid ---------- */
+
+.grid {
+  margin-top: 26px;
+}
+
+.sortSelect {
+  width: auto;
+  min-width: 160px;
+  min-height: 56px;
+  border-radius: 999px;
+  border-color: var(--asphalt);
+  font-weight: 700;
+}
+
+.filterRow {
+  align-items: center;
+}
+
+.chipGap {
+  width: 6px;
+}
+
+.brandSelect {
+  width: auto;
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.brandOn {
+  background: var(--asphalt);
+  border-color: var(--asphalt);
+  color: var(--volt);
+}
+
+.count {
+  margin: 12px 0 14px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+/* ---------- Product page ---------- */
+
+.productHero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 36px;
+  align-items: center;
+  padding: 40px 0 10px;
+}
+
+.productPhoto {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  max-height: 520px;
+  width: 100%;
+  padding: 28px;
+  border-radius: var(--r-lg);
+  background: #fff;
+  box-shadow: var(--shadow-bib);
+}
+
+.productPhoto .fill {
+  inset: 24px;
+  width: calc(100% - 48px) !important;
+  height: calc(100% - 48px) !important;
+}
+
+.productPhoto :global(.bib-photo-fallback) {
+  font-size: 4rem;
+}
+
+.productInfo {
+  display: grid;
+  gap: 12px;
+  align-content: center;
+}
+
+.productTitle {
+  margin: 0;
+  font-size: clamp(2.2rem, 4.6vw, 3.8rem);
+}
+
+.newTag {
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--volt);
+  color: var(--asphalt);
+}
+
+.bigStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bigStats :global(.split) {
+  padding: 8px 12px;
+  font-size: 0.85rem;
+}
+
+.bigStats :global(.split) b {
+  font-size: 1.45rem;
+}
+
+.serving {
+  margin: 0;
+  color: var(--ink-2);
 }
 
 .buy {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.buyRow {
-  display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-top: 4px;
 }
 
-.disclosure {
-  max-width: 720px;
-  color: var(--ink-3);
-  font-size: 0.8rem;
-  line-height: 1.5;
-  margin: 0;
+.raceCounts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
 }
 
-.faq h3 {
-  margin: 18px 0 6px;
-  font-size: 1.02rem;
+.raceCount {
+  display: grid;
+  gap: 2px;
+  padding: 16px;
+  border-radius: var(--r-md);
+  background: var(--asphalt);
+  color: #f1f1f1;
+  text-decoration: none;
+  transition: transform 0.12s ease;
 }
 
-.faq p {
-  margin: 0;
+.raceCount:hover {
+  transform: translateY(-3px);
 }
 
-.alts {
-  list-style: none;
-  margin: 12px 0;
-  padding: 0;
-  max-width: 760px;
+.raceCount .numLabel {
+  color: #a8a8a8;
 }
 
-.alts li {
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border);
-  color: var(--ink-2);
-  line-height: 1.55;
+.raceCount b {
+  font-size: 2.6rem;
+  line-height: 1;
+  color: var(--volt);
 }
 
-.alts li:last-child {
-  border-bottom: none;
+.noFuelLine {
+  margin: 10px 0 0;
+  padding: 16px 18px;
+  border-radius: var(--r-md);
+  background: var(--volt);
+  font-weight: 700;
 }
 
-.alts a {
-  color: var(--ink);
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+/* ---------- Compare ---------- */
+
+.compareTitle {
+  font-size: clamp(1.9rem, 4.4vw, 3.6rem);
 }
 
-@media (max-width: 640px) {
-  .raceRow {
+.vs {
+  display: inline-block;
+  padding: 0 0.2em;
+  color: var(--flare);
+}
+
+.compare {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 10px 14px;
+  align-items: center;
+}
+
+.compareSide {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+  padding: 16px;
+  border-radius: var(--r-md);
+  background: var(--paper);
+  box-shadow: var(--shadow-bib);
+  color: inherit;
+  text-decoration: none;
+}
+
+.compareSide:first-child {
+  grid-column: 1;
+}
+
+.compareSide:nth-child(2) {
+  grid-column: 3;
+}
+
+.comparePhoto {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 8px;
+  background: #fff;
+}
+
+
+.compareRow {
+  display: contents;
+}
+
+.compareCell {
+  justify-content: center;
+  padding: 10px;
+  font-size: 0.85rem;
+}
+
+.compareCell b {
+  font-size: 1.4rem;
+}
+
+.compareLabel {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--muted);
+}
+
+.win {
+  background: var(--volt);
+  border-color: var(--volt-deep);
+  color: var(--asphalt);
+}
+
+/* ---------- Phones ---------- */
+
+@media (max-width: 760px) {
+  .numbers {
+    gap: 6px;
+  }
+
+  .numbers > div {
+    padding: 10px 10px 9px;
+  }
+
+  .numbers .numLabel {
+    font-size: 0.6rem;
+    letter-spacing: 0.04em;
+  }
+
+  .strip {
+    --pad: 40px;
+    --bubble: 38px;
+  }
+
+  .stripStart,
+  .stripFinish {
+    font-size: 0.66rem;
+  }
+
+  .packing {
     grid-template-columns: 1fr;
+  }
+
+  .logForm {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .logNotes {
+    grid-column: 1 / -1;
+  }
+
+  .productHero {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-top: 20px;
+  }
+
+  .productPhoto {
+    aspect-ratio: 4 / 3;
+    padding: 18px;
+  }
+
+  .raceCounts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .compare {
+    gap: 8px;
+  }
+
+  .compareSide {
+    padding: 10px;
+  }
+
+  .sortSelect {
+    min-height: 44px;
+  }
+
+  .usingRow :global(.btn) {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .strip:not([data-dense]) .markerTime {
+    font-size: 0.68rem;
+  }
+
+  .grid :global(.bib-grid),
+  .twoUp {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+}
+
+/* Phones: long chip rows scroll sideways instead of stacking, and bibs get compact. */
+@media (max-width: 760px) {
+  .timeChips,
+  .filterRow {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-inline: -16px;
+    padding: 2px 16px 6px;
+    scrollbar-width: none;
+  }
+
+  .timeChips::-webkit-scrollbar,
+  .filterRow::-webkit-scrollbar {
+    display: none;
+  }
+
+  .timeChips > *,
+  .filterRow > * {
+    flex: 0 0 auto;
+  }
+
+  .exact {
+    order: -1;
+    margin-left: 0;
+  }
+
+  .picker .timeChips {
+    margin-inline: -24px;
+    padding-inline: 24px;
+  }
+
+  .picks {
+    display: flex;
+    overflow-x: auto;
+    margin-inline: -16px;
+    padding: 4px 16px 10px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .picks > * {
+    flex: 0 0 58%;
+    scroll-snap-align: start;
+  }
+
+  .servingList {
+    display: none;
+  }
+
+  .strip[data-dense] + .servingList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  }
+
+  .grid :global(.bib),
+  .twoUp > :global(.bib) {
+    padding-inline: 10px;
+  }
+
+  .grid :global(.bib-tear),
+  .twoUp :global(.bib-tear) {
+    margin-inline: -10px;
+    padding-inline: 10px;
+  }
+
+  .grid :global(.bib-stats),
+  .twoUp :global(.bib-stats),
+  .picks :global(.bib-stats) {
+    gap: 4px;
+  }
+
+  .grid :global(.bib-stats) :global(.split),
+  .twoUp :global(.bib-stats) :global(.split),
+  .picks :global(.bib-stats) :global(.split) {
     gap: 2px;
+    padding: 3px 5px;
+    font-size: 0.6rem;
   }
 
-  .raceRow > strong {
-    padding-top: 0;
+  .grid :global(.bib-stats) :global(.split) b,
+  .twoUp :global(.bib-stats) :global(.split) b,
+  .picks :global(.bib-stats) :global(.split) b {
+    font-size: 0.8rem;
   }
 
-  .table th,
-  .table td {
-    padding: 9px 10px;
-    font-size: 0.85rem;
+  .grid :global(.bib-title),
+  .twoUp :global(.bib-title) {
+    font-size: 0.95rem;
   }
+
+  .grid :global(.bib-meta),
+  .twoUp :global(.bib-meta) {
+    font-size: 0.68rem;
+  }
+}
+
+.block {
+  margin-top: 44px;
+}
+
+/* A photo that fills a .bib-photo tile without cropping. */
+.fill {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  inset: 8px;
+  width: calc(100% - 16px) !important;
+  height: calc(100% - 16px) !important;
+  object-fit: contain;
+}
+
+.strip[data-dense="2"] {
+  --bubble: 22px;
+}
+
+.strip[data-dense="2"] .bubble {
+  border-width: 2px;
 }

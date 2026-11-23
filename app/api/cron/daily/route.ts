@@ -3,6 +3,8 @@ import { revalidatePath } from "next/cache";
 import { isAuthorized } from "@/lib/ingest/auth";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 import { syncShoeCatalog } from "@/lib/catalog-sync";
+import { syncFuelCatalog } from "@/lib/fuel-sync";
+import { fillFuelImages } from "@/lib/fuel-images";
 import { runGuideSync } from "@/lib/guide-publish";
 import { submitToIndexNow } from "@/lib/indexnow";
 import { SITE_URL } from "@/lib/seo";
@@ -15,8 +17,10 @@ export const dynamic = "force-dynamic";
  * The one scheduled job (see vercel.json). Each day it:
  *   1. syncs the shoe catalog from GitHub into the database,
  *   2. tells search engines about any shoe pages that changed,
- *   3. publishes any guides on GitHub that are not live yet,
- *   4. as a side effect, touches the database so Supabase's free tier never
+ *   3. syncs the fuel catalog (data/fuel-catalog.json) and stores official
+ *      photos for any fuel product that has none (a few per run),
+ *   4. publishes any guides on GitHub that are not live yet,
+ *   5. as a side effect, touches the database so Supabase's free tier never
  *      pauses the project for inactivity.
  *
  * Auth: when CRON_SECRET is set in Vercel, Vercel's scheduler sends it and
@@ -66,11 +70,36 @@ export async function GET(request: Request) {
       ]);
     }
 
+    // Fuel: catalog first, then photos for anything new. A failure here is
+    // reported but does not fail the shoe sync or the guides.
+    const fuel = await syncFuelCatalog(supabase, { dryRun }).catch(
+      (error) => ({ ok: false, error: (error as Error).message }) as Awaited<ReturnType<typeof syncFuelCatalog>>
+    );
+    const fuelImages = dryRun
+      ? null
+      : await fillFuelImages(supabase, { limit: 6 }).catch((error) => ({ ok: false, error: (error as Error).message }));
+    const fuelTouched = [
+      ...(fuel.added ?? []),
+      ...(fuel.updated ?? []),
+      ...(fuel.reactivated ?? []),
+      ...(fuel.deactivated ?? []),
+      ...((fuelImages && "filled" in fuelImages ? fuelImages.filled : []) ?? [])
+    ];
+    if (!dryRun && fuelTouched.length) {
+      for (const key of new Set(fuelTouched)) revalidatePath(`/fuel/gels/${key}`);
+      revalidatePath("/fuel");
+      revalidatePath("/tools/fueling");
+      revalidatePath("/fuel/plan/[race]/[finish]", "page");
+      revalidatePath("/fuel/best/[slug]", "page");
+      revalidatePath("/fuel/compare/[pair]", "page");
+      revalidatePath("/sitemap.xml");
+    }
+
     // Guides publish themselves when the writing routine merges; this is the
     // fallback in case its call to /api/guides/sync didn't land.
     const [guides] = dryRun ? [{ skipped: "dry run" }] : await runGuideSync().catch((error) => [{ ok: false, error: (error as Error).message }]);
 
-    return NextResponse.json({ ok: catalog.ok, catalog, indexNow, guides }, { status: catalog.ok ? 200 : 500 });
+    return NextResponse.json({ ok: catalog.ok, catalog, indexNow, fuel, fuelImages, guides }, { status: catalog.ok ? 200 : 500 });
   } catch (error) {
     return NextResponse.json({ ok: false, error: (error as Error).message }, { status: 500 });
   }
