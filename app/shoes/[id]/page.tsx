@@ -9,6 +9,7 @@ import { getSupabaseAdmin } from "@/lib/supabase-admin";
 import BuyLinks from "@/components/buy-links";
 import JsonLd from "@/components/json-ld";
 import { SITE_URL } from "@/lib/seo";
+import { getComparisonsForShoe } from "@/lib/content/shoes";
 
 export const revalidate = 86400;
 
@@ -262,7 +263,11 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
     notFound();
   }
 
-  const alternatives = await loadAlternatives(shoe);
+  const [alternatives, comparisons] = await Promise.all([
+    loadAlternatives(shoe),
+    // Comparison links are extra: a failed catalog read must not break the page.
+    getComparisonsForShoe(shoe.id).catch(() => [])
+  ]);
   const title = displayName(shoe);
 
   const metrics = [
@@ -458,6 +463,21 @@ export default async function ShoeDetailPage({ params }: { params: Promise<{ id:
                         ))}
                       </tbody>
                     </table>
+                  </div>
+                </div>
+              </div>
+            ) : null}
+
+            {comparisons.length ? (
+              <div className="card">
+                <div className="stack">
+                  <strong>Compare with</strong>
+                  <div className="tag-grid">
+                    {comparisons.slice(0, 8).map(({ slug, other }) => (
+                      <Link key={slug} className="tag" href={`/shoes/compare/${slug}`}>
+                        vs {displayName(other)}
+                      </Link>
+                    ))}
                   </div>
                 </div>
               </div>
