@@ -21,8 +21,8 @@ export default function AboutPage() {
       <section className="section container prose-block">
         <h2 className="section-title">Run smarter. Guess less.</h2>
         <p>
-          Everything here is free. A free account opens the full results of
-          the Shoe Finder, Music Finder and Fuel Finder and keeps what you save.
+          Everything here is free and open, no account needed. A free account
+          only keeps what you save.
           Runner Toolkit earns money only through clearly disclosed shoe and
           fuel links, and those links never decide what gets recommended.
         </p>

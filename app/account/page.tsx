@@ -69,7 +69,7 @@ export default function AccountPage() {
   if (!user) {
     return (
       <section className="section container">
-        <SignupCard tool="shoes" unlocks="full results from every tool and a place to keep what you save" />
+        <SignupCard tool="shoes" unlocks="keep the shoes, songs and fuel plans you save" />
       </section>
     );
   }

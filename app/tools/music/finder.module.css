@@ -413,11 +413,6 @@
   margin: 0;
 }
 
-.teaser {
-  opacity: 0.6;
-  pointer-events: none;
-}
-
 .message {
   margin: 0 0 14px;
 }

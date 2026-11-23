@@ -41,9 +41,11 @@ delete its row in Supabase (`articles`) and its file in `content/rundown/`.
 
 ## Accounts
 
-Every tool is free. The full result (all shoe matches, the whole playlist,
-every fuel serving, the catalogs and the practice log) needs a free account
-(`components/account-gate.tsx`). Content pages are open to everyone.
+Every tool is free and open to everyone, with no wall (Jon, Nov 23 2026:
+start with no emails and see how much traffic comes). A free account
+(`components/account-gate.tsx`) is only for keeping things: saved shoes,
+songs and fuel plans, the fuel practice log, and adding a song to the music
+library (a write to shared data, so it stays behind sign-in).
 
 ## Shoe catalog
 

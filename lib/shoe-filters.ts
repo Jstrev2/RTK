@@ -5,8 +5,6 @@ import { rankPopularity, type ShoeCard } from "./shoe-catalog";
  * matches" link and the server page that reads them from the query string.
  */
 
-export const FREE_CARDS = 10;
-
 export type GridFilters = {
   q: string;
   use: string;

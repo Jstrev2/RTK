@@ -36,8 +36,6 @@ type LogRow = { id: string; run_date: string; run_type: string; distance: string
 const KM = 0.621371;
 
 export default function FuelFinder({ products, defaultKey }: { products: FuelProduct[]; defaultKey: string }) {
-  const { user, supabaseAvailable } = useAuth();
-  const unlocked = Boolean(user) || !supabaseAvailable;
   const fuel = useMemo(() => products.filter(isPlannable), [products]);
   const fallbackKey = fuel.find((p) => p.key === defaultKey)?.key ?? fuel[0]?.key ?? "";
 
@@ -243,7 +241,7 @@ export default function FuelFinder({ products, defaultKey }: { products: FuelPro
         <section className={`container ${s.kit}`} ref={kitRef} id="kit">
           <div className="section-head">
             <h2>Your kit</h2>
-            {unlocked && partner && product?.caffeineMg === 0 ? (
+            {partner && product?.caffeineMg === 0 ? (
               <button type="button" className={`chip ${caffeineLate ? "is-on" : ""}`} onClick={() => setCaffeineLate(!caffeineLate)}>
                 Caffeine late: {partner.display}
               </button>
@@ -260,12 +258,8 @@ export default function FuelFinder({ products, defaultKey }: { products: FuelPro
                     key={pick.id}
                     product={shownProduct}
                     badge={pick.label}
-                    selected={unlocked && product?.key === pick.plan.product.key && (pick.id === "caffeine") === caffeineLate}
+                    selected={product?.key === pick.plan.product.key && (pick.id === "caffeine") === caffeineLate}
                     onSelect={() => {
-                      if (!unlocked) {
-                        document.getElementById("fuel-wall")?.scrollIntoView({ behavior: "smooth", block: "center" });
-                        return;
-                      }
                       choose(pick.plan.product);
                       setCaffeineLate(pick.id === "caffeine");
                     }}
@@ -280,8 +274,7 @@ export default function FuelFinder({ products, defaultKey }: { products: FuelPro
             </div>
           ) : null}
 
-          {unlocked ? (
-            <>
+          <>
               <div className={s.packing}>
                 <div>
                   <h3>Packing list</h3>
@@ -338,11 +331,6 @@ export default function FuelFinder({ products, defaultKey }: { products: FuelPro
 
               <PracticeLog productName={product?.display ?? ""} race={race} minutes={time} />
             </>
-          ) : (
-            <div className="wall" id="fuel-wall">
-              <SignupCard unlocks="the product swap, your packing list and the practice log" tool="fuel" />
-            </div>
-          )}
         </section>
       ) : null}
 
@@ -366,7 +354,7 @@ export default function FuelFinder({ products, defaultKey }: { products: FuelPro
 }
 
 function PracticeLog({ productName, race, minutes }: { productName: string; race: string; minutes: number }) {
-  const { user } = useAuth();
+  const { user, supabaseAvailable } = useAuth();
   const [logs, setLogs] = useState<LogRow[]>([]);
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const [form, setForm] = useState({ date: "", distance: "", duration: "", rating: "4", notes: "" });
@@ -418,6 +406,16 @@ function PracticeLog({ productName, race, minutes }: { productName: string; race
     setStatus("idle");
     setForm({ date: "", distance: "", duration: "", rating: "4", notes: "" });
   };
+
+  if (!user && supabaseAvailable) {
+    return (
+      <div className={s.log}>
+        <h3>Practice log</h3>
+        <p className={s.muted}>Log each long run you fuel on. After a few, you&apos;ll know what your stomach handles.</p>
+        <SignupCard unlocks="keep a practice log" tool="fuel" />
+      </div>
+    );
+  }
 
   return (
     <div className={s.log}>

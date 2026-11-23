@@ -82,23 +82,6 @@
   font-size: 1.25rem;
 }
 
-.shoe-grid-teaser {
-  margin-top: 18px;
-  max-height: 230px;
-  overflow: hidden;
-  pointer-events: none;
-  user-select: none;
-}
-
-.shoe-grid-teaser-card {
-  filter: blur(3px);
-  opacity: 0.7;
-}
-
-.shoe-grid .wall {
-  margin-top: -170px;
-}
-
 @media (max-width: 720px) {
   .shoe-grid-selects {
     width: 100%;

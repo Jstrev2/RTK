@@ -2,10 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 import ShoeBib from "@/components/shoe-bib";
-import { SignupCard } from "@/components/account-gate";
-import { useAuth } from "@/components/auth-provider";
 import type { ShoeCard } from "@/lib/shoe-catalog";
-import { applyFilters, CUSHIONS, EMPTY_FILTERS, FREE_CARDS, PRICES, SORTS, SUPPORTS, toQuery, USES, type GridFilters } from "@/lib/shoe-filters";
+import { applyFilters, CUSHIONS, EMPTY_FILTERS, PRICES, SORTS, SUPPORTS, toQuery, USES, type GridFilters } from "@/lib/shoe-filters";
 
 function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; children: React.ReactNode }) {
   return (
@@ -16,11 +14,9 @@ function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; chi
 }
 
 export default function ShoeGrid({ shoes, initial }: { shoes: ShoeCard[]; initial: GridFilters }) {
-  const { user, loading, supabaseAvailable } = useAuth();
   const [filters, setFilters] = useState<GridFilters>(initial);
   const brands = useMemo(() => [...new Set(shoes.map((shoe) => shoe.brand))].sort((a, b) => a.localeCompare(b)), [shoes]);
   const results = useMemo(() => applyFilters(shoes, filters), [shoes, filters]);
-  const unlocked = Boolean(user) || !supabaseAvailable;
 
   useEffect(() => {
     const url = `${window.location.pathname}${toQuery(filters)}`;
@@ -32,9 +28,6 @@ export default function ShoeGrid({ shoes, initial }: { shoes: ShoeCard[]; initia
     setFilters((current) => ({ ...current, [key]: current[key] === value ? "" : value }));
   const active =
     Boolean(filters.q || filters.use || filters.cushion || filters.support || filters.wide || filters.max || filters.brand);
-
-  const visible = unlocked ? results : results.slice(0, FREE_CARDS);
-  const teaser = unlocked ? [] : results.slice(FREE_CARDS, FREE_CARDS + 4);
 
   return (
     <div className="shoe-grid">
@@ -124,7 +117,7 @@ export default function ShoeGrid({ shoes, initial }: { shoes: ShoeCard[]; initia
 
       {results.length ? (
         <div className="bib-grid">
-          {visible.map((shoe, i) => (
+          {results.map((shoe, i) => (
             <ShoeBib key={shoe.id} shoe={shoe} number={i + 1} eager={i < 4} />
           ))}
         </div>
@@ -137,24 +130,6 @@ export default function ShoeGrid({ shoes, initial }: { shoes: ShoeCard[]; initia
         </div>
       )}
 
-      {!unlocked && results.length > FREE_CARDS ? (
-        <>
-          <div className="bib-grid shoe-grid-teaser" aria-hidden="true">
-            {teaser.map((shoe, i) => (
-              <div key={shoe.id} className="shoe-grid-teaser-card">
-                <ShoeBib shoe={shoe} number={FREE_CARDS + i + 1} />
-              </div>
-            ))}
-          </div>
-          <div className="wall">
-            {loading ? (
-              <div className="account-gate account-gate-loading" aria-busy="true" />
-            ) : (
-              <SignupCard unlocks={`all ${results.length} ${active ? "matching shoes" : "shoes"}`} tool="shoes" />
-            )}
-          </div>
-        </>
-      ) : null}
     </div>
   );
 }

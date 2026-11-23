@@ -103,8 +103,7 @@ type FoundTrack = { source: "spotify" | "deezer"; id: string; title: string; art
 /* ---------- Component ---------- */
 
 export default function MusicFinder({ spotifyClientId }: { spotifyClientId: string }) {
-  const { user, supabaseAvailable, loading: authLoading } = useAuth();
-  const signedIn = Boolean(user) || !supabaseAvailable;
+  const { user, supabaseAvailable } = useAuth();
 
   const [library, setLibrary] = useState<LibSong[] | null>(null);
   const [loadError, setLoadError] = useState("");
@@ -740,9 +739,8 @@ export default function MusicFinder({ spotifyClientId }: { spotifyClientId: stri
           ) : null}
 
           {library && phases.length ? (
-            signedIn ? (
-              <>
-                {phases.map((phase, i) => phaseBlock(phase, i))}
+            <>
+              {phases.map((phase, i) => phaseBlock(phase, i))}
                 <div className="panel-dark">
                   <h3>Take it with you</h3>
                   <div className={styles.actions} style={{ marginBottom: 0 }}>
@@ -757,16 +755,7 @@ export default function MusicFinder({ spotifyClientId }: { spotifyClientId: stri
                     </button>
                   </div>
                 </div>
-              </>
-            ) : (
-              <>
-                {phaseBlock(phases[0], 0)}
-                {phases[1] ? <div className={styles.teaser}>{phaseBlock(phases[1], 1, 2)}</div> : null}
-                <div className="wall">
-                  {authLoading ? <div className="account-gate account-gate-loading" aria-busy="true" /> : <SignupCard unlocks={`the other ${allTracks.length - phases[0].tracks.length} songs and save them to Spotify`} tool="music" />}
-                </div>
-              </>
-            )
+            </>
           ) : null}
 
           <p className={styles.credit}>

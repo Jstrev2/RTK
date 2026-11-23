@@ -16,7 +16,8 @@ type AccountGateProps = {
 };
 
 /**
- * Every tool is free, and the full result opens with a free account.
+ * Every tool is free and open to everyone. An account is only for keeping
+ * things: saved shoes, songs and fuel plans, the practice log, added songs.
  * Signed-in runners see the children; everyone else gets the inline card.
  */
 export default function AccountGate({ unlocks, tool, children }: AccountGateProps) {
@@ -60,14 +61,14 @@ export function SignupCard({ unlocks, tool, initialMode = "sign-up" }: { unlocks
   };
 
   const heading =
-    mode === "reset" ? "Reset your password." : mode === "sign-in" ? `Sign in to see ${unlocks}.` : `Create a free account to see ${unlocks}.`;
+    mode === "reset" ? "Reset your password." : mode === "sign-in" ? `Sign in to ${unlocks}.` : `Create a free account to ${unlocks}.`;
 
   return (
     <div className="account-gate">
       <div className="account-gate-copy">
         <span className="eyebrow">Free account</span>
         <h3>{heading}</h3>
-        <p>Takes ten seconds. No email to confirm, no card, nothing to pay. It also keeps the shoes, songs and fuel plans you save.</p>
+        <p>Takes ten seconds. No email to confirm, no card, nothing to pay. It keeps the shoes, songs and fuel plans you save.</p>
       </div>
       <form className="account-gate-form" onSubmit={submit}>
         <label className="label" htmlFor={`gate-email-${tool}`}>Email</label>

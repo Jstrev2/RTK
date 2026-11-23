@@ -17,7 +17,7 @@ function LoginInner() {
 
   return (
     <section className="section container" style={{ maxWidth: 960 }}>
-      <SignupCard tool="shoes" initialMode="sign-in" unlocks="every tool's full results" />
+      <SignupCard tool="shoes" initialMode="sign-in" unlocks="get to what you've saved" />
     </section>
   );
 }
