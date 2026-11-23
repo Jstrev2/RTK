@@ -2,7 +2,7 @@
  * Keeps the live shoe_models table in step with the catalog file on GitHub.
  *
  * data/shoe-models-authored.json on the main branch is the source of truth.
- * The monthly audit routine opens a PR against it, checks its own change
+ * The weekly audit routine (scripts/catalog/ROUTINE-shoes.md) opens a PR against it, checks its own change
  * with scripts/catalog/check-audit.mjs and merges it, and this sync (run by
  * the daily cron) applies the result to the database. Nobody has to run an
  * import by hand.
@@ -92,7 +92,7 @@ function validate(rows: unknown): string | null {
 
 export async function syncShoeCatalog(
   supabase: CatalogDb,
-  { dryRun = false }: { dryRun?: boolean } = {}
+  { dryRun = false, rows }: { dryRun?: boolean; rows?: unknown } = {}
 ): Promise<CatalogSyncResult> {
   const result: CatalogSyncResult = {
     ok: false,
@@ -106,13 +106,18 @@ export async function syncShoeCatalog(
   };
   const fail = (error: string) => ({ ...result, error });
 
-  const response = await fetch(CATALOG_URL, { cache: "no-store" });
-  if (!response.ok) return fail(`catalog fetch failed: HTTP ${response.status}`);
+  // `rows` lets scripts/catalog/sync-local.mjs apply a local copy of the
+  // file (same checks and limits); the cron always reads GitHub's.
   let file: Row[];
-  try {
-    file = (await response.json()) as Row[];
-  } catch {
-    return fail("catalog file is not valid JSON");
+  if (rows !== undefined) file = rows as Row[];
+  else {
+    const response = await fetch(CATALOG_URL, { cache: "no-store" });
+    if (!response.ok) return fail(`catalog fetch failed: HTTP ${response.status}`);
+    try {
+      file = (await response.json()) as Row[];
+    } catch {
+      return fail("catalog file is not valid JSON");
+    }
   }
   const invalid = validate(file);
   if (invalid) return fail(invalid);

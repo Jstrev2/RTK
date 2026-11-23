@@ -1,93 +1,44 @@
 import Link from "next/link";
-import { shoes as fallbackShoes } from "@/lib/data";
-import type { Shoe } from "@/lib/data";
-import { mapDbShoe, displayName, prettyLabel, type DbShoe } from "@/lib/shoe-utils";
-import { getSupabaseAdmin } from "@/lib/supabase-admin";
+import ShoeGrid from "./shoe-grid";
+import { loadShoeCards } from "@/lib/shoe-catalog";
+import { filtersFromParams } from "@/lib/shoe-filters";
 import { pageMetadata } from "@/lib/seo";
-
-export const revalidate = 86400;
+import "@/components/shoes.css";
 
 export const metadata = pageMetadata({
-  title: "Running Shoe Database: Every Road Shoe We Track",
+  title: "Running Shoes: Every Current Road Shoe, With Photos",
   description:
-    "Browse 300+ current road running shoes by brand, with cushion, support, drop, weight, and honest tradeoffs for every model, updated as new versions release.",
+    "Every current road running shoe in one grid, most popular first. Search by name, filter by run type, cushion, support, toe box, price and brand.",
   path: "/shoes",
 });
 
-async function loadShoes(): Promise<Shoe[]> {
-  const supabase = getSupabaseAdmin();
-  if (supabase) {
-    const { data } = await supabase
-      .from("shoe_models")
-      .select("*")
-      .eq("is_active", true)
-      .order("brand")
-      .order("name");
-    if (data?.length) {
-      return (data as DbShoe[]).map(mapDbShoe);
-    }
-  }
-  return fallbackShoes;
-}
-
-export default async function ShoeIndexPage() {
-  const allShoes = await loadShoes();
-
-  const byBrand = new Map<string, Shoe[]>();
-  for (const shoe of allShoes) {
-    const list = byBrand.get(shoe.brand) ?? [];
-    list.push(shoe);
-    byBrand.set(shoe.brand, list);
-  }
-  const brands = [...byBrand.keys()].sort((a, b) => a.localeCompare(b));
+export default async function ShoeIndexPage({
+  searchParams
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const [shoes, params] = await Promise.all([loadShoeCards(), searchParams]);
+  const initial = filtersFromParams(params);
 
   return (
-    <div className="editorial-page">
-      <section className="tool-hero container">
-        <span className="eyebrow">Shoe database</span>
-        <h1>Every road running shoe we track.</h1>
-        <p>
-          {allShoes.length} current road shoes with specs, support level,
-          cushion, and honest tradeoffs for each. Pick a brand below, or use
-          the <Link href="/tools/shoe-selector">Shoe Finder</Link> to narrow
-          it to three shoes matched to how you run.
-        </p>
+    <div className="shoe-index">
+      <section className="page-hero shoe-index-hero">
+        <div className="container">
+          <span className="eyebrow">Shoe database</span>
+          <h1>
+            Every road shoe. <span className="hi">{shoes.length}</span> of them.
+          </h1>
+          <p className="page-hero-sub">
+            Most popular first. Search, tap a filter, or let the{" "}
+            <Link className="text-link" href="/tools/shoe-selector">
+              Shoe Finder
+            </Link>{" "}
+            pick three.
+          </p>
+        </div>
       </section>
-
-      <section className="section container">
-        {brands.map((brand) => (
-          <div key={brand} className="stack" style={{ marginBottom: "32px" }}>
-            <h2 className="section-title">{brand}</h2>
-            <div className="table-wrap">
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th>Shoe</th>
-                    <th>Cushion</th>
-                    <th>Support</th>
-                    <th>Drop</th>
-                    <th>Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {(byBrand.get(brand) ?? []).map((shoe) => (
-                    <tr key={shoe.id}>
-                      <td>
-                        <Link href={`/shoes/${shoe.id}`}>
-                          <strong>{displayName(shoe)}</strong>
-                        </Link>
-                      </td>
-                      <td>{prettyLabel(shoe.cushion)}</td>
-                      <td>{prettyLabel(shoe.stability)}</td>
-                      <td>{shoe.drop ? `${shoe.drop} mm` : "–"}</td>
-                      <td>{shoe.price ? `$${shoe.price}` : "–"}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        ))}
+      <section className="container shoe-index-body">
+        <ShoeGrid shoes={shoes} initial={initial} />
       </section>
     </div>
   );

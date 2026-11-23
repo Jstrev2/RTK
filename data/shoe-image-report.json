@@ -1,0 +1,2384 @@
+{
+  "found": {
+    "asics-gel-nimbus-27": {
+      "name": "ASICS Gel-Nimbus 27",
+      "source": "shopify",
+      "title": "Men's ASICS Nimbus 27",
+      "page": "https://www.runnersplus.com/products/mens-asics-nimbus-27",
+      "bytes": 44342
+    },
+    "brooks-ghost-16": {
+      "name": "Brooks Ghost 16",
+      "source": "shopify",
+      "title": "Men's Brooks Ghost 16 (Narrow)",
+      "page": "https://www.runnersplus.com/products/mens-brooks-ghost-16-narrow",
+      "bytes": 45864
+    },
+    "saucony-kinvara-16": {
+      "name": "Saucony Kinvara 16",
+      "source": "shopify",
+      "title": "SAUCONY MEN'S KINVARA 16",
+      "page": "https://www.lukeslocker.com/products/kinvara-20",
+      "bytes": 39008
+    },
+    "hoka-clifton-10": {
+      "name": "Hoka Clifton 10",
+      "source": "shopify",
+      "title": "Men's HOKA Clifton 10",
+      "page": "https://www.runnersplus.com/products/mens-hoka-clifton-10-copy-2",
+      "bytes": 51500
+    },
+    "nike-pegasus-41": {
+      "name": "Nike Pegasus 41",
+      "source": "shopify",
+      "title": "Women's Nike Pegasus 41",
+      "page": "https://www.runnersplus.com/products/womens-nike-pegasus-42",
+      "bytes": 36420
+    },
+    "on-cloudmonster-2": {
+      "name": "On Cloudmonster 2",
+      "source": "shopify",
+      "title": "Men's On Cloudmonster 2",
+      "page": "https://www.runnersplus.com/products/mens-on-cloudmonster-2",
+      "bytes": 27262
+    },
+    "adidas-adizero-adios-pro-4": {
+      "name": "Adidas Adizero Adios Pro 4",
+      "source": "shopify",
+      "title": "Men's adidas Adizero Adios Pro 4",
+      "page": "https://www.runnersplus.com/products/mens-adidas-adizero-adios-pro-4",
+      "bytes": 19900
+    },
+    "adidas-adizero-adios-pro-5": {
+      "name": "Adidas Adizero Adios Pro 5",
+      "source": "shopify",
+      "title": "Men's adidas Adizero Adios Pro 5",
+      "page": "https://www.runnersplus.com/products/mens-adidas-adizero-adios-pro-5",
+      "bytes": 26830
+    },
+    "adidas-adizero-boston-13": {
+      "name": "Adidas Adizero Boston 13",
+      "source": "shopify",
+      "title": "Women's Boston 13 Running Shoe - Cloud White/Matte Silver/Dash Grey - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-boston-13-b-ftwr-white-matte-silver-dash-grey",
+      "bytes": 37834
+    },
+    "adidas-adizero-evo-sl": {
+      "name": "Adidas Adizero Evo SL",
+      "source": "shopify",
+      "title": "Men's adidas Adizero EVO SL",
+      "page": "https://www.runnersplus.com/products/mens-adidas-adizero-evo-sl",
+      "bytes": 19990
+    },
+    "adidas-adizero-evo-sl-woven": {
+      "name": "Adidas Adizero Evo SL Woven",
+      "source": "shopify",
+      "title": "Women's Adizero EVO SL Woven Running Shoe - Footwear White/Clear Blue/Matte Gold - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-adizero-evo-sl-woven-b-footwear-white-clear-blue-matte-gold",
+      "bytes": 15318
+    },
+    "adidas-adizero-prime-x-3-strung": {
+      "name": "Adidas Adizero Prime X 3 Strung",
+      "source": "shopify",
+      "title": "Unisex adidas Adizero Prime X3 Strung",
+      "page": "https://www.runnersplus.com/products/unisex-adizero-prime-x3-strung",
+      "bytes": 33426
+    },
+    "adidas-adizero-sl2": {
+      "name": "Adidas Adizero SL2",
+      "source": "shopify",
+      "title": "Women's Adizero SL 2 Running Shoe - Core Black/Zero Metalic/Carbon - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-adizero-sl-2-b-core-black-zero-met-carbon",
+      "bytes": 40256
+    },
+    "adidas-duramo-speed-2": {
+      "name": "Adidas Duramo Speed 2",
+      "source": "zappos",
+      "title": "adidas Duramo Speed 2",
+      "page": "https://www.zappos.com/p/adidas-duramo-speed-2-grey-strata-champagne-metallic-bliss-lilac/product/10027519/color/1094814",
+      "bytes": 40620
+    },
+    "adidas-hyperboost-edge": {
+      "name": "Adidas Hyperboost Edge",
+      "source": "shopify",
+      "title": "Men's adidas Hyperboost Edge",
+      "page": "https://www.runnersplus.com/products/mens-adidas-hyperboost-edge",
+      "bytes": 56756
+    },
+    "adidas-supernova-rise": {
+      "name": "Adidas Supernova Rise",
+      "source": "shopify",
+      "title": "Men's adidas Supernova Rise",
+      "page": "https://www.runnersplus.com/products/mens-adidas-supernova-rise",
+      "bytes": 28490
+    },
+    "adidas-supernova-rise-2": {
+      "name": "Adidas Supernova Rise 2",
+      "source": "shopify",
+      "title": "Men's adidas Supernova Rise 2",
+      "page": "https://www.runnersplus.com/products/mens-adidas-supernova-ride-2",
+      "bytes": 47170
+    },
+    "adidas-supernova-rise-3": {
+      "name": "Adidas Supernova Rise 3",
+      "source": "shopify",
+      "title": "Men's adidas Supernova Rise 3",
+      "page": "https://www.runnersplus.com/products/mens-adidas-supernova-rise-3",
+      "bytes": 24588
+    },
+    "adidas-supernova-solution": {
+      "name": "Adidas Supernova Solution",
+      "source": "shopify",
+      "title": "Men's adidas Supernova Solution",
+      "page": "https://www.runnersplus.com/products/mens-adidas-supernova-solution",
+      "bytes": 34228
+    },
+    "adidas-supernova-solution-2": {
+      "name": "Adidas Supernova Solution 2",
+      "source": "shopify",
+      "title": "Women's Supernova Solution 2 Running Shoe - Wonder Silver/Linen Green Met/Silver Green -Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-supernova-solution-2-b-wonder-silver-linen-green-met-silver-green",
+      "bytes": 27328
+    },
+    "adidas-ultraboost-5": {
+      "name": "Adidas Ultraboost 5",
+      "source": "zappos",
+      "title": "adidas Ultraboost 5 Running Shoes",
+      "page": "https://www.zappos.com/p/adidas-ultraboost-5-running-shoes-white-white-white/product/10000115/color/5078",
+      "bytes": 24256
+    },
+    "adidas-ultraboost-5x": {
+      "name": "Adidas Ultraboost 5X",
+      "source": "shopify",
+      "title": "Women's Ultraboost 5X Running Shoe - Wonder Silver/Silver Met/Dash Grey - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-ultraboost-5x-b-wonder-silver-silver-met-dash-grey",
+      "bytes": 28324
+    },
+    "altra-escalante-4": {
+      "name": "Altra Escalante 4",
+      "source": "shopify",
+      "title": "Men's Altra Escalante 4",
+      "page": "https://www.runnersplus.com/products/mens-altra-escalante-4",
+      "bytes": 16824
+    },
+    "altra-escalante-5": {
+      "name": "Altra Escalante 5",
+      "source": "shopify",
+      "title": "Men's Altra Escalante 5",
+      "page": "https://www.runnersplus.com/products/mens-altra-escalante-5",
+      "bytes": 25932
+    },
+    "altra-escalante-racer-2": {
+      "name": "Altra Escalante Racer 2",
+      "source": "shopify",
+      "title": "ALTRA MEN'S ESCALANTE RACER 2",
+      "page": "https://www.lukeslocker.com/products/escalante-racer-6",
+      "bytes": 50006
+    },
+    "altra-experience-flow": {
+      "name": "Altra Experience Flow",
+      "source": "shopify",
+      "title": "Men's Altra Experience Flow",
+      "page": "https://www.runnersplus.com/products/mens-altra-experience-flow",
+      "bytes": 21918
+    },
+    "altra-experience-flow-2": {
+      "name": "Altra Experience Flow 2",
+      "source": "shopify",
+      "title": "Men's Altra Experience Flow 2",
+      "page": "https://www.runnersplus.com/products/mens-altra-experience-flow-2",
+      "bytes": 16616
+    },
+    "altra-experience-form": {
+      "name": "Altra Experience Form",
+      "source": "shopify",
+      "title": "Women's Experience Form Running Shoe - Gray - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-experience-form-b-gray",
+      "bytes": 32264
+    },
+    "altra-fwd-via": {
+      "name": "Altra FWD Via",
+      "source": "shopify",
+      "title": "Men's Altra FWD Via",
+      "page": "https://www.runnersplus.com/products/mens-altra-fwd-via",
+      "bytes": 23798
+    },
+    "altra-paradigm-7": {
+      "name": "Altra Paradigm 7",
+      "source": "shopify",
+      "title": "Women's Paradigm 7 Running Shoe  - Navy/Coral - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-paradigm-7-b-navy-coral",
+      "bytes": 45092
+    },
+    "altra-torin-8": {
+      "name": "Altra Torin 8",
+      "source": "shopify",
+      "title": "Men's Altra Torin 8",
+      "page": "https://www.runnersplus.com/products/mens-altra-torin-8",
+      "bytes": 24834
+    },
+    "altra-torin-9": {
+      "name": "Altra Torin 9",
+      "source": "shopify",
+      "title": "Men's Altra Torin 9",
+      "page": "https://www.runnersplus.com/products/mens-altra-torin-9",
+      "bytes": 34404
+    },
+    "altra-vanish-carbon-2": {
+      "name": "Altra Vanish Carbon 2",
+      "source": "shopify",
+      "title": "Women's Altra Vanish Carbon 2",
+      "page": "https://www.runnersplus.com/products/womens-altra-vanish-carbon-2",
+      "bytes": 26872
+    },
+    "altra-vanish-pulse": {
+      "name": "Altra Vanish Pulse",
+      "source": "shopify",
+      "title": "ALTRA MEN'S VANISH PULSE",
+      "page": "https://www.lukeslocker.com/products/vanish-pulse",
+      "bytes": 30752
+    },
+    "asics-dynablast-5": {
+      "name": "ASICS Dynablast 5",
+      "source": "zappos",
+      "title": "ASICS Dynablast 5",
+      "page": "https://www.zappos.com/p/asics-dynablast-5-fawn-oyster-white/product/9982375/color/1118335",
+      "bytes": 43934
+    },
+    "asics-gel-cumulus-26": {
+      "name": "ASICS Gel-Cumulus 26",
+      "source": "shopify",
+      "title": "Men's ASICS Cumulus 26",
+      "page": "https://www.runnersplus.com/products/mens-asics-cumulus-26",
+      "bytes": 45568
+    },
+    "asics-gel-cumulus-27": {
+      "name": "ASICS Gel-Cumulus 27",
+      "source": "shopify",
+      "title": "Men's ASICS Cumulus 27",
+      "page": "https://www.runnersplus.com/products/mens-asics-cumulus-27",
+      "bytes": 36938
+    },
+    "asics-gel-cumulus-28": {
+      "name": "ASICS Gel-Cumulus 28",
+      "source": "shopify",
+      "title": "Men's ASICS Cumulus 28",
+      "page": "https://www.runnersplus.com/products/mens-asics-cumulus-28",
+      "bytes": 39096
+    },
+    "asics-gel-excite-11": {
+      "name": "ASICS Gel-Excite 11",
+      "source": "zappos",
+      "title": "ASICS GEL-Excite 11",
+      "page": "https://www.zappos.com/p/asics-gel-excite-11-black-meteor-grey/product/10023992/color/1118469",
+      "bytes": 36994
+    },
+    "asics-gel-kayano-32": {
+      "name": "ASICS Gel-Kayano 32",
+      "source": "shopify",
+      "title": "Men's Asics Kayano 32",
+      "page": "https://www.runnersplus.com/products/mens-asics-kayano-32",
+      "bytes": 33382
+    },
+    "asics-gel-kayano-33": {
+      "name": "ASICS Gel-Kayano 33",
+      "source": "shopify",
+      "title": "Men's ASICS Kayano 33",
+      "page": "https://www.runnersplus.com/products/womens-asics-kayano-33",
+      "bytes": 52896
+    },
+    "asics-gel-nimbus-26": {
+      "name": "ASICS Gel-Nimbus 26",
+      "source": "zappos",
+      "title": "ASICS Women's GEL-Nimbus 26",
+      "page": "https://www.zappos.com/p/asics-womens-gel-nimbus-26-sapphire-light-blue/product/9919003/color/1064340",
+      "bytes": 64296
+    },
+    "asics-gel-nimbus-28": {
+      "name": "ASICS Gel-Nimbus 28",
+      "source": "shopify",
+      "title": "Men's ASICS Nimbus 28",
+      "page": "https://www.runnersplus.com/products/mens-asics-nimbus-28",
+      "bytes": 33904
+    },
+    "asics-gel-slowcush": {
+      "name": "ASICS GEL-Slowcush",
+      "source": "shopify",
+      "title": "Gel-Slowcush  - Soft Oat/Simply Taupe - Regular (D)",
+      "page": "https://www.gazellesports.com/products/gel-slowcush-d-soft-oat-simply-taupe",
+      "bytes": 31070
+    },
+    "asics-glideride-max": {
+      "name": "ASICS GlideRide Max",
+      "source": "shopify",
+      "title": "Men's ASICS Glideride Max",
+      "page": "https://www.runnersplus.com/products/mens-asics-glideride-max",
+      "bytes": 50830
+    },
+    "asics-gt-1000-14": {
+      "name": "ASICS GT-1000 14",
+      "source": "shopify",
+      "title": "ASICS GT-1000 14 Men's Black/Yamabuki",
+      "page": "https://www.holabirdsports.com/products/asics-gt-1000-14-mens-black-yamabuki",
+      "bytes": 41258
+    },
+    "asics-gt-1000-15": {
+      "name": "ASICS GT-1000 15",
+      "source": "shopify",
+      "title": "ASICS GT-1000 15 Women's Piedmont Grey/Taro Purple",
+      "page": "https://www.holabirdsports.com/products/asics-gt-1000-15-womens-piedmont-grey-taro-purple",
+      "bytes": 47616
+    },
+    "asics-gt-2000-13": {
+      "name": "ASICS GT-2000 13",
+      "source": "shopify",
+      "title": "Women's GT-2000 13 Running Shoe - Dusty Mauve/Watershed Rose - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-gt-2000-13-b-dusty-mauve-watershed-rose",
+      "bytes": 56646
+    },
+    "asics-gt-2000-14": {
+      "name": "ASICS GT-2000 14",
+      "source": "shopify",
+      "title": "Men's ASICS GT-2000 14",
+      "page": "https://www.runnersplus.com/products/mens-asics-gt-2000-14",
+      "bytes": 34972
+    },
+    "asics-gt-2000-15": {
+      "name": "ASICS GT-2000 15",
+      "source": "shopify",
+      "title": "Men's ASICS GT-2000 15",
+      "page": "https://www.runnersplus.com/products/mens-asics-gt-2000-15",
+      "bytes": 57988
+    },
+    "asics-magic-speed-4": {
+      "name": "ASICS Magic Speed 4",
+      "source": "shopify",
+      "title": "Men's ASICS Magic Speed 4",
+      "page": "https://www.runnersplus.com/products/mens-asics-magic-speed-4",
+      "bytes": 34180
+    },
+    "asics-megablast": {
+      "name": "ASICS Megablast",
+      "source": "shopify",
+      "title": "Unisex ASICS Megablast",
+      "page": "https://www.runnersplus.com/products/unisex-asics-megablast",
+      "bytes": 54004
+    },
+    "asics-metaspeed-edge-paris": {
+      "name": "ASICS Metaspeed Edge Paris",
+      "source": "shopify",
+      "title": "ASICS Metaspeed Edge Paris Unisex Illuminate Mint/Black",
+      "page": "https://www.holabirdsports.com/products/asics-metaspeed-edge-paris-unisex-illuminate-mint-black",
+      "bytes": 49450
+    },
+    "asics-metaspeed-edge-tokyo": {
+      "name": "ASICS Metaspeed Edge Tokyo",
+      "source": "shopify",
+      "title": "Unisex ASICS Metaspeed Edge Tokyo",
+      "page": "https://www.runnersplus.com/products/unisex-asics-metaspeed-edge-tokyo",
+      "bytes": 50096
+    },
+    "asics-metaspeed-ray": {
+      "name": "ASICS Metaspeed Ray",
+      "source": "shopify",
+      "title": "Unisex ASICS Metaspeed Ray",
+      "page": "https://www.runnersplus.com/products/unisex-asics-metaspeed-ray",
+      "bytes": 31688
+    },
+    "asics-metaspeed-sky-paris": {
+      "name": "ASICS Metaspeed Sky Paris",
+      "source": "shopify",
+      "title": "ASICS Metaspeed Sky Paris Unisex Illuminate Mint/Black",
+      "page": "https://www.holabirdsports.com/products/asics-metaspeed-sky-paris-unisex-illuminate-mint-black",
+      "bytes": 54722
+    },
+    "asics-noosa-tri-16": {
+      "name": "ASICS Noosa Tri 16",
+      "source": "shopify",
+      "title": "Women's Noosa Tri 16 - Safety Yellow/Cool Matcha - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-noosa-tri-16-b-safety-yellow-cool-matcha",
+      "bytes": 47186
+    },
+    "asics-novablast-5": {
+      "name": "ASICS Novablast 5",
+      "source": "shopify",
+      "title": "Women's ASICS Novablast 5",
+      "page": "https://www.runnersplus.com/products/womens-asics-novablast-6",
+      "bytes": 49992
+    },
+    "asics-novablast-6": {
+      "name": "ASICS Novablast 6",
+      "source": "shopify",
+      "title": "Men's ASICS Novablast 6",
+      "page": "https://www.runnersplus.com/products/mens-asics-novablast-7",
+      "bytes": 45402
+    },
+    "asics-sonicblast": {
+      "name": "ASICS Sonicblast",
+      "source": "shopify",
+      "title": "Men's ASICS Sonicblast",
+      "page": "https://www.runnersplus.com/products/mens-asics-sonicblast",
+      "bytes": 45428
+    },
+    "asics-sonicblast-2": {
+      "name": "ASICS Sonicblast 2",
+      "source": "shopify",
+      "title": "Men's ASICS Sonicblast 2",
+      "page": "https://www.runnersplus.com/products/mens-asics-sonicblast-2",
+      "bytes": 41926
+    },
+    "asics-superblast-2": {
+      "name": "ASICS Superblast 2",
+      "source": "shopify",
+      "title": "Superblast 2 Running Shoe - Black/White - Regular (D)",
+      "page": "https://www.gazellesports.com/products/superblast-2-d-black-white",
+      "bytes": 66238
+    },
+    "asics-superblast-3": {
+      "name": "ASICS Superblast 3",
+      "source": "shopify",
+      "title": "Unisex ASICS Superblast 3",
+      "page": "https://www.runnersplus.com/products/unisex-asics-superblast-4",
+      "bytes": 49994
+    },
+    "brooks-adrenaline-gts-24": {
+      "name": "Brooks Adrenaline GTS 24",
+      "source": "shopify",
+      "title": "Men's Brooks Adrenaline GTS 24",
+      "page": "https://www.runnersplus.com/products/mens-brooks-adrenaline-gts-24",
+      "bytes": 44832
+    },
+    "brooks-adrenaline-gts-25": {
+      "name": "Brooks Adrenaline GTS 25",
+      "source": "shopify",
+      "title": "Men's Brooks Adrenaline GTS 25",
+      "page": "https://www.runnersplus.com/products/mens-brooks-adrenaline-gts-25",
+      "bytes": 44944
+    },
+    "brooks-adrenaline-gts-26": {
+      "name": "Brooks Adrenaline GTS 26",
+      "source": "shopify",
+      "title": "Men's Brooks Adrenaline GTS 26",
+      "page": "https://www.runnersplus.com/products/mens-brooks-adrenaline-gts-27",
+      "bytes": 55868
+    },
+    "brooks-ariel-gts-24": {
+      "name": "Brooks Ariel GTS 24",
+      "source": "shopify",
+      "title": "Women's Brooks Ariel GTS 24 (Wide)",
+      "page": "https://www.runnersplus.com/products/womens-brooks-ariel-gts-24-wide",
+      "bytes": 43016
+    },
+    "brooks-ghost-17": {
+      "name": "Brooks Ghost 17",
+      "source": "shopify",
+      "title": "Men's Brooks Ghost 17",
+      "page": "https://www.runnersplus.com/products/mens-brooks-ghost-17",
+      "bytes": 36822
+    },
+    "brooks-ghost-18": {
+      "name": "Brooks Ghost 18",
+      "source": "shopify",
+      "title": "Men's Brooks Ghost 18",
+      "page": "https://www.runnersplus.com/products/mens-brooks-ghost-19",
+      "bytes": 40442
+    },
+    "brooks-ghost-amp": {
+      "name": "Brooks Ghost AMP",
+      "source": "shopify",
+      "title": "Men's Brooks Ghost Amp",
+      "page": "https://www.runnersplus.com/products/mens-brooks-ghost-amp",
+      "bytes": 25422
+    },
+    "brooks-ghost-max-3": {
+      "name": "Brooks Ghost Max 3",
+      "source": "shopify",
+      "title": "Men's Brooks Ghost Max 3",
+      "page": "https://www.runnersplus.com/products/mens-brooks-ghost-max-3",
+      "bytes": 32790
+    },
+    "brooks-ghost-max-4": {
+      "name": "Brooks Ghost Max 4",
+      "source": "shopify",
+      "title": "Men's Brooks Ghost Max 4",
+      "page": "https://www.runnersplus.com/products/mens-brooks-ghost-max-4",
+      "bytes": 39172
+    },
+    "brooks-glycerin-22": {
+      "name": "Brooks Glycerin 22",
+      "source": "shopify",
+      "title": "Women's Brooks Glycerin 22",
+      "page": "https://www.runnersplus.com/products/womens-brooks-glycerin-22",
+      "bytes": 30688
+    },
+    "brooks-glycerin-23": {
+      "name": "Brooks Glycerin 23",
+      "source": "shopify",
+      "title": "Men's Brooks Glycerin 23",
+      "page": "https://www.runnersplus.com/products/mens-brooks-glycerin-23",
+      "bytes": 40296
+    },
+    "brooks-glycerin-23-gts": {
+      "name": "Brooks Glycerin 23 GTS",
+      "source": "shopify",
+      "title": "Men's Brooks Glycerin GTS 23",
+      "page": "https://www.runnersplus.com/products/mens-brooks-glycerin-gts-23",
+      "bytes": 46840
+    },
+    "brooks-glycerin-flex": {
+      "name": "Brooks Glycerin Flex",
+      "source": "shopify",
+      "title": "Men's Brooks Glycerin Flex",
+      "page": "https://www.runnersplus.com/products/mens-brooks-glycerin-flex",
+      "bytes": 47998
+    },
+    "brooks-glycerin-max-2": {
+      "name": "Brooks Glycerin Max 2",
+      "source": "shopify",
+      "title": "Men's Brooks Glycerin Max 2",
+      "page": "https://www.runnersplus.com/products/mens-brooks-glycerin-max-3",
+      "bytes": 25554
+    },
+    "brooks-hyperion-3": {
+      "name": "Brooks Hyperion 3",
+      "source": "shopify",
+      "title": "Women's Brooks Hyperion 3",
+      "page": "https://www.runnersplus.com/products/womens-brooks-hyperion-3",
+      "bytes": 66014
+    },
+    "brooks-hyperion-elite-5": {
+      "name": "Brooks Hyperion Elite 5",
+      "source": "shopify",
+      "title": "Hyperion Elite 5 Running Shoe - Luminary/Yellow/Gray - Regular (D)",
+      "page": "https://www.gazellesports.com/products/hyperion-elite-5-d-luminary-yellow-gray",
+      "bytes": 29952
+    },
+    "brooks-hyperion-elite-6": {
+      "name": "Brooks Hyperion Elite 6",
+      "source": "shopify",
+      "title": "Unisex Brooks Hyperion Elite 6",
+      "page": "https://www.runnersplus.com/products/unisex-brooks-hyperion-elite-6",
+      "bytes": 45548
+    },
+    "brooks-hyperion-max-3": {
+      "name": "Brooks Hyperion Max 3",
+      "source": "shopify",
+      "title": "Men's Brooks Hyperion Max 3",
+      "page": "https://www.runnersplus.com/products/mens-brooks-hyperion-max-3",
+      "bytes": 38656
+    },
+    "brooks-hyperion-max-4": {
+      "name": "Brooks Hyperion Max 4",
+      "source": "shopify",
+      "title": "Men's Brooks Hyperion Max 4",
+      "page": "https://www.runnersplus.com/products/mens-brooks-hyperion-max-4",
+      "bytes": 37890
+    },
+    "brooks-launch-12": {
+      "name": "Brooks Launch 12",
+      "source": "shopify",
+      "title": "Men's Brooks Launch 12",
+      "page": "https://www.runnersplus.com/products/mens-brooks-launch-12",
+      "bytes": 50102
+    },
+    "brooks-revel-9": {
+      "name": "Brooks Revel 9",
+      "source": "shopify",
+      "title": "Brooks Revel 9 Women's Black/Bone Brown/Fallen Rock",
+      "page": "https://www.holabirdsports.com/products/brooks-revel-9-womens-black-bone-brown-fallen-rock",
+      "bytes": 38284
+    },
+    "craft-nordlite-tempo": {
+      "name": "Craft Nordlite Tempo",
+      "source": "zappos",
+      "title": "Craft Nordlite Tempo Running Shoes",
+      "page": "https://www.zappos.com/p/craft-nordlite-tempo-running-shoes-white/product/10032751/color/14",
+      "bytes": 35868
+    },
+    "diadora-atomo-star": {
+      "name": "Diadora Atomo Star",
+      "source": "shopify",
+      "title": "Atomo Star - Almost Aqua/White - Regular (D)",
+      "page": "https://www.gazellesports.com/products/atomo-star-d-almost-aqua-white",
+      "bytes": 30726
+    },
+    "diadora-cellula": {
+      "name": "Diadora Cellula",
+      "source": "shopify",
+      "title": "Women's Cellula Running Shoe - Black/Whisper White - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-cellula-b-black-whisper-white",
+      "bytes": 49204
+    },
+    "diadora-cellula-2": {
+      "name": "Diadora Cellula 2",
+      "source": "shopify",
+      "title": "Women's Cellula 2 Running Shoe - Chiseled Stone/Tangerine - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-cellula-2-b-coral-hot-coral",
+      "bytes": 72092
+    },
+    "diadora-corsa": {
+      "name": "Diadora Corsa",
+      "source": "shopify",
+      "title": "Men's Diadora Corsa",
+      "page": "https://www.runnersplus.com/products/mens-diadora-corsa",
+      "bytes": 35610
+    },
+    "diadora-frequenza-2": {
+      "name": "Diadora Frequenza 2",
+      "source": "shopify",
+      "title": "Diadora Frequenza 2 Men's Super White/Ferrari Red",
+      "page": "https://www.holabirdsports.com/products/diadora-frequenza-2-mens-super-white-ferrari-red",
+      "bytes": 36554
+    },
+    "diadora-nucleo-2": {
+      "name": "Diadora Nucleo 2",
+      "source": "shopify",
+      "title": "Women's Nucleo 2 Running Shoe - Rattan/Buttercream - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-nucleo-2-b-rattan-buttercream",
+      "bytes": 41154
+    },
+    "hoka-arahi-8": {
+      "name": "Hoka Arahi 8",
+      "source": "shopify",
+      "title": "Men's HOKA Arahi 8",
+      "page": "https://www.runnersplus.com/products/mens-hoka-arahi-8",
+      "bytes": 39124
+    },
+    "hoka-arahi-9": {
+      "name": "Hoka Arahi 9",
+      "source": "shopify",
+      "title": "Men's HOKA Arahi 9",
+      "page": "https://www.runnersplus.com/products/mens-hoka-arahi-9",
+      "bytes": 50214
+    },
+    "hoka-bondi-9": {
+      "name": "Hoka Bondi 9",
+      "source": "shopify",
+      "title": "Men's HOKA Bondi 9",
+      "page": "https://www.runnersplus.com/products/mens-hoka-bondi-11",
+      "bytes": 52260
+    },
+    "hoka-cielo-x1-2-0": {
+      "name": "Hoka Cielo X1 2.0",
+      "source": "shopify",
+      "title": "Unisex HOKA Cielo X1 2.0",
+      "page": "https://www.runnersplus.com/products/unisex-hoka-cielo-x1-2-0",
+      "bytes": 45548
+    },
+    "hoka-cielo-x1-3-0": {
+      "name": "Hoka Cielo X1 3.0",
+      "source": "shopify",
+      "title": "Unisex HOKA Cielo X1 3.0",
+      "page": "https://www.runnersplus.com/products/unisex-hoka-cielo-x1-3-0",
+      "bytes": 55440
+    },
+    "hoka-clifton-11": {
+      "name": "Hoka Clifton 11",
+      "source": "shopify",
+      "title": "Men's HOKA Clifton 11",
+      "page": "https://www.runnersplus.com/products/mens-hoka-clifton-14",
+      "bytes": 52262
+    },
+    "hoka-clifton-pro": {
+      "name": "Hoka Clifton Pro",
+      "source": "shopify",
+      "title": "Men's HOKA Clifton Pro",
+      "page": "https://www.runnersplus.com/products/hoka-mens-clifton-pro",
+      "bytes": 36058
+    },
+    "hoka-gaviota-6": {
+      "name": "Hoka Gaviota 6",
+      "source": "shopify",
+      "title": "Men's HOKA Gaviota 6",
+      "page": "https://www.runnersplus.com/products/mens-hoka-gaviota-6",
+      "bytes": 46288
+    },
+    "hoka-mach-6": {
+      "name": "Hoka Mach 6",
+      "source": "shopify",
+      "title": "Women's HOKA Mach 6",
+      "page": "https://www.runnersplus.com/products/womens-hoka-mach-6",
+      "bytes": 31692
+    },
+    "hoka-mach-x-2": {
+      "name": "Hoka Mach X 2",
+      "source": "shopify",
+      "title": "Women's HOKA Mach X 2",
+      "page": "https://www.runnersplus.com/products/womens-hoka-mach-x-2",
+      "bytes": 46774
+    },
+    "hoka-mach-x-3": {
+      "name": "Hoka Mach X 3",
+      "source": "shopify",
+      "title": "Men's HOKA Mach X 3",
+      "page": "https://www.runnersplus.com/products/mens-hoka-mach-x-3",
+      "bytes": 57692
+    },
+    "hoka-rincon-5": {
+      "name": "Hoka Rincon 5",
+      "source": "zappos",
+      "title": "HOKA Rincon 5",
+      "page": "https://www.zappos.com/p/hoka-rincon-5-galactic-grey-hoka-citrus/product/10047345/color/1130692",
+      "bytes": 53956
+    },
+    "hoka-rocket-x-3": {
+      "name": "Hoka Rocket X 3",
+      "source": "shopify",
+      "title": "Unisex HOKA Rocket X 3",
+      "page": "https://www.runnersplus.com/products/unisex-hoka-rocket-x-3",
+      "bytes": 52212
+    },
+    "hoka-skyflow": {
+      "name": "Hoka Skyflow",
+      "source": "shopify",
+      "title": "Men's HOKA Skyflow",
+      "page": "https://www.runnersplus.com/products/mens-hoka-skyflow",
+      "bytes": 38398
+    },
+    "hoka-skyward-x": {
+      "name": "Hoka Skyward X",
+      "source": "shopify",
+      "title": "Women's Skyward X Running Shoe - Jadeite/Dried Rose - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-skyward-x-b-jadeite-dried-rose",
+      "bytes": 63004
+    },
+    "hoka-skyward-x-2": {
+      "name": "Hoka Skyward X 2",
+      "source": "shopify",
+      "title": "Men's HOKA Skyward X 2",
+      "page": "https://www.runnersplus.com/products/mens-hoka-skyward-x-2",
+      "bytes": 49214
+    },
+    "mizuno-hyperwarp-elite": {
+      "name": "Mizuno Hyperwarp Elite",
+      "source": "shopify",
+      "title": "Unisex Mizuno Hyperwarp Elite",
+      "page": "https://www.runnersplus.com/products/unisex-mizuno-hyperwarp-elite",
+      "bytes": 54080
+    },
+    "mizuno-hyperwarp-pro": {
+      "name": "Mizuno Hyperwarp Pro",
+      "source": "shopify",
+      "title": "Mizuno Hyperwarp Pro Unisex White/Black",
+      "page": "https://www.holabirdsports.com/products/mizuno-hyperwarp-pro-unisex-white-black",
+      "bytes": 47052
+    },
+    "mizuno-neo-vista": {
+      "name": "Mizuno Neo Vista",
+      "source": "shopify",
+      "title": "Men's Mizuno Neo Vista",
+      "page": "https://www.runnersplus.com/products/mens-mizuno-neo-vista",
+      "bytes": 35594
+    },
+    "mizuno-neo-vista-2": {
+      "name": "Mizuno Neo Vista 2",
+      "source": "shopify",
+      "title": "Men's Mizuno Neo Vista 2",
+      "page": "https://www.runnersplus.com/products/mens-mizuno-neo-vista-2",
+      "bytes": 34602
+    },
+    "mizuno-neo-vista-3": {
+      "name": "Mizuno Neo Vista 3",
+      "source": "shopify",
+      "title": "Mizuno Neo Vista 3 Men's White/Black",
+      "page": "https://www.holabirdsports.com/products/mizuno-neo-vista-3-mens-white-black",
+      "bytes": 29774
+    },
+    "mizuno-neo-zen": {
+      "name": "Mizuno Neo Zen",
+      "source": "shopify",
+      "title": "Men's Mizuno Neo Zen",
+      "page": "https://www.runnersplus.com/products/mens-mizuno-neo-zen",
+      "bytes": 18460
+    },
+    "mizuno-neo-zen-2": {
+      "name": "Mizuno Neo Zen 2",
+      "source": "shopify",
+      "title": "Men's Mizuno Neo Zen 2",
+      "page": "https://www.runnersplus.com/products/mens-mizuno-neo-zen-2",
+      "bytes": 45596
+    },
+    "mizuno-wave-inspire-21": {
+      "name": "Mizuno Wave Inspire 21",
+      "source": "zappos",
+      "title": "Mizuno Wave Inspire 21",
+      "page": "https://www.zappos.com/p/mizuno-wave-inspire-21-bl-grant-strkng-coral/product/10002696/color/1107827",
+      "bytes": 63724
+    },
+    "mizuno-wave-inspire-22": {
+      "name": "Mizuno Wave Inspire 22",
+      "source": "shopify",
+      "title": "Men's Mizuno Wave Inspire 22",
+      "page": "https://www.runnersplus.com/products/mens-mizuno-wave-inspire-22",
+      "bytes": 29272
+    },
+    "mizuno-wave-rebellion-flash-2": {
+      "name": "Mizuno Wave Rebellion Flash 2",
+      "source": "shopify",
+      "title": "Women's Mizuno Wave Rebellion Flash 2",
+      "page": "https://www.runnersplus.com/products/womens-mizuno-wave-rebellion-flash-2",
+      "bytes": 30750
+    },
+    "mizuno-wave-rebellion-flash-3": {
+      "name": "Mizuno Wave Rebellion Flash 3",
+      "source": "shopify",
+      "title": "Mizuno Wave Rebellion Flash 3 Unisex Hanabi Pack",
+      "page": "https://www.holabirdsports.com/products/mizuno-wave-rebellion-flash-3-unisex-white-pink-tetra",
+      "bytes": 39770
+    },
+    "mizuno-wave-rebellion-pro-2": {
+      "name": "Mizuno Wave Rebellion Pro 2",
+      "source": "zappos",
+      "title": "Mizuno Wave Rebellion Pro 2",
+      "page": "https://www.zappos.com/p/mizuno-wave-rebellion-pro-2-white-harbor-mist/product/9948934/color/947406",
+      "bytes": 39704
+    },
+    "mizuno-wave-rebellion-pro-3": {
+      "name": "Mizuno Wave Rebellion Pro 3",
+      "source": "zappos",
+      "title": "Mizuno Wave Rebellion Pro 3",
+      "page": "https://www.zappos.com/p/mizuno-wave-rebellion-pro-3-white-tang-orange/product/10065122/color/1107147",
+      "bytes": 51308
+    },
+    "mizuno-wave-rider-28": {
+      "name": "Mizuno Wave Rider 28",
+      "source": "shopify",
+      "title": "Women's Mizuno Wave Rider 28",
+      "page": "https://www.runnersplus.com/products/womens-mizuno-wave-rider-29",
+      "bytes": 33568
+    },
+    "mizuno-wave-rider-29": {
+      "name": "Mizuno Wave Rider 29",
+      "source": "shopify",
+      "title": "Men's Mizuno Wave Rider 29",
+      "page": "https://www.runnersplus.com/products/mens-mizuno-wave-rider-29",
+      "bytes": 43396
+    },
+    "mizuno-wave-rider-30": {
+      "name": "Mizuno Wave Rider 30",
+      "source": "shopify",
+      "title": "Men's Mizuno Wave Rider 30",
+      "page": "https://www.runnersplus.com/products/mens-mizuno-wave-rider-30",
+      "bytes": 46774
+    },
+    "mizuno-wave-sky-8": {
+      "name": "Mizuno Wave Sky 8",
+      "source": "zappos",
+      "title": "Mizuno Wave Sky 8 Womens",
+      "page": "https://www.zappos.com/p/mizuno-wave-sky-8-womens-thistle-white/product/9983257/color/703810",
+      "bytes": 34336
+    },
+    "mizuno-wave-sky-9": {
+      "name": "Mizuno Wave Sky 9",
+      "source": "shopify",
+      "title": "MIZUNO WOMEN'S WAVE SKY 9",
+      "page": "https://www.lukeslocker.com/products/wave-sky-9-womens",
+      "bytes": 18550
+    },
+    "mount-to-coast-c1": {
+      "name": "Mount to Coast C1",
+      "source": "brand",
+      "title": "C1",
+      "page": "https://mounttocoast.com/products/c1",
+      "bytes": 32266
+    },
+    "mount-to-coast-h1": {
+      "name": "Mount to Coast H1",
+      "source": "brand",
+      "title": "H1",
+      "page": "https://mounttocoast.com/products/h1",
+      "bytes": 27748
+    },
+    "mount-to-coast-p1": {
+      "name": "Mount to Coast P1",
+      "source": "brand",
+      "title": "P1",
+      "page": "https://mounttocoast.com/products/p1-women",
+      "bytes": 19688
+    },
+    "mount-to-coast-r1": {
+      "name": "Mount to Coast R1",
+      "source": "brand",
+      "title": "R1",
+      "page": "https://mounttocoast.com/products/r1-women",
+      "bytes": 30158
+    },
+    "mount-to-coast-r1r": {
+      "name": "Mount to Coast R1R",
+      "source": "brand",
+      "title": "R1R",
+      "page": "https://mounttocoast.com/products/r1r",
+      "bytes": 26690
+    },
+    "mount-to-coast-s1": {
+      "name": "Mount to Coast S1",
+      "source": "brand",
+      "title": "S1",
+      "page": "https://mounttocoast.com/products/s1",
+      "bytes": 20742
+    },
+    "new-balance-ellipse": {
+      "name": "New Balance Ellipse",
+      "source": "shopify",
+      "title": "Men's New Balance Ellipse",
+      "page": "https://www.runnersplus.com/products/mens-new-balance-ellipse",
+      "bytes": 48798
+    },
+    "new-balance-fresh-foam-680-v9": {
+      "name": "New Balance Fresh Foam 680 v9",
+      "source": "zappos",
+      "title": "New Balance Fresh Foam 680 V9",
+      "page": "https://www.zappos.com/p/new-balance-fresh-foam-680-v9-altitude-nb-navy/product/10025779/color/1131839",
+      "bytes": 51872
+    },
+    "new-balance-fresh-foam-x-1080-v14": {
+      "name": "New Balance Fresh Foam X 1080 v14",
+      "source": "shopify",
+      "title": "Women's Fresh Foam X 1080 v14 Running Shoe - Black/Phantom - Wide (D)",
+      "page": "https://www.gazellesports.com/products/w-fresh-foam-x-1080-v14-d-black-phantom",
+      "bytes": 36330
+    },
+    "new-balance-fresh-foam-x-860-v14": {
+      "name": "New Balance Fresh Foam X 860 v14",
+      "source": "shopify",
+      "title": "Women's Fresh Foam X 860v14 Running Shoe - Black/Phantom - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-fresh-foam-x-860v14-b-black-phantom",
+      "bytes": 35150
+    },
+    "new-balance-fresh-foam-x-860-v15": {
+      "name": "New Balance Fresh Foam X 860 v15",
+      "source": "shopify",
+      "title": "Women's Fresh Foam X 860v15 Running Shoe - Pink Salt/Pebble - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-fresh-foam-x-860v15-b-pink-salt-pebble",
+      "bytes": 32700
+    },
+    "new-balance-fresh-foam-x-880-v15": {
+      "name": "New Balance Fresh Foam X 880 v15",
+      "source": "shopify",
+      "title": "Women's Fresh Foam X 880v15 Running Shoe - Pearl Grey/Dusk Shower - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-fresh-foam-x-880v15-b-pearl-grey-dusk-shower",
+      "bytes": 44382
+    },
+    "new-balance-fresh-foam-x-more-v5": {
+      "name": "New Balance Fresh Foam X More v5",
+      "source": "shopify",
+      "title": "Men's New Balance More v5",
+      "page": "https://www.runnersplus.com/products/mens-new-balance-more-v5",
+      "bytes": 39096
+    },
+    "new-balance-fresh-foam-x-more-v6": {
+      "name": "New Balance Fresh Foam X More v6",
+      "source": "shopify",
+      "title": "Women's Fresh Foam X More v6 Running Shoe - Cherry Leather/Fast Track - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-fresh-foam-x-more-v6-b-cherry-leather-fast-track",
+      "bytes": 29184
+    },
+    "new-balance-fresh-foam-x-vongo-v6": {
+      "name": "New Balance Fresh Foam X Vongo v6",
+      "source": "shopify",
+      "title": "Women's Fresh Foam X Vongo v6 Running Shoe - Natural Mint/Light Gold Metallic - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-fresh-foam-x-vongo-v6-b-natural-mint-light-gold-metallic",
+      "bytes": 41066
+    },
+    "new-balance-fuelcell-propel-v5": {
+      "name": "New Balance FuelCell Propel v5",
+      "source": "zappos",
+      "title": "New Balance FuelCell Propel v5",
+      "page": "https://www.zappos.com/p/new-balance-fuelcell-propel-v5-linen-pink-granite-sea-salt/product/9957240/color/1108419",
+      "bytes": 29686
+    },
+    "new-balance-fuelcell-rebel-v4": {
+      "name": "New Balance FuelCell Rebel v4",
+      "source": "zappos",
+      "title": "New Balance FuelCell Rebel v4",
+      "page": "https://www.zappos.com/p/new-balance-fuelcell-rebel-v4-quarry-blue-chrome-blue/product/9917399/color/1063009",
+      "bytes": 35550
+    },
+    "new-balance-fuelcell-rebel-v5": {
+      "name": "New Balance FuelCell Rebel v5",
+      "source": "shopify",
+      "title": "Men's New Balance Rebel v5",
+      "page": "https://www.runnersplus.com/products/mens-new-balance-rebel-v5",
+      "bytes": 35744
+    },
+    "new-balance-sc-elite-v4": {
+      "name": "New Balance SC Elite v4",
+      "source": "shopify",
+      "title": "Men's New Balance SC Elite v4",
+      "page": "https://www.runnersplus.com/products/mens-new-balance-sc-elite-v4",
+      "bytes": 24320
+    },
+    "new-balance-sc-elite-v5": {
+      "name": "New Balance SC Elite v5",
+      "source": "shopify",
+      "title": "Men's New Balance SuperComp Elite v5",
+      "page": "https://www.runnersplus.com/products/mens-new-balance-supercomp-elite-v5",
+      "bytes": 30878
+    },
+    "new-balance-sc-pacer-v2": {
+      "name": "New Balance SC Pacer v2",
+      "source": "shopify",
+      "title": "Men's New Balance SuperComp Pacer v2",
+      "page": "https://www.runnersplus.com/products/mens-new-balance-supercomp-pacer-v2",
+      "bytes": 35394
+    },
+    "new-balance-sc-rebel-v1": {
+      "name": "New Balance SC Rebel v1",
+      "source": "shopify",
+      "title": "Men's New Balance SuperComp Rebel v1",
+      "page": "https://www.runnersplus.com/products/mens-new-balance-supercomp-rebel-v1",
+      "bytes": 47256
+    },
+    "new-balance-sc-trainer-v3": {
+      "name": "New Balance SC Trainer v3",
+      "source": "shopify",
+      "title": "Men's New Balance SuperComp Trainer v3",
+      "page": "https://www.runnersplus.com/products/mens-new-balance-supercomp-trainer-v3",
+      "bytes": 29252
+    },
+    "nike-alphafly-3": {
+      "name": "Nike Alphafly 3",
+      "source": "shopify",
+      "title": "Men's Nike Alphafly 3",
+      "page": "https://www.runnersplus.com/products/mens-nike-alphafly-6",
+      "bytes": 47868
+    },
+    "nike-alphafly-4": {
+      "name": "Nike Alphafly 4",
+      "source": "shopify",
+      "title": "Men's Nike Alphafly 4",
+      "page": "https://www.runnersplus.com/products/mens-nike-alphafly-11",
+      "bytes": 49780
+    },
+    "nike-downshifter-13": {
+      "name": "Nike Downshifter 13",
+      "source": "zappos",
+      "title": "Nike Downshifter 13",
+      "page": "https://www.zappos.com/p/nike-downshifter-13-white-black-green-shock/product/10020706/color/1115495",
+      "bytes": 38336
+    },
+    "nike-downshifter-14": {
+      "name": "Nike Downshifter 14",
+      "source": "zappos",
+      "title": "Nike Downshifter 14",
+      "page": "https://www.zappos.com/p/nike-downshifter-14-black-white-anthracite-wolf-grey/product/10043214/color/672563",
+      "bytes": 51514
+    },
+    "nike-journey-run": {
+      "name": "Nike Journey Run",
+      "source": "zappos",
+      "title": "Nike Journey Run",
+      "page": "https://www.zappos.com/p/nike-journey-run-black-smoke-grey-medium-ash/product/10020699/color/1123134",
+      "bytes": 50078
+    },
+    "nike-pegasus-42": {
+      "name": "Nike Pegasus 42",
+      "source": "shopify",
+      "title": "Men's Nike Pegasus 42",
+      "page": "https://www.runnersplus.com/products/mens-nike-pegasus-43",
+      "bytes": 32966
+    },
+    "nike-pegasus-plus-2": {
+      "name": "Nike Pegasus Plus 2",
+      "source": "shopify",
+      "title": "Men's Nike Pegasus Plus 2",
+      "page": "https://www.runnersplus.com/products/mens-nike-pegasus-plus-2-copy",
+      "bytes": 40270
+    },
+    "nike-pegasus-premium": {
+      "name": "Nike Pegasus Premium",
+      "source": "shopify",
+      "title": "Men's Nike Pegasus Premium",
+      "page": "https://www.runnersplus.com/products/mens-nike-pegasus-premium-copy",
+      "bytes": 28258
+    },
+    "nike-quest-6": {
+      "name": "Nike Quest 6",
+      "source": "zappos",
+      "title": "Nike Quest 6",
+      "page": "https://www.zappos.com/p/nike-quest-6-black-university-red-white/product/10020724/color/50883",
+      "bytes": 35922
+    },
+    "nike-revolution-8": {
+      "name": "Nike Revolution 8",
+      "source": "zappos",
+      "title": "Nike Revolution 8",
+      "page": "https://www.zappos.com/p/nike-revolution-8-midnight-navy-sail-gum-medium-brown/product/10020709/color/1115757",
+      "bytes": 32582
+    },
+    "nike-streakfly-2": {
+      "name": "Nike Streakfly 2",
+      "source": "shopify",
+      "title": "Unisex Nike Streakfly 2",
+      "page": "https://www.runnersplus.com/products/unised-nike-streakfly-2",
+      "bytes": 35816
+    },
+    "nike-structure-26": {
+      "name": "Nike Structure 26",
+      "source": "shopify",
+      "title": "Men's Nike Structure 26",
+      "page": "https://www.runnersplus.com/products/mens-nike-structure-26",
+      "bytes": 23710
+    },
+    "nike-structure-plus": {
+      "name": "Nike Structure Plus",
+      "source": "shopify",
+      "title": "Men's Nike Structure Plus",
+      "page": "https://www.runnersplus.com/products/mens-nike-structure-plus",
+      "bytes": 30212
+    },
+    "nike-vaporfly-4": {
+      "name": "Nike Vaporfly 4",
+      "source": "shopify",
+      "title": "Men's Nike Vaporfly 4",
+      "page": "https://www.runnersplus.com/products/mens-nike-vaporfly-5",
+      "bytes": 32462
+    },
+    "nike-vomero-18": {
+      "name": "Nike Vomero 18",
+      "source": "shopify",
+      "title": "Men's Nike Vomero 18",
+      "page": "https://www.runnersplus.com/products/mens-nike-vomero-19",
+      "bytes": 46560
+    },
+    "nike-vomero-plus": {
+      "name": "Nike Vomero Plus",
+      "source": "shopify",
+      "title": "Men's Nike Vomero Plus",
+      "page": "https://www.runnersplus.com/products/nike-mens-vomero-plus",
+      "bytes": 34296
+    },
+    "nike-vomero-premium": {
+      "name": "Nike Vomero Premium",
+      "source": "shopify",
+      "title": "Men's Nike Vomero Premium",
+      "page": "https://www.runnersplus.com/products/mens-nike-vomero-premium-copy-4",
+      "bytes": 33948
+    },
+    "nike-winflo-11": {
+      "name": "Nike Winflo 11",
+      "source": "zappos",
+      "title": "Nike Winflo 11",
+      "page": "https://www.zappos.com/p/nike-winflo-11-white-black-blue-hero/product/10020707/color/771655",
+      "bytes": 42292
+    },
+    "nike-winflo-12": {
+      "name": "Nike Winflo 12",
+      "source": "shopify",
+      "title": "Women's Nike Winflo 12",
+      "page": "https://www.runnersplus.com/products/womens-nike-winflo-12",
+      "bytes": 31048
+    },
+    "nike-zoom-fly-6": {
+      "name": "Nike Zoom Fly 6",
+      "source": "shopify",
+      "title": "Men's Nike Zoom Fly 6",
+      "page": "https://www.runnersplus.com/products/mens-nike-zoom-fly-7",
+      "bytes": 34448
+    },
+    "on-cloudboom-max": {
+      "name": "On Cloudboom Max",
+      "source": "shopify",
+      "title": "Men's On Cloudboom Max",
+      "page": "https://www.runnersplus.com/products/mens-on-cloudboom-max",
+      "bytes": 31948
+    },
+    "on-cloudboom-strike": {
+      "name": "On Cloudboom Strike",
+      "source": "shopify",
+      "title": "Men's On Cloudboom Strike",
+      "page": "https://www.runnersplus.com/products/mens-on-cloudboom-strike",
+      "bytes": 20542
+    },
+    "on-cloudboom-strike-2": {
+      "name": "On Cloudboom Strike 2",
+      "source": "shopify",
+      "title": "Unisex On Cloudboom Strike 2",
+      "page": "https://www.runnersplus.com/products/unisex-on-cloudboom-strike-2",
+      "bytes": 51570
+    },
+    "on-cloudboom-strike-2-lightspray": {
+      "name": "On Cloudboom Strike 2 LightSpray",
+      "source": "shopify",
+      "title": "Unisex On LightSpray Cloudboom Strike 2",
+      "page": "https://www.runnersplus.com/products/unisex-on-lightspray-cloudboom-strike-2",
+      "bytes": 24122
+    },
+    "on-cloudeclipse": {
+      "name": "On Cloudeclipse",
+      "source": "shopify",
+      "title": "Men's On Cloudeclipse",
+      "page": "https://www.runnersplus.com/products/mens-on-cloudeclipse",
+      "bytes": 57474
+    },
+    "on-cloudflow-5": {
+      "name": "On Cloudflow 5",
+      "source": "shopify",
+      "title": "Men's On Cloudflow 5",
+      "page": "https://www.runnersplus.com/products/mens-on-cloudflow-5",
+      "bytes": 38998
+    },
+    "on-cloudmonster-3": {
+      "name": "On Cloudmonster 3",
+      "source": "shopify",
+      "title": "Men's On Cloudmonster 3",
+      "page": "https://www.runnersplus.com/products/mens-on-cloudmonster-3",
+      "bytes": 48006
+    },
+    "on-cloudmonster-3-hyper": {
+      "name": "On Cloudmonster 3 Hyper",
+      "source": "shopify",
+      "title": "Men's On Cloudmonster 3 Hyper",
+      "page": "https://www.runnersplus.com/products/mens-on-cloudmonster-3-hyper",
+      "bytes": 45180
+    },
+    "on-cloudmonster-3-hyper-lightspray": {
+      "name": "On Cloudmonster 3 Hyper LightSpray",
+      "source": "shopify",
+      "title": "Unisex On LightSpray Cloudmonster 3 Hyper",
+      "page": "https://www.runnersplus.com/products/unisex-on-lightspray-cloudmonster-3-hyper",
+      "bytes": 23260
+    },
+    "on-cloudmonster-hyper": {
+      "name": "On Cloudmonster Hyper",
+      "source": "shopify",
+      "title": "Men's On Cloudmonster Hyper",
+      "page": "https://www.runnersplus.com/products/mens-on-cloudmonster-hyper",
+      "bytes": 35218
+    },
+    "on-cloudrunner-2": {
+      "name": "On Cloudrunner 2",
+      "source": "shopify",
+      "title": "Men's Cloudrunner 2 Running Shoe - Eclipse/Black - Regular (D)",
+      "page": "https://www.gazellesports.com/products/cloudrunner-2-d-eclipse-black",
+      "bytes": 29426
+    },
+    "on-cloudrunner-3": {
+      "name": "On Cloudrunner 3",
+      "source": "shopify",
+      "title": "Men's On Cloudrunner 3",
+      "page": "https://www.runnersplus.com/products/mens-on-cloudrunner-3",
+      "bytes": 38862
+    },
+    "on-cloudsurfer-2": {
+      "name": "On Cloudsurfer 2",
+      "source": "shopify",
+      "title": "Men's On Cloudsurfer 2",
+      "page": "https://www.runnersplus.com/products/mens-on-cloudsurfer-2",
+      "bytes": 33562
+    },
+    "on-cloudsurfer-3": {
+      "name": "On Cloudsurfer 3",
+      "source": "shopify",
+      "title": "Men's Cloudsurfer 3 Running Shoe - Sprout/Lucent - Regular (D)",
+      "page": "https://www.gazellesports.com/products/m-cloudsurfer-3-d-sprout-lucent",
+      "bytes": 32522
+    },
+    "on-cloudsurfer-max": {
+      "name": "On Cloudsurfer Max",
+      "source": "shopify",
+      "title": "Men's On Cloudsurfer Max",
+      "page": "https://www.runnersplus.com/products/on-mens-cloudsurfer-max",
+      "bytes": 51104
+    },
+    "on-cloudsurfer-next": {
+      "name": "On Cloudsurfer Next",
+      "source": "shopify",
+      "title": "Men's On Cloudsurfer Next",
+      "page": "https://www.runnersplus.com/products/mens-on-cloudsurfer-next",
+      "bytes": 41916
+    },
+    "puma-deviate-nitro-3": {
+      "name": "Puma Deviate Nitro 3",
+      "source": "shopify",
+      "title": "Men's Puma Deviate Nitro 3",
+      "page": "https://www.runnersplus.com/products/mens-puma-deviate-nitro-3",
+      "bytes": 32220
+    },
+    "puma-deviate-nitro-4": {
+      "name": "Puma Deviate Nitro 4",
+      "source": "shopify",
+      "title": "Men's Puma Deviate Nitro 4",
+      "page": "https://www.runnersplus.com/products/mens-puma-deviate-nitro-4",
+      "bytes": 31988
+    },
+    "puma-deviate-nitro-elite-3": {
+      "name": "Puma Deviate Nitro Elite 3",
+      "source": "shopify",
+      "title": "Women's Deviate Nitro Elite 3 Running Shoe - Pure Magenta/Yellow Alert - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-deviate-nitro-elite-3-pure-magenta-yellow-alert",
+      "bytes": 27454
+    },
+    "puma-deviate-nitro-elite-4": {
+      "name": "Puma Deviate Nitro Elite 4",
+      "source": "shopify",
+      "title": "Men's Puma Deviate Nitro Elite 4",
+      "page": "https://www.runnersplus.com/products/mens-puma-deviate-nitro-elite-4",
+      "bytes": 32470
+    },
+    "puma-deviate-pure-nitro": {
+      "name": "Puma Deviate Pure Nitro",
+      "source": "shopify",
+      "title": "Puma Deviate Pure NITRO Men's Alpine Snow/Warm White",
+      "page": "https://www.holabirdsports.com/products/puma-deviate-pure-nitro-mens-alpine-snow-warm-white",
+      "bytes": 34932
+    },
+    "puma-fast-r-nitro-elite-3": {
+      "name": "Puma Fast-R Nitro Elite 3",
+      "source": "shopify",
+      "title": "Men's Puma Fast-R Nitro Elite 3",
+      "page": "https://www.runnersplus.com/products/mens-puma-fast-r-nitro-elite-3",
+      "bytes": 27512
+    },
+    "puma-foreverrun-nitro-2": {
+      "name": "Puma ForeverRun Nitro 2",
+      "source": "shopify",
+      "title": "Puma ForeverRun NITRO 2 Men's Puma Black/Puma White",
+      "page": "https://www.holabirdsports.com/products/puma-foreverrun-nitro-2-mens-puma-black-puma-white",
+      "bytes": 32672
+    },
+    "puma-foreverrun-nitro-3": {
+      "name": "Puma ForeverRun Nitro 3",
+      "source": "shopify",
+      "title": "Puma ForeverRun NITRO 3 Men's Black/Ultra Red",
+      "page": "https://www.holabirdsports.com/products/puma-foreverrun-nitro-3-mens-black-ultra-red",
+      "bytes": 29242
+    },
+    "puma-magmax-nitro": {
+      "name": "Puma MagMax Nitro",
+      "source": "shopify",
+      "title": "Men's Puma Magmax Nitro",
+      "page": "https://www.runnersplus.com/products/puma-mens-magmax-nitro",
+      "bytes": 42938
+    },
+    "puma-magmax-nitro-2": {
+      "name": "Puma MagMax Nitro 2",
+      "source": "shopify",
+      "title": "Men's Puma Magmax Nitro 2",
+      "page": "https://www.runnersplus.com/products/mens-puma-magmax-nitro-2",
+      "bytes": 39410
+    },
+    "puma-velocity-nitro-3": {
+      "name": "Puma Velocity Nitro 3",
+      "source": "shopify",
+      "title": "Men's Puma Velocity Nitro 3",
+      "page": "https://www.runnersplus.com/products/mens-puma-velocity-nitro-3",
+      "bytes": 39652
+    },
+    "puma-velocity-nitro-4": {
+      "name": "Puma Velocity Nitro 4",
+      "source": "shopify",
+      "title": "Men's Puma Velocity Nitro 4",
+      "page": "https://www.runnersplus.com/products/mens-puma-velocity-nitro-5",
+      "bytes": 25774
+    },
+    "reebok-floatzig-1": {
+      "name": "Reebok FloatZig 1",
+      "source": "zappos",
+      "title": "Reebok Floatzig 1",
+      "page": "https://www.zappos.com/p/reebok-floatzig-1-nondye-grey/product/9960011/color/1085514",
+      "bytes": 17384
+    },
+    "reebok-floatzig-2": {
+      "name": "Reebok FloatZig 2",
+      "source": "brand",
+      "title": "Men's FloatZig 2 Running Shoes",
+      "page": "https://www.reebok.com/products/reebok-floatzig-2-running-shoes-black-white-131513",
+      "bytes": 28492
+    },
+    "salomon-aero-blaze-3": {
+      "name": "Salomon Aero Blaze 3",
+      "source": "zappos",
+      "title": "Salomon Aero Blaze 3",
+      "page": "https://www.zappos.com/p/salomon-aero-blaze-3-black-black-ftw-silver/product/10003324/color/1107768",
+      "bytes": 42580
+    },
+    "salomon-aero-glide-3": {
+      "name": "Salomon Aero Glide 3",
+      "source": "zappos",
+      "title": "Salomon Aero Glide 3",
+      "page": "https://www.zappos.com/p/salomon-aero-glide-3-fusion-coral-vanilla-ice-tender-peach/product/9992960/color/1101221",
+      "bytes": 43056
+    },
+    "salomon-aero-glide-4": {
+      "name": "Salomon Aero Glide 4",
+      "source": "shopify",
+      "title": "Women's Aero Glide 4 Running Shoe - Vanilla Ice/Vanilla Ice/White - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-aero-glide-4-b-vanilla-ice-vanilla-ice-white",
+      "bytes": 38918
+    },
+    "salomon-s-lab-phantasm-3": {
+      "name": "Salomon S/Lab Phantasm 3",
+      "source": "shopify",
+      "title": "Salomon S/Lab Phantasm 3 Unisex White/White/Fiery Red",
+      "page": "https://www.holabirdsports.com/products/salomon-s-lab-phantasm-3-unisex-white-white-fiery-red",
+      "bytes": 24828
+    },
+    "saucony-endorphin-azura": {
+      "name": "Saucony Endorphin Azura",
+      "source": "shopify",
+      "title": "Men's Saucony Endorphin Azura",
+      "page": "https://www.runnersplus.com/products/mens-saucony-endorphin-azura",
+      "bytes": 47804
+    },
+    "saucony-endorphin-elite-2": {
+      "name": "Saucony Endorphin Elite 2",
+      "source": "shopify",
+      "title": "Unisex Saucony Endorphin Elite 2",
+      "page": "https://www.runnersplus.com/products/unisex-saucony-endorphin-elite-2",
+      "bytes": 32062
+    },
+    "saucony-endorphin-elite-3": {
+      "name": "Saucony Endorphin Elite 3",
+      "source": "shopify",
+      "title": "Unisex Saucony Endorphin Elite 3",
+      "page": "https://www.runnersplus.com/products/unisex-saucony-endorphin-elite-3",
+      "bytes": 34640
+    },
+    "saucony-endorphin-pro-4": {
+      "name": "Saucony Endorphin Pro 4",
+      "source": "shopify",
+      "title": "Men's Saucony Endorphin Pro 4",
+      "page": "https://www.runnersplus.com/products/mens-saucony-endorphin-pro-4",
+      "bytes": 50488
+    },
+    "saucony-endorphin-pro-5": {
+      "name": "Saucony Endorphin Pro 5",
+      "source": "shopify",
+      "title": "Men's Saucony Endorphin Pro 5",
+      "page": "https://www.runnersplus.com/products/mens-saucony-endorphin-pro-5",
+      "bytes": 44060
+    },
+    "saucony-endorphin-speed-4": {
+      "name": "Saucony Endorphin Speed 4",
+      "source": "shopify",
+      "title": "Women's Saucony Endorphin Speed 4",
+      "page": "https://www.runnersplus.com/products/womens-saucony-endorphin-speed-4",
+      "bytes": 29868
+    },
+    "saucony-endorphin-speed-5": {
+      "name": "Saucony Endorphin Speed 5",
+      "source": "shopify",
+      "title": "Men's Saucony Endorphin Speed 5",
+      "page": "https://www.runnersplus.com/products/mens-saucony-endorphin-speed-5",
+      "bytes": 49256
+    },
+    "saucony-endorphin-speed-6": {
+      "name": "Saucony Endorphin Speed 6",
+      "source": "shopify",
+      "title": "Men's Saucony Endorphin Speed 6",
+      "page": "https://www.runnersplus.com/products/mens-saucony-endorphin-speed-6",
+      "bytes": 42998
+    },
+    "saucony-endorphin-trainer": {
+      "name": "Saucony Endorphin Trainer",
+      "source": "shopify",
+      "title": "Men's Saucony Endorphin Trainer",
+      "page": "https://www.runnersplus.com/products/mens-saucony-endorphin-trainer",
+      "bytes": 45208
+    },
+    "saucony-guide-17": {
+      "name": "Saucony Guide 17",
+      "source": "shopify",
+      "title": "Women's Saucony Guide 17",
+      "page": "https://www.runnersplus.com/products/womens-saucony-guide-18",
+      "bytes": 37144
+    },
+    "saucony-guide-18": {
+      "name": "Saucony Guide 18",
+      "source": "shopify",
+      "title": "Men's Saucony Guide 18",
+      "page": "https://www.runnersplus.com/products/mens-saucony-guide-19",
+      "bytes": 54538
+    },
+    "saucony-guide-19": {
+      "name": "Saucony Guide 19",
+      "source": "shopify",
+      "title": "Men's Saucony Guide 19",
+      "page": "https://www.runnersplus.com/products/mens-saucony-guide-20",
+      "bytes": 43692
+    },
+    "saucony-hurricane-24": {
+      "name": "Saucony Hurricane 24",
+      "source": "shopify",
+      "title": "Men's Saucony Hurricane 24",
+      "page": "https://www.runnersplus.com/products/mens-saucony-hurricane-24",
+      "bytes": 43116
+    },
+    "saucony-hurricane-25": {
+      "name": "Saucony Hurricane 25",
+      "source": "shopify",
+      "title": "Men's Saucony Hurricane 25",
+      "page": "https://www.runnersplus.com/products/mens-saucony-hurricane-25",
+      "bytes": 48646
+    },
+    "saucony-hurricane-26": {
+      "name": "Saucony Hurricane 26",
+      "source": "shopify",
+      "title": "Women's Hurricane 26 Running Shoe  - Black/Silver",
+      "page": "https://www.gazellesports.com/products/w-hurricane-26-b-black-silver",
+      "bytes": 49342
+    },
+    "saucony-omni-22": {
+      "name": "Saucony Omni 22",
+      "source": "shopify",
+      "title": "Men's Saucony Omni 22",
+      "page": "https://www.runnersplus.com/products/mens-saucony-omni-22",
+      "bytes": 40580
+    },
+    "saucony-paramount-max": {
+      "name": "Saucony Paramount Max",
+      "source": "shopify",
+      "title": "Men's Saucony Paramount Max",
+      "page": "https://www.runnersplus.com/products/mens-saucony-paramount-max",
+      "bytes": 23550
+    },
+    "saucony-ride-17": {
+      "name": "Saucony Ride 17",
+      "source": "shopify",
+      "title": "Men's Saucony Ride 17",
+      "page": "https://www.runnersplus.com/products/mens-saucony-ride-19",
+      "bytes": 45698
+    },
+    "saucony-ride-18": {
+      "name": "Saucony Ride 18",
+      "source": "shopify",
+      "title": "Men's Saucony Ride 18",
+      "page": "https://www.runnersplus.com/products/mens-saucony-ride-20",
+      "bytes": 41850
+    },
+    "saucony-ride-19": {
+      "name": "Saucony Ride 19",
+      "source": "shopify",
+      "title": "Men's Saucony Ride 19",
+      "page": "https://www.runnersplus.com/products/mens-saucony-ride-21",
+      "bytes": 50794
+    },
+    "saucony-triumph-23": {
+      "name": "Saucony Triumph 23",
+      "source": "shopify",
+      "title": "Men's Saucony Triumph 23",
+      "page": "https://www.runnersplus.com/products/mens-saucony-triumph-24",
+      "bytes": 45898
+    },
+    "saucony-triumph-24": {
+      "name": "Saucony Triumph 24",
+      "source": "shopify",
+      "title": "Men's Saucony Triumph 24",
+      "page": "https://www.runnersplus.com/products/mens-saucony-triumph-25",
+      "bytes": 39324
+    },
+    "skechers-aero-burst": {
+      "name": "Skechers Aero Burst",
+      "source": "zappos",
+      "title": "SKECHERS Aero Burst",
+      "page": "https://www.zappos.com/p/skechers-aero-burst-white-black/product/10069561/color/742",
+      "bytes": 46262
+    },
+    "skechers-aero-razor": {
+      "name": "Skechers Aero Razor",
+      "source": "zappos",
+      "title": "SKECHERS Aero Razor",
+      "page": "https://www.zappos.com/p/skechers-aero-razor-white-black/product/10069564/color/742",
+      "bytes": 47120
+    },
+    "skechers-aero-spark": {
+      "name": "Skechers Aero Spark",
+      "source": "zappos",
+      "title": "SKECHERS Aero Spark",
+      "page": "https://www.zappos.com/p/skechers-aero-spark-white-light-blue/product/10069560/color/2587",
+      "bytes": 41180
+    },
+    "topo-athletic-atmos-2": {
+      "name": "Topo Athletic Atmos 2",
+      "source": "shopify",
+      "title": "Women's Atmos 2 Running Shoe - Aqua/Mint - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-atmos-2-b-aqua-mint",
+      "bytes": 38832
+    },
+    "topo-athletic-cyclone-3": {
+      "name": "Topo Athletic Cyclone 3",
+      "source": "zappos",
+      "title": "Topo Athletic Cyclone 3",
+      "page": "https://www.zappos.com/p/topo-athletic-cyclone-3-blue-blue/product/9987416/color/910",
+      "bytes": 58468
+    },
+    "topo-athletic-phantom-4": {
+      "name": "Topo Athletic Phantom 4",
+      "source": "shopify",
+      "title": "Women's Phantom 4 Running Shoe - Clay/Rose",
+      "page": "https://www.gazellesports.com/products/w-phantom-4-b-clay-rose",
+      "bytes": 25284
+    },
+    "topo-athletic-specter-2": {
+      "name": "Topo Athletic Specter 2",
+      "source": "shopify",
+      "title": "Women's Specter 2 Running Shoe - White/Sunset - Regular (B)",
+      "page": "https://www.gazellesports.com/products/w-specter-2-b-white-sunset",
+      "bytes": 29430
+    },
+    "topo-athletic-specter-3": {
+      "name": "Topo Athletic Specter 3",
+      "source": "zappos",
+      "title": "Topo Athletic Specter 3",
+      "page": "https://www.zappos.com/p/topo-athletic-specter-3-white-teal/product/10056140/color/18450",
+      "bytes": 55588
+    },
+    "tracksmith-eliot-runner": {
+      "name": "Tracksmith Eliot Runner",
+      "source": "shopify",
+      "title": "Eliot Runner Running Shoe - Ivory - Regular (D)",
+      "page": "https://www.gazellesports.com/products/eliot-runner-d-ivory",
+      "bytes": 28822
+    },
+    "tracksmith-eliot-ryder": {
+      "name": "Tracksmith Eliot Ryder",
+      "source": "shopify",
+      "title": "Eliot Ryder Running Shoe - Ivory/Grass - Regular (D)",
+      "page": "https://www.gazellesports.com/products/eliot-ryder-d-ivory-grass",
+      "bytes": 31574
+    },
+    "under-armour-velociti-elite-2": {
+      "name": "Under Armour Velociti Elite 2",
+      "source": "shopify",
+      "title": "Under Armour Velociti Elite 2 Unisex Black",
+      "page": "https://www.holabirdsports.com/products/under-armour-velociti-elite-2-unisex-black",
+      "bytes": 59234
+    },
+    "adidas-hyperboost-run": {
+      "name": "Adidas Hyperboost Run",
+      "source": "shopify",
+      "title": "Men's adidas Hyperboost Run",
+      "page": "https://www.runnersplus.com/products/mens-adidas-hyperboost-run",
+      "bytes": 17888
+    },
+    "altra-experience-flow-3": {
+      "name": "Altra Experience Flow 3",
+      "source": "shopify",
+      "title": "Men's Altra Experience Flow 3",
+      "page": "https://www.runnersplus.com/products/mens-altra-experience-flow-3",
+      "bytes": 48882
+    },
+    "altra-fwd-experience": {
+      "name": "Altra FWD Experience",
+      "source": "shopify",
+      "title": "Men's Altra FWD Experience",
+      "page": "https://www.runnersplus.com/products/mens-altra-fwd-experience",
+      "bytes": 17406
+    },
+    "altra-paradigm-8": {
+      "name": "Altra Paradigm 8",
+      "source": "shopify",
+      "title": "Men's Altra Paradigm 8",
+      "page": "https://www.runnersplus.com/products/mens-altra-paradigm-8",
+      "bytes": 18556
+    },
+    "asics-gel-kayano-31": {
+      "name": "ASICS Gel-Kayano 31",
+      "source": "shopify",
+      "title": "Men's ASICS Kayano 31",
+      "page": "https://www.runnersplus.com/products/mens-asics-kayano-31",
+      "bytes": 41680
+    },
+    "asics-gel-nimbus-29": {
+      "name": "ASICS Gel-Nimbus 29",
+      "source": "shopify",
+      "title": "Women's ASICS Nimbus 29",
+      "page": "https://www.runnersplus.com/products/womens-asics-nimbus-29",
+      "bytes": 60318
+    },
+    "asics-glideride-max-2": {
+      "name": "ASICS GlideRide Max 2",
+      "source": "shopify",
+      "title": "Men's ASICS Glideride Max 2",
+      "page": "https://www.runnersplus.com/products/mens-asics-glideride-max-2",
+      "bytes": 55270
+    },
+    "asics-gt-4000-4": {
+      "name": "ASICS GT-4000 4",
+      "source": "shopify",
+      "title": "Men's ASICS GT-4000 4",
+      "page": "https://www.runnersplus.com/products/mens-asics-gt-4000-4",
+      "bytes": 40264
+    },
+    "asics-metaspeed-sky-tokyo": {
+      "name": "ASICS Metaspeed Sky Tokyo",
+      "source": "shopify",
+      "title": "Unisex ASICS Metaspeed Sky Tokyo",
+      "page": "https://www.runnersplus.com/products/unisex-asics-metaspeed-sky-tokyo",
+      "bytes": 48520
+    },
+    "brooks-ariel-gts-26": {
+      "name": "Brooks Ariel GTS 26",
+      "source": "shopify",
+      "title": "Women's Brooks Ariel GTS 26",
+      "page": "https://www.runnersplus.com/products/womens-brooks-ariel-gts-26",
+      "bytes": 43238
+    },
+    "brooks-beast-gts-24": {
+      "name": "Brooks Beast GTS 24",
+      "source": "shopify",
+      "title": "Men's Brooks Beast GTS 24 (Wide)",
+      "page": "https://www.runnersplus.com/products/mens-brooks-beast-gts-24-wide",
+      "bytes": 36420
+    },
+    "brooks-beast-gts-26": {
+      "name": "Brooks Beast GTS 26",
+      "source": "shopify",
+      "title": "Men's Brooks Beast GTS 26",
+      "page": "https://www.runnersplus.com/products/mens-brooks-beast-gts-26",
+      "bytes": 36898
+    },
+    "brooks-ghost-max-2": {
+      "name": "Brooks Ghost Max 2",
+      "source": "shopify",
+      "title": "Men's Brooks Ghost Max 2",
+      "page": "https://www.runnersplus.com/products/mens-brooks-ghost-max-2",
+      "bytes": 34556
+    },
+    "brooks-glycerin-22-gts": {
+      "name": "Brooks Glycerin 22 GTS",
+      "source": "shopify",
+      "title": "Men's Brooks Glycerin GTS 22",
+      "page": "https://www.runnersplus.com/products/mens-brooks-glycerin-gts-22",
+      "bytes": 35372
+    },
+    "brooks-glycerin-max": {
+      "name": "Brooks Glycerin Max",
+      "source": "shopify",
+      "title": "Men's Brooks Glycerin Max",
+      "page": "https://www.runnersplus.com/products/mens-brooks-glycerin-max",
+      "bytes": 40328
+    },
+    "brooks-glycerin-max-3": {
+      "name": "Brooks Glycerin Max 3",
+      "source": "shopify",
+      "title": "Brooks Glycerin Max 3 Men's White/Black/Gum",
+      "page": "https://www.holabirdsports.com/products/brooks-glycerin-max-3-mens-white-black-gum",
+      "bytes": 41034
+    },
+    "brooks-hyperion-2": {
+      "name": "Brooks Hyperion 2",
+      "source": "shopify",
+      "title": "Men's Brooks Hyperion 2",
+      "page": "https://www.runnersplus.com/products/mens-brooks-hyperion-2",
+      "bytes": 35264
+    },
+    "brooks-hyperion-max-2": {
+      "name": "Brooks Hyperion Max 2",
+      "source": "shopify",
+      "title": "Men's Brooks Hyperion Max 2",
+      "page": "https://www.runnersplus.com/products/mens-brooks-hyperion-max-2",
+      "bytes": 35714
+    },
+    "brooks-launch-11": {
+      "name": "Brooks Launch 11",
+      "source": "shopify",
+      "title": "Men's Brooks Launch 11",
+      "page": "https://www.runnersplus.com/products/mens-brooks-launch-11",
+      "bytes": 39136
+    },
+    "brooks-revel-8": {
+      "name": "Brooks Revel 8",
+      "source": "shopify",
+      "title": "Women's Brooks Revel 8",
+      "page": "https://www.runnersplus.com/products/womens-brooks-revel-8",
+      "bytes": 39552
+    },
+    "hoka-arahi-7": {
+      "name": "Hoka Arahi 7",
+      "source": "shopify",
+      "title": "Men's HOKA Arahi 7",
+      "page": "https://www.runnersplus.com/products/mens-hoka-arahi-7",
+      "bytes": 36582
+    },
+    "hoka-cielo-x1": {
+      "name": "Hoka Cielo X1",
+      "source": "shopify",
+      "title": "Unisex HOKA Cielo X1",
+      "page": "https://www.runnersplus.com/products/unisex-hoka-cielo-x1",
+      "bytes": 48344
+    },
+    "hoka-mach-7": {
+      "name": "Hoka Mach 7",
+      "source": "shopify",
+      "title": "Men's HOKA Mach 7",
+      "page": "https://www.runnersplus.com/products/mens-hoka-mach-7",
+      "bytes": 39384
+    },
+    "mizuno-wave-horizon-9": {
+      "name": "Mizuno Wave Horizon 9",
+      "source": "shopify",
+      "title": "Mizuno Wave Horizon 9 Men's India Ink/Galaxy Silver",
+      "page": "https://www.holabirdsports.com/products/mizuno-wave-horizon-9-mens-india-ink-galaxy-silver",
+      "bytes": 38246
+    },
+    "mizuno-wave-inspire-20": {
+      "name": "Mizuno Wave Inspire 20",
+      "source": "shopify",
+      "title": "Men's Mizuno Wave Inspire 20",
+      "page": "https://www.runnersplus.com/products/mens-mizuno-wave-inspire-20",
+      "bytes": 57072
+    },
+    "nike-pegasus-plus": {
+      "name": "Nike Pegasus Plus",
+      "source": "shopify",
+      "title": "Men's Nike Pegasus Plus",
+      "page": "https://www.runnersplus.com/products/mens-nike-pegasus-plus",
+      "bytes": 50180
+    },
+    "on-cloudboom-volt": {
+      "name": "On Cloudboom Volt",
+      "source": "shopify",
+      "title": "Men's On Cloudboom Volt",
+      "page": "https://www.runnersplus.com/products/mens-on-cloudboom-volt",
+      "bytes": 39208
+    },
+    "on-cloudrunner-3-max": {
+      "name": "On Cloudrunner 3 Max",
+      "source": "shopify",
+      "title": "Men's On Cloudrunner 3 Max",
+      "page": "https://www.runnersplus.com/products/mens-on-cloudrunner-3-max",
+      "bytes": 33458
+    },
+    "on-cloudswift-4": {
+      "name": "On Cloudswift 4",
+      "source": "shopify",
+      "title": "Women's On Cloudswift 4",
+      "page": "https://www.runnersplus.com/products/womens-on-cloudswift-4",
+      "bytes": 49026
+    },
+    "puma-fast-fwd-nitro-elite-2": {
+      "name": "Puma Fast-FWD Nitro Elite 2",
+      "source": "shopify",
+      "title": "Puma Fast-FWD NITRO Elite 2 Men's White/Heat Fire/Black",
+      "page": "https://www.holabirdsports.com/products/puma-fast-fwd-nitro-elite-2-mens-white-heat-fire-black",
+      "bytes": 33688
+    },
+    "puma-magnify-nitro-2": {
+      "name": "Puma Magnify Nitro 2",
+      "source": "shopify",
+      "title": "Puma Magnify NITRO 2 Women's Dream Rush",
+      "page": "https://www.holabirdsports.com/products/puma-magnify-nitro-2-womens-dream-rush",
+      "bytes": 33714
+    },
+    "puma-magnify-nitro-3": {
+      "name": "Puma Magnify Nitro 3",
+      "source": "shopify",
+      "title": "Men's Puma Magnify Nitro 3",
+      "page": "https://www.runnersplus.com/products/mens-puma-magnify-nitro-3",
+      "bytes": 37976
+    },
+    "puma-velocity-nitro-5": {
+      "name": "Puma Velocity Nitro 5",
+      "source": "shopify",
+      "title": "Puma Velocity NITRO 5 Men's Black/White",
+      "page": "https://www.holabirdsports.com/products/puma-velocity-nitro-5-mens-black-white",
+      "bytes": 27030
+    },
+    "salomon-aero-blaze-4": {
+      "name": "Salomon Aero Blaze 4",
+      "source": "shopify",
+      "title": "Salomon Aero Blaze 4 Men's Silver Cloud/White",
+      "page": "https://www.holabirdsports.com/products/salomon-aero-blaze-4-mens-silver-cloud-white",
+      "bytes": 58114
+    },
+    "saucony-echelon-11": {
+      "name": "Saucony Echelon 11",
+      "source": "shopify",
+      "title": "Men's Saucony Echelon 11",
+      "page": "https://www.runnersplus.com/products/mens-saucony-echelon-11",
+      "bytes": 32530
+    },
+    "saucony-procyon-max": {
+      "name": "Saucony Procyon Max",
+      "source": "shopify",
+      "title": "Saucony Procyon Max Men's White/Tranquil",
+      "page": "https://www.holabirdsports.com/products/saucony-procyon-max-mens-white-tranquil",
+      "bytes": 32892
+    },
+    "saucony-tempus-2": {
+      "name": "Saucony Tempus 2",
+      "source": "shopify",
+      "title": "Men's Saucony Tempus 2",
+      "page": "https://www.runnersplus.com/products/mens-saucony-tempus-2",
+      "bytes": 50974
+    },
+    "saucony-triumph-22": {
+      "name": "Saucony Triumph 22",
+      "source": "shopify",
+      "title": "Men's Saucony Triumph 22",
+      "page": "https://www.runnersplus.com/products/mens-saucony-triumph-22",
+      "bytes": 35170
+    },
+    "under-armour-velociti-pro": {
+      "name": "Under Armour Velociti Pro",
+      "source": "shopify",
+      "title": "Under Armour Velociti Pro Unisex White Clay/Racer Red/Anthracite",
+      "page": "https://www.holabirdsports.com/products/under-armour-velociti-pro-unisex-white-clay-racer-red-anthracite",
+      "bytes": 48226
+    },
+    "mizuno-wave-sky-prime": {
+      "name": "Mizuno Wave Sky Prime",
+      "source": "shopify",
+      "title": "Men's Mizuno Sky Prime",
+      "page": "https://www.runnersplus.com/products/mens-mizuno-sky-prime",
+      "bytes": 40854
+    },
+    "new-balance-fresh-foam-x-1080-v15": {
+      "name": "New Balance Fresh Foam X 1080 v15",
+      "source": "shopify",
+      "title": "Men's New Balance 1080v15",
+      "page": "https://www.runnersplus.com/products/mens-new-balance-1080v15",
+      "bytes": 38170
+    },
+    "new-balance-fresh-foam-x-880-v14": {
+      "name": "New Balance Fresh Foam X 880 v14",
+      "source": "shopify",
+      "title": "Men's New Balance 880v14",
+      "page": "https://www.runnersplus.com/products/mens-new-balance-880v14",
+      "bytes": 55826
+    },
+    "new-balance-sc-elite-6": {
+      "name": "New Balance SC Elite 6",
+      "source": "shopify",
+      "title": "Men's New Balance SuperComp Elite v6",
+      "page": "https://www.runnersplus.com/products/mens-new-balance-supercomp-elite-v6",
+      "bytes": 26498
+    },
+    "nike-interact-run": {
+      "name": "Nike Interact Run",
+      "source": "brand",
+      "title": "Nike Interact Run Women's Road Running Shoes",
+      "page": "https://www.nike.com/t/interact-run-womens-road-running-shoes-H1pOJ6bG/FD2292-600",
+      "bytes": 14630
+    },
+    "nike-revolution-7": {
+      "name": "Nike Revolution 7",
+      "source": "brand",
+      "title": "Nike Revolution 7 Men's Road Running Shoes",
+      "page": "https://www.nike.com/t/revolution-7-mens-road-running-shoes-72BvdH/FB2207-103",
+      "bytes": 10244
+    },
+    "salomon-s-lab-spectur": {
+      "name": "Salomon S/Lab Spectur",
+      "source": "brand",
+      "title": "S/LAB SPECTUR Unisex · Road Running, Asphalt and roads | Salomon",
+      "page": "https://www.salomon.com/en-us/product/s-lab-spectur-li5293",
+      "bytes": 37204
+    },
+    "skechers-aero-tempo": {
+      "name": "Skechers Aero Tempo",
+      "source": "brand",
+      "title": "Skechers Aero Tempo",
+      "page": "https://www.skechers.com/skechers-aero-tempo/172091_WMLT.html",
+      "bytes": 36348
+    },
+    "topo-athletic-specter-elite": {
+      "name": "Topo Athletic Specter Elite",
+      "source": "brand",
+      "title": "Specter Elite",
+      "page": "https://www.topoathletic.com/womens-specter-elite",
+      "bytes": 44768
+    },
+    "adidas-duramo-speed": {
+      "name": "Adidas Duramo Speed",
+      "source": "zappos",
+      "title": "adidas Duramo Speed",
+      "page": "https://www.6pm.com/p/adidas-duramo-speed-white-aurora-met-solar-red/product/9868880/color/1081648",
+      "bytes": 40572
+    },
+    "reebok-floatzig-symmetros": {
+      "name": "Reebok FloatZig Symmetros",
+      "source": "zappos",
+      "title": "Reebok Floatzig Symmetros",
+      "page": "https://www.6pm.com/p/reebok-floatzig-symmetros-white-unleashed-green-kinetic-blue/product/9960013/color/1085479",
+      "bytes": 31986
+    },
+    "saucony-kinvara-15": {
+      "name": "Saucony Kinvara 15",
+      "source": "zappos",
+      "title": "Saucony Kinvara 15",
+      "page": "https://www.6pm.com/p/saucony-kinvara-15-shadow/product/9961602/color/5151",
+      "bytes": 45964
+    }
+  },
+  "missing": {
+    "adidas-adizero-adios-9": {
+      "name": "Adidas Adizero Adios 9",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:05:40.602Z"
+    },
+    "adidas-adizero-adios-pro-evo-2": {
+      "name": "Adidas Adizero Adios Pro Evo 2",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:05:41.970Z"
+    },
+    "adidas-adizero-adios-pro-evo-3": {
+      "name": "Adidas Adizero Adios Pro Evo 3",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:05:43.487Z"
+    },
+    "adidas-adizero-prime-x-evo": {
+      "name": "Adidas Adizero Prime X Evo",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:05:44.969Z"
+    },
+    "adidas-adizero-takumi-sen-10": {
+      "name": "Adidas Adizero Takumi Sen 10",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:05:46.382Z"
+    },
+    "adidas-adizero-takumi-sen-11": {
+      "name": "Adidas Adizero Takumi Sen 11",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:05:47.796Z"
+    },
+    "adidas-supernova-prima": {
+      "name": "Adidas Supernova Prima",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:05:51.842Z"
+    },
+    "adidas-supernova-prima-2": {
+      "name": "Adidas Supernova Prima 2",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:05:53.553Z"
+    },
+    "adidas-supernova-solution-3": {
+      "name": "Adidas Supernova Solution 3",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:05:55.391Z"
+    },
+    "adidas-supernova-stride": {
+      "name": "Adidas Supernova Stride",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:05:56.827Z"
+    },
+    "altra-vanish-carbon-3": {
+      "name": "Altra Vanish Carbon 3",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:05:58.495Z"
+    },
+    "asics-gt-1000-13": {
+      "name": "ASICS GT-1000 13",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:05:59.912Z"
+    },
+    "asics-hyper-speed-3": {
+      "name": "ASICS Hyper Speed 3",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:01.559Z"
+    },
+    "asics-hyper-speed-4": {
+      "name": "ASICS Hyper Speed 4",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:03.068Z"
+    },
+    "asics-hyper-speed-5": {
+      "name": "ASICS Hyper Speed 5",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:04.451Z"
+    },
+    "asics-hyper-speed-6": {
+      "name": "ASICS Hyper Speed 6",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:05.909Z"
+    },
+    "asics-magic-speed-5": {
+      "name": "ASICS Magic Speed 5",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:07.463Z"
+    },
+    "asics-nimbus-mirai": {
+      "name": "ASICS Nimbus Mirai",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:08.838Z"
+    },
+    "asics-noosa-tri-15": {
+      "name": "ASICS Noosa Tri 15",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:10.347Z"
+    },
+    "asics-noosa-tri-17": {
+      "name": "ASICS Noosa Tri 17",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:11.735Z"
+    },
+    "brooks-hyperion-elite-4": {
+      "name": "Brooks Hyperion Elite 4",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:13.451Z"
+    },
+    "brooks-hyperion-elite-4-pb": {
+      "name": "Brooks Hyperion Elite 4 PB",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:15.133Z"
+    },
+    "brooks-revel-7": {
+      "name": "Brooks Revel 7",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:16.671Z"
+    },
+    "craft-atmosfar-1": {
+      "name": "Craft Atmosfar 1",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:18.082Z"
+    },
+    "craft-kype-pro": {
+      "name": "Craft Kype Pro",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:19.496Z"
+    },
+    "craft-pacer": {
+      "name": "Craft Pacer",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:20.880Z"
+    },
+    "diadora-frequenza": {
+      "name": "Diadora Frequenza",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:22.339Z"
+    },
+    "diadora-gara-carbon": {
+      "name": "Diadora Gara Carbon",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:23.839Z"
+    },
+    "diadora-gara-carbon-2": {
+      "name": "Diadora Gara Carbon 2",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:25.322Z"
+    },
+    "diadora-vigore-v": {
+      "name": "Diadora Vigore V",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:26.845Z"
+    },
+    "hoka-kawana-2": {
+      "name": "Hoka Kawana 2",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:28.303Z"
+    },
+    "hoka-kawana-3": {
+      "name": "Hoka Kawana 3",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:29.853Z"
+    },
+    "hoka-rincon-4": {
+      "name": "Hoka Rincon 4",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:31.211Z"
+    },
+    "mizuno-hyperwarp-pure": {
+      "name": "Mizuno Hyperwarp Pure",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:32.615Z"
+    },
+    "mizuno-wave-rebellion-pro-3-low": {
+      "name": "Mizuno Wave Rebellion Pro 3 Low",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:34.019Z"
+    },
+    "new-balance-fresh-foam-680-v8": {
+      "name": "New Balance Fresh Foam 680 v8",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:35.461Z"
+    },
+    "new-balance-fresh-foam-x-balos": {
+      "name": "New Balance Fresh Foam X Balos",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:36.849Z"
+    },
+    "on-cloudboom-strike-lightspray": {
+      "name": "On Cloudboom Strike LightSpray",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:38.122Z"
+    },
+    "puma-fast-r-nitro-elite-2": {
+      "name": "Puma Fast-R Nitro Elite 2",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:39.880Z"
+    },
+    "reebok-floatride-energy-6": {
+      "name": "Reebok Floatride Energy 6",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:41.301Z"
+    },
+    "reebok-floatzig-x1": {
+      "name": "Reebok FloatZig X1",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:47.143Z"
+    },
+    "salomon-aero-glide-2": {
+      "name": "Salomon Aero Glide 2",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:48.529Z"
+    },
+    "salomon-s-lab-phantasm-2": {
+      "name": "Salomon S/Lab Phantasm 2",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:49.925Z"
+    },
+    "salomon-spectur-2": {
+      "name": "Salomon Spectur 2",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:51.478Z"
+    },
+    "skechers-gorun-razor-5": {
+      "name": "Skechers GOrun Razor 5",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:55.770Z"
+    },
+    "topo-athletic-magnifly-5": {
+      "name": "Topo Athletic Magnifly 5",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:57.184Z"
+    },
+    "under-armour-infinite-elite": {
+      "name": "Under Armour Infinite Elite",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:06:58.532Z"
+    },
+    "under-armour-infinite-elite-2": {
+      "name": "Under Armour Infinite Elite 2",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:07:00.127Z"
+    },
+    "under-armour-infinite-mega": {
+      "name": "Under Armour Infinite Mega",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:07:01.767Z"
+    },
+    "under-armour-infinite-pro": {
+      "name": "Under Armour Infinite Pro",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:07:03.362Z"
+    },
+    "under-armour-infinite-pro-2": {
+      "name": "Under Armour Infinite Pro 2",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:07:04.922Z"
+    },
+    "under-armour-sonic-7": {
+      "name": "Under Armour Sonic 7",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:07:06.418Z"
+    },
+    "under-armour-velociti-elite-3": {
+      "name": "Under Armour Velociti Elite 3",
+      "tried": [
+        "6pm"
+      ],
+      "at": "2026-11-23T19:07:07.881Z"
+    }
+  },
+  "summary": {
+    "checked": "2026-11-23",
+    "active": 339,
+    "withPhoto": 286
+  }
+}

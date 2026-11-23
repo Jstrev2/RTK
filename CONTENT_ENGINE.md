@@ -47,8 +47,14 @@ every fuel serving, the catalogs and the practice log) needs a free account
 
 ## Shoe catalog
 
-Unchanged: the monthly routine "Monthly shoe catalog re-audit" edits
-`data/shoe-models-authored.json`, and the daily cron syncs it.
+The weekly routine "Weekly shoe catalog audit" (prompt in
+`scripts/catalog/ROUTINE-shoes.md`) adds new releases and lineup gaps to
+`data/shoe-models-authored.json`, checks its PR with
+`scripts/catalog/check-audit.mjs` and squash-merges it. The daily cron syncs
+the file into `shoe_models` and fetches photos for up to three shoes a day that
+have none (`lib/ingest/shoe-images.ts`). The one-time backfill and any re-run is
+`node scripts/catalog/backfill-shoe-images.mjs`; `node scripts/catalog/sync-local.mjs`
+applies a local copy of the catalog file with the same limits.
 
 ## Fuel catalog
 

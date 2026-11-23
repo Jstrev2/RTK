@@ -1,0 +1,743 @@
+/* Shoe pages: grid, finder, detail, collections, comparisons. Built on the
+   Race Day pieces in app/design.css (see DESIGN.md). */
+
+/* ---------- Bib card extras ---------- */
+
+.shoe-bib-line {
+  margin: -4px 0 10px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.shoe-bib-reason {
+  display: block;
+  margin: -2px 0 12px;
+  padding: 6px 10px;
+  border-left: 4px solid var(--volt-deep);
+  background: rgba(212, 255, 42, 0.22);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.shoe-bib .bib-photo {
+  aspect-ratio: 3 / 2;
+}
+
+/* ---------- Hero ---------- */
+
+.shoe-index-hero,
+.shoe-finder-hero {
+  padding: 44px 0 18px;
+}
+
+.shoe-index-hero h1 .hi,
+.shoe-finder-hero h1 .hi {
+  padding: 0 0.12em;
+  background: var(--volt);
+  font-family: var(--font-mono);
+  font-stretch: 100%;
+  letter-spacing: -0.04em;
+}
+
+.shoe-index-body {
+  padding-bottom: 64px;
+}
+
+/* ---------- Grid toolbar and filters ---------- */
+
+.shoe-grid-selects {
+  display: flex;
+  gap: 10px;
+}
+
+.shoe-grid-selects .select {
+  width: auto;
+  min-height: 56px;
+  border-radius: 999px;
+  padding: 0 18px;
+  font-weight: 700;
+}
+
+.shoe-filters {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.chip-gap {
+  width: 8px;
+}
+
+.shoe-grid-count {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 6px 0 14px;
+  font-weight: 700;
+}
+
+.shoe-grid-count .clock {
+  font-size: 1.25rem;
+}
+
+.shoe-grid-teaser {
+  margin-top: 18px;
+  max-height: 230px;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.shoe-grid-teaser-card {
+  filter: blur(3px);
+  opacity: 0.7;
+}
+
+.shoe-grid .wall {
+  margin-top: -170px;
+}
+
+@media (max-width: 720px) {
+  .shoe-grid-selects {
+    width: 100%;
+  }
+
+  .shoe-grid-selects label {
+    flex: 1;
+  }
+
+  .shoe-grid-selects .select {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .shoe-filters .chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0 -16px;
+    padding: 2px 16px 4px;
+    scrollbar-width: none;
+  }
+
+  .shoe-filters .chips::-webkit-scrollbar {
+    display: none;
+  }
+
+  .shoe-grid .bib-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .shoe-grid .bib {
+    padding: 10px 10px 0;
+  }
+
+  .shoe-grid .bib-number {
+    top: 8px;
+    left: 16px;
+    font-size: 1.1rem;
+  }
+
+  .shoe-grid .bib-photo {
+    margin: 22px 0 6px;
+  }
+
+  .shoe-grid .bib-title {
+    font-size: 0.98rem;
+  }
+
+  .shoe-grid .shoe-bib-line {
+    font-size: 0.74rem;
+  }
+
+  .shoe-grid .bib-stats .split:nth-child(n + 3) {
+    display: none;
+  }
+
+  .shoe-grid .bib-tear {
+    margin: auto -10px 0;
+    padding: 10px;
+  }
+
+  .shoe-grid .bib-tear .text-link {
+    display: none;
+  }
+}
+
+/* ---------- Shoe Finder ---------- */
+
+.finder {
+  display: grid;
+  gap: 18px;
+  max-width: 880px;
+}
+
+.finder-step {
+  display: grid;
+  gap: 10px;
+}
+
+.finder-step h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0;
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+}
+
+.finder-step h2 .clock {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--asphalt);
+  color: var(--volt);
+  font-size: 0.9rem;
+  flex: none;
+}
+
+.finder-step h2 small {
+  font-family: var(--font-body);
+  font-stretch: 100%;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.finder-taps {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.finder-tap {
+  display: grid;
+  gap: 2px;
+  min-height: 64px;
+  padding: 12px 14px;
+  border: 2px solid var(--line-strong);
+  border-radius: var(--r-md);
+  background: var(--paper);
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  color: var(--asphalt);
+}
+
+.finder-tap:hover {
+  border-color: var(--asphalt);
+}
+
+.finder-tap strong {
+  font-size: 1rem;
+}
+
+.finder-tap span {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.finder-tap.is-on {
+  background: var(--asphalt);
+  border-color: var(--asphalt);
+  color: #fff;
+  box-shadow: 4px 4px 0 var(--volt);
+}
+
+.finder-tap.is-on span {
+  color: #cfcfcf;
+}
+
+.finder-results {
+  margin-top: 30px;
+}
+
+.finder-results .bib-grid {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.finder-more {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 18px;
+  margin-top: 22px;
+}
+
+@media (max-width: 720px) {
+  .finder-taps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .finder-tap {
+    min-height: 56px;
+    padding: 10px 12px;
+  }
+}
+
+/* ---------- Shoe detail ---------- */
+
+.shoe-detail-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+  padding: 28px 0 8px;
+}
+
+.shoe-detail-photo {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 3 / 2;
+  border-radius: var(--r-lg);
+  background: #fff;
+  box-shadow: var(--shadow-bib);
+  overflow: hidden;
+}
+
+.shoe-detail-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.shoe-detail-photo .bib-photo-fallback {
+  font-family: var(--font-display);
+  font-stretch: 125%;
+  font-weight: 900;
+  font-size: 3rem;
+  color: var(--line-strong);
+}
+
+.shoe-detail-crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-bottom: 10px;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.shoe-detail-crumbs a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.shoe-detail-crumbs a:hover {
+  color: var(--asphalt);
+  text-decoration: underline;
+}
+
+.shoe-detail-head h1 {
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+  margin-bottom: 10px;
+}
+
+.shoe-detail-verdict {
+  margin: 0 0 16px;
+  font-size: 1.08rem;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+
+.shoe-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.shoe-detail-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 8px;
+}
+
+.shoe-detail-price .clock {
+  font-size: 2rem;
+}
+
+.spec-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+  gap: 8px;
+  margin: 10px 0 0;
+}
+
+.spec-strip .split {
+  display: grid;
+  gap: 2px;
+  justify-items: start;
+  padding: 10px 12px;
+  white-space: normal;
+}
+
+.spec-strip .split small {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.spec-strip .split b {
+  font-size: 1.15rem;
+}
+
+.shoe-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+  margin-block: 26px;
+}
+
+.goodbad h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.goodbad ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.goodbad li {
+  position: relative;
+  padding-left: 30px;
+  line-height: 1.35;
+}
+
+.goodbad li::before {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.goodbad.good li::before {
+  content: "+";
+  background: var(--volt);
+  color: var(--asphalt);
+}
+
+.goodbad.bad li::before {
+  content: "−";
+  background: var(--asphalt);
+  color: #fff;
+}
+
+.meter-list {
+  display: grid;
+  gap: 12px;
+}
+
+.meter {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.meter-track {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--chalk);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.meter-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 999px;
+  background: var(--asphalt);
+}
+
+.meter small {
+  color: var(--muted);
+  font-weight: 600;
+  min-width: 82px;
+  text-align: right;
+}
+
+.shoe-section {
+  margin-block: 34px;
+}
+
+.compare-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.compare-links a {
+  text-decoration: none;
+}
+
+@media (max-width: 860px) {
+  .shoe-detail-top,
+  .shoe-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+/* ---------- Collections ---------- */
+
+.collection-hero {
+  padding: 40px 0 10px;
+}
+
+.collection-rank {
+  display: grid;
+  gap: 16px;
+}
+
+.collection-row {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  padding: 14px;
+  border-radius: var(--r-md);
+  background: var(--paper);
+  box-shadow: var(--shadow-bib);
+  color: inherit;
+  text-decoration: none;
+}
+
+.collection-row:hover {
+  outline: 2px solid var(--asphalt);
+}
+
+.collection-row .bib-photo {
+  margin: 0;
+  aspect-ratio: 3 / 2;
+}
+
+.collection-row-body {
+  display: grid;
+  gap: 6px;
+}
+
+.collection-row-title {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.collection-row-title .clock {
+  font-size: 1.6rem;
+  color: var(--muted);
+}
+
+.collection-row-title strong {
+  font-family: var(--font-display);
+  font-stretch: 112%;
+  font-weight: 850;
+  font-size: 1.3rem;
+  line-height: 1.1;
+}
+
+.collection-row p {
+  margin: 0;
+  color: var(--ink-2);
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .collection-row {
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .collection-row-title strong {
+    font-size: 1.05rem;
+  }
+
+  .collection-row-title .clock {
+    font-size: 1.1rem;
+  }
+
+  .collection-row p {
+    display: none;
+  }
+}
+
+/* ---------- Comparisons ---------- */
+
+.versus {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  margin: 18px 0 8px;
+}
+
+.versus-vs {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--asphalt);
+  color: var(--volt);
+  font-family: var(--font-display);
+  font-stretch: 125%;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.versus .bib {
+  height: 100%;
+}
+
+.vs-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--r-md);
+  background: var(--paper);
+  box-shadow: var(--shadow-bib);
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.vs-table th,
+.vs-table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+.vs-table tr:last-child th,
+.vs-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.vs-table th {
+  width: 28%;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.vs-table td {
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.vs-table td.win {
+  background: rgba(212, 255, 42, 0.35);
+  font-weight: 800;
+}
+
+.vs-table thead th {
+  font-family: var(--font-display);
+  font-stretch: 112%;
+  font-size: 0.95rem;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--asphalt);
+}
+
+.verdict-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+@media (max-width: 720px) {
+  .versus {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .versus-vs {
+    display: none;
+  }
+
+  .versus .bib-stats,
+  .versus .shoe-bib-line,
+  .versus .bib-tear .text-link {
+    display: none;
+  }
+
+  .verdict-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .vs-table {
+    font-size: 0.85rem;
+  }
+
+  .vs-table th,
+  .vs-table td {
+    padding: 9px 10px;
+  }
+}
+
+.fineprint-inline {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.shoe-detail-crumbs span {
+  color: var(--muted);
+}
+
+.collection-hero .bib-stats {
+  margin-top: 4px;
+}
+
+.panel h3 {
+  margin-bottom: 10px;
+}
+
+.panel h3 a {
+  color: inherit;
+}
+
+.shoe-bib .bib-photo-fallback {
+  padding: 0 10px;
+  font-size: clamp(1.1rem, 4.5vw, 1.8rem);
+  line-height: 1;
+  text-align: center;
+}
+
+.vs-table td a {
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
+.compare-links .chip {
+  max-width: 100%;
+  min-height: 36px;
+  height: auto;
+  padding-block: 6px;
+  white-space: normal;
+  line-height: 1.2;
+}
