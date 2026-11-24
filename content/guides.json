@@ -1,7 +1,56 @@
 {
-  "generated": "2026-11-23T23:08:49.128Z",
-  "count": 19,
+  "generated": "2026-11-24T11:06:00.392Z",
+  "count": 23,
   "guides": [
+    {
+      "slug": "how-many-miles-a-week-to-train-for-a-marathon",
+      "title": "How Many Miles a Week to Train for a Marathon",
+      "excerpt": "Most first-time marathoners run 25 to 35 miles a week at peak, with one long run of 18 to 20. Faster goals need 35 to 50, built by adding no more than about 10% a week.",
+      "tags": [
+        "training",
+        "beginners",
+        "race-day"
+      ],
+      "author": "Runner Toolkit",
+      "published_at": "2026-11-24T11:05:44Z",
+      "body": "**Short answer:** Peak at 25 to 35 miles a week to finish your first marathon, with a longest run of 18 to 20 miles. Aim for 35 to 50 if you have a time goal.\n\n## Finishing needs 25 to 35 miles a week at peak\n\nHal Higdon's Novice 1 plan runs 18 weeks, four runs a week, averages 24 miles a week and tops out at a 20-mile long run. That is the common template for a first marathon, and it works because most of the load sits in one long run.\n\nFour runs a week is enough. Five adds mileage without adding much you need on race day.\n\n## A time goal needs 35 to 50 miles\n\nFaster goals ask for more running at moderate effort, which means more weekly miles and a second harder day. These are planning ranges, not a research result:\n\n- Finish, no time goal: 25 to 35 miles at peak, 4 runs a week.\n- 4:30 to 4:00: 30 to 40 miles, 4 to 5 runs.\n- 4:00 to 3:30: 35 to 45 miles, 5 runs.\n- Under 3:30: 45 to 55 miles, 5 to 6 runs.\n\nPick the row from your goal on the [pace calculator](/tools/pace-calculator), not from a friend's mileage.\n\n## Build by about 10% a week, with a lighter week every fourth\n\nA 2014 Danish study followed 874 new runners with GPS watches and sorted them by how fast their weekly distance grew. Injury rates did not differ significantly between groups. Runners who added more than 30% over two weeks had a hazard ratio of 1.59 against those under 10% (confidence interval 0.96 to 2.66, P = .07).\n\nThat is one observational study of beginners. It supports a slow build, and nothing in it supports a jump. Cut mileage by about a quarter every fourth week.\n\n## Start from the miles you already run\n\nBegin training at the weekly mileage you can already run without stiffness the next morning. If that is 15 miles, a 25-mile peak is a 10-week build at 10% a week. If it is 5 miles, plan a base block before the 18-week plan starts.\n\nThe long run grows by 1 to 2 miles at a time and stays at 20 or under. Longer than 20 adds recovery cost and little else for most runners.\n\n## Shoes and fuel scale with the miles\n\nMore miles means more shoe wear. A [two-shoe rotation](/rundown/shoe-rotation-two-pairs) spreads it, and the [shoe selector](/tools/shoe-selector) narrows the choice. Long runs past 90 minutes also need fuel: the [marathon gel math](/rundown/how-many-gels-for-a-marathon) gives the count by finish time.\n\nThis guide is for healthy runners. If a build leaves you in pain, see a doctor or physical therapist before adding miles."
+    },
+    {
+      "slug": "pace-for-a-2-hour-half-marathon",
+      "title": "What Pace Is a 2-Hour Half Marathon? 9:09 a Mile",
+      "excerpt": "A 2:00 half marathon is 9:09 per mile or 5:41 per kilometer. A 59:20 10K is the matching race time, and two or three gels cover the fuel.",
+      "tags": [
+        "race-day",
+        "training"
+      ],
+      "author": "Runner Toolkit",
+      "published_at": "2026-11-24T11:05:44Z",
+      "body": "**Short answer:** A 2:00 half marathon is 9:09 per mile, or 5:41 per kilometer. A 10K run in about 59:20 predicts it.\n\n## The split table\n\nThe half marathon is 13.1094 miles. Running 9:09 a mile gives 1:59:57, so you have 3 seconds to spare. Run the first mile at 9:09, not faster.\n\n- 5K: 28:26 at even pace.\n- 10K: 56:51 at even pace.\n- 10 miles: 1:31:30.\n- 13.1 miles: 1:59:57.\n\nThe [pace calculator](/tools/pace-calculator) builds a split card for any goal.\n\n## A 10K near 59:20 predicts a 2-hour half\n\nThe Riegel formula (1981, American Scientist) estimates race times as time multiplied by the distance ratio raised to the power 1.06. It puts a 2:00 half at 59:20 for 10K and 30:51 for 5K.\n\nIt's an estimate, not a promise. It assumes you've trained for the longer distance, and a runner with a fast 10K and a short long run will usually finish slower than it predicts.\n\n## Pace it even, with a slow first mile\n\nPlan 9:15 for mile 1 and 9:09 after. A crowded first mile slows most runners anyway, so don't chase the lost seconds.\n\n- Miles 1 to 3: 9:10 to 9:15, controlled.\n- Miles 4 to 10: 9:09, steady.\n- Miles 11 to 13: hold 9:09, or push if you have energy.\n\nA [9:00 mile playlist](/music/pace/9-00-min-mile) is close to your cadence range, and the [music tool](/tools/music) matches songs to any pace.\n\n## Check the goal against recent races\n\nUse a recent race as the starting point, not a hope. A 10K at 59:20 or faster in the last two months supports the goal, and a 10K near 62:00 does not, so the 2:00 plan moves to a later race. Rerun the [pace calculator](/tools/pace-calculator) with each new result.\n\nIf the numbers point to 2:05 instead, the pace is 9:32 a mile. A 2:10 half is 9:55. Pick the target your races support and train for that one.\n\n## Fuel and shoes for two hours\n\nTwo hours is long enough to need carbs. Our [half marathon gel guide](/rundown/how-many-gels-for-a-half-marathon) puts the plan at two or three gels, and the [2:00 half plan](/fuel/plan/half-marathon/2-00) lists them by mile.\n\nA trainer works for most runners at this pace. If you want something lighter, the [shoe selector](/tools/shoe-selector) lists options by weight and price."
+    },
+    {
+      "slug": "treadmill-pace-vs-outdoor-pace-1-percent-incline",
+      "title": "Treadmill Pace vs Outdoor Pace: Do You Need a 1% Incline",
+      "excerpt": "A 1% incline was proposed in 1996 to match outdoor effort. A 2015 study found the treadmill still cost about 10% more energy, so use 0 to 1% and run by effort.",
+      "tags": [
+        "training",
+        "beginners"
+      ],
+      "author": "Runner Toolkit",
+      "published_at": "2026-11-24T11:05:44Z",
+      "body": "**Short answer:** Set the treadmill to 0 or 1% and run by effort, not by the number on the belt. The 1% rule dates to 1996, and a 2015 study found even 1% felt harder than outdoors.\n\n## The 1% rule came from one small study\n\nJones and Doust (1996, Journal of Sports Sciences) had nine trained men run on a treadmill and outdoors on a level road. At 1% the oxygen cost matched the road for runs of about 5 minutes, at speeds from 2.92 to 5.0 metres per second.\n\nThe reason is air resistance. Indoors there is none, so running costs less at the same speed, and a slight grade adds the cost back. Nine runners and 5-minute efforts is a small base for a rule most gyms repeat.\n\n## Later work found the treadmill costs more, not the same\n\nMooses and colleagues (2015) tested 13 competitive distance runners with the treadmill at 1%. Running economy was 215.4 ml of oxygen per kg per km on the track and 236.8 on the treadmill. That is about 10% higher on the treadmill, the opposite of what the 1% rule predicts.\n\nThe two studies used different runners, different belts and different speeds. Treat 1% as a rough match at best.\n\n## What to set\n\n- Easy runs: 0 or 1%. Pace matters little, so run by breathing and the talk test.\n- Tempo and race-pace work: start at 1%, hold the effort you'd hold outdoors, and accept a belt pace that may be a bit slower.\n- Hill workouts: set the grade you want and run it by effort.\n- Speed shown by the belt is no race predictor. Use a recent race on the [pace calculator](/tools/pace-calculator) to set targets.\n\n## Why belt pace feels different\n\nBelts vary, and many treadmills read a bit fast or slow. Indoor heat adds strain, so heart rate climbs at the same pace. A fan helps, and so does a [playlist matched to your pace](/tools/music), such as the [9:00 mile list](/music/pace/9-00-min-mile).\n\nIf your goal pace is on the belt for a long run, you can drop the pace a few seconds a mile and keep the effort. That is a better rule than any incline.\n\n## Shoes and cadence indoors\n\nCadence is easy to read on a belt, and the [cadence guide](/rundown/how-to-find-your-running-cadence) shows how to count it. A softer trainer is fine on a belt, and the [shoe selector](/tools/shoe-selector) can filter by cushion. Two pairs in a [rotation](/rundown/shoe-rotation-two-pairs) last longer than one."
+    },
+    {
+      "slug": "zone-2-running-how-slow-how-long",
+      "title": "Zone 2 Running: How Slow, How Long and How to Tell",
+      "excerpt": "Zone 2 is a pace where you can talk in full sentences, roughly 60 to 75% of max heart rate. Run most of your weekly miles there, 30 to 60 minutes at a time.",
+      "tags": [
+        "training",
+        "beginners"
+      ],
+      "author": "Runner Toolkit",
+      "published_at": "2026-11-24T11:05:44Z",
+      "body": "**Short answer:** Zone 2 is the pace where you can speak in full sentences, usually 60 to 75% of max heart rate. Most of your runs should sit there, for 30 to 60 minutes at a time.\n\n## The talk test finds zone 2 without a heart rate monitor\n\nPersinger and colleagues tested this in 2004 (Medicine and Science in Sports and Exercise). They found the talk test approximates ventilatory threshold on both treadmill and bike, and that once speech was no longer comfortable the intensity was above threshold.\n\nSo the rule is plain. If you can say a few sentences in a row without a gasp, you're in the zone. If you can only manage single words, you're above it.\n\n## Heart rate gives a range, not a number\n\nCommonly quoted zone 2 ranges run from 60 to 75% of max heart rate. Those are estimates, and age formulas for max heart rate can miss by a wide margin. A lab lactate test is the accurate way to set zones.\n\nHeat, poor sleep and dehydration all raise heart rate at the same pace. On those days, hold the talk test and let the pace drop.\n\n## It will feel too slow, and that's normal\n\nZone 2 often sits slower than the pace runners jog at by habit. Walking breaks on hills are fine. Slowing down is the skill.\n\nSeiler's 2010 review of elite endurance athletes (International Journal of Sports Physiology and Performance) found most of their sessions were at low intensity, around 80%.\n\n## How much to run there\n\n- New runners: all of it, 3 runs a week of 20 to 40 minutes.\n- Regular runners: 3 or 4 runs a week at 30 to 60 minutes, with one or two harder sessions.\n- Long run: zone 2 for the whole run, including in marathon training.\n\nCheck your cadence on these runs with the [cadence guide](/rundown/how-to-find-your-running-cadence). The [music tool](/tools/music) can set a playlist to a slow pace, and [slow songs help keep easy runs easy](/music).\n\n## Who this is wrong for\n\nZone 2 is not a race-day plan. Racing takes harder work, and a runner with a 5K next week needs sessions at race pace too. Use the [pace calculator](/tools/pace-calculator) to find race pace, and keep the easy runs easy.\n\nSoft shoes make easy miles easier on the legs, and the [shoe selector](/tools/shoe-selector) lists cushioned trainers."
+    },
     {
       "slug": "nike-vaporfly-4-vs-alphafly-4",
       "title": "Nike Vaporfly 4 vs Alphafly 4: Which Racing Shoe to Buy",

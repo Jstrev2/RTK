@@ -14,11 +14,11 @@ guide that touches pain sends the reader to a doctor or physical therapist.
 - [x] nike-pegasus-42-vs-41: Nike Pegasus 42 vs Pegasus 41: what changed and which to buy | shoes | spec differences from our data; the old model on sale is the value pick
 - [x] saucony-endorphin-speed-6-vs-pro-5: Saucony Endorphin Speed 6 vs Endorphin Pro 5 | shoes, race-day | nylon vs carbon plate, weight, price; which runner each suits
 - [x] nike-vaporfly-4-vs-alphafly-4: Nike Vaporfly 4 vs Alphafly 4 | shoes, race-day | weight, stack, price and fit; marathon vs shorter races
-- [ ] How many miles a week to train for a marathon | training | weekly ranges by goal time and experience, longest run, build rate
+- [x] how-many-miles-a-week-to-train-for-a-marathon: How many miles a week to train for a marathon | training | weekly ranges by goal time and experience, longest run, build rate
 - [ ] How long should your longest run be for a half marathon | training | 10 to 12 miles for most; time on feet for slower runners
-- [ ] Zone 2 running: how slow, how long and how to tell you're in it | training | heart rate and talk test; why it feels too slow
-- [ ] Treadmill pace vs outdoor pace: the 1% incline setting | training | what the research measured and when it matters
-- [ ] What pace is a 2-hour half marathon, and what training it takes | training, race-day | 9:09 per mile; the 10K and long-run markers that predict it
+- [x] zone-2-running-how-slow-how-long: Zone 2 running: how slow, how long and how to tell you're in it | training | heart rate and talk test; why it feels too slow
+- [x] treadmill-pace-vs-outdoor-pace-1-percent-incline: Treadmill pace vs outdoor pace: the 1% incline setting | training | what the research measured and when it matters
+- [x] pace-for-a-2-hour-half-marathon: What pace is a 2-hour half marathon, and what training it takes | training, race-day | 9:09 per mile; the 10K and long-run markers that predict it
 - [ ] How to pace a 10K | race-day, training | even splits, the first mile, and a per-mile plan from the pace calculator
 - [ ] What to eat the night before a marathon | fueling, race-day, nutrition | carbs in grams per kg, low fiber, familiar food, timing
 - [ ] Should you run the day before a race | race-day, training | a short shakeout: how far and how fast
