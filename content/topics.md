@@ -15,13 +15,13 @@ guide that touches pain sends the reader to a doctor or physical therapist.
 - [x] saucony-endorphin-speed-6-vs-pro-5: Saucony Endorphin Speed 6 vs Endorphin Pro 5 | shoes, race-day | nylon vs carbon plate, weight, price; which runner each suits
 - [x] nike-vaporfly-4-vs-alphafly-4: Nike Vaporfly 4 vs Alphafly 4 | shoes, race-day | weight, stack, price and fit; marathon vs shorter races
 - [x] how-many-miles-a-week-to-train-for-a-marathon: How many miles a week to train for a marathon | training | weekly ranges by goal time and experience, longest run, build rate
-- [ ] How long should your longest run be for a half marathon | training | 10 to 12 miles for most; time on feet for slower runners
+- [x] longest-run-for-a-half-marathon: How long should your longest run be for a half marathon | training | 10 to 12 miles for most; time on feet for slower runners
 - [x] zone-2-running-how-slow-how-long: Zone 2 running: how slow, how long and how to tell you're in it | training | heart rate and talk test; why it feels too slow
 - [x] treadmill-pace-vs-outdoor-pace-1-percent-incline: Treadmill pace vs outdoor pace: the 1% incline setting | training | what the research measured and when it matters
 - [x] pace-for-a-2-hour-half-marathon: What pace is a 2-hour half marathon, and what training it takes | training, race-day | 9:09 per mile; the 10K and long-run markers that predict it
-- [ ] How to pace a 10K | race-day, training | even splits, the first mile, and a per-mile plan from the pace calculator
-- [ ] What to eat the night before a marathon | fueling, race-day, nutrition | carbs in grams per kg, low fiber, familiar food, timing
-- [ ] Should you run the day before a race | race-day, training | a short shakeout: how far and how fast
+- [x] how-to-pace-a-10k: How to pace a 10K | race-day, training | even splits, the first mile, and a per-mile plan from the pace calculator
+- [x] what-to-eat-the-night-before-a-marathon: What to eat the night before a marathon | fueling, race-day, nutrition | carbs in grams per kg, low fiber, familiar food, timing
+- [x] should-you-run-the-day-before-a-race: Should you run the day before a race | race-day, training | a short shakeout: how far and how fast
 - [ ] Caffeine before a race: how much and when | fueling, race-day | 3 mg per kg, 30 to 60 minutes out; caffeinated gels from our table
 - [ ] Do you need electrolytes on a one-hour run | fueling | water is enough in cool weather; when sodium starts to matter
 - [ ] Running shoes that also work for walking all day | shoes | soft, stable trainers from our data; what to skip

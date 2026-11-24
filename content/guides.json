@@ -1,7 +1,57 @@
 {
-  "generated": "2026-11-24T11:06:00.392Z",
-  "count": 23,
+  "generated": "2026-11-24T23:05:24.498Z",
+  "count": 27,
   "guides": [
+    {
+      "slug": "how-to-pace-a-10k",
+      "title": "How to Pace a 10K: Even Splits and a Plan by Goal Time",
+      "excerpt": "Run the first mile 5 seconds slower than goal pace, hold goal pace through mile 5, then use what's left. A 50:00 10K is 8:03 a mile.",
+      "tags": [
+        "race-day",
+        "training"
+      ],
+      "author": "Runner Toolkit",
+      "published_at": "2026-11-24T23:05:08Z",
+      "body": "**Short answer:** Run mile 1 about 5 seconds slower than goal pace, hold goal pace to mile 5, then spend what's left. A 50:00 10K is 8:03 a mile, or 5:00 a kilometer.\n\n## Goal pace comes from one division\n\nA 10K is 6.2137 miles. Divide your goal time by that number to get the mile pace.\n\n- 40:00 is 6:26 a mile, 4:00 a kilometer.\n- 50:00 is 8:03 a mile, 5:00 a kilometer.\n- 60:00 is 9:39 a mile, 6:00 a kilometer.\n- 70:00 is 11:16 a mile, 7:00 a kilometer.\n\nThe [pace calculator](/tools/pace-calculator) prints a split card for any other goal, and the [pace guide for a 2-hour half](/rundown/pace-for-a-2-hour-half-marathon) shows the same method over a longer distance.\n\n## Start 5 seconds slow, not fast\n\nThe first mile of a 10K is crowded and adrenaline makes pace feel easy. A fast first mile is the usual way a 10K goes wrong, because the effort stays high and the last miles slow. Aim for 5 seconds over goal pace, then settle.\n\nCheck the watch at the first mile marker, not before. GPS wanders in the first few hundred meters.\n\n## A split plan for a 50:00 10K\n\n- Mile 1: 8:08, controlled.\n- Miles 2 to 5: 8:03 each, steady and a little hard.\n- Mile 6: 8:03, hold on.\n- Last 0.2 mile: whatever you have.\n\nWrite the numbers on your wrist or set the watch to show average pace for the current mile. Chasing the lap pace on a rolling course wastes effort, so hold the effort on hills and let the splits drift by 10 seconds.\n\n## Use the last mile, not the first\n\nIf you reach mile 5 with energy, pick up the pace at mile 5.5 or 6. If you don't, hold the pace you have. A late push is a bonus, not part of the plan.\n\nFor music, a song in the right range keeps cadence steady. The [8:00 mile playlist](/music/pace/8-00-min-mile) and [10:00 mile playlist](/music/pace/10-00-min-mile) list tracks by pace, and the [music tool](/tools/music) matches any goal.\n\n## Who this is wrong for\n\nEven pacing is the default for runners who have trained 8 or more weeks and know their fitness. It is wrong for:\n\n- First-time 10K runners with no recent 5K, who should run by effort and talk in short sentences.\n- Hilly courses, where the effort rule beats the split rule.\n- Runners racing for place, where the pack sets the pace.\n\nA 10K under an hour needs no gels. If it runs past 75 minutes, see the [10K fuel plans](/fuel/plan/10k/1-15)."
+    },
+    {
+      "slug": "longest-run-for-a-half-marathon",
+      "title": "How Long Should Your Longest Run Be for a Half Marathon",
+      "excerpt": "Peak your long run at 10 to 12 miles, or about 2 hours for slower runners. Running the full 13.1 in training adds recovery cost and little else.",
+      "tags": [
+        "training",
+        "race-day",
+        "beginners"
+      ],
+      "author": "Runner Toolkit",
+      "published_at": "2026-11-24T23:05:08Z",
+      "body": "**Short answer:** Peak at 10 to 12 miles, and stop at about 2 hours on your feet if you're slower than 10:00 a mile. The race supplies the last 1 to 3 miles.\n\n## Ten miles is the standard peak\n\nHal Higdon's Half Marathon Novice 1 plan tops out at a 10-mile long run, according to its TrainingPeaks listing, and it averages 15 miles a week. That plan is the most common template for a first half, and it finishes people.\n\nRunners with a time goal can go to 11 or 12 miles. The extra miles build confidence in pace more than fitness, so they're optional.\n\n## Slower runners should cap by time, not miles\n\nMiles cost more at a slow pace. The same distance takes longer, which means more hours of pounding and more fuel. A time cap keeps the load similar across paces.\n\n- 8:00 a mile: 12 miles takes 1:36.\n- 10:00 a mile: 12 miles takes 2:00.\n- 12:00 a mile: 10 miles takes 2:00, so stop there.\n- 14:00 a mile: 9 miles takes 2:06, so stop there.\n\nThese caps are our planning ranges, not a research result. Run the long run at an easy pace, 1 to 2 minutes a mile slower than race pace. The [pace calculator](/tools/pace-calculator) gives your race pace for any goal.\n\n## Build the long run by 1 mile a week\n\nAdd 1 mile every week or two and drop back by 2 to 3 miles every fourth week. Start from the longest run you've done in the last month, not from the plan's number. If that's 5 miles, a 10-mile peak is a 5 to 8 week build.\n\nHold the peak for one or two runs, then cut the distance in the last 2 weeks.\n\n## Fuel the long run like the race\n\nPast 90 minutes, runs need carbs, and the long run is where you test them. Our [half marathon gel guide](/rundown/how-many-gels-for-a-half-marathon) sets the count by finish time, and [race day fueling mistakes](/rundown/race-day-fueling-mistakes) covers what goes wrong when the first gel comes on race day.\n\nPractice the gel timing at your peak run. Two runs of 10 miles or more give you two tries.\n\n## Who this is wrong for\n\nThe plan above is for healthy runners building from a base of 10 or more miles a week. It is wrong for:\n\n- Runners under 10 miles a week, who need a base block first. The [weekly mileage guide](/rundown/how-many-miles-a-week-to-train-for-a-marathon) covers the build rate.\n- Anyone in pain. See a doctor or physical therapist before adding miles."
+    },
+    {
+      "slug": "should-you-run-the-day-before-a-race",
+      "title": "Should You Run the Day Before a Race? A 15-Minute Shakeout",
+      "excerpt": "Yes, if you usually run daily: 10 to 20 minutes at easy pace, with up to 4 short strides. If you're new, a day off is fine.",
+      "tags": [
+        "race-day",
+        "training"
+      ],
+      "author": "Runner Toolkit",
+      "published_at": "2026-11-24T23:05:08Z",
+      "body": "**Short answer:** Run 10 to 20 minutes at easy pace, or 1 to 2 miles, with up to 4 short strides. Take the day off instead if you don't normally run the day before a hard day.\n\n## A shakeout is 10 to 20 minutes\n\nThe goal is to loosen the legs and check the gear, not to train. These are our planning ranges, not a research result. We found no study that tests a run the day before a race.\n\n- 5K or 10K: 15 to 20 minutes, up to 4 strides.\n- Half marathon: 15 to 20 minutes, up to 4 strides.\n- Marathon: 10 to 15 minutes, 2 to 4 strides or none.\n\nKeep the pace slow enough to talk in full sentences. If you wear a watch, ignore the pace field.\n\n## Strides are 20 seconds, not a workout\n\nA stride is a smooth, fast surge of about 20 seconds, with 40 to 60 seconds of walking between. Run 2 to 4 of them near the end. They wake up the legs and take almost nothing out of them.\n\nSkip strides if the course is hilly, the day is hot or you haven't done them before.\n\n## Skip it when the day off helps\n\nA day off is a fine choice. Take the day off if:\n\n- You run 3 or fewer days a week.\n- You're sore from a hard workout earlier in the week.\n- Travel is the day's main job. Walking around the expo counts as activity.\n\nThe [weekly mileage guide](/rundown/how-many-miles-a-week-to-train-for-a-marathon) explains why easy days and days off both work. Pain is different. See a doctor or physical therapist before racing.\n\n## Use the run to test the race kit\n\nThe shakeout is the last chance to catch a problem.\n\n- Wear the race shoes, socks and shorts.\n- Carry a gel and confirm it fits the pocket.\n- Run to a short playlist from the [music tool](/tools/music) and check the volume.\n\nDon't try new shoes, new socks or a new gel here. For the shoe choice, the [shoe selector](/tools/shoe-selector) narrows it before race week.\n\n## What the rest of the day looks like\n\nKeep the rest of the day low on your feet. Eat the carb-heavy meals from the [night-before guide](/rundown/what-to-eat-the-night-before-a-marathon), set out the kit and sleep. The race-day [pace calculator](/tools/pace-calculator) gives the splits to put on your wrist."
+    },
+    {
+      "slug": "what-to-eat-the-night-before-a-marathon",
+      "title": "What to Eat the Night Before a Marathon",
+      "excerpt": "Eat familiar, low-fiber carbs at a normal dinner, and treat it as the last of 2 days of high-carb eating. A 70 kg runner aiming for 8 g/kg needs 560 g of carbs that day.",
+      "tags": [
+        "fueling",
+        "race-day",
+        "nutrition"
+      ],
+      "author": "Runner Toolkit",
+      "published_at": "2026-11-24T23:05:08Z",
+      "body": "**Short answer:** Eat a normal-sized dinner of familiar, low-fiber carbs. The carb load is the 2 days before, not one pasta dinner.\n\n## Carb loading is a 2-day job\n\nJeukendrup's 2011 review in the Journal of Sports Sciences gives a range of 5 to 12 g of carbs per kilogram of body weight a day, depending on the runner and the training load. It cites a study where about 13 g per kilogram raised muscle glycogen over about 10 g without improving endurance. A 2022 Gatorade Sports Science Institute review gives 7 to 12 g per kilogram scaled to the race. We use 8 to 10 as the target for the 2 days before.\n\nSo the dinner is one meal in a run of meals. Spread the carbs across the day.\n\n## The math for your weight\n\nMultiply body weight in kilograms by the target. Pounds divided by 2.2 gives kilograms.\n\n- 55 kg (121 lb): 440 g at 8 g/kg, 550 g at 10 g/kg.\n- 70 kg (154 lb): 560 g at 8 g/kg, 700 g at 10 g/kg.\n- 85 kg (187 lb): 680 g at 8 g/kg, 850 g at 10 g/kg.\n\nMost runners fall short of these numbers without trying. Liquid carbs such as juice or sports drink count toward it, and a gel adds 25 g or more; see the [gel table](/fuel/best/high-carb-gels).\n\n## What goes on the plate\n\nChoose foods you've eaten before a long run. Low fiber and low fat keep the stomach quiet.\n\n- White rice, pasta, potatoes, bread, bagels.\n- A moderate portion of lean protein, such as chicken or eggs.\n- Skip: large salads, beans, heavy cream sauces, spicy food, new restaurants.\n\nIf the dinner is out, call ahead and ask for plain pasta or rice with a simple sauce.\n\n## Timing and the morning after\n\nEat dinner at the usual time, or 2 hours earlier than usual if the start is early. Sip fluids through the evening. Don't force a second dinner.\n\nOn race morning, eat a familiar breakfast 2 to 4 hours before the start. Our [marathon gel guide](/rundown/how-many-gels-for-a-marathon) covers fuel during the race, and the [marathon fuel plans](/fuel/plan/marathon/4-00) list gels by mile.\n\n## Who this is wrong for\n\nThis plan fits healthy runners racing 3 or more hours. It is wrong for:\n\n- Anyone racing a 10K or half, who needs a normal dinner and no load.\n- Runners with a medical diet, who should check with a doctor or dietitian.\n- Runners who haven't practiced it. Try the food pattern before a long run first, as the [gut training guide](/rundown/train-your-gut-race-fueling) lays out."
+    },
     {
       "slug": "how-many-miles-a-week-to-train-for-a-marathon",
       "title": "How Many Miles a Week to Train for a Marathon",
