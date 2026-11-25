@@ -22,10 +22,10 @@ guide that touches pain sends the reader to a doctor or physical therapist.
 - [x] how-to-pace-a-10k: How to pace a 10K | race-day, training | even splits, the first mile, and a per-mile plan from the pace calculator
 - [x] what-to-eat-the-night-before-a-marathon: What to eat the night before a marathon | fueling, race-day, nutrition | carbs in grams per kg, low fiber, familiar food, timing
 - [x] should-you-run-the-day-before-a-race: Should you run the day before a race | race-day, training | a short shakeout: how far and how fast
-- [ ] Caffeine before a race: how much and when | fueling, race-day | 3 mg per kg, 30 to 60 minutes out; caffeinated gels from our table
-- [ ] Do you need electrolytes on a one-hour run | fueling | water is enough in cool weather; when sodium starts to matter
-- [ ] Running shoes that also work for walking all day | shoes | soft, stable trainers from our data; what to skip
-- [ ] How many rest days a week runners need | training, beginners | by weekly runs and experience; easy days vs days off
+- [x] caffeine-before-a-race-how-much-and-when: Caffeine before a race: how much and when | fueling, race-day | 3 mg per kg, 30 to 60 minutes out; caffeinated gels from our table
+- [x] do-you-need-electrolytes-on-a-one-hour-run: Do you need electrolytes on a one-hour run | fueling | water is enough in cool weather; when sodium starts to matter
+- [x] running-shoes-for-walking-all-day: Running shoes that also work for walking all day | shoes | soft, stable trainers from our data; what to skip
+- [x] how-many-rest-days-a-week-for-runners: How many rest days a week runners need | training, beginners | by weekly runs and experience; easy days vs days off
 
 ## Shoes
 - [x] best-running-shoes-for-beginners: Best running shoes for beginners: what actually matters in your first pair | shoes, beginners | fit and comfort over specs; name three safe starting points from the database
