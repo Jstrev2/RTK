@@ -32,10 +32,10 @@ guide that touches pain sends the reader to a doctor or physical therapist.
 - [x] how-long-do-running-shoes-last: How long do running shoes last? Miles, signs, and what the foam is doing | shoes | 300-500 miles is a range; the signs that beat the odometer
 - [x] heel-drop-explained-4mm-vs-10mm: Heel drop explained: does 4mm vs 10mm matter for you? | shoes, training | calf and Achilles load; how to switch drop safely
 - [x] stability-shoes-vs-neutral-do-you-need-support: Stability shoes vs neutral: do you really need support? | shoes | what overpronation evidence says; who benefits from guide rails
-- [ ] Max cushion shoes: who they help and who they slow down | shoes | stack height trade-offs with real stack numbers
-- [ ] Carbon plate shoes for non-elite runners: worth it at 9-minute pace? | shoes, race-day | what the research measured and at what speeds
-- [ ] Wide feet running shoe guide: brands and models that run roomy | shoes | toe box data from our database; sizing tips
-- [ ] Running shoes for heavier runners | shoes | stable platforms, durable foams, firmer is not always worse
+- [x] max-cushion-running-shoes-who-they-help: Max cushion shoes: who they help and who they slow down | shoes | stack height trade-offs with real stack numbers
+- [x] carbon-plate-shoes-for-non-elite-runners: Carbon plate shoes for non-elite runners: worth it at 9-minute pace? | shoes, race-day | what the research measured and at what speeds
+- [x] wide-feet-running-shoes: Wide feet running shoe guide: brands and models that run roomy | shoes | toe box data from our database; sizing tips
+- [x] running-shoes-for-heavier-runners: Running shoes for heavier runners | shoes | stable platforms, durable foams, firmer is not always worse
 - [ ] What "daily trainer" means and how to pick one | shoes | the one-shoe default for most runners
 - [ ] Super trainers explained: plated training shoes and when they make sense | shoes, training | the category between daily and race
 - [ ] How to buy running shoes online without a fitting | shoes | sizing across brands, return policies, what to check on day one
