@@ -36,10 +36,10 @@ guide that touches pain sends the reader to a doctor or physical therapist.
 - [x] carbon-plate-shoes-for-non-elite-runners: Carbon plate shoes for non-elite runners: worth it at 9-minute pace? | shoes, race-day | what the research measured and at what speeds
 - [x] wide-feet-running-shoes: Wide feet running shoe guide: brands and models that run roomy | shoes | toe box data from our database; sizing tips
 - [x] running-shoes-for-heavier-runners: Running shoes for heavier runners | shoes | stable platforms, durable foams, firmer is not always worse
-- [ ] What "daily trainer" means and how to pick one | shoes | the one-shoe default for most runners
-- [ ] Super trainers explained: plated training shoes and when they make sense | shoes, training | the category between daily and race
-- [ ] How to buy running shoes online without a fitting | shoes | sizing across brands, return policies, what to check on day one
-- [ ] Running shoe sizing: why you need a half size up | shoes, beginners | foot swell, thumb width, socks
+- [x] what-is-a-daily-trainer: What "daily trainer" means and how to pick one | shoes | the one-shoe default for most runners
+- [x] super-trainers-explained: Super trainers explained: plated training shoes and when they make sense | shoes, training | the category between daily and race
+- [x] buy-running-shoes-online-without-a-fitting: How to buy running shoes online without a fitting | shoes | sizing across brands, return policies, what to check on day one
+- [x] running-shoe-sizing-half-size-up: Running shoe sizing: why you need a half size up | shoes, beginners | foot swell, thumb width, socks
 - [ ] Zero drop shoes: transition plan and who should skip them | shoes, training | Altra and Topo; a calf-safe ramp
 - [ ] Last year's model: how much you save and what changes between versions | shoes, gear | version-to-version changes are often small
 - [ ] Running shoes for flat feet | shoes | what flat feet do and do not need
