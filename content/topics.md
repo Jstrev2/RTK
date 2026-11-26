@@ -40,15 +40,15 @@ guide that touches pain sends the reader to a doctor or physical therapist.
 - [x] super-trainers-explained: Super trainers explained: plated training shoes and when they make sense | shoes, training | the category between daily and race
 - [x] buy-running-shoes-online-without-a-fitting: How to buy running shoes online without a fitting | shoes | sizing across brands, return policies, what to check on day one
 - [x] running-shoe-sizing-half-size-up: Running shoe sizing: why you need a half size up | shoes, beginners | foot swell, thumb width, socks
-- [ ] Zero drop shoes: transition plan and who should skip them | shoes, training | Altra and Topo; a calf-safe ramp
-- [ ] Last year's model: how much you save and what changes between versions | shoes, gear | version-to-version changes are often small
+- [x] zero-drop-running-shoes-transition-plan: Zero drop shoes: transition plan and who should skip them | shoes, training | Altra and Topo; a calf-safe ramp
+- [x] last-years-running-shoe-model-what-changes: Last year's model: how much you save and what changes between versions | shoes, gear | version-to-version changes are often small
 - [ ] Running shoes for flat feet | shoes | what flat feet do and do not need
 - [ ] Running shoes for high arches | shoes | cushion and flexibility over correction
-- [ ] Lightweight trainers for faster days | shoes, training | under 8.5 oz picks from the database
+- [x] lightweight-trainers-for-faster-days: Lightweight trainers for faster days | shoes, training | under 8.5 oz picks from the database
 - [ ] Marathon race shoe: plated, unplated, or your trainer? | shoes, race-day | time goal and experience decide
 - [ ] Half marathon shoes: what to wear on race day | shoes, race-day | the middle ground between trainer and super shoe
 - [ ] 5K and 10K race shoes | shoes, race-day | lighter, firmer, faster; when a racing flat still wins
-- [ ] Recovery run shoes: soft is the point | shoes, training | why a dedicated easy-day shoe helps
+- [x] recovery-run-shoes: Recovery run shoes: soft is the point | shoes, training | why a dedicated easy-day shoe helps
 - [ ] Treadmill running shoes: does the shoe matter on a belt? | shoes | softer belt, different needs
 - [ ] Running in the rain: shoes and grip on wet roads | shoes, gear | outsole rubber matters more than uppers
 - [ ] Winter running shoes for cold roads | shoes, gear | foams that stiffen in the cold
