@@ -42,11 +42,11 @@ guide that touches pain sends the reader to a doctor or physical therapist.
 - [x] running-shoe-sizing-half-size-up: Running shoe sizing: why you need a half size up | shoes, beginners | foot swell, thumb width, socks
 - [x] zero-drop-running-shoes-transition-plan: Zero drop shoes: transition plan and who should skip them | shoes, training | Altra and Topo; a calf-safe ramp
 - [x] last-years-running-shoe-model-what-changes: Last year's model: how much you save and what changes between versions | shoes, gear | version-to-version changes are often small
-- [ ] Running shoes for flat feet | shoes | what flat feet do and do not need
-- [ ] Running shoes for high arches | shoes | cushion and flexibility over correction
+- [x] running-shoes-for-flat-feet: Running shoes for flat feet | shoes | what flat feet do and do not need
+- [x] running-shoes-for-high-arches: Running shoes for high arches | shoes | cushion and flexibility over correction
 - [x] lightweight-trainers-for-faster-days: Lightweight trainers for faster days | shoes, training | under 8.5 oz picks from the database
-- [ ] Marathon race shoe: plated, unplated, or your trainer? | shoes, race-day | time goal and experience decide
-- [ ] Half marathon shoes: what to wear on race day | shoes, race-day | the middle ground between trainer and super shoe
+- [x] marathon-race-shoe-plated-unplated-or-trainer: Marathon race shoe: plated, unplated, or your trainer? | shoes, race-day | time goal and experience decide
+- [x] half-marathon-shoes-what-to-wear-on-race-day: Half marathon shoes: what to wear on race day | shoes, race-day | the middle ground between trainer and super shoe
 - [ ] 5K and 10K race shoes | shoes, race-day | lighter, firmer, faster; when a racing flat still wins
 - [x] recovery-run-shoes: Recovery run shoes: soft is the point | shoes, training | why a dedicated easy-day shoe helps
 - [ ] Treadmill running shoes: does the shoe matter on a belt? | shoes | softer belt, different needs
