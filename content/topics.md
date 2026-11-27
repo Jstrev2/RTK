@@ -47,11 +47,11 @@ guide that touches pain sends the reader to a doctor or physical therapist.
 - [x] lightweight-trainers-for-faster-days: Lightweight trainers for faster days | shoes, training | under 8.5 oz picks from the database
 - [x] marathon-race-shoe-plated-unplated-or-trainer: Marathon race shoe: plated, unplated, or your trainer? | shoes, race-day | time goal and experience decide
 - [x] half-marathon-shoes-what-to-wear-on-race-day: Half marathon shoes: what to wear on race day | shoes, race-day | the middle ground between trainer and super shoe
-- [ ] 5K and 10K race shoes | shoes, race-day | lighter, firmer, faster; when a racing flat still wins
+- [x] 5k-and-10k-race-shoes: 5K and 10K race shoes | shoes, race-day | lighter, firmer, faster; when a racing flat still wins
 - [x] recovery-run-shoes: Recovery run shoes: soft is the point | shoes, training | why a dedicated easy-day shoe helps
-- [ ] Treadmill running shoes: does the shoe matter on a belt? | shoes | softer belt, different needs
-- [ ] Running in the rain: shoes and grip on wet roads | shoes, gear | outsole rubber matters more than uppers
-- [ ] Winter running shoes for cold roads | shoes, gear | foams that stiffen in the cold
+- [x] treadmill-running-shoes: Treadmill running shoes: does the shoe matter on a belt? | shoes | softer belt, different needs
+- [x] running-shoes-for-rain: Running in the rain: shoes and grip on wet roads | shoes, gear | outsole rubber matters more than uppers
+- [x] winter-running-shoes: Winter running shoes for cold roads | shoes, gear | foams that stiffen in the cold
 - [ ] Shoe rotation for marathon training: a three-shoe plan | shoes, training | daily, long, fast with the miles each takes
 - [ ] Brooks vs Hoka vs ASICS: how the big three differ on the run | shoes | house styles explained with flagship numbers
 - [ ] Nike Pegasus alternatives | shoes | similar daily trainers by price and feel
