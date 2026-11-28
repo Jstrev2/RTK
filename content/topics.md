@@ -52,11 +52,11 @@ guide that touches pain sends the reader to a doctor or physical therapist.
 - [x] treadmill-running-shoes: Treadmill running shoes: does the shoe matter on a belt? | shoes | softer belt, different needs
 - [x] running-shoes-for-rain: Running in the rain: shoes and grip on wet roads | shoes, gear | outsole rubber matters more than uppers
 - [x] winter-running-shoes: Winter running shoes for cold roads | shoes, gear | foams that stiffen in the cold
-- [ ] Shoe rotation for marathon training: a three-shoe plan | shoes, training | daily, long, fast with the miles each takes
-- [ ] Brooks vs Hoka vs ASICS: how the big three differ on the run | shoes | house styles explained with flagship numbers
-- [ ] Nike Pegasus alternatives | shoes | similar daily trainers by price and feel
-- [ ] Hoka Clifton alternatives | shoes | soft daily trainers that cost less or fit wider
-- [ ] Brooks Ghost alternatives | shoes | safe neutral trainers compared
+- [x] shoe-rotation-two-pairs: (already covered by this guide) Shoe rotation for marathon training: a three-shoe plan | shoes, training | daily, long, fast with the miles each takes
+- [x] brooks-vs-hoka-vs-asics-running-shoes: Brooks vs Hoka vs ASICS: how the big three differ on the run | shoes | house styles explained with flagship numbers
+- [x] nike-pegasus-alternatives: Nike Pegasus alternatives | shoes | similar daily trainers by price and feel
+- [x] hoka-clifton-alternatives: Hoka Clifton alternatives | shoes | soft daily trainers that cost less or fit wider
+- [x] brooks-ghost-alternatives: Brooks Ghost alternatives | shoes | safe neutral trainers compared
 - [ ] Running shoes under $100 that hold up | shoes | the budget tier that lasts
 - [ ] What stack height means and the 40mm rule | shoes, race-day | World Athletics limits explained
 - [ ] Should you run in your race shoes before race day? | shoes, race-day | break-in, durability, the two-run rule
